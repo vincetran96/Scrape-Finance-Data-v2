@@ -1,0 +1,4606 @@
+[
+  {
+    "stockname": "000001.SS",
+    "companyname": "China ShangHai Composite Index"
+  },
+  {
+    "stockname": "AAA",
+    "companyname": "Công ty Cổ phần Nhựa và Môi trường xanh An Phát"
+  },
+  {
+    "stockname": "AAM",
+    "companyname": "Công ty Cổ phần Thủy sản Mekong"
+  },
+  {
+    "stockname": "ABI",
+    "companyname": "Công ty Cổ phần Bảo hiểm Ngân hàng Nông nghiệp (ABIC)"
+  },
+  {
+    "stockname": "ABT",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu thủy sản Bến Tre"
+  },
+  {
+    "stockname": "ACB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Á Châu"
+  },
+  {
+    "stockname": "ACC",
+    "companyname": "Công ty Cổ phần bê tông BECAMEX"
+  },
+  {
+    "stockname": "ACE",
+    "companyname": "Công ty Cổ phần Bê tông ly tâm An Giang"
+  },
+  {
+    "stockname": "ACL",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Thủy sản Cửu Long An Giang"
+  },
+  {
+    "stockname": "ACM",
+    "companyname": "Công ty Cổ phần Tập đoàn khoáng sản Á Cường"
+  },
+  {
+    "stockname": "ADC",
+    "companyname": "Công ty Cổ phần Mĩ thuật và Truyền thông"
+  },
+  {
+    "stockname": "ADP",
+    "companyname": "Công ty Cổ phần Sơn Á Đông"
+  },
+  {
+    "stockname": "ADS",
+    "companyname": "Công ty cổ phần Damsan"
+  },
+  {
+    "stockname": "AGC",
+    "companyname": "Công ty cổ phần Cà phê An Giang"
+  },
+  {
+    "stockname": "AGD",
+    "companyname": "Công ty cổ phần Gò Đàng"
+  },
+  {
+    "stockname": "AGF",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu thủy sản An Giang"
+  },
+  {
+    "stockname": "AGM",
+    "companyname": "Công ty Cổ phần xuất nhập khẩu An Giang"
+  },
+  {
+    "stockname": "AGP",
+    "companyname": "Công ty Cổ phần Dược phẩm Agimexpharm"
+  },
+  {
+    "stockname": "AGR",
+    "companyname": "Công ty Cổ phần Chứng Khoán NHNN VN - Agriseco"
+  },
+  {
+    "stockname": "AGX",
+    "companyname": "Công ty Cổ phần nông sản xuất khẩu Sài Gòn"
+  },
+  {
+    "stockname": "ALP",
+    "companyname": "Công ty Cổ phần Đầu tư Alphanam"
+  },
+  {
+    "stockname": "ALT",
+    "companyname": "Công ty Cổ phần văn hoá Tân Bình"
+  },
+  {
+    "stockname": "ALV",
+    "companyname": "Công ty Cổ phần Khoáng sản Vinas A Lưới"
+  },
+  {
+    "stockname": "AMC",
+    "companyname": "Công ty Cổ phần Khoáng sản Á Châu"
+  },
+  {
+    "stockname": "AMD",
+    "companyname": "Công ty Cổ phần Đầu tư AMD GROUP"
+  },
+  {
+    "stockname": "AME",
+    "companyname": "Công ty Cổ phần Alphanam E và C"
+  },
+  {
+    "stockname": "AMV",
+    "companyname": "Công ty Cổ phần Sản xuất kinh doanh dược và Trang thiết bị y tế Việt Mỹ"
+  },
+  {
+    "stockname": "ANV",
+    "companyname": "Công ty Cổ phần Nam Việt"
+  },
+  {
+    "stockname": "APC",
+    "companyname": "Công ty Cổ phần Chiếu xạ An Phú"
+  },
+  {
+    "stockname": "APG",
+    "companyname": "Công ty Cổ phần Chứng khoán An Phát"
+  },
+  {
+    "stockname": "API",
+    "companyname": "Công ty Cổ phần Đầu tư Châu Á - Thái Bình Dương"
+  },
+  {
+    "stockname": "APP",
+    "companyname": "Công ty Cổ phần Phát triển Phụ gia và Sản phẩm dầu mỏ"
+  },
+  {
+    "stockname": "APS",
+    "companyname": "Công ty Cổ phần Chứng khoán Châu Á - Thái Bình Dương"
+  },
+  {
+    "stockname": "ARM",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Hàng không"
+  },
+  {
+    "stockname": "ASA",
+    "companyname": "Công ty Cổ phần Liên doanh SANA WMT"
+  },
+  {
+    "stockname": "ASD",
+    "companyname": "Công ty Cổ phần Sông Đà Hà Nội"
+  },
+  {
+    "stockname": "ASIAGF",
+    "companyname": "Công ty TNHH Một thành viên Quản lý Quỹ ACB"
+  },
+  {
+    "stockname": "ASM",
+    "companyname": "Công ty Cổ phần Tập đoàn Sao Mai"
+  },
+  {
+    "stockname": "ASP",
+    "companyname": "Công ty Cổ phần Tập đoàn Dầu khí An Pha"
+  },
+  {
+    "stockname": "ATA",
+    "companyname": "Công ty Cổ phần NTACO"
+  },
+  {
+    "stockname": "ATS",
+    "companyname": "CTCP Suất ăn công nghiệp Atesco"
+  },
+  {
+    "stockname": "AVF",
+    "companyname": "Công ty Cổ phần Việt An"
+  },
+  {
+    "stockname": "AVS",
+    "companyname": "Công ty cổ phần Chứng khoán Âu Việt"
+  },
+  {
+    "stockname": "B82",
+    "companyname": "Công ty Cổ phần 482"
+  },
+  {
+    "stockname": "BAM",
+    "companyname": "Công ty Cổ phần khoáng sản và luyện kim Bắc Á"
+  },
+  {
+    "stockname": "BAS",
+    "companyname": "Công ty cổ phần BASA"
+  },
+  {
+    "stockname": "BBC",
+    "companyname": "Công ty Cổ phần Bibica"
+  },
+  {
+    "stockname": "BBS",
+    "companyname": "Công ty Cổ phần VICEM Bao bì Bút Sơn"
+  },
+  {
+    "stockname": "BBT",
+    "companyname": "Công ty Cổ phần Bông Bạch Tuyết"
+  },
+  {
+    "stockname": "BCC",
+    "companyname": "Công ty Cổ phần Xi măng Bỉm Sơn"
+  },
+  {
+    "stockname": "BCE",
+    "companyname": "Công ty Cổ phần Xây dựng và Giao thông Bình Dương"
+  },
+  {
+    "stockname": "BCG",
+    "companyname": "Công ty Cổ phần Bamboo Capital"
+  },
+  {
+    "stockname": "BCI",
+    "companyname": "Công ty Cổ phần Đầu tư xây dựng Bình Chánh"
+  },
+  {
+    "stockname": "BCP",
+    "companyname": "Công ty Cổ phần Dược Becamex"
+  },
+  {
+    "stockname": "BDB",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị Bình Định"
+  },
+  {
+    "stockname": "BDG",
+    "companyname": "CTCP May mặc Bình Dương"
+  },
+  {
+    "stockname": "BDW",
+    "companyname": "Công ty Cổ phần Cấp thoát nước Bình Định"
+  },
+  {
+    "stockname": "BED",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị trường học Đà Nẵng"
+  },
+  {
+    "stockname": "BFC",
+    "companyname": "Công ty Cổ phần Phân bón Bình Điền"
+  },
+  {
+    "stockname": "BGM",
+    "companyname": "Công ty Cổ phần Khai thác và Chế biến Khoáng sản Bắc Giang"
+  },
+  {
+    "stockname": "BHC",
+    "companyname": "Công ty Cổ phần Bê tông Biên Hòa"
+  },
+  {
+    "stockname": "BHP",
+    "companyname": "Công ty Cổ phần Bia Hà Nội - Hải Phòng"
+  },
+  {
+    "stockname": "BHS",
+    "companyname": "Công ty Cổ phần Đường Biên Hòa"
+  },
+  {
+    "stockname": "BHT",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng Bạch Đằng TMC"
+  },
+  {
+    "stockname": "BHV",
+    "companyname": "Công ty cổ phần Viglacera Bá Hiến"
+  },
+  {
+    "stockname": "BIC",
+    "companyname": "Tổng Công ty Cổ phần Bảo Hiểm Ngân hàng Đầu tư và Phát triển Việt Nam"
+  },
+  {
+    "stockname": "BID",
+    "companyname": "Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam"
+  },
+  {
+    "stockname": "BII",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Công nghiệp Bảo Thư"
+  },
+  {
+    "stockname": "BKC",
+    "companyname": "Công ty Cổ phần Khoáng sản Bắc Kạn"
+  },
+  {
+    "stockname": "BLF",
+    "companyname": "Công ty Cổ phần Thủy sản Bạc Liêu"
+  },
+  {
+    "stockname": "BLI",
+    "companyname": "Tổng Công ty Cổ phần Bảo Hiểm Bảo Long"
+  },
+  {
+    "stockname": "BMC",
+    "companyname": "Công ty Cổ phần Khoáng sản Bình Định"
+  },
+  {
+    "stockname": "BMI",
+    "companyname": "Tổng Công ty Cổ phần Bảo Minh"
+  },
+  {
+    "stockname": "BMJ",
+    "companyname": "Công ty Cổ phần khoáng sản BECAMEX"
+  },
+  {
+    "stockname": "BMN",
+    "companyname": "Công ty Cổ phần 715"
+  },
+  {
+    "stockname": "BMP",
+    "companyname": "Công ty Cổ phần nhựa Bình Minh"
+  },
+  {
+    "stockname": "BPC",
+    "companyname": "Công ty Cổ phần Vicem Bao bì Bỉm sơn"
+  },
+  {
+    "stockname": "BRC",
+    "companyname": "Công ty Cổ phần Cao su Bến Thành"
+  },
+  {
+    "stockname": "BSC",
+    "companyname": "Công ty Cổ phần Dịch vụ Bến Thành"
+  },
+  {
+    "stockname": "BSI",
+    "companyname": "Công ty Cổ phần Chứng khoán Ngân hàng Đầu tư và Phát triển Việt Nam"
+  },
+  {
+    "stockname": "BST",
+    "companyname": "Công ty Cổ phần Sách - Thiết bị Bình Thuận"
+  },
+  {
+    "stockname": "BT6",
+    "companyname": "Công ty Cổ phần Beton 6"
+  },
+  {
+    "stockname": "BTC",
+    "companyname": "Công ty Cổ phần cơ khí và xây dựng Bình Triệu"
+  },
+  {
+    "stockname": "BTG",
+    "companyname": "Công ty Cổ phần Bao bì Tiền Giang"
+  },
+  {
+    "stockname": "BTH",
+    "companyname": "Công ty Cổ phần Chế tạo biến thế và Vật liệu điện Hà Nội"
+  },
+  {
+    "stockname": "BTP",
+    "companyname": "Công ty Cổ phần Nhiệt điện Bà Rịa"
+  },
+  {
+    "stockname": "BTS",
+    "companyname": "Công ty Cổ phần Xi măng Vicem Bút Sơn"
+  },
+  {
+    "stockname": "BTT",
+    "companyname": "Công ty Cổ phần Thương mại - Dịch vụ Bến Thành"
+  },
+  {
+    "stockname": "BTU",
+    "companyname": "CTCP Công trình Đô thị Bến Tre"
+  },
+  {
+    "stockname": "BTW",
+    "companyname": "Công ty Cổ phần Cấp nước Bến Thành"
+  },
+  {
+    "stockname": "BVG",
+    "companyname": "Công ty Cổ phần Thép Bắc Việt"
+  },
+  {
+    "stockname": "BVH",
+    "companyname": "Tập đoàn Bảo Việt"
+  },
+  {
+    "stockname": "BVN",
+    "companyname": "Công ty Cổ phần Bông Việt Nam"
+  },
+  {
+    "stockname": "BVS",
+    "companyname": "Công ty Cổ phần Chứng khoán Bảo Việt"
+  },
+  {
+    "stockname": "BWA",
+    "companyname": "Công ty Cổ phần Cấp thoát nước và Xây dựng Bảo Lộc"
+  },
+  {
+    "stockname": "BXH",
+    "companyname": "Công ty Cổ phần Vicem Bao bì Hải Phòng"
+  },
+  {
+    "stockname": "C21",
+    "companyname": "Công ty Cổ phần Thế kỷ 21"
+  },
+  {
+    "stockname": "C32",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng 3-2"
+  },
+  {
+    "stockname": "C47",
+    "companyname": "Công ty Cổ phần Xây dựng 47"
+  },
+  {
+    "stockname": "C71",
+    "companyname": "Công ty Cổ phần 471"
+  },
+  {
+    "stockname": "C92",
+    "companyname": "Công ty Cổ phần Xây dựng và Đầu tư 492"
+  },
+  {
+    "stockname": "CAD",
+    "companyname": "Công ty Cổ phần Chế biến và Xuất nhập khẩu Thủy sản Cadovimex"
+  },
+  {
+    "stockname": "CAN",
+    "companyname": "Công ty Cổ phần Đồ hộp Hạ Long"
+  },
+  {
+    "stockname": "CAP",
+    "companyname": "Công ty Cổ phần Lâm nông sản thực phẩm Yên Bái"
+  },
+  {
+    "stockname": "CAV",
+    "companyname": "Công ty Cổ phần dây cáp điện Việt Nam"
+  },
+  {
+    "stockname": "CCI",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Công nghiệp Thương mại Củ Chi"
+  },
+  {
+    "stockname": "CCL",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Đô thị Dầu khí Cửu Long"
+  },
+  {
+    "stockname": "CCM",
+    "companyname": "Công ty Cổ phần Khoáng Sản Và Xi Măng Cần Thơ"
+  },
+  {
+    "stockname": "CCR",
+    "companyname": "Công ty Cổ phần Cảng Cam Ranh"
+  },
+  {
+    "stockname": "CDC",
+    "companyname": "Công ty Cổ phần Chương Dương"
+  },
+  {
+    "stockname": "CDH",
+    "companyname": "CTCP Công trình công cộng Dịch vụ Du lịch Hải Phòng"
+  },
+  {
+    "stockname": "CDN",
+    "companyname": "CTCP Cảng Đà Nẵng"
+  },
+  {
+    "stockname": "CDO",
+    "companyname": "Công ty Cổ phần Tư vấn thiết kế và phát triển đô thị"
+  },
+  {
+    "stockname": "CEC",
+    "companyname": "Công ty Cổ phần Thiết kế Công nghiệp Hóa chất"
+  },
+  {
+    "stockname": "CEO",
+    "companyname": "Công ty Cổ phần Đầu tư C.E.O"
+  },
+  {
+    "stockname": "CFC",
+    "companyname": "Công ty Cổ phần Cafico Việt Nam"
+  },
+  {
+    "stockname": "CGP",
+    "companyname": "CTCP Dược phẩm Cần Giờ"
+  },
+  {
+    "stockname": "CHP",
+    "companyname": "Công ty Cổ phần Thủy điện miền Trung"
+  },
+  {
+    "stockname": "CI5",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng số 5"
+  },
+  {
+    "stockname": "CIC",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng COTEC"
+  },
+  {
+    "stockname": "CID",
+    "companyname": "Công ty Cổ phần Xây dựng và phát triển cơ sở hạ tầng"
+  },
+  {
+    "stockname": "CIG",
+    "companyname": "Công ty Cổ phần COMA18"
+  },
+  {
+    "stockname": "CII",
+    "companyname": "Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh"
+  },
+  {
+    "stockname": "CJC",
+    "companyname": "Công ty Cổ phần Cơ điện Miền Trung (CEMC)"
+  },
+  {
+    "stockname": "CKD",
+    "companyname": "Công ty Cổ phần cơ khí Đông Anh Licogi"
+  },
+  {
+    "stockname": "CKV",
+    "companyname": "Công ty Cổ phần COKYVINA"
+  },
+  {
+    "stockname": "CLC",
+    "companyname": "Công ty Cổ phần Cát Lợi"
+  },
+  {
+    "stockname": "CLG",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Nhà đất Cotec"
+  },
+  {
+    "stockname": "CLH",
+    "companyname": "CTCP Xi măng La Hiên VVMI"
+  },
+  {
+    "stockname": "CLL",
+    "companyname": "Công ty Cổ phần Cảng Cát Lái"
+  },
+  {
+    "stockname": "CLM",
+    "companyname": "CTCP Xuất nhập khẩu Than - Vinacomin"
+  },
+  {
+    "stockname": "CLP",
+    "companyname": "Công ty Cổ Phần Thủy sản Cửu Long"
+  },
+  {
+    "stockname": "CLW",
+    "companyname": "Công ty Cổ phần Cấp nước Chợ Lớn"
+  },
+  {
+    "stockname": "CMC",
+    "companyname": "Công ty Cổ phần Đầu tư CMC"
+  },
+  {
+    "stockname": "CMG",
+    "companyname": "Công ty Cổ phần Tập đoàn Công nghệ CMC"
+  },
+  {
+    "stockname": "CMI",
+    "companyname": "Công ty Cổ phần CMISTONE Việt Nam"
+  },
+  {
+    "stockname": "CMK",
+    "companyname": "Công ty Cổ phần cơ khí Mạo Khê - Vinacomin"
+  },
+  {
+    "stockname": "CMP",
+    "companyname": "CTCP Cảng Chân Mây"
+  },
+  {
+    "stockname": "CMS",
+    "companyname": "Công ty Cổ phần Xây dựng và Nhân lực Việt Nam"
+  },
+  {
+    "stockname": "CMT",
+    "companyname": "Công ty Cổ phần Công nghệ Mạng và Truyền thông"
+  },
+  {
+    "stockname": "CMV",
+    "companyname": "Công ty Cổ phần Thương Nghiệp Cà Mau"
+  },
+  {
+    "stockname": "CMX",
+    "companyname": "Công ty Cổ phần Chế biến thủy sản và xuất nhập khẩu Cà Mau (Camimex)"
+  },
+  {
+    "stockname": "CNC",
+    "companyname": "Công ty Cổ phần Công nghệ cao Traphaco"
+  },
+  {
+    "stockname": "CNG",
+    "companyname": "Công ty Cổ phần CNG Việt Nam"
+  },
+  {
+    "stockname": "CNH",
+    "companyname": "Công ty Cổ phần cảng Nha Trang"
+  },
+  {
+    "stockname": "CNN",
+    "companyname": "CTCP Tư vấn công nghệ, thiết bị và kiểm định xây dựng - CONINCO"
+  },
+  {
+    "stockname": "CNT",
+    "companyname": "Công ty Cổ phần Xây dựng và Kinh doanh vật tư"
+  },
+  {
+    "stockname": "COM",
+    "companyname": "Công ty Cổ phần Vật Tư - Xăng Dầu"
+  },
+  {
+    "stockname": "CPC",
+    "companyname": "Công ty Cổ phần Thuốc sát trùng Cần Thơ"
+  },
+  {
+    "stockname": "CSC",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Thành Nam"
+  },
+  {
+    "stockname": "CSG",
+    "companyname": "Công ty cổ phần Cáp Sài Gòn"
+  },
+  {
+    "stockname": "CSM",
+    "companyname": "Công ty Cổ phần Công nghiệp Cao su Miền Nam"
+  },
+  {
+    "stockname": "CSV",
+    "companyname": "Công ty Cổ phần hóa chất cơ bản Miền Nam"
+  },
+  {
+    "stockname": "CT3",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng công trình 3"
+  },
+  {
+    "stockname": "CT6",
+    "companyname": "Công ty Cổ phần Công trình 6"
+  },
+  {
+    "stockname": "CTA",
+    "companyname": "Công ty Cổ phần Vinavico"
+  },
+  {
+    "stockname": "CTB",
+    "companyname": "Công ty Cổ phần Chế tạo Bơm Hải Dương"
+  },
+  {
+    "stockname": "CTC",
+    "companyname": "Công ty Cổ phần Gia Lai CTC"
+  },
+  {
+    "stockname": "CTD",
+    "companyname": "Công ty Cổ phần Xây dựng Cotec"
+  },
+  {
+    "stockname": "CTG",
+    "companyname": "Ngân hàng Thương mại Cổ phần Công Thương Việt Nam"
+  },
+  {
+    "stockname": "CTI",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Cường Thuận IDICO"
+  },
+  {
+    "stockname": "CTM",
+    "companyname": "Công ty Cổ phần Đầu tư, Xây dựng và Khai thác mỏ Vinavico"
+  },
+  {
+    "stockname": "CTN",
+    "companyname": "Công ty Cổ phần Xây dựng Công trình ngầm"
+  },
+  {
+    "stockname": "CTS",
+    "companyname": "Công ty Cổ phần Chứng khoán Ngân hàng Công thương Việt Nam"
+  },
+  {
+    "stockname": "CTT",
+    "companyname": "Công ty Cổ phần chế tạo máy - VINACOMIN"
+  },
+  {
+    "stockname": "CTV",
+    "companyname": "Công ty Cổ phần Đầu tư - Sản xuất và Thương mại Việt Nam"
+  },
+  {
+    "stockname": "CTX",
+    "companyname": "Tổng Công ty Cổ phần Đầu tư xây dựng và Thương mại Việt Nam"
+  },
+  {
+    "stockname": "CVN",
+    "companyname": "Công ty Cổ phần VINAM"
+  },
+  {
+    "stockname": "CVT",
+    "companyname": "Công ty Cổ phần CMC"
+  },
+  {
+    "stockname": "CX8",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây lắp Contrexim số 8"
+  },
+  {
+    "stockname": "CXH",
+    "companyname": "CTCP Xe khách Hà Nội"
+  },
+  {
+    "stockname": "CYC",
+    "companyname": "Công ty Cổ phần Gạch Men Chang Yih"
+  },
+  {
+    "stockname": "CZC",
+    "companyname": "Công ty Cổ phần Than miền Trung - VINACOMIN"
+  },
+  {
+    "stockname": "D11",
+    "companyname": "Công ty Cổ phần Địa ốc 11"
+  },
+  {
+    "stockname": "D26",
+    "companyname": "Công ty Cổ phần Quản lý và Xây dựng đường bộ 26"
+  },
+  {
+    "stockname": "D2D",
+    "companyname": "Công ty Cổ phần Phát triển Đô thị Công nghiệp Số 2"
+  },
+  {
+    "stockname": "DAC",
+    "companyname": "Công ty Cổ phần Viglacera Đông Anh"
+  },
+  {
+    "stockname": "DAD",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển giáo dục Đà Nẵng"
+  },
+  {
+    "stockname": "DAE",
+    "companyname": "Công ty Cổ phần Sách Giáo Dục tại TP Đà Nẵng"
+  },
+  {
+    "stockname": "DAG",
+    "companyname": "Công ty Cổ phần Tập đoàn Nhựa Đông Á"
+  },
+  {
+    "stockname": "DAP",
+    "companyname": "Công ty Cổ phần Đông Á"
+  },
+  {
+    "stockname": "DAS",
+    "companyname": "Công ty Cổ phần Máy – Thiết bị Dầu khí Đà Nẵng"
+  },
+  {
+    "stockname": "DAT",
+    "companyname": "Công ty Cổ phần Đầu Tư Du lịch và Phát triển Thủy Sản"
+  },
+  {
+    "stockname": "DBC",
+    "companyname": "Công ty Cổ phần Tập đoàn Dabaco Việt Nam"
+  },
+  {
+    "stockname": "DBF",
+    "companyname": "Công ty Cổ phần Lương thực Đông Bắc"
+  },
+  {
+    "stockname": "DBH",
+    "companyname": "CTCP Đường bộ Hải Phòng"
+  },
+  {
+    "stockname": "DBM",
+    "companyname": "Công ty Cổ phần Dược - Vật tư y tế Đăk Lăk"
+  },
+  {
+    "stockname": "DBT",
+    "companyname": "Công ty Cổ phần Dược phẩm Bến Tre"
+  },
+  {
+    "stockname": "DC2",
+    "companyname": "Công ty Cổ phần Đầu tư phát triển - Xây dựng (DIC) số 2"
+  },
+  {
+    "stockname": "DC4",
+    "companyname": "Công ty Cổ phần DIC số 4"
+  },
+  {
+    "stockname": "DCC",
+    "companyname": "Công ty cổ phần Xây dựng công nghiệp DESCON"
+  },
+  {
+    "stockname": "DCD",
+    "companyname": "Công ty Cổ phần Du lịch và Thương mại DIC"
+  },
+  {
+    "stockname": "DCL",
+    "companyname": "Công ty Cổ phần Dược phẩm Cửu Long"
+  },
+  {
+    "stockname": "DCM",
+    "companyname": "Công ty Cổ phần Phân Bón Dầu khí Cà Mau"
+  },
+  {
+    "stockname": "DCS",
+    "companyname": "Công ty Cổ phần Tập đoàn Đại Châu"
+  },
+  {
+    "stockname": "DCT",
+    "companyname": "Công ty cổ phần Tấm lợp Vật liệu Xây dựng Đồng Nai"
+  },
+  {
+    "stockname": "DDH",
+    "companyname": "CTCP Đảm bảo giao thông đường thủy Hải Phòng"
+  },
+  {
+    "stockname": "DDM",
+    "companyname": "Công ty Cổ phần Hàng hải Đông Đô"
+  },
+  {
+    "stockname": "DDN",
+    "companyname": "Công ty Cổ phần Dược - Thiết bị y tế Đà Nẵng (DDN)"
+  },
+  {
+    "stockname": "DDV",
+    "companyname": "Công ty Cổ phần DAP - VINACHEM"
+  },
+  {
+    "stockname": "DGC",
+    "companyname": "Công ty Cổ phần Bột giặt và Hóa chất Đức Giang"
+  },
+  {
+    "stockname": "DGL",
+    "companyname": "Công ty Cổ phần Hóa Chất Đức Giang - Lào Cai"
+  },
+  {
+    "stockname": "DGT",
+    "companyname": "Công ty Cổ phần Công trình giao thông Đồng Nai"
+  },
+  {
+    "stockname": "DGW",
+    "companyname": "Công ty Cổ phần Thế giới Số"
+  },
+  {
+    "stockname": "DHA",
+    "companyname": "Công ty Cổ phần Hoá An"
+  },
+  {
+    "stockname": "DHC",
+    "companyname": "Công ty Cổ phần Đông Hải Bến Tre"
+  },
+  {
+    "stockname": "DHG",
+    "companyname": "Công ty Cổ phần Dược Hậu Giang"
+  },
+  {
+    "stockname": "DHI",
+    "companyname": "Công ty cổ phần In Diên Hồng"
+  },
+  {
+    "stockname": "DHL",
+    "companyname": "Công ty Cổ phần Cơ khí Vận tải Thương mại Đại Hưng"
+  },
+  {
+    "stockname": "DHM",
+    "companyname": "Công ty Cổ phần Thương mại thác khoáng sản Dương Hiếu"
+  },
+  {
+    "stockname": "DHP",
+    "companyname": "Công ty Cổ phần Điện Cơ Hải Phòng"
+  },
+  {
+    "stockname": "DHT",
+    "companyname": "Công ty Cổ phần Dược phẩm Hà Tây"
+  },
+  {
+    "stockname": "DIC",
+    "companyname": "Công ty Cổ phần Đầu tư và Thương mại DIC"
+  },
+  {
+    "stockname": "DID",
+    "companyname": "Công ty Cổ phần DIC-Đồng Tiến"
+  },
+  {
+    "stockname": "DIG",
+    "companyname": "Tổng Công ty Cổ phần Đầu tư Phát triển Xây dựng"
+  },
+  {
+    "stockname": "DIH",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Xây dựng Hội An"
+  },
+  {
+    "stockname": "DL1",
+    "companyname": "Công ty Cổ phần Đầu tư phát triển dịch vụ công trình công cộng Đức Long Gia Lai"
+  },
+  {
+    "stockname": "DLC",
+    "companyname": "Công ty Cổ phần Du lịch Cần Thơ"
+  },
+  {
+    "stockname": "DLD",
+    "companyname": "Công ty Cổ phần Du lịch Đắc Lắk"
+  },
+  {
+    "stockname": "DLG",
+    "companyname": "Công ty Cổ phần Tập đoàn Đức Long Gia Lai"
+  },
+  {
+    "stockname": "DLR",
+    "companyname": "Công ty Cổ phần Địa ốc Đà Lạt"
+  },
+  {
+    "stockname": "DLT",
+    "companyname": "Công ty cổ phần du lịch và thương mại - VINACOMIN"
+  },
+  {
+    "stockname": "DMC",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Y tế Domesco"
+  },
+  {
+    "stockname": "DNC",
+    "companyname": "Công ty Cổ phần Điện nước lắp máy Hải Phòng"
+  },
+  {
+    "stockname": "DNF",
+    "companyname": "Công ty Cổ phần Lương thực Đà Nẵng"
+  },
+  {
+    "stockname": "DNL",
+    "companyname": "Công ty Cổ phần Logistic Cảng Đà Nẵng"
+  },
+  {
+    "stockname": "DNM",
+    "companyname": "Tổng Công ty Cổ phần Y tế Danameco"
+  },
+  {
+    "stockname": "DNP",
+    "companyname": "Công ty Cổ phần Nhựa Đồng Nai"
+  },
+  {
+    "stockname": "DNR",
+    "companyname": "CTCP Đường sắt Quảng Nam - Đà Nẵng"
+  },
+  {
+    "stockname": "DNS",
+    "companyname": "Công ty Cổ phần Thép Đà Nẵng"
+  },
+  {
+    "stockname": "DNW",
+    "companyname": "CTCP Cấp nước Đồng Nai"
+  },
+  {
+    "stockname": "DNY",
+    "companyname": "Công ty Cổ phần Thép Dana - Ý"
+  },
+  {
+    "stockname": "DOP",
+    "companyname": "Công ty Cổ phần Vận tải Xăng dầu Đồng Tháp"
+  },
+  {
+    "stockname": "DP3",
+    "companyname": "Công ty Cổ phần Dược phẩm Trung ương 3"
+  },
+  {
+    "stockname": "DPC",
+    "companyname": "Công ty Cổ phần nhựa Đà Nẵng"
+  },
+  {
+    "stockname": "DPM",
+    "companyname": "Tổng Công ty Cổ phần Phân bón và Hóa chất dầu khí - CTCP"
+  },
+  {
+    "stockname": "DPP",
+    "companyname": "Công ty Cổ phần Dược Đồng Nai"
+  },
+  {
+    "stockname": "DPR",
+    "companyname": "Công ty Cổ phần Cao su Đồng Phú"
+  },
+  {
+    "stockname": "DPS",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Sóc Sơn"
+  },
+  {
+    "stockname": "DQC",
+    "companyname": "Công ty Cổ phần Bóng đèn Điện Quang"
+  },
+  {
+    "stockname": "DRC",
+    "companyname": "Công ty Cổ phần Cao Su Đà Nẵng"
+  },
+  {
+    "stockname": "DRH",
+    "companyname": "Công ty Cổ phần Đầu tư Căn nhà mơ ước"
+  },
+  {
+    "stockname": "DRL",
+    "companyname": "Công ty Cổ phần Thủy Điện - Điện lực 3"
+  },
+  {
+    "stockname": "DSN",
+    "companyname": "Công ty Cổ phần Công viên nước Đầm Sen"
+  },
+  {
+    "stockname": "DST",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị giáo dục Nam Định"
+  },
+  {
+    "stockname": "DTA",
+    "companyname": "Công ty Cổ phần Đệ Tam"
+  },
+  {
+    "stockname": "DTC",
+    "companyname": "Công ty Cổ phần Viglacera Đông Triều"
+  },
+  {
+    "stockname": "DTL",
+    "companyname": "Công ty Cổ phần Đại Thiên Lộc"
+  },
+  {
+    "stockname": "DTN",
+    "companyname": "Công ty Cổ phần Diêm Thống Nhất"
+  },
+  {
+    "stockname": "DTT",
+    "companyname": "Công ty Cổ phần Kỹ nghệ Đô Thành"
+  },
+  {
+    "stockname": "DTV",
+    "companyname": "Công ty Cổ phần phát triển điện nông thôn Trà Vinh"
+  },
+  {
+    "stockname": "DVC",
+    "companyname": "Công ty Cổ phần Thương mại dịch vụ tổng hợp Cảng Hải Phòng"
+  },
+  {
+    "stockname": "DVD",
+    "companyname": "Công ty cổ phần Dược phẩm Viễn Đông"
+  },
+  {
+    "stockname": "DVH",
+    "companyname": "Công ty Cổ phần Chế tạo Máy điện Việt Nam - Hungari"
+  },
+  {
+    "stockname": "DVP",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển cảng Đình Vũ"
+  },
+  {
+    "stockname": "DXG",
+    "companyname": "Công ty Cổ phần Dịch vụ và Xây dựng địa ốc Đất Xanh"
+  },
+  {
+    "stockname": "DXL",
+    "companyname": "Công ty Cổ phần Du lịch và Xuất nhập khẩu Lạng Sơn"
+  },
+  {
+    "stockname": "DXP",
+    "companyname": "Công ty Cổ phần Cảng Đoạn Xá"
+  },
+  {
+    "stockname": "DXV",
+    "companyname": "Công ty Cổ phần ViCem Vật liệu xây dựng Đà Nẵng"
+  },
+  {
+    "stockname": "DZM",
+    "companyname": "Công ty Cổ phần Chế tạo máy Dzĩ An"
+  },
+  {
+    "stockname": "E1SSHN30",
+    "companyname": "Quỹ ETF SSIAM HNX30"
+  },
+  {
+    "stockname": "E1VFVN30",
+    "companyname": "Quỹ ETF VFMVN30"
+  },
+  {
+    "stockname": "EBS",
+    "companyname": "Công ty Cổ phần Sách Giáo Dục tại TP Hà Nội"
+  },
+  {
+    "stockname": "ECI",
+    "companyname": "Công ty Cổ phần Bản đồ và Tranh ảnh giáo dục"
+  },
+  {
+    "stockname": "EFI",
+    "companyname": "Công ty Cổ phần Đầu tư tài chính giáo dục"
+  },
+  {
+    "stockname": "EIB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Xuất nhập khẩu Việt Nam"
+  },
+  {
+    "stockname": "EID",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển giáo dục Hà Nội"
+  },
+  {
+    "stockname": "ELC",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Công nghệ điện tử - Viễn thông"
+  },
+  {
+    "stockname": "EMC",
+    "companyname": "Công ty Cổ phần Cơ Điện Thủ Đức"
+  },
+  {
+    "stockname": "EVE",
+    "companyname": "Công ty Cổ phần Everpia"
+  },
+  {
+    "stockname": "FBA",
+    "companyname": "Công ty Cổ phần Tập đoàn Quốc tế FBA"
+  },
+  {
+    "stockname": "FBT",
+    "companyname": "Công ty cổ phần Xuất nhập khẩu lâm thủy sản Bến Tre"
+  },
+  {
+    "stockname": "FCC",
+    "companyname": "CTCP Liên hợp Thực phẩm"
+  },
+  {
+    "stockname": "FCM",
+    "companyname": "Công ty Cổ phần Khoáng sản FECON"
+  },
+  {
+    "stockname": "FCN",
+    "companyname": "Công ty Cổ phần Kỹ thuật nền móng và Công trình ngầm FECON"
+  },
+  {
+    "stockname": "FDC",
+    "companyname": "Công ty Cổ phần Ngoại thương và Phát triển Đầu tư Thành phố Hồ Chí Minh"
+  },
+  {
+    "stockname": "FDG",
+    "companyname": "Công ty cổ phần DOCIMEXCO"
+  },
+  {
+    "stockname": "FDT",
+    "companyname": "Công ty Cổ phần Fiditour"
+  },
+  {
+    "stockname": "FID",
+    "companyname": "Công ty Cổ phần đầu tư và phát triển doanh nghiệp Việt Nam"
+  },
+  {
+    "stockname": "FIT",
+    "companyname": "Công ty Cổ phần Đầu tư F.I.T"
+  },
+  {
+    "stockname": "FLC",
+    "companyname": "Công ty Cổ phần Tập đoàn FLC"
+  },
+  {
+    "stockname": "FMC",
+    "companyname": "Công ty Cổ phần Thực phẩm Sao Ta"
+  },
+  {
+    "stockname": "FPC",
+    "companyname": "Công ty cổ phần Full Power"
+  },
+  {
+    "stockname": "FPT",
+    "companyname": "Công ty Cổ phần FPT"
+  },
+  {
+    "stockname": "G20",
+    "companyname": "Công ty Cổ phần Đầu tư Dệt may G.HOME"
+  },
+  {
+    "stockname": "GAS",
+    "companyname": "Tổng Công ty Khí Việt Nam - CTCP"
+  },
+  {
+    "stockname": "GBS",
+    "companyname": "Công ty cổ phần Chứng khoán Golden Bridge Việt Nam"
+  },
+  {
+    "stockname": "GDT",
+    "companyname": "Công ty Cổ phần Chế biến Gỗ Đức Thành"
+  },
+  {
+    "stockname": "GDW",
+    "companyname": "Công ty Cổ phần Cấp nước Gia Định"
+  },
+  {
+    "stockname": "GER",
+    "companyname": "Công ty Cổ phần Thể Thao Ngôi Sao Geru"
+  },
+  {
+    "stockname": "GEX",
+    "companyname": "Tổng Công ty Cổ phần Thiết bị điện Việt Nam"
+  },
+  {
+    "stockname": "GFC",
+    "companyname": "Công ty cổ phần Thủy sản Gentraco"
+  },
+  {
+    "stockname": "GGG",
+    "companyname": "Công ty Cổ phần Ô tô Giải Phóng"
+  },
+  {
+    "stockname": "GHA",
+    "companyname": "Công ty Cổ phần HAPACO Hải Âu"
+  },
+  {
+    "stockname": "GHC",
+    "companyname": "Công ty Cổ phần Thủy điện Gia Lai"
+  },
+  {
+    "stockname": "GIL",
+    "companyname": "Công ty Cổ phần Sản Xuất Kinh Doanh Xuất Nhập Khẩu Bình Thạnh"
+  },
+  {
+    "stockname": "GLT",
+    "companyname": "Công ty Cổ phần Kỹ thuật điện toàn cầu"
+  },
+  {
+    "stockname": "GMC",
+    "companyname": "Công ty Cổ phần Sản xuất Thương mại May Sài Gòn"
+  },
+  {
+    "stockname": "GMD",
+    "companyname": "Công ty Cổ phần Gemadept"
+  },
+  {
+    "stockname": "GMX",
+    "companyname": "Công ty Cổ phần Gạch Ngói Gốm Xây dựng Mỹ Xuân"
+  },
+  {
+    "stockname": "GSM",
+    "companyname": "Công ty Cổ phần Thủy điện Hương Sơn"
+  },
+  {
+    "stockname": "GSP",
+    "companyname": "Công ty Cổ phần Vận tải Sản Phẩm khí Quốc Tế"
+  },
+  {
+    "stockname": "GTA",
+    "companyname": "Công ty Cổ phần chế biến gỗ Thuận An"
+  },
+  {
+    "stockname": "GTC",
+    "companyname": "Công ty Cổ phần Trà Rồng Vàng"
+  },
+  {
+    "stockname": "GTH",
+    "companyname": "Công ty Cổ phần Xây dựng - Giao thông Thừa Thiên Huế"
+  },
+  {
+    "stockname": "GTN",
+    "companyname": "Công ty Cổ phần Đầu tư và Sản xuất Thống Nhất"
+  },
+  {
+    "stockname": "GTT",
+    "companyname": "Công ty Cổ phần Thuận Thảo"
+  },
+  {
+    "stockname": "H11",
+    "companyname": "Công ty Cổ phần Xây dựng HUD101"
+  },
+  {
+    "stockname": "HAD",
+    "companyname": "Công ty Cổ phần Bia Hà Nội - Hải Dương"
+  },
+  {
+    "stockname": "HAG",
+    "companyname": "Công ty Cổ phần Hoàng Anh Gia Lai"
+  },
+  {
+    "stockname": "HAH",
+    "companyname": "Công ty Cổ phần Vận tải và xếp dỡ Hải An"
+  },
+  {
+    "stockname": "HAI",
+    "companyname": "Công ty Cổ phần Nông dược H.A.I"
+  },
+  {
+    "stockname": "HAP",
+    "companyname": "Công ty Cổ phần Tập đoàn HAPACO"
+  },
+  {
+    "stockname": "HAR",
+    "companyname": "Công ty Cổ phần Đầu tư Thương mại Bất động sản An Dương Thảo Điền"
+  },
+  {
+    "stockname": "HAS",
+    "companyname": "Công ty Cổ phần Hacisco"
+  },
+  {
+    "stockname": "HAT",
+    "companyname": "Công ty Cổ phần Thương mại Bia Hà Nội"
+  },
+  {
+    "stockname": "HAX",
+    "companyname": "Công ty Cổ phần Dịch vụ Ô tô Hàng Xanh"
+  },
+  {
+    "stockname": "HBB",
+    "companyname": "Ngân Hàng Thương Mại Cổ Phần Nhà Hà Nội"
+  },
+  {
+    "stockname": "HBC",
+    "companyname": "Công ty Cổ phần Xây Dựng và Kinh Doanh Địa ốc Hòa Bình"
+  },
+  {
+    "stockname": "HBD",
+    "companyname": "Công ty Cổ phần bao bì PP Bình Dương"
+  },
+  {
+    "stockname": "HBE",
+    "companyname": "Công ty Cổ phần Sách-Thiết bị trường học Hà Tĩnh"
+  },
+  {
+    "stockname": "HBI",
+    "companyname": "Công ty Cổ phần HBI"
+  },
+  {
+    "stockname": "HBS",
+    "companyname": "Công ty Cổ phần Chứng khoán Hòa Bình"
+  },
+  {
+    "stockname": "HCC",
+    "companyname": "Công ty Cổ phần Bê tông Hòa Cẩm - Intimex"
+  },
+  {
+    "stockname": "HCI",
+    "companyname": "Công ty Cổ phần Đầu tư - Xây dựng Hà Nội"
+  },
+  {
+    "stockname": "HCM",
+    "companyname": "Công ty Cổ phần Chứng khoán Thành phố Hồ Chí Minh"
+  },
+  {
+    "stockname": "HCT",
+    "companyname": "Công ty Cổ phần thương mại dịch vụ vận tải xi măng Hải Phòng"
+  },
+  {
+    "stockname": "HD2",
+    "companyname": "CTCP Đầu tư Phát triển nhà HUD2"
+  },
+  {
+    "stockname": "HDA",
+    "companyname": "Công ty Cổ phần Hãng sơn Đông Á"
+  },
+  {
+    "stockname": "HDC",
+    "companyname": "Công ty Cổ phần Phát triển nhà Bà Rịa-Vũng Tàu"
+  },
+  {
+    "stockname": "HDG",
+    "companyname": "Công ty Cổ phần Tập đoàn Hà Đô"
+  },
+  {
+    "stockname": "HDM",
+    "companyname": "Công ty Cổ phần Dệt - May Huế"
+  },
+  {
+    "stockname": "HDO",
+    "companyname": "Công ty Cổ phần Hưng Đạo Container"
+  },
+  {
+    "stockname": "HEV",
+    "companyname": "Công ty Cổ phần Sách Đại học - Dạy nghề"
+  },
+  {
+    "stockname": "HFC",
+    "companyname": "Công ty Cổ phần Xăng dầu chất đốt Hà Nội"
+  },
+  {
+    "stockname": "HFX",
+    "companyname": "Công ty Cổ phần Sản xuất - Xuất nhập khẩu Thanh Hà"
+  },
+  {
+    "stockname": "HGM",
+    "companyname": "Công ty Cổ phần Cơ khí và Khoáng sản Hà Giang"
+  },
+  {
+    "stockname": "HHA",
+    "companyname": "Công ty Cổ phần văn phòng phẩm Hồng Hà"
+  },
+  {
+    "stockname": "HHC",
+    "companyname": "Công ty Cổ phần Bánh kẹo Hải Hà"
+  },
+  {
+    "stockname": "HHG",
+    "companyname": "Công ty Cổ phần Hoàng Hà"
+  },
+  {
+    "stockname": "HHL",
+    "companyname": "Công ty cổ phần Hồng Hà Long An"
+  },
+  {
+    "stockname": "HHS",
+    "companyname": "Công ty Cổ phần Đầu tư - Dịch vụ Hoàng Huy"
+  },
+  {
+    "stockname": "HHV",
+    "companyname": "CTCP Quản lý và Khai thác Hầm Đường Bộ Hải Vân"
+  },
+  {
+    "stockname": "HIG",
+    "companyname": "Công ty Cổ phần Tập đoàn HIPT"
+  },
+  {
+    "stockname": "HJC",
+    "companyname": "Công ty Cổ phần Hòa Việt"
+  },
+  {
+    "stockname": "HJS",
+    "companyname": "Công ty Cổ phần Thủy điện Nậm Mu"
+  },
+  {
+    "stockname": "HKB",
+    "companyname": "Công ty Cổ phần nông nghiệp và thực phẩm Hà Nội - Kinh Bắc"
+  },
+  {
+    "stockname": "HKP",
+    "companyname": "CTCP Bao bì Hà Tiên"
+  },
+  {
+    "stockname": "HLA",
+    "companyname": "Công ty Cổ phần Hữu Liên Á Châu"
+  },
+  {
+    "stockname": "HLC",
+    "companyname": "Công ty Cổ phần Than Hà Lầm - Vinacomin"
+  },
+  {
+    "stockname": "HLD",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Bất động sản HUDLAND"
+  },
+  {
+    "stockname": "HLG",
+    "companyname": "Công ty Cổ phần Tập đoàn Hoàng Long"
+  },
+  {
+    "stockname": "HLY",
+    "companyname": "Công ty Cổ phần Viglacera Hạ Long I"
+  },
+  {
+    "stockname": "HMC",
+    "companyname": "Công ty Cổ phần Kim khí TP Hồ Chí Minh"
+  },
+  {
+    "stockname": "HMH",
+    "companyname": "Công ty Cổ phần Hải Minh"
+  },
+  {
+    "stockname": "HNB",
+    "companyname": "Công ty Cổ phần Bến xe Hà Nội"
+  },
+  {
+    "stockname": "HNF",
+    "companyname": "Công ty Cổ phần Thực phẩm Hữu Nghị"
+  },
+  {
+    "stockname": "HNG",
+    "companyname": "Công ty Cổ phần Nông nghiệp Quốc tế Hoàng Anh Gia Lai"
+  },
+  {
+    "stockname": "HNM",
+    "companyname": "Công ty Cổ phần Sữa Hà Nội"
+  },
+  {
+    "stockname": "HOM",
+    "companyname": "Công ty Cổ phần Xi măng Vicem Hoàng Mai"
+  },
+  {
+    "stockname": "HOT",
+    "companyname": "Công ty Cổ phần Du lịch-Dịch vụ Hội An"
+  },
+  {
+    "stockname": "HPB",
+    "companyname": "Công ty Cổ phần Bao bì PP"
+  },
+  {
+    "stockname": "HPC",
+    "companyname": "Công ty Cổ phần Chứng khoán Hải Phòng"
+  },
+  {
+    "stockname": "HPD",
+    "companyname": "Công ty Cổ phần thủy điện Đăk Đoa"
+  },
+  {
+    "stockname": "HPG",
+    "companyname": "Công ty cổ phần Tập đoàn Hòa Phát"
+  },
+  {
+    "stockname": "HPM",
+    "companyname": "CTCP Xây dựng Thương mại và Khoáng sản Hoàng Phúc"
+  },
+  {
+    "stockname": "HPP",
+    "companyname": "Công ty Cổ phần Sơn Hải Phòng"
+  },
+  {
+    "stockname": "HPR",
+    "companyname": "Công ty cổ phần Đầu tư Xây dựng Hồng Phát"
+  },
+  {
+    "stockname": "HPS",
+    "companyname": "Công ty Cổ phần Đá xây dựng Hoà Phát"
+  },
+  {
+    "stockname": "HPT",
+    "companyname": "Công ty Cổ phần Dịch vụ Công nghệ Tin học HPT"
+  },
+  {
+    "stockname": "HQC",
+    "companyname": "Công ty Cổ phần Tư vấn - Thương mại - Dịch vụ Địa ốc Hoàng Quân"
+  },
+  {
+    "stockname": "HRC",
+    "companyname": "Công ty Cổ phần Cao su Hòa Bình"
+  },
+  {
+    "stockname": "HSC",
+    "companyname": "Công ty Cổ phần Hacinco"
+  },
+  {
+    "stockname": "HSG",
+    "companyname": "Công ty Cổ phần Tập đoàn Hoa Sen"
+  },
+  {
+    "stockname": "HSI",
+    "companyname": "Công ty Cổ phần Vật tư Tổng hợp và Phân bón Hóa sinh"
+  },
+  {
+    "stockname": "HST",
+    "companyname": "Công ty Cổ phần Phát hành sách và Thiết bị trường học Hưng Yên"
+  },
+  {
+    "stockname": "HT1",
+    "companyname": "Công ty Cổ phần xi măng Hà Tiên 1"
+  },
+  {
+    "stockname": "HT2",
+    "companyname": "Công ty cổ phần Xi măng Hà Tiên 2"
+  },
+  {
+    "stockname": "HTB",
+    "companyname": "Công ty cổ phần Xây dựng Huy Thắng"
+  },
+  {
+    "stockname": "HTC",
+    "companyname": "Công ty Cổ phần Thương mại Hóc Môn"
+  },
+  {
+    "stockname": "HTI",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Hạ tầng IDICO"
+  },
+  {
+    "stockname": "HTL",
+    "companyname": "Công ty Cổ phần Kỹ thuật và Ô tô Trường Long"
+  },
+  {
+    "stockname": "HTP",
+    "companyname": "Công ty Cổ phần In sách giáo khoa Hòa Phát"
+  },
+  {
+    "stockname": "HTV",
+    "companyname": "Công ty Cổ phần vận tải Hà Tiên"
+  },
+  {
+    "stockname": "HU1",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng HUD1"
+  },
+  {
+    "stockname": "HU3",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng HUD3"
+  },
+  {
+    "stockname": "HU4",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng HUD4"
+  },
+  {
+    "stockname": "HU6",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Nhà và Đô thị HUD6"
+  },
+  {
+    "stockname": "HUT",
+    "companyname": "Công ty Cổ phần TASCO"
+  },
+  {
+    "stockname": "HVA",
+    "companyname": "Hung Viet Green Agriculture Joint Stock Company"
+  },
+  {
+    "stockname": "HVG",
+    "companyname": "Công ty Cổ phần Hùng Vương"
+  },
+  {
+    "stockname": "HVT",
+    "companyname": "Công ty Cổ phần Hóa chất Việt Trì"
+  },
+  {
+    "stockname": "HVX",
+    "companyname": "Công ty Cổ phần xi măng Vicem Hải Vân"
+  },
+  {
+    "stockname": "I10",
+    "companyname": "CTCP Đầu tư Xây dựng số 10 IDICO"
+  },
+  {
+    "stockname": "ICC",
+    "companyname": "CTCP Xây dựng Công nghiệp"
+  },
+  {
+    "stockname": "ICF",
+    "companyname": "Công ty Cổ phần Đầu tư Thương mại Thủy sản"
+  },
+  {
+    "stockname": "ICG",
+    "companyname": "Công ty Cổ phần Xây dựng sông Hồng"
+  },
+  {
+    "stockname": "ICI",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Công nghiệp"
+  },
+  {
+    "stockname": "ICN",
+    "companyname": "Công ty Cổ phần Đầu Tư Xây Dựng Dầu Khí IDICO"
+  },
+  {
+    "stockname": "IDI",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Đa Quốc Gia IDI"
+  },
+  {
+    "stockname": "IDJ",
+    "companyname": "Công ty Cổ phần Đầu tư tài chính Quốc tế và Phát triển doanh nghiệp IDJ"
+  },
+  {
+    "stockname": "IDV",
+    "companyname": "Công ty Cổ phần Phát triển hạ tầng Vĩnh Phúc"
+  },
+  {
+    "stockname": "IFC",
+    "companyname": "CTCP Thực phẩm Công nghệ Sài Gòn"
+  },
+  {
+    "stockname": "IFS",
+    "companyname": "Công ty Cổ phần Thực phẩm Quốc Tế"
+  },
+  {
+    "stockname": "IHK",
+    "companyname": "Công ty Cổ phần In Hàng không"
+  },
+  {
+    "stockname": "IJC",
+    "companyname": "Công ty Cổ phần Phát triển Hạ tầng Kỹ thuật"
+  },
+  {
+    "stockname": "ILC",
+    "companyname": "Công ty cổ phần Hợp tác lao động với nước ngoài"
+  },
+  {
+    "stockname": "IME",
+    "companyname": "Công ty Cổ phần Cơ khí và Xây lắp Công nghiệp"
+  },
+  {
+    "stockname": "IMP",
+    "companyname": "Công ty Cổ phần dược phẩm Imexpharm"
+  },
+  {
+    "stockname": "IN4",
+    "companyname": "Công ty Cổ phần In số 4"
+  },
+  {
+    "stockname": "INC",
+    "companyname": "Công ty Cổ phần Tư vấn Đầu tư IDICO"
+  },
+  {
+    "stockname": "INN",
+    "companyname": "Công ty Cổ phần Bao bì và In nông nghiệp"
+  },
+  {
+    "stockname": "IPA",
+    "companyname": "CTCP Tập đoàn Đầu tư I.P.A"
+  },
+  {
+    "stockname": "ISG",
+    "companyname": "Công ty Cổ phần Vận tải biển và Hợp tác lao động quốc tế"
+  },
+  {
+    "stockname": "ISH",
+    "companyname": "Công ty Cổ phần thủy điện SROK Phu Miêng IDICO"
+  },
+  {
+    "stockname": "ITA",
+    "companyname": "Công ty Cổ phần Đầu tư và Công nghiệp Tân Tạo"
+  },
+  {
+    "stockname": "ITC",
+    "companyname": "Công ty Cổ phần Đầu tư - Kinh doanh nhà"
+  },
+  {
+    "stockname": "ITD",
+    "companyname": "Công ty Cổ phần Công nghệ Tiên Phong"
+  },
+  {
+    "stockname": "ITQ",
+    "companyname": "Công ty Cổ phần Tập đoàn Thiên Quang"
+  },
+  {
+    "stockname": "ITS",
+    "companyname": "Công ty cổ phần Đầu tư, Thương mại và Dịch vụ - Vinacomin"
+  },
+  {
+    "stockname": "IVS",
+    "companyname": "Công ty Cổ phần Chứng khoán Đầu tư Việt Nam"
+  },
+  {
+    "stockname": "JSC",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Cầu đường Hà Nội"
+  },
+  {
+    "stockname": "JVC",
+    "companyname": "Công ty Cổ phần Thiết bị Y tế Việt Nhật"
+  },
+  {
+    "stockname": "KAC",
+    "companyname": "Công ty Cổ phần Đầu tư Địa ốc Khang An"
+  },
+  {
+    "stockname": "KBC",
+    "companyname": "Tổng Công ty Phát triển Đô thị Kinh Bắc"
+  },
+  {
+    "stockname": "KBE",
+    "companyname": "Công ty Cổ phần Sách - Thiết bị Trường học Kiên Giang"
+  },
+  {
+    "stockname": "KBT",
+    "companyname": "Công ty cổ phần Gạch ngói Kiên Giang"
+  },
+  {
+    "stockname": "KCB",
+    "companyname": "Công ty Cổ phần Khoáng Sản Luyện Kim Cao Bằng"
+  },
+  {
+    "stockname": "KCE",
+    "companyname": "Công ty Cổ phần Bê tông Ly tâm Điện lực Khánh Hòa"
+  },
+  {
+    "stockname": "KDC",
+    "companyname": "Công ty Cổ phần tập đoàn Kido"
+  },
+  {
+    "stockname": "KDH",
+    "companyname": "Công ty Cổ phần Đầu tư và Kinh doanh Nhà Khang Điền"
+  },
+  {
+    "stockname": "KDM",
+    "companyname": "CTCP Xây dựng và Thương mại Long Thành"
+  },
+  {
+    "stockname": "KHA",
+    "companyname": "Công ty Cổ phần xuất nhập khẩu Khánh Hội"
+  },
+  {
+    "stockname": "KHB",
+    "companyname": "Công ty Cổ phần Khoáng sản Hòa Bình"
+  },
+  {
+    "stockname": "KHL",
+    "companyname": "Công ty Cổ phần Khoáng sản và Vật liệu Xây dựng Hưng Long"
+  },
+  {
+    "stockname": "KHP",
+    "companyname": "Công ty Cổ phần Điện lực Khánh Hòa"
+  },
+  {
+    "stockname": "KIP",
+    "companyname": "CTCP Khí cụ Điện 1"
+  },
+  {
+    "stockname": "KKC",
+    "companyname": "Công ty Cổ phần Sản xuất và Kinh doanh kim khí"
+  },
+  {
+    "stockname": "KLF",
+    "companyname": "Công ty Cổ phần Liên doanh Đầu tư Quốc tế KLF"
+  },
+  {
+    "stockname": "KLS",
+    "companyname": "Công ty Cổ phần Chứng khoán Kim Long"
+  },
+  {
+    "stockname": "KMF",
+    "companyname": "Công ty cổ phần Mirae Fiber"
+  },
+  {
+    "stockname": "KMR",
+    "companyname": "Công ty Cổ phần Mirae"
+  },
+  {
+    "stockname": "KMT",
+    "companyname": "Công ty Cổ phần Kim khí Miền Trung"
+  },
+  {
+    "stockname": "KPF",
+    "companyname": "Công ty Cổ phần Tư vấn Dự án Quốc tế KPF"
+  },
+  {
+    "stockname": "KSA",
+    "companyname": "Công ty Cổ phần Công Nghiệp Khoáng Sản Bình Thuận"
+  },
+  {
+    "stockname": "KSB",
+    "companyname": "Công ty Cổ phần Khoáng sản và Xây dựng Bình Dương"
+  },
+  {
+    "stockname": "KSC",
+    "companyname": "Công ty Cổ phần Muối Khánh Hòa"
+  },
+  {
+    "stockname": "KSD",
+    "companyname": "Tổng Công ty Cổ phần Xuất khẩu Đông Nam Á Hamico"
+  },
+  {
+    "stockname": "KSH",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển KSH"
+  },
+  {
+    "stockname": "KSK",
+    "companyname": "Công ty Cổ phần Khoáng sản Luyện kim màu"
+  },
+  {
+    "stockname": "KSQ",
+    "companyname": "Công ty Cổ phần Khoáng sản Quang Anh"
+  },
+  {
+    "stockname": "KSS",
+    "companyname": "Tổng Công ty Cổ phần Khoáng sản Na Rì Hamico"
+  },
+  {
+    "stockname": "KST",
+    "companyname": "Công ty Cổ phần KASATI"
+  },
+  {
+    "stockname": "KTB",
+    "companyname": "Công ty Cổ phần Đầu tư Khoáng sản Tây Bắc"
+  },
+  {
+    "stockname": "KTL",
+    "companyname": "Công ty Cổ phần kim khí Thăng Long"
+  },
+  {
+    "stockname": "KTS",
+    "companyname": "Công ty Cổ phần Đường Kon Tum"
+  },
+  {
+    "stockname": "KTT",
+    "companyname": "Công ty Cổ phần Đầu tư Thiết bị và Xây lắp Điện Thiên Trường"
+  },
+  {
+    "stockname": "KVC",
+    "companyname": "Công ty Cổ phần sản xuất xuất nhập khẩu INOX Kim vĩ"
+  },
+  {
+    "stockname": "L10",
+    "companyname": "Công ty Cổ phần LILAMA 10"
+  },
+  {
+    "stockname": "L14",
+    "companyname": "Công ty Cổ phần Licogi 14"
+  },
+  {
+    "stockname": "L18",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng số 18"
+  },
+  {
+    "stockname": "L35",
+    "companyname": "Công ty Cổ phần Cơ khí lắp máy Lilama"
+  },
+  {
+    "stockname": "L43",
+    "companyname": "Công ty Cổ phần Lilama 45.3"
+  },
+  {
+    "stockname": "L44",
+    "companyname": "Công ty Cổ phần Lilama 45.4"
+  },
+  {
+    "stockname": "L61",
+    "companyname": "Công ty Cổ phần LILAMA 69-1"
+  },
+  {
+    "stockname": "L62",
+    "companyname": "Công ty Cổ phần Lilama 69-2"
+  },
+  {
+    "stockname": "LAF",
+    "companyname": "Công ty Cổ phần Chế biến hàng xuất khẩu Long An"
+  },
+  {
+    "stockname": "LAI",
+    "companyname": "Công ty Cổ phần Đầu tư xây dựng Long An IDICO"
+  },
+  {
+    "stockname": "LAS",
+    "companyname": "Công ty Cổ phần Supe Phốt phát và Hóa chất Lâm Thao"
+  },
+  {
+    "stockname": "LAW",
+    "companyname": "Công ty cổ phần Cấp thoát nước Long An"
+  },
+  {
+    "stockname": "LBE",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị trường học Long An"
+  },
+  {
+    "stockname": "LBM",
+    "companyname": "Công ty Cổ phần Vật Liệu Xây Dựng Lâm Đồng"
+  },
+  {
+    "stockname": "LCC",
+    "companyname": "Công ty Cổ phần Xi măng Lạng Sơn"
+  },
+  {
+    "stockname": "LCD",
+    "companyname": "Công ty Cổ phần Lắp máy - Thí nghiệm cơ điện"
+  },
+  {
+    "stockname": "LCG",
+    "companyname": "Công ty Cổ phần LICOGI 16"
+  },
+  {
+    "stockname": "LCM",
+    "companyname": "Công ty Cổ phần Khai thác và Chế biến Khoáng sản Lào Cai"
+  },
+  {
+    "stockname": "LCS",
+    "companyname": "Công ty Cổ phần Licogi 166"
+  },
+  {
+    "stockname": "LDG",
+    "companyname": "Công ty Cổ phần Đầu tư LDG"
+  },
+  {
+    "stockname": "LDP",
+    "companyname": "Công ty Cổ phần Dược Lâm Đồng"
+  },
+  {
+    "stockname": "LGC",
+    "companyname": "Công ty Cổ phần đầu tư cầu đường CII"
+  },
+  {
+    "stockname": "LGL",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Đô thị Long Giang"
+  },
+  {
+    "stockname": "LHC",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Thủy lợi Lâm Đồng"
+  },
+  {
+    "stockname": "LHG",
+    "companyname": "Công ty Cổ phần Long Hậu"
+  },
+  {
+    "stockname": "LIG",
+    "companyname": "Công ty Cổ phần Licogi 13"
+  },
+  {
+    "stockname": "LIX",
+    "companyname": "Công ty Cổ phần Bột giặt Lix"
+  },
+  {
+    "stockname": "LKW",
+    "companyname": "Công ty Cổ phần Cấp nước Long Khánh"
+  },
+  {
+    "stockname": "LLG",
+    "companyname": "Giao dịch Vàng London"
+  },
+  {
+    "stockname": "LLS",
+    "companyname": "Giao dịch Bạc London"
+  },
+  {
+    "stockname": "LM3",
+    "companyname": "Công ty Cổ phần Lilama 3"
+  },
+  {
+    "stockname": "LM7",
+    "companyname": "Công ty Cổ phần Lilama 7"
+  },
+  {
+    "stockname": "LM8",
+    "companyname": "Công ty Cổ phần Lilama 18"
+  },
+  {
+    "stockname": "LO5",
+    "companyname": "Công ty Cổ phần Lilama 5"
+  },
+  {
+    "stockname": "LSS",
+    "companyname": "Công ty Cổ phần Mía đường Lam Sơn"
+  },
+  {
+    "stockname": "LTC",
+    "companyname": "Công ty Cổ phần Điện nhẹ Viễn thông"
+  },
+  {
+    "stockname": "LUT",
+    "companyname": "Công ty Cổ phần Đầu tư xây dựng Lương Tài"
+  },
+  {
+    "stockname": "MAC",
+    "companyname": "Công ty Cổ phần Cung ứng và Dịch vụ kỹ thuật hàng hải"
+  },
+  {
+    "stockname": "MAFPF1",
+    "companyname": "Quỹ đầu tư tăng trưởng Manulife"
+  },
+  {
+    "stockname": "MAS",
+    "companyname": "Công ty Cổ phần Dịch vụ hàng không sân bay Đà Nẵng"
+  },
+  {
+    "stockname": "MAX",
+    "companyname": "Công ty Cổ phần Khai khoáng và Cơ khí Hữu nghị Vĩnh Sinh"
+  },
+  {
+    "stockname": "MBB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Quân đội"
+  },
+  {
+    "stockname": "MBG",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển xây dựng và Thương mại Việt Nam"
+  },
+  {
+    "stockname": "MBS",
+    "companyname": "Công ty cổ phần Chứng khoán MB"
+  },
+  {
+    "stockname": "MCC",
+    "companyname": "Công ty Cổ phần Gạch ngói cao cấp"
+  },
+  {
+    "stockname": "MCF",
+    "companyname": "Công ty Cổ phần Xây lắp Cơ khí và Lương thực Thực phẩm (Mecofood)"
+  },
+  {
+    "stockname": "MCG",
+    "companyname": "Công ty Cổ phần Cơ điện và Xây dựng Việt Nam"
+  },
+  {
+    "stockname": "MCI",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng và Phát triển Vật liệu IDICO"
+  },
+  {
+    "stockname": "MCL",
+    "companyname": "Công ty cổ phần Phát triển nhà và Sản xuất vật liệu xây dựng Chí Linh"
+  },
+  {
+    "stockname": "MCO",
+    "companyname": "Công ty Cổ phần MCO Việt Nam"
+  },
+  {
+    "stockname": "MCP",
+    "companyname": "Công ty Cổ phần In và Bao bì Mỹ Châu"
+  },
+  {
+    "stockname": "MCV",
+    "companyname": "Công Ty Cổ Phần Cavico Việt Nam Khai thác mỏ và Xây dựng"
+  },
+  {
+    "stockname": "MDC",
+    "companyname": "Công ty Cổ phần Than Mông Dương - Vinacomin"
+  },
+  {
+    "stockname": "MDF",
+    "companyname": "Công ty Cổ phần Gỗ MDF VRG - Quảng Trị"
+  },
+  {
+    "stockname": "MDG",
+    "companyname": "Công ty Cổ phần Miền Đông"
+  },
+  {
+    "stockname": "MEC",
+    "companyname": "Công ty Cổ phần Someco Sông Đà"
+  },
+  {
+    "stockname": "MEF",
+    "companyname": "Công ty Cổ phần MEINFA"
+  },
+  {
+    "stockname": "MGC",
+    "companyname": "CTCP Địa chất mỏ - TKV"
+  },
+  {
+    "stockname": "MHC",
+    "companyname": "Công ty Cổ phần MHC"
+  },
+  {
+    "stockname": "MHL",
+    "companyname": "Công ty Cổ phần Minh Hữu Liên"
+  },
+  {
+    "stockname": "MIC",
+    "companyname": "Công ty Cổ phần Kỹ nghệ khoáng sản Quảng Nam"
+  },
+  {
+    "stockname": "MIH",
+    "companyname": "Công ty cổ phần Xuất nhập khẩu Khoáng sản Hà Nam"
+  },
+  {
+    "stockname": "MIM",
+    "companyname": "Công ty Cổ phần Khoáng sản và Cơ khí"
+  },
+  {
+    "stockname": "MKP",
+    "companyname": "CTCP Hóa – Dược phẩm Mekophar"
+  },
+  {
+    "stockname": "MKT",
+    "companyname": "Công ty cổ phần Dệt Minh Khai"
+  },
+  {
+    "stockname": "MKV",
+    "companyname": "Công ty Cổ phần Dược thú y Cai Lậy"
+  },
+  {
+    "stockname": "MMC",
+    "companyname": "Công ty Cổ phần Khoáng sản Mangan"
+  },
+  {
+    "stockname": "MNC",
+    "companyname": "Công ty Cổ phần Mai Linh miền Trung"
+  },
+  {
+    "stockname": "MPC",
+    "companyname": "Công ty Cổ phần Tập đoàn Thủy hải sản Minh Phú"
+  },
+  {
+    "stockname": "MPT",
+    "companyname": "CTCP May Phú Thành"
+  },
+  {
+    "stockname": "MSN",
+    "companyname": "Công ty Cổ phần Tập đoàn Ma San"
+  },
+  {
+    "stockname": "MSR",
+    "companyname": "Công ty Cổ phần Tài nguyên Ma San"
+  },
+  {
+    "stockname": "MST",
+    "companyname": "CTCP Xây dựng 1.1.6.8"
+  },
+  {
+    "stockname": "MTA",
+    "companyname": "Tổng Công ty Khoáng sản và Thương mại Hà Tĩnh - CTCP"
+  },
+  {
+    "stockname": "MTC",
+    "companyname": "Công ty Cổ phần Dịch vụ du lịch Mỹ Trà"
+  },
+  {
+    "stockname": "MTG",
+    "companyname": "Công ty Cổ phần MT GAS"
+  },
+  {
+    "stockname": "MTH",
+    "companyname": "Công ty Cổ phần Môi trường Đô thị Hà Đông"
+  },
+  {
+    "stockname": "MTL",
+    "companyname": "CTCP Dịch vụ Môi trường Đô thị Từ Liêm"
+  },
+  {
+    "stockname": "MTM",
+    "companyname": "CTCP Mỏ và Xuất nhập khẩu Khoáng sản Miền Trung"
+  },
+  {
+    "stockname": "MTP",
+    "companyname": "Công ty Cổ phần dược trung ương Medipharco-Tenamyd"
+  },
+  {
+    "stockname": "MWG",
+    "companyname": "Công ty Cổ phần đầu tư thế giới di động"
+  },
+  {
+    "stockname": "NAF",
+    "companyname": "Công ty Cổ phần Nafoods Group"
+  },
+  {
+    "stockname": "NAG",
+    "companyname": "Công ty Cổ phần Nagakawa Việt Nam"
+  },
+  {
+    "stockname": "NAV",
+    "companyname": "Công ty Cổ phần Nam Việt"
+  },
+  {
+    "stockname": "NBB",
+    "companyname": "Công ty Cổ phần đầu tư Năm Bảy Bảy"
+  },
+  {
+    "stockname": "NBC",
+    "companyname": "Công ty Cổ phần Than Núi Béo - Vinacomin"
+  },
+  {
+    "stockname": "NBP",
+    "companyname": "Công ty Cổ phần Nhiệt điện Ninh Bình"
+  },
+  {
+    "stockname": "NBS",
+    "companyname": "Công ty Cổ phần Bến xe Nghệ An"
+  },
+  {
+    "stockname": "NBT",
+    "companyname": "CTCP Cấp thoát nước Bến Tre"
+  },
+  {
+    "stockname": "NBW",
+    "companyname": "Công ty Cổ phần Cấp nước Nhà Bè"
+  },
+  {
+    "stockname": "NCS",
+    "companyname": "Công ty cổ phần Suất ăn hàng không Nội Bài"
+  },
+  {
+    "stockname": "NCT",
+    "companyname": "Công ty Cổ phần dịch vụ hàng hóa Nội Bài"
+  },
+  {
+    "stockname": "ND2",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển điện miền Bắc 2"
+  },
+  {
+    "stockname": "NDC",
+    "companyname": "Công ty Cổ phần Nam dược"
+  },
+  {
+    "stockname": "NDF",
+    "companyname": "Công ty Cổ phần Chế biến Thực phẩm Nông sản Xuất khẩu Nam Định"
+  },
+  {
+    "stockname": "NDN",
+    "companyname": "Công ty Đầu tư Phát triển Nhà Đà Nẵng"
+  },
+  {
+    "stockname": "NDP",
+    "companyname": "Công ty cổ phần Dược phẩm 2-9 TP.Hồ Chí Minh"
+  },
+  {
+    "stockname": "NDX",
+    "companyname": "Công ty Cổ phần Xây lắp Phát triển Nhà Đà Nẵng"
+  },
+  {
+    "stockname": "NET",
+    "companyname": "Công ty Cổ phần Bột giặt Net"
+  },
+  {
+    "stockname": "NFC",
+    "companyname": "Công ty Cổ phần Phân lân Ninh Bình"
+  },
+  {
+    "stockname": "NGC",
+    "companyname": "Công ty Cổ phần Chế biến thủy sản Xuất khẩu Ngô Quyền"
+  },
+  {
+    "stockname": "NHA",
+    "companyname": "Tổng Công ty Đầu tư Phát triển Nhà và Đô thị Nam Hà Nội"
+  },
+  {
+    "stockname": "NHC",
+    "companyname": "Công ty Cổ phần gạch ngói Nhị Hiệp"
+  },
+  {
+    "stockname": "NHN",
+    "companyname": "Công ty Cổ phần Phát triển Đô thị Nam Hà Nội"
+  },
+  {
+    "stockname": "NHP",
+    "companyname": "Công ty Cổ phần sản xuất xuất nhập khẩu NHP"
+  },
+  {
+    "stockname": "NHS",
+    "companyname": "Công ty Cổ phần Đường Ninh Hòa"
+  },
+  {
+    "stockname": "NHW",
+    "companyname": "Công ty cổ phần Ngô Han"
+  },
+  {
+    "stockname": "NIS",
+    "companyname": "Công ty cổ phần Dịch vụ hạ tầng mạng"
+  },
+  {
+    "stockname": "NKD",
+    "companyname": "Công ty cổ phần Chế biến thực phẩm Kinh Đô miền Bắc"
+  },
+  {
+    "stockname": "NKG",
+    "companyname": "Công ty Cổ phần Thép Nam Kim"
+  },
+  {
+    "stockname": "NLC",
+    "companyname": "Công ty cổ phần Thủy điện Nà Lơi"
+  },
+  {
+    "stockname": "NLG",
+    "companyname": "Công ty Cổ phần Đầu tư Nam Long"
+  },
+  {
+    "stockname": "NMK",
+    "companyname": "Công ty Cổ phần Xây dựng Công trình 510"
+  },
+  {
+    "stockname": "NNC",
+    "companyname": "Công ty Cổ phần Đá Núi Nhỏ"
+  },
+  {
+    "stockname": "NNG",
+    "companyname": "Công ty Cổ phần công nghiệp- dịch vụ- thương mại Ngọc Nghĩa"
+  },
+  {
+    "stockname": "NNT",
+    "companyname": "Công ty Cổ phần Cấp nước Ninh Thuận"
+  },
+  {
+    "stockname": "NOS",
+    "companyname": "Công ty Cổ phần Vận tải Biển Bắc"
+  },
+  {
+    "stockname": "NPH",
+    "companyname": "Công ty cổ phần Khách sạn Bưu điện Nha Trang"
+  },
+  {
+    "stockname": "NPS",
+    "companyname": "Công ty Cổ phần May Phú Thịnh - Nhà Bè"
+  },
+  {
+    "stockname": "NQB",
+    "companyname": "Công ty Cổ phần Cấp thoát nước Quảng Bình"
+  },
+  {
+    "stockname": "NSC",
+    "companyname": "Công ty Cổ phần Giống cây trồng Trung Ương"
+  },
+  {
+    "stockname": "NSG",
+    "companyname": "CTCP Nhựa Sài Gòn"
+  },
+  {
+    "stockname": "NSN",
+    "companyname": "Công ty cổ phần Xây dựng 565"
+  },
+  {
+    "stockname": "NST",
+    "companyname": "Công ty Cổ phần Ngân Sơn"
+  },
+  {
+    "stockname": "NT2",
+    "companyname": "Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2"
+  },
+  {
+    "stockname": "NTB",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng và Khai thác Công trình Giao thông 584"
+  },
+  {
+    "stockname": "NTL",
+    "companyname": "Công ty Cổ phần Phát triển đô thị Từ Liêm"
+  },
+  {
+    "stockname": "NTP",
+    "companyname": "Công ty Cổ phần Nhựa Thiếu niên Tiền Phong"
+  },
+  {
+    "stockname": "NTW",
+    "companyname": "Công ty Cổ phần Cấp nước Nhơn Trạch"
+  },
+  {
+    "stockname": "NVB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Quốc Dân"
+  },
+  {
+    "stockname": "NVC",
+    "companyname": "Công ty cổ phần Nam Vang"
+  },
+  {
+    "stockname": "NVN",
+    "companyname": "Công ty cổ phần Nhà Việt Nam"
+  },
+  {
+    "stockname": "NVT",
+    "companyname": "Công ty Cổ phần Bất động sản Du lịch Ninh Vân Bay"
+  },
+  {
+    "stockname": "NWT",
+    "companyname": "CTCP Vận tải Newway"
+  },
+  {
+    "stockname": "OCH",
+    "companyname": "Công ty Cổ phần Khách sạn và Dịch vụ Đại Dương"
+  },
+  {
+    "stockname": "OGC",
+    "companyname": "Công ty Cổ phần Tập đoàn Đại Dương"
+  },
+  {
+    "stockname": "ONE",
+    "companyname": "Công ty Cổ phần Truyền thông số 1"
+  },
+  {
+    "stockname": "OPC",
+    "companyname": "Công ty Cổ phần Dược phẩm OPC"
+  },
+  {
+    "stockname": "ORS",
+    "companyname": "Công ty Cổ phần Chứng khoán Phương Đông"
+  },
+  {
+    "stockname": "PAC",
+    "companyname": "Công ty Cổ phần Pin Ắc quy miền Nam"
+  },
+  {
+    "stockname": "PAN",
+    "companyname": "Công ty Cổ phần Tập đoàn PAN"
+  },
+  {
+    "stockname": "PBP",
+    "companyname": "Công ty Cổ phần Bao Bì Dầu Khí Việt Nam"
+  },
+  {
+    "stockname": "PCE",
+    "companyname": "Công ty Cổ phần Phân bón và Hóa chất Dầu khí Miền Trung"
+  },
+  {
+    "stockname": "PCG",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Gas Đô thị"
+  },
+  {
+    "stockname": "PCN",
+    "companyname": "CTCP Hóa phẩm dầu khí DMC - Miền Bắc"
+  },
+  {
+    "stockname": "PCT",
+    "companyname": "Công ty Cổ phần dịch vụ vận tải dầu khí Cửu Long"
+  },
+  {
+    "stockname": "PDB",
+    "companyname": "Công ty Cổ phần Pacific Dinco"
+  },
+  {
+    "stockname": "PDC",
+    "companyname": "Công ty Cổ phần Du lịch Dầu khí Phương Đông"
+  },
+  {
+    "stockname": "PDN",
+    "companyname": "Công ty Cổ phần Cảng Đồng Nai"
+  },
+  {
+    "stockname": "PDR",
+    "companyname": "Công ty Cổ phần Phát triển Bất động sản Phát Đạt"
+  },
+  {
+    "stockname": "PEC",
+    "companyname": "Công ty Cổ phần Cơ khí Điện lực"
+  },
+  {
+    "stockname": "PEN",
+    "companyname": "Công ty Cổ phần Xây lắp III Petrolimex"
+  },
+  {
+    "stockname": "PEQ",
+    "companyname": "CTCP Thiết bị Xăng dầu Petrolimex"
+  },
+  {
+    "stockname": "PET",
+    "companyname": "Tổng Công ty Cổ phần Dịch vụ Tổng hợp Dầu khí"
+  },
+  {
+    "stockname": "PFL",
+    "companyname": "Công ty Cổ phần Dầu khí Đông Đô"
+  },
+  {
+    "stockname": "PGC",
+    "companyname": "Tổng Công ty Gas Petrolimex - CTCP"
+  },
+  {
+    "stockname": "PGD",
+    "companyname": "Công ty Cổ phần Phân phối khí Thấp áp Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PGI",
+    "companyname": "Tổng Công ty Cổ phần Bảo hiểm Petrolimex"
+  },
+  {
+    "stockname": "PGS",
+    "companyname": "Công ty Cổ phần Kinh doanh khí hóa lỏng miền Nam"
+  },
+  {
+    "stockname": "PGT",
+    "companyname": "Công ty Cổ phần Taxi Gas Sài Gòn Petrolimex"
+  },
+  {
+    "stockname": "PHC",
+    "companyname": "Công ty Cổ phần Xây dựng Phục Hưng Holdings"
+  },
+  {
+    "stockname": "PHH",
+    "companyname": "Công ty Cổ phần Hồng Hà Việt Nam"
+  },
+  {
+    "stockname": "PHP",
+    "companyname": "Công ty Cổ phần Cảng Hải Phòng"
+  },
+  {
+    "stockname": "PHR",
+    "companyname": "Công ty Cổ phần Cao su Phước Hòa"
+  },
+  {
+    "stockname": "PHS",
+    "companyname": "Công ty cổ phần Chứng khoán Phú Hưng"
+  },
+  {
+    "stockname": "PHT",
+    "companyname": "Công ty cổ phần Sản xuất và Thương mại Phúc Tiến"
+  },
+  {
+    "stockname": "PIC",
+    "companyname": "Công ty Cổ phần Đầu tư Điện lực 3"
+  },
+  {
+    "stockname": "PID",
+    "companyname": "Công ty Cổ phần Trang trí nội thất Dầu khí"
+  },
+  {
+    "stockname": "PIS",
+    "companyname": "Tổng công ty Pisico Bình Định - CTCP"
+  },
+  {
+    "stockname": "PIT",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Petrolimex"
+  },
+  {
+    "stockname": "PIV",
+    "companyname": "Công ty Cổ phần PIV"
+  },
+  {
+    "stockname": "PJC",
+    "companyname": "Công ty Cổ phần Thương mại và Vận tải Petrolimex Hà Nội"
+  },
+  {
+    "stockname": "PJS",
+    "companyname": "Công ty Cổ phần cấp nước Phú Hòa Tân"
+  },
+  {
+    "stockname": "PJT",
+    "companyname": "Công ty Cổ phần Vận tải Xăng dầu Đường Thủy Petrolimex"
+  },
+  {
+    "stockname": "PLC",
+    "companyname": "Tổng Công ty Hóa dầu Petrolimex - CTCP"
+  },
+  {
+    "stockname": "PMB",
+    "companyname": "Công ty Cổ phần Phân bón và Hóa chất Dầu khí miền Bắc"
+  },
+  {
+    "stockname": "PMC",
+    "companyname": "Công ty Cổ phần Dược phẩm dược liệu Pharmedic"
+  },
+  {
+    "stockname": "PMJ",
+    "companyname": "CTCP Vật tư Bưu điện"
+  },
+  {
+    "stockname": "PMP",
+    "companyname": "Công ty Cổ phần Bao bì Đạm Phú Mỹ"
+  },
+  {
+    "stockname": "PMS",
+    "companyname": "Công ty Cổ phần Cơ khí Xăng dầu"
+  },
+  {
+    "stockname": "PMT",
+    "companyname": "Công ty Cổ phần vật liệu bưu điện TELVINA"
+  },
+  {
+    "stockname": "PNC",
+    "companyname": "Công ty Cổ phần văn hoá Phương Nam"
+  },
+  {
+    "stockname": "PNG",
+    "companyname": "CTCP Thương mại Phú Nhuận"
+  },
+  {
+    "stockname": "PNJ",
+    "companyname": "Công ty Cổ phần Vàng bạc đá quý Phú Nhuận"
+  },
+  {
+    "stockname": "POM",
+    "companyname": "Công ty Cổ phần Thép Pomina"
+  },
+  {
+    "stockname": "POT",
+    "companyname": "Công ty Cổ phần Thiết bị Bưu Điện"
+  },
+  {
+    "stockname": "POV",
+    "companyname": "Công ty Cổ phần Xăng dầu Dầu khí Vũng Áng"
+  },
+  {
+    "stockname": "PPC",
+    "companyname": "Công ty Cổ phần Nhiệt điện Phả Lại"
+  },
+  {
+    "stockname": "PPE",
+    "companyname": "Công ty Cổ phần Tư vấn Điện lực Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PPG",
+    "companyname": "Công ty Cổ phần Sản xuất-Thương mại-Dịch vụ Phú Phong"
+  },
+  {
+    "stockname": "PPI",
+    "companyname": "Công ty Cổ phần Phát triển hạ tầng và Bất động sản Thái Bình Dương"
+  },
+  {
+    "stockname": "PPP",
+    "companyname": "Công ty Cổ phần Dược phẩm Phong Phú"
+  },
+  {
+    "stockname": "PPS",
+    "companyname": "Công ty Cổ phần Dịch vụ kỹ thuật Điện lực Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PPY",
+    "companyname": "CTCP Xăng dầu Dầu khí Phú Yên"
+  },
+  {
+    "stockname": "PRC",
+    "companyname": "Công ty Cổ phần Portserco"
+  },
+  {
+    "stockname": "PRO",
+    "companyname": "Công ty Cổ phần Procimex Việt Nam"
+  },
+  {
+    "stockname": "PRUBF1",
+    "companyname": "Công ty TNHH Quản Lý Quỹ Eastspring Investments"
+  },
+  {
+    "stockname": "PSB",
+    "companyname": "Công ty Cổ phần Đầu tư Dầu khí Sao Mai - Bến Đình"
+  },
+  {
+    "stockname": "PSC",
+    "companyname": "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Sài Gòn"
+  },
+  {
+    "stockname": "PSD",
+    "companyname": "Công ty Cổ phần Dịch vụ Phân phối Tổng hợp Dầu khí"
+  },
+  {
+    "stockname": "PSE",
+    "companyname": "Công ty Cổ phần Phân Bón và Hóa Chất Dầu Khí Đông Nam Bộ"
+  },
+  {
+    "stockname": "PSG",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây lắp Dầu khí Sài Gòn"
+  },
+  {
+    "stockname": "PSI",
+    "companyname": "Công ty Cổ phần Chứng khoán Dầu khí"
+  },
+  {
+    "stockname": "PSL",
+    "companyname": "Công ty Cổ phần Chăn nuôi Phú Sơn"
+  },
+  {
+    "stockname": "PSP",
+    "companyname": "Công ty Cổ phần Cảng Dịch vụ Dầu khí Đình Vũ"
+  },
+  {
+    "stockname": "PSW",
+    "companyname": "Công ty Cổ phần Phân bón và Hóa chất dầu khí Tây Nam Bộ"
+  },
+  {
+    "stockname": "PTB",
+    "companyname": "Công ty Cổ phần Phú Tài"
+  },
+  {
+    "stockname": "PTC",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Bưu điện"
+  },
+  {
+    "stockname": "PTD",
+    "companyname": "Công ty Cổ phần Thiết kế - Xây dựng - Thương mại Phúc Thịnh"
+  },
+  {
+    "stockname": "PTE",
+    "companyname": "Công ty Cổ phần Xi măng Phú Thọ"
+  },
+  {
+    "stockname": "PTG",
+    "companyname": "Công ty Cổ phần May xuất khẩu Phan Thiết"
+  },
+  {
+    "stockname": "PTH",
+    "companyname": "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Hà Tây"
+  },
+  {
+    "stockname": "PTI",
+    "companyname": "Tổng Công ty Cổ phần bảo hiểm bưu điện"
+  },
+  {
+    "stockname": "PTK",
+    "companyname": "Công ty Cổ phần Luyện Kim Phú Thịnh"
+  },
+  {
+    "stockname": "PTL",
+    "companyname": "Công ty Cổ phần Đầu tư hạ tầng và Đô thị Dầu khí"
+  },
+  {
+    "stockname": "PTM",
+    "companyname": "Công ty Cổ phần Sản xuất, Thương mại và Dịch vụ ôtô PTM"
+  },
+  {
+    "stockname": "PTP",
+    "companyname": "Công ty Cổ phần Dịch vụ Viễn thông và In bưu điện"
+  },
+  {
+    "stockname": "PTS",
+    "companyname": "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Hải Phòng"
+  },
+  {
+    "stockname": "PTT",
+    "companyname": "Công ty Cổ phần Vận tải Dầu khí Đông Dương"
+  },
+  {
+    "stockname": "PV2",
+    "companyname": "Công ty Cổ phần Đầu tư PV2"
+  },
+  {
+    "stockname": "PVA",
+    "companyname": "Công ty Cổ phần Tổng Công ty Xây lắp Dầu khí Nghệ An"
+  },
+  {
+    "stockname": "PVB",
+    "companyname": "Công ty Cổ phần Bọc Ống Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PVC",
+    "companyname": "Tổng Công ty cổ phần Dung dịch khoan và Hóa phẩm Dầu khí"
+  },
+  {
+    "stockname": "PVD",
+    "companyname": "Tổng Công ty Cổ phần Khoan và Dịch vụ khoan dầu khí"
+  },
+  {
+    "stockname": "PVE",
+    "companyname": "Tổng Công ty tư vấn thiết kế dầu khí - CTCP"
+  },
+  {
+    "stockname": "PVF",
+    "companyname": "Tổng công ty Tài chính cổ phần Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PVG",
+    "companyname": "Công ty Cổ phần Kinh doanh khí hóa lỏng miền Bắc"
+  },
+  {
+    "stockname": "PVI",
+    "companyname": "Công ty Cổ phần PVI"
+  },
+  {
+    "stockname": "PVL",
+    "companyname": "Công ty Cổ phần Địa ốc Dầu khí"
+  },
+  {
+    "stockname": "PVO",
+    "companyname": "CTCP Dầu nhờn PV OIL"
+  },
+  {
+    "stockname": "PVR",
+    "companyname": "Công ty Cổ phần Kinh doanh dịch vụ cao cấp Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PVS",
+    "companyname": "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PVT",
+    "companyname": "Tổng Công ty Cổ phần Vận tải dầu khí"
+  },
+  {
+    "stockname": "PVV",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng Vinaconex - PVC"
+  },
+  {
+    "stockname": "PVX",
+    "companyname": "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam"
+  },
+  {
+    "stockname": "PX1",
+    "companyname": "Công ty Cổ phần xi măng Dầu khí Nghệ An"
+  },
+  {
+    "stockname": "PXA",
+    "companyname": "Công ty Cổ phần Đầu tư và Thương mại Dầu khí Nghệ An"
+  },
+  {
+    "stockname": "PXI",
+    "companyname": "Công ty Cổ phần Xây dựng Công nghiệp và Dân dụng Dầu khí"
+  },
+  {
+    "stockname": "PXL",
+    "companyname": "Công ty Cổ phần Đầu tư Xây Dựng Thương Mại Dầu khí - Idico"
+  },
+  {
+    "stockname": "PXM",
+    "companyname": "Công ty Cổ phần Xây lắp Dầu khí miền Trung"
+  },
+  {
+    "stockname": "PXS",
+    "companyname": "Công ty Cổ phần Kết cấu Kim loại và Lắp máy Dầu khí"
+  },
+  {
+    "stockname": "PXT",
+    "companyname": "Công ty Cổ phần Xây lắp Đường ống Bể chứa Dầu khí"
+  },
+  {
+    "stockname": "QBS",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Quảng Bình"
+  },
+  {
+    "stockname": "QCC",
+    "companyname": "Công ty Cổ phần Xây lắp và Phát triển Dịch vụ Bưu điện Quảng Nam"
+  },
+  {
+    "stockname": "QCG",
+    "companyname": "Công ty Cổ phần Quốc Cường Gia Lai"
+  },
+  {
+    "stockname": "QHD",
+    "companyname": "Công ty Cổ phần Que hàn Việt Đức"
+  },
+  {
+    "stockname": "QNC",
+    "companyname": "Công ty Cổ phần Xi măng và Xây dựng Quảng Ninh"
+  },
+  {
+    "stockname": "QPH",
+    "companyname": "Công ty Cổ phần thủy điện Quế Phong"
+  },
+  {
+    "stockname": "QST",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị trường học Quảng Ninh"
+  },
+  {
+    "stockname": "QTC",
+    "companyname": "Công ty Cổ phần Công trình giao thông Vận tải Quảng Nam"
+  },
+  {
+    "stockname": "RAL",
+    "companyname": "Công ty Cổ phần Bóng đèn Phích nước Rạng Đông"
+  },
+  {
+    "stockname": "RBC",
+    "companyname": "CTCP Công nghiệp & Xuất nhập khẩu Cao Su"
+  },
+  {
+    "stockname": "RCD",
+    "companyname": "Công ty Cổ phần xây dựng - địa ốc cao su"
+  },
+  {
+    "stockname": "RCL",
+    "companyname": "Công ty Cổ phần Địa ốc Chợ Lớn"
+  },
+  {
+    "stockname": "RDP",
+    "companyname": "Công ty Cổ phần Nhựa Rạng Đông"
+  },
+  {
+    "stockname": "REE",
+    "companyname": "Công ty Cổ phần Cơ điện lạnh"
+  },
+  {
+    "stockname": "RHC",
+    "companyname": "Công ty Cổ phần Thủy điện Ry Ninh II"
+  },
+  {
+    "stockname": "RIC",
+    "companyname": "Công ty Cổ phần Quốc tế Hoàng Gia"
+  },
+  {
+    "stockname": "S12",
+    "companyname": "Công ty Cổ phần Sông Đà 12"
+  },
+  {
+    "stockname": "S27",
+    "companyname": "Công ty Cổ phần Sông Đà 27"
+  },
+  {
+    "stockname": "S33",
+    "companyname": "Công ty Cổ phần Mía đường 333"
+  },
+  {
+    "stockname": "S4A",
+    "companyname": "Công ty Cổ phần Thủy điện Sê San 4A"
+  },
+  {
+    "stockname": "S55",
+    "companyname": "Công ty Cổ phần Sông Đà 505"
+  },
+  {
+    "stockname": "S64",
+    "companyname": "Công ty Cổ phần Sông Đà 6.04"
+  },
+  {
+    "stockname": "S74",
+    "companyname": "Công ty Cổ phần Sông Đà 7.04"
+  },
+  {
+    "stockname": "S91",
+    "companyname": "Công ty Cổ phần Sông Đà 9.01"
+  },
+  {
+    "stockname": "S96",
+    "companyname": "Công ty Cổ phần Sông Đà 9.06"
+  },
+  {
+    "stockname": "S99",
+    "companyname": "Công ty Cổ phần SCI"
+  },
+  {
+    "stockname": "SAF",
+    "companyname": "Công ty Cổ phần Lương thực Thực phẩm SAFOCO"
+  },
+  {
+    "stockname": "SAM",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển SACOM"
+  },
+  {
+    "stockname": "SAP",
+    "companyname": "Công ty Cổ phần In sách giáo khoa TP Hồ Chí Minh"
+  },
+  {
+    "stockname": "SAS",
+    "companyname": "Công ty Dịch vụ Hàng không sân bay Tân Sơn Nhất"
+  },
+  {
+    "stockname": "SAV",
+    "companyname": "Công ty Cổ phần Hợp tác kinh tế và Xuất nhập khẩu SAVIMEX"
+  },
+  {
+    "stockname": "SBA",
+    "companyname": "Công ty Cổ phần Sông Ba"
+  },
+  {
+    "stockname": "SBC",
+    "companyname": "Công ty cổ phần Vận tải và Giao nhận Bia Sài Gòn"
+  },
+  {
+    "stockname": "SBS",
+    "companyname": "Công ty Cổ phần Chứng khoán Ngân hàng Sài Gòn Thương tín"
+  },
+  {
+    "stockname": "SBT",
+    "companyname": "Công ty Cổ phần mía đường Thành Thành Công Tây Ninh"
+  },
+  {
+    "stockname": "SC5",
+    "companyname": "Công ty Cổ phần Xây dựng số 5"
+  },
+  {
+    "stockname": "SCC",
+    "companyname": "Công ty Cổ phần Xi Măng Sông Đà"
+  },
+  {
+    "stockname": "SCD",
+    "companyname": "Công ty Cổ phần Nước Giải khát Chương Dương (CDBECO)"
+  },
+  {
+    "stockname": "SCI",
+    "companyname": "Công ty Cổ phần Xây dựng và Đầu tư Sông Đà 9"
+  },
+  {
+    "stockname": "SCJ",
+    "companyname": "Công ty Cổ phần Xi măng Sài Sơn"
+  },
+  {
+    "stockname": "SCL",
+    "companyname": "Công ty Cổ phần Sông Đà Cao Cường"
+  },
+  {
+    "stockname": "SCO",
+    "companyname": "Công ty Cổ phần Công nghiệp Thủy sản"
+  },
+  {
+    "stockname": "SCR",
+    "companyname": "Công ty Cổ phần Địa ốc Sài Gòn Thương Tín"
+  },
+  {
+    "stockname": "SD1",
+    "companyname": "Công ty Cổ phần Sông Đà 1"
+  },
+  {
+    "stockname": "SD2",
+    "companyname": "Công ty Cổ phần Sông Đà 2"
+  },
+  {
+    "stockname": "SD3",
+    "companyname": "Công ty Cổ phần Sông Đà 3"
+  },
+  {
+    "stockname": "SD4",
+    "companyname": "Công ty Cổ phần Sông Đà 4"
+  },
+  {
+    "stockname": "SD5",
+    "companyname": "Công ty Cổ phần Sông Đà 5"
+  },
+  {
+    "stockname": "SD6",
+    "companyname": "Công ty Cổ phần Sông Đà 6"
+  },
+  {
+    "stockname": "SD7",
+    "companyname": "Công ty Cổ phần Sông Đà 7"
+  },
+  {
+    "stockname": "SD8",
+    "companyname": "Công ty cổ phần Sông Đà 8"
+  },
+  {
+    "stockname": "SD9",
+    "companyname": "Công ty Cổ phần Sông Đà 9"
+  },
+  {
+    "stockname": "SDA",
+    "companyname": "Công ty Cổ phần Simco Sông Đà"
+  },
+  {
+    "stockname": "SDB",
+    "companyname": "Công ty Cổ phần Sông Đà 207"
+  },
+  {
+    "stockname": "SDC",
+    "companyname": "Công ty Cổ phần Tư vấn sông Đà"
+  },
+  {
+    "stockname": "SDD",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây lắp Sông Đà"
+  },
+  {
+    "stockname": "SDE",
+    "companyname": "Công ty Cổ phần Kỹ thuật điện Sông Đà"
+  },
+  {
+    "stockname": "SDF",
+    "companyname": "Công ty Tài chính cổ phần Sông Đà"
+  },
+  {
+    "stockname": "SDG",
+    "companyname": "Công ty Cổ phần SADICO Cần Thơ"
+  },
+  {
+    "stockname": "SDH",
+    "companyname": "Công ty Cổ phần Xây dựng hạ tầng sông Đà"
+  },
+  {
+    "stockname": "SDI",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Đô thị Sài Đồng"
+  },
+  {
+    "stockname": "SDJ",
+    "companyname": "Công ty Cổ phần Sông Đà 25"
+  },
+  {
+    "stockname": "SDK",
+    "companyname": "Công ty Cổ phần Cơ khí Luyện kim"
+  },
+  {
+    "stockname": "SDN",
+    "companyname": "Công ty Cổ phần Sơn Đồng Nai"
+  },
+  {
+    "stockname": "SDP",
+    "companyname": "Công ty Cổ phần Đầu tư và Thương mại Dầu khí Sông Đà"
+  },
+  {
+    "stockname": "SDS",
+    "companyname": "Công ty cổ phần Xây lắp và Đầu tư Sông Đà"
+  },
+  {
+    "stockname": "SDT",
+    "companyname": "Công ty Cổ phần Sông Đà 10"
+  },
+  {
+    "stockname": "SDU",
+    "companyname": "Công ty Cổ phần Đầu tư xây dựng và Phát triển đô thị Sông Đà"
+  },
+  {
+    "stockname": "SDV",
+    "companyname": "Công ty Cổ phần Dịch vụ Sonadezi"
+  },
+  {
+    "stockname": "SDX",
+    "companyname": "Công ty Cổ phần phòng cháy chữa cháy và đầu tư xây dựng Sông Đà"
+  },
+  {
+    "stockname": "SDY",
+    "companyname": "Công ty Cổ phần Xi măng Sông Đà Yaly"
+  },
+  {
+    "stockname": "SEB",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển điện miền Trung"
+  },
+  {
+    "stockname": "SEC",
+    "companyname": "Công ty cổ phần Mía đường - Nhiệt điện Gia Lai"
+  },
+  {
+    "stockname": "SED",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển giáo dục Phương Nam"
+  },
+  {
+    "stockname": "SEL",
+    "companyname": "Công ty cổ phần Sông Đà 11 Thăng Long"
+  },
+  {
+    "stockname": "SFC",
+    "companyname": "Công ty Cổ phần Nhiên Liệu Sài Gòn"
+  },
+  {
+    "stockname": "SFG",
+    "companyname": "Công ty Cổ phần phân bón Miền Nam"
+  },
+  {
+    "stockname": "SFI",
+    "companyname": "Công ty Cổ phần Đại lý Vận tải SAFI"
+  },
+  {
+    "stockname": "SFN",
+    "companyname": "Công ty Cổ phần Dệt lưới Sài Gòn"
+  },
+  {
+    "stockname": "SFT",
+    "companyname": "Công ty Cổ phần Softtech"
+  },
+  {
+    "stockname": "SGC",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Sa Giang"
+  },
+  {
+    "stockname": "SGD",
+    "companyname": "Công ty Cổ phần Sách Giáo dục tại thành phố Hồ Chí Minh"
+  },
+  {
+    "stockname": "SGH",
+    "companyname": "Công ty Cổ phần Khách sạn Sài Gòn"
+  },
+  {
+    "stockname": "SGN",
+    "companyname": "Công ty cổ phần Phục vụ Mặt đất Sài Gòn"
+  },
+  {
+    "stockname": "SGO",
+    "companyname": "CTCP Dầu thực vật Sài Gòn"
+  },
+  {
+    "stockname": "SGP",
+    "companyname": "Công ty Cổ phần Cảng Sài Gòn"
+  },
+  {
+    "stockname": "SGR",
+    "companyname": "Công ty Cổ phần Địa ốc Sài Gòn"
+  },
+  {
+    "stockname": "SGS",
+    "companyname": "Công ty Cổ phần vận tải biển Sài Gòn"
+  },
+  {
+    "stockname": "SGT",
+    "companyname": "Công ty Cổ phần Công nghệ Viễn thông Sài Gòn"
+  },
+  {
+    "stockname": "SHA",
+    "companyname": "Công ty Cổ phần Sơn Hà Sài Gòn"
+  },
+  {
+    "stockname": "SHB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Sài Gòn - Hà Nội"
+  },
+  {
+    "stockname": "SHC",
+    "companyname": "Công ty Cổ phần Hàng hải Sài Gòn"
+  },
+  {
+    "stockname": "SHG",
+    "companyname": "Tổng Công ty Cổ phần Sông Hồng"
+  },
+  {
+    "stockname": "SHI",
+    "companyname": "Công ty Cổ phần Quốc tế Sơn Hà"
+  },
+  {
+    "stockname": "SHN",
+    "companyname": "Công ty Cổ phần Đầu tư Tổng hợp Hà Nội"
+  },
+  {
+    "stockname": "SHP",
+    "companyname": "Công ty Cổ phần Thủy điện miền Nam"
+  },
+  {
+    "stockname": "SHS",
+    "companyname": "Công ty Cổ phần Chứng khoán Sài Gòn Hà Nội"
+  },
+  {
+    "stockname": "SHV",
+    "companyname": "Công ty Cổ phần Hải Việt"
+  },
+  {
+    "stockname": "SIC",
+    "companyname": "Công ty Cổ phần Đầu tư - Phát triển Sông Đà"
+  },
+  {
+    "stockname": "SII",
+    "companyname": "Công ty Cổ phần Đầu tư Hạ tầng Nước Sài Gòn"
+  },
+  {
+    "stockname": "SJ1",
+    "companyname": "Công ty Cổ phần Thủy sản số 1"
+  },
+  {
+    "stockname": "SJC",
+    "companyname": "Công ty Cổ phần Sông Đà 1.01"
+  },
+  {
+    "stockname": "SJD",
+    "companyname": "Công ty Cổ phần Thủy Điện Cần Đơn"
+  },
+  {
+    "stockname": "SJE",
+    "companyname": "Công ty Cổ phần Sông Đà 11"
+  },
+  {
+    "stockname": "SJM",
+    "companyname": "Công ty Cổ phần Sông Đà 19"
+  },
+  {
+    "stockname": "SJS",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Đô thị và Khu công nghiệp Sông Đà"
+  },
+  {
+    "stockname": "SKG",
+    "companyname": "Công ty Cổ phần Tàu cao tốc Superdong – Kiên Giang"
+  },
+  {
+    "stockname": "SKS",
+    "companyname": "Công ty cổ phần Công trình giao thông sông Đà"
+  },
+  {
+    "stockname": "SLC",
+    "companyname": "CTCP Dịch vụ xuất khẩu lao động và chuyên gia"
+  },
+  {
+    "stockname": "SLS",
+    "companyname": "Công ty Cổ phần Mía đường Sơn La"
+  },
+  {
+    "stockname": "SMA",
+    "companyname": "Công ty Cổ phần Thiết bị phụ tùng Sài Gòn"
+  },
+  {
+    "stockname": "SMB",
+    "companyname": "Công ty Cổ phần Bia Sài Gòn - Miền Trung"
+  },
+  {
+    "stockname": "SMC",
+    "companyname": "Công ty Cổ phần đầu tư thương mại SMC"
+  },
+  {
+    "stockname": "SME",
+    "companyname": "Công ty cổ phần Chứng khoán SME"
+  },
+  {
+    "stockname": "SMN",
+    "companyname": "Công ty Cổ phần sách và thiết bị giáo dục miền Nam"
+  },
+  {
+    "stockname": "SMT",
+    "companyname": "Công ty Cổ phần Vật liệu Điện và Viễn thông Sam Cường"
+  },
+  {
+    "stockname": "SNC",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Thủy sản Năm Căn"
+  },
+  {
+    "stockname": "SNG",
+    "companyname": "Công ty Cổ phần Sông Đà 10.1"
+  },
+  {
+    "stockname": "SPC",
+    "companyname": "Công ty Cổ phần Bảo vệ thực vật Sài Gòn"
+  },
+  {
+    "stockname": "SPD",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Thủy sản miền Trung"
+  },
+  {
+    "stockname": "SPH",
+    "companyname": "Công ty Cổ phần xuất nhập khẩu thủy sản Hà Nội"
+  },
+  {
+    "stockname": "SPI",
+    "companyname": "Công ty Cổ phần Đá Spilit"
+  },
+  {
+    "stockname": "SPM",
+    "companyname": "Công ty Cổ phần S.P.M"
+  },
+  {
+    "stockname": "SPP",
+    "companyname": "Công ty Cổ phần Bao bì Nhựa Sài Gòn"
+  },
+  {
+    "stockname": "SQC",
+    "companyname": "Công ty Cổ phần Khoáng sản Sài Gòn - Quy Nhơn"
+  },
+  {
+    "stockname": "SRA",
+    "companyname": "Công ty Cổ phần Sara Việt Nam"
+  },
+  {
+    "stockname": "SRB",
+    "companyname": "Công ty Cổ phần Tập đoàn SARA"
+  },
+  {
+    "stockname": "SRC",
+    "companyname": "Công ty Cổ phần Cao su Sao vàng"
+  },
+  {
+    "stockname": "SRF",
+    "companyname": "Công ty Cổ phần Kỹ Nghệ Lạnh"
+  },
+  {
+    "stockname": "SSC",
+    "companyname": "Công ty Cổ phần Giống cây trồng miền Nam"
+  },
+  {
+    "stockname": "SSF",
+    "companyname": "Công ty Cổ phần Giày Sài Gòn"
+  },
+  {
+    "stockname": "SSG",
+    "companyname": "Công ty Cổ phần Vận tải biển Hải Âu"
+  },
+  {
+    "stockname": "SSI",
+    "companyname": "Công ty Cổ phần chứng khoán Sài Gòn"
+  },
+  {
+    "stockname": "SSM",
+    "companyname": "Công ty Cổ phần Chế tạo kết cấu thép VNECO.SSM"
+  },
+  {
+    "stockname": "SSN",
+    "companyname": "Công ty Cổ phần xuất nhập khẩu thủy sản Sài Gòn"
+  },
+  {
+    "stockname": "SSS",
+    "companyname": "Công ty cổ phần Sông Đà 6.06"
+  },
+  {
+    "stockname": "ST8",
+    "companyname": "Công ty Cổ phần Siêu Thanh"
+  },
+  {
+    "stockname": "STB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Sài Gòn Thương Tín"
+  },
+  {
+    "stockname": "STC",
+    "companyname": "Công ty Cổ phần Sách và Thiết bị trường học TP Hồ Chí Minh"
+  },
+  {
+    "stockname": "STG",
+    "companyname": "Công ty Cổ phần Kho vận miền Nam"
+  },
+  {
+    "stockname": "STK",
+    "companyname": "Công ty Cổ phần Sợi thế kỷ"
+  },
+  {
+    "stockname": "STL",
+    "companyname": "Công ty Cổ phần Sông Đà - Thăng Long"
+  },
+  {
+    "stockname": "STP",
+    "companyname": "Công ty Cổ phần công nghiệp thương mại Sông Đà"
+  },
+  {
+    "stockname": "STS",
+    "companyname": "Công ty Cổ phần Dịch vụ Vận tải Sài Gòn"
+  },
+  {
+    "stockname": "STT",
+    "companyname": "Công ty Cổ phần Vận chuyển Sài Gòn Tourist"
+  },
+  {
+    "stockname": "STU",
+    "companyname": "Công ty Cổ phần Môi trường và Công trình Đô thị Sơn Tây"
+  },
+  {
+    "stockname": "STV",
+    "companyname": "Công ty Cổ phần Chế tác đá Việt Nam"
+  },
+  {
+    "stockname": "SVC",
+    "companyname": "Công ty Cổ phần dịch vụ tổng hợp Sài Gòn"
+  },
+  {
+    "stockname": "SVG",
+    "companyname": "CTCP Hơi Kỹ nghệ Que hàn"
+  },
+  {
+    "stockname": "SVI",
+    "companyname": "Công ty Cổ phần Bao bì Biên Hòa"
+  },
+  {
+    "stockname": "SVN",
+    "companyname": "Công ty Cổ phần Solavina"
+  },
+  {
+    "stockname": "SVS",
+    "companyname": "Công ty cổ phần Chứng khoán Sao Việt"
+  },
+  {
+    "stockname": "SVT",
+    "companyname": "Công ty Cổ phần Công nghệ Sài Gòn Viễn Đông"
+  },
+  {
+    "stockname": "SWC",
+    "companyname": "Tổng Công ty Cổ phần Đường sông Miền Nam"
+  },
+  {
+    "stockname": "SZL",
+    "companyname": "Công ty Cổ phần Sonadezi Long Thành"
+  },
+  {
+    "stockname": "TA9",
+    "companyname": "Công ty Cổ phần Xây lắp Thành An 96"
+  },
+  {
+    "stockname": "TAC",
+    "companyname": "Công ty Cổ phần Dầu thực vật Tường An"
+  },
+  {
+    "stockname": "TAG",
+    "companyname": "Công ty Cổ phần Thế giới số Trần Anh"
+  },
+  {
+    "stockname": "TAS",
+    "companyname": "Công ty cổ phần Chứng khoán Tràng An"
+  },
+  {
+    "stockname": "TBC",
+    "companyname": "Công ty Cổ phần Thủy điện Thác Bà"
+  },
+  {
+    "stockname": "TBD",
+    "companyname": "Tổng Công ty Thiết bị điện Đông Anh"
+  },
+  {
+    "stockname": "TBT",
+    "companyname": "Công ty Cổ phần Xây dựng Công trình Giao thông Bến Tre"
+  },
+  {
+    "stockname": "TBX",
+    "companyname": "Công ty Cổ phần Xi măng Thái Bình"
+  },
+  {
+    "stockname": "TC6",
+    "companyname": "Công ty Cổ phần Than Cọc Sáu - VINACOMIN"
+  },
+  {
+    "stockname": "TCL",
+    "companyname": "Công ty Cổ phần Đại lý giao nhận Vận tải xếp dỡ Tân Cảng"
+  },
+  {
+    "stockname": "TCM",
+    "companyname": "Công ty Cổ phần Dệt may - Đầu tư - Thương mại Thành Công"
+  },
+  {
+    "stockname": "TCO",
+    "companyname": "Công ty Cổ phần Vận tải đa phương thức Duyên Hải"
+  },
+  {
+    "stockname": "TCR",
+    "companyname": "Công ty Cổ phần Công Nghiệp Gốm sứ Taicera"
+  },
+  {
+    "stockname": "TCS",
+    "companyname": "Công ty Cổ phần Than Cao Sơn - Vinacomin"
+  },
+  {
+    "stockname": "TCT",
+    "companyname": "Công ty Cổ phần Cáp treo Núi Bà Tây Ninh"
+  },
+  {
+    "stockname": "TDC",
+    "companyname": "Công ty Cổ phần Kinh doanh và Phát triển Bình Dương"
+  },
+  {
+    "stockname": "TDH",
+    "companyname": "Công ty Cổ phần Phát triển nhà Thủ Đức"
+  },
+  {
+    "stockname": "TDM",
+    "companyname": "CTCP Nước Thủ Dầu Một"
+  },
+  {
+    "stockname": "TDN",
+    "companyname": "Công ty Cổ phần Than Đèo Nai - VINACOMIN"
+  },
+  {
+    "stockname": "TDS",
+    "companyname": "Công ty Cổ phần thép Thủ Đức"
+  },
+  {
+    "stockname": "TDW",
+    "companyname": "Công ty Cổ phần Cấp nước Thủ Đức"
+  },
+  {
+    "stockname": "TEG",
+    "companyname": "CTCP Bất động sản và Xây dựng Trường Thành"
+  },
+  {
+    "stockname": "TET",
+    "companyname": "Công ty Cổ phần Vải sợi May mặc miền Bắc"
+  },
+  {
+    "stockname": "TFC",
+    "companyname": "Công ty cổ phần Trang"
+  },
+  {
+    "stockname": "TGP",
+    "companyname": "Công ty Cổ phần Trường Phú"
+  },
+  {
+    "stockname": "TH1",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu Tổng hợp I Việt Nam"
+  },
+  {
+    "stockname": "THB",
+    "companyname": "Công ty Cổ phần Bia Thanh Hóa"
+  },
+  {
+    "stockname": "THG",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng Tiền Giang"
+  },
+  {
+    "stockname": "THS",
+    "companyname": "Công ty Cổ phần Thanh Hoa - Sông Đà"
+  },
+  {
+    "stockname": "THT",
+    "companyname": "Công ty Cổ phần than Hà Tu – Vinacomin"
+  },
+  {
+    "stockname": "THV",
+    "companyname": "Công ty cổ phần Tập đoàn Thái Hòa Việt Nam"
+  },
+  {
+    "stockname": "THW",
+    "companyname": "CTCP Cấp nước Tân Hòa"
+  },
+  {
+    "stockname": "TIC",
+    "companyname": "Công ty Cổ phần Đầu tư điện Tây Nguyên"
+  },
+  {
+    "stockname": "TIE",
+    "companyname": "Công ty Cổ phần TIE"
+  },
+  {
+    "stockname": "TIG",
+    "companyname": "Công ty Cổ phần Tập đoàn Đầu tư Thăng Long"
+  },
+  {
+    "stockname": "TIP",
+    "companyname": "Công ty cổ phần Phát triển Khu Công nghiệp Tín Nghĩa"
+  },
+  {
+    "stockname": "TIS",
+    "companyname": "Công ty Cổ phần Gang thép Thái Nguyên"
+  },
+  {
+    "stockname": "TIX",
+    "companyname": "Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Dịch vụ và Đầu tư Tân Bình"
+  },
+  {
+    "stockname": "TJC",
+    "companyname": "Công ty Cổ phần Dịch vụ Vận tải và Thương mại"
+  },
+  {
+    "stockname": "TKC",
+    "companyname": "Công ty Cổ phần Xây dựng và Kinh doanh địa ốc Tân Kỷ"
+  },
+  {
+    "stockname": "TKU",
+    "companyname": "Công ty Cổ phần Công nghiệp Tung Kuang"
+  },
+  {
+    "stockname": "TL4",
+    "companyname": "Tổng Công ty Xây dựng Thủy lợi 4"
+  },
+  {
+    "stockname": "TLC",
+    "companyname": "Công ty cổ phần Viễn thông Thăng Long"
+  },
+  {
+    "stockname": "TLG",
+    "companyname": "Công ty Cổ phần Tập đoàn Thiên Long"
+  },
+  {
+    "stockname": "TLH",
+    "companyname": "Công ty Cổ phần Tập đoàn thép Tiến Lên"
+  },
+  {
+    "stockname": "TLT",
+    "companyname": "Công ty Cổ phần Viglacera Thăng Long"
+  },
+  {
+    "stockname": "TMC",
+    "companyname": "Công ty Cổ phần Thương mại Xuất nhập khẩu Thủ Đức"
+  },
+  {
+    "stockname": "TMP",
+    "companyname": "Công ty Cổ phần Thủy điện Thác Mơ"
+  },
+  {
+    "stockname": "TMS",
+    "companyname": "Công ty Cổ phần Kho vận Giao nhận Ngoại thương TP.HCM"
+  },
+  {
+    "stockname": "TMT",
+    "companyname": "Công ty Cổ phần Ô tô TMT"
+  },
+  {
+    "stockname": "TMW",
+    "companyname": "Công ty Cổ phần tổng hợp gỗ Tân Mai"
+  },
+  {
+    "stockname": "TMX",
+    "companyname": "Công ty Cổ phần Vicem Thương mại xi măng"
+  },
+  {
+    "stockname": "TNA",
+    "companyname": "Công ty Cổ phần Thương Mại Xuất Nhập Khẩu Thiên Nam"
+  },
+  {
+    "stockname": "TNB",
+    "companyname": "Công ty Cổ phần Thép Nhà Bè"
+  },
+  {
+    "stockname": "TNC",
+    "companyname": "Công ty Cổ phần Cao su Thống Nhất"
+  },
+  {
+    "stockname": "TND",
+    "companyname": "CTCP Than Tây Nam Đá Mài - Vinacomin"
+  },
+  {
+    "stockname": "TNG",
+    "companyname": "Công ty Cổ phần Đầu tư và Thương mại TNG"
+  },
+  {
+    "stockname": "TNM",
+    "companyname": "Công ty Cổ phần Xuất nhập khẩu và Xây dựng công trình"
+  },
+  {
+    "stockname": "TNT",
+    "companyname": "Công ty Cổ phần Tài Nguyên"
+  },
+  {
+    "stockname": "TNY",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng Thanh Niên"
+  },
+  {
+    "stockname": "TOP",
+    "companyname": "Công ty Cổ phần Phân phối Top One"
+  },
+  {
+    "stockname": "TPC",
+    "companyname": "Công ty Cổ phần Nhựa Tân Đại Hưng"
+  },
+  {
+    "stockname": "TPH",
+    "companyname": "Công ty Cổ phần In Sách Giáo Khoa tại TP Hà Nội"
+  },
+  {
+    "stockname": "TPP",
+    "companyname": "Công ty Cổ phần Nhựa Tân Phú"
+  },
+  {
+    "stockname": "TPS",
+    "companyname": "Công ty Cổ phần Bến bãi vận tải Sài Gòn"
+  },
+  {
+    "stockname": "TRA",
+    "companyname": "Công ty Cổ phần Traphaco"
+  },
+  {
+    "stockname": "TRC",
+    "companyname": "Công ty Cổ phần Cao su Tây Ninh"
+  },
+  {
+    "stockname": "TRI",
+    "companyname": "Công ty cổ phần Nước giải khát Sài Gòn-TRIBECO"
+  },
+  {
+    "stockname": "TRS",
+    "companyname": "Công ty Cổ phần Vận tải và Dịch vụ Hàng hải"
+  },
+  {
+    "stockname": "TS4",
+    "companyname": "Công ty Cổ phần Thủy sản số 4"
+  },
+  {
+    "stockname": "TSB",
+    "companyname": "Công ty Cổ phần Ắc quy Tia sáng"
+  },
+  {
+    "stockname": "TSC",
+    "companyname": "Công ty Cổ phần Vật tư kỹ thuật nông nghiệp Cần Thơ"
+  },
+  {
+    "stockname": "TSM",
+    "companyname": "Công ty Cổ phần Xi măng Tiên Sơn Hà Tây"
+  },
+  {
+    "stockname": "TST",
+    "companyname": "Công ty Cổ phần Dịch vụ Kỹ thuật Viễn thông"
+  },
+  {
+    "stockname": "TTB",
+    "companyname": "Công ty Cổ phần tâp đoàn Tiến Bộ"
+  },
+  {
+    "stockname": "TTC",
+    "companyname": "Công ty Cổ phần Gạch men Thanh Thanh"
+  },
+  {
+    "stockname": "TTF",
+    "companyname": "Công ty Cổ phần Tập đoàn Kỹ nghệ gỗ Trường Thành"
+  },
+  {
+    "stockname": "TTG",
+    "companyname": "Công ty Cổ phần May Thanh Trì"
+  },
+  {
+    "stockname": "TTP",
+    "companyname": "Công ty Cổ phần bao bì Nhựa Tân Tiến"
+  },
+  {
+    "stockname": "TTR",
+    "companyname": "Công ty Cổ phần Du lịch Thương mại và Đầu tư"
+  },
+  {
+    "stockname": "TTZ",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng và Công nghệ Tiến Trung"
+  },
+  {
+    "stockname": "TV1",
+    "companyname": "Công ty Cổ phần Tư vấn xây dựng điện 1"
+  },
+  {
+    "stockname": "TV2",
+    "companyname": "Công ty Cổ phần Tư vấn Xây dựng điện 2"
+  },
+  {
+    "stockname": "TV3",
+    "companyname": "Công ty Cổ phần Tư vấn xây dựng điện 3"
+  },
+  {
+    "stockname": "TV4",
+    "companyname": "Công ty Cổ phần Tư vấn xây dựng điện 4"
+  },
+  {
+    "stockname": "TVB",
+    "companyname": "Công ty Cổ phần Chứng khoán Trí Việt"
+  },
+  {
+    "stockname": "TVC",
+    "companyname": "Công ty Cổ phần Quản lý đầu tư Trí Việt"
+  },
+  {
+    "stockname": "TVD",
+    "companyname": "Công ty Cổ phần than Vàng Danh - Vinacomin"
+  },
+  {
+    "stockname": "TVG",
+    "companyname": "Công ty Cổ phần Tư vấn đầu tư và Xây dựng giao thông vận tải"
+  },
+  {
+    "stockname": "TVM",
+    "companyname": "CTCP Tư vấn Đầu tư Mỏ và Công nghiệp - Vinacomin"
+  },
+  {
+    "stockname": "TVN",
+    "companyname": "Tổng Công ty Thép Việt Nam - CTCP"
+  },
+  {
+    "stockname": "TVS",
+    "companyname": "Công ty Cổ phần Chứng Khoán Thiên Việt"
+  },
+  {
+    "stockname": "TXM",
+    "companyname": "Công ty Cổ phần VICEM Thạch cao Xi măng"
+  },
+  {
+    "stockname": "TYA",
+    "companyname": "Công ty Cổ phần Dây và Cáp điện Taya Việt Nam"
+  },
+  {
+    "stockname": "UDC",
+    "companyname": "Công ty Cổ phần Xây dựng và Phát triển đô thị tỉnh Bà Rịa-Vũng Tàu"
+  },
+  {
+    "stockname": "UDJ",
+    "companyname": "Công ty Cổ phần Phát triển Đô thị - Becamex UDJ"
+  },
+  {
+    "stockname": "UEM",
+    "companyname": "Công ty Cổ phần cơ điện Uông Bí"
+  },
+  {
+    "stockname": "UIC",
+    "companyname": "Công ty Cổ phần Đầu tư phát triển Nhà và Đô thị IDICO"
+  },
+  {
+    "stockname": "UNI",
+    "companyname": "Công ty Cổ phần Viễn Liên"
+  },
+  {
+    "stockname": "V11",
+    "companyname": "Công ty Cổ phần Xây dựng số 11"
+  },
+  {
+    "stockname": "V12",
+    "companyname": "Công ty Cổ phần Xây dựng số 12"
+  },
+  {
+    "stockname": "V15",
+    "companyname": "Công ty Cổ phần Xây dựng số 15"
+  },
+  {
+    "stockname": "V21",
+    "companyname": "Công ty Cổ phần Vinaconex 21"
+  },
+  {
+    "stockname": "VAF",
+    "companyname": "Công ty Cổ phần Phân lân nung chảy Văn Điển"
+  },
+  {
+    "stockname": "VAT",
+    "companyname": "Công ty Cổ phần Viễn thông Vạn Xuân"
+  },
+  {
+    "stockname": "VBC",
+    "companyname": "Công ty Cổ phần Nhựa - Bao bì Vinh"
+  },
+  {
+    "stockname": "VBH",
+    "companyname": "Công ty Cổ phần Điện tử Bình Hoà"
+  },
+  {
+    "stockname": "VC1",
+    "companyname": "Công ty Cổ phần Xây dựng số 1"
+  },
+  {
+    "stockname": "VC2",
+    "companyname": "Công ty Cổ phần Xây Dựng Số 2"
+  },
+  {
+    "stockname": "VC3",
+    "companyname": "Công ty Cổ phần Xây dựng số 3"
+  },
+  {
+    "stockname": "VC5",
+    "companyname": "Công ty Cổ phần Xây dựng số 5_Vinaconex"
+  },
+  {
+    "stockname": "VC6",
+    "companyname": "Công ty Cổ phần Vinaconex 6"
+  },
+  {
+    "stockname": "VC7",
+    "companyname": "Công ty Cổ phần Xây dựng số 7"
+  },
+  {
+    "stockname": "VC9",
+    "companyname": "Công ty Cổ phần Xây dựng số 9"
+  },
+  {
+    "stockname": "VCA",
+    "companyname": "Công ty Cổ phần Thép Biên Hòa (VICASA)"
+  },
+  {
+    "stockname": "VCB",
+    "companyname": "Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam"
+  },
+  {
+    "stockname": "VCC",
+    "companyname": "Công ty Cổ phần Vinaconex 25"
+  },
+  {
+    "stockname": "VCF",
+    "companyname": "Công ty Cổ phần Vinacafé Biên Hòa"
+  },
+  {
+    "stockname": "VCG",
+    "companyname": "Tổng Công ty Cổ phần Xuất nhập khẩu và xây dựng Việt Nam"
+  },
+  {
+    "stockname": "VCH",
+    "companyname": "Công ty cổ phần Đầu tư xây dựng và Phát triển hạ tầng Vinaconex"
+  },
+  {
+    "stockname": "VCM",
+    "companyname": "Công ty Cổ phần Nhân lực và Thương mại Vinaconex"
+  },
+  {
+    "stockname": "VCR",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Du lịch Vinaconex"
+  },
+  {
+    "stockname": "VCS",
+    "companyname": "Công ty Cổ phần Vicostone"
+  },
+  {
+    "stockname": "VCT",
+    "companyname": "Công ty Cổ phần Tư vấn Xây dựng Vinaconex"
+  },
+  {
+    "stockname": "VCV",
+    "companyname": "Công ty cổ phần Vận tải Vinaconex"
+  },
+  {
+    "stockname": "VCX",
+    "companyname": "Công ty Cổ phần Xi măng Yên Bình"
+  },
+  {
+    "stockname": "VDL",
+    "companyname": "Công ty Cổ phần Thực phẩm Lâm Đồng"
+  },
+  {
+    "stockname": "VDN",
+    "companyname": "Công ty Cổ phần Vinatex Đà Nẵng"
+  },
+  {
+    "stockname": "VDS",
+    "companyname": "Công ty Cổ phần Chứng khoán Rồng Việt (VDSC)"
+  },
+  {
+    "stockname": "VDT",
+    "companyname": "Công ty Cổ phần Lưới thép Bình Tây"
+  },
+  {
+    "stockname": "VE1",
+    "companyname": "Công ty Cổ phần Xây dựng điện VNECO 1"
+  },
+  {
+    "stockname": "VE2",
+    "companyname": "Công ty Cổ phần Xây dựng Điện VNECO 2"
+  },
+  {
+    "stockname": "VE3",
+    "companyname": "Công ty Cổ phần Xây dựng điện VNECO 3"
+  },
+  {
+    "stockname": "VE4",
+    "companyname": "Công ty Cổ phần xây dựng điện VNECO 4"
+  },
+  {
+    "stockname": "VE8",
+    "companyname": "Công ty Cổ phần Xây dựng Điện Vneco 8"
+  },
+  {
+    "stockname": "VE9",
+    "companyname": "Công ty Cổ phần Đầu tư và xây dựng VNECO 9"
+  },
+  {
+    "stockname": "VEF",
+    "companyname": "CTCP Trung tâm Hội chợ Triển lãm Việt Nam"
+  },
+  {
+    "stockname": "VES",
+    "companyname": "Công ty Cổ phần Đầu tư và Xây dựng điện Mê Ca Vneco"
+  },
+  {
+    "stockname": "VFC",
+    "companyname": "Công ty Cổ phần Vinafco"
+  },
+  {
+    "stockname": "VFG",
+    "companyname": "Công ty Cổ phần Khử trùng Việt Nam"
+  },
+  {
+    "stockname": "VFMVF1",
+    "companyname": "Quỹ Đầu Tư Chứng Khoán Việt Nam"
+  },
+  {
+    "stockname": "VFMVF4",
+    "companyname": "Quỹ đầu tư Doanh nghiệp hàng đầu Việt Nam"
+  },
+  {
+    "stockname": "VFMVFA",
+    "companyname": "Quỹ Đầu tư năng động Việt Nam"
+  },
+  {
+    "stockname": "VFR",
+    "companyname": "Công ty Cổ phần Vận tải và Thuê tàu - Vietfracht"
+  },
+  {
+    "stockname": "VGC",
+    "companyname": "Tổng Công ty Viglacera - CTCP"
+  },
+  {
+    "stockname": "VGG",
+    "companyname": "Tổng CTCP May Việt Tiến"
+  },
+  {
+    "stockname": "VGP",
+    "companyname": "Công ty Cổ phần Cảng rau quả"
+  },
+  {
+    "stockname": "VGS",
+    "companyname": "Công ty Cổ phần Ống thép Việt Đức VG PIPE"
+  },
+  {
+    "stockname": "VHC",
+    "companyname": "Công ty Cổ phần Vĩnh Hoàn"
+  },
+  {
+    "stockname": "VHF",
+    "companyname": "Công ty Cổ phần Xây dựng và chế biến lương thực Vĩnh Hà"
+  },
+  {
+    "stockname": "VHG",
+    "companyname": "Công ty Cổ phần Đầu tư Cao su Quảng Nam"
+  },
+  {
+    "stockname": "VHH",
+    "companyname": "Công ty Cổ phần Đầu tư Xây dựng Viwaseen Huế"
+  },
+  {
+    "stockname": "VHL",
+    "companyname": "Công ty Cổ phần Viglacera Hạ Long"
+  },
+  {
+    "stockname": "VIC",
+    "companyname": "Tập Đoàn VinGroup - CTCP"
+  },
+  {
+    "stockname": "VID",
+    "companyname": "Công ty Cổ phần Đầu tư Phát triển Thương mại Viễn Đông"
+  },
+  {
+    "stockname": "VIE",
+    "companyname": "Công ty Cổ phần Công nghệ Viễn thông VITECO"
+  },
+  {
+    "stockname": "VIG",
+    "companyname": "Công ty Cổ phần Chứng khoán Thương mại và Công nghiệp Việt Nam (VICS)"
+  },
+  {
+    "stockname": "VIN",
+    "companyname": "Công ty Cổ phần Giao nhận Kho vận Ngoại thương Việt Nam"
+  },
+  {
+    "stockname": "VIP",
+    "companyname": "Công ty Cổ phần Vận tải Xăng dầu VIPCO"
+  },
+  {
+    "stockname": "VIR",
+    "companyname": "Công ty Cổ phần Du lịch Quốc tế Vũng Tàu"
+  },
+  {
+    "stockname": "VIS",
+    "companyname": "Công ty Cổ phần Thép Việt Ý"
+  },
+  {
+    "stockname": "VIT",
+    "companyname": "Công ty Cổ phần Viglacera Tiên Sơn"
+  },
+  {
+    "stockname": "VIX",
+    "companyname": "Công ty Cổ phần Chứng khoán IB"
+  },
+  {
+    "stockname": "VKC",
+    "companyname": "Công ty Cổ phần Cáp Nhựa Vĩnh Khánh"
+  },
+  {
+    "stockname": "VKD",
+    "companyname": "Công ty Cổ phần Nước khoáng Khánh Hòa"
+  },
+  {
+    "stockname": "VKP",
+    "companyname": "Công ty Cổ phần Nhựa Tân Hóa"
+  },
+  {
+    "stockname": "VLA",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Công nghệ Văn Lang"
+  },
+  {
+    "stockname": "VLC",
+    "companyname": "Tổng Công ty Chăn nuôi Việt Nam - CTCP"
+  },
+  {
+    "stockname": "VLF",
+    "companyname": "Công ty Cổ phần Lương thực thực phẩm Vĩnh Long"
+  },
+  {
+    "stockname": "VLG",
+    "companyname": "Công ty Cổ phần Vinalines Logistics - Việt Nam"
+  },
+  {
+    "stockname": "VMA",
+    "companyname": "Công ty Cổ phần Công nghiệp Ô tô - Vinacomin"
+  },
+  {
+    "stockname": "VMC",
+    "companyname": "Công ty Cổ phần VIMECO"
+  },
+  {
+    "stockname": "VMD",
+    "companyname": "Công ty Cổ phần Y Dược phẩm Vimedimex"
+  },
+  {
+    "stockname": "VMG",
+    "companyname": "Công ty cổ phần Thương mại và Dịch vụ dầu khí Vũng Tàu"
+  },
+  {
+    "stockname": "VMI",
+    "companyname": "Công ty Cổ phần Khoáng sản và Đầu tư VISACO"
+  },
+  {
+    "stockname": "VMS",
+    "companyname": "Công ty Cổ phần Phát triển Hàng hải"
+  },
+  {
+    "stockname": "VNA",
+    "companyname": "Công ty Cổ phần vận tải biển VINASHIP"
+  },
+  {
+    "stockname": "VNC",
+    "companyname": "Công ty Cổ phần Tập đoàn Vinacontrol"
+  },
+  {
+    "stockname": "VND",
+    "companyname": "Công ty Cổ phần Chứng khoán VNDIRECT"
+  },
+  {
+    "stockname": "VNE",
+    "companyname": "Tổng Công ty Cổ phần Xây dựng điện Việt Nam"
+  },
+  {
+    "stockname": "VNF",
+    "companyname": "Công ty Cổ phần VNINAFREIGHT"
+  },
+  {
+    "stockname": "VNG",
+    "companyname": "Công ty Cổ phần Du lịch Thành Thành Công"
+  },
+  {
+    "stockname": "VNH",
+    "companyname": "Công ty Cổ phần Thủy hải sản Việt Nhật"
+  },
+  {
+    "stockname": "VNI",
+    "companyname": "Công ty Cổ phần Đầu tư bất động sản Việt Nam"
+  },
+  {
+    "stockname": "VNL",
+    "companyname": "Công ty Cổ phần LOGISTICS VINALINK"
+  },
+  {
+    "stockname": "VNM",
+    "companyname": "Công ty Cổ phần Sữa Việt Nam"
+  },
+  {
+    "stockname": "VNN",
+    "companyname": "Công ty Cổ phần Đầu tư và Thương mại VNN"
+  },
+  {
+    "stockname": "VNP",
+    "companyname": "Công ty Cổ phần nhựa Việt Nam"
+  },
+  {
+    "stockname": "VNR",
+    "companyname": "Tổng Công ty Cổ phần tái bảo hiểm quốc gia Việt Nam"
+  },
+  {
+    "stockname": "VNS",
+    "companyname": "Công ty Cổ phần Ánh Dương Việt Nam"
+  },
+  {
+    "stockname": "VNT",
+    "companyname": "Công ty Cổ phần Giao nhận Vận tải Ngoại thương"
+  },
+  {
+    "stockname": "VNX",
+    "companyname": "Công ty Cổ phần Quảng cáo và Hội chợ thương mại"
+  },
+  {
+    "stockname": "VOS",
+    "companyname": "Công ty Cổ phần Vận tải biển Việt Nam"
+  },
+  {
+    "stockname": "VPA",
+    "companyname": "CTCP Vận tải Hóa dầu VP"
+  },
+  {
+    "stockname": "VPC",
+    "companyname": "Công ty Cổ phần Đầu tư và Phát triển Năng lượng Việt Nam"
+  },
+  {
+    "stockname": "VPD",
+    "companyname": "CTCP Phát triển Điện lực Việt Nam"
+  },
+  {
+    "stockname": "VPH",
+    "companyname": "Công ty Cổ phần Vạn Phát Hưng"
+  },
+  {
+    "stockname": "VPK",
+    "companyname": "Công ty Cổ phần bao bì dầu thực vật"
+  },
+  {
+    "stockname": "VPL",
+    "companyname": "Công ty Cổ phần Vinpearlland"
+  },
+  {
+    "stockname": "VPS",
+    "companyname": "Công ty Cổ phần thuốc sát trùng Việt Nam"
+  },
+  {
+    "stockname": "VQC",
+    "companyname": "Công ty Cổ phần Giám định Vinacomin"
+  },
+  {
+    "stockname": "VRC",
+    "companyname": "Công ty Cổ phần Xây lắp và Địa ốc Vũng Tàu"
+  },
+  {
+    "stockname": "VRG",
+    "companyname": "Công ty Cổ phần Phát triển đô thị và Khu công nghiệp Cao su Việt Nam"
+  },
+  {
+    "stockname": "VSA",
+    "companyname": "Công ty cổ phần Đại lý Hàng hải Việt Nam"
+  },
+  {
+    "stockname": "VSC",
+    "companyname": "Công ty Cổ phần Container Việt Nam"
+  },
+  {
+    "stockname": "VSG",
+    "companyname": "Công ty Cổ phần Container phía Nam"
+  },
+  {
+    "stockname": "VSH",
+    "companyname": "Công ty Cổ phần Thủy điện Vĩnh Sơn – Sông Hinh"
+  },
+  {
+    "stockname": "VSI",
+    "companyname": "Công ty Cổ phần đầu tư và xây dựng cấp thoát nước"
+  },
+  {
+    "stockname": "VSP",
+    "companyname": "Công ty Cổ phần Vận tải biển và Bất động sản Việt Hải"
+  },
+  {
+    "stockname": "VST",
+    "companyname": "Công ty Cổ phần Vận tải và Thuê tàu biển Việt Nam"
+  },
+  {
+    "stockname": "VT1",
+    "companyname": "Công ty Cổ phần Vật tư Bến Thành"
+  },
+  {
+    "stockname": "VT8",
+    "companyname": "Công ty Cổ phần Dịch vụ Vận tải Ô tô số 8"
+  },
+  {
+    "stockname": "VTA",
+    "companyname": "Công ty Cổ phần Vitaly"
+  },
+  {
+    "stockname": "VTB",
+    "companyname": "Công ty Cổ phần Viettronics Tân Bình"
+  },
+  {
+    "stockname": "VTC",
+    "companyname": "Công ty Cổ phần viễn thông VTC"
+  },
+  {
+    "stockname": "VTF",
+    "companyname": "Công ty Cổ phần Thức ăn Chăn nuôi Việt Thắng"
+  },
+  {
+    "stockname": "VTG",
+    "companyname": "CTCP Du lịch Tỉnh Bà Rịa - Vũng Tàu"
+  },
+  {
+    "stockname": "VTH",
+    "companyname": "Công ty Cổ phần Dây Cáp Điện Việt Thái"
+  },
+  {
+    "stockname": "VTI",
+    "companyname": "Công ty Cổ phần Sản xuất - Xuất nhập khẩu Dệt may"
+  },
+  {
+    "stockname": "VTJ",
+    "companyname": "Công ty Cổ phần thương mại và đầu tư vi na ta ba"
+  },
+  {
+    "stockname": "VTL",
+    "companyname": "Công ty Cổ phần Vang Thăng Long"
+  },
+  {
+    "stockname": "VTM",
+    "companyname": "CTCP Vận tải và Đưa đón thợ mỏ - Vinacomin"
+  },
+  {
+    "stockname": "VTO",
+    "companyname": "Công ty Cổ phần Vận tải xăng dầu VITACO"
+  },
+  {
+    "stockname": "VTS",
+    "companyname": "Công ty Cổ phần Viglacera Từ Sơn"
+  },
+  {
+    "stockname": "VTV",
+    "companyname": "Công ty Cổ phần VICEM Vật tư Vận tải Xi măng"
+  },
+  {
+    "stockname": "VTX",
+    "companyname": "Công ty Cổ phần Vận tải đa phương thức"
+  },
+  {
+    "stockname": "VXB",
+    "companyname": "Công ty Cổ phần Vật liệu xây dựng Bến Tre"
+  },
+  {
+    "stockname": "WCS",
+    "companyname": "Công ty Cổ phần Bến xe miền Tây"
+  },
+  {
+    "stockname": "WSB",
+    "companyname": "Công ty Cổ phần Bia Sài Gòn - Miền Tây"
+  },
+  {
+    "stockname": "WSS",
+    "companyname": "Công ty Cổ phần Chứng khoán phố Wall"
+  },
+  {
+    "stockname": "WTC",
+    "companyname": "Công ty Cổ phần Vân tải thủy - Vinacomin"
+  },
+  {
+    "stockname": "XMC",
+    "companyname": "Công ty cổ phần Bê tông và Xây dựng Vinaconex Xuân Mai"
+  },
+  {
+    "stockname": "XMD",
+    "companyname": "Công ty cổ phần Xuân Mai - Đạo Tú"
+  },
+  {
+    "stockname": "XPH",
+    "companyname": "Công ty Cổ phần Xà phòng Hà Nội"
+  },
+  {
+    "stockname": "YBC",
+    "companyname": "Công ty Cổ phần Xi măng và Khoáng sản Yên Bái"
+  },
+  {
+    "stockname": "YSC",
+    "companyname": "Công ty Cổ phần HAPACO Yên Sơn"
+  },
+  {
+    "stockname": "^AEX",
+    "companyname": "AEX General (Amsterdam)"
+  },
+  {
+    "stockname": "^AORD",
+    "companyname": "All Ordinaries (Australian)"
+  },
+  {
+    "stockname": "^ATX",
+    "companyname": "ATX (Vienna)"
+  },
+  {
+    "stockname": "^BDS",
+    "companyname": "Bất Động Sản"
+  },
+  {
+    "stockname": "^BFX",
+    "companyname": "BEL-20 (Brussels)"
+  },
+  {
+    "stockname": "^BSESN",
+    "companyname": "BSE 30 (Bombay)"
+  },
+  {
+    "stockname": "^CAOSU",
+    "companyname": "Cao Su"
+  },
+  {
+    "stockname": "^CCSI",
+    "companyname": "EGYPT CMA GENL INDX (Egypt)"
+  },
+  {
+    "stockname": "^CK",
+    "companyname": "Chứng Khoán"
+  },
+  {
+    "stockname": "^CONGNGHE",
+    "companyname": "Công Nghệ Viễn Thông"
+  },
+  {
+    "stockname": "^DAUKHI",
+    "companyname": "Nhóm Dầu Khí"
+  },
+  {
+    "stockname": "^DICHVU",
+    "companyname": "Dịch vụ - Du lịch"
+  },
+  {
+    "stockname": "^DJI",
+    "companyname": "Dow Jones Industrial Average (DJI)"
+  },
+  {
+    "stockname": "^DUOCPHAM",
+    "companyname": "Dược Phẩm / Y Tế / Hóa Chất"
+  },
+  {
+    "stockname": "^FCHI",
+    "companyname": "CAC 40 (Paris)"
+  },
+  {
+    "stockname": "^FTSE",
+    "companyname": "FTSE 100 (London)"
+  },
+  {
+    "stockname": "^GDAXI",
+    "companyname": "DAX (Germany)"
+  },
+  {
+    "stockname": "^GIAODUC",
+    "companyname": "Giáo Dục"
+  },
+  {
+    "stockname": "^GOLD",
+    "companyname": "Giá Vàng hế Giới"
+  },
+  {
+    "stockname": "^GSPC",
+    "companyname": "S&P 500 INDEX,RTH (SNP)"
+  },
+  {
+    "stockname": "^HASTC",
+    "companyname": "Sở Giao Dịch Chứng Khoán Hà Nội"
+  },
+  {
+    "stockname": "^HNX30",
+    "companyname": "hnx30"
+  },
+  {
+    "stockname": "^HSI",
+    "companyname": "HANG SENG (HongKong)"
+  },
+  {
+    "stockname": "^IXIC",
+    "companyname": "NASDAQ Composite (Nasdaq)"
+  },
+  {
+    "stockname": "^JKSE",
+    "companyname": "Jakarta Composite (Jakarta)"
+  },
+  {
+    "stockname": "^KHOANGSAN",
+    "companyname": "Khoáng Sản"
+  },
+  {
+    "stockname": "^KLSE",
+    "companyname": "KLSE Composite (Kulalumpuar)"
+  },
+  {
+    "stockname": "^KS11",
+    "companyname": "KOSPI Composite Index (Korea)"
+  },
+  {
+    "stockname": "^LARGECAP",
+    "companyname": "LARGE CAPITAL - TOP 20"
+  },
+  {
+    "stockname": "^MIBTEL",
+    "companyname": "MIBTel (Milan)"
+  },
+  {
+    "stockname": "^MIDCAP",
+    "companyname": "MIDDLE CAPITAL"
+  },
+  {
+    "stockname": "^N225",
+    "companyname": "NIKKEI 225 (Osaka)"
+  },
+  {
+    "stockname": "^NANGLUONG",
+    "companyname": "Năng lượng Điện/Khí/Gas"
+  },
+  {
+    "stockname": "^NGANHANG",
+    "companyname": "Ngân hàng- Bảo hiểm"
+  },
+  {
+    "stockname": "^NHUA",
+    "companyname": "Nhựa - Bao Bì"
+  },
+  {
+    "stockname": "^NYA",
+    "companyname": "NYSE COMPOSITE INDEX (NEW METHO)"
+  },
+  {
+    "stockname": "^NZ50",
+    "companyname": "NZSE 50 (New Zealand)"
+  },
+  {
+    "stockname": "^OIL",
+    "companyname": "Giá Dầu Thế Giới"
+  },
+  {
+    "stockname": "^OMXSPI",
+    "companyname": "Stockholm General (Stockholm)"
+  },
+  {
+    "stockname": "^OSEAX",
+    "companyname": "OSE All Share (Oslo)"
+  },
+  {
+    "stockname": "^SMALLCAP",
+    "companyname": "SMALL CAPITAL"
+  },
+  {
+    "stockname": "^SMSI",
+    "companyname": "Madrid General (Madrid)"
+  },
+  {
+    "stockname": "^SSMI",
+    "companyname": "Swiss Market (Voter Turnout - Social )"
+  },
+  {
+    "stockname": "^STI",
+    "companyname": "STI (Singapore)"
+  },
+  {
+    "stockname": "^SXKD",
+    "companyname": "Sản Xuất - Kinh doanh"
+  },
+  {
+    "stockname": "^TA100",
+    "companyname": "TEL-AV TASE-100 IND (Israel: Tel Aviv)"
+  },
+  {
+    "stockname": "^THEP",
+    "companyname": "Ngành Thép"
+  },
+  {
+    "stockname": "^THUCPHAM",
+    "companyname": "Thực Phẩm"
+  },
+  {
+    "stockname": "^THUONGMAI",
+    "companyname": "Thương Mại"
+  },
+  {
+    "stockname": "^THUYSAN",
+    "companyname": "Thủy Sản"
+  },
+  {
+    "stockname": "^TWII",
+    "companyname": "Taiwan Weighted (Taiwan)"
+  },
+  {
+    "stockname": "^UPCOM",
+    "companyname": ""
+  },
+  {
+    "stockname": "^VANTAI",
+    "companyname": "Vận Tải/ Cảng / Taxi"
+  },
+  {
+    "stockname": "^VLXD",
+    "companyname": "Vật Liệu Xây Dựng"
+  },
+  {
+    "stockname": "^VN30",
+    "companyname": "HOSE-VN30"
+  },
+  {
+    "stockname": "^VN30_HOSE",
+    "companyname": "HOSE-VN30"
+  },
+  {
+    "stockname": "^VN50",
+    "companyname": "VNINDEX TOP 50"
+  },
+  {
+    "stockname": "^VNINDEX",
+    "companyname": "Sở Giao Dịch Chứng Khoán TPHCM"
+  },
+  {
+    "stockname": "^VNINDEX2",
+    "companyname": "VNINDEX not including"
+  },
+  {
+    "stockname": "^XAYDUNG",
+    "companyname": "Xây Dựng"
+  }
+]

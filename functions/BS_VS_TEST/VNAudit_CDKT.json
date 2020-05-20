@@ -1,0 +1,38 @@
+[
+    [],
+    {},
+    [
+        {
+            "AuditedStatusCode": "SX",
+            "Description": "So\u00e1t x\u00e9t",
+            "DescriptionEn": "Reviewed"
+        },
+        {
+            "AuditedStatusCode": "CKT",
+            "Description": "Ch\u01b0a ki\u1ec3m to\u00e1n",
+            "DescriptionEn": "Unaudited"
+        },
+        {
+            "AuditedStatusCode": "KT",
+            "Description": "Ki\u1ec3m to\u00e1n",
+            "DescriptionEn": "Audited"
+        }
+    ],
+    [
+        {
+            "UnitedCode": "HN",
+            "UnitedName": "H\u1ee3p nh\u1ea5t",
+            "UnitedNameEN": "Consolidated"
+        },
+        {
+            "UnitedCode": "\u0110L",
+            "UnitedName": "\u0110\u01a1n l\u1ebb",
+            "UnitedNameEN": "Stand-alone"
+        },
+        {
+            "UnitedCode": "CTM",
+            "UnitedName": "C\u00f4ng ty m\u1eb9",
+            "UnitedNameEN": "Parent Company"
+        }
+    ]
+]
