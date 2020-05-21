@@ -3,3 +3,5 @@
 env/
 .mypy_cache/
 .vscode/
+test.py
+localData/
