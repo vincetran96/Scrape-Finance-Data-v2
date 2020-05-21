@@ -5,9 +5,11 @@ import scrapy
 import json
 import requests
 from scrapy import FormRequest
-from scrapy.crawler import CrawlerProcess
+from scrapy.crawler import CrawlerProcess, CrawlerRunner
+from scrapy.utils.log import configure_logging
 from financeInfo import financeInfoHandler
 from models.corporateaz import data as az
+from twisted.internet import reactor
 import models.constants as constants
 
 
@@ -24,7 +26,7 @@ class corporateazHandler(scrapy.Spider):
         for numPage in range(1, numPages):
             self.logger.info(f'=== PAGE NUMBER === {numPage}')
             az["formdata"]["page"] = str(numPage)
-            print(az["cookies"])
+            # print(az["cookies"])
             req = FormRequest(url=az["url"],
                               formdata=az["formdata"],
                               headers=az["headers"],
@@ -36,12 +38,17 @@ class corporateazHandler(scrapy.Spider):
         # Load response to JSON
         res = json.loads(response.text)
 
-        process = CrawlerProcess()
-        process.crawl(financeInfoHandler, tickers_list=[i["Code"] for i in res])
-        process.start()
+        configure_logging()
+        runner = CrawlerRunner()
+        runner.crawl(financeInfoHandler, tickers_list=[i["Code"] for i in res])
+        d = runner.join()
+        d.addBoth(lambda _: reactor.stop())
 
 
 if __name__ == "__main__":
-    process = CrawlerProcess()
-    process.crawl(corporateazHandler)
-    process.start()
+    configure_logging()
+    runner_main = CrawlerRunner()
+    runner_main.crawl(corporateazHandler)
+    d_main = runner_main.join()
+    d_main.addBoth(lambda _: reactor.stop())
+    reactor.run()
