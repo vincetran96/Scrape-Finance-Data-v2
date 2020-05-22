@@ -1,4 +1,4 @@
-import models.constants as constants
+import functions.fad_crawl.spiders.models.constants as constants
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {

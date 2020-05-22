@@ -7,10 +7,10 @@ import requests
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess, CrawlerRunner
 from scrapy.utils.log import configure_logging
-from financeInfo import financeInfoHandler
-from models.corporateaz import data as az
 from twisted.internet import reactor
-import models.constants as constants
+from functions.fad_crawl.spiders.financeInfo import financeInfoHandler
+from functions.fad_crawl.spiders.models.corporateaz import data as az
+import functions.fad_crawl.spiders.models.constants as constants
 
 
 class corporateazHandler(scrapy.Spider):
@@ -45,7 +45,7 @@ class corporateazHandler(scrapy.Spider):
         d.addBoth(lambda _: reactor.stop())
 
 
-if __name__ == "__main__":
+def crawl_main():
     configure_logging()
     runner_main = CrawlerRunner()
     runner_main.crawl(corporateazHandler)

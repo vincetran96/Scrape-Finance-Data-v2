@@ -6,7 +6,7 @@ import json
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
 from pprint import pprint
-from models.financeinfo import data as fi
+from functions.fad_crawl.spiders.models.financeinfo import data as fi
 
 
 class financeInfoHandler(scrapy.Spider):
@@ -38,7 +38,7 @@ class financeInfoHandler(scrapy.Spider):
 
             fi["formdata"]["ReportType"] = "KQKD"
             fi["meta"]["ReportType"] = "KQKD"
-            
+
             req_is = FormRequest(url=fi["url"],
                                  formdata=fi["formdata"],
                                  headers=fi["headers"],
@@ -59,7 +59,8 @@ class financeInfoHandler(scrapy.Spider):
             json.dump(resp_json, writefile, indent=4)
 
 
-if __name__ == "__main__":
-    process = CrawlerProcess()
-    process.crawl(financeInfoHandler)
-    process.start()
+# if __name__ == "__main__":
+#     process = CrawlerProcess()
+#     process.crawl(financeInfoHandler)
+#     process.start()
+
