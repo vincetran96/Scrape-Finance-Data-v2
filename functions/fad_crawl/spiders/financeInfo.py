@@ -18,15 +18,13 @@ class financeInfoHandler(scrapy.Spider):
     def start_requests(self):
         for ticker in self.tickers:
 
-            # TODO: Find out a more elegant way to crawl all pages of balance \
-            # sheet, instead of passing PageSize = an arbitrarily large number
+# TODO: find out a more elegant way to crawl all pages of balance \
+# sheet, instead of passing PageSize = an arbitrarily large number
 
-            # Currently testing making BS and IS spiders spawning from \
-            # CrawlerProcess() in tickers_list module
             fi["formdata"]["Code"] = ticker
-            fi["meta"]["ticker"] = ticker
             fi["formdata"]["ReportType"] = "CDKT"
             fi["meta"]["ReportType"] = "CDKT"
+            fi["meta"]["ticker"] = ticker
 
             req_bs = FormRequest(url=fi["url"],
                                  formdata=fi["formdata"],
@@ -47,12 +45,14 @@ class financeInfoHandler(scrapy.Spider):
                                  )
             yield req_is
 
+# TODO: do we need to create a new parse function for each type of \
+# financial report?
+    
     def parse(self, response):
 
-        # TODO: add UTF-8 for Vietnamese text
+# TODO: add UTF-8 for Vietnamese text
 
         resp_json = json.loads(response.text)
-
         ticker = response.meta['ticker']
         report_type = response.meta['ReportType']
         with open(f'localData/{ticker}_{report_type}.json', 'w') as writefile:
@@ -63,4 +63,3 @@ class financeInfoHandler(scrapy.Spider):
 #     process = CrawlerProcess()
 #     process.crawl(financeInfoHandler)
 #     process.start()
-

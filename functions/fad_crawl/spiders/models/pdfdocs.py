@@ -1,6 +1,6 @@
 # Used for crawling pdf documents for a company
 
-### Parameters for type
+# Parameters for type
 # 1: bao cao tai chinh
 # 23: nghi quyet hoi dong quan tri
 # 8: giai trinh ket qua kinh doanh
@@ -14,17 +14,23 @@
 
 import functions.fad_crawl.spiders.models.constants as constants
 
+type_list = ["1", "23", "8", "9", "2", "4", "5", "3", "10", "6"]
+
 data = {"url": "https://finance.vietstock.vn/data/getdocument",
         "formdata": {
-            "code": "", # ticker
-            "type": "" # document type, see above
+            "code": "",  # ticker
+            "type": ""  # document type, see above
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
             "Content-Type": constants.CONTENT_TYPE
         },
-        "cookies":  {
+        "cookies": {
             "language": constants.LANGUAGE,
             "vts_usr_lg": constants.USER_COOKIE
+        },
+        "meta": {
+            "ticker": "",
+            "DocType": ""
         }
         }
