@@ -5,3 +5,4 @@ env/
 .vscode/
 test.py
 localData/
+_pycache_/

@@ -1,4 +1,6 @@
-import models.constants as constants
+# Used for getting the list of all companies
+
+import functions.fad_crawl.spiders.models.constants as constants
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
