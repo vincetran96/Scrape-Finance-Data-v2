@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 # This spider crawls a stock ticker's PDF Documents
 
-import scrapy
 import json
+import os
+import sys
+import traceback
+from pprint import pprint
+
+import scrapy
 from scrapy import FormRequest, Request
 from scrapy.crawler import CrawlerRunner
-from pprint import pprint
+
 from functions.fad_crawl.spiders.models.pdfdocs import data as fi
 from functions.fad_crawl.spiders.models.pdfdocs import type_list
 
@@ -15,7 +20,7 @@ class pdfDocsHandler(scrapy.Spider):
 
     def __init__(self, tickers_list="", **kwargs):
         self.tickers = tickers_list
-
+    
     def start_requests(self):
         for ticker in self.tickers:
             for doc_type in type_list:

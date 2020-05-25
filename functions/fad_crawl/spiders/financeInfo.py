@@ -1,16 +1,28 @@
 # -*- coding: utf-8 -*-
 # This spider crawls a stock ticker's balance sheet on Vietstock
 
-import scrapy
 import json
+import logging
+import os
+import sys
+import traceback
+from pprint import pprint
+
+import scrapy
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
-from pprint import pprint
+from scrapy.utils.log import configure_logging
+
+import functions.fad_crawl.spiders.models.utilities as utilities
 from functions.fad_crawl.spiders.models.financeinfo import data as fi
 
 
 class financeInfoHandler(scrapy.Spider):
     name = 'financeInfo'
+    custom_settings = utilities.log_settings(spiderName=name, 
+                                            log_level="WARNING", 
+                                            log_formatter="functions.fad_crawl.spiders.models.utilities.TickerSpiderLogFormatter"
+                                            )
 
     def __init__(self, tickers_list="", **kwargs):
         self.tickers = tickers_list
@@ -21,29 +33,32 @@ class financeInfoHandler(scrapy.Spider):
 # TODO: find out a more elegant way to crawl all pages of balance \
 # sheet, instead of passing PageSize = an arbitrarily large number
 
-            fi["formdata"]["Code"] = ticker
-            fi["formdata"]["ReportType"] = "CDKT"
-            fi["meta"]["ReportType"] = "CDKT"
-            fi["meta"]["ticker"] = ticker
+            try:
+                fi["formdata"]["Code"] = ticker
+                fi["formdata"]["ReportType"] = "CDKT"
+                fi["meta"]["ReportType"] = "CDKT"
+                fi["meta"]["ticker"] = ticker
 
-            req_bs = FormRequest(url=fi["url"],
-                                 formdata=fi["formdata"],
-                                 headers=fi["headers"],
-                                 cookies=fi["cookies"],
-                                 meta=fi["meta"],
-                                 )
-            yield req_bs
+                req_bs = FormRequest(url=fi["url"],
+                                    formdata=fi["formdata"],
+                                    headers=fi["headers"],
+                                    cookies=fi["cookies"],
+                                    meta=fi["meta"],
+                                    )
+                yield req_bs
 
-            fi["formdata"]["ReportType"] = "KQKD"
-            fi["meta"]["ReportType"] = "KQKD"
+                fi["formdata"]["ReportType"] = "KQKD"
+                fi["meta"]["ReportType"] = "KQKD"
 
-            req_is = FormRequest(url=fi["url"],
-                                 formdata=fi["formdata"],
-                                 headers=fi["headers"],
-                                 cookies=fi["cookies"],
-                                 meta=fi["meta"],
-                                 )
-            yield req_is
+                req_is = FormRequest(url=fi["url"],
+                                    formdata=fi["formdata"],
+                                    headers=fi["headers"],
+                                    cookies=fi["cookies"],
+                                    meta=fi["meta"],
+                                    )
+                yield req_is
+            except:
+                utilities.handle_exception(self, request_list = [req_bs, req_is])
 
 # TODO: do we need to create a new parse function for each type of \
 # financial report?

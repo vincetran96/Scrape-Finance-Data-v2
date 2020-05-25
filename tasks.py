@@ -7,7 +7,11 @@ from functions.fad_crawl.spiders.main import crawl_main
 app = Celery('tasks', broker='pyamqp://zerg:1234@localhost/zerg_vhost',
              backend='rpc://')
 
-@app.task
+# @app.task
 def crawl_task():
-    # crawl_main()
+    crawl_main()
+    # crawl_test()
+
+# @app.task
+def crawl_task1():
     crawl_test()
