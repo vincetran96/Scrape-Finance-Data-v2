@@ -43,6 +43,8 @@ class pdfDocsHandler(scrapy.Spider):
             doc_req.meta["DocType"] = response.meta["DocType"]
             yield doc_req
 
+# TODO: use another module for handling downloads of PDFs
+
     def parse_doc(self, response):
         ticker = response.meta["ticker"]
         doc_type = response.meta["DocType"]
@@ -51,7 +53,7 @@ class pdfDocsHandler(scrapy.Spider):
 # TODO: how to download large documents using chunks?
 
         with open(f'localData/PDFs/{ticker}_{doc_type}_{doc_title}.pdf', 'wb') as writefile:
-            writefile.write(response.body)            
+            writefile.write(response.body)
 
 
 # if __name__ == "__main__":
