@@ -45,6 +45,7 @@ class FadCrawlSpiderMiddleware:
         ticker = response.meta["ticker"]
         with open(f'logs/{spider_name}_errors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+        pass
 
     def process_start_requests(self, start_requests, spider):
         # Called with the start requests of the spider, and works
@@ -104,6 +105,7 @@ class FadCrawlDownloaderMiddleware:
         ticker = request.meta["ticker"]
         with open(f'logs/{spider_name}_errors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+        pass
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
