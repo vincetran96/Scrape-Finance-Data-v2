@@ -12,7 +12,7 @@
 # 10: ty le von kha dung
 # 6: tai lieu khac
 
-import functions.fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.constants as constants
 
 type_list = ["1", "23", "8", "9", "2", "4", "5", "3", "10", "6"]
 

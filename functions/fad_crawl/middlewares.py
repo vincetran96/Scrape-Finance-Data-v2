@@ -8,7 +8,7 @@
 from scrapy import signals
 
 
-class FadCrawlSpiderMiddleware:
+class TickerCrawlSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -43,7 +43,7 @@ class FadCrawlSpiderMiddleware:
         # or Item objects.
         spider_name = spider.name
         ticker = response.meta["ticker"]
-        with open(f'logs/{spider_name}_errors_short.log', 'a+') as openfile:
+        with open(f'logs/{spider_name}_spidererrors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
         return None
 
@@ -60,7 +60,7 @@ class FadCrawlSpiderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class FadCrawlDownloaderMiddleware:
+class TickerCrawlDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
@@ -103,7 +103,7 @@ class FadCrawlDownloaderMiddleware:
         # - return a Request object: stops process_exception() chain
         spider_name = spider.name
         ticker = request.meta["ticker"]
-        with open(f'logs/{spider_name}_errors_short.log', 'a+') as openfile:
+        with open(f'logs/{spider_name}_downloadererrors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
         return None
 

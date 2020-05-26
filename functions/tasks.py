@@ -1,6 +1,6 @@
 from celery import Celery
-from functions.fad_crawl.spiders.main import crawl_test
-from functions.fad_crawl.spiders.main import crawl_main
+from fad_crawl.spiders.main import crawl_test
+from fad_crawl.spiders.main import crawl_main
 
 # use Redis for broker/backend
 

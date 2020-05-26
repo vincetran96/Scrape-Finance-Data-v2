@@ -5,7 +5,7 @@
 # businessTypeID: loai hinh doanh nghiep (danh sach lay tu request Business Type for Corporate A-Z) tren Postman
 # type: tabs (A-Z, Danh sach CK dang NY/GD, Niem yet moi/DKGD moi, etc.)
 
-import functions.fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.constants as constants
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
@@ -26,5 +26,8 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "cookies":  {
             "language": constants.LANGUAGE,
             "vts_usr_lg": constants.USER_COOKIE
+        },
+        "meta": {
+            'pageid': "",
         }
         }

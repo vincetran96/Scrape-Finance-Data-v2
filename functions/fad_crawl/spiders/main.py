@@ -9,23 +9,31 @@ import traceback
 
 import requests
 import scrapy
+import redis
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess, CrawlerRunner
 from scrapy.utils.log import configure_logging
 from twisted.internet import reactor
+from scrapy_redis.spiders import RedisSpider
 
-import functions.fad_crawl.spiders.models.constants as constants
-import functions.fad_crawl.spiders.models.utilities as utilities
-from functions.fad_crawl.spiders.financeInfo import financeInfoHandler
-from functions.fad_crawl.spiders.models.corporateaz import data as az
-from functions.fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
-TEST_TICKERS_LIST = ["AAA", "A32"]
-# TEST_NUM_PAGES = 40
+import fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.financeInfo import financeInfoHandler
+from fad_crawl.spiders.models.corporateaz import data as az
+from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+
+TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
+TEST_NUM_PAGES = 40
 
 
 class corporateazHandler(scrapy.Spider):
     name = 'corporateAZ'
+
+    def __init__(self, tickers_list="", *args, **kwargs):
+        super(corporateazHandler, self).__init__(*args, **kwargs)
+        r = redis.Redis()
+        self.r = r
 
     def start_requests(self):
         numTickers = requests.post(url=az["url"],
@@ -33,30 +41,37 @@ class corporateazHandler(scrapy.Spider):
                                    headers=az["headers"],
                                    cookies=az["cookies"]
                                    ).json()[0]["TotalRecord"]
-        numPages = numTickers // int(constants.PAGE_SIZE) + 2
-        # numPages = TEST_NUM_PAGES
+        
+        # numPages = numTickers // int(constants.PAGE_SIZE) + 2
+        numPages = TEST_NUM_PAGES
+
         for numPage in range(1, numPages):
             self.logger.info(f'=== PAGE NUMBER === {numPage}')
             az["formdata"]["page"] = str(numPage)
-            # print(az["cookies"])
+            az["meta"]["pageid"] = str(numPage)
             req = FormRequest(url=az["url"],
                               formdata=az["formdata"],
                               headers=az["headers"],
                               cookies=az["cookies"],
+                              meta=az["meta"],
                               callback=self.parse)
             yield req
 
     def parse(self, response):
-        # Load response to JSON
         res = json.loads(response.text)
-        
+        tickers_list = [d["Code"] for d in res]
+        self.logger.info(str(tickers_list))
+        self.r.lpush("financeInfo:tickers", *tickers_list)
+
+# TODO: Remove all below and use Redis to start spiders independently
+
         # Start a CrawlerRunner for all tickers
-        configure_logging()
-        runner = CrawlerRunner()
-        runner.crawl(financeInfoHandler, tickers_list=[d["Code"] for d in res])
-        # runner.crawl(pdfDocsHandler, tickers_list=[d["Code"] for d in res])
-        d = runner.join()
-        d.addBoth(lambda _: reactor.stop())
+        # configure_logging()
+        # runner = CrawlerRunner()
+        # runner.crawl(financeInfoHandler, tickers_list=[d["Code"] for d in res])
+        # # runner.crawl(pdfDocsHandler, tickers_list=[d["Code"] for d in res])
+        # d = runner.join()
+        # d.addBoth(lambda _: reactor.stop())
 
 
 def crawl_main():
