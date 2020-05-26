@@ -43,7 +43,8 @@ class TickerCrawlSpiderMiddleware:
         # or Item objects.
         spider_name = spider.name
         ticker = response.meta["ticker"]
-        with open(f'logs/{spider_name}_spidererrors_short.log', 'a+') as openfile:
+        report_type = response.meta["ReportType"]
+        with open(f'logs/{spider_name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
         return None
 
@@ -103,7 +104,8 @@ class TickerCrawlDownloaderMiddleware:
         # - return a Request object: stops process_exception() chain
         spider_name = spider.name
         ticker = request.meta["ticker"]
-        with open(f'logs/{spider_name}_downloadererrors_short.log', 'a+') as openfile:
+        report_type = response.meta["ReportType"]
+        with open(f'logs/{spider_name}_{report_type}_downloadererrors_short.log', 'a+') as openfile:
             openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
         return None
 

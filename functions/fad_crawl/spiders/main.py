@@ -7,15 +7,14 @@ import os
 import sys
 import traceback
 
+import redis
 import requests
 import scrapy
-import redis
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess, CrawlerRunner
 from scrapy.utils.log import configure_logging
-from twisted.internet import reactor
 from scrapy_redis.spiders import RedisSpider
-
+from twisted.internet import reactor
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
@@ -32,8 +31,7 @@ class corporateazHandler(scrapy.Spider):
 
     def __init__(self, tickers_list="", *args, **kwargs):
         super(corporateazHandler, self).__init__(*args, **kwargs)
-        r = redis.Redis()
-        self.r = r
+        self.r = redis.Redis()
 
     def start_requests(self):
         numTickers = requests.post(url=az["url"],
@@ -41,7 +39,7 @@ class corporateazHandler(scrapy.Spider):
                                    headers=az["headers"],
                                    cookies=az["cookies"]
                                    ).json()[0]["TotalRecord"]
-        
+
         # numPages = numTickers // int(constants.PAGE_SIZE) + 2
         numPages = TEST_NUM_PAGES
 
@@ -63,16 +61,6 @@ class corporateazHandler(scrapy.Spider):
         self.logger.info(str(tickers_list))
         self.r.lpush("financeInfo:tickers", *tickers_list)
 
-# TODO: Remove all below and use Redis to start spiders independently
-
-        # Start a CrawlerRunner for all tickers
-        # configure_logging()
-        # runner = CrawlerRunner()
-        # runner.crawl(financeInfoHandler, tickers_list=[d["Code"] for d in res])
-        # # runner.crawl(pdfDocsHandler, tickers_list=[d["Code"] for d in res])
-        # d = runner.join()
-        # d.addBoth(lambda _: reactor.stop())
-
 
 def crawl_main():
     configure_logging()
@@ -82,6 +70,7 @@ def crawl_main():
     d_main.addBoth(lambda _: reactor.stop())
     reactor.run()
 
+
 def crawl_test():
     runner_test = CrawlerRunner()
     runner_test.crawl(financeInfoHandler, tickers_list=TEST_TICKERS_LIST)
@@ -89,6 +78,7 @@ def crawl_test():
     d = runner_test.join()
     d.addBoth(lambda _: reactor.stop())
     reactor.run()
+
 
 if __name__ == "__main__":
     crawl_main()

@@ -1,6 +1,9 @@
 # Create directories
 localData
 localData/PDFs
+logs
+
+# Run redis
 
 # Run rabbitmq broker
 rabbitmq
