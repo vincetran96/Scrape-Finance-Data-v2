@@ -11,14 +11,15 @@ import scrapy
 from scrapy import FormRequest, Request
 from scrapy.crawler import CrawlerRunner
 
-from functions.fad_crawl.spiders.models.pdfdocs import data as fi
-from functions.fad_crawl.spiders.models.pdfdocs import type_list
+from fad_crawl.spiders.models.pdfdocs import data as fi
+from fad_crawl.spiders.models.pdfdocs import type_list
 
 
 class pdfDocsHandler(scrapy.Spider):
     name = 'pdfDocs'
 
-    def __init__(self, tickers_list="", **kwargs):
+    def __init__(self, tickers_list="", *args, **kwargs):
+        super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.tickers = tickers_list
     
     def start_requests(self):

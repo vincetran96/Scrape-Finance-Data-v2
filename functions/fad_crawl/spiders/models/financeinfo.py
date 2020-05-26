@@ -1,7 +1,7 @@
 # Used for crawling summarized finances (BCTT), business targets (CTKH),\
 # balance sheets (CDKT), income statements (KQKD), cash flow statements (LC), financial indices (CSTC)
 
-import functions.fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.constants as constants
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
@@ -24,5 +24,6 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
             'ticker': "",
             'ReportType': ""
         }
-
         }
+
+scraper_api_key = constants.SCRAPER_API_KEY

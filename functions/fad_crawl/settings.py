@@ -21,6 +21,20 @@ NEWSPIDER_MODULE = 'fad_crawl.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+# Enables scheduling storing requests queue in redis.
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+# Ensure all spiders share same duplicates filter through redis.
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+# Store scraped item in redis for post-processing.
+ITEM_PIPELINES = {
+    'scrapy_redis.pipelines.RedisPipeline': 300
+}
+
+# Default start urls key for RedisSpider and RedisCrawlSpider.
+# REDIS_START_URLS_KEY = '%(name)s:start_urls'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -47,13 +61,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'functions.fad_crawl.middlewares.FadCrawlSpiderMiddleware': 542,
+#    'fad_crawl.middlewares.FadCrawlSpiderMiddleware': 542,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'functions.fad_crawl.middlewares.FadCrawlDownloaderMiddleware': 543,
+#    'fad_crawl.middlewares.FadCrawlDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
