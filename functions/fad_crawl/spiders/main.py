@@ -21,6 +21,7 @@ from functions.fad_crawl.spiders.models.corporateaz import data as az
 from functions.fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 TEST_TICKERS_LIST = ["AAA", "A32"]
+# TEST_NUM_PAGES = 40
 
 
 class corporateazHandler(scrapy.Spider):
@@ -33,6 +34,7 @@ class corporateazHandler(scrapy.Spider):
                                    cookies=az["cookies"]
                                    ).json()[0]["TotalRecord"]
         numPages = numTickers // int(constants.PAGE_SIZE) + 2
+        # numPages = TEST_NUM_PAGES
         for numPage in range(1, numPages):
             self.logger.info(f'=== PAGE NUMBER === {numPage}')
             az["formdata"]["page"] = str(numPage)
@@ -49,6 +51,7 @@ class corporateazHandler(scrapy.Spider):
         res = json.loads(response.text)
         
         # Start a CrawlerRunner for all tickers
+        configure_logging()
         runner = CrawlerRunner()
         runner.crawl(financeInfoHandler, tickers_list=[d["Code"] for d in res])
         # runner.crawl(pdfDocsHandler, tickers_list=[d["Code"] for d in res])
@@ -62,10 +65,7 @@ def crawl_main():
     runner_main.crawl(corporateazHandler)
     d_main = runner_main.join()
     d_main.addBoth(lambda _: reactor.stop())
-    try:
-        reactor.run()
-    except:
-        pass
+    reactor.run()
 
 def crawl_test():
     runner_test = CrawlerRunner()

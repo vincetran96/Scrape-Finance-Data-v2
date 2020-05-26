@@ -74,7 +74,7 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         msg = json.dumps(msg_dict)
         return {
             'level': logging.ERROR,
-            'msg': f'SPIDER ERROR: Spider error for {ticker}',
+            'msg': msg,
             'args': {
                 'request': request,
                 'referer': referer_str(request)
@@ -94,9 +94,7 @@ def handle_exception(spidercls, response_list=[], request_list=[]):
             spidercls.logger.error(error_msg)
 
 def log_settings(spiderName, log_level, log_formatter=None):
-    """
-    log_level: CRITICAL, ERROR, WARNING, INFO, DEBUG
-    """
+    # log_level: CRITICAL, ERROR, WARNING, INFO, DEBUG
     if log_formatter:
         return {
         'LOG_ENABLED': True,
@@ -107,6 +105,10 @@ def log_settings(spiderName, log_level, log_formatter=None):
     else:
         return {
             'LOG_ENABLED': True,
-            'LOG_FILE': f'logs/{spiderName}.log',
+            'LOG_FILE': f'logs/{spiderName}_errors_long.log',
             'LOG_LEVEL': log_level
         }
+
+# if __name__ == "__main__":
+#     crawl_main()
+#     crawl_test()
