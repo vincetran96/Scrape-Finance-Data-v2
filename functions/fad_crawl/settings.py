@@ -21,6 +21,8 @@ NEWSPIDER_MODULE = 'fad_crawl.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+
+### REDIS SETTINGS ###
 # Enables scheduling storing requests queue in redis.
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 
@@ -34,6 +36,7 @@ ITEM_PIPELINES = {
 
 # Default start urls key for RedisSpider and RedisCrawlSpider.
 # REDIS_START_URLS_KEY = '%(name)s:start_urls'
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
