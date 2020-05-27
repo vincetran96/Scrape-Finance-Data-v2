@@ -6,6 +6,9 @@
 # type: tabs (A-Z, Danh sach CK dang NY/GD, Niem yet moi/DKGD moi, etc.)
 
 import fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.utilities as utilities
+
+name = "corporateAZ"
 
 
 scraper_api_key = constants.SCRAPER_API_KEY
@@ -33,10 +36,16 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         },
         "meta": {
             'pageid': "",
-            "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
+            # "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
         },
         "proxies": {
-            "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
-            "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
+            # "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
+            # "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
         }
         }
+
+
+log_settings = utilities.log_settings(spiderName=name,
+                                      log_level="INFO")
+
+settings = {**log_settings}                                      

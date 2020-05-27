@@ -33,7 +33,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "meta": {
             "ticker": "",
             "ReportType": "",
-            "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
+            # "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
         }
         }
 

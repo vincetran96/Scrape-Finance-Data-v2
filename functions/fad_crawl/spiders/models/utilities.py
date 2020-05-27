@@ -93,22 +93,19 @@ def handle_exception(spidercls, response_list=[], request_list=[]):
             error_msg = f'EXCEPTION ERROR: {err_details}; for {ticker} at {url}'
             spidercls.logger.error(error_msg)
 
+
 def log_settings(spiderName, log_level, log_formatter=None):
     # log_level: CRITICAL, ERROR, WARNING, INFO, DEBUG
     if log_formatter:
         return {
         'LOG_ENABLED': True,
-        'LOG_FILE': f'logs/{spiderName}_errors_long.log',
+        'LOG_FILE': f'logs/{spiderName}_log_verbose.log',
         'LOG_LEVEL': log_level,
         'LOG_FORMATTER': log_formatter
     }
     else:
         return {
             'LOG_ENABLED': True,
-            'LOG_FILE': f'logs/{spiderName}_errors_long.log',
+            'LOG_FILE': f'logs/{spiderName}_log_verbose.log',
             'LOG_LEVEL': log_level
         }
-
-# if __name__ == "__main__":
-#     crawl_main()
-#     crawl_test()
