@@ -11,23 +11,24 @@ import redis
 import requests
 import scrapy
 from scrapy import FormRequest
-from scrapy.crawler import CrawlerProcess, CrawlerRunner
+from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from scrapy_redis.spiders import RedisSpider
 from twisted.internet import reactor
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
-from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.models.corporateaz import data as az
+from fad_crawl.spiders.models.corporateaz import name, settings
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
-TEST_NUM_PAGES = 15
+TEST_NUM_PAGES = 5
 
 
 class corporateazHandler(scrapy.Spider):
-    name = 'corporateAZ'
+    name = name
+    custom_settings = settings
 
     def __init__(self, tickers_list="", *args, **kwargs):
         super(corporateazHandler, self).__init__(*args, **kwargs)
@@ -62,27 +63,3 @@ class corporateazHandler(scrapy.Spider):
         tickers_list = [d["Code"] for d in res]
         self.logger.info(str(tickers_list))
         self.r.lpush("financeInfo:tickers", *tickers_list)
-
-
-def crawl_main():
-    configure_logging()
-    runner_main = CrawlerRunner()
-    runner_main.crawl(corporateazHandler)
-    runner_main.crawl(financeInfoHandler)
-    d_main = runner_main.join()
-    d_main.addBoth(lambda _: reactor.stop())
-    reactor.run()
-
-
-def crawl_test():
-    runner_test = CrawlerRunner()
-    runner_test.crawl(financeInfoHandler)
-    # runner_test.crawl(pdfDocsHandler)
-    d = runner_test.join()
-    d.addBoth(lambda _: reactor.stop())
-    reactor.run()
-
-
-if __name__ == "__main__":
-    crawl_main()
-    crawl_test()
