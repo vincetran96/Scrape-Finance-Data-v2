@@ -36,10 +36,11 @@ ITEM_PIPELINES = {
 
 # Default start urls key for RedisSpider and RedisCrawlSpider.
 # REDIS_START_URLS_KEY = '%(name)s:start_urls'
+### REDIS SETTINGS ###
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 5
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay

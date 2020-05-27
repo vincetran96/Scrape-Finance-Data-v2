@@ -42,7 +42,6 @@ class financeInfoHandler(RedisSpider):
         while found < self.redis_batch_size:
             data = fetch_one(self.redis_key)
             if not data:
-                # Queue empty.
                 break
             for report_type in self.report_types:
                 req = self.make_request_from_data(data, report_type)

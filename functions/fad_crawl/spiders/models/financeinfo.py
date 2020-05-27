@@ -10,6 +10,9 @@ name = "financeInfo"
 report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 
 
+scraper_api_key = constants.SCRAPER_API_KEY
+
+
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
             "Code": "",
@@ -29,12 +32,10 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         },
         "meta": {
             "ticker": "",
-            "ReportType": ""
+            "ReportType": "",
+            "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
         }
         }
-
-
-scraper_api_key = constants.SCRAPER_API_KEY
 
 
 log_settings = utilities.log_settings(spiderName=name,

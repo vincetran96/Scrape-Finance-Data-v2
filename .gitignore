@@ -1,6 +1,7 @@
 *.zip
 *.code-workspace
 *.pyc
+playground.*
 env/
 .mypy_cache/
 .vscode/
