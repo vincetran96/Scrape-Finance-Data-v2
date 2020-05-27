@@ -7,6 +7,10 @@
 
 import fad_crawl.spiders.models.constants as constants
 
+
+scraper_api_key = constants.SCRAPER_API_KEY
+
+
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
             "catID": constants.CAT_ID,
@@ -29,5 +33,10 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         },
         "meta": {
             'pageid': "",
+            "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
+        },
+        "proxies": {
+            "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
+            "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
         }
         }

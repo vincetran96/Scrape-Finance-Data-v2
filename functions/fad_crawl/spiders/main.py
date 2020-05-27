@@ -23,7 +23,7 @@ from fad_crawl.spiders.models.corporateaz import data as az
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
-TEST_NUM_PAGES = 40
+TEST_NUM_PAGES = 15
 
 
 class corporateazHandler(scrapy.Spider):
@@ -37,7 +37,9 @@ class corporateazHandler(scrapy.Spider):
         numTickers = requests.post(url=az["url"],
                                    data=az["formdata"],
                                    headers=az["headers"],
-                                   cookies=az["cookies"]
+                                   cookies=az["cookies"],
+                                   proxies=az["proxies"],
+                                   verify=False
                                    ).json()[0]["TotalRecord"]
 
         # numPages = numTickers // int(constants.PAGE_SIZE) + 2
@@ -66,6 +68,7 @@ def crawl_main():
     configure_logging()
     runner_main = CrawlerRunner()
     runner_main.crawl(corporateazHandler)
+    runner_main.crawl(financeInfoHandler)
     d_main = runner_main.join()
     d_main.addBoth(lambda _: reactor.stop())
     reactor.run()
@@ -73,8 +76,8 @@ def crawl_main():
 
 def crawl_test():
     runner_test = CrawlerRunner()
-    runner_test.crawl(financeInfoHandler, tickers_list=TEST_TICKERS_LIST)
-    # runner_test.crawl(pdfDocsHandler, tickers_list=TEST_TICKERS_LIST)
+    runner_test.crawl(financeInfoHandler)
+    # runner_test.crawl(pdfDocsHandler)
     d = runner_test.join()
     d.addBoth(lambda _: reactor.stop())
     reactor.run()
