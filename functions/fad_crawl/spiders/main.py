@@ -57,6 +57,8 @@ class corporateazHandler(scrapy.Spider):
                               meta=az["meta"],
                               callback=self.parse)
             yield req
+        
+        self.logger.info("I HAVE YIELDED ALL REQUESTS")
 
     def parse(self, response):
         res = json.loads(response.text)

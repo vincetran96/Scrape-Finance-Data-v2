@@ -3,6 +3,7 @@ from scrapy.utils.log import configure_logging
 from twisted.internet import reactor
 
 from celery_main import app
+from crochet import setup
 from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.main import corporateazHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
@@ -18,13 +19,14 @@ def adder(x, y):
 @app.task
 def crawl_task():
     print ("=== CRAWL TASK IS RUNNING ===")
+    setup()
     configure_logging()
     runner_main = CrawlerRunner()
     runner_main.crawl(corporateazHandler)
     runner_main.crawl(financeInfoHandler)
     d_main = runner_main.join()
-    d_main.addBoth(lambda _: reactor.stop())
-    reactor.run()
+    # d_main.addBoth(lambda _: reactor.stop())
+    # reactor.run()
 
 
 @app.task
