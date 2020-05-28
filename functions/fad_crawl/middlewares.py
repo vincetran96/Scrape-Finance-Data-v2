@@ -8,7 +8,7 @@
 from scrapy import signals
 
 
-class FadCrawlSpiderMiddleware:
+class TickerCrawlSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -41,7 +41,12 @@ class FadCrawlSpiderMiddleware:
 
         # Should return either None or an iterable of Request, dict
         # or Item objects.
-        pass
+        spider_name = spider.name
+        ticker = response.meta["ticker"]
+        report_type = response.meta["ReportType"]
+        with open(f'logs/{spider_name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+            openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+        return None
 
     def process_start_requests(self, start_requests, spider):
         # Called with the start requests of the spider, and works
@@ -56,7 +61,7 @@ class FadCrawlSpiderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class FadCrawlDownloaderMiddleware:
+class TickerCrawlDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
@@ -97,7 +102,12 @@ class FadCrawlDownloaderMiddleware:
         # - return None: continue processing this exception
         # - return a Response object: stops process_exception() chain
         # - return a Request object: stops process_exception() chain
-        pass
+        spider_name = spider.name
+        ticker = request.meta["ticker"]
+        report_type = response.meta["ReportType"]
+        with open(f'logs/{spider_name}_{report_type}_downloadererrors_short.log', 'a+') as openfile:
+            openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+        return None
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)

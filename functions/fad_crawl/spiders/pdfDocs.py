@@ -1,21 +1,27 @@
 # -*- coding: utf-8 -*-
 # This spider crawls a stock ticker's PDF Documents
 
-import scrapy
 import json
+import os
+import sys
+import traceback
+from pprint import pprint
+
+import scrapy
 from scrapy import FormRequest, Request
 from scrapy.crawler import CrawlerRunner
-from pprint import pprint
-from functions.fad_crawl.spiders.models.pdfdocs import data as fi
-from functions.fad_crawl.spiders.models.pdfdocs import type_list
+
+from fad_crawl.spiders.models.pdfdocs import data as fi
+from fad_crawl.spiders.models.pdfdocs import type_list
 
 
 class pdfDocsHandler(scrapy.Spider):
     name = 'pdfDocs'
 
-    def __init__(self, tickers_list="", **kwargs):
+    def __init__(self, tickers_list="", *args, **kwargs):
+        super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.tickers = tickers_list
-
+    
     def start_requests(self):
         for ticker in self.tickers:
             for doc_type in type_list:
@@ -43,6 +49,8 @@ class pdfDocsHandler(scrapy.Spider):
             doc_req.meta["DocType"] = response.meta["DocType"]
             yield doc_req
 
+# TODO: use another module for handling downloads of PDFs
+
     def parse_doc(self, response):
         ticker = response.meta["ticker"]
         doc_type = response.meta["DocType"]
@@ -51,7 +59,7 @@ class pdfDocsHandler(scrapy.Spider):
 # TODO: how to download large documents using chunks?
 
         with open(f'localData/PDFs/{ticker}_{doc_type}_{doc_title}.pdf', 'wb') as writefile:
-            writefile.write(response.body)            
+            writefile.write(response.body)
 
 
 # if __name__ == "__main__":
