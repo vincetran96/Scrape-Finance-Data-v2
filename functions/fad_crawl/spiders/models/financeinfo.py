@@ -42,6 +42,7 @@ log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
                                       log_formatter="fad_crawl.spiders.models.utilities.TickerSpiderLogFormatter"
                                       )
+
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
@@ -53,6 +54,12 @@ middlewares_settings = {
         'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
     }
 }
+# RECEIVE PROXIES FROM REDIS PROXY KEY
+proxy_settings = {
+    'ROTATING_PROXY_LIST': [
+    ]
+}
+
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
 
 settings = {**log_settings, **middlewares_settings, ** redis_key_settings}

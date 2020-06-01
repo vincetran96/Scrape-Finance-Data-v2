@@ -35,5 +35,3 @@ def crawl_test():
     runner_test.crawl(financeInfoHandler)
     # runner_test.crawl(pdfDocsHandler)
     d = runner_test.join()
-    d.addBoth(lambda _: reactor.stop())
-    reactor.run()
