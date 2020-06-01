@@ -7,8 +7,16 @@
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
+import redis
+
+
+r = redis.Redis(decode_responses=True)
+
 
 name = "corporateAZ"
+
+
+tickers_redis_key = ["financeInfo:tickers"]
 
 
 scraper_api_key = constants.SCRAPER_API_KEY
@@ -38,19 +46,25 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             'pageid': "",
             # "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
         },
-        "proxies": {
-            # "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
-            # "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
-        }
+        # "proxies": {
+        #     # "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
+        #     # "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
+        # }
         }
 
 
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO")
-# RECEIVE PROXIES FROM REDIS PROXY KEY
-proxy_settings = {
-    'ROTATING_PROXY_LIST': [
-    ]
+
+middlewares_settings = {
+    'DOWNLOADER_MIDDLEWARES': {
+        'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+        'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+    }
 }
 
-settings = {**log_settings}                                      
+proxy_settings = {
+    'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1)
+}
+
+settings = {**log_settings, **middlewares_settings, **proxy_settings}
