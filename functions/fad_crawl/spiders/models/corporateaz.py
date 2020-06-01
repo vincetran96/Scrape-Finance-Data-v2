@@ -47,5 +47,10 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
 
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO")
+# RECEIVE PROXIES FROM REDIS PROXY KEY
+proxy_settings = {
+    'ROTATING_PROXY_LIST': [
+    ]
+}
 
 settings = {**log_settings}                                      
