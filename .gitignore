@@ -9,3 +9,5 @@ test.py
 localData/
 __pycache__/
 logs/
+elasticsearch*/
+kibana*/
