@@ -10,3 +10,5 @@ PAGE_SIZE = "50"
 BUSINESSTYPE_ID = "0"
 
 SCRAPER_API_KEY = "2b55becc5b216a32c586c89b9ef50adc"
+
+PROXIES_REDIS_KEY = "acceptedProxies"

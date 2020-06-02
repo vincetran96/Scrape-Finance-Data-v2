@@ -3,6 +3,11 @@
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
+import redis
+
+
+r = redis.Redis(decode_responses=True)
+
 
 name = "financeInfo"
 
@@ -42,8 +47,11 @@ log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
                                       log_formatter="fad_crawl.spiders.models.utilities.TickerSpiderLogFormatter"
                                       )
+
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
+        'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+        'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
         'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
         'fad_crawl.fad_stats.TickerCrawlerStats': 850,
         'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
@@ -53,6 +61,11 @@ middlewares_settings = {
         'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
     }
 }
+
+proxy_settings = {
+    'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1)
+}
+
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
 
-settings = {**log_settings, **middlewares_settings, ** redis_key_settings}
+settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings}

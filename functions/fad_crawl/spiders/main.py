@@ -19,7 +19,7 @@ from twisted.internet import reactor
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import name, settings
+from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_key
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
@@ -35,11 +35,12 @@ class corporateazHandler(scrapy.Spider):
         self.r = redis.Redis()
 
     def start_requests(self):
+        self.logger.info(self.r.lrange(constants.PROXIES_REDIS_KEY, 0, -1))
         numTickers = requests.post(url=az["url"],
                                    data=az["formdata"],
                                    headers=az["headers"],
                                    cookies=az["cookies"],
-                                   proxies=az["proxies"],
+                                   #    proxies=az["proxies"],
                                    verify=False
                                    ).json()[0]["TotalRecord"]
 
@@ -58,8 +59,11 @@ class corporateazHandler(scrapy.Spider):
                               callback=self.parse)
             yield req
 
+        self.logger.info("I HAVE YIELDED ALL REQUESTS")
+
     def parse(self, response):
         res = json.loads(response.text)
         tickers_list = [d["Code"] for d in res]
         self.logger.info(str(tickers_list))
-        self.r.lpush("financeInfo:tickers", *tickers_list)
+        for k in tickers_redis_key:
+            self.r.lpush(k, *tickers_list)

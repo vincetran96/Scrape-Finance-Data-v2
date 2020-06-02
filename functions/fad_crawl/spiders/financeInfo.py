@@ -8,6 +8,7 @@ import sys
 import traceback
 
 import scrapy
+import redis
 from scraper_api import ScraperAPIClient
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
@@ -30,11 +31,13 @@ class financeInfoHandler(RedisSpider):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.tickers = tickers_list
         self.report_types = report_types
+        self.r = redis.Redis()
+        self.crawled_count_key = f'{self.name}:crawledcount'
         # self.client = ScraperAPIClient(scraper_api_key)
 
     def next_requests(self):
         """
-        Replaces the default method
+        Replaces the default method. Closes spider when tickers are crawled and queue empty.
         """
         use_set = self.settings.getbool('REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
         fetch_one = self.server.spop if use_set else self.server.lpop
@@ -48,15 +51,21 @@ class financeInfoHandler(RedisSpider):
                 if req:
                     yield req
                     found += 1
+                    c = self.r.incr(self.crawled_count_key)
+                    self.logger.info(f'Crawled {c} ticker-reports so far')
             else:
-                self.logger.debug("Request not made from data: %r", data)
+                self.logger.info("Request not made from data: %r", data)
 
         if found:
             self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
 
+        if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) is not None:
+            self.r.delete(self.crawled_count_key)
+            self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
+
     def make_request_from_data(self, data, report_type):
         """
-        Replaces the default method, data is a ticker
+        Replaces the default method, data is a ticker.
         """
         ticker = bytes_to_str(data, self.redis_encoding)
 
