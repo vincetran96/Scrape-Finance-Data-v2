@@ -53,8 +53,8 @@ class financeInfoHandler(RedisSpider):
                     found += 1
                     c = self.r.incr(self.crawled_count_key)
                     self.logger.info(f'Crawled {c} ticker-reports so far')
-            else:
-                self.logger.info("Request not made from data: %r", data)
+                else:
+                    self.logger.info("Request not made from data: %r", data)
 
         if found:
             self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
