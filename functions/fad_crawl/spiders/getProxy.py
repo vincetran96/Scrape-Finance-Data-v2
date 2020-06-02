@@ -14,7 +14,7 @@ PROXY_CHECKER_URL = "https://httpbin.org/ip"
 
 
 class getProxyHanlder(scrapy.Spider):
-    name = "proxyHandler"
+    name = "getProxy"
 
     def __init__(self, tickers_list="", *args, **kwargs):
         super(getProxyHanlder, self).__init__(*args, **kwargs)
