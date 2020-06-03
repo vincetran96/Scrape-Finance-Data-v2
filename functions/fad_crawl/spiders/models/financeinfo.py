@@ -1,22 +1,22 @@
-# Used for crawling summarized finances (BCTT), business targets (CTKH),\
-# balance sheets (CDKT), income statements (KQKD), cash flow statements (LC), financial indices (CSTC)
+# -*- coding: utf-8 -*-
+# This module contains settings for financeInfo Spider
+
+# Report types are summarized finances (BCTT), business targets (CTKH), balance sheets (CDKT),
+# income statements (KQKD), cash flow statements (LC), and financial indices (CSTC)
+
+import redis
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
-import redis
 
 
 r = redis.Redis(decode_responses=True)
 
-
 name = "financeInfo"
-
 
 report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 
-
 scraper_api_key = constants.SCRAPER_API_KEY
-
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
@@ -38,10 +38,8 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "meta": {
             "ticker": "",
             "ReportType": "",
-            # "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
         }
         }
-
 
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
@@ -57,14 +55,13 @@ middlewares_settings = {
         'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
     },
     'SPIDER_MIDDLEWARES': {
-        # needs more research on this number...
         'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
     }
 }
 
 proxy_settings = {
     # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1),
-    'ROTATING_PROXY_LIST': ["127.0.0.1:8118"],
+    'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
 }
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}

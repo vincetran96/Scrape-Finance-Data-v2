@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This spider crawls a stock ticker's balance sheet on Vietstock
+# This spider crawls a stock ticker's finance reports on Vietstock
 
 import json
 import logging
@@ -9,7 +9,6 @@ import traceback
 
 import scrapy
 import redis
-from scraper_api import ScraperAPIClient
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.log import configure_logging
@@ -27,13 +26,11 @@ class financeInfoHandler(RedisSpider):
     name = name
     custom_settings = settings
 
-    def __init__(self, tickers_list="", *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
-        self.tickers = tickers_list
         self.report_types = report_types
         self.r = redis.Redis()
         self.crawled_count_key = f'{self.name}:crawledcount'
-        # self.client = ScraperAPIClient(scraper_api_key)
 
     def next_requests(self):
         """

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# This spider crawls the list of company names on Vietstock
+# This spider crawls the list of company names (tickers) on Vietstock,
+# feeds the list to the Redis server for other Spiders to crawl
 
 import json
 import logging
@@ -19,8 +20,9 @@ from twisted.internet import reactor
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_key
+from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_keys
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
 TEST_NUM_PAGES = 5
@@ -59,11 +61,13 @@ class corporateazHandler(scrapy.Spider):
                               callback=self.parse)
             yield req
 
-        self.logger.info("I HAVE YIELDED ALL REQUESTS")
+        self.logger.info("=== I HAVE GONE THROUGH ALL PAGES ===")
 
     def parse(self, response):
         res = json.loads(response.text)
         tickers_list = [d["Code"] for d in res]
         self.logger.info(str(tickers_list))
-        for k in tickers_redis_key:
+        
+        # Push the tickers list to Redis key of each Spider
+        for k in tickers_redis_keys:
             self.r.lpush(k, *tickers_list)
