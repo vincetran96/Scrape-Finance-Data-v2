@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+from stem import Signal
+from stem.control import Controller
 
 
 def get_proxies():
@@ -26,6 +28,12 @@ def checkAndAddProxyPool():
         except:
             pass
     return okayProxyPool
+
+def changeTorIP(password=None):
+    if password != None:
+        with Controller.from_port(port=9051) as controller:
+            controller.authenticate(password=password)
+            controller.signal(Signal.NEWNYM)
 
 
 if __name__ == '__main__':

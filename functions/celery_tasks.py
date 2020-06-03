@@ -1,3 +1,5 @@
+import time
+
 from billiard.context import Process
 from celery import Celery
 from crochet import setup
@@ -14,11 +16,15 @@ from fad_crawl.spiders.main import corporateazHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 
+### TEST AREA ###
 @app.task
 def adder(x, y):
     print("adding")
+    time.sleep(5)
     z=x+y
-    print (z)
+    print (f'The result is {z}')
+    time.sleep(5)
+    return z
 
 
 @app.task
@@ -33,7 +39,7 @@ def subtractor(x, y):
     print ("subtracting")
     z=x-y
     print (z)
-
+### TEST AREA ###
 
 @app.task
 def corporateAZ_task():
@@ -58,43 +64,10 @@ def finance_task():
 
 
 @app.task
-def get_proxy_task():
+def getProxy_task():
     print ("=== GETTING PROXIES ===")
     setup()
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(getProxyHanlder)
     d = runner.join()
-
-
-class CrawlerProcess(Process):
-    def __init__(self, spider):
-        super(CrawlerProcess, self).__init__()
-        setup()
-        settings = get_project_settings()
-        self.crawler = Crawler(spider, settings)
-        self.crawler.signals.connect(reactor.stop, signal=signals.spider_closed)
-        self.spider = spider
-
-    def run(self):
-        self.crawler.crawl(self.spider)
-        reactor.run()
-
-
-@app.task
-def crawl_spider_getProxy(*args, **kwargs):
-    crawler = CrawlerProcess(getProxyHanlder)
-    crawler.start()
-    crawler.join()
-
-@app.task
-def crawl_spider_corpAZ(*args, **kwargs):
-    crawler = CrawlerProcess(corporateazHandler)
-    crawler.start()
-    crawler.join()
-
-@app.task
-def crawl_spider_finInfo(*args, **kwargs):
-    crawler = CrawlerProcess(financeInfoHandler)
-    crawler.start()
-    crawler.join()

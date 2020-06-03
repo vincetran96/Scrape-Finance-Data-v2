@@ -79,6 +79,7 @@ class financeInfoHandler(RedisSpider):
                             headers=fi["headers"],
                             cookies=fi["cookies"],
                             meta=fi["meta"],
+                            callback=self.parse
                             )
 
 # # TODO: find out a more elegant way to crawl all pages of balance \

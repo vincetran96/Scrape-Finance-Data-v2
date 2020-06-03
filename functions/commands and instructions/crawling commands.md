@@ -1,3 +1,8 @@
+# Requirements outside of pip
+redis
+tor
+privoxy
+
 # Create directories
 localData
 localData/PDFs
@@ -24,3 +29,5 @@ python3
 from celery_tasks import *
 crawl_task.delay()
 ```
+
+python -m celery_run_tasks

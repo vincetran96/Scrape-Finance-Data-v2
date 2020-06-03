@@ -40,7 +40,7 @@ class corporateazHandler(scrapy.Spider):
                                    data=az["formdata"],
                                    headers=az["headers"],
                                    cookies=az["cookies"],
-                                   #    proxies=az["proxies"],
+                                   proxies=az["proxies"],
                                    verify=False
                                    ).json()[0]["TotalRecord"]
 

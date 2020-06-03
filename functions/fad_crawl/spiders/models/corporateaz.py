@@ -46,17 +46,17 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             'pageid': "",
             # "proxy": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
         },
-        # "proxies": {
-        #     # "http": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001',
-        #     # "https": f'http://scraperapi:{scraper_api_key}@proxy-server.scraperapi.com:8001'
-        # }
+        "proxies": {
+            "http": "127.0.0.1:8118",
+            "https": "127.0.0.1:8118", }
         }
+        
 
 
 log_settings = utilities.log_settings(spiderName=name,
-                                      log_level="INFO")
+                                      log_level = "INFO")
 
-middlewares_settings = {
+middlewares_settings={
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
@@ -64,7 +64,8 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1)
+    # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1)
+    'ROTATING_PROXY_LIST': ["127.0.0.1:8118"],
 }
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings}
