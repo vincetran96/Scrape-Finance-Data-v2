@@ -7,8 +7,8 @@ import os
 import sys
 import traceback
 
-import scrapy
 import redis
+import scrapy
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.log import configure_logging
@@ -17,69 +17,36 @@ from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
 import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.financeinfo import data as fi
-from fad_crawl.spiders.models.financeinfo import (name, report_types,
-                                                  scraper_api_key, settings)
+from fad_crawl.spiders.models.financeinfo import name, report_types, settings
 
 
-class financeInfoHandler(RedisSpider):
+class financeInfoHandler(fadRedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.report_types = report_types
-        self.r = redis.Redis()
-        self.crawled_count_key = f'{self.name}:crawledcount'
-        self.dequeued_count_key = f'{self.name}:dequeuedcount'
-
-    def next_requests(self):
-        """
-        Replaces the default method. Closes spider when tickers are crawled and queue empty.
-        """
-        use_set = self.settings.getbool('REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
-        fetch_one = self.server.spop if use_set else self.server.lpop
-        found = 0
-        while found < self.redis_batch_size:
-            data = fetch_one(self.redis_key)
-            if not data:
-                break
-            for report_type in self.report_types:
-                req = self.make_request_from_data(data, report_type)
-                if req:
-                    yield req
-                    found += 1
-                    dq = self.r.incr(self.dequeued_count_key)
-                    self.logger.info(f'Dequeued {dq} ticker-reports so far')
-                else:
-                    self.logger.info("Request not made from data: %r", data)
-
-        if found:
-            self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
-
-        # Close spider if none in queue and amount crawled == amount dequeued
-        if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):
-            if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) >= self.r.get(self.dequeued_count_key):
-                self.r.delete(self.crawled_count_key)
-                self.r.delete(self.dequeued_count_key)
-                self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
+        self.fi = fi
 
     def make_request_from_data(self, data, report_type):
+        """Replaces the default method, data is a ticker.
         """
-        Replaces the default method, data is a ticker.
-        """
+
         ticker = bytes_to_str(data, self.redis_encoding)
 
-        fi["formdata"]["Code"] = ticker
-        fi["formdata"]["ReportType"] = report_type
-        fi["meta"]["ticker"] = ticker
-        fi["meta"]["ReportType"] = report_type
+        self.fi["formdata"]["Code"] = ticker
+        self.fi["formdata"]["ReportType"] = report_type
+        self.fi["meta"]["ticker"] = ticker
+        self.fi["meta"]["ReportType"] = report_type
 
-        return FormRequest(url=fi["url"],
-                            formdata=fi["formdata"],
-                            headers=fi["headers"],
-                            cookies=fi["cookies"],
-                            meta=fi["meta"],
+        return FormRequest(url=self.fi["url"],
+                            formdata=self.fi["formdata"],
+                            headers=self.fi["headers"],
+                            cookies=self.fi["cookies"],
+                            meta=self.fi["meta"],
                             callback=self.parse
                             )
 

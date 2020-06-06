@@ -2,6 +2,7 @@
 *.code-workspace
 *.pyc
 *.DS_Store
+*.rdb
 playground.*
 env/
 .mypy_cache/

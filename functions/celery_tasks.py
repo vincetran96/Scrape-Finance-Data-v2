@@ -10,9 +10,10 @@ from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from scrapy.utils.project import get_project_settings
 
+import fad_crawl.helpers.fileDownloader as downloader
 from celery_main import app
-from fad_crawl.spiders.main import corporateazHandler
 from fad_crawl.spiders.financeInfo import financeInfoHandler
+from fad_crawl.spiders.main import corporateazHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 
@@ -41,7 +42,7 @@ def subtractor(x, y):
 
 @app.task
 def corporateAZ_task():
-    print("=== CORPORATEAZ CRAWLING ===")
+    print("=== CORPORATEAZ SPIDER CRAWLING ===")
     setup()
     configure_logging()
     runner = CrawlerRunner()
@@ -60,10 +61,9 @@ def finance_task():
     # reactor.run()
 
 @app.task
-def getProxy_task():
-    print("=== GETTING PDF DOCS ===")
+def pdfDocs_task(url="", filepath=""):
+    print("=== PDFDOCS SPIDER CRAWLING ===")
     setup()
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(pdfDocsHandler)
-    d = runner.join()

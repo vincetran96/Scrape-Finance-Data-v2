@@ -16,6 +16,8 @@ rabbitmq
 
 # Start a celery worker
 celery -A celery_main worker --loglevel=INFO
+celery -A celery_main worker -Q corpAZ -c 8 -n workercorpAZ@%h -l INFO
+celery -A celery_main worker -Q finance -c 8 -n workerfinance@%h -l INFO
 ## On Windows
 celery -A celery_main worker --loglevel=INFO -P solo
 
