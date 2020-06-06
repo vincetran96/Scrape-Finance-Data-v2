@@ -32,13 +32,15 @@ service tor start
 service tor status
 ```
 ### Check if you have a different IP with Tor
-For your original IP:
+For your original IP (2 ways):
 ```
 curl http://icanhazip.com/
+wget -qO - https://api.ipify.org; echo
 ```
-For your Tor IP:
+For your Tor IP (2 ways):
 ```
 torify curl http://icanhazip.com/
+torsocks wget -qO - https://api.ipify.org; echo
 ```
 
 ## Install Privoxy ([source](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html))
@@ -54,4 +56,8 @@ service privoxy start
 ### Check if Privoxy is running
 ```
 service privoxy status
+```
+### Check if you have a different IP with Privoxy now
+```
+curl -x 127.0.0.1:8118 http://icanhazip.com/
 ```

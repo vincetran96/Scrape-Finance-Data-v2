@@ -31,6 +31,7 @@ class financeInfoHandler(RedisSpider):
         self.report_types = report_types
         self.r = redis.Redis()
         self.crawled_count_key = f'{self.name}:crawledcount'
+        self.dequeued_count_key = f'{self.name}:dequeuedcount'
 
     def next_requests(self):
         """
@@ -48,17 +49,20 @@ class financeInfoHandler(RedisSpider):
                 if req:
                     yield req
                     found += 1
-                    c = self.r.incr(self.crawled_count_key)
-                    self.logger.info(f'Crawled {c} ticker-reports so far')
+                    dq = self.r.incr(self.dequeued_count_key)
+                    self.logger.info(f'Dequeued {dq} ticker-reports so far')
                 else:
                     self.logger.info("Request not made from data: %r", data)
 
         if found:
             self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
 
-        if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) is not None:
-            self.r.delete(self.crawled_count_key)
-            self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
+        # Close spider if none in queue and amount crawled == amount dequeued
+        if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):
+            if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) >= self.r.get(self.dequeued_count_key):
+                self.r.delete(self.crawled_count_key)
+                self.r.delete(self.dequeued_count_key)
+                self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
 
     def make_request_from_data(self, data, report_type):
         """
@@ -88,3 +92,5 @@ class financeInfoHandler(RedisSpider):
         report_type = response.meta['ReportType']
         with open(f'localData/{ticker}_{report_type}.json', 'w') as writefile:
             json.dump(resp_json, writefile, indent=4)
+            c = self.r.incr(self.crawled_count_key)
+            self.logger.info(f'Crawled {c} ticker-reports so far')

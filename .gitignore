@@ -1,6 +1,7 @@
 *.zip
 *.code-workspace
 *.pyc
+*.DS_Store
 playground.*
 env/
 .mypy_cache/
