@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This spider crawls a stock ticker's balance sheet on Vietstock
+# This spider crawls a stock ticker's finance reports on Vietstock
 
 import json
 import logging
@@ -9,7 +9,6 @@ import traceback
 
 import scrapy
 import redis
-from scraper_api import ScraperAPIClient
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.log import configure_logging
@@ -27,13 +26,12 @@ class financeInfoHandler(RedisSpider):
     name = name
     custom_settings = settings
 
-    def __init__(self, tickers_list="", *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
-        self.tickers = tickers_list
         self.report_types = report_types
         self.r = redis.Redis()
         self.crawled_count_key = f'{self.name}:crawledcount'
-        # self.client = ScraperAPIClient(scraper_api_key)
+        self.dequeued_count_key = f'{self.name}:dequeuedcount'
 
     def next_requests(self):
         """
@@ -51,17 +49,20 @@ class financeInfoHandler(RedisSpider):
                 if req:
                     yield req
                     found += 1
-                    c = self.r.incr(self.crawled_count_key)
-                    self.logger.info(f'Crawled {c} ticker-reports so far')
-            else:
-                self.logger.info("Request not made from data: %r", data)
+                    dq = self.r.incr(self.dequeued_count_key)
+                    self.logger.info(f'Dequeued {dq} ticker-reports so far')
+                else:
+                    self.logger.info("Request not made from data: %r", data)
 
         if found:
             self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
 
-        if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) is not None:
-            self.r.delete(self.crawled_count_key)
-            self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
+        # Close spider if none in queue and amount crawled == amount dequeued
+        if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):
+            if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) >= self.r.get(self.dequeued_count_key):
+                self.r.delete(self.crawled_count_key)
+                self.r.delete(self.dequeued_count_key)
+                self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
 
     def make_request_from_data(self, data, report_type):
         """
@@ -79,6 +80,7 @@ class financeInfoHandler(RedisSpider):
                             headers=fi["headers"],
                             cookies=fi["cookies"],
                             meta=fi["meta"],
+                            callback=self.parse
                             )
 
 # # TODO: find out a more elegant way to crawl all pages of balance \
@@ -90,3 +92,5 @@ class financeInfoHandler(RedisSpider):
         report_type = response.meta['ReportType']
         with open(f'localData/{ticker}_{report_type}.json', 'w') as writefile:
             json.dump(resp_json, writefile, indent=4)
+            c = self.r.incr(self.crawled_count_key)
+            self.logger.info(f'Crawled {c} ticker-reports so far')

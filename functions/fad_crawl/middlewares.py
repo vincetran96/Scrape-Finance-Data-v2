@@ -12,6 +12,10 @@ class TickerCrawlSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
+    '''
+    This Middleware is used for ticker- and report- level Spiders, such as
+    financeInfo, where response.meta has the 'ticker' and 'ReportType' keys.
+    '''
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -65,6 +69,10 @@ class TickerCrawlDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
+    '''
+    This Middleware is used for ticker- and report- level Spiders, such as
+    financeInfo, where request.meta has the 'ticker' and 'ReportType' keys.
+    '''
 
     @classmethod
     def from_crawler(cls, crawler):

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# This module contains ultilities for handling non-downloader errors and logging, used across all Spiders
+
 import logging
 import os
 import sys
@@ -36,7 +39,7 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         msg_dict = {
             'ticker': ticker,
             'type': "Dropped Error",
-            'message': "Dropped somethin...g",
+            'message': "Dropped an item...",
         }
         msg = json.dumps(msg_dict)
         return {
@@ -53,7 +56,7 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         msg_dict = {
             'ticker': ticker,
             'type': "Item Error",
-            'message': "Item something...",
+            'message': "There was an error in an item...",
         }
         msg = json.dumps(msg_dict)
         return {
@@ -69,7 +72,7 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         msg_dict = {
             'ticker': ticker,
             'type': "Spider Error",
-            'message': "Spider something...",
+            'message': "There was an error in the spider...",
         }
         msg = json.dumps(msg_dict)
         return {
@@ -93,9 +96,10 @@ def handle_exception(spidercls, response_list=[], request_list=[]):
             error_msg = f'EXCEPTION ERROR: {err_details}; for {ticker} at {url}'
             spidercls.logger.error(error_msg)
 
-
 def log_settings(spiderName, log_level, log_formatter=None):
-    # log_level: CRITICAL, ERROR, WARNING, INFO, DEBUG
+    '''
+    log_levels: str. Can be one of these: CRITICAL, ERROR, WARNING, INFO, DEBUG
+    '''
     if log_formatter:
         return {
         'LOG_ENABLED': True,

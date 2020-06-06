@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# This module contains settings for Celery
+
 ## Broker settings.
 broker_url = 'redis://localhost:6379'
 

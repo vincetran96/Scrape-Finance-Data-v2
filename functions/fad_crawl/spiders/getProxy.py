@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 # This spider crawls a list of usable proxies and feed into a Redis key for other spiders to use
 # This spider may need to run every 5 minutes during the crawling session (as per ProxyScrape)
+# This spider is extremely slow in getting OK proxies, so we are not using it (June 2020)
 
 import redis
 import scrapy
 from scrapy import Request
 
 from fad_crawl.spiders.models.constants import PROXIES_REDIS_KEY
+from fad_crawl.spiders.models.utilities import log_settings
+
 
 PROXY_LIST_FREEPROXY = "https://free-proxy-list.net/"
 PROXY_LIST_PROXYSCRAPE   = "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=300&country=all&ssl=all&anonymity=all"
@@ -14,8 +17,10 @@ PROXY_CHECKER_URL = "https://httpbin.org/ip"
 
 
 class getProxyHanlder(scrapy.Spider):
-    name = "proxyHandler"
+    name = "getProxy"
 
+    custom_settings = log_settings(spiderName=name, log_level="INFO")
+    
     def __init__(self, tickers_list="", *args, **kwargs):
         super(getProxyHanlder, self).__init__(*args, **kwargs)
         self.r = redis.Redis()
