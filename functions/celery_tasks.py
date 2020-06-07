@@ -10,10 +10,14 @@ from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from scrapy.utils.project import get_project_settings
 
-from celery_main import app
-from fad_crawl.spiders.main import corporateazHandler
-from fad_crawl.spiders.financeInfo import financeInfoHandler
-from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+from functions.celery_main import app
+from functions.fad_crawl.spiders.main import corporateazHandler
+from functions.fad_crawl.spiders.financeInfo import financeInfoHandler
+from functions.fad_crawl.spiders.pdfDocs import pdfDocsHandler
+from functions.fad_crawl.spiders.associateds import associatedsHandler
+from functions.fad_crawl.spiders.boardDetails import boardDetailsHandler
+from functions.fad_crawl.spiders.majorShareHolders import majorShareHoldersHandler
+from functions.fad_crawl.spiders.ownerStructure import ownerStructureHandler
 
 
 ### TEST AREA ###
@@ -55,6 +59,10 @@ def finance_task():
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(financeInfoHandler)
+    runner.crawl(associatedsHandler)
+    runner.crawl(boardDetailsHandler)
+    runner.crawl(majorShareHoldersHandler)
+    runner.crawl(ownerStructureHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
     # reactor.run()

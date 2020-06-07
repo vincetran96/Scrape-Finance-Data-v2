@@ -17,11 +17,11 @@ from scrapy.utils.log import configure_logging
 from scrapy_redis.spiders import RedisSpider
 from twisted.internet import reactor
 
-import fad_crawl.spiders.models.constants as constants
-import fad_crawl.spiders.models.utilities as utilities
-from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_keys
-from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+import functions.fad_crawl.spiders.models.constants as constants
+import functions.fad_crawl.spiders.models.utilities as utilities
+from functions.fad_crawl.spiders.models.corporateaz import data as az
+from functions.fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_keys
+from functions.fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
@@ -42,7 +42,7 @@ class corporateazHandler(scrapy.Spider):
                                    data=az["formdata"],
                                    headers=az["headers"],
                                    cookies=az["cookies"],
-                                   proxies=az["proxies"],
+                                #    proxies=az["proxies"],
                                    verify=False
                                    ).json()[0]["TotalRecord"]
 
