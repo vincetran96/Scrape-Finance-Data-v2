@@ -57,7 +57,7 @@ class financeInfoHandler(fadRedisSpider):
         resp_json = json.loads(response.text)
         ticker = response.meta['ticker']
         report_type = response.meta['ReportType']
-        with open(f'localData/{ticker}_{report_type}.json', 'w') as writefile:
+        with open(f'localData/financialInfo/{ticker}_{report_type}.json', 'w') as writefile:
             json.dump(resp_json, writefile, indent=4)
             c = self.r.incr(self.crawled_count_key)
             self.logger.info(f'Crawled {c} ticker-reports so far')

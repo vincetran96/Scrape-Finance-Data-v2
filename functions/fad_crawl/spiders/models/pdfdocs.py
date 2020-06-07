@@ -15,6 +15,12 @@
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
+<<<<<<< HEAD
+=======
+
+
+name = "pdfDocs"
+>>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f
 
 
 name = "pdfDocs"
@@ -47,6 +53,7 @@ log_settings = utilities.log_settings(spiderName=name,
 
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
+<<<<<<< HEAD
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
         'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
@@ -73,3 +80,19 @@ file_settings = {
 }
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings, **file_settings}
+=======
+        # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+        # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        # 'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
+        # 'fad_crawl.fad_stats.TickerCrawlerStats': 850,
+        'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
+    },
+    'SPIDER_MIDDLEWARES': {
+        # 'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
+    }
+}
+
+redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
+
+settings = {**log_settings, **middlewares_settings, ** redis_key_settings}
+>>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f

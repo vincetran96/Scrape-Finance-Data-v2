@@ -4,7 +4,11 @@ tor
 privoxy
 
 # Create directories
-localData
+localData/associateds
+localData/boarddetails
+localData/financeInfo
+localData/majorshareholders
+localData/ownerStructure
 localData/PDFs
 logs
 
@@ -25,7 +29,7 @@ celery -A celery_main worker --loglevel=INFO -P solo
 celery purge -A celery_main -f
 
 # Send tasks to the worker
-At the root folder of the project
+At the `functions` folder of the project
 ```
 python3
 from celery_tasks import *

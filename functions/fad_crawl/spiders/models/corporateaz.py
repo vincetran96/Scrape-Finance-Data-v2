@@ -8,16 +8,23 @@
 
 import redis
 
-import fad_crawl.spiders.models.constants as constants
-import fad_crawl.spiders.models.utilities as utilities
-from fad_crawl.spiders.models.financeinfo import name as financeInfo_name
-from fad_crawl.spiders.models.pdfdocs import name as pdfDocs_name
+import functions.fad_crawl.spiders.models.constants as constants
+import functions.fad_crawl.spiders.models.utilities as utilities
+from functions.fad_crawl.spiders.models.financeinfo import name as financeInfo_name
+from functions.fad_crawl.spiders.models.pdfdocs import name as pdfDocs_name
+from functions.fad_crawl.spiders.models.associateds import name as associateds_name
+from functions.fad_crawl.spiders.models.boarddetails import name as boarddetails_name
+from functions.fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
 
 r = redis.Redis(decode_responses=True)
 
 name = "corporateAZ"
 
-tickers_redis_keys = [f'{financeInfo_name}:tickers', f'{pdfDocs_name}:tickers']
+tickers_redis_keys = [f'{financeInfo_name}:tickers',
+                      f'{pdfDocs_name}:tickers',
+                      f'{associateds_name}:tickers',
+                      f'{boarddetails_name}:tickers',
+                      f'{majorshareholders_name}:tickers']
 
 scraper_api_key = constants.SCRAPER_API_KEY
 
