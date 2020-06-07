@@ -25,7 +25,7 @@ from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
-TEST_NUM_PAGES = 5
+TEST_NUM_PAGES = 2
 
 
 class corporateazHandler(scrapy.Spider):

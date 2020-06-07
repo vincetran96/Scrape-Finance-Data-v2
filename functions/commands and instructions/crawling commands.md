@@ -31,5 +31,7 @@ python3
 from celery_tasks import *
 crawl_task.delay()
 ```
-
+or
+```
 python -m celery_run_tasks
+```

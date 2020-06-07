@@ -51,11 +51,14 @@ class pdfDocsHandler(fadRedisSpider):
                             callback=self.parse
                             )
 
+# TODO: save links only
+
     def parse(self, response):
         resp_json = json.loads(response.text)
         doc_urls = [d['Url'] for d in resp_json]
         ticker = response.meta["ticker"]
         doc_type = response.meta["ReportType"]
+        # doc_title = d["Title"]
 
         l = ItemLoader(item=PDFDocItem(), response=response)
         l.add_value('file_urls', doc_urls)
