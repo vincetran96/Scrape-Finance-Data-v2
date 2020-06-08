@@ -47,17 +47,28 @@ log_settings = utilities.log_settings(spiderName=name,
 
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
-        # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-        # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        # 'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
-        # 'fad_crawl.fad_stats.TickerCrawlerStats': 850,
+        'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+        'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
+        'fad_crawl.fad_stats.TickerCrawlerStats': 850,
         'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
     },
     'SPIDER_MIDDLEWARES': {
-        # 'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
+        'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
     }
+}
+
+proxy_settings = {
+    'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
 
-settings = {**log_settings, **middlewares_settings, ** redis_key_settings}
+file_settings = {
+    'ITEM_PIPELINES': {'scrapy.pipelines.files.FilesPipeline': 1},
+    'FILES_STORE': 'LocalData/PDFs',
+    'FILES_URLS_FIELD': 'file_urls',
+    'FILES_RESULT_FIELD': 'files'
+}
+
+settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings, **file_settings}

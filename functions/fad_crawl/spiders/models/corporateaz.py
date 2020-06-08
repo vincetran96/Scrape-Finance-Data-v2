@@ -53,8 +53,8 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             'pageid': "",
         },
         "proxies": {
-            "http": constants.PRIVOXY_LOCAL_PROXY,
-            "https": constants.PRIVOXY_LOCAL_PROXY,
+            "http": constants.REQUESTS_LOCAL_PROXY,
+            "https": constants.REQUESTS_LOCAL_PROXY,
         }
         }      
 
@@ -69,8 +69,7 @@ middlewares_settings={
 }
 
 proxy_settings = {
-    # 'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
-    # 'ROTATING_PROXY_LIST': [],
+    'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings}
