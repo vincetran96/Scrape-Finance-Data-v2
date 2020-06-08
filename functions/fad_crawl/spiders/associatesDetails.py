@@ -50,6 +50,7 @@ class associatesHandler(fadRedisSpider):
 
             ticker = bytes_to_str(data, self.redis_encoding)
             self.ass["formdata"]["code"] = ticker
+            print (ticker)
 
             for report_type in self.report_types:
  # Look for number of pages for this ticker first
@@ -69,15 +70,16 @@ class associatesHandler(fadRedisSpider):
                     req = self.make_request_from_data(ticker, report_type, page=str(pg))
                     if req:
                         yield req
-                        found += 1
+                        # found += 1
                         dq = self.r.incr(self.dequeued_count_key)
                         self.logger.info(f'Dequeued {dq} ticker-report-page so far')
                     else:
                         self.logger.info("Request not made from data: %r", data)
+            found += 1
 
 # Log number of requests consumed from Redis feed
         if found:
-            self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
+            self.logger.debug("Read %s tickers from '%s'", found, self.redis_key)
 
 # Close spider if none in queue and amount crawled == amount dequeued
         if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):

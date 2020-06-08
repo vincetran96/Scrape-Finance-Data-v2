@@ -23,7 +23,7 @@ class fadRedisSpider(RedisSpider):
 
     def __init__(self, *args, **kwargs):
         super(fadRedisSpider, self).__init__(*args, **kwargs)
-        self.r = redis.Redis()
+        self.r = redis.Redis(decode_responses=True)
         self.report_types = []
         self.fi = {}
         # if name is not None:
@@ -53,7 +53,7 @@ class fadRedisSpider(RedisSpider):
 
         # Log number of requests consumed from Redis feed
         if found:
-            self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
+            self.logger.debug("Read %s tickers from '%s'", found, self.redis_key)
 
         # Close spider if none in queue and amount crawled == amount dequeued
         if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):

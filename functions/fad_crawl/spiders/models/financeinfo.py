@@ -66,4 +66,6 @@ proxy_settings = {
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings}
+concurrency_settings = {'CONCURRENT_REQUESTS': 16}
+
+settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings, **concurrency_settings}

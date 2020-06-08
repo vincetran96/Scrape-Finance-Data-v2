@@ -37,7 +37,6 @@ class corporateazHandler(scrapy.Spider):
         self.r = redis.Redis()
 
     def start_requests(self):
-        self.logger.info(self.r.lrange(constants.PROXIES_REDIS_KEY, 0, -1))
         numTickers = requests.post(url=az["url"],
                                    data=az["formdata"],
                                    headers=az["headers"],
