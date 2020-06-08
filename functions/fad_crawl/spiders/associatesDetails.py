@@ -47,23 +47,23 @@ class associatesHandler(fadRedisSpider):
             data = fetch_one(self.redis_key)
             if not data:
                 break
- # Look for number of pages for this ticker first           
+
             ticker = bytes_to_str(data, self.redis_encoding)
             self.ass["formdata"]["code"] = ticker
 
-            print (self.ass["formdata"])
-            print (self.ass["headers"])
-            print (self.ass["cookies"])
-            print (self.ass["proxies"])
-
             for report_type in self.report_types:
-                numPages = requests.post(url=self.ass["url"],
-                                   data=self.ass["formdata"],
-                                   headers=self.ass["headers"],
-                                   cookies=self.ass["cookies"],
-                                   proxies=self.ass["proxies"],
-                                   verify=False
-                                   ).json()[0]["TotalPage"]
+ # Look for number of pages for this ticker first
+                try:
+                    numPages = requests.post(url=self.ass["url"],
+                                    data=self.ass["formdata"],
+                                    headers=self.ass["headers"],
+                                    cookies=self.ass["cookies"],
+                                    proxies=self.ass["proxies"],
+                                    verify=False
+                                    ).json()[0]["TotalPage"]
+# If request above is not pissible, assume numPages = 4                
+                except:
+                    numPages = 4
 # Loop through all the pages
                 for pg in range(1, numPages+1):
                     req = self.make_request_from_data(ticker, report_type, page=str(pg))
@@ -74,7 +74,6 @@ class associatesHandler(fadRedisSpider):
                         self.logger.info(f'Dequeued {dq} ticker-report-page so far')
                     else:
                         self.logger.info("Request not made from data: %r", data)
-                    pg += 1
 
 # Log number of requests consumed from Redis feed
         if found:
