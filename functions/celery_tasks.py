@@ -17,7 +17,7 @@ from fad_crawl.spiders.main import corporateazHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
-from fad_crawl.spiders.associateds import associatedsHandler
+from fad_crawl.spiders.associatesDetails import associatesHandler
 from fad_crawl.spiders.boardDetails import boardDetailsHandler
 from fad_crawl.spiders.majorShareHolders import majorShareHoldersHandler
 from fad_crawl.spiders.ownerStructure import ownerStructureHandler
@@ -48,11 +48,7 @@ def subtractor(x, y):
 
 @app.task
 def corporateAZ_task():
-<<<<<<< HEAD
     print("=== CORPORATEAZ SPIDER CRAWLING ===")
-=======
-    print("=== CORPORATEAZ CRAWLING ===")
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f
     setup()
     configure_logging()
     runner = CrawlerRunner()
@@ -66,30 +62,18 @@ def finance_task():
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(financeInfoHandler)
-<<<<<<< HEAD
-=======
-    runner.crawl(associatedsHandler)
+    runner.crawl(associatesHandler)
     runner.crawl(boardDetailsHandler)
     runner.crawl(majorShareHoldersHandler)
     runner.crawl(ownerStructureHandler)
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
     # reactor.run()
 
 @app.task
-<<<<<<< HEAD
-def pdfDocs_task(url="", filepath=""):
+def pdfDocs_task(url="", filename=""):
     print("=== PDFDOCS SPIDER CRAWLING ===")
-=======
-def getProxy_task():
-    print("=== GETTING PDF DOCS ===")
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f
     setup()
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(pdfDocsHandler)
-<<<<<<< HEAD
-=======
-    d = runner.join()
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f

@@ -4,10 +4,10 @@ tor
 privoxy
 
 # Create directories
-localData/associateds
-localData/boarddetails
+localData/associates
+localData/boardDetails
 localData/financeInfo
-localData/majorshareholders
+localData/majorShareholders
 localData/ownerStructure
 localData/PDFs
 logs

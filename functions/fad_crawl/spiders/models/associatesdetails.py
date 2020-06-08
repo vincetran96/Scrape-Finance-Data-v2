@@ -2,19 +2,22 @@
 
 import redis
 
-import functions.fad_crawl.spiders.models.constants as constants
-import functions.fad_crawl.spiders.models.utilities as utilities
+import fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.utilities as utilities
 
 r = redis.Redis(decode_responses=True)
 
-name = "associateds"
+name = "associates"
+
+report_types = [name]
 
 scraper_api_key = constants.SCRAPER_API_KEY
 
-data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelation",
+
+data = {"url": "https://finance.vietstock.vn/data/associatesdetails",
         "formdata": {
-            "code": "", # ticker
-            "page": constants.START_PAGE # loop until response == null
+            "code": "",                     # ticker
+            "page": constants.START_PAGE    # loop until response == null
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -26,6 +29,8 @@ data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelation",
         },
         "meta": {
             "ticker": "",
+            "ReportType": "",
+            "Page": "",
         }
         }
 
@@ -48,8 +53,8 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1),
-    # 'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
+    'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
+    # 'ROTATING_PROXY_LIST': [],
 }
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}

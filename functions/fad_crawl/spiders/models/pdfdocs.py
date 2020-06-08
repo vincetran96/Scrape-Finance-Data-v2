@@ -15,12 +15,6 @@
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
-<<<<<<< HEAD
-=======
-
-
-name = "pdfDocs"
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f
 
 
 name = "pdfDocs"

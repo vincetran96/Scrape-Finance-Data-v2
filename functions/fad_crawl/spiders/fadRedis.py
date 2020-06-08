@@ -51,6 +51,7 @@ class fadRedisSpider(RedisSpider):
                 else:
                     self.logger.info("Request not made from data: %r", data)
 
+        # Log number of requests consumed from Redis feed
         if found:
             self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
 

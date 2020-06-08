@@ -24,20 +24,21 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
             "ReportType": "",
             "ReportTermType": "2",
             "Unit": "1000000",
-            "Page": constants.START_PAGE,
-            "PageSize": "999999999"
+            "Page": "",
+            "PageSize": "4",
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
-            "Content-Type": constants.CONTENT_TYPE
+            "Content-Type": constants.CONTENT_TYPE,
         },
         "cookies": {
             "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE
+            "vts_usr_lg": constants.USER_COOKIE,
         },
         "meta": {
             "ticker": "",
             "ReportType": "",
+            "Page": "",
         }
         }
 
@@ -60,7 +61,6 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1),
     'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
     'ROTATING_PROXY_LIST': [],
 }

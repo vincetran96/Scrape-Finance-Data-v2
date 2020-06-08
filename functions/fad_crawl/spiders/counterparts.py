@@ -25,12 +25,12 @@ from functions.fad_crawl.spiders.models.counterparts import (name,
                                                              scraper_api_key, settings)
 
 
-class associatedsHandler(RedisSpider):
+class counterpartsHandler(RedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
-        super(associatedsHandler, self).__init__(*args, **kwargs)
+        super(counterpartsHandler, self).__init__(*args, **kwargs)
         self.r = redis.Redis()
         self.crawled_count_key = f'{self.name}:crawledcount'
         self.dequeued_count_key = f'{self.name}:dequeuedcount'

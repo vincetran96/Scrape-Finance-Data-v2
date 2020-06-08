@@ -102,6 +102,6 @@
 #         #     ticker = response.meta["ticker"]
 #         #     doc_type = response.meta["ReportType"]
             
-#         #     filepath = f'localData/PDFs/{ticker}_{doc_type}_{doc_title}_'            
+#         #     filename = f'localData/PDFs/{ticker}_{doc_type}_{doc_title}_'            
 #         #     c = self.r.incr(self.crawled_count_key)
 #         #     self.logger.info(f'Crawled {c} ticker-reports so far')
