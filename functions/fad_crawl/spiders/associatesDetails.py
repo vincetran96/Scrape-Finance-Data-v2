@@ -44,9 +44,9 @@ class associatesHandler(fadRedisSpider):
         while found < self.redis_batch_size:
 # Fetch one ticker from Redis list, mark all reports for this ticker as unfinished
             data = fetch_one(self.redis_key)
-            self.ticker_finish = {report_type: False for report_type in report_types}
             if not data:
                 break
+            self.ticker_finish = {report_type: False for report_type in report_types}
             for report_type in self.report_types:
 # For each report type, begin while loop with Page number
                 pg = 1
@@ -84,7 +84,8 @@ class associatesHandler(fadRedisSpider):
 
         self.ass["formdata"]["code"] = ticker
         self.ass["meta"]["ticker"] = ticker
-        self.ass["meta"]["Page"] = report_type
+        self.ass["meta"]["ReportType"] = report_type
+        self.ass["meta"]["Page"] = page
 
         return FormRequest(url=ass["url"],
                             formdata=ass["formdata"],
