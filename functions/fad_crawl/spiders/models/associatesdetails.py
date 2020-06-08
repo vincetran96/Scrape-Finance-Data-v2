@@ -53,7 +53,7 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
+    # 'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
     # 'ROTATING_PROXY_LIST': [],
 }
 

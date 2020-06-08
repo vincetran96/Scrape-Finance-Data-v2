@@ -61,8 +61,8 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
-    'ROTATING_PROXY_LIST': [],
+    # 'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
+    # 'ROTATING_PROXY_LIST': [],
 }
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}

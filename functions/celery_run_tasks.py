@@ -12,3 +12,4 @@ if __name__ == '__main__':
     # pdfDocs_task.delay()
     corporateAZ_task.delay()
     finance_task.delay()
+    associates_task()
