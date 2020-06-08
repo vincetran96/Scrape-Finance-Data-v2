@@ -7,6 +7,7 @@ import os
 import sys
 import traceback
 
+import requests
 import redis
 import scrapy
 from scrapy import FormRequest
@@ -46,12 +47,26 @@ class associatesHandler(fadRedisSpider):
             data = fetch_one(self.redis_key)
             if not data:
                 break
-            self.ticker_finish = {report_type: False for report_type in report_types}
+ # Look for number of pages for this ticker first           
+            ticker = bytes_to_str(data, self.redis_encoding)
+            self.ass["formdata"]["code"] = ticker
+
+            print (self.ass["formdata"])
+            print (self.ass["headers"])
+            print (self.ass["cookies"])
+            print (self.ass["proxies"])
+
             for report_type in self.report_types:
-# For each report type, begin while loop with Page number
-                pg = 1
-                while self.ticker_finish[report_type] is False:
-                    req = self.make_request_from_data(data, report_type, page=str(pg))
+                numPages = requests.post(url=self.ass["url"],
+                                   data=self.ass["formdata"],
+                                   headers=self.ass["headers"],
+                                   cookies=self.ass["cookies"],
+                                   proxies=self.ass["proxies"],
+                                   verify=False
+                                   ).json()[0]["TotalPage"]
+# Loop through all the pages
+                for pg in range(1, numPages+1):
+                    req = self.make_request_from_data(ticker, report_type, page=str(pg))
                     if req:
                         yield req
                         found += 1
@@ -60,10 +75,6 @@ class associatesHandler(fadRedisSpider):
                     else:
                         self.logger.info("Request not made from data: %r", data)
                     pg += 1
-                    
-# If this report type is finished, break while loop
-                    if self.ticker_finish[report_type] is True:
-                        break
 
 # Log number of requests consumed from Redis feed
         if found:
@@ -72,31 +83,33 @@ class associatesHandler(fadRedisSpider):
 # Close spider if none in queue and amount crawled == amount dequeued
         if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):
             if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) >= self.r.get(self.dequeued_count_key):
-                self.r.delete(self.crawled_count_key)
-                self.r.delete(self.dequeued_count_key)
+                self.r.delete(self.crawled_count_key, self.dequeued_count_key)
                 self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
 
-    def make_request_from_data(self, data, report_type, page):
+    def make_request_from_data(self, ticker, report_type, page):
         """
         Replaces the default method, data is a ticker.
         """
-        ticker = bytes_to_str(data, self.redis_encoding)
+
+        print ("Making request.........")
 
         self.ass["formdata"]["code"] = ticker
+        self.ass["formdata"]["page"] = page
         self.ass["meta"]["ticker"] = ticker
         self.ass["meta"]["ReportType"] = report_type
         self.ass["meta"]["Page"] = page
 
-        return FormRequest(url=ass["url"],
-                            formdata=ass["formdata"],
-                            headers=ass["headers"],
-                            cookies=ass["cookies"],
-                            meta=ass["meta"],
+        return FormRequest(url=self.ass["url"],
+                            formdata=self.ass["formdata"],
+                            headers=self.ass["headers"],
+                            cookies=self.ass["cookies"],
+                            meta=self.ass["meta"],
                             callback=self.parse
                             )
     
     def parse(self, response):
-        if response:
+        print ("Parsing......")
+        if response is not None:
 # If response is not an empty string, save it
             try:
                 resp_json = json.loads(response.text)
@@ -104,13 +117,11 @@ class associatesHandler(fadRedisSpider):
                 report_type = response.meta['ReportType']
                 page = response.meta['Page']
 
-                save_jsonfile(resp_json,
-                        filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                save_jsonfile(resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
                 
                 c = self.r.incr(self.crawled_count_key)
                 self.logger.info(f'Crawled {c} ticker-report-page so far')
 
 # If it is an empty string, then we've finished the report type             
             except:
-                self.ticker_finish[report_type] = True
                 self.logger.info("Response is an empty string")

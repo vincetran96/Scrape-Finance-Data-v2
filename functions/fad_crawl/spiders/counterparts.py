@@ -18,10 +18,10 @@ from scrapy_redis.utils import bytes_to_str
 from datetime import date
 import requests
 
-import functions.fad_crawl.spiders.models.utilities as utilities
-from functions.fad_crawl.spiders.models.counterparts import find_data as ctp
-from functions.fad_crawl.spiders.models.counterparts import count_data
-from functions.fad_crawl.spiders.models.counterparts import (name,
+import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.models.counterparts import find_data as ctp
+from fad_crawl.spiders.models.counterparts import count_data
+from fad_crawl.spiders.models.counterparts import (name,
                                                              scraper_api_key, settings)
 
 

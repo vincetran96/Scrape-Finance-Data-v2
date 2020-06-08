@@ -67,6 +67,7 @@ class corporateazHandler(scrapy.Spider):
         res = json.loads(response.text)
         tickers_list = [d["Code"] for d in res]
         self.logger.info(str(tickers_list))
+        print(str(tickers_list))
         
         # Push the tickers list to Redis key of each Spider
         for k in tickers_redis_keys:

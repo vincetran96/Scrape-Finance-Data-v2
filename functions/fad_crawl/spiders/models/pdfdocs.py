@@ -47,7 +47,6 @@ log_settings = utilities.log_settings(spiderName=name,
 
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
-<<<<<<< HEAD
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
         'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
@@ -60,8 +59,7 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1),
-    'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
+    'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
@@ -74,19 +72,3 @@ file_settings = {
 }
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings, **file_settings}
-=======
-        # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-        # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        # 'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
-        # 'fad_crawl.fad_stats.TickerCrawlerStats': 850,
-        'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
-    },
-    'SPIDER_MIDDLEWARES': {
-        # 'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
-    }
-}
-
-redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
-
-settings = {**log_settings, **middlewares_settings, ** redis_key_settings}
->>>>>>> 34543c49be637bee7ae8439f601bc3889e60910f

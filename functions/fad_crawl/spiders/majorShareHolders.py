@@ -16,9 +16,9 @@ from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
-import functions.fad_crawl.spiders.models.utilities as utilities
-from functions.fad_crawl.spiders.models.majorshareholders import data as msh
-from functions.fad_crawl.spiders.models.majorshareholders import (name,
+import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.models.majorshareholders import data as msh
+from fad_crawl.spiders.models.majorshareholders import (name,
                                                   scraper_api_key, settings)
 
 
