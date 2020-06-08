@@ -15,4 +15,5 @@ task_routes = {
     'celery_tasks.corporateAZ_task': {'queue': 'corpAZ'},
     'celery_tasks.pdfDocs_task': {'queue': 'corpAZ'},
     'celery_tasks.finance_task': {'queue': 'finance'},
+    'celery_tasks.associates_task': {'queue': 'finance'},
 }

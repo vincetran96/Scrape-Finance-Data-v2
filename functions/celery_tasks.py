@@ -63,9 +63,20 @@ def finance_task():
     runner = CrawlerRunner()
     runner.crawl(financeInfoHandler)
     runner.crawl(associatesHandler)
-    runner.crawl(boardDetailsHandler)
-    runner.crawl(majorShareHoldersHandler)
-    runner.crawl(ownerStructureHandler)
+    # runner.crawl(boardDetailsHandler)
+    # runner.crawl(majorShareHoldersHandler)
+    # runner.crawl(ownerStructureHandler)
+    d = runner.join()
+    # d_main.addBoth(lambda _: reactor.stop())
+    # reactor.run()
+
+@app.task
+def associates_task():
+    print("=== ASSOCIATES SPIDERS CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(associatesHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
     # reactor.run()

@@ -22,6 +22,7 @@ from fad_crawl.spiders.models.financeinfo import data as fi
 from fad_crawl.spiders.models.financeinfo import name, report_types, settings
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 
+import time
 
 class financeInfoHandler(fadRedisSpider):
     name = name
@@ -59,6 +60,7 @@ class financeInfoHandler(fadRedisSpider):
                     else:
                         self.logger.info("Request not made from data: %r", data)
                     pg += 1
+                    time.sleep(0.5)
                     
 # If this report type is finished, break while loop
                     if self.ticker_finish[report_type] is True:
