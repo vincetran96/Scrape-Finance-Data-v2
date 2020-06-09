@@ -24,7 +24,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
             "ReportType": "",
             "ReportTermType": "2",
             "Unit": "1000000",
-            "Page": "",
+            "Page": constants.START_PAGE,
             "PageSize": "4",
         },
         "headers": {
@@ -38,7 +38,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "meta": {
             "ticker": "",
             "ReportType": "",
-            "Page": "",
+            "Page": constants.START_PAGE,
         }
         }
 

@@ -32,8 +32,8 @@ data = {"url": "https://finance.vietstock.vn/data/associatesdetails",
             "Page": "",
         },
         "proxies": {
-            "http": "",
-            "https": "",
+            "http": constants.REQUESTS_LOCAL_PROXY,
+            "https": constants.REQUESTS_LOCAL_PROXY,
         }
         }
 

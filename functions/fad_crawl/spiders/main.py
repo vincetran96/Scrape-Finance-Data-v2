@@ -20,7 +20,7 @@ from twisted.internet import reactor
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_keys
+from fad_crawl.spiders.models.corporateaz import name, settings, tickers_redis_keys, closed_redis_key
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
 
@@ -35,13 +35,14 @@ class corporateazHandler(scrapy.Spider):
     def __init__(self, tickers_list="", *args, **kwargs):
         super(corporateazHandler, self).__init__(*args, **kwargs)
         self.r = redis.Redis()
+        self.r.set(closed_redis_key, "0")
 
     def start_requests(self):
         numTickers = requests.post(url=az["url"],
                                    data=az["formdata"],
                                    headers=az["headers"],
                                    cookies=az["cookies"],
-                                #    proxies=az["proxies"],
+                                   proxies=az["proxies"],
                                    verify=False
                                    ).json()[0]["TotalRecord"]
 
@@ -68,6 +69,16 @@ class corporateazHandler(scrapy.Spider):
         self.logger.info(str(tickers_list))
         print(str(tickers_list))
         
-        # Push the tickers list to Redis key of each Spider
-        for k in tickers_redis_keys:
+# Push value ticker;1 to financeInfo to initiate its requests
+        financeInfo_tickers = [f'{t};1' for t in tickers_list]
+        self.r.lpush(tickers_redis_keys[0], *financeInfo_tickers)
+        self.logger.info(financeInfo_tickers)
+        print(financeInfo_tickers)
+
+# Push the tickers list to Redis key of other Spiders
+        for k in tickers_redis_keys[1:]:
             self.r.lpush(k, *tickers_list)
+
+    def closed(self, reason="CorporateAZ Finished"):
+            self.r.set(closed_redis_key, "1")
+            self.logger.info(self.r.get(closed_redis_key))
