@@ -3,6 +3,7 @@
 *.pyc
 *.DS_Store
 *.rdb
+*.env
 playground.*
 env/
 .mypy_cache/

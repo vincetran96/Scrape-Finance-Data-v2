@@ -17,8 +17,6 @@ from fad_crawl.spiders.models.boarddetails import name as boarddetails_name
 from fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
 
 
-r = redis.Redis(decode_responses=True)
-
 name = "corporateAZ"
 
 tickers_redis_keys = [f'{financeInfo_name}:tickers',

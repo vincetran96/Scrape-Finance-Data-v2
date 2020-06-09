@@ -10,8 +10,6 @@ import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
 
-r = redis.Redis(decode_responses=True)
-
 name = "financeInfo"
 
 report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]

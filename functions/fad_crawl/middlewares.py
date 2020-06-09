@@ -6,6 +6,12 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+import redis
+
+from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX
+
+
+r = redis.Redis(decode_responses=True)
 
 
 class TickerCrawlSpiderMiddleware:
@@ -45,11 +51,21 @@ class TickerCrawlSpiderMiddleware:
 
         # Should return either None or an iterable of Request, dict
         # or Item objects.
+        '''When there's an exception, +1 for the spider exception
+        count of that spider
+        '''
+
         spider_name = spider.name
         ticker = response.meta["ticker"]
         report_type = response.meta["ReportType"]
+        try:
+            page = response.meta["Page"]
+        except:
+            page = "1"
+
         with open(f'logs/{spider_name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-            openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+            openfile.write("ticker: {0}, report: {1}, error type: {2} \n".format(ticker, report_type, str(type(exception))))
+        r.sadd(f'{spider_name}:{ERROR_SET_SUFFIX}', f'{ticker};{report_type};{page}')
         return None
 
     def process_start_requests(self, start_requests, spider):
@@ -110,11 +126,21 @@ class TickerCrawlDownloaderMiddleware:
         # - return None: continue processing this exception
         # - return a Response object: stops process_exception() chain
         # - return a Request object: stops process_exception() chain
+        '''When there's an exception, +1 for the spider exception
+        count of that spider
+        '''
+
         spider_name = spider.name
         ticker = request.meta["ticker"]
         report_type = request.meta["ReportType"]
+        try:
+            page = request.meta["Page"]
+        except:
+            page = "1"
+
         with open(f'logs/{spider_name}_{report_type}_downloadererrors_short.log', 'a+') as openfile:
-            openfile.write("ticker: {0}, type: {1} \n".format(ticker, str(type(exception))))
+            openfile.write("ticker: {0}, report: {1}, error type: {2} \n".format(ticker, report_type, str(type(exception))))
+        r.sadd(f'{spider_name}:{ERROR_SET_SUFFIX}', f'{ticker};{report_type};{page}')
         return None
 
     def spider_opened(self, spider):

@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 # This module contains ultilities for handling non-downloader errors and logging, used across all Spiders
 
+import json
 import logging
 import os
 import sys
 import traceback
-import json
 
+import redis
 import scrapy.logformatter as logformatter
 from scrapy.utils.request import referer_str
+
+from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX
 
 
 class TickerSpiderLogFormatter(logformatter.LogFormatter):
@@ -20,7 +23,14 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         return None
    
     def download_error(self, failure, request, spider, errmsg=None):
+        spider_name = spider.name
         ticker = request.meta["ticker"]
+        report_type = request.meta["ReportType"]
+        try:
+            page = request.meta["Page"]
+        except:
+            page = "1"
+
         args = {'request': request}
         msg_dict = {
             'ticker': ticker,
@@ -68,7 +78,14 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
         }
     
     def spider_error(self, failure, request, response, spider):
+        spider_name = spider.name
         ticker = response.meta["ticker"]
+        report_type = response.meta["ReportType"]
+        try:
+            page = response.meta["Page"]
+        except:
+            page = "1"
+
         msg_dict = {
             'ticker': ticker,
             'type': "Spider Error",

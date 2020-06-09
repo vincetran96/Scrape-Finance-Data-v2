@@ -69,7 +69,7 @@ class corporateazHandler(scrapy.Spider):
         self.logger.info(str(tickers_list))
         print(str(tickers_list))
         
-# Push value ticker;1 to financeInfo to initiate its requests
+# Push the value ticker;1 to financeInfo to initiate its requests
         financeInfo_tickers = [f'{t};1' for t in tickers_list]
         self.r.lpush(tickers_redis_keys[0], *financeInfo_tickers)
         self.logger.info(financeInfo_tickers)

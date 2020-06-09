@@ -5,7 +5,6 @@ import redis
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
-r = redis.Redis(decode_responses=True)
 
 name = "associatesDetails"
 
@@ -13,8 +12,14 @@ report_types = [name]
 
 scraper_api_key = constants.SCRAPER_API_KEY
 
+ticker_report_page_count_key = f'{name}:trp_count'
+ticker_report_page_crawled_key = f'{name}:trp_crawled'
 
-data = {"url": "https://finance.vietstock.vn/data/associatesdetails",
+crawled_set_key = f'{name}:{constants.CRAWLED_SET_SUFFIX}'
+error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
+
+
+ass = {"url": "https://finance.vietstock.vn/data/associatesdetails",
         "formdata": {
         "code": "",                          # ticker
         "page": constants.START_PAGE,        # loop until end page
