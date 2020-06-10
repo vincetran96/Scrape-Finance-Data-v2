@@ -9,46 +9,48 @@ import fad_crawl.spiders.models.utilities as utilities
 name = "counterparts"
 
 count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelation",
-        "formdata": {
-            "code": "", # ticker
-            "tradingdate": "", # YYYY-MM-DD
-            "exchangeID": ""
-        },
-        "headers": {
-            "User-Agent": constants.USER_AGENT,
-            "Content-Type": constants.CONTENT_TYPE
-        },
-        "cookies":  {
-            "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE
-        },
-        "meta": {
-            "ticker": "",
-        }
-        }
+              "formdata": {
+                  "code": "",  # ticker
+                  "tradingdate": "",  # YYYY-MM-DD
+                  "exchangeID": ""
+              },
+              "headers": {
+                  "User-Agent": constants.USER_AGENT,
+                  "Content-Type": constants.CONTENT_TYPE
+              },
+              "cookies":  {
+                  "language": constants.LANGUAGE,
+                  "vts_usr_lg": constants.USER_COOKIE
+              },
+              "meta": {
+                  "ticker": "",
+                  "counted": "",
+              }
+              }
 
 find_data = {"url": "https://finance.vietstock.vn/company/GetCompanyRelationFilter",
-        "formdata": {
-            "code": "", # ticker
-            "Page": constants.START_PAGE,
-            "PageSize": "", # can be equal to result of the count above
-            "ToDate": "", # YYYY-MM-DD
-            "ExchangeID": "",
-            "OrderBy": "0",
-            "Direction": ""
-        },
-        "headers": {
-            "User-Agent": constants.USER_AGENT,
-            "Content-Type": constants.CONTENT_TYPE
-        },
-        "cookies":  {
-            "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE
-        },
-        "meta": {
-            "ticker": "",
-        }
-        }
+             "formdata": {
+                 "code": "",  # ticker
+                 "Page": constants.START_PAGE,
+                 "PageSize": "",  # can be equal to result of the count above
+                 "ToDate": "",  # YYYY-MM-DD
+                 "ExchangeID": "",
+                 "OrderBy": "0",
+                 "Direction": ""
+             },
+             "headers": {
+                 "User-Agent": constants.USER_AGENT,
+                 "Content-Type": constants.CONTENT_TYPE
+             },
+             "cookies":  {
+                 "language": constants.LANGUAGE,
+                 "vts_usr_lg": constants.USER_COOKIE
+             },
+             "meta": {
+                 "ticker": "",
+                 "counted": "",
+             }
+             }
 
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
@@ -74,4 +76,5 @@ proxy_settings = {
 
 redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings}
+settings = {**log_settings, **middlewares_settings,
+            **proxy_settings, ** redis_key_settings}

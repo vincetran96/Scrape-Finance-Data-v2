@@ -10,7 +10,7 @@ env/
 .vscode/
 test.py
 localData/
-__pycache__/
+*__pycache__
 logs/
 elasticsearch*/
 kibana*/

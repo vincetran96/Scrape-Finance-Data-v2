@@ -80,5 +80,5 @@ class corporateazHandler(scrapy.Spider):
             self.r.lpush(k, *tickers_list)
 
     def closed(self, reason="CorporateAZ Finished"):
-            self.r.set(closed_redis_key, "1")
-            self.logger.info(self.r.get(closed_redis_key))
+        self.r.set(closed_redis_key, "1")
+        self.logger.info(self.r.get(closed_redis_key))

@@ -15,15 +15,19 @@ from fad_crawl.spiders.models.pdfdocs import name as pdfDocs_name
 from fad_crawl.spiders.models.associatesdetails import name as associates_name
 from fad_crawl.spiders.models.boarddetails import name as boarddetails_name
 from fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
+from fad_crawl.spiders.models.counterparts import name as counterparts_name
 
 
 name = "corporateAZ"
 
-tickers_redis_keys = [f'{financeInfo_name}:tickers',
-                      f'{pdfDocs_name}:tickers',
-                      f'{associates_name}:tickers',
-                      f'{boarddetails_name}:tickers',
-                      f'{majorshareholders_name}:tickers']
+tickers_redis_keys = [
+                      f'{financeInfo_name}:tickers',
+                    #   f'{pdfDocs_name}:tickers',
+                    #   f'{associates_name}:tickers',
+                    #   f'{boarddetails_name}:tickers',
+                    #   f'{majorshareholders_name}:tickers'
+                        f'{counterparts_name}:tickers'
+                    ]
 
 closed_redis_key = f'{name}:closed'
 

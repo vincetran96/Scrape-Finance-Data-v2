@@ -21,6 +21,8 @@ from fad_crawl.spiders.associatesDetails import associatesHandler
 from fad_crawl.spiders.boardDetails import boardDetailsHandler
 from fad_crawl.spiders.majorShareHolders import majorShareHoldersHandler
 from fad_crawl.spiders.ownerStructure import ownerStructureHandler
+from fad_crawl.spiders.counterparts import counterpartsHandler
+
 
 
 ### TEST AREA ###
@@ -62,7 +64,7 @@ def finance_task():
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(financeInfoHandler)
-    runner.crawl(associatesHandler)
+    # runner.crawl(associatesHandler)
     # runner.crawl(boardDetailsHandler)
     # runner.crawl(majorShareHoldersHandler)
     # runner.crawl(ownerStructureHandler)
@@ -77,6 +79,17 @@ def associates_task():
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(associatesHandler)
+    d = runner.join()
+    # d_main.addBoth(lambda _: reactor.stop())
+    # reactor.run()
+
+@app.task
+def counterparts_task():
+    print("=== COUNTERPARTS SPIDERS CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(counterpartsHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
     # reactor.run()

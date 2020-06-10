@@ -11,5 +11,7 @@ if __name__ == '__main__':
     # adder.apply_async((10,20),link=g)
     # pdfDocs_task.delay()
     corporateAZ_task.delay()
-    finance_task.delay()
-    associates_task()
+    # finance_task.delay()
+    # associates_task()
+    counterparts_task()
+    
