@@ -65,7 +65,7 @@ class corporateazHandler(scrapy.Spider):
 
     def parse(self, response):
         res = json.loads(response.text)
-        tickers_list = [d["Code"] for d in res]
+        tickers_list = [d["Code"] for d in res][:5] # FOR TESTING PURPOSE
         self.logger.info(str(tickers_list))
         print(str(tickers_list))
         
