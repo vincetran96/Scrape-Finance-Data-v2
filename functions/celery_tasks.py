@@ -65,15 +65,17 @@ def prerun_cleanup_task():
 def corporateAZ_task():
     print("=== CORPORATEAZ SPIDER CRAWLING ===")
     setup()
-    settings=get_project_settings()
-    settings.update(corporateaz_settings)
-    configure_logging(settings=settings, install_root_handler=False)
-    logging.root.setLevel(logging.NOTSET)
-    handler = _get_handler(settings)
-    # logging.root.removeHandler(handler)
-    logging.root.addHandler(handler)
+    configure_logging()
+    
+    # settings=get_project_settings()
+    # settings.update(corporateaz_settings)
+    # configure_logging(settings=settings, install_root_handler=False)
+    # logging.root.setLevel(logging.NOTSET)
+    # handler = _get_handler(settings)
+    # # logging.root.removeHandler(handler)
+    # logging.root.addHandler(handler)
 
-    runner = CrawlerRunner(settings=settings)
+    runner = CrawlerRunner()
     runner.crawl(corporateazHandler)
     d = runner.join()
 
@@ -81,15 +83,8 @@ def corporateAZ_task():
 def finance_task():
     print("=== FINANCE SPIDER CRAWLING ===")
     setup()
-    settings=get_project_settings()
-    settings.update(financeinfo_settings)
-    configure_logging(settings=settings, install_root_handler=False)
-    logging.root.setLevel(logging.NOTSET)
-    handler = _get_handler(settings)
-    # logging.root.removeHandler(handler)
-    logging.root.addHandler(handler)
-
-    runner = CrawlerRunner(settings=settings)
+    configure_logging()
+    runner = CrawlerRunner()
     runner.crawl(financeInfoHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
@@ -99,15 +94,8 @@ def finance_task():
 def associates_task():
     print("=== ASSOCIATES SPIDER CRAWLING ===")
     setup()
-    settings=get_project_settings()
-    settings.update(associatesdetails_settings)
-    configure_logging(settings=settings, install_root_handler=False)
-    logging.root.setLevel(logging.NOTSET)
-    handler = _get_handler(settings)
-    # logging.root.removeHandler(handler)
-    logging.root.addHandler(handler)
-
-    runner = CrawlerRunner(settings=settings)
+    configure_logging()
+    runner = CrawlerRunner()
     runner.crawl(associatesHandler)
     d = runner.join()
 
