@@ -92,7 +92,6 @@ class counterpartsHandler(RedisSpider):
         # Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
             # self.logger.info(self.r.smembers(self.error_set_key))
-            self.logger.info(b'closed roi')
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
                 self.r.delete(k)
@@ -102,10 +101,8 @@ class counterpartsHandler(RedisSpider):
     def spider_idle(self):
         """Overwrites default method
         """
-        self.logger.info(b'idle roi')
         self.idling = True
         self.schedule_next_requests()
-        self.logger.info(b'closed roi')
         raise DontCloseSpider
 
     def make_request_from_data(self, ticker, pageSize):
@@ -130,9 +127,8 @@ class counterpartsHandler(RedisSpider):
         resp_json = json.loads(response.text,  encoding='utf-8')
         ticker = response.meta['ticker']
         counted = int(response.meta['counted'])
-        self.logger.info(b'hello')
         if counted == 0: 
-            pageSize = int(resp_json)
+            pageSize = int(resp_json)  + 1
             self.r.lpush(f'{self.name}:tickers', f'{ticker};{pageSize}')
             self.logger.info(f'CRAWLING {pageSize} COUNTERPARTS OF {ticker}')
         else:
