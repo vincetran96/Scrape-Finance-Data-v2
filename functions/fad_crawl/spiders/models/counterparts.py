@@ -8,8 +8,6 @@ import fad_crawl.spiders.models.utilities as utilities
 
 name = "counterparts"
 
-scraper_api_key = constants.SCRAPER_API_KEY
-
 count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelation",
         "formdata": {
             "code": "", # ticker

@@ -18,8 +18,7 @@ from scrapy_redis.utils import bytes_to_str
 
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.boarddetails import data as bd
-from fad_crawl.spiders.models.boarddetails import (name,
-                                                  scraper_api_key, settings)
+from fad_crawl.spiders.models.boarddetails import (name, settings)
 
 
 class boardDetailsHandler(RedisSpider):

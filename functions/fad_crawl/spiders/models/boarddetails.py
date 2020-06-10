@@ -8,8 +8,6 @@ import fad_crawl.spiders.models.utilities as utilities
 
 name = "boarddetails"
 
-scraper_api_key = constants.SCRAPER_API_KEY
-
 data = {"url": "https://finance.vietstock.vn/data/boarddetails",
         "formdata": {
             "code": "", # ticker

@@ -12,6 +12,7 @@ import redis
 import scrapy
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
+from scrapy.exceptions import DontCloseSpider
 from scrapy.utils.log import configure_logging
 from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
@@ -22,8 +23,7 @@ from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.corporateaz import \
     closed_redis_key as corpAZ_closed_key
-from fad_crawl.spiders.models.financeinfo import data as fi
-from fad_crawl.spiders.models.financeinfo import name, report_types, settings
+from fad_crawl.spiders.models.financeinfo import *
 
 
 class financeInfoHandler(fadRedisSpider):
@@ -34,12 +34,12 @@ class financeInfoHandler(fadRedisSpider):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.fi = fi
         self.report_types = report_types
-        self.redis_batch_size = 16
-        self.tickers_count_key = f'{self.name}:tickers_count'
-        self.ticker_report_crawled_key = f'{self.name}:tr_crawled'
+        self.idling = False
 
-        self.r.set(self.tickers_count_key, "0")
-        self.r.set(self.ticker_report_crawled_key, "0")
+        self.ticker_report_page_count_key = ticker_report_page_count_key
+        self.error_set_key = error_set_key
+
+        self.r.set(self.ticker_report_page_count_key, "0")
 
     def next_requests(self):
         """Replaces the default method. Closes spider when tickers are crawled and queue empty.
@@ -50,62 +50,55 @@ class financeInfoHandler(fadRedisSpider):
             'REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
         fetch_one = self.server.spop if use_set else self.server.lpop
         found = 0
-# Fetch one ticker from Redis list, mark all reports for this ticker as unfinished
         while found < self.redis_batch_size:
             data = fetch_one(self.redis_key)
             if not data:
                 break
-            found += 1
             params = bytes_to_str(data, self.redis_encoding).split(";")
             ticker = params[0]
-            page = params[1]            
-
-# If report type is pushed in, this will be a subsequent request from self.parse()
+            page = params[1]
+            self.idling = False
+            # If report type is pushed in, this will be a subsequent request from self.parse()
+            # For each report type, begin with Page 1 of all report types. Initial requests of Spider.
             try:
                 report_type = params[2]
                 req = self.make_request_from_data(ticker, report_type, page)
                 if req:
                     yield req
-# For each report type, begin with Page 1 of all report types. Initial requests of Spider.
+                    self.r.incr(self.ticker_report_page_count_key)
+                else:
+                    self.logger.info(
+                        "Request not made from params: %r", params)
             except:
-                self.r.incr(self.tickers_count_key)
-
-                self.logger.info(
-                f'CONSUMED {self.r.get(self.tickers_count_key)} TICKERS SO FAR')
-
                 for report_type in self.report_types:
                     req = self.make_request_from_data(
                         ticker, report_type, page)
                     if req:
                         yield req
+                        self.r.incr(self.ticker_report_page_count_key)
                     else:
                         self.logger.info(
-                            "Request not made from data: %r", data)
+                            "Request not made from params: %r", params)
+            found += 1
 
-# Log number of requests consumed from Redis feed
         if found:
             self.logger.debug("Read %s tickers from '%s'",
                               found, self.redis_key)
-
-# Close spider if corpAZ is closed and amount actually crawled == amount supposed to be crawled
-        ticker_report_total = int(self.r.get(
-            self.tickers_count_key))*len(self.report_types)
-        ticker_report_crawled = int(self.r.get(self.ticker_report_crawled_key))
-
-        self.logger.info(f'Total supposed to crawl: {ticker_report_total}')
-        self.logger.info(f'Total crawled: {ticker_report_crawled}')
-
-        if self.r.get(corpAZ_closed_key) == "1" and ticker_report_total == ticker_report_crawled:
+        self.logger.info(
+            f'Total requests supposed to process: {self.r.get(self.ticker_report_page_count_key)}')
+        # Close spider if corpAZ is closed and none in queue and spider is idling
+        # Print off requests with errors, then delete all keys related to this Spider
+        if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
+            self.logger.info(self.r.smembers(self.error_set_key))
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
                 self.r.delete(k)
             self.crawler.engine.close_spider(
-                spider=self, reason="CorpAZ is closed, crawled everything")
+                spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
 
     def make_request_from_data(self, ticker, report_type, page):
         """Replaces the default method, data is a ticker.
         """
-
         self.fi["formdata"]["Code"] = ticker
         self.fi["formdata"]["ReportType"] = report_type
         self.fi["formdata"]["Page"] = page
@@ -121,27 +114,53 @@ class financeInfoHandler(fadRedisSpider):
                            callback=self.parse
                            )
 
+    def spider_idle(self):
+        """Overwrites default method
+        """
+        self.idling = True
+        self.schedule_next_requests()
+        raise DontCloseSpider
+
     def parse(self, response):
+        """If the first obj in response is empty, then we've finished the report type for this ticker
+        If there's actual data in response, save JSON and remove {ticker};{page};{report_type} value
+        from error list, then crawl the next page
+        """
         if response:
-            resp_json = json.loads(response.text)
+            resp_json = json.loads(response.text, encoding='utf-8')
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
             page = response.meta['Page']
 
-# If the first obj in response is empty, then we've finished the report type for this ticker
             if resp_json[0] == []:
-                self.r.incr(self.ticker_report_crawled_key)
-
                 self.logger.info(
                     f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
-                self.logger.info(
-                    f'CRAWLED {self.r.get(self.ticker_report_crawled_key)} TICKER-REPORTS SO FAR')
-
-# If there's actual data in response, save JSON and crawl the next page
             else:
                 save_jsonfile(
                     resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_Page_{page}.json')
-
+                self.r.srem(self.error_set_key,
+                            f'{ticker};{page};{report_type}')
                 next_page = str(int(page) + 1)
                 self.r.lpush(f'{self.name}:tickers',
                              f'{ticker};{next_page};{report_type}')
+
+    def handle_error(self, failure):
+        """
+        If there's an error with a request/response, add it to the error set
+        """
+        if failure.request:
+            request = failure.request
+            ticker = request.meta['ticker']
+            report_type = request.meta['ReportType']
+            page = request.meta['Page']
+            self.logger.info(
+                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
+            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
+        elif failure.value.response:
+            response = failure.value.response
+            ticker = response.meta['ticker']
+            report_type = response.meta['ReportType']
+            page = response.meta['Page']
+            self.logger.info(
+                f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
+            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

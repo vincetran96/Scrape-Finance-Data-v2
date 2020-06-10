@@ -10,14 +10,11 @@ name = "associatesDetails"
 
 report_types = [name]
 
-scraper_api_key = constants.SCRAPER_API_KEY
-
 ticker_report_page_count_key = f'{name}:trp_count'
 ticker_report_page_crawled_key = f'{name}:trp_crawled'
 
 crawled_set_key = f'{name}:{constants.CRAWLED_SET_SUFFIX}'
 error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
-
 
 ass = {"url": "https://finance.vietstock.vn/data/associatesdetails",
         "formdata": {

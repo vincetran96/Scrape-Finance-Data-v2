@@ -21,8 +21,7 @@ import requests
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.counterparts import find_data as ctp
 from fad_crawl.spiders.models.counterparts import count_data
-from fad_crawl.spiders.models.counterparts import (name,
-                                                             scraper_api_key, settings)
+from fad_crawl.spiders.models.counterparts import (name, settings)
 
 
 class counterpartsHandler(RedisSpider):

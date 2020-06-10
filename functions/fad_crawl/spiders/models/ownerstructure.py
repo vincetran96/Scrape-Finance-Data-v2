@@ -8,8 +8,6 @@ import fad_crawl.spiders.models.utilities as utilities
 
 name = "ownerStructure"
 
-scraper_api_key = constants.SCRAPER_API_KEY
-
 data = {"url": "https://finance.vietstock.vn/data/ownershipdetails",
         "formdata": {
             "code": "", # ticker

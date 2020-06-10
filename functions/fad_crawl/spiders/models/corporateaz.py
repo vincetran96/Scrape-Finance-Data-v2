@@ -27,8 +27,6 @@ tickers_redis_keys = [f'{financeInfo_name}:tickers',
 
 closed_redis_key = f'{name}:closed'
 
-scraper_api_key = constants.SCRAPER_API_KEY
-
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
             "catID": constants.CAT_ID,

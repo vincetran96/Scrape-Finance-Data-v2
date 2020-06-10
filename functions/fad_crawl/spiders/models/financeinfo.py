@@ -14,9 +14,10 @@ name = "financeInfo"
 
 report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 
-scraper_api_key = constants.SCRAPER_API_KEY
+ticker_report_page_count_key = f'{name}:trp_count'
+error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
 
-data = {"url": "https://finance.vietstock.vn/data/financeinfo",
+fi = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
             "Code": "",
             "ReportType": "",
