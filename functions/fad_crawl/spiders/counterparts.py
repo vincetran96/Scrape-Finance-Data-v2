@@ -26,15 +26,15 @@ from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.models.counterparts import find_data as ctp
 from fad_crawl.spiders.models.counterparts import count_data
 from fad_crawl.spiders.models.counterparts import (name, settings)
+from fad_crawl.spiders.fadRedis import fadRedisSpider
 
 
-class counterpartsHandler(RedisSpider):
+class counterpartsHandler(fadRedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
         super(counterpartsHandler, self).__init__(*args, **kwargs)
-        self.r = redis.Redis()
         self.crawled_count_key = f'{self.name}:crawledcount'
         self.dequeued_count_key = f'{self.name}:dequeuedcount'
         self.date = str(date.today().strftime("%Y-%m-%d"))
@@ -54,6 +54,7 @@ class counterpartsHandler(RedisSpider):
                 break
             params = bytes_to_str(data, self.redis_encoding).split(";")
             ticker = params[0]
+            self.idling = False
             try:
                 pageSize = params[1]
                 req = self.make_request_from_data(ticker,pageSize)
@@ -91,6 +92,7 @@ class counterpartsHandler(RedisSpider):
         # Close spider if corpAZ is closed and none in queue and spider is idling
         # Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
+            self.logger.info('=== CLOSING ===')
             # self.logger.info(self.r.smembers(self.error_set_key))
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
@@ -102,6 +104,9 @@ class counterpartsHandler(RedisSpider):
         """Overwrites default method
         """
         self.idling = True
+        # self.logger.info('=== IDLING ===')
+        # self.logger.info(self.r.llen(self.redis_key))
+        # self.logger.info(self.r.get(corpAZ_closed_key))
         self.schedule_next_requests()
         raise DontCloseSpider
 

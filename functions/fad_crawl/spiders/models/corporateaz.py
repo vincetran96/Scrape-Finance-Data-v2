@@ -25,7 +25,7 @@ tickers_redis_keys = [
                       f'{pdfDocs_name}:tickers',
                       f'{associates_name}:tickers',
                       f'{boarddetails_name}:tickers',
-                      f'{majorshareholders_name}:tickers'
+                      f'{majorshareholders_name}:tickers',
                         f'{counterparts_name}:tickers'
                     ]
 

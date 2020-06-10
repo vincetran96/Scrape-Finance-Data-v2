@@ -27,4 +27,5 @@ if __name__ == '__main__':
     prerun_cleanup_task.delay()
     corporateAZ_task.delay()
     associates_task.delay()
+    counterparts_task.delay()
     finance_task.delay()

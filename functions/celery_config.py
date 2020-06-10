@@ -12,7 +12,7 @@ result_backend = 'redis://localhost:6379'
 
 # Routing
 task_routes = {
-    'celery_tasks.prerun_cleanup': {'queue': 'corpAZ'},
+    'celery_tasks.prerun_cleanup_task': {'queue': 'corpAZ'},
     'celery_tasks.corporateAZ_task': {'queue': 'corpAZ'},
     'celery_tasks.pdfDocs_task': {'queue': 'corpAZ'},
     'celery_tasks.finance_task': {'queue': 'finance'},

@@ -77,6 +77,7 @@ class corporateazHandler(scrapy.Spider):
 
 # Push the tickers list to Redis key of other Spiders
         for k in tickers_redis_keys[1:]:
+            self.logger.info(k)
             self.r.lpush(k, *tickers_list)
 
     def closed(self, reason="CorporateAZ Finished"):

@@ -111,7 +111,8 @@ class financeInfoHandler(fadRedisSpider):
                            headers=self.fi["headers"],
                            cookies=self.fi["cookies"],
                            meta=self.fi["meta"],
-                           callback=self.parse
+                           callback=self.parse,
+                           errback=self.handle_error
                            )
 
     def spider_idle(self):
