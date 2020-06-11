@@ -11,7 +11,7 @@ name = "majorShareholders"
 data = {"url": "https://finance.vietstock.vn/data/shareholderdetails",
         "formdata": {
             "code": "", # ticker
-            "page": constants.START_PAGE # loop until response == null
+            "page": "",
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -24,6 +24,7 @@ data = {"url": "https://finance.vietstock.vn/data/shareholderdetails",
         "meta": {
             "ticker": "",
             "ReportType": name,
+            "page": "",
         }
         }
 

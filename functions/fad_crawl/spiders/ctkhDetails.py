@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This spider crawls a stock ticker's associated companies/subsidiaries
+# Used to crawl the top 2 industry levels of a company
 
 import json
 import logging
@@ -11,7 +11,6 @@ import redis
 import scrapy
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
-from scrapy.exceptions import DontCloseSpider
 from scrapy.utils.log import configure_logging
 from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
@@ -20,16 +19,16 @@ from scrapy_redis.utils import bytes_to_str
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
-from fad_crawl.spiders.models.associatesdetails import data as ass
-from fad_crawl.spiders.models.associatesdetails import name, settings
+from fad_crawl.spiders.models.ctkhdetails import data as ctk
+from fad_crawl.spiders.models.ctkhdetails import name, settings
 
 
-class associatesHandler(fadRedisSpider):
+class ctkhDetailsHandler(fadRedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
-        super(associatesHandler, self).__init__(*args, **kwargs)
+        super(ctkhDetailsHandler, self).__init__(*args, **kwargs)
         self.idling = False
 
     def next_requests(self):
@@ -44,27 +43,14 @@ class associatesHandler(fadRedisSpider):
             d = fetch_one(self.redis_key)
             if not d:
                 break
-            params = bytes_to_str(d, self.redis_encoding).split(";")
-            ticker = params[0]
+            ticker = bytes_to_str(d, self.redis_encoding)
             self.idling = False
-
-            # If page param. is pushed in, crawl that page
-            # Otherwise begin with page 1
-            try:
-                page = params[1]
-                req = self.make_request_from_data(ticker, page)
-                if req:
-                    yield req
-                else:
-                    self.logger.info(
-                        "Request not made from params: %r", d)
-            except:
-                req = self.make_request_from_data(ticker, "1")
-                if req:
-                    yield req
-                else:
-                    self.logger.info(
-                        "Request not made from params: %r", d)
+            req = self.make_request_from_data(ticker)
+            if req:
+                yield req
+            else:
+                self.logger.info(
+                    "Request not made from params: %r", d)
             found += 1
 
         if found:
@@ -81,21 +67,19 @@ class associatesHandler(fadRedisSpider):
             self.crawler.engine.close_spider(
                 spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
 
-    def make_request_from_data(self, ticker, page):
+    def make_request_from_data(self, ticker):
         """
         Replaces the default method
         """
 
-        ass["formdata"]["code"] = ticker
-        ass["formdata"]["page"] = page
-        ass["meta"]["ticker"] = ticker
-        ass["meta"]["page"] = page
+        ctk["formdata"]["Code"] = ticker
+        ctk["meta"]["ticker"] = ticker
 
-        return FormRequest(url=ass["url"],
-                           formdata=ass["formdata"],
-                           headers=ass["headers"],
-                           cookies=ass["cookies"],
-                           meta=ass["meta"],
+        return FormRequest(url=ctk["url"],
+                           formdata=ctk["formdata"],
+                           headers=ctk["headers"],
+                           cookies=ctk["cookies"],
+                           meta=ctk["meta"],
                            callback=self.parse,
                            errback=self.handle_error
                            )
@@ -109,14 +93,6 @@ class associatesHandler(fadRedisSpider):
             page = response.meta['page']
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
-
-                # If the current page < total page, push the next page to Redis q
-                total_page = int(resp_json[0]['TotalPage'])
-                if int(page) < total_page:
-                    next_page = int(page) + 1
-                    self.r.lpush(f'{self.name}:tickers',
-                                 f'{ticker};{next_page}')
-
                 save_jsonfile(
                     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
                 self.r.srem(self.error_set_key,

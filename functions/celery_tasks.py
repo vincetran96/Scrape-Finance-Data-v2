@@ -21,12 +21,10 @@ from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 from fad_crawl.spiders.associatesDetails import associatesHandler
 from fad_crawl.spiders.boardDetails import boardDetailsHandler
-from fad_crawl.spiders.majorShareHolders import majorShareHoldersHandler
+from fad_crawl.spiders.majorShareholders import majorShareHoldersHandler
 from fad_crawl.spiders.ownerStructure import ownerStructureHandler
-from fad_crawl.spiders.counterParts import counterpartsHandler
-from fad_crawl.spiders.models.corporateaz import log_settings as corporateaz_settings
-from fad_crawl.spiders.models.associatesdetails import log_settings as associatesdetails_settings
-from fad_crawl.spiders.models.financeinfo import log_settings as financeinfo_settings
+from fad_crawl.spiders.counterParts import counterPartsHandler
+from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
 
 
 ### TEST AREA ###
@@ -104,10 +102,46 @@ def counterparts_task():
     setup()
     configure_logging()
     runner = CrawlerRunner()
-    runner.crawl(counterpartsHandler)
+    runner.crawl(counterPartsHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
     # reactor.run()
+
+@app.task
+def majorshareholders_task():
+    print("=== MAJOR SHAREHOLDERS SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(majorShareHoldersHandler)
+    d = runner.join()
+
+@app.task
+def ownerstructure_task():
+    print("=== OWNER STRUCTURE SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(ownerStructureHandler)
+    d = runner.join()
+
+@app.task
+def ctkhdetails_task():
+    print("=== CTKH DETAILS SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(ctkhDetailsHandler)
+    d = runner.join()
+
+@app.task
+def boarddetails_task():
+    print("=== BOARD DETAILS SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(boardDetailsHandler)
+    d = runner.join()
 
 @app.task
 def pdfDocs_task(url="", filename=""):

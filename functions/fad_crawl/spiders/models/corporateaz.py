@@ -16,6 +16,8 @@ from fad_crawl.spiders.models.associatesdetails import name as associates_name
 from fad_crawl.spiders.models.boarddetails import name as boarddetails_name
 from fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
 from fad_crawl.spiders.models.counterparts import name as counterparts_name
+from fad_crawl.spiders.models.ownerstructure import name as ownerstructure_name
+from fad_crawl.spiders.models.ctkhdetails import name as ctkh_name
 
 
 name = "corporateAZ"
@@ -26,7 +28,9 @@ tickers_redis_keys = [
                       f'{associates_name}:tickers',
                       f'{boarddetails_name}:tickers',
                       f'{majorshareholders_name}:tickers',
-                        f'{counterparts_name}:tickers'
+                      f'{counterparts_name}:tickers',
+                      f'{ownerstructure_name}:tickers',
+                      f'{ctkh_name}:tickers'
                     ]
 
 closed_redis_key = f'{name}:closed'
@@ -52,11 +56,8 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
-            'pageid': "",
-        },
-        "proxies": {
-            "http": constants.REQUESTS_LOCAL_PROXY,
-            "https": constants.REQUESTS_LOCAL_PROXY,
+            "page": constants.START_PAGE,
+            "TotalPages": "",
         }
         }      
 

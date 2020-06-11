@@ -37,7 +37,7 @@ fi = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "meta": {
             "ticker": "",
             "ReportType": "",
-            "Page": constants.START_PAGE,
+            "page": "",
         }
         }
 

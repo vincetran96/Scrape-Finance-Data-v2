@@ -6,16 +6,11 @@ import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
 
-name = "ctkhdetail"
+name = "ctkhDetails"
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfoCTKH",
         "formdata": {
             "Code": "",  # ticker
-            "ReportType": "CTKH",
-            "ReportTermType": "3",  # this doesn't seem to matter
-            "Unit": "1000000",
-            "Page": constants.START_PAGE,
-            "PageSize": "1"
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -27,6 +22,8 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfoCTKH",
         },
         "meta": {
             "ticker": "",
+            "ReportType": name,
+            "page": constants.START_PAGE,
         }
         }
 

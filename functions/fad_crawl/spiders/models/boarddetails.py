@@ -6,12 +6,12 @@ import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
 
-name = "boarddetails"
+name = "boardDetails"
 
 data = {"url": "https://finance.vietstock.vn/data/boarddetails",
         "formdata": {
             "code": "", # ticker
-            "page": constants.START_PAGE # loop until response == null
+            "page": "", # loop until response == null
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -23,6 +23,8 @@ data = {"url": "https://finance.vietstock.vn/data/boarddetails",
         },
         "meta": {
             "ticker": "",
+            "ReportType": name,
+            "page": "",
         }
         }
 

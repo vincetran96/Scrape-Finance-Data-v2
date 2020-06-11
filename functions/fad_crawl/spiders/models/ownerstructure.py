@@ -11,7 +11,7 @@ name = "ownerStructure"
 data = {"url": "https://finance.vietstock.vn/data/ownershipdetails",
         "formdata": {
             "code": "", # ticker
-            "page": constants.START_PAGE # loop until response == null
+            "page": "",
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -23,6 +23,8 @@ data = {"url": "https://finance.vietstock.vn/data/ownershipdetails",
         },
         "meta": {
             "ticker": "",
+            "ReportType": name,
+            "page": "",
         }
         }
 

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This spider crawls a stock ticker's associated companies/subsidiaries
+# Used for getting the list of the members of the board of directors of a company
 
 import json
 import logging
@@ -11,7 +11,6 @@ import redis
 import scrapy
 from scrapy import FormRequest
 from scrapy.crawler import CrawlerProcess
-from scrapy.exceptions import DontCloseSpider
 from scrapy.utils.log import configure_logging
 from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
@@ -20,16 +19,16 @@ from scrapy_redis.utils import bytes_to_str
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
-from fad_crawl.spiders.models.associatesdetails import data as ass
-from fad_crawl.spiders.models.associatesdetails import name, settings
+from fad_crawl.spiders.models.majorshareholders import data as msh
+from fad_crawl.spiders.models.majorshareholders import name, settings
 
 
-class associatesHandler(fadRedisSpider):
+class majorShareHoldersHandler(fadRedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
-        super(associatesHandler, self).__init__(*args, **kwargs)
+        super(majorShareHoldersHandler, self).__init__(*args, **kwargs)
         self.idling = False
 
     def next_requests(self):
@@ -86,16 +85,16 @@ class associatesHandler(fadRedisSpider):
         Replaces the default method
         """
 
-        ass["formdata"]["code"] = ticker
-        ass["formdata"]["page"] = page
-        ass["meta"]["ticker"] = ticker
-        ass["meta"]["page"] = page
+        msh["formdata"]["code"] = ticker
+        msh["formdata"]["page"] = page
+        msh["meta"]["ticker"] = ticker
+        msh["meta"]["page"] = page
 
-        return FormRequest(url=ass["url"],
-                           formdata=ass["formdata"],
-                           headers=ass["headers"],
-                           cookies=ass["cookies"],
-                           meta=ass["meta"],
+        return FormRequest(url=msh["url"],
+                           formdata=msh["formdata"],
+                           headers=msh["headers"],
+                           cookies=msh["cookies"],
+                           meta=msh["meta"],
                            callback=self.parse,
                            errback=self.handle_error
                            )
@@ -109,7 +108,7 @@ class associatesHandler(fadRedisSpider):
             page = response.meta['page']
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
-
+                
                 # If the current page < total page, push the next page to Redis q
                 total_page = int(resp_json[0]['TotalPage'])
                 if int(page) < total_page:
@@ -123,5 +122,4 @@ class associatesHandler(fadRedisSpider):
                             f'{ticker};{page};{report_type}')
             except:
                 self.logger.info("Response is an empty string")
-                self.r.sadd(self.error_set_key,
-                            f'{ticker};{page};{report_type}')
+                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

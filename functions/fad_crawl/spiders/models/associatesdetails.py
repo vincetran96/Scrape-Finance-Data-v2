@@ -8,18 +8,10 @@ import fad_crawl.spiders.models.utilities as utilities
 
 name = "associatesDetails"
 
-report_types = [name]
-
-ticker_report_page_count_key = f'{name}:trp_count'
-ticker_report_page_crawled_key = f'{name}:trp_crawled'
-
-crawled_set_key = f'{name}:{constants.CRAWLED_SET_SUFFIX}'
-error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
-
-ass = {"url": "https://finance.vietstock.vn/data/associatesdetails",
+data = {"url": "https://finance.vietstock.vn/data/associatesdetails",
         "formdata": {
-        "code": "",                          # ticker
-        "page": constants.START_PAGE,        # loop until end page
+            "code": "",        # ticker
+            "page": "",        # loop until end page
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -27,15 +19,12 @@ ass = {"url": "https://finance.vietstock.vn/data/associatesdetails",
         },
         "cookies":  {
             "language": constants.LANGUAGE,
+            "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
             "ticker": "",
-            "ReportType": "",
-            "Page": "",
-        },
-        "proxies": {
-            "http": constants.REQUESTS_LOCAL_PROXY,
-            "https": constants.REQUESTS_LOCAL_PROXY,
+            "ReportType": name,
+            "page": "",
         }
         }
 

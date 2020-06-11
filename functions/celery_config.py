@@ -18,4 +18,5 @@ task_routes = {
     'celery_tasks.finance_task': {'queue': 'finance'},
     'celery_tasks.associates_task': {'queue': 'corpAZ'},
     'celery_tasks.counterparts_task': {'queue': 'corpAZ'},
+    'celery_tasks.majorshareholders_task': {'queue': 'corpAZ'}
 }

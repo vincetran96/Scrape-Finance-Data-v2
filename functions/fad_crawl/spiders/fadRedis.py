@@ -33,6 +33,7 @@ class fadRedisSpider(RedisSpider):
         self.fi = {}
 
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
+        self.corpAZ_closed_key = corpAZ_closed_key
 
     def next_requests(self):
         """Replaces the default method. Closes spider when tickers are crawled and queue empty.

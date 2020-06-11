@@ -21,8 +21,6 @@ from scrapy_redis.utils import bytes_to_str
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
-from fad_crawl.spiders.models.corporateaz import \
-    closed_redis_key as corpAZ_closed_key
 from fad_crawl.spiders.models.financeinfo import *
 
 
@@ -32,7 +30,6 @@ class financeInfoHandler(fadRedisSpider):
 
     def __init__(self, *args, **kwargs):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
-        self.fi = fi
         self.report_types = report_types
         self.idling = False
 
@@ -81,14 +78,14 @@ class financeInfoHandler(fadRedisSpider):
             found += 1
 
         if found:
-            self.logger.debug("Read %s tickers from '%s'",
+            self.logger.debug("Read %s params from '%s'",
                               found, self.redis_key)
         self.logger.info(
             f'Total requests supposed to process: {self.r.get(self.ticker_report_page_count_key)}')
         
         # Close spider if corpAZ is closed and none in queue and spider is idling
         # Print off requests with errors, then delete all keys related to this Spider
-        if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
+        if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
             self.logger.info(self.r.smembers(self.error_set_key))
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
@@ -99,18 +96,18 @@ class financeInfoHandler(fadRedisSpider):
     def make_request_from_data(self, ticker, report_type, page):
         """Replaces the default method, data is a ticker.
         """
-        self.fi["formdata"]["Code"] = ticker
-        self.fi["formdata"]["ReportType"] = report_type
-        self.fi["formdata"]["Page"] = page
-        self.fi["meta"]["ticker"] = ticker
-        self.fi["meta"]["ReportType"] = report_type
-        self.fi["meta"]["Page"] = page
+        fi["formdata"]["Code"] = ticker
+        fi["formdata"]["ReportType"] = report_type
+        fi["formdata"]["Page"] = page
+        fi["meta"]["ticker"] = ticker
+        fi["meta"]["ReportType"] = report_type
+        fi["meta"]["page"] = page
 
-        return FormRequest(url=self.fi["url"],
-                           formdata=self.fi["formdata"],
-                           headers=self.fi["headers"],
-                           cookies=self.fi["cookies"],
-                           meta=self.fi["meta"],
+        return FormRequest(url=fi["url"],
+                           formdata=fi["formdata"],
+                           headers=fi["headers"],
+                           cookies=fi["cookies"],
+                           meta=fi["meta"],
                            callback=self.parse,
                            errback=self.handle_error
                            )
@@ -121,19 +118,23 @@ class financeInfoHandler(fadRedisSpider):
         from error list, then crawl the next page
         """
         if response:
-            resp_json = json.loads(response.text, encoding='utf-8')
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
-            page = response.meta['Page']
+            page = response.meta['page']
+            try:
+                resp_json = json.loads(response.text, encoding='utf-8')
 
-            if resp_json[0] == []:
-                self.logger.info(
-                    f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
-            else:
-                save_jsonfile(
-                    resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_Page_{page}.json')
-                self.r.srem(self.error_set_key,
-                            f'{ticker};{page};{report_type}')
-                next_page = str(int(page) + 1)
-                self.r.lpush(f'{self.name}:tickers',
-                             f'{ticker};{next_page};{report_type}')
+                if resp_json[0] == []:
+                    self.logger.info(
+                        f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
+                else:
+                    save_jsonfile(
+                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_Page_{page}.json')
+                    self.r.srem(self.error_set_key,
+                                f'{ticker};{page};{report_type}')
+                    next_page = str(int(page) + 1)
+                    self.r.lpush(f'{self.name}:tickers',
+                                f'{ticker};{next_page};{report_type}')
+            except:
+                self.logger.info("Response is an empty string")
+                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

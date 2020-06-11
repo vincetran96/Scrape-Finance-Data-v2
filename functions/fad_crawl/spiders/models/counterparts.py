@@ -25,7 +25,8 @@ count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelati
               "meta": {
                   "ticker": "",
                   "counted": "",
-                  "ReportType": "",
+                  "ReportType": name,
+                  "page": "1",
               }
               }
 
