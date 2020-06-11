@@ -26,7 +26,7 @@ count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelati
                   "ticker": "",
                   "counted": "",
                   "ReportType": name,
-                  "page": "1",
+                  "page": constants.START_PAGE,
               }
               }
 
@@ -51,7 +51,8 @@ find_data = {"url": "https://finance.vietstock.vn/company/GetCompanyRelationFilt
              "meta": {
                  "ticker": "",
                  "counted": "",
-                 "ReportType": "",
+                 "ReportType": name,
+                 "page": constants.START_PAGE,
              }
              }
 

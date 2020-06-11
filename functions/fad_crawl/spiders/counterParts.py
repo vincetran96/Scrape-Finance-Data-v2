@@ -61,14 +61,14 @@ class counterPartsHandler(fadRedisSpider):
                 count_data["formdata"]["code"] = ticker
                 count_data["formdata"]["tradingdate"] = self.date
                 count_data["meta"]["ticker"] = ticker
-                count_data["meta"]["ReportType"] = self.name
                 count_data["meta"]["counted"] = "0"
                 req = FormRequest(url=count_data["url"],
                                   formdata=count_data["formdata"],
                                   headers=count_data["headers"],
                                   cookies=count_data["cookies"],
                                   meta=count_data["meta"],
-                                  callback=self.parse
+                                  callback=self.parse,
+                                  errback=self.handle_error
                                   )
                 if req:
                     yield req

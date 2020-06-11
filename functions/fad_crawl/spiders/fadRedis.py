@@ -35,41 +35,6 @@ class fadRedisSpider(RedisSpider):
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
 
-    def next_requests(self):
-        """Replaces the default method. Closes spider when tickers are crawled and queue empty.
-        """
-
-        use_set = self.settings.getbool(
-            'REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
-        fetch_one = self.server.spop if use_set else self.server.lpop
-        found = 0
-        while found < self.redis_batch_size:
-            data = fetch_one(self.redis_key)
-            if not data:
-                break
-            for report_type in self.report_types:
-                req = self.make_request_from_data(data, report_type)
-                if req:
-                    yield req
-                else:
-                    self.logger.info("Request not made from data: %r", data)
-            found += 1
-
-        # Log number of requests consumed from Redis feed
-        if found:
-            self.logger.debug("Read %s tickers from '%s'",
-                              found, self.redis_key)
-
-        # Close spider if corpAZ is closed and none in queue and spider is idling
-        # Print off requests with errors, then delete all keys related to this Spider
-        if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
-            self.logger.info(self.r.smembers(self.error_set_key))
-            keys = self.r.keys(f'{self.name}*')
-            for k in keys:
-                self.r.delete(k)
-            self.crawler.engine.close_spider(
-                spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
-
     def spider_idle(self):
         """Overwrites default method
         """

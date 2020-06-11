@@ -55,19 +55,23 @@ class corporateazHandler(scrapy.Spider):
             try:
                 res = json.loads(response.text)
                 tickers_list = [d["Code"]
-                                for d in res]  # FOR TESTING PURPOSE
+                                for d in res]
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
 
                 # For financeInfo
                 # Push the value ticker;1 to financeInfo to initiate its requests
                 financeInfo_tickers = [f'{t};1' for t in tickers_list]
-                self.r.lpush(tickers_redis_keys[0], *financeInfo_tickers)
+                # FOR TESTING PURPOSE
+                if self.r.llen(tickers_redis_keys[0]) <= 5:
+                    self.r.lpush(tickers_redis_keys[0], *financeInfo_tickers)
 
                 # For other FAD Spiders
                 # Push the tickers list to Redis key of other Spiders
                 for k in tickers_redis_keys[1:]:
-                    self.r.lpush(k, *tickers_list)
+                    # FOR TESTING PURPOSE
+                    if self.r.llen(k) <= 5:
+                        self.r.lpush(k, *tickers_list)
 
                 # Total pages need to be calculated or delivered from previous request's meta
                 # If current page < total pages, send next request
