@@ -67,15 +67,14 @@ class corporateazHandler(scrapy.Spider):
         res = json.loads(response.text)
         tickers_list = [d["Code"] for d in res][:5] # FOR TESTING PURPOSE
         self.logger.info(str(tickers_list))
-        print(str(tickers_list))
         
-# Push the value ticker;1 to financeInfo to initiate its requests
+        # Push the value ticker;1 to financeInfo to initiate its requests
         financeInfo_tickers = [f'{t};1' for t in tickers_list]
         self.r.lpush(tickers_redis_keys[0], *financeInfo_tickers)
         self.logger.info(financeInfo_tickers)
         print(financeInfo_tickers)
 
-# Push the tickers list to Redis key of other Spiders
+        # Push the tickers list to Redis key of other Spiders
         for k in tickers_redis_keys[1:]:
             self.logger.info(k)
             self.r.lpush(k, *tickers_list)

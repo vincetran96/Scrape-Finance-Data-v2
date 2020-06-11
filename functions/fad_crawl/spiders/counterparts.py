@@ -35,8 +35,7 @@ class counterpartsHandler(fadRedisSpider):
 
     def __init__(self, *args, **kwargs):
         super(counterpartsHandler, self).__init__(*args, **kwargs)
-        self.crawled_count_key = f'{self.name}:crawledcount'
-        self.dequeued_count_key = f'{self.name}:dequeuedcount'
+        self.ctp = ctp
         self.date = str(date.today().strftime("%Y-%m-%d"))
         self.idling = False
 
@@ -60,15 +59,13 @@ class counterpartsHandler(fadRedisSpider):
                 req = self.make_request_from_data(ticker,pageSize)
                 if req:
                     yield req
-                    found += 1
-                    dq = self.r.incr(self.dequeued_count_key)
-                    self.logger.info(f'Dequeued {dq} ticker-reports so far')
                 else:
                     self.logger.info("Request not made from data: %r", data)
             except:
                 count_data["formdata"]["code"] = ticker
                 count_data["formdata"]["tradingdate"] = self.date
                 count_data["meta"]["ticker"] = ticker
+                count_data["meta"]["ReportType"] = self.name
                 count_data["meta"]["counted"] = "0"
                 req = FormRequest(url=count_data["url"],
                                   formdata=count_data["formdata"],
@@ -77,13 +74,12 @@ class counterpartsHandler(fadRedisSpider):
                                   meta=count_data["meta"],
                                   callback=self.parse
                                   )
-                
                 if req:
                     yield req
-                    found += 1
                     self.logger.info(f'Counting number of associates of {ticker}')
                 else:
-                    self.logger.info("Request not made from data: %r", data)        
+                    self.logger.info("Request not made from data: %r", data)       
+            found += 1
 
         if found:
             self.logger.debug("Read %s requests from '%s'",
@@ -92,40 +88,31 @@ class counterpartsHandler(fadRedisSpider):
         # Close spider if corpAZ is closed and none in queue and spider is idling
         # Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
-            self.logger.info('=== CLOSING ===')
-            # self.logger.info(self.r.smembers(self.error_set_key))
+            self.logger.info(self.r.smembers(self.error_set_key))
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
                 self.r.delete(k)
             self.crawler.engine.close_spider(
                 spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
-    
-    def spider_idle(self):
-        """Overwrites default method
-        """
-        self.idling = True
-        # self.logger.info('=== IDLING ===')
-        # self.logger.info(self.r.llen(self.redis_key))
-        # self.logger.info(self.r.get(corpAZ_closed_key))
-        self.schedule_next_requests()
-        raise DontCloseSpider
 
     def make_request_from_data(self, ticker, pageSize):
         """
         Replaces the default method, data is a ticker.
         """
-        ctp["formdata"]["code"] = ticker
-        ctp["formdata"]["PageSize"] = pageSize
-        ctp["formdata"]["ToDate"] = self.date
-        ctp["meta"]["ticker"] = ticker
-        ctp["meta"]["counted"] = "1"
+        self.ctp["formdata"]["code"] = ticker
+        self.ctp["formdata"]["PageSize"] = pageSize
+        self.ctp["formdata"]["ToDate"] = self.date
+        self.ctp["meta"]["ticker"] = ticker
+        self.ctp["meta"]["ReportType"] = self.name
+        self.ctp["meta"]["counted"] = "1"
 
-        return FormRequest(url=ctp["url"],
-                           formdata=ctp["formdata"],
-                           headers=ctp["headers"],
-                           cookies=ctp["cookies"],
-                           meta=ctp["meta"],
-                           callback=self.parse
+        return FormRequest(url=self.ctp["url"],
+                           formdata=self.ctp["formdata"],
+                           headers=self.ctp["headers"],
+                           cookies=self.ctp["cookies"],
+                           meta=self.ctp["meta"],
+                           callback=self.parse,
+                           errback=self.handle_error
                            )
 
     def parse(self, response):

@@ -37,8 +37,6 @@ class associatesHandler(fadRedisSpider):
         self.idling = False
 
         self.ticker_report_page_count_key = ticker_report_page_count_key
-        self.error_set_key = error_set_key
-
         self.r.set(self.ticker_report_page_count_key, "0")
 
     def next_requests(self):
@@ -122,13 +120,6 @@ class associatesHandler(fadRedisSpider):
                            errback=self.handle_error
                            )
 
-    def spider_idle(self):
-        """Overwrites default method
-        """
-        self.idling = True
-        self.schedule_next_requests()
-        raise DontCloseSpider
-
     def parse(self, response):
         """
         If response is not an empty string, save it
@@ -146,24 +137,3 @@ class associatesHandler(fadRedisSpider):
                             f'{ticker};{page};{report_type}')
             except:
                 self.logger.info("Response is an empty string")
-
-    def handle_error(self, failure):
-        """
-        If there's an error with a request/response, add it to the error set
-        """
-        if failure.request:
-            request = failure.request
-            ticker = request.meta['ticker']
-            report_type = request.meta['ReportType']
-            page = request.meta['Page']
-            self.logger.info(
-                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
-        elif failure.value.response:
-            response = failure.value.response
-            ticker = response.meta['ticker']
-            report_type = response.meta['ReportType']
-            page = response.meta['Page']
-            self.logger.info(
-                f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

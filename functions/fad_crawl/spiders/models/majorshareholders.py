@@ -6,7 +6,7 @@ import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
 
-name = "majorshareholders"
+name = "majorShareholders"
 
 data = {"url": "https://finance.vietstock.vn/data/shareholderdetails",
         "formdata": {
@@ -23,6 +23,7 @@ data = {"url": "https://finance.vietstock.vn/data/shareholderdetails",
         },
         "meta": {
             "ticker": "",
+            "ReportType": name,
         }
         }
 

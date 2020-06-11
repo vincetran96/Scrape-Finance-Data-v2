@@ -37,8 +37,6 @@ class financeInfoHandler(fadRedisSpider):
         self.idling = False
 
         self.ticker_report_page_count_key = ticker_report_page_count_key
-        self.error_set_key = error_set_key
-
         self.r.set(self.ticker_report_page_count_key, "0")
 
     def next_requests(self):
@@ -58,6 +56,7 @@ class financeInfoHandler(fadRedisSpider):
             ticker = params[0]
             page = params[1]
             self.idling = False
+            
             # If report type is pushed in, this will be a subsequent request from self.parse()
             # For each report type, begin with Page 1 of all report types. Initial requests of Spider.
             try:
@@ -86,6 +85,7 @@ class financeInfoHandler(fadRedisSpider):
                               found, self.redis_key)
         self.logger.info(
             f'Total requests supposed to process: {self.r.get(self.ticker_report_page_count_key)}')
+        
         # Close spider if corpAZ is closed and none in queue and spider is idling
         # Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
@@ -115,13 +115,6 @@ class financeInfoHandler(fadRedisSpider):
                            errback=self.handle_error
                            )
 
-    def spider_idle(self):
-        """Overwrites default method
-        """
-        self.idling = True
-        self.schedule_next_requests()
-        raise DontCloseSpider
-
     def parse(self, response):
         """If the first obj in response is empty, then we've finished the report type for this ticker
         If there's actual data in response, save JSON and remove {ticker};{page};{report_type} value
@@ -144,24 +137,3 @@ class financeInfoHandler(fadRedisSpider):
                 next_page = str(int(page) + 1)
                 self.r.lpush(f'{self.name}:tickers',
                              f'{ticker};{next_page};{report_type}')
-
-    def handle_error(self, failure):
-        """
-        If there's an error with a request/response, add it to the error set
-        """
-        if failure.request:
-            request = failure.request
-            ticker = request.meta['ticker']
-            report_type = request.meta['ReportType']
-            page = request.meta['Page']
-            self.logger.info(
-                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
-        elif failure.value.response:
-            response = failure.value.response
-            ticker = response.meta['ticker']
-            report_type = response.meta['ReportType']
-            page = response.meta['Page']
-            self.logger.info(
-                f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

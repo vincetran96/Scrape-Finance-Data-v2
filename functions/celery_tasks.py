@@ -23,11 +23,10 @@ from fad_crawl.spiders.associatesDetails import associatesHandler
 from fad_crawl.spiders.boardDetails import boardDetailsHandler
 from fad_crawl.spiders.majorShareHolders import majorShareHoldersHandler
 from fad_crawl.spiders.ownerStructure import ownerStructureHandler
-from fad_crawl.spiders.counterparts import counterpartsHandler
+from fad_crawl.spiders.counterParts import counterpartsHandler
 from fad_crawl.spiders.models.corporateaz import log_settings as corporateaz_settings
 from fad_crawl.spiders.models.associatesdetails import log_settings as associatesdetails_settings
 from fad_crawl.spiders.models.financeinfo import log_settings as financeinfo_settings
-
 
 
 ### TEST AREA ###

@@ -6,7 +6,7 @@ import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 
 
-name = "counterparts"
+name = "counterParts"
 
 count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelation",
               "formdata": {
@@ -25,6 +25,7 @@ count_data = {"url": "https://finance.vietstock.vn/company/GetCountCompanyRelati
               "meta": {
                   "ticker": "",
                   "counted": "",
+                  "ReportType": "",
               }
               }
 
@@ -49,6 +50,7 @@ find_data = {"url": "https://finance.vietstock.vn/company/GetCompanyRelationFilt
              "meta": {
                  "ticker": "",
                  "counted": "",
+                 "ReportType": "",
              }
              }
 
