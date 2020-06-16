@@ -61,3 +61,15 @@ service privoxy status
 ```
 curl -x 127.0.0.1:8118 http://icanhazip.com/
 ```
+
+## Docker
+Pull the torproxy image
+```
+docker pull dperson/torproxy
+```
+
+Run the image, circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDirtiness), attempt to change circuit every 10 seconds (TOR_NewCircuitPeriod)
+```
+docker run -it -p 8118:8118 -p 9050:9050 --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 -d dperson/torproxy
+```
+
