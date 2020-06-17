@@ -73,3 +73,4 @@ Run the image, circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDi
 docker run -it -p 8118:8118 -p 9050:9050 --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 -d dperson/torproxy
 ```
 
+           
