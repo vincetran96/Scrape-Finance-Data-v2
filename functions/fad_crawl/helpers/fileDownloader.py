@@ -28,3 +28,10 @@ def save_jsonfile(obj, filename=""):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as writefile:
         json.dump(obj, writefile, ensure_ascii=False, indent=4)
+
+def save_textfile(obj, filename=""):
+    """Save JSON file with a defined path
+    """
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'w', encoding='utf-8') as writefile:
+        writefile.write(obj)

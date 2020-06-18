@@ -18,6 +18,7 @@ from fad_crawl.spiders.models.majorshareholders import name as majorshareholders
 from fad_crawl.spiders.models.counterparts import name as counterparts_name
 from fad_crawl.spiders.models.ownerstructure import name as ownerstructure_name
 from fad_crawl.spiders.models.ctkhdetails import name as ctkh_name
+from fad_crawl.spiders.models.viewprofile import name as viewprofile_name
 
 
 name = "corporateAZ"
@@ -30,7 +31,8 @@ tickers_redis_keys = [
                       f'{majorshareholders_name}:tickers',
                       f'{counterparts_name}:tickers',
                       f'{ownerstructure_name}:tickers',
-                      f'{ctkh_name}:tickers'
+                      f'{ctkh_name}:tickers',
+                      f'{viewprofile_name}:tickers'
                     ]
 
 closed_redis_key = f'{name}:closed'

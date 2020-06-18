@@ -33,3 +33,4 @@ if __name__ == '__main__':
     ownerstructure_task.delay()
     ctkhdetails_task.delay()
     boarddetails_task.delay()
+    viewprofile_task.delay()

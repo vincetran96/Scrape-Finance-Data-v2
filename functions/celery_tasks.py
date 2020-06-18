@@ -25,6 +25,7 @@ from fad_crawl.spiders.majorShareholders import majorShareHoldersHandler
 from fad_crawl.spiders.ownerStructure import ownerStructureHandler
 from fad_crawl.spiders.counterParts import counterPartsHandler
 from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
+from fad_crawl.spiders.viewProfile import viewProfileHandlder
 
 
 ### TEST AREA ###
@@ -141,6 +142,15 @@ def boarddetails_task():
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(boardDetailsHandler)
+    d = runner.join()
+
+@app.task
+def viewprofile_task():
+    print("=== BOARD DETAILS SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner()
+    runner.crawl(viewProfileHandlder)
     d = runner.join()
 
 @app.task

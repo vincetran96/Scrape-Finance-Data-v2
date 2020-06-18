@@ -20,7 +20,7 @@ import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.viewprofile import data as vprf
 from fad_crawl.spiders.models.viewprofile import (name, settings)
 from fad_crawl.spiders.fadRedis import fadRedisSpider
-from fad_crawl.helpers.fileDownloader import save_jsonfile
+from fad_crawl.helpers.fileDownloader import save_textfile
 
 
 class viewProfileHandlder(fadRedisSpider):
@@ -93,21 +93,17 @@ class viewProfileHandlder(fadRedisSpider):
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
             page = response.meta['page']
+            final_t = ""
             try:
-                # resp_json = json.loads(response.text, encoding='utf-8')
-
                 for e in response.xpath("//div[contains(@class, 'headline')]"):
-                    s = "-".join(e.xpath("./descendant::*/text()").getall())
-                    t = re.sub(r'(?![- ])\W+',r' ', s).strip()
-                    print (t)
-                    print ("=========")
+                    s_heading = "-".join(e.xpath("./descendant::*/text()").getall())
+                    heading = re.sub(r'(?![- ])\W+',r' ', s_heading).strip()
                     s_details = "-".join(e.xpath("./following::table/descendant-or-self::*/text()").getall())
-                    t_details = re.sub(r'(?![- ])\W+',r' ', s_details).strip()
-                    print (t_details)
-                    final_t = t + t_details
+                    details = re.sub(r'(?![- ])\W+',r' ', s_details).strip()
+                    final_t = final_t + heading + ";" + details + "="
 
-                save_jsonfile(
-                    final_t, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                save_textfile(
+                    final_t, filename=f'localData/{self.name}/{ticker}_Page_{page}.txt')
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')
             except:
