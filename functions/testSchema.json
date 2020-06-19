@@ -1,0 +1,95 @@
+{
+    "test1" : {
+      "mappings" : {
+        "properties" : {
+          "cid" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "data" : {
+            "properties" : {
+              "ownerStructure" : {
+                "properties" : {
+                  "ClosedDate" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "CompanyID" : {
+                    "type" : "long"
+                  },
+                  "IsPublic" : {
+                    "type" : "long"
+                  },
+                  "OS_ID" : {
+                    "type" : "long"
+                  },
+                  "Rate" : {
+                    "type" : "float"
+                  },
+                  "ShareHolderEN" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "ShareHolderNote" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "ShareHolderNoteVN" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "ShareHolderVN" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "Shares" : {
+                    "type" : "float"
+                  }
+                }
+              },
+              "timestamp" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
