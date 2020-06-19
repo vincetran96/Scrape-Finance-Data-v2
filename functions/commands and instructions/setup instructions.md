@@ -73,7 +73,7 @@ docker pull python:3.7.7-slim-buster
 
 Run the image, circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDirtiness), attempt to change circuit every 10 seconds (TOR_NewCircuitPeriod)
 ```
-docker run -it -d -p 8118:8118 -p 9050:9050 --net fad --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
+docker run -it -d -p 8118:8118 -p 9050:9050 --rm --net fad --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 
 ```

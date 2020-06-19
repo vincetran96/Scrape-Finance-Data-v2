@@ -25,5 +25,6 @@ task_routes = {
     'celery_tasks.ownerstructure_task': {'queue': 'corpAZ'},
     'celery_tasks.ctkhdetails_task': {'queue': 'corpAZ'},
     'celery_tasks.boarddetails_task': {'queue': 'corpAZ'},
+    'celery_tasks.viewprofile_task': {'queue': 'corpAZ'},
     'celery_tasks.finance_task': {'queue': 'finance'}
 }

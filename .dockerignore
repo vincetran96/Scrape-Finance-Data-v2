@@ -13,4 +13,4 @@ localData/
 *__pycache__
 elasticsearch*/
 kibana*/
-.ipynb_checkpoints
+.ipynb_checkpoints/

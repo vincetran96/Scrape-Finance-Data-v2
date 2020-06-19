@@ -55,9 +55,6 @@ class corporateazHandler(scrapy.Spider):
             total_pages = response.meta['TotalPages']
             try:
                 res = json.loads(response.text)
-                
-                self.logger.info(response.text)
-                
                 tickers_list = [d["Code"]
                                 for d in res]
                 self.logger.info(
@@ -85,9 +82,6 @@ class corporateazHandler(scrapy.Spider):
                 if page < total_pages:
                     next_page = str(page + 1)
                     az["formdata"]["page"] = next_page
-                    
-                    self.logger.info(next_page)
-
                     az["meta"]["page"] = next_page
                     az["meta"]["TotalPages"] = str(total_pages)
                     req_next = FormRequest(url=az["url"],
