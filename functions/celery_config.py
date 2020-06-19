@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 # This module contains settings for Celery
 
+from fad_crawl.spiders.models.constants import REDIS_HOST
+
+
+
 # Broker settings.
-broker_url = 'redis://localhost:6379'
+broker_url = f'redis://{REDIS_HOST}:6379'
 
 # List of modules to import when the Celery worker starts.
 include = ['celery_tasks']
 
 # Using the database to store task state and results.
-result_backend = 'redis://localhost:6379'
+result_backend = f'redis://{REDIS_HOST}:6379'
 
 # Routing
 task_routes = {

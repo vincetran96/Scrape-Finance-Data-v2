@@ -26,6 +26,7 @@ from fad_crawl.spiders.ownerStructure import ownerStructureHandler
 from fad_crawl.spiders.counterParts import counterPartsHandler
 from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
 from fad_crawl.spiders.viewProfile import viewProfileHandlder
+from fad_crawl.spiders.models.constants import REDIS_HOST
 
 
 ### TEST AREA ###
@@ -55,7 +56,7 @@ def subtractor(x, y):
 def prerun_cleanup_task():
     """ Delete all residual Redis keys
     """
-    r = redis.Redis(decode_responses=True)
+    r = redis.Redis(host=REDIS_HOST, decode_responses=True)
     for k in r.keys('*'):
         r.delete(k)
 

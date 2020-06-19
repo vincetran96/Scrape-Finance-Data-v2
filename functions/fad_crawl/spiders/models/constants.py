@@ -7,7 +7,20 @@ from dotenv import load_dotenv
 
 load_dotenv(os.path.join("", ".env"))
 
-proxy = os.getenv('PROXY')
+try:
+    proxy = os.getenv('PROXY')
+except:
+    proxy = None
+
+try:
+    redis_host = os.getenv('REDIS_HOST')
+except:
+    redis_host = None
+
+try:
+    torproxy_host = os.getenv('TORPROXY_HOST')
+except:
+    torproxy_host = None
 
 LANGUAGE = "en-US"
 USER_COOKIE = "56CC0AD006E36400CFD2FA55EC95435C69B147DD7C7A80595A2908007CFBCC9EAA464085AB128AAC33DF8A34BCF1AC43FE0107A4C73B041FB7F26B19AA954EE69357C1BFFED5BD234E372CFCAE5184ACEAFD1AE84601668FC51346C5658A1506D88CD86BECDF20DC989A6A134B0C4E44"
@@ -26,12 +39,22 @@ PROXIES_REDIS_KEY = "acceptedProxies"
 
 TOR_CONTROLLER_PASSWORD = "12345"
 
-if proxy == "yes":
-    PRIVOXY_LOCAL_PROXY = ["127.0.0.1:8118"]
-    REQUESTS_LOCAL_PROXY = "127.0.0.1:8118"
+if proxy:
+    if torproxy_host:
+        PRIVOXY_LOCAL_PROXY = [f'{torproxy_host}:8118']
+        REQUESTS_LOCAL_PROXY = f'{torproxy_host}:8118'
+    else:
+        PRIVOXY_LOCAL_PROXY = ['torproxy:8118']
+        REQUESTS_LOCAL_PROXY = 'torproxy:8118'
+
 else:
     PRIVOXY_LOCAL_PROXY = []
     REQUESTS_LOCAL_PROXY = ""
+
+if redis_host:
+    REDIS_HOST = redis_host
+else:
+    REDIS_HOST = 'fad-redis'
 
 SPIDER_EXCEPTION_COUNT_SUFFIX = "spdrexception_count"
 DOWNLOADER_EXCEPTION_COUNT_SUFFIX = "dwnldrexception_count"

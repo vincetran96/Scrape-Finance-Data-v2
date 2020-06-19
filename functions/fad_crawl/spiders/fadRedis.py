@@ -17,7 +17,7 @@ from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
-from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX
+from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_HOST
 from fad_crawl.spiders.models.corporateaz import \
     closed_redis_key as corpAZ_closed_key
 
@@ -28,7 +28,7 @@ class fadRedisSpider(RedisSpider):
 
     def __init__(self, *args, **kwargs):
         super(fadRedisSpider, self).__init__(*args, **kwargs)
-        self.r = redis.Redis(decode_responses=True)
+        self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.report_types = []
         self.fi = {}
 

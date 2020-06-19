@@ -23,6 +23,7 @@ from fad_crawl.spiders.models.corporateaz import data as az
 from fad_crawl.spiders.models.corporateaz import (name, settings,
                                                   tickers_redis_keys)
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+from fad_crawl.spiders.models.constants import REDIS_HOST
 
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
@@ -35,7 +36,7 @@ class corporateazHandler(scrapy.Spider):
 
     def __init__(self, tickers_list="", *args, **kwargs):
         super(corporateazHandler, self).__init__(*args, **kwargs)
-        self.r = redis.Redis(decode_responses=True)
+        self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
 
     def start_requests(self):

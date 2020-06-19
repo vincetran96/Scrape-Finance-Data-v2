@@ -8,10 +8,10 @@
 from scrapy import signals
 import redis
 
-from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX
+from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_HOST
 
 
-r = redis.Redis(decode_responses=True)
+r = redis.Redis(host=REDIS_HOST, decode_responses=True)
 
 
 class TickerCrawlSpiderMiddleware:

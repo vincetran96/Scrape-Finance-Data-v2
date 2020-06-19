@@ -60,17 +60,23 @@ service privoxy status
 ### Check if you have a different IP with Privoxy now
 ```
 curl -x 127.0.0.1:8118 http://icanhazip.com/
+curl -x 0.0.0.0:8118 http://icanhazip.com/
 ```
 
 ## Docker
 Pull the torproxy image
 ```
 docker pull dperson/torproxy
+docker pull redis
+docker pull python:3.7.7-slim-buster
 ```
 
 Run the image, circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDirtiness), attempt to change circuit every 10 seconds (TOR_NewCircuitPeriod)
 ```
-docker run -it -p 8118:8118 -p 9050:9050 --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 -d dperson/torproxy
+docker run -it -d -p 8118:8118 -p 9050:9050 --net fad --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 
-           
+```
+docker run -it --rm --net fad --name fad-functions --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' vincetran/fad-functions bash
+docker run -d --rm --net fad --name fad-redis redis
+docker run -it --rm --net fad redis redis-cli -h fad-redis

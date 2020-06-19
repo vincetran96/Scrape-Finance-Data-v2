@@ -11,6 +11,6 @@ env/
 test.py
 localData/
 *__pycache__
-logs/
 elasticsearch*/
 kibana*/
+.ipynb_checkpoints/
