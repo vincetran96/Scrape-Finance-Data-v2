@@ -26,7 +26,7 @@ from fad_crawl.spiders.ownerStructure import ownerStructureHandler
 from fad_crawl.spiders.counterParts import counterPartsHandler
 from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
 from fad_crawl.spiders.viewProfile import viewProfileHandlder
-
+from celery_run_tasks import es
 
 ### TEST AREA ###
 @app.task
@@ -160,3 +160,8 @@ def pdfDocs_task(url="", filename=""):
     configure_logging()
     runner = CrawlerRunner()
     runner.crawl(pdfDocsHandler)
+
+@app.task
+def handleES_task(docs = ""):
+    print("=== UPDATING ES DATABASE ===")
+    global es
