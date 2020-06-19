@@ -14,3 +14,4 @@ localData/
 elasticsearch*/
 kibana*/
 .ipynb_checkpoints
+logs/
