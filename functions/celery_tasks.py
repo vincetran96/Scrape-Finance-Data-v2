@@ -26,7 +26,12 @@ from fad_crawl.spiders.ownerStructure import ownerStructureHandler
 from fad_crawl.spiders.counterParts import counterPartsHandler
 from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
 from fad_crawl.spiders.viewProfile import viewProfileHandlder
+<<<<<<< HEAD
 from celery_run_tasks import es
+=======
+from fad_crawl.spiders.models.constants import REDIS_HOST
+
+>>>>>>> 55a2c5815a73f6f15f2aef55c7d82db503a32ba6
 
 ### TEST AREA ###
 @app.task
@@ -55,7 +60,7 @@ def subtractor(x, y):
 def prerun_cleanup_task():
     """ Delete all residual Redis keys
     """
-    r = redis.Redis(decode_responses=True)
+    r = redis.Redis(host=REDIS_HOST, decode_responses=True)
     for k in r.keys('*'):
         r.delete(k)
 
@@ -73,7 +78,7 @@ def corporateAZ_task():
     # # logging.root.removeHandler(handler)
     # logging.root.addHandler(handler)
 
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(corporateazHandler)
     d = runner.join()
 
@@ -82,7 +87,7 @@ def finance_task():
     print("=== FINANCE SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(financeInfoHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
@@ -93,7 +98,7 @@ def associates_task():
     print("=== ASSOCIATES SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(associatesHandler)
     d = runner.join()
 
@@ -102,7 +107,7 @@ def counterparts_task():
     print("=== COUNTERPARTS SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(counterPartsHandler)
     d = runner.join()
     # d_main.addBoth(lambda _: reactor.stop())
@@ -113,7 +118,7 @@ def majorshareholders_task():
     print("=== MAJOR SHAREHOLDERS SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(majorShareHoldersHandler)
     d = runner.join()
 
@@ -122,7 +127,7 @@ def ownerstructure_task():
     print("=== OWNER STRUCTURE SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(ownerStructureHandler)
     d = runner.join()
 
@@ -131,7 +136,7 @@ def ctkhdetails_task():
     print("=== CTKH DETAILS SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(ctkhDetailsHandler)
     d = runner.join()
 
@@ -140,16 +145,16 @@ def boarddetails_task():
     print("=== BOARD DETAILS SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(boardDetailsHandler)
     d = runner.join()
 
 @app.task
 def viewprofile_task():
-    print("=== BOARD DETAILS SPIDER CRAWLING ===")
+    print("=== VIEW PROFILE SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(viewProfileHandlder)
     d = runner.join()
 
@@ -158,7 +163,7 @@ def pdfDocs_task(url="", filename=""):
     print("=== PDFDOCS SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    runner = CrawlerRunner()
+    runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(pdfDocsHandler)
 
 @app.task
