@@ -26,12 +26,9 @@ from fad_crawl.spiders.ownerStructure import ownerStructureHandler
 from fad_crawl.spiders.counterParts import counterPartsHandler
 from fad_crawl.spiders.ctkhDetails import ctkhDetailsHandler
 from fad_crawl.spiders.viewProfile import viewProfileHandlder
-<<<<<<< HEAD
-from celery_run_tasks import es
-=======
+# from celery_run_tasks import es
 from fad_crawl.spiders.models.constants import REDIS_HOST
 
->>>>>>> 55a2c5815a73f6f15f2aef55c7d82db503a32ba6
 
 ### TEST AREA ###
 @app.task

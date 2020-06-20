@@ -77,6 +77,6 @@ docker run -it -d -p 8118:8118 -p 9050:9050 --rm --net fad --name torproxy --env
 ```
 
 ```
-docker run -it --rm --net fad --name fad-functions --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' vincetran/fad-functions bash
+docker run -it --rm --net fad --name fad-functions --env PROXY='yes' --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' vincetran/fad-functions bash
 docker run -d --rm --net fad --name fad-redis redis
 docker run -it --rm --net fad redis redis-cli -h fad-redis

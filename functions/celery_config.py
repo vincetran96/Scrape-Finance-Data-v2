@@ -4,7 +4,6 @@
 from fad_crawl.spiders.models.constants import REDIS_HOST
 
 
-
 # Broker settings.
 broker_url = f'redis://{REDIS_HOST}:6379'
 

@@ -11,6 +11,8 @@ RUN apt-get -yqq update
 RUN apt-get -yqq install curl nano
 RUN mkdir -p /opt/fad-functions/run/celery
 RUN mkdir -p /opt/fad-functions/logs
+RUN rm -f /opt/fad-functions/.env
 
 # install app specific deps
 RUN pip3 install -r requirements.txt
+RUN chmod a+x /opt/fad-functions/celery_run_cmd.sh
