@@ -5,6 +5,7 @@
 *.rdb
 .env
 playground.*
+test*
 env/
 .mypy_cache/
 .vscode/
@@ -15,3 +16,4 @@ elasticsearch*/
 kibana*/
 .ipynb_checkpoints
 logs/
+run/

@@ -8,7 +8,7 @@ WORKDIR /opt/fad-functions
 
 # install env, packages and make dir
 RUN apt-get -yqq update
-RUN apt-get -yqq install curl nano
+RUN apt-get -yqq install curl nano procps
 RUN mkdir -p /opt/fad-functions/run/celery
 RUN mkdir -p /opt/fad-functions/logs
 RUN rm -f /opt/fad-functions/.env
