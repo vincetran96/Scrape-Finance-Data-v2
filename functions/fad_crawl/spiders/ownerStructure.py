@@ -6,6 +6,7 @@ import logging
 import os
 import sys
 import traceback
+import time
 
 import scrapy
 import redis
@@ -110,6 +111,9 @@ class ownerStructureHandler(fadRedisSpider):
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
             page = response.meta['page']
+
+            # time.sleep(25)
+
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
                 
@@ -124,18 +128,18 @@ class ownerStructureHandler(fadRedisSpider):
                     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
                 
                 #ES push task
-                output = []
-                for i in resp_json:
-                    temp_ = {}
-                    temps = i["Details"]
-                    for temp in temps:
-                        # Process data
-                        temp["ClosedDate"] = toNumber(temp["ClosedDate"])
-                    temp_["timestamp"] = toNumber(i["ClosedDate"])
-                    temp_["ownerStructure"] = temps
-                    output.append(temp_)
-                for i in output:
-                    handleES_task.delay(self.name.lower(), ticker, i)   
+                # output = []
+                # for i in resp_json:
+                #     temp_ = {}
+                #     temps = i["Details"]
+                #     for temp in temps:
+                #         # Process data
+                #         temp["ClosedDate"] = toNumber(temp["ClosedDate"])
+                #     temp_["timestamp"] = toNumber(i["ClosedDate"])
+                #     temp_["ownerStructure"] = temps
+                #     output.append(temp_)
+                # for i in output:
+                #     handleES_task.delay(self.name.lower(), ticker, i)
 
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')

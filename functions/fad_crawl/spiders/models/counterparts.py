@@ -65,12 +65,12 @@ middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
-        'fad_crawl.fad_stats.TickerCrawlerStats': 850,
+        # 'fad_crawl.middlewares.TickerCrawlDownloaderMiddleware': 901,
+        # 'fad_crawl.fad_stats.TickerCrawlerStats': 850,
         'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
     },
     'SPIDER_MIDDLEWARES': {
-        'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
+        # 'fad_crawl.middlewares.TickerCrawlSpiderMiddleware': 45
     }
 }
 

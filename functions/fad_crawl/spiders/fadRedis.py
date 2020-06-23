@@ -52,26 +52,30 @@ class fadRedisSpider(RedisSpider):
             report_type = request.meta['ReportType']
             try:
                 page = request.meta['Page']
-                self.logger.info(
-                    f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
-                self.r.sadd(self.error_set_key,
-                            f'{ticker};{page};{report_type}')
             except:
-                self.logger.info(
-                    f'=== ERRBACK: on request for ticker {ticker}, report {report_type}')
-                self.r.sadd(self.error_set_key, f'{ticker};1;{report_type}')
+                page = "1"
+
+            self.logger.info(
+                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
+            self.r.sadd(self.error_set_key,
+                        f'{ticker};{page};{report_type}')
+            with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
+                    ticker, report_type, page, str(failure.type)))
+        
         elif failure.value.response:
             response = failure.value.response
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
             try:
                 page = response.meta['Page']
-                self.logger.info(
-                    f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
-                self.r.sadd(self.error_set_key,
-                            f'{ticker};{page};{report_type}')
             except:
-                page = response.meta['Page']
-                self.logger.info(
-                    f'=== ERRBACK: on response for ticker {ticker}, report {report_type}')
-                self.r.sadd(self.error_set_key, f'{ticker};1;{report_type}')
+                page = "1"
+
+            self.logger.info(
+                f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
+            self.r.sadd(self.error_set_key,
+                        f'{ticker};{page};{report_type}')
+            with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
+                    ticker, report_type, page, str(failure.type)))
