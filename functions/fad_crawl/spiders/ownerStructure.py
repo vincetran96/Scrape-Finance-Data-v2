@@ -22,6 +22,10 @@ from fad_crawl.spiders.models.ownerstructure import (name, settings)
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 
+# Import ES Supporting mudules
+from es_task import *
+from fad_crawl.helpers.esGenData import *
+from fad_crawl.helpers.processingData import toNumber
 
 class ownerStructureHandler(fadRedisSpider):
     name = name
@@ -118,6 +122,21 @@ class ownerStructureHandler(fadRedisSpider):
 
                 save_jsonfile(
                     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                
+                #ES push task
+                output = []
+                for i in resp_json:
+                    temp_ = {}
+                    temps = i["Details"]
+                    for temp in temps:
+                        # Process data
+                        temp["ClosedDate"] = toNumber(temp["ClosedDate"])
+                    temp_["timestamp"] = toNumber(i["ClosedDate"])
+                    temp_["ownerStructure"] = temps
+                    output.append(temp_)
+                for i in output:
+                    handleES_task.delay(self.name.lower(), ticker, i)   
+
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')
             except:

@@ -22,6 +22,7 @@ rabbitmq
 celery -A celery_main worker -l INFO --detach
 celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
 celery -A celery_main worker -Q finance -c 10 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
+celery -A celery_main worker -Q es -c 10 -n workeres@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
 ## On Windows
 celery -A celery_main worker --loglevel=INFO -P solo
 celery -A celery_main worker -Q corpAZ -P solo -c 10 -n workercorpAZ@%h -l INFO
