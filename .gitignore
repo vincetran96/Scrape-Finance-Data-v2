@@ -3,6 +3,7 @@
 *.pyc
 *.DS_Store
 *.rdb
+*.zip
 .env
 playground.*
 test*

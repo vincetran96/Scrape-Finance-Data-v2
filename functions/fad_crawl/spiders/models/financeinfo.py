@@ -4,6 +4,8 @@
 # Report types are summarized finances (BCTT), business targets (CTKH), balance sheets (CDKT),
 # income statements (KQKD), cash flow statements (LC), and financial indices (CSTC)
 
+# Report terms can be either "1" (for annual) or "2" (for quarter)
+
 import redis
 
 import fad_crawl.spiders.models.constants as constants
@@ -13,6 +15,7 @@ import fad_crawl.spiders.models.utilities as utilities
 name = "financeInfo"
 
 report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]
+report_terms = {"1":"Annual", "2":"Quarter"}
 
 ticker_report_page_count_key = f'{name}:trp_count'
 error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
@@ -21,7 +24,7 @@ fi = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
             "Code": "",
             "ReportType": "",
-            "ReportTermType": "2",
+            "ReportTermType": "",
             "Unit": "1000000",
             "Page": constants.START_PAGE,
             "PageSize": "4",
@@ -38,6 +41,7 @@ fi = {"url": "https://finance.vietstock.vn/data/financeinfo",
             "ticker": "",
             "ReportType": "",
             "page": "",
+            "ReportTermType": "",
         }
         }
 

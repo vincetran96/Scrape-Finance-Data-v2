@@ -30,7 +30,6 @@ class financeInfoHandler(fadRedisSpider):
 
     def __init__(self, *args, **kwargs):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
-        self.report_types = report_types
         self.idling = False
 
         self.ticker_report_page_count_key = ticker_report_page_count_key
@@ -53,28 +52,31 @@ class financeInfoHandler(fadRedisSpider):
             ticker = params[0]
             page = params[1]
             self.idling = False
-            
+
             # If report type is pushed in, this will be a subsequent request from self.parse()
             # For each report type, begin with Page 1 of all report types. Initial requests of Spider.
             try:
                 report_type = params[2]
-                req = self.make_request_from_data(ticker, report_type, page)
-                if req:
-                    yield req
-                    self.r.incr(self.ticker_report_page_count_key)
-                else:
-                    self.logger.info(
-                        "Request not made from params: %r", params)
-            except:
-                for report_type in self.report_types:
+                for report_term in report_terms.keys():
                     req = self.make_request_from_data(
-                        ticker, report_type, page)
+                        ticker, report_type, page, report_term)
                     if req:
                         yield req
                         self.r.incr(self.ticker_report_page_count_key)
                     else:
                         self.logger.info(
                             "Request not made from params: %r", params)
+            except:
+                for report_type in report_types:
+                    for report_term in report_terms.keys():
+                        req = self.make_request_from_data(
+                            ticker, report_type, page, report_term)
+                        if req:
+                            yield req
+                            self.r.incr(self.ticker_report_page_count_key)
+                        else:
+                            self.logger.info(
+                                "Request not made from params: %r", params)
             found += 1
 
         if found:
@@ -82,7 +84,7 @@ class financeInfoHandler(fadRedisSpider):
                               found, self.redis_key)
         self.logger.info(
             f'Total requests supposed to process: {self.r.get(self.ticker_report_page_count_key)}')
-        
+
         # Close spider if corpAZ is closed and none in queue and spider is idling
         # Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
@@ -93,15 +95,17 @@ class financeInfoHandler(fadRedisSpider):
             self.crawler.engine.close_spider(
                 spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
 
-    def make_request_from_data(self, ticker, report_type, page):
+    def make_request_from_data(self, ticker, report_type, page, report_term):
         """Replaces the default method, data is a ticker.
         """
         fi["formdata"]["Code"] = ticker
         fi["formdata"]["ReportType"] = report_type
         fi["formdata"]["Page"] = page
+        fi["formdata"]["ReportTermType"] = report_term
         fi["meta"]["ticker"] = ticker
         fi["meta"]["ReportType"] = report_type
         fi["meta"]["page"] = page
+        fi["meta"]["ReportTermType"] = report_term
 
         return FormRequest(url=fi["url"],
                            formdata=fi["formdata"],
@@ -121,6 +125,8 @@ class financeInfoHandler(fadRedisSpider):
             ticker = response.meta['ticker']
             report_type = response.meta['ReportType']
             page = response.meta['page']
+            report_term = response.meta['ReportTermType']
+
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
 
@@ -129,12 +135,13 @@ class financeInfoHandler(fadRedisSpider):
                         f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
                 else:
                     save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_Page_{page}.json')
+                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
                     next_page = str(int(page) + 1)
                     self.r.lpush(f'{self.name}:tickers',
-                                f'{ticker};{next_page};{report_type}')
+                                 f'{ticker};{next_page};{report_type}')
             except:
                 self.logger.info("Response is an empty string")
-                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
+                self.r.sadd(self.error_set_key,
+                            f'{ticker};{page};{report_type}')
