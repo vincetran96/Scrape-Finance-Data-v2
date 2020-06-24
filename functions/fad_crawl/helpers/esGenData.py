@@ -4,7 +4,7 @@ def genData(_index, _id, _doc: {}):
         "_id": _id,
         "_source": {
             "cid": _id,
-            "data": [{k: v for k, v in _doc.items()}]
+            "data": [{str(k).lower(): v for k, v in _doc.items()}]
         }
     }
 
@@ -15,11 +15,25 @@ def genDataUpd(_index, _id, _doc: {}):
         "_id": _id,
         '_op_type': 'update',
         "script": {
-                    "inline": "ctx._source.data.add(params.tag)",
-                    "lang": "painless",
-                    "params": {
-                        "tag": {k: v for k, v in _doc.items()}
-                    }
+            "lang": "painless",
+            "params": {
+                "tag": {str(k).lower(): v for k, v in _doc.items()},
+                "timestamp" : _doc["timestamp"]
+            },
+            "source": """
+                /* This part is the logic to check whether or not there were an existing timestamp
+                If there was, overwrite the old one. If not, add it to the `data` list */
 
+                boolean x = false;
+                for (int i = 0; i < ctx._source.data.length; ++i) {
+                    if (ctx._source.data[i]["timestamp"] == params.timestamp) {
+                        ctx._source.data[i] = params.tag;
+                        x = true;
+                    }
+                }
+                if (x == false) {
+                    ctx._source.data.add(params.tag)
+                }
+            """
         }
     }

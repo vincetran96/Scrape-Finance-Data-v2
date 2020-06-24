@@ -22,6 +22,8 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.majorshareholders import data as msh
 from fad_crawl.spiders.models.majorshareholders import name, settings
 
+# Import ES Supporting mudules
+from es_task import *
 
 class majorShareHoldersHandler(fadRedisSpider):
     name = name
@@ -116,8 +118,12 @@ class majorShareHoldersHandler(fadRedisSpider):
                     self.r.lpush(f'{self.name}:tickers',
                                  f'{ticker};{next_page}')
 
-                save_jsonfile(
-                    resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                # save_jsonfile(
+                #     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+
+                # ES push task
+                handleES_task.delay(self.name.lower(), ticker, resp_json)
+
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')
             except:

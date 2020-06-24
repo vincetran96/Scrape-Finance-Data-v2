@@ -1,0 +1,56 @@
+{
+    "properties": {
+        "cid": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "data": {
+            "properties": {
+                "Shareholder": {
+                    "properties": {
+                        "Quantity": {
+                            "type": "long"
+                        },
+                        "Ratio": {
+                            "type": "float"
+                        },
+                        "ShareholderDate": {
+                            "type": "text",
+                            "fields": {
+                                "format": "epoch_millis",
+                                "type": "date"
+                            }
+                        },
+                        "ShareholderNameEN": {
+                            "type": "text",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 256
+                                }
+                            }
+                        },
+                        "ShareholderNameVN": {
+                            "type": "text",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 256
+                                }
+                            }
+                        }
+                    }
+                },
+                "timestamp": {
+                    "format": "epoch_millis",
+                    "type": "date"
+                }
+            }
+        }
+    }
+}
