@@ -1,95 +1,138 @@
-{
-    "test1" : {
-      "mappings" : {
-        "properties" : {
-          "cid" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "data" : {
-            "properties" : {
-              "ownerStructure" : {
-                "properties" : {
-                  "ClosedDate" : {
-                    "type" : "text",
-                    "fields" : {
-                      "keyword" : {
-                        "type" : "keyword",
-                        "ignore_above" : 256
+[{
+  'update': {
+      '_index': 'cashflow',
+      '_type': '_doc',
+      '_id': 'BSI',
+      'status': 404,
+      'error': {
+          'type': 'document_missing_exception',
+          'reason': '[_doc][BSI]: document missing',
+          'index_uuid': 'WCp5W82XSSy7ETTCqbiwXw',
+          'shard': '0',
+          'index': 'cashflow'
+      },
+      'data': {
+          'script': {
+              'lang': 'painless',
+              'params': {
+                  'tag': {
+                      'timestamp': {
+                          'startdate': 1554037200000,
+                          'enddate': 1561816800000
+                      },
+                      'cftype': 'CashFlow Indirect',
+                      'cashflow': {
+                          'I. CASH FLOW FROM SECURITIES TRADING ACTIVITIES': None,
+                          '1. Profit before tax': None,
+                          '2. Adjustments for': None,
+                          ' - Depreciation and amortization': None,
+                          ' - (Reversal of provisions)/provisions': None,
+                          ' - Unrealized foreign exchange (gains)/losses': None,
+                          'Acrrued expenses, prepayments expenses': None,
+                          ' - Loss/(profits) from other investing activities': None,
+                          ' - Interest expense': None,
+                          '- Loss/(profits) from disposal of fixed asset': None,
+                          '- Interest income and dividends': None,
+                          '- Allocation of goodwill': None,
+                          'Accrued interest income': None,
+                          '- Adjustments for': None,
+                          '3. Add non-cash expenses': None,
+                          'Loss from revaluation losses of FVTPL financial assets': None,
+                          'Loss from revaluation of FVTPL financial debt': None,
+                          '': None,
+                          'Losse from revaluetion ': None,
+                          'Loss from provision available-for-sale financial assets': None,
+                          'Value decline of available-for-sale financial assets': None,
+                          'Loss from revaluation of financial derivative tools for hedging purposes': None,
+                          'Losses from disposals of fixed assets': None,
+                          'Value decline of fixed assets': None,
+                          'Loss from disposal  investments in subsidiaries, associates, joint-ventures': None,
+                          '4. Less non-cash income': None,
+                          'Gains from revaluation gains of FVTPL financial assets ': None,
+                          'Gains from revaluation gains of FVTPL financial debt': None,
+                          'Gains from disposals of avalable-for-sale financial assets': None,
+                          'Reversal of value decline of available-for-sale financial assets': None,
+                          'Gains from revaluation of financial derivative tools for hedging purposes': None,
+                          'Gains from disaposals loans and receivables': None,
+                          'Reversal of allowances': None,
+                          'Gains from disposal from fixed assets, investment property': None,
+                          'Gains from disposal investments in subsidiaries, associates, joint-ventures': None,
+                          '5. Changes of assets and liabilities': None,
+                          'Increase/decrease in FVTPL financial assets': None,
+                          'Increase/decrease in held to maturity investments': None,
+                          'Increase/decrease in loan': None,
+                          'Increase/decrease in AFS financial assets': None,
+                          ' - (Increase)/decrease in receivables': None,
+                          'Increase/decrease in borrowings and finance lease liabilities': None,
+                          'Increase/decrease in finance assets borrowings': None,
+                          'Increase/decrease in convertible bond - debt structure': None,
+                          'Increase/decrease in issued bonds': None,
+                          'Increase/decrease borrowings to settlement assistance fund': None,
+                          '3.  Operating profit before changes in working capital': None,
+                          'Increase/decrease in receiables sale of financial assets': None,
+                          'Increase/decrease in receiables interest of financial assets': None,
+                          'Increase/decrease in service related receivables': None,
+                          'Increase/decrease in trading error receivables': None,
+                          'Increases/decreases in other receivables': None,
+                          'Increase/decrease in other assets': None,
+                          ' - Increase/(decrease) in payables (other than interest, corporate income tax)': None,
+                          ' - (Increase)/decrease in prepaid expenses': None,
+                          ' - Corporate income tax paid': None,
+                          ' - Interest paid': None,
+                          'Increases/decreaese in trade payables': None,
+                          'Increases/decreaese in payable securities issuers': None,
+                          'Increases/decreases in employee welfare payables': None,
+                          'Increases/decreases in tax and other payables to the State Budget': None,
+                          'Increases/dcreases in payable to employees': None,
+                          'Increases/dcreases in other payables': None,
+                          'Increases/dcreases corporate income tax paid': None,
+                          ' - (Increase)/decrease in inventories': None,
+                          ' - Other receipts from operating activities': None,
+                          ' - Other payments for operating activities': None,
+                          ' Net cash flows from securities trading activities': None,
+                          'II. CASH FLOW FROM INVESTING ACTIVITIES': None,
+                          '1. Payment for fixed assets, constructions and other long-term assets': None,
+                          '2. Proceeds from disposals of fixed assets and other long-term assets': None,
+                          "3. Loans, purchases of other entities' debt instruments ": None,
+                          "4. Receipts from loan repayments, sale of other entities' debt instruments ": None,
+                          '5. Payments for investment in other entities': None,
+                          '6. Collections on investment in other entities': None,
+                          '7. Dividends, interest and profit received': None,
+                          '8. Purchases of minority shares of subsidiaries': None,
+                          '9. Other receipts from investing activities': None,
+                          '10. Other payments for investing activities': None,
+                          ' Net cash flows from investing activities': None,
+                          'III. CASH FLOW FROM FINANCING ACTIVITIES': None,
+                          "1. Receipts from equity issue and owner's capital contribution": None,
+                          '2. Payment for share repurchases ': None,
+                          '3. Short-term and long-term borrowings': None,
+                          '3.1. Borrowings to settlement assistance fund': None,
+                          '3.2. Other borrowings': None,
+                          ' 4. Principal repayments  ': None,
+                          '4.1. Principal repayments to settlement assistance fund': None,
+                          '4.2. Principal repayments to financial assets': None,
+                          '4.3. Other principal repayments': None,
+                          '5. Payments to settle finance leases': None,
+                          '6. Dividends paid, profits distributed to owners': None,
+                          '7. Other receipts from financing activities': None,
+                          '8. Other payments for financing activities': None,
+                          ' Net cash flows from financing activities': None,
+                          'Net cash flows during the period ': None,
+                          'Cash and cash equivalents at begingning of the period': None,
+                          'Cash at bank': None,
+                          'Cash at bank for securities company activities': None,
+                          'Cash equivalents': None,
+                          'Exchange difference due to re-valuation of ending balances': None,
+                          'Cash and cash equivalents at end of the period': None
                       }
-                    }
                   },
-                  "CompanyID" : {
-                    "type" : "long"
-                  },
-                  "IsPublic" : {
-                    "type" : "long"
-                  },
-                  "OS_ID" : {
-                    "type" : "long"
-                  },
-                  "Rate" : {
-                    "type" : "float"
-                  },
-                  "ShareHolderEN" : {
-                    "type" : "text",
-                    "fields" : {
-                      "keyword" : {
-                        "type" : "keyword",
-                        "ignore_above" : 256
-                      }
-                    }
-                  },
-                  "ShareHolderNote" : {
-                    "type" : "text",
-                    "fields" : {
-                      "keyword" : {
-                        "type" : "keyword",
-                        "ignore_above" : 256
-                      }
-                    }
-                  },
-                  "ShareHolderNoteVN" : {
-                    "type" : "text",
-                    "fields" : {
-                      "keyword" : {
-                        "type" : "keyword",
-                        "ignore_above" : 256
-                      }
-                    }
-                  },
-                  "ShareHolderVN" : {
-                    "type" : "text",
-                    "fields" : {
-                      "keyword" : {
-                        "type" : "keyword",
-                        "ignore_above" : 256
-                      }
-                    }
-                  },
-                  "Shares" : {
-                    "type" : "float"
+                  'timestamp': {
+                      'startdate': 1554037200000,
+                      'enddate': 1561816800000
                   }
-                }
               },
-              "timestamp" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              }
-            }
+              'source': '\n                /* This part is the logic to check whether or not there were an existing timestamp\n                If there was, overwrite the old one. If not, add it to the `data` list */\n\n                boolean x = false;\n                for (int i = 0; i < ctx._source.data.length; ++i) {\n                    if (ctx._source.data[i]["timestamp"] == params.timestamp) {\n                        ctx._source.data[i] = params.tag;\n                        x = true;\n                    }\n                }\n                if (x == false) {\n                    ctx._source.data.add(params.tag)\n                }\n            '
           }
-        }
       }
-    }
   }
-  
+}]

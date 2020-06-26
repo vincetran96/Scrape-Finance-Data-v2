@@ -23,6 +23,8 @@ from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.financeinfo import *
 
+# Import ES Supporting mudules
+from es_task import *
 
 class financeInfoHandler(fadRedisSpider):
     name = name
@@ -134,8 +136,13 @@ class financeInfoHandler(fadRedisSpider):
                     self.logger.info(
                         f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
                 else:
-                    save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                    # Writing local data files"
+                    # save_jsonfile(
+                    #     resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                    
+                    # ES push task
+                    handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
+
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
                     next_page = str(int(page) + 1)

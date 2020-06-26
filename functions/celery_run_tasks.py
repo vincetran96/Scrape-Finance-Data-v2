@@ -25,7 +25,6 @@ if __name__ == '__main__':
     #     finance_task.signature(immutable=True))
     
     # prerun_cleanup_task.apply_async(link=g) 
-    # es = Elasticsearch([{u'host': u'34.71.126.250', u'port': 9200}])
     prerun_cleanup_task.delay()
     corporateAZ_task.delay()
     finance_task.delay()
