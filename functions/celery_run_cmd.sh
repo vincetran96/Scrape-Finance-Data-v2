@@ -2,9 +2,9 @@
 
 # clear old files and potentially running workers
 pkill -9 -f 'celery worker'
-rm -rf /opt/fad-functions/run/celery/*
-rm -rf /opt/fad-functions/logs/*
-rm -rf /opt/fad-functions/localData/*
+rm -v run/celery/*
+rm -v logs/*
+# rm -rf /opt/fad-functions/localData/*
 
 # create workers
 celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"

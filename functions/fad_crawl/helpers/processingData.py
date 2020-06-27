@@ -35,7 +35,7 @@ def getDate(chr):
                                     dtc[int(chr[-2:])]).timestamp() * 1000)
     return start, end
 
-def processFinanceInfo(output):
+def processFinanceInfo(output,_id = ""):
     output_ = []
     for item in output.items():
         start, end = getDate(item[0])
@@ -52,6 +52,17 @@ def processFinanceInfo(output):
                 _ = False
                 break
         if not _:
+            # Handle when the key is empty
+            item[1][reporttype] = {str(k).replace(".", "").lower() : v for k, v in item[1][reporttype].items()}
+            try:
+                if item[1][reporttype][""] == None:
+                    del item[1][reporttype][""]
+                else:
+                    print("ERROR: There is a None Key with non-null value at {} when updating {}.".format(_id,reporttype))
+                    continue
+            except:
+                pass
+
             # Generate the ES output
             output_.append({"timestamp": 
                                 {
