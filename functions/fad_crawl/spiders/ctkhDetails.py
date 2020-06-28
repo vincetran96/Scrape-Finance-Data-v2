@@ -22,6 +22,8 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.ctkhdetails import data as ctk
 from fad_crawl.spiders.models.ctkhdetails import name, settings
 
+# Import ES Supporting mudules
+from es_task import *
 
 class ctkhDetailsHandler(fadRedisSpider):
     name = name
@@ -93,8 +95,13 @@ class ctkhDetailsHandler(fadRedisSpider):
             page = response.meta['page']
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
-                save_jsonfile(
-                    resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                # # Saving local Data files
+                # save_jsonfile(
+                #     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                
+                # ES push task
+                handleES_task.delay(self.name.lower(), ticker, resp_json)
+
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')
             except:
