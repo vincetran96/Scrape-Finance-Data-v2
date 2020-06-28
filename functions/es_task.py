@@ -1,5 +1,5 @@
 from celery_main import app
-
+import datetime
 # Elastic client module
 import elasticsearch
 from elasticsearch import Elasticsearch
@@ -16,7 +16,8 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
     #! Set the key value shouldnt have `.`
     # TODO: Add print line for the case all NONE value so return warning 
     # TODO: Optimize bulk messages.
-
+    
+    ##! This part for data preprocessing 
     # Handle owenerStructure data
     # DONE
     if index == "ownerstructure":
@@ -223,6 +224,138 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
             output.append(temp)
         
 
+    # Handle BoardDetails data
+    # DONE
+    elif index == "boarddetails":
+        data = resp_json
+        output = {}
+        for i in data:
+            temps = i["Details"]
+            for temp in temps:
+                try:
+                    del temp["IDNO"]
+                    del temp["ClosedDate"]
+                    del temp["CompanyID"]
+                    del temp["Title"]
+                    del temp["Position"]
+                    del temp["Grade"]
+                except:
+                    pass
+                # Process data
+                if temp["YearOfBirth"] == -1:
+                    temp["YearOfBirth"] = None
+
+                temp["FromDate"] = toNumber(temp["FromDate"])
+                if temp["FromDate"] == "":
+                    temp["FromDate"] = None
+
+                temp["TimeSticking"] = toNumber(temp["TimeSticking"])
+                if temp["TimeSticking"] == "":
+                    temp["TimeSticking"] = None
+
+            output[toNumber(i["ClosedDate"])] = temps
+        
+        # Processing data to ES friendly format
+        output_ = []
+        for item in output.items():
+            end = int(item[0])
+            start = int(datetime.datetime(int(datetime.datetime.fromtimestamp(end/1000).strftime('%Y')), 1, 1).timestamp() * 1000)
+            # Checking if all data is null then skip
+            _ = True
+            for i in item[1]:
+                for j in i.values():
+                    if j != None:
+                        _ = False
+                        break
+            if not _:
+                # Handle when the key is empty
+                for i in range(0,len(item[1])):
+                    item[1][i] = {str(k).replace(".", "").lower() : v for k, v in item[1][i].items()}
+                    try:
+                        if item[1][i][""] == None:
+                            del item[1][i][""]
+                        else:
+                            print("ERROR: There is a None Key with non-null value at {} when updating {}.".format(id,"boarddetails"))
+                            _ = True
+                            break
+                    except:
+                        pass
+                if not _:
+                    # Generate the ES output
+                    output_.append({"timestamp": 
+                                        {
+                                            "startdate": start,
+                                            "enddate": end
+                                        },
+                                    "reporttype" : "boarddetails",
+                                    "data": item[1],
+                                    }
+                                    )
+            else:
+                continue
+        output = output_
+
+    # Handle Associates data
+    elif index == "associatesdetails":
+        data = resp_json
+        output = {}
+        for i in data:
+            temps = i["Details"]
+            for temp in temps:
+                try:
+                    del temp["ClosedDate"]
+                    del temp["AssociatesDate"]
+                    del temp["Associates_VN"]
+                    del temp["hc_IDNO"]
+                except:
+                    pass            
+                # Process date data
+                
+                temp["LastUpdate"] = toNumber(temp["LastUpdate"])
+                temp["CurrencyUnit"] = str(temp["CurrencyUnit"]).replace(" ", "")
+            output[toNumber(i["ClosedDate"])] = temps
+        # print(output)
+        # Processing data to ES friendly format
+        output_ = []
+        for item in output.items():
+            end = int(item[0])
+            start = int(datetime.datetime(int(datetime.datetime.fromtimestamp(end/1000).strftime('%Y')), 1, 1).timestamp() * 1000)
+            # Checking if all data is null then skip
+            _ = True
+            for i in item[1]:
+                for j in i.values():
+                    if j != None:
+                        _ = False
+                        break
+            if not _:
+                # Handle when the key is empty
+                for i in range(0,len(item[1])):
+                    item[1][i] = {str(k).replace(".", "").lower() : v for k, v in item[1][i].items()}
+                    try:
+                        if item[1][i][""] == None:
+                            del item[1][i][""]
+                        else:
+                            print("ERROR: There is a None Key with non-null value at {} when updating {}.".format(id,"boarddetails"))
+                            _ = True
+                            break
+                    except:
+                        pass
+                if not _:
+                    # Generate the ES output
+                    output_.append({"timestamp": 
+                                        {
+                                            "startdate": start,
+                                            "enddate": end
+                                        },
+                                    "reporttype" : "associates",
+                                    "data": item[1],
+                                    }
+                                    )
+            else:
+                continue
+        output = output_
+
+    #! This part for controlling ES push method.
     if controlES:
         #Pushing data to ES Database: "counterpart"
         if index == "counterparts":
