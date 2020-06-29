@@ -28,7 +28,7 @@ services:
         depends_on:
             - elasticsearch
     fad-functions:
-        # image: vincetran/fad-functions
+        # image: fad_fad-functions
         build: .
         container_name: fad-functions
         command: wait-for-it -s torproxy:8118 -s fad-redis:6379 -s elasticsearch:9200 -t 600  -- bash ./celery_run_cmd.sh
@@ -43,4 +43,5 @@ services:
             - elasticsearch
             - kibana
         volumes:
-            - ./functions:/opt/fad-functions
+            - ./logs:/opt/fad-functions/logs
+            - ./localData:/opt/fad-functions/localData

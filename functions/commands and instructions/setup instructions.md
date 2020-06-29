@@ -4,6 +4,7 @@ ssh root@45.77.5.33 -L9200:localhost:9200 -L5601:localhost:5601
 ```
 Preferably you can just skip to the Docker section to avoid playing around with the setup.
 
+
 # Docker
 
 ## Running with docker-compose
@@ -17,7 +18,7 @@ Run that file
 ```
 
 ## Running manually
-Pull the torproxy image
+### Pull the torproxy image
 ```
 docker pull dperson/torproxy
 docker pull redis
@@ -29,9 +30,9 @@ docker pull python:3.7.7-slim-buster
 docker run -d --rm --net fad --name fad-redis redis
 docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --rm --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 docker run -it -d -p 8118:8118 -p 9050:9050 --rm --net fad --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
-docker run -it --rm --net fad --name fad-functions --env PROXY='yes' --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' vincetran/fad-functions bash
+docker run -it --rm --net fad --name fad-functions --env PROXY='yes' --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' fad_fad-functions bash
 ```
-Note that Tor circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDirtiness), attempt to change circuit every 10 seconds (TOR_NewCircuitPeriod).
+Note that Tor circuit age to be reused is at max = 60 seconds (`TOR_MaxCircuitDirtiness`), attempt to change circuit every 10 seconds (`TOR_NewCircuitPeriod`).
 
 
 ### If you want to investigate Redis...
@@ -39,11 +40,12 @@ Note that Tor circuit age to be reused is at max = 60 seconds (TOR_MaxCircuitDir
 docker run -it --rm --net fad redis redis-cli -h fad-redis
 ```
 
+
 # In case you want to mess with the setup
 
-## For required Python packages, use requirements.txt
+For required Python packages, use `requirements.txt`
 
-## For required system packages, see following (only tested for Ubuntu 20.04, google for other OS')
+For required system packages, see following (only tested for Ubuntu 20.04, google for other OS')
 ### Install Tor ([source](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html))
 #### Install apt transport
 ```
@@ -86,7 +88,7 @@ torify curl http://icanhazip.com/
 torsocks wget -qO - https://api.ipify.org; echo
 ```
 
-### Install Privoxy ([source](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html))
+### Install Privoxy after having Tor ([source](https://www.linuxuprising.com/2018/10/how-to-install-and-use-tor-as-proxy-in.html))
 ```
 sudo apt install privoxy
 ```
