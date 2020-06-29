@@ -79,6 +79,7 @@ class boardDetailsHandler(fadRedisSpider):
                 self.r.delete(k)
             self.crawler.engine.close_spider(
                 spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
+            self.close_status()
 
     def make_request_from_data(self, ticker, page):
         """

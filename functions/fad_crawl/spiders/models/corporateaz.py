@@ -21,7 +21,8 @@ from fad_crawl.spiders.models.ctkhdetails import name as ctkh_name
 from fad_crawl.spiders.models.viewprofile import name as viewprofile_name
 
 
-name = "corporateAZ"
+name_regular = "corporateAZ"
+name_express = "corporateAZExpress"
 
 tickers_redis_keys = [
                       f'{financeInfo_name}:tickers',
@@ -35,7 +36,7 @@ tickers_redis_keys = [
                       f'{viewprofile_name}:tickers'
                     ]
 
-closed_redis_key = f'{name}:closed'
+closed_redis_key = f'{name_regular}:closed'
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
@@ -53,17 +54,48 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             "User-Agent": constants.USER_AGENT,
             "Content-Type": constants.CONTENT_TYPE
         },
-        "cookies":  {
+        "cookies": {
             "language": constants.LANGUAGE,
             "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
             "page": constants.START_PAGE,
             "TotalPages": "",
+            "bizType_id": "",
+            "bizType_title": "",
+            "ind_id": "",
+            "ind_name": "",
         }
-        }      
+        }
 
-log_settings = utilities.log_settings(spiderName=name,
+business_type = {
+        "url": "https://finance.vietstock.vn/data/businesstype",
+        "headers": {
+            "User-Agent": constants.USER_AGENT
+        },
+        "cookies": {
+            "language": constants.LANGUAGE
+        },
+        }
+
+industry_list = {
+        "url": "https://finance.vietstock.vn/data/industrylist",
+        "headers": {
+            "User-Agent": constants.USER_AGENT
+        },
+        "cookies": {
+            "language": constants.LANGUAGE
+        },
+        "meta": {
+            "bizType_id": "",
+            "bizType_title": "",
+        }
+        }
+
+log_settings_regular = utilities.log_settings(spiderName=name_regular,
+                                      log_level = "INFO")
+
+log_settings_express = utilities.log_settings(spiderName=name_express,
                                       log_level = "INFO")
 
 middlewares_settings={
@@ -77,4 +109,5 @@ proxy_settings = {
     'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings}
+settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings}
+settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings}

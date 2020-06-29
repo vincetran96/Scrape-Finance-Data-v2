@@ -34,6 +34,10 @@ class fadRedisSpider(RedisSpider):
 
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
+        self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        with open(self.statusfilepath, 'w') as statusfile:
+            statusfile.write('running')
+            statusfile.close()
 
     def spider_idle(self):
         """Overwrites default method
@@ -79,3 +83,10 @@ class fadRedisSpider(RedisSpider):
             with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
                 openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
                     ticker, report_type, page, str(failure.type)))
+
+    def close_status(self):
+        """Clear running status file after closing
+        """
+        if os.path.exists(self.statusfilepath):
+            os.remove(self.statusfilepath)
+            self.logger.info(f'Deleted status file at {self.statusfilepath}')

@@ -94,6 +94,7 @@ class financeInfoHandler(fadRedisSpider):
                 self.r.delete(k)
             self.crawler.engine.close_spider(
                 spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
+            self.close_status()
 
     def make_request_from_data(self, ticker, report_type, page, report_term):
         """Replaces the default method, data is a ticker.
@@ -129,13 +130,14 @@ class financeInfoHandler(fadRedisSpider):
 
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
+                bizType_title, ind_name = self.r.get(ticker).split(";")
 
                 if resp_json[0] == []:
                     self.logger.info(
                         f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
                 else:
                     save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                        resp_json, filename=f'localData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
                     next_page = str(int(page) + 1)

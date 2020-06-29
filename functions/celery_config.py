@@ -17,6 +17,7 @@ result_backend = f'redis://{REDIS_HOST}:6379'
 task_routes = {
     'celery_tasks.prerun_cleanup_task': {'queue': 'corpAZ'},
     'celery_tasks.corporateAZ_task': {'queue': 'corpAZ'},
+    'celery_tasks.corporateAZExpress_task': {'queue': 'corpAZ'},
     'celery_tasks.pdfDocs_task': {'queue': 'corpAZ'},
     'celery_tasks.associates_task': {'queue': 'corpAZ'},
     'celery_tasks.counterparts_task': {'queue': 'corpAZ'},

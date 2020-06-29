@@ -16,6 +16,7 @@ import fad_crawl.helpers.fileDownloader as downloader
 from celery_main import app
 from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.main import corporateazHandler
+from fad_crawl.spiders.main_express import corporateazExpressHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 from fad_crawl.spiders.financeInfo import financeInfoHandler
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
@@ -77,6 +78,15 @@ def corporateAZ_task():
 
     runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(corporateazHandler)
+    d = runner.join()
+
+@app.task
+def corporateAZExpress_task():
+    print("=== CORPORATEAZ-Express SPIDER CRAWLING ===")
+    setup()
+    configure_logging()
+    runner = CrawlerRunner(settings=get_project_settings())
+    runner.crawl(corporateazExpressHandler)
     d = runner.join()
 
 @app.task

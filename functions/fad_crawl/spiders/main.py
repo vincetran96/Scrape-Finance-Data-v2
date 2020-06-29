@@ -10,7 +10,7 @@ import traceback
 
 import redis
 import scrapy
-from scrapy import FormRequest
+from scrapy import FormRequest, Request
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from scrapy_redis.spiders import RedisSpider
@@ -18,12 +18,16 @@ from twisted.internet import reactor
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
-from fad_crawl.spiders.models.corporateaz import closed_redis_key
+from fad_crawl.spiders.models.constants import REDIS_HOST
+from fad_crawl.spiders.models.corporateaz import (business_type,
+                                                  closed_redis_key)
 from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import (name, settings,
+from fad_crawl.spiders.models.corporateaz import (industry_list, name_express,
+                                                  name_regular,
+                                                  settings_express,
+                                                  settings_regular,
                                                   tickers_redis_keys)
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
-from fad_crawl.spiders.models.constants import REDIS_HOST
 
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
@@ -31,13 +35,17 @@ TEST_NUM_PAGES = 2
 
 
 class corporateazHandler(scrapy.Spider):
-    name = name
-    custom_settings = settings
+    name = name_regular
+    custom_settings = settings_regular
 
     def __init__(self, tickers_list="", *args, **kwargs):
         super(corporateazHandler, self).__init__(*args, **kwargs)
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
+        self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        with open(self.statusfilepath, 'w') as statusfile:
+            statusfile.write('running')
+            statusfile.close()
 
     def start_requests(self):
         req = FormRequest(url=az["url"],
@@ -93,14 +101,24 @@ class corporateazHandler(scrapy.Spider):
                                            errback=self.handle_error)
                     yield req_next
             except:
-                self.logger.info("Response is invalid")
+                self.logger.info("Response cannot be parsed by JSON")
+        else:
+            self.logger.info("Response is null")
 
     def closed(self, reason="CorporateAZ Finished"):
         self.r.set(closed_redis_key, "1")
+        self.close_status()
         self.logger.info(
             f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
         self.logger.info(
-            f'Tickers have been pushed into {str(tickers_redis_keys)}')
+            f'Tickers have been pushed into {str(tickers_redis_keys)}')        
 
     def handle_error(self, failure):
         pass
+
+    def close_status(self):
+        """Clear running status file after closing
+        """
+        if os.path.exists(self.statusfilepath):
+            os.remove(self.statusfilepath)
+            self.logger.info(f'Deleted status file at {self.statusfilepath}')
