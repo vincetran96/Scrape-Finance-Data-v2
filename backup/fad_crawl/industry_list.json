@@ -1,0 +1,82 @@
+[
+    {
+        "ID": 100,
+        "Name": "Agriculture Production"
+    },
+    {
+        "ID": 200,
+        "Name": "Mining, Quarrying, and Oil and Gas Extraction"
+    },
+    {
+        "ID": 300,
+        "Name": "Utilities"
+    },
+    {
+        "ID": 400,
+        "Name": "Construction and Real Estate"
+    },
+    {
+        "ID": 500,
+        "Name": "Manufacturing"
+    },
+    {
+        "ID": 600,
+        "Name": "Wholesale Trade"
+    },
+    {
+        "ID": 800,
+        "Name": "Transportation and Warehousing"
+    },
+    {
+        "ID": 900,
+        "Name": "Information and Technology"
+    },
+    {
+        "ID": 1000,
+        "Name": "Finance and Insurance"
+    },
+    {
+        "ID": 1100,
+        "Name": "Rental and Leasing"
+    },
+    {
+        "ID": 1200,
+        "Name": "Professional, Scientific, and Technical Services"
+    },
+    {
+        "ID": 1300,
+        "Name": "Management of Companies and Enterprises"
+    },
+    {
+        "ID": 1400,
+        "Name": "Administrative and Support and Waste Management and Remediation Services"
+    },
+    {
+        "ID": 1500,
+        "Name": "Educational Services"
+    },
+    {
+        "ID": 1600,
+        "Name": "Health Care and Social Assistance"
+    },
+    {
+        "ID": 1700,
+        "Name": "Arts, Entertainment, and Recreation"
+    },
+    {
+        "ID": 1800,
+        "Name": "Accommodation and Food Services"
+    },
+    {
+        "ID": 2000,
+        "Name": "Public Administration"
+    },
+    {
+        "ID": 1900,
+        "Name": "Other Services (except Public Administration)"
+    },
+    {
+        "ID": 700,
+        "Name": "Retail Trade"
+    }
+]

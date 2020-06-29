@@ -23,6 +23,8 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.associatesdetails import data as ass
 from fad_crawl.spiders.models.associatesdetails import name, settings
 
+# Import ES Supporting mudules
+from es_task import *
 
 class associatesHandler(fadRedisSpider):
     name = name
@@ -117,9 +119,14 @@ class associatesHandler(fadRedisSpider):
                     next_page = int(page) + 1
                     self.r.lpush(f'{self.name}:tickers',
                                  f'{ticker};{next_page}')
-
+                
+                # Saving local data files
                 save_jsonfile(
                     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                
+                # ES push task
+                handleES_task.delay(self.name.lower(), ticker, resp_json)
+
                 self.r.srem(self.error_set_key,
                             f'{ticker};{page};{report_type}')
             except:

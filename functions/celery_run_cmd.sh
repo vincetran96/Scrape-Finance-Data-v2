@@ -2,15 +2,16 @@
 
 # clear old files and potentially running workers
 pkill -9 -f 'celery worker'
-rm -rf ./run/celery/*
-rm -rf ./run/scrapy/*
-rm -rf ./logs/*
-rm -rf ./localData/*
+rm -v ./run/celery/*
+rm -v ./run/scrapy/*
+rm -v ./logs/*
+rm -v ./localData/*
+# rm -rf /opt/fad-functions/localData/*
 
 # create workers
 celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
 celery -A celery_main worker -Q finance -c 10 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
-celery -A celery_main worker -Q es -c 10 -n workeres@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
+celery -A celery_main worker -Q es -c 10 -n workeres@%h -l INFO -f logs/workeres.log --detach  --pidfile="./run/celery/%n.pid"
 
 # constantly check if workers are online; if yes run tasks
 while true; do

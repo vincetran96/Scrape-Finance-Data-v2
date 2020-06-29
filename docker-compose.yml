@@ -1,0 +1,27 @@
+version: "3"
+services: 
+    torproxy:
+        image: dperson/torproxy
+        container_name: torproxy
+        environment: 
+            - TOR_NewCircuitPeriod=10
+            - TOR_MaxCircuitDirtiness=60
+        ports: 
+            - 8118:8118
+            - 9050:9050
+    redis:
+        image: redis
+        container_name: fad-redis
+    fad-functions:
+        # image: vincetran/fad-functions
+        build: .
+        command: wait-for-it --service torproxy:8118 --service fad-redis:6379 -- bash ./celery_run_cmd.sh
+        environment: 
+            - PROXY=yes
+            - TORPROXY_HOST=torproxy
+            - REDIS_HOST=fad-redis
+        depends_on: 
+            - torproxy
+            - redis
+        volumes:
+            - ./functions:/opt/fad-functions

@@ -25,6 +25,8 @@ from fad_crawl.spiders.models.counterparts import count_data
 from fad_crawl.spiders.models.counterparts import find_data as ctp
 from fad_crawl.spiders.models.counterparts import name, settings
 
+# Import ES Supporting mudules
+from es_task import *
 
 class counterPartsHandler(fadRedisSpider):
     name = name
@@ -126,8 +128,13 @@ class counterPartsHandler(fadRedisSpider):
                     self.r.lpush(f'{self.name}:tickers', f'{ticker};{pageSize}')
                     self.logger.info(f'CRAWLING {pageSize} COUNTERPARTS OF {ticker}')
                 else:
-                    save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{ticker}_{self.name}.json')
+                    # # Saving local data files
+                    # save_jsonfile(
+                    #     resp_json, filename=f'localData/{self.name}/{ticker}_{self.name}.json')
+                    
+                    # ES push task
+                    handleES_task.delay(self.name.lower(), ticker, resp_json)
+
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
                     self.logger.info(f'CRAWLED COUNTERPARTS OF {ticker}')
