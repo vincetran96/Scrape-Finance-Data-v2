@@ -124,8 +124,8 @@ class ownerStructureHandler(fadRedisSpider):
                                  f'{ticker};{next_page}')
 
                 # Writing local json files.
-                # save_jsonfile(
-                #     resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                save_jsonfile(
+                    resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
                 
                 # ES push task
                 handleES_task.delay(self.name.lower(), ticker, resp_json)

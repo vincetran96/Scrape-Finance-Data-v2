@@ -26,8 +26,8 @@ if __name__ == '__main__':
     
     # prerun_cleanup_task.apply_async(link=g) 
     prerun_cleanup_task.delay()
-    # corporateAZExpress_task.delay()
-    corporateAZ_task.delay()
+    corporateAZExpress_task.delay()
+    # corporateAZ_task.delay()
     # finance_task.delay()
     # associates_task.delay()
     # finance_task.delay()

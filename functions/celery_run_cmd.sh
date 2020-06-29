@@ -5,7 +5,7 @@ pkill -9 -f 'celery worker'
 rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*
-rm -v ./localData/*
+rm -rf ./localData/*
 # rm -rf /opt/fad-functions/localData/*
 
 # create workers

@@ -59,8 +59,7 @@ def prerun_cleanup_task():
     """ Delete all residual Redis keys
     """
     r = redis.Redis(host=REDIS_HOST, decode_responses=True)
-    for k in r.keys('*'):
-        r.delete(k)
+    r.flushdb()
 
 @app.task
 def corporateAZ_task():
@@ -117,8 +116,6 @@ def counterparts_task():
     runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(counterPartsHandler)
     d = runner.join()
-    # d_main.addBoth(lambda _: reactor.stop())
-    # reactor.run()
 
 @app.task
 def majorshareholders_task():

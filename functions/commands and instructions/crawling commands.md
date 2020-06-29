@@ -1,3 +1,6 @@
+# About this file
+This contains crawling commands while this project is in development.
+
 # Requirements outside of pip
 redis
 tor

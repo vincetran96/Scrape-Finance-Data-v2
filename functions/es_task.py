@@ -6,11 +6,13 @@ from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 from fad_crawl.helpers.esGenData import *
 from fad_crawl.helpers.processingData import *
+from fad_crawl.spiders.models.constants import ELASTICSEARCH_HOST
+
 
 @app.task
 def handleES_task(index, id, resp_json = "", finInfoType = ""):
     print("=== UPDATING {} {}: {} DATABASE ===".format(index,finInfoType,id))
-    es = Elasticsearch([{u'host': u'localhost', u'port': 9200}])
+    es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
     output = []
     controlES = True
     #! Set the key value shouldnt have `.`
@@ -370,4 +372,4 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
                 try:
                     helpers.bulk(es, genDataUpd(index,id, docs))
                 except elasticsearch.helpers.errors.BulkIndexError:
-                    helpers.bulk(es, genData(index,id, docs))  
+                    helpers.bulk(es, genData(index,id, docs))           

@@ -12,16 +12,35 @@ services:
     redis:
         image: redis
         container_name: fad-redis
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+        container_name: elasticsearch
+        environment: 
+            - discovery.type=single-node
+        ports:
+            - 9200:9200
+            - 9300:9300
+    kibana:
+        image: docker.elastic.co/kibana/kibana:7.7.1
+        container_name: kibana
+        ports:
+            - 5601:5601
+        depends_on:
+            - elasticsearch
     fad-functions:
         # image: vincetran/fad-functions
         build: .
-        command: wait-for-it --service torproxy:8118 --service fad-redis:6379 -- bash ./celery_run_cmd.sh
+        container_name: fad-functions
+        command: wait-for-it -s torproxy:8118 -s fad-redis:6379 -s elasticsearch:9200 -t 600  -- bash ./celery_run_cmd.sh
         environment: 
             - PROXY=yes
             - TORPROXY_HOST=torproxy
             - REDIS_HOST=fad-redis
+            - ELASTICSEARCH_HOST=elasticsearch
         depends_on: 
             - torproxy
             - redis
+            - elasticsearch
+            - kibana
         volumes:
             - ./functions:/opt/fad-functions
