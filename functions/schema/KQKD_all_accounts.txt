@@ -1,0 +1,215 @@
+Income Statement::
+Income Statement::+ commission
+Income Statement::+ damage assessment expenses
+Income Statement::+ loss adjusting fee, risk assessment
+Income Statement::+ others
+Income Statement::+ risk minimization expenses
+Income Statement::+ salvage expenses
+Income Statement::+ subrogation recovery expenses
+Income Statement::- direct operating expenses
+Income Statement::- dividend reserve
+Income Statement::- income from other activities
+Income Statement::- income on reinsurance assumed
+Income Statement::- income on reinsurance ceded
+Income Statement::- increase/(decrese) in gross unearned premium reserve
+Income Statement::- mathematical reserve for investment profit sharing
+Income Statement::- other direct operating expenses
+Income Statement::- other reinsurance assumed expenses
+Income Statement::- other reinsurance ceded expenses
+Income Statement::- other revenue
+Income Statement::- other underwriting expenses
+Income Statement::- others
+Income Statement::- premium deduction
+Income Statement::- premium returns
+Income Statement::- recoveries from reinsurance ceded
+Income Statement::- reinsurance premium ceded
+Income Statement::- revenue from brokerage services
+Income Statement::- revenue from entrusted auction services
+Income Statement::- revenue from investment advisory services
+Income Statement::- revenue from investment portfolio management services
+Income Statement::- revenue from property lease
+Income Statement::- revenue from securities custody services
+Income Statement::- revenue from securities investment and capital contribution
+Income Statement::- revenue from share issue guarantee and agency activities
+Income Statement::- salvages
+Income Statement::- securities provision expenses/(income from reversal of provision)
+Income Statement::- subrogation recoveries
+Income Statement::-increase/(decrease) in ceded unearned premium reserve
+Income Statement::1. gross written premium
+Income Statement::1. insurance premium (01=01.1+01.2-01.3)
+Income Statement::1. interest income and similar income
+Income Statement::1. revenue
+Income Statement::1. revenue from securities business
+Income Statement::1.1. gains from financial assets at fair value through profit or loss (fvtpl)
+Income Statement::1.2. gains from held to maturity investments
+Income Statement::1.3. interest income from loans and receivables
+Income Statement::1.4. gains from available-for-sale financial assets (afs)
+Income Statement::1.5. gains from hedging derivative tools
+Income Statement::10.  other profit
+Income Statement::10. deductions
+Income Statement::10. general and administrative expenses
+Income Statement::11. claim expenses on retained risks
+Income Statement::11. operating profit
+Income Statement::11. share of associates and joint ventures' result
+Income Statement::11.2. profit after tax taken from funds
+Income Statement::12. claim expenses using catastrophe reserve
+Income Statement::12. other income
+Income Statement::12. profit before tax
+Income Statement::12.1. gains/loss from revaluation of held to maturity investments
+Income Statement::12.2. gains/loss from revaluation of availables-for-sale financial assets
+Income Statement::12.3. other total gains/loss are dividend from investments in subsidiaries, associates, joint-ventures
+Income Statement::12.4. gains/loss from revaluation of derivative financial tools
+Income Statement::12.5. gains/loss from realized and unrealized loss from changes in foreign exchange rates
+Income Statement::12.6. gains/loss from investments in subsidiaries, associates, joint-ventures are not yet divided
+Income Statement::12.7. gains/loss from revaluation of derivative tools
+Income Statement::12.8. gains/loss from revaluation fixed assets by reasonable value model
+Income Statement::13. current corporate income tax expenses
+Income Statement::13. increase in claim reserve
+Income Statement::13.1. cost of providing other goods and services
+Income Statement::13.2. diluted earning per share
+Income Statement::13.other expenses
+Income Statement::14. deferred income tax expenses (*)
+Income Statement::14. other profit
+Income Statement::14. provision for catastrophe reserve
+Income Statement::14.1. gross profit of providing other goods and services
+Income Statement::15.  net profit after tax
+Income Statement::15. other insurance operating expenses
+Income Statement::15. profit before tax
+Income Statement::15. revenue from properties investment
+Income Statement::16. cost of properties investment
+Income Statement::16. current corporate income tax expenses
+Income Statement::16. total direct insurance operating expenses
+Income Statement::16.1 minority interest
+Income Statement::16.2 profit after tax for shareholders of the parents company
+Income Statement::17. deferred income tax expenses (*)
+Income Statement::17. earning per share (vnd)
+Income Statement::17. gross insurance operating profit
+Income Statement::17. profit from properties investment (22=20-21)
+Income Statement::18. net profit after tax
+Income Statement::18. selling expenses
+Income Statement::19. administrative expenses
+Income Statement::19. earnings per share (vnd)
+Income Statement::2. deduction from revenue
+Income Statement::2. deductions
+Income Statement::2. interest expense and similar expenses
+Income Statement::2. reinsurance premium assumed
+Income Statement::2. reinsurance premium ceded
+Income Statement::2.1. loss from financial assets at fair value through profit or loss (fvtpl)
+Income Statement::2.10. expenses of auction and trust activities
+Income Statement::2.11. expenses for secutiries custodian services
+Income Statement::2.12. other expenses
+Income Statement::2.2. loss from held to maturity investments
+Income Statement::2.3. interest expenses, losses from loans and receivables
+Income Statement::2.4. selling loss available-for-sale financial assets (afs)
+Income Statement::2.5. loss from hedging derivative tools
+Income Statement::2.6. expenses for proprietary trading activities
+Income Statement::2.7. expenses for brokerage services
+Income Statement::2.8. expenses for underwriting and issurance agency services
+Income Statement::2.9. expenses for financial advisory services
+Income Statement::20. diluted earnings per share
+Income Statement::20. profit from insurance operating
+Income Statement::21. revenue from financial activities
+Income Statement::22. expenses on financial activities
+Income Statement::22. operating profit
+Income Statement::23. profit form financial activities
+Income Statement::24. other incomes
+Income Statement::25. other expenses
+Income Statement::26. other profits
+Income Statement::27. share of profitin associates and joint ventures
+Income Statement::27. total profit
+Income Statement::28. increasing or decreasing adjustments to define taxable profit
+Income Statement::29. total profit before tax
+Income Statement::3.  net sales
+Income Statement::3. deductions
+Income Statement::3. fee and commission income
+Income Statement::3. net insurance premium  (03=01-02)
+Income Statement::3. net revenue
+Income Statement::3.1. realized and unrealized gain from changes in foreign exchange rates
+Income Statement::3.2. dividends, interest income from demand deposits
+Income Statement::3.3. gains from disposal investments in subsidiaries, associates, joint-ventures
+Income Statement::3.4. other income about investment
+Income Statement::30. equalization reserve
+Income Statement::31. taxable profit
+Income Statement::32. current corporate income tax expenses
+Income Statement::33. deferred income tax expenses (*)
+Income Statement::34. profit after tax
+Income Statement::35. minority interest
+Income Statement::36. profit after tax for shareholders of the parent company
+Income Statement::37.1 earning per share (vnd)
+Income Statement::4. commission on reinsurance ceded and other insurance income (04=04.1+04.2)
+Income Statement::4. cost of goods sold
+Income Statement::4. fee and commission expenses
+Income Statement::4. increase (decrease) in unearned premium reserve and technical reserve
+Income Statement::4. operating expenses
+Income Statement::4.1. realized and unrealized loss from changes in foreign exchange rates
+Income Statement::4.2. borrowing costs
+Income Statement::4.3. loss from disposal investments in subsidiaries, associates, joint-ventures
+Income Statement::4.4. other investment expenses
+Income Statement::5. commissions on reinsurance ceded
+Income Statement::5. gross profit
+Income Statement::5. other income
+Income Statement::6. financial income
+Income Statement::6. general and administrative expenses
+Income Statement::6. other expenses
+Income Statement::6. other income
+Income Statement::7. current corporate income tax expenses
+Income Statement::7. financial expenses
+Income Statement::7. net profit from securities business
+Income Statement::7. total net revenue from insurance business
+Income Statement::7.1.revenue
+Income Statement::8. claim and maturity payment expenses
+Income Statement::8. deferred income tax expenses (*)
+Income Statement::8. increase(decrease) in claim reserves for direct insurance and reinsurance assumed
+Income Statement::8. other incomes
+Income Statement::8. share of associates and joint ventures' result
+Income Statement::9. claim expenses for reinsurance assumed
+Income Statement::9. increase(decrease) in claim reserves related to reinsurance  ceded
+Income Statement::9. other expenses
+Income Statement::9. selling expenses
+Income Statement::9.1. realised profit
+Income Statement::9.2. unrealised profit
+Income Statement::corporate income tax
+Income Statement::dividends and interest income from fvtpl financial assets
+Income Statement::earning per share (vnd)
+Income Statement::financial expenses
+Income Statement::financial income
+Income Statement::gains from revaluation of fvtpl financial assets
+Income Statement::i. net interest income
+Income Statement::ii. net fee and commission income
+Income Statement::iii. net gain/(loss) from foreign currencies and gold trading
+Income Statement::in which: expenses fixing trading error, other error
+Income Statement::increase(decrease) in mathematical reserve
+Income Statement::iv. net gain/(loss) from trading securities
+Income Statement::ix. operating profit before provision for credit losses
+Income Statement::loss from disposals of financial assets at fvtpl
+Income Statement::loss from revaluation of financial assets at fvtpl
+Income Statement::minority's interest
+Income Statement::net income appropriated to ordinary shareholders
+Income Statement::of which: interest expenses
+Income Statement::operating expenses
+Income Statement::operating income
+Income Statement::other comprehensive income after tax
+Income Statement::other comprehensive income attribute to non-controling interest
+Income Statement::other comprehensive income attribute to the parent company's owners
+Income Statement::other income and expenses
+Income Statement::other insurance operating expenses
+Income Statement::profit after tax for shareholders of parent company
+Income Statement::realised gains on disposals of fvtpl financial assets
+Income Statement::selling expenses
+Income Statement::share of associates and joint ventures' result
+Income Statement::total claim expenses
+Income Statement::total claim insurance expenses
+Income Statement::total financial expenses (51->54)
+Income Statement::total financial income  (41->44)
+Income Statement::total other comprehensive income
+Income Statement::transaction cost of acquisition of financial assets at fvtpl
+Income Statement::v. net gain/(loss) from investment securities
+Income Statement::vi. net other income
+Income Statement::vii. income from capital contribution and long-term investments
+Income Statement::viii. operating expenses
+Income Statement::x. provision for credit losses
+Income Statement::xi. profit before tax
+Income Statement::xii. corporate income tax
+Income Statement::xiii. net profit after tax
+Income Statement::xiv. minority interest
+Income Statement::xv. net profit atttributable to the equity holders of the bank

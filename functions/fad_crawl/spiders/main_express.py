@@ -127,13 +127,14 @@ class corporateazExpressHandler(scrapy.Spider):
                 res = json.loads(response.text)
                 # tickers_list = [d["Code"]
                 #                 for d in res]
+                # Only get the first ticker, because it's express!
                 tickers_list = [res[0]["Code"]]
 
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
 
                 # Push tickers into financeInfo and other spiders; also
-                # set biz id and ind id for each ticker - as a key in Redis
+                # set biz id and ind id for each ticker, which is a key in Redis
                 for t in tickers_list:
                     self.r.lpush(tickers_redis_keys[0], f'{t};1')
                     for k in tickers_redis_keys[1:]:
