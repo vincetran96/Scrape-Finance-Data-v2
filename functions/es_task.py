@@ -8,11 +8,11 @@ from fad_crawl.helpers.esGenData import *
 from fad_crawl.helpers.processingData import *
 from fad_crawl.spiders.models.constants import ELASTICSEARCH_HOST
 
+es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
 
 @app.task
 def handleES_task(index, id, resp_json = "", finInfoType = ""):
     print("=== UPDATING {} {}: {} DATABASE ===".format(index,finInfoType,id))
-    es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
     output = []
     controlES = True
     #! Set the key value shouldnt have `.`

@@ -1,4 +1,20 @@
 {
+   "data":
+   {
+   "101":{
+      "des": "assets",
+      "parent": -1,
+      "value": 10000
+   },
+   "102":{
+      "des": "cash",
+      "parent": 101,
+      "value": 10000
+   }
+   }
+}
+
+{
     "update":{
        "_index":"cashflow",
        "_type":"_doc",
