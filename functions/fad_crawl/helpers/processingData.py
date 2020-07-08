@@ -1,11 +1,13 @@
 import re
 import datetime
 
+
 def toNumber(date):
     try:
         return re.findall(r'\d+', date)[0]
     except:
         return ""
+
 
 def getKey(data):
     temp = str(data["YearPeriod"])
@@ -14,6 +16,7 @@ def getKey(data):
     if not str(data["PeriodEnd"]) == "None":
         temp += str(data["PeriodEnd"])
     return (temp, str(data["ID"]))
+
 
 def daysdict(year):
     if (((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)):
@@ -35,7 +38,8 @@ def getDate(chr):
                                     dtc[int(chr[-2:])]).timestamp() * 1000)
     return start, end
 
-def processFinanceInfo(output,_id = ""):
+
+def processFinanceInfo(output, _id=""):
     output_ = []
     for item in output.items():
         start, end = getDate(item[0])
@@ -53,26 +57,62 @@ def processFinanceInfo(output,_id = ""):
                 break
         if not _:
             # Handle when the key is empty
-            item[1][reporttype] = {str(k).replace(".", "").lower() : v for k, v in item[1][reporttype].items()}
+            item[1][reporttype] = {str(k).replace(
+                ".", "").lower(): v for k, v in item[1][reporttype].items()}
             try:
                 if item[1][reporttype][""] == None:
                     del item[1][reporttype][""]
                 else:
-                    print("ERROR: There is a None Key with non-null value at {} when updating {}.".format(_id,reporttype))
+                    print(
+                        "ERROR: There is a None Key with non-null value at {} when updating {}.".format(_id, reporttype))
                     continue
             except:
                 pass
 
             # Generate the ES output
-            output_.append({"timestamp": 
-                                {
-                                    "startdate": start,
-                                    "enddate": end
-                                },
-                            "reporttype" : reporttype,
+            output_.append({"timestamp":
+                            {
+                                "startdate": start,
+                                "enddate": end
+                            },
+                            "reporttype": reporttype,
                             "data": item[1][reporttype],
                             }
-                            )
+                           )
         else:
             continue
     return output_
+
+
+def mappingDict(index):
+    if index == "ownerstructure":
+        return {
+            "shareholderen": "shareholdergroup",
+            "companyid": "companyid",
+            "shares": "shares",
+            "rate": "sharespercentage"
+        }
+    elif index == "majorshareholders":
+        return {
+            "shareholdernamevn" : "shareholdernamevn",
+            "shareholdernameen" : "shareholdernameen",
+            "quantity" : "shares",
+            "ratio": "sharespercentage"
+        }
+    elif index == "ctkhdetails":
+        return {
+            "CompanyID" : "companyid",
+            "IndustryID" : "industryid",
+            "SubIndustry" : "subindustry",
+            "CatID": "catid"
+        }  
+    elif index == "counterparts":
+        return {
+            "StockCode" : "companycode",
+            "CatID" : "catid",
+            "MarketCapital" : "marketcap",
+            "PE": "pe",
+            "PB": "pb",
+        }  
+    else:
+        return {}

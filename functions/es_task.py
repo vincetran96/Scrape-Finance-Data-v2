@@ -10,42 +10,58 @@ from fad_crawl.spiders.models.constants import ELASTICSEARCH_HOST
 
 es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
 
+
 @app.task
 def handleES_task(index, id, resp_json = "", finInfoType = ""):
     print("=== UPDATING {} {}: {} DATABASE ===".format(index,finInfoType,id))
     output = []
     controlES = True
-    #! Set the key value shouldnt have `.`
-    # TODO: Add print line for the case all NONE value so return warning 
-    # TODO: Optimize bulk messages.
-    
+    mapping = mappingDict(index)
+
     ##! This part for data preprocessing 
     # Handle owenerStructure data
-    # DONE
     if index == "ownerstructure":
         for i in resp_json:
-            temp_ = {}
-            temps = i["Details"]
-            for temp in temps:
-                # Process data
-                temp["ClosedDate"] = toNumber(temp["ClosedDate"])
-            temp_["timestamp"] = toNumber(i["ClosedDate"])
-            temp_["ownerStructure"] = [{str(k).replace(".", "").lower() : v for k, v in _.items()} for _ in temps]
-            output.append(temp_)
-    
+            return_ = []
+            for j in i["Details"]:
+                return_.append({mapping[str(k).replace(".", "").lower()]: j[k] 
+                                for k in j.keys() 
+                                if str(k).replace(".", "").lower() in mapping})
+            output.append({
+                "timestamp" : toNumber(i["ClosedDate"]),
+                index : return_
+            })
+
     # Handle majorShareholders data
-    # DONE
     elif index == "majorshareholders":
         for i in resp_json:
-            temp_ = {}
-            temps = i["Details"]
-            for temp in temps:
-                # Process data
-                temp["ShareholderDate"] = toNumber(temp["ShareholderDate"])
-            temp_["timestamp"] = toNumber(i["ShareholderDate"])
-            temp_["Shareholder"] = [{str(k).replace(".", "").lower() : v for k, v in _.items()} for _ in temps]
-            output.append(temp_)
+            return_ = []
+            for j in i["Details"]:
+                return_.append({mapping[str(k).replace(".", "").lower()]: j[k] 
+                                for k in j.keys() 
+                                if str(k).replace(".", "").lower() in mapping})
+            output.append({
+                "timestamp" : toNumber(i["ShareholderDate"]),
+                index : return_
+            })
 
+    # Handle ctkhDetails data: Company info data
+    #! There is a case of Vietstock doesnt store this data, the query return two empty list.
+    elif index == "ctkhdetails":
+        try:
+            helpers.bulk(es, genData(index,
+                                     id, 
+                                     {mapping[k]: resp_json[1][0][k] for k in mapping.keys()}
+                                     )) 
+        except IndexError:
+            print("WARNING: No CompanyInfo data (ctkhDetails) on {}".format(id))
+        controlES = False
+
+    # Handle Counterparts data
+    elif index == "counterparts":
+        for i in resp_json:
+            output.append({mapping[k]: i[k] for k in mapping.keys()})
+        
     # Handle FinanceInfo:LC data
     # DONE
     elif index == "financeinfo" and finInfoType == "LC":
@@ -197,34 +213,6 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
         output = processFinanceInfo(output)
         index = "balancesheets"
 
-    # Handle ctkhDetails data: Company info data
-    # DONE
-    #! There is a case of Vietstock doesnt store this data, the query return two empty list.
-    elif index == "ctkhdetails":
-        try:
-            output = {}
-            output["CompanyID"] = resp_json[1][0]["CompanyID"]
-            output["IndustryID"] = resp_json[1][0]["IndustryID"]
-            output["SubIndustry"] = resp_json[1][0]["SubIndustry"]
-            output["CatID"] = resp_json[1][0]["CatID"]
-            helpers.bulk(es, genData(index,id, output)) 
-        except IndexError:
-            print("WARNING: No CompanyInfo data (ctkhDetails) on {}".format(id))
-        controlES = False
-    
-    # Handle Counterparts data
-    # DONE
-    elif index == "counterparts":
-        output = []
-        for i in resp_json:
-            temp = {}
-            temp["StockCode"] = i["StockCode"]
-            temp["CatID"] = i["CatID"]
-            temp["MarketCapital"] = i["MarketCapital"]
-            temp["PE"] = i["PE"]
-            temp["PB"] = i["PB"]
-            output.append(temp)
-        
 
     # Handle BoardDetails data
     # DONE
@@ -373,3 +361,4 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
                     helpers.bulk(es, genDataUpd(index,id, docs))
                 except elasticsearch.helpers.errors.BulkIndexError:
                     helpers.bulk(es, genData(index,id, docs))           
+
