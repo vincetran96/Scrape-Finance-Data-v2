@@ -5,7 +5,6 @@
 *.rdb
 *.zip
 .env
-playground.*
 test*
 env/
 .mypy_cache/
