@@ -127,8 +127,8 @@ class corporateazExpressHandler(scrapy.Spider):
                 res = json.loads(response.text)
                 # tickers_list = [d["Code"]
                 #                 for d in res]
-                # Only get the first ticker, because it's express!
-                tickers_list = [res[0]["Code"]]
+                # Only get the first and second ticker, because it's express!
+                tickers_list = [res[0]["Code"], res[1]["Code"]]
 
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
