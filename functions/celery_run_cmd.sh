@@ -6,7 +6,6 @@ rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*
 rm -rf ./localData/*
-# rm -rf /opt/fad-functions/localData/*
 
 # create workers
 celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"

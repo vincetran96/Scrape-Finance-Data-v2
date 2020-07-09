@@ -5,14 +5,13 @@
 *.rdb
 *.zip
 .env
-playground.*
 test*
 env/
 .mypy_cache/
 .vscode/
 test.py
 localData/
-*__pycache__
+__pycache__/
 elasticsearch*/
 kibana*/
 .ipynb_checkpoints
