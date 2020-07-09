@@ -4,7 +4,7 @@ import datetime
 
 def toNumber(date):
     try:
-        return re.findall(r'\d+', date)[0]
+        return int(re.findall(r'\d+', date)[0])
     except:
         return ""
 
@@ -94,8 +94,8 @@ def mappingDict(index):
         }
     elif index == "majorshareholders":
         return {
-            "shareholdernamevn" : "shareholdernamevn",
-            "shareholdernameen" : "shareholdernameen",
+            "shareholdernamevn" : "namevn",
+            "shareholdernameen" : "nameen",
             "quantity" : "shares",
             "ratio": "sharespercentage"
         }
@@ -114,5 +114,29 @@ def mappingDict(index):
             "PE": "pe",
             "PB": "pb",
         }  
+    elif index == "boarddetails":
+        return {
+            "CompanyID" : "companyid",
+            "Name" : "name",
+            "YearOfBirth" : "yearofbirth",
+            "PersonalShares": "personalshares",
+            "NationalShares": "nationalshares",
+            "TotalShares": "totalshares",
+            "FromDate": "fromdate",
+            "TitleText": "title",
+            "GradeText": "education",
+            "PositionText": "position"
+        } 
+    elif index == "associatesdetails":
+        return {
+            "CompanyID" : "companyid",
+            "Associates" : "nameen",
+            "Associates_VN" : "namevn",
+            "CharteredCapital": "capital",
+            "OwnerRatio": "ownerratio",
+            "AssociateTypeID": "associatetypeid",
+            "Industry": "industry",
+            "ContributeValue": "contributevalue"
+        }
     else:
         return {}
