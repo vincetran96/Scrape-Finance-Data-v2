@@ -1,648 +1,570 @@
 {
-    "revenue;net revenue": [
-        2206
+    "revenue": [
+        "net revenue",
+        "total net revenue from insurance business"
     ],
-    "deduction from revenue;net revenue": [
-        2218
+    "deduction from revenue": [
+        "net revenue"
     ],
-    "net revenue;gross profit": [
-        2216
+    "net revenue": [
+        "gross profit"
     ],
-    "cost of goods sold;gross profit": [
-        2207
+    "cost of goods sold": [
+        "gross profit"
     ],
-    "gross profit;operating profit": [
-        2217
+    "gross profit": [
+        "operating profit",
+        "net profit from securities business"
     ],
-    "financial income;operating profit": [
-        2221
+    "financial income": [
+        "operating profit",
+        "operating income"
     ],
-    "financial expenses;operating profit": [
-        2222
+    "financial expenses": [
+        "operating profit",
+        "operating income"
     ],
-    "of which interest expenses;of which interest expenses": [
-        2223
+    "of which interest expenses": [
+        "of which interest expenses"
     ],
-    "share of associates and joint ventures result;operating profit": [
-        5321
+    "share of associates and joint ventures result": [
+        "operating profit",
+        "profit before tax"
     ],
-    "selling expenses;operating profit": [
-        2227
+    "selling expenses": [
+        "operating profit",
+        "profit from insurance operating",
+        "net profit from securities business"
     ],
-    "general and administrative expenses;operating profit": [
-        2224
+    "general and administrative expenses": [
+        "operating profit",
+        "net profit from securities business"
     ],
-    "operating profit;profit before tax": [
-        2208
+    "operating profit": [
+        "profit before tax",
+        "total profit"
     ],
-    "other income;other profit": [
-        2225
+    "other income": [
+        "other profit",
+        "2",
+        "net other income"
     ],
-    "other expenses;other profit": [
-        2226,
-        4598
+    "other expenses": [
+        "other profit",
+        "other profits",
+        "operating expenses",
+        "net other income"
     ],
-    "other profit;profit before tax": [
-        2209,
-        4582
+    "other profit": [
+        "profit before tax"
     ],
-    "share of associates and joint ventures result;profit before tax": [
-        2210,
-        4583
+    "profit before tax": [
+        "net profit after tax"
     ],
-    "profit before tax;net profit after tax": [
-        2211,
-        4584,
-        4377
+    "current corporate income tax expenses": [
+        "net profit after tax",
+        "profit after tax",
+        "corporate income tax"
     ],
-    "current corporate income tax expenses;net profit after tax": [
-        2219
+    "deferred income tax expenses": [
+        "net profit after tax",
+        "profit after tax",
+        "corporate income tax"
     ],
-    "deferred income tax expenses;net profit after tax": [
-        2220
+    "net profit after tax": [
+        "profit after tax for shareholders of parent company",
+        "2 profit after tax for shareholders of the parents company",
+        "net profit atttributable to the equity holders of the bank"
     ],
-    "net profit after tax;profit after tax for shareholders of parent company": [
-        2212
+    "minority s interest": [
+        "profit after tax for shareholders of parent company"
     ],
-    "minority s interest;profit after tax for shareholders of parent company": [
-        2213
+    "profit after tax for shareholders of parent company": [
+        "profit after tax for shareholders of parent company"
     ],
-    "profit after tax for shareholders of parent company;profit after tax for shareholders of parent company": [
-        2214
+    "earnings per share vnd": [
+        "earnings per share vnd"
     ],
-    "earnings per share vnd;earnings per share vnd": [
-        2215
+    "diluted earnings per share": [
+        "diluted earnings per share"
     ],
-    "diluted earnings per share;diluted earnings per share": [
-        5316
+    "3": [
+        "net insurance premium 03 01 02"
     ],
-    "operating income;operating income": [
-        5409
+    "gross written premium": [
+        "3"
     ],
-    "gains from financial assets at fair value through profit or loss fvtpl;revenue from securities business": [
-        5434
+    "reinsurance premium assumed": [
+        "3"
     ],
-    "realised gains on disposals of fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl": [
-        5472
+    "increase decrese in gross unearned premium reserve": [
+        "3"
     ],
-    "gains from revaluation of fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl": [
-        5473
+    "reinsurance premium ceded": [
+        "net insurance premium 03 01 02",
+        "reinsurance premium ceded"
     ],
-    "dividends and interest income from fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl": [
-        5474
+    "increase decrease in ceded unearned premium reserve": [
+        "reinsurance premium ceded"
     ],
-    ";gains from financial assets at fair value through profit or loss fvtpl": [
-        5712
+    "deductions": [
+        "net insurance premium 03 01 02",
+        "claim expenses on retained risks",
+        "net sales"
     ],
-    "gains from held to maturity investments;revenue from securities business": [
-        5435
+    "premium deduction": [
+        "deductions"
     ],
-    "interest income from loans and receivables;revenue from securities business": [
-        5436
+    "premium returns": [
+        "deductions"
     ],
-    "gains from available for sale financial assets afs;revenue from securities business": [
-        5437
+    "others": [
+        "deductions",
+        "other underwriting expenses",
+        "other reinsurance assumed expenses",
+        "expenses on financial activities"
     ],
-    "gains from hedging derivative tools;revenue from securities business": [
-        5438
+    "increase decrease in unearned premium reserve and technical reserve": [
+        "net insurance premium 03 01 02"
     ],
-    "revenue from brokerage services;revenue from securities business": [
-        4599
+    "net insurance premium 03 01 02": [
+        "total net revenue from insurance business"
     ],
-    "revenue from securities investment and capital contribution;revenue from securities business": [
-        4600
+    "2": [
+        "total net revenue from insurance business"
     ],
-    "revenue from share issue guarantee and agency activities;revenue from securities business": [
-        4602
+    "commissions on reinsurance ceded": [
+        "2"
     ],
-    "revenue from investment portfolio management services;revenue from securities business": [
-        4601
+    "income on reinsurance assumed": [
+        "other income"
     ],
-    "revenue from investment advisory services;revenue from securities business": [
-        4603
+    "income on reinsurance ceded": [
+        "other income"
     ],
-    "revenue from entrusted auction services;revenue from securities business": [
-        4608
+    "income from other activities": [
+        "other income"
     ],
-    "revenue from securities custody services;revenue from securities business": [
-        4604
+    "total net revenue from insurance business": [
+        "gross insurance operating profit"
     ],
-    "revenue from property lease;revenue from securities business": [
-        4606
+    "claim expenses on retained risks": [
+        "total claim insurance expenses"
     ],
-    "other revenue;revenue from securities business": [
-        4605
+    "total claim expenses": [
+        "cost of providing other goods and services"
     ],
-    "deductions;net sales": [
-        4593
+    "claim and maturity payment expenses": [
+        "claim expenses on retained risks"
     ],
-    "revenue from securities business;net profit from securities business": [
-        4589
+    "claim expenses for reinsurance assumed": [
+        "claim expenses on retained risks"
     ],
-    "net sales;gross profit": [
-        4590
+    "subrogation recoveries": [
+        "deductions"
     ],
-    "operating expenses;operating income": [
-        5410
+    "salvages": [
+        "deductions"
     ],
-    "loss from financial assets at fair value through profit or loss fvtpl;operating expenses": [
-        5439
+    "recoveries from reinsurance ceded": [
+        "total claim insurance expenses"
     ],
-    "loss from disposals of financial assets at fvtpl;operating expenses": [
-        5475
+    "increase decrease in mathematical reserve": [
+        "total claim insurance expenses"
     ],
-    "loss from revaluation of financial assets at fvtpl;operating expenses": [
-        5476
+    "increase decrease in claim reserves for direct insurance and reinsurance assumed": [
+        "total claim insurance expenses"
     ],
-    "transaction cost of acquisition of financial assets at fvtpl;operating expenses": [
-        5477
+    "increase decrease in claim reserves related to reinsurance ceded": [
+        "total claim insurance expenses"
     ],
-    ";operating expenses": [
-        5713,
-        5714
+    "increase in claim reserve": [
+        "total direct insurance operating expenses"
     ],
-    "loss from held to maturity investments;operating expenses": [
-        5440
+    "total claim insurance expenses": [
+        "total direct insurance operating expenses"
     ],
-    "interest expenses losses from loans and receivables;operating expenses": [
-        5441
+    "provision for catastrophe reserve": [
+        "total direct insurance operating expenses"
     ],
-    "selling loss available for sale financial assets afs;operating expenses": [
-        5442
+    "claim expenses using catastrophe reserve": [
+        "total direct insurance operating expenses"
     ],
-    "loss from hedging derivative tools;operating expenses": [
-        5443
+    "other insurance operating expenses": [
+        "total direct insurance operating expenses",
+        "other insurance operating expenses"
     ],
-    "expenses for proprietary trading activities;operating expenses": [
-        5444
+    "commission": [
+        "other insurance operating expenses",
+        "other reinsurance assumed expenses"
     ],
-    "expenses for brokerage services;operating expenses": [
-        5445
+    "other underwriting expenses": [
+        "other insurance operating expenses"
     ],
-    "expenses for underwriting and issurance agency services;operating expenses": [
-        5446
+    "damage assessment expenses": [
+        "other underwriting expenses"
     ],
-    "expenses for financial advisory services;operating expenses": [
-        5447
+    "subrogation recovery expenses": [
+        "other underwriting expenses"
     ],
-    "expenses of auction and trust activities;operating expenses": [
-        5448
+    "salvage expenses": [
+        "other underwriting expenses"
     ],
-    "expenses for secutiries custodian services;operating expenses": [
-        5449
+    "loss adjusting fee risk assessment": [
+        "other underwriting expenses",
+        "other reinsurance assumed expenses"
     ],
-    "other expenses;operating expenses": [
-        5450
+    "risk minimization expenses": [
+        "other underwriting expenses"
     ],
-    "in which expenses fixing trading error other error;operating expenses": [
-        5451
+    "other reinsurance assumed expenses": [
+        "other insurance operating expenses"
     ],
-    "direct operating expenses;operating expenses": [
-        4607
+    "other reinsurance ceded expenses": [
+        "other insurance operating expenses"
     ],
-    "securities provision expenses income from reversal of provision;operating expenses": [
-        4609
+    "other direct operating expenses": [
+        "other insurance operating expenses"
     ],
-    "operating expenses;net profit from securities business": [
-        4591
+    "total direct insurance operating expenses": [
+        "gross insurance operating profit"
     ],
-    "gross profit;net profit from securities business": [
-        4592
+    "cost of providing other goods and services": [
+        "cost of providing other goods and services"
     ],
-    "financial income;operating income": [
-        5411
+    "gross insurance operating profit": [
+        "operating profit"
     ],
-    "realized and unrealized gain from changes in foreign exchange rates;total financial income 41 44": [
-        5452
+    "gross profit of providing other goods and services": [
+        "cost of providing other goods and services"
     ],
-    "dividends interest income from demand deposits;total financial income 41 44": [
-        5453
+    "profit from insurance operating": [
+        "total profit"
     ],
-    "gains from disposal investments in subsidiaries associates joint ventures;total financial income 41 44": [
-        5454
+    "revenue from properties investment": [
+        "profit from properties investment 22 20 21"
     ],
-    "other income about investment;total financial income 41 44": [
-        5455
+    "cost of properties investment": [
+        "profit from properties investment 22 20 21"
     ],
-    "total financial income 41 44;net profit from securities business": [
-        5431
+    "profit from properties investment 22 20 21": [
+        "operating profit"
     ],
-    "financial expenses;operating income": [
-        5412
+    "revenue from financial activities": [
+        "profit form financial activities"
     ],
-    "realized and unrealized loss from changes in foreign exchange rates;total financial expenses 51 54": [
-        5456
+    "expenses on financial activities": [
+        "profit form financial activities"
     ],
-    "borrowing costs;total financial expenses 51 54": [
-        5433
+    "mathematical reserve for investment profit sharing": [
+        "expenses on financial activities"
     ],
-    "loss from disposal investments in subsidiaries associates joint ventures;total financial expenses 51 54": [
-        5457
+    "dividend reserve": [
+        "expenses on financial activities"
     ],
-    "other investment expenses;total financial expenses 51 54": [
-        5458
+    "profit form financial activities": [
+        "operating profit"
     ],
-    "total financial expenses 51 54;net profit from securities business": [
-        5432
+    "administrative expenses": [
+        "operating profit"
     ],
-    "selling expenses;net profit from securities business": [
-        5478
+    "other incomes": [
+        "other profits",
+        "other profit"
     ],
-    "general and administrative expenses;net profit from securities business": [
-        4596
+    "other profits": [
+        "total profit"
     ],
-    "net profit from securities business;profit before tax": [
-        4581
+    "share of profitin associates and joint ventures": [
+        "total profit"
     ],
-    "other income and expenses;operating income": [
-        5413
+    "total profit": [
+        "profit after tax"
     ],
-    "other incomes;other profit": [
-        4597
+    "increasing or decreasing adjustments to define taxable profit": [
+        "total profit before tax"
     ],
-    "realised profit;operating income": [
-        5459
+    "total profit before tax": [
+        "taxable profit"
     ],
-    "unrealised profit;operating income": [
-        5460
+    "equalization reserve": [
+        "profit after tax"
     ],
-    "corporate income tax;net profit after tax": [
-        5479,
-        4382
+    "taxable profit": [
+        "taxable profit"
     ],
-    "current corporate income tax expenses;corporate income tax": [
-        4594,
-        4383
+    "profit after tax": [
+        "profit after tax for shareholders of the parent company"
     ],
-    "deferred income tax expenses;corporate income tax": [
-        4595,
-        4384
+    "minority interest": [
+        "profit after tax for shareholders of the parent company",
+        "net profit atttributable to the equity holders of the bank"
     ],
-    "net profit after tax;2 profit after tax for shareholders of the parents company": [
-        4585
+    "profit after tax for shareholders of the parent company": [
+        "profit after tax for shareholders of the parent company"
     ],
-    "2 profit after tax for shareholders of the parents company;2 profit after tax for shareholders of the parents company": [
-        4587
+    "1 earning per share vnd": [
+        "1 earning per share vnd"
     ],
-    "profit after tax taken from funds;operating income": [
-        5461
+    "operating income": [
+        "operating income"
     ],
-    "1 minority interest;2 profit after tax for shareholders of the parents company": [
-        4586
+    "gains from financial assets at fair value through profit or loss fvtpl": [
+        "revenue from securities business"
     ],
-    "other comprehensive income after tax;operating income": [
-        5429
+    "realised gains on disposals of fvtpl financial assets": [
+        "gains from financial assets at fair value through profit or loss fvtpl"
     ],
-    "gains loss from revaluation of held to maturity investments;operating income": [
-        5462
+    "gains from revaluation of fvtpl financial assets": [
+        "gains from financial assets at fair value through profit or loss fvtpl"
     ],
-    "gains loss from revaluation of availables for sale financial assets;operating income": [
-        5463
+    "dividends and interest income from fvtpl financial assets": [
+        "gains from financial assets at fair value through profit or loss fvtpl"
     ],
-    "other total gains loss are dividend from investments in subsidiaries associates joint ventures;operating income": [
-        5464
+    "": [
+        "gains from financial assets at fair value through profit or loss fvtpl",
+        "operating expenses"
     ],
-    "gains loss from revaluation of derivative financial tools;operating income": [
-        5465
+    "gains from held to maturity investments": [
+        "revenue from securities business"
     ],
-    "gains loss from realized and unrealized loss from changes in foreign exchange rates;operating income": [
-        5466
+    "interest income from loans and receivables": [
+        "revenue from securities business"
     ],
-    "gains loss from investments in subsidiaries associates joint ventures are not yet divided;operating income": [
-        5467
+    "gains from available for sale financial assets afs": [
+        "revenue from securities business"
     ],
-    "gains loss from revaluation of derivative tools;operating income": [
-        5468
+    "gains from hedging derivative tools": [
+        "revenue from securities business"
     ],
-    "gains loss from revaluation fixed assets by reasonable value model;operating income": [
-        5469
+    "revenue from brokerage services": [
+        "revenue from securities business"
     ],
-    "total other comprehensive income;operating income": [
-        5430
+    "revenue from securities investment and capital contribution": [
+        "revenue from securities business"
     ],
-    "other comprehensive income attribute to the parent company s owners;operating income": [
-        5470
+    "revenue from share issue guarantee and agency activities": [
+        "revenue from securities business"
     ],
-    "other comprehensive income attribute to non controling interest;operating income": [
-        5471
+    "revenue from investment portfolio management services": [
+        "revenue from securities business"
     ],
-    "net income appropriated to ordinary shareholders;operating income": [
-        5428
+    "revenue from investment advisory services": [
+        "revenue from securities business"
     ],
-    "earning per share vnd;earning per share vnd": [
-        4588,
-        4381
+    "revenue from entrusted auction services": [
+        "revenue from securities business"
     ],
-    "diluted earning per share;diluted earning per share": [
-        5480
+    "revenue from securities custody services": [
+        "revenue from securities business"
     ],
-    "3;net insurance premium 03 01 02": [
-        5335
+    "revenue from property lease": [
+        "revenue from securities business"
     ],
-    "gross written premium;3": [
-        3207
+    "other revenue": [
+        "revenue from securities business"
     ],
-    "reinsurance premium assumed;3": [
-        3208
+    "revenue from securities business": [
+        "net profit from securities business"
     ],
-    "increase decrese in gross unearned premium reserve;3": [
-        5342
+    "net sales": [
+        "gross profit"
     ],
-    "reinsurance premium ceded;net insurance premium 03 01 02": [
-        5349
+    "operating expenses": [
+        "operating income",
+        "net profit from securities business",
+        "operating profit before provision for credit losses"
     ],
-    "reinsurance premium ceded;reinsurance premium ceded": [
-        3234
+    "loss from financial assets at fair value through profit or loss fvtpl": [
+        "operating expenses"
     ],
-    "increase decrease in ceded unearned premium reserve;reinsurance premium ceded": [
-        5343
+    "loss from disposals of financial assets at fvtpl": [
+        "operating expenses"
     ],
-    "deductions;net insurance premium 03 01 02": [
-        3209
+    "loss from revaluation of financial assets at fvtpl": [
+        "operating expenses"
     ],
-    "premium deduction;deductions": [
-        3235
+    "transaction cost of acquisition of financial assets at fvtpl": [
+        "operating expenses"
     ],
-    "premium returns;deductions": [
-        3236
+    "loss from held to maturity investments": [
+        "operating expenses"
     ],
-    "others;deductions": [
-        3237
+    "interest expenses losses from loans and receivables": [
+        "operating expenses"
     ],
-    "increase decrease in unearned premium reserve and technical reserve;net insurance premium 03 01 02": [
-        3210
+    "selling loss available for sale financial assets afs": [
+        "operating expenses"
     ],
-    "net insurance premium 03 01 02;total net revenue from insurance business": [
-        5336
+    "loss from hedging derivative tools": [
+        "operating expenses"
     ],
-    "2;total net revenue from insurance business": [
-        5337
+    "expenses for proprietary trading activities": [
+        "operating expenses"
     ],
-    "commissions on reinsurance ceded;2": [
-        3211
+    "expenses for brokerage services": [
+        "operating expenses"
     ],
-    "other income;2": [
-        3212
+    "expenses for underwriting and issurance agency services": [
+        "operating expenses"
     ],
-    "income on reinsurance assumed;other income": [
-        3238
+    "expenses for financial advisory services": [
+        "operating expenses"
     ],
-    "income on reinsurance ceded;other income": [
-        3239
+    "expenses of auction and trust activities": [
+        "operating expenses"
     ],
-    "income from other activities;other income": [
-        3240
+    "expenses for secutiries custodian services": [
+        "operating expenses"
     ],
-    "total net revenue from insurance business;gross insurance operating profit": [
-        3204
+    "in which expenses fixing trading error other error": [
+        "operating expenses"
     ],
-    "revenue;total net revenue from insurance business": [
-        4820
+    "direct operating expenses": [
+        "operating expenses"
     ],
-    "claim expenses on retained risks;total claim insurance expenses": [
-        3216
+    "securities provision expenses income from reversal of provision": [
+        "operating expenses"
     ],
-    "total claim expenses;cost of providing other goods and services": [
-        5344
+    "realized and unrealized gain from changes in foreign exchange rates": [
+        "total financial income 41 44"
     ],
-    "claim and maturity payment expenses;claim expenses on retained risks": [
-        3213
+    "dividends interest income from demand deposits": [
+        "total financial income 41 44"
     ],
-    "claim expenses for reinsurance assumed;claim expenses on retained risks": [
-        3214
+    "gains from disposal investments in subsidiaries associates joint ventures": [
+        "total financial income 41 44"
     ],
-    "deductions;claim expenses on retained risks": [
-        3215
+    "other income about investment": [
+        "total financial income 41 44"
     ],
-    "subrogation recoveries;deductions": [
-        3242
+    "total financial income 41 44": [
+        "net profit from securities business"
     ],
-    "salvages;deductions": [
-        3243
+    "realized and unrealized loss from changes in foreign exchange rates": [
+        "total financial expenses 51 54"
     ],
-    "recoveries from reinsurance ceded;total claim insurance expenses": [
-        3241
+    "borrowing costs": [
+        "total financial expenses 51 54"
     ],
-    "increase decrease in mathematical reserve;total claim insurance expenses": [
-        5348
+    "loss from disposal investments in subsidiaries associates joint ventures": [
+        "total financial expenses 51 54"
     ],
-    "increase decrease in claim reserves for direct insurance and reinsurance assumed;total claim insurance expenses": [
-        5338
+    "other investment expenses": [
+        "total financial expenses 51 54"
     ],
-    "increase decrease in claim reserves related to reinsurance ceded;total claim insurance expenses": [
-        5339
+    "total financial expenses 51 54": [
+        "net profit from securities business"
     ],
-    "increase in claim reserve;total direct insurance operating expenses": [
-        3218
+    "net profit from securities business": [
+        "profit before tax"
     ],
-    "total claim insurance expenses;total direct insurance operating expenses": [
-        5340
+    "other income and expenses": [
+        "operating income"
     ],
-    "provision for catastrophe reserve;total direct insurance operating expenses": [
-        3219
+    "realised profit": [
+        "operating income"
     ],
-    "claim expenses using catastrophe reserve;total direct insurance operating expenses": [
-        3217
+    "unrealised profit": [
+        "operating income"
     ],
-    "other insurance operating expenses;total direct insurance operating expenses": [
-        3220
+    "corporate income tax": [
+        "net profit after tax"
     ],
-    "commission;other insurance operating expenses": [
-        4065
+    "2 profit after tax for shareholders of the parents company": [
+        "2 profit after tax for shareholders of the parents company"
     ],
-    "other insurance operating expenses;other insurance operating expenses": [
-        5345
+    "profit after tax taken from funds": [
+        "operating income"
     ],
-    "other underwriting expenses;other insurance operating expenses": [
-        3244
+    "1 minority interest": [
+        "2 profit after tax for shareholders of the parents company"
     ],
-    "damage assessment expenses;other underwriting expenses": [
-        3252
+    "other comprehensive income after tax": [
+        "operating income"
     ],
-    "subrogation recovery expenses;other underwriting expenses": [
-        3253
+    "gains loss from revaluation of held to maturity investments": [
+        "operating income"
     ],
-    "salvage expenses;other underwriting expenses": [
-        3254
+    "gains loss from revaluation of availables for sale financial assets": [
+        "operating income"
     ],
-    "loss adjusting fee risk assessment;other underwriting expenses": [
-        3255
+    "other total gains loss are dividend from investments in subsidiaries associates joint ventures": [
+        "operating income"
     ],
-    "risk minimization expenses;other underwriting expenses": [
-        3256
+    "gains loss from revaluation of derivative financial tools": [
+        "operating income"
     ],
-    "others;other underwriting expenses": [
-        3257
+    "gains loss from realized and unrealized loss from changes in foreign exchange rates": [
+        "operating income"
     ],
-    "other reinsurance assumed expenses;other insurance operating expenses": [
-        3245
+    "gains loss from investments in subsidiaries associates joint ventures are not yet divided": [
+        "operating income"
     ],
-    "commission;other reinsurance assumed expenses": [
-        3258
+    "gains loss from revaluation of derivative tools": [
+        "operating income"
     ],
-    "loss adjusting fee risk assessment;other reinsurance assumed expenses": [
-        3259
+    "gains loss from revaluation fixed assets by reasonable value model": [
+        "operating income"
     ],
-    "others;other reinsurance assumed expenses": [
-        3260
+    "total other comprehensive income": [
+        "operating income"
     ],
-    "other reinsurance ceded expenses;other insurance operating expenses": [
-        3246
+    "other comprehensive income attribute to the parent company s owners": [
+        "operating income"
     ],
-    "other direct operating expenses;other insurance operating expenses": [
-        3247
+    "other comprehensive income attribute to non controling interest": [
+        "operating income"
     ],
-    "total direct insurance operating expenses;gross insurance operating profit": [
-        3221
+    "net income appropriated to ordinary shareholders": [
+        "operating income"
     ],
-    "cost of providing other goods and services;cost of providing other goods and services": [
-        5350
+    "earning per share vnd": [
+        "earning per share vnd"
     ],
-    "gross insurance operating profit;operating profit": [
-        3205
+    "diluted earning per share": [
+        "diluted earning per share"
     ],
-    "gross profit of providing other goods and services;cost of providing other goods and services": [
-        5351
+    "interest income and similar income": [
+        "net interest income"
     ],
-    "profit from insurance operating;total profit": [
-        3197
+    "interest expense and similar expenses": [
+        "net interest income"
     ],
-    "revenue from properties investment;profit from properties investment 22 20 21": [
-        5346
+    "net interest income": [
+        "operating profit before provision for credit losses"
     ],
-    "cost of properties investment;profit from properties investment 22 20 21": [
-        5347
+    "fee and commission income": [
+        "net fee and commission income"
     ],
-    "profit from properties investment 22 20 21;operating profit": [
-        5341
+    "fee and commission expenses": [
+        "net fee and commission income"
     ],
-    "revenue from financial activities;profit form financial activities": [
-        3230
+    "net fee and commission income": [
+        "operating profit before provision for credit losses"
     ],
-    "expenses on financial activities;profit form financial activities": [
-        3222
+    "net gain loss from foreign currencies and gold trading": [
+        "operating profit before provision for credit losses"
     ],
-    "mathematical reserve for investment profit sharing;expenses on financial activities": [
-        3248
+    "net gain loss from trading securities": [
+        "operating profit before provision for credit losses"
     ],
-    "dividend reserve;expenses on financial activities": [
-        3250
+    "net gain loss from investment securities": [
+        "operating profit before provision for credit losses"
     ],
-    "others;expenses on financial activities": [
-        3249
+    "net other income": [
+        "operating profit before provision for credit losses"
     ],
-    "profit form financial activities;operating profit": [
-        3223
+    "income from capital contribution and long term investments": [
+        "operating profit before provision for credit losses"
     ],
-    "selling expenses;profit from insurance operating": [
-        3251
+    "operating profit before provision for credit losses": [
+        "profit before tax"
     ],
-    "administrative expenses;operating profit": [
-        3231
+    "provision for credit losses": [
+        "profit before tax"
     ],
-    "operating profit;total profit": [
-        5352
-    ],
-    "other incomes;other profits": [
-        3232
-    ],
-    "other expenses;other profits": [
-        3233
-    ],
-    "other profits;total profit": [
-        3198
-    ],
-    "share of profitin associates and joint ventures;total profit": [
-        3199
-    ],
-    "total profit;profit after tax": [
-        3224
-    ],
-    "increasing or decreasing adjustments to define taxable profit;total profit before tax": [
-        3225
-    ],
-    "total profit before tax;taxable profit": [
-        3226
-    ],
-    "equalization reserve;profit after tax": [
-        3227
-    ],
-    "taxable profit;taxable profit": [
-        3206
-    ],
-    "current corporate income tax expenses;profit after tax": [
-        3228
-    ],
-    "deferred income tax expenses;profit after tax": [
-        3229
-    ],
-    "profit after tax;profit after tax for shareholders of the parent company": [
-        3200
-    ],
-    "minority interest;profit after tax for shareholders of the parent company": [
-        3201
-    ],
-    "profit after tax for shareholders of the parent company;profit after tax for shareholders of the parent company": [
-        3202
-    ],
-    "1 earning per share vnd;1 earning per share vnd": [
-        3203
-    ],
-    "interest income and similar income;net interest income": [
-        4399
-    ],
-    "interest expense and similar expenses;net interest income": [
-        4396
-    ],
-    "net interest income;operating profit before provision for credit losses": [
-        4385
-    ],
-    "fee and commission income;net fee and commission income": [
-        4397
-    ],
-    "fee and commission expenses;net fee and commission income": [
-        4398
-    ],
-    "net fee and commission income;operating profit before provision for credit losses": [
-        4386
-    ],
-    "net gain loss from foreign currencies and gold trading;operating profit before provision for credit losses": [
-        4387
-    ],
-    "net gain loss from trading securities;operating profit before provision for credit losses": [
-        4388
-    ],
-    "net gain loss from investment securities;operating profit before provision for credit losses": [
-        4389
-    ],
-    "other income;net other income": [
-        4394
-    ],
-    "other expenses;net other income": [
-        4395
-    ],
-    "net other income;operating profit before provision for credit losses": [
-        4390
-    ],
-    "income from capital contribution and long term investments;operating profit before provision for credit losses": [
-        4393
-    ],
-    "operating expenses;operating profit before provision for credit losses": [
-        4391
-    ],
-    "operating profit before provision for credit losses;profit before tax": [
-        4376
-    ],
-    "provision for credit losses;profit before tax": [
-        4392
-    ],
-    "net profit after tax;net profit atttributable to the equity holders of the bank": [
-        4378
-    ],
-    "minority interest;net profit atttributable to the equity holders of the bank": [
-        4379
-    ],
-    "net profit atttributable to the equity holders of the bank;net profit atttributable to the equity holders of the bank": [
-        4380
+    "net profit atttributable to the equity holders of the bank": [
+        "net profit atttributable to the equity holders of the bank"
     ]
 }

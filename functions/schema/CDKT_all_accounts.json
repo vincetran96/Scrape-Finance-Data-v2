@@ -1,1173 +1,841 @@
 {
-    "assets;assets": [
-        2995,
-        4302,
-        3094,
-        4475
-    ],
-    "short term assets;total assets": [
-        3000,
-        3099,
-        4480
-    ],
-    "cash and cash equivalents;short term assets": [
-        3003,
-        3102
-    ],
-    "cash;cash and cash equivalents": [
-        3018,
-        3118,
-        4497
-    ],
-    "cash equivalents;cash and cash equivalents": [
-        3019,
-        3119,
-        4498
-    ],
-    "short term financial investments;short term assets": [
-        3004
-    ],
-    "available for sale securities;short term financial investments": [
-        3020
-    ],
-    "provision for diminution in value of available for sale securities;short term financial investments": [
-        3021
-    ],
-    "held to maturity investments;short term financial investments": [
-        5297
-    ],
-    "short term receivables;short term assets": [
-        3005,
-        3104
-    ],
-    "short term trade accounts receivable;short term receivables": [
-        3022
-    ],
-    "short term prepayments to suppliers;short term receivables": [
-        3023
-    ],
-    "short term inter company receivables;short term receivables": [
-        3024,
-        3123
-    ],
-    "construction contract progress receipts due from customers;short term receivables": [
-        3025,
-        3124
-    ],
-    "short term loan receivables;short term receivables": [
-        5300
-    ],
-    "other short term receivables;short term receivables": [
-        3026
-    ],
-    "provision for short term doubtful debts;short term receivables": [
-        3079,
-        3179
-    ],
-    "assets awaiting resolution;short term receivables": [
-        5299
-    ],
-    "inventories;short term assets": [
-        3006,
-        3105
-    ],
-    "inventories;inventories": [
-        3027,
-        3126
-    ],
-    "provision for decline in value of inventories;inventories": [
-        3080,
-        3180
-    ],
-    "other short term assets;short term assets": [
-        3007,
-        3106,
-        4486
-    ],
-    "short term prepayments;other short term assets": [
-        3028,
-        3127,
-        4507
-    ],
-    "value added tax to be reclaimed;other short term assets": [
-        3029,
-        3128
-    ],
-    "taxes and other receivables from state authorities;other short term assets": [
-        3030,
-        3129,
-        4509
-    ],
-    "government bonds;other short term assets": [
-        5270
-    ],
-    "other short term assets;other short term assets": [
-        3031,
-        3130,
-        4510
-    ],
-    "long term assets;total assets": [
-        3001,
-        3100,
-        4481
-    ],
-    "long term receivables;long term assets": [
-        3008,
-        3107
-    ],
-    "long term trade receivables;long term receivables": [
-        3032,
-        3131,
-        4511
-    ],
-    "long term prepayments to suppliers;long term receivables": [
-        5301,
-        5357
-    ],
-    "capital at inter company;long term receivables": [
-        3033,
-        3132,
-        4512
-    ],
-    "long term inter company receivables;long term receivables": [
-        3034,
-        3133,
-        4513
-    ],
-    "long term loan receivables;long term receivables": [
-        5302,
-        5358
-    ],
-    "other long term receivables;long term receivables": [
-        3081,
-        3181,
-        4566
-    ],
-    "provision for long term doubtful debts;long term receivables": [
-        3082,
-        3182,
-        4567
-    ],
-    "fixed assets;long term assets": [
-        3009,
-        3108,
-        4488
-    ],
-    "tangible fixed assets;fixed assets": [
-        3035,
-        4328,
-        3134,
-        4514
-    ],
-    "cost;tangible fixed assets": [
-        3083,
-        4367,
-        3191,
-        4568
-    ],
-    "accumulated depreciation;tangible fixed assets": [
-        3084,
-        4368,
-        3192,
-        4569
-    ],
-    "financial leased fixed assets;fixed assets": [
-        3036,
-        3135,
-        4515
-    ],
-    "cost;financial leased fixed assets": [
-        3085,
-        3193,
-        4570
-    ],
-    "accumulated depreciation;financial leased fixed assets": [
-        3086,
-        3194,
-        4571
-    ],
-    "intangible fixed assets;fixed assets": [
-        3037,
-        4330,
-        3136,
-        4516
-    ],
-    "cost;intangible fixed assets": [
-        3087,
-        4371,
-        3195,
-        4572
-    ],
-    "accumulated depreciation;intangible fixed assets": [
-        3088,
-        4372,
-        3196,
-        4573
-    ],
-    "investment properties;long term assets": [
-        3010,
-        3109
-    ],
-    "cost;investment properties": [
-        3039,
-        4331,
-        3138
-    ],
-    "accumulated depreciation;investment properties": [
-        3040,
-        4332,
-        3139
-    ],
-    "long term assets in progress;long term assets": [
-        5298
-    ],
-    "long term production in progress;long term assets in progress": [
-        5303
-    ],
-    "construction in progress;long term assets in progress": [
-        3038,
-        3137
-    ],
-    "long term financial investments;long term assets": [
-        3011
-    ],
-    "investments in subsidiaries;long term financial investments": [
-        3041
-    ],
-    "investments in associates joint ventures;long term financial investments": [
-        3042
-    ],
-    "investments in other entities;long term financial investments": [
-        5304
-    ],
-    "provision for diminution in value of long term investments;long term financial investments": [
-        3044
-    ],
-    "held to maturity investments;long term financial investments": [
-        5312
-    ],
-    "other long term investments;long term financial investments": [
-        3043
-    ],
-    "other long term assets;long term assets": [
-        3013,
-        3112,
-        4492
-    ],
-    "long term prepayments;other long term assets": [
-        3045,
-        3143,
-        4524
-    ],
-    "deferred income tax assets;other long term assets": [
-        3046,
-        3144,
-        4525
-    ],
-    "long term equipment supplies spare parts;other long term assets": [
-        5305,
-        5362
-    ],
-    "other long term assets;other long term assets": [
-        3047,
-        3145,
-        4526
-    ],
-    "goodwill;long term assets": [
-        3012,
-        3111
-    ],
-    "total assets;total assets": [
-        2996,
-        4375,
-        3095,
-        4476
-    ],
-    "owner s equity;owner s equity": [
-        2994,
-        3015,
-        3093,
-        3114,
-        4494
-    ],
-    "liabilities;total owner s equity and liabilities": [
-        2997,
-        3096,
-        4477
-    ],
-    "short term liabilities;liabilities": [
-        3014,
-        3113,
-        4493
-    ],
-    "short term trade accounts payable;short term liabilities": [
-        3048
-    ],
-    "short term advances from customers;short term liabilities": [
-        3049
-    ],
-    "taxes and other payables to state authorities;short term liabilities": [
-        3050,
-        3148,
-        4529
-    ],
-    "payable to employees;short term liabilities": [
-        3051,
-        3149,
-        4530
-    ],
-    "short term acrrued expenses;short term liabilities": [
-        3052
-    ],
-    "short term inter company payables;short term liabilities": [
-        3053
-    ],
-    "construction contract progress payments due to suppliers;short term liabilities": [
-        3054,
-        3152
-    ],
-    "short term unearned revenue;short term liabilities": [
-        4804,
-        5368
-    ],
-    "other short term payables;short term liabilities": [
-        3055
-    ],
-    "short term borrowings and financial leases;short term liabilities": [
-        3077
-    ],
-    "provision for short term liabilities;short term liabilities": [
-        3056,
-        3154,
-        4535
-    ],
-    "bonus and welfare fund;short term liabilities": [
-        3074,
-        3172,
-        4553
-    ],
-    "price stabilization fund;short term liabilities": [
-        5306
-    ],
-    "government bonds;short term liabilities": [
-        5269
-    ],
-    "long term liabilities;liabilities": [
-        3017,
-        3116,
-        4496
-    ],
-    "long term trade payables;long term liabilities": [
-        3057,
-        3155,
-        4536
-    ],
-    "long term advances from customers;long term liabilities": [
-        5307
-    ],
-    "long term acrrued expenses;long term liabilities": [
-        5308
-    ],
-    "inter company payables on business capital;long term liabilities": [
-        5309
-    ],
-    "long term inter company payables;long term liabilities": [
-        3058,
-        3156,
-        4537
-    ],
-    "long term unearned revenue;long term liabilities": [
-        4066
-    ],
-    "other long term liabilities;long term liabilities": [
-        3059,
-        3157,
-        4538
-    ],
-    "long term borrowings and financial leases;long term liabilities": [
-        3078
-    ],
-    "convertible bonds;long term liabilities": [
-        5310
-    ],
-    "preferred stock debts;long term liabilities": [
-        5319
-    ],
-    "deferred income tax liabilities;long term liabilities": [
-        3060,
-        3158,
-        4539
-    ],
-    "provision for long term liabilities;long term liabilities": [
-        3062,
-        3160,
-        4541
-    ],
-    "fund for technology development;long term liabilities": [
-        4067,
-        4778,
-        4782
-    ],
-    "provision for severance allowances;long term liabilities": [
-        3061,
-        3159,
-        4540
-    ],
-    "owner s equity;total owner s equity and liabilities": [
-        2998,
-        3097,
-        4478
-    ],
-    "owner s capital;owner s equity": [
-        3063
-    ],
-    "common stock with voting right;owner s capital": [
-        5313
-    ],
-    "preferred stock;owner s capital": [
-        5318
-    ],
-    "share premium;owner s equity": [
-        3064,
-        3162
-    ],
-    "convertible bond option;owner s equity": [
-        5311
-    ],
-    "other capital of owners;owner s equity": [
-        3065,
-        3163
-    ],
-    "treasury shares;owner s equity": [
-        3066,
-        3164
-    ],
-    "assets revaluation differences;owner s equity": [
-        3067,
-        3165,
-        4546
-    ],
-    "foreign exchange differences;owner s equity": [
-        3068,
-        3166,
-        4547
-    ],
-    "investment and development fund;owner s equity": [
-        3069,
-        3167,
-        4548
-    ],
-    "fund to support corporate restructuring;owner s equity": [
-        4073,
-        4779,
-        4574
-    ],
-    "other funds from owner s equity;owner s equity": [
-        3071,
-        4550
-    ],
-    "undistributed earnings after tax;owner s equity": [
-        3072,
-        3170,
-        4551
+    "assets": [
+        "assets"
     ],
-    "accumulated retained earning at the end of the previous period;undistributed earnings after tax": [
-        5314
+    "short term assets": [
+        "total assets"
     ],
-    "undistributed earnings in this period;undistributed earnings after tax": [
-        5315
+    "cash and cash equivalents": [
+        "short term assets",
+        "short term financial assets"
     ],
-    "reserves for investment in construction;owner s equity": [
-        3073,
-        3171,
-        4552
+    "cash": [
+        "cash and cash equivalents"
     ],
-    "minority s interest;owner s equity": [
-        5320
+    "cash equivalents": [
+        "cash and cash equivalents"
     ],
-    "financial reserves;owner s equity": [
-        3070,
-        3168,
-        4549
+    "short term financial investments": [
+        "short term assets"
     ],
-    "other resources and funds;owner s equity": [
-        3016
+    "available for sale securities": [
+        "short term financial investments",
+        "long term securities investments"
     ],
-    "subsidized not for profit funds;other resources and funds": [
-        3075
+    "provision for diminution in value of available for sale securities": [
+        "short term financial investments"
     ],
-    "funds invested in fixed assets;other resources and funds": [
-        3076
+    "held to maturity investments": [
+        "short term financial investments",
+        "long term financial investments",
+        "short term investments",
+        "long term investments"
     ],
-    "minority s interest;total owner s equity and liabilities": [
-        3002
+    "short term receivables": [
+        "short term assets",
+        "short term financial assets"
     ],
-    "total owner s equity and liabilities;total owner s equity and liabilities": [
-        2999,
-        3098,
-        4479
+    "short term trade accounts receivable": [
+        "short term receivables"
     ],
-    "cash gold and silver precious stones;total assets": [
-        4310
+    "short term prepayments to suppliers": [
+        "short term receivables"
     ],
-    "balances with the state bank of vietnam;total assets": [
-        4311
+    "short term inter company receivables": [
+        "short term receivables",
+        "short term financial assets"
     ],
-    "placements at and loans to other credit institutions;total assets": [
-        4312
+    "construction contract progress receipts due from customers": [
+        "short term receivables"
     ],
-    "placements at other credit institutions;placements at and loans to other credit institutions": [
-        4344
+    "short term loan receivables": [
+        "short term receivables",
+        "reinsurance assets"
     ],
-    "loans to other credit institutions;placements at and loans to other credit institutions": [
-        4326
+    "other short term receivables": [
+        "short term receivables"
     ],
-    "provisions for losses and risks;placements at and loans to other credit institutions": [
-        4345
+    "provision for short term doubtful debts": [
+        "short term receivables",
+        "short term financial assets"
     ],
-    "trading securities;total assets": [
-        4313
+    "assets awaiting resolution": [
+        "short term receivables"
     ],
-    "trading securities;trading securities": [
-        4346
+    "inventories": [
+        "short term assets",
+        "inventories",
+        "short term financial assets"
     ],
-    "provisions for diminution in value of trading securities;trading securities": [
-        4347
+    "provision for decline in value of inventories": [
+        "inventories",
+        "short term financial assets"
     ],
-    "derivatives and other financial assets;total assets": [
-        4314
+    "other short term assets": [
+        "short term assets",
+        "other short term assets"
     ],
-    "loans advances and finance leases to customers;total assets": [
-        4315
+    "short term prepayments": [
+        "other short term assets"
     ],
-    "loans advances and finance leases to customers;loans advances and finance leases to customers": [
-        4348
+    "value added tax to be reclaimed": [
+        "other short term assets",
+        "short term financial assets"
     ],
-    "provisions for losses on loans advances and finance leases to customers;loans advances and finance leases to customers": [
-        4349
+    "taxes and other receivables from state authorities": [
+        "other short term assets"
     ],
-    "debt purchased;total assets": [
-        5322
+    "government bonds": [
+        "other short term assets",
+        "short term liabilities"
     ],
-    "debt purchased;debt purchased": [
-        5323
+    "long term assets": [
+        "total assets"
     ],
-    "provision for debt purchased;debt purchased": [
-        5324
+    "long term receivables": [
+        "long term assets",
+        "long term financial assets"
     ],
-    "investment securities;total assets": [
-        4316
+    "long term trade receivables": [
+        "long term receivables"
     ],
-    "available for sales securities;investment securities": [
-        4350
+    "long term prepayments to suppliers": [
+        "long term receivables"
+    ],
+    "capital at inter company": [
+        "long term receivables"
+    ],
+    "long term inter company receivables": [
+        "long term receivables"
     ],
-    "held to maturity securities;investment securities": [
-        4351
+    "long term loan receivables": [
+        "long term receivables"
     ],
-    "provisions for diminution in value of investment securities;investment securities": [
-        4352
+    "other long term receivables": [
+        "long term receivables",
+        "other long term receivables"
     ],
-    "capital contribution and other long term investments;total assets": [
-        4317
+    "provision for long term doubtful debts": [
+        "long term receivables"
     ],
-    "investments in subsidiaries;capital contribution and other long term investments": [
-        4333
+    "fixed assets": [
+        "long term assets",
+        "total assets"
     ],
-    "investments in associates joint ventures;capital contribution and other long term investments": [
-        4354
+    "tangible fixed assets": [
+        "fixed assets"
     ],
-    "other long term investments;capital contribution and other long term investments": [
-        4334
+    "cost": [
+        "tangible fixed assets",
+        "financial leased fixed assets",
+        "intangible fixed assets",
+        "investment properties",
+        "investment property",
+        "finance leased fixed assets"
     ],
-    "provision for diminution in value of long term investments;capital contribution and other long term investments": [
-        4355
+    "accumulated depreciation": [
+        "tangible fixed assets",
+        "financial leased fixed assets",
+        "intangible fixed assets",
+        "investment properties",
+        "investment property",
+        "finance leased fixed assets"
     ],
-    "fixed assets;total assets": [
-        4307
+    "financial leased fixed assets": [
+        "fixed assets"
     ],
-    "finance leased fixed assets;fixed assets": [
-        4329
+    "intangible fixed assets": [
+        "fixed assets"
     ],
-    "cost;finance leased fixed assets": [
-        4369
+    "investment properties": [
+        "long term assets",
+        "total assets"
     ],
-    "accumulated depreciation;finance leased fixed assets": [
-        4370
+    "long term assets in progress": [
+        "long term assets",
+        "long term assets in progress"
     ],
-    "investment properties;total assets": [
-        4308
+    "long term production in progress": [
+        "long term assets in progress"
     ],
-    "other assets;total assets": [
-        4327
+    "construction in progress": [
+        "long term assets in progress",
+        "long term assets"
     ],
-    "accounts receivables;other assets": [
-        4356
+    "long term financial investments": [
+        "long term assets"
     ],
-    "interest and fee receivables;other assets": [
-        4357
+    "investments in subsidiaries": [
+        "long term financial investments",
+        "long term investments",
+        "capital contribution and other long term investments"
     ],
-    "deferred income tax assets;other assets": [
-        4335
+    "investments in associates joint ventures": [
+        "long term financial investments",
+        "long term investments",
+        "capital contribution and other long term investments"
     ],
-    "other assets;other assets": [
-        4366
+    "investments in other entities": [
+        "long term financial investments",
+        "long term investments"
     ],
-    "of which goodwill;of which goodwill": [
-        4309
+    "provision for diminution in value of long term investments": [
+        "long term financial investments",
+        "long term investments",
+        "capital contribution and other long term investments"
     ],
-    "provisions for risks in other assets;other assets": [
-        4358
+    "other long term investments": [
+        "long term financial investments",
+        "long term investments",
+        "capital contribution and other long term investments"
     ],
-    "liabilities and owner s equity;liabilities and owner s equity": [
-        4303
+    "other long term assets": [
+        "long term assets",
+        "other long term assets"
     ],
-    "due to government and borrowings from the state bank of vietnam;total liabilities": [
-        4318
+    "long term prepayments": [
+        "other long term assets"
     ],
-    "placements and borrowings from other credit institutions;total liabilities": [
-        4319
+    "deferred income tax assets": [
+        "other long term assets",
+        "other assets"
     ],
-    "placements from other credit institutions;placements and borrowings from other credit institutions": [
-        4359
+    "long term equipment supplies spare parts": [
+        "other long term assets"
     ],
-    "borrowings from other credit institutions;placements and borrowings from other credit institutions": [
-        4360
+    "goodwill": [
+        "long term assets",
+        "other long term assets"
     ],
-    "deposits from customers;total liabilities": [
-        4320
+    "total assets": [
+        "total assets"
     ],
-    "derivatives and other financial liabilities;total liabilities": [
-        4321
+    "owner s equity": [
+        "owner s equity",
+        "total owner s equity and liabilities"
     ],
-    "funds received from government and institutions investments on behalf of investors syndicated loans of the bank s risks;total liabilities": [
-        4322
+    "liabilities": [
+        "total owner s equity and liabilities"
     ],
-    ";total liabilities": [
-        4323
+    "short term liabilities": [
+        "liabilities"
     ],
-    "other liabilities;total liabilities": [
-        4324
+    "short term trade accounts payable": [
+        "short term liabilities"
     ],
-    "interest and fee payables;other liabilities": [
-        4361
+    "short term advances from customers": [
+        "short term liabilities"
     ],
-    "deferred income tax liabilities;other liabilities": [
-        4336
+    "taxes and other payables to state authorities": [
+        "short term liabilities"
     ],
-    "other liabilities;other liabilities": [
-        4362
+    "payable to employees": [
+        "short term liabilities"
     ],
-    "provisions for contingent liabilities and off balance sheet commitments;other liabilities": [
-        4363
+    "short term acrrued expenses": [
+        "short term liabilities"
     ],
-    "total liabilities;total liabilities and owner s equity": [
-        4304
+    "short term inter company payables": [
+        "short term liabilities"
     ],
-    "capital and reserves;total liabilities and owner s equity": [
-        4325
+    "construction contract progress payments due to suppliers": [
+        "short term liabilities"
     ],
-    "capital;capital and reserves": [
-        4364
+    "short term unearned revenue": [
+        "short term liabilities"
     ],
-    "charter capital;capital": [
-        4337
+    "other short term payables": [
+        "short term liabilities"
     ],
-    "reserves for investments in construction;capital": [
-        4373
+    "short term borrowings and financial leases": [
+        "short term liabilities"
     ],
-    "share premium;capital": [
-        4338
+    "provision for short term liabilities": [
+        "short term liabilities"
     ],
-    "treasury shares;capital": [
-        4340
+    "bonus and welfare fund": [
+        "short term liabilities"
     ],
-    "preferred stock;capital": [
-        4374
+    "price stabilization fund": [
+        "short term liabilities"
     ],
-    "other capital;capital": [
-        4339
+    "long term liabilities": [
+        "liabilities"
     ],
-    "reserves;capital": [
-        4365
+    "long term trade payables": [
+        "long term liabilities"
     ],
-    "foreign exchange differences;capital and reserves": [
-        4342
+    "long term advances from customers": [
+        "long term liabilities"
     ],
-    "assets revaluation differences;capital and reserves": [
-        4341
+    "long term acrrued expenses": [
+        "long term liabilities"
     ],
-    "undistributed earnings after tax accumulated loss;capital and reserves": [
-        4343
+    "inter company payables on business capital": [
+        "long term liabilities"
     ],
-    "minority s interest;capital and reserves": [
-        5699
+    "long term inter company payables": [
+        "long term liabilities"
     ],
-    "minority interest;total liabilities and owner s equity": [
-        4306
+    "long term unearned revenue": [
+        "long term liabilities"
     ],
-    "total liabilities and owner s equity;total liabilities and owner s equity": [
-        4305
+    "other long term liabilities": [
+        "long term liabilities"
     ],
-    "short term investments;short term assets": [
-        3103
+    "long term borrowings and financial leases": [
+        "long term liabilities"
     ],
-    "short term investments;short term investments": [
-        3120,
-        4499
+    "convertible bonds": [
+        "long term liabilities"
     ],
-    "provision for diminution in value of short term investments;short term investments": [
-        4055
+    "preferred stock debts": [
+        "long term liabilities"
     ],
-    "held to maturity investments;short term investments": [
-        5353
+    "deferred income tax liabilities": [
+        "long term liabilities",
+        "other liabilities"
     ],
-    "trade accounts receivable;short term receivables": [
-        3121
+    "provision for long term liabilities": [
+        "long term liabilities"
     ],
-    "insurance contract receivables;trade accounts receivable": [
-        5329
+    "fund for technology development": [
+        "long term liabilities"
     ],
-    "other receivables of customers;trade accounts receivable": [
-        5330
+    "provision for severance allowances": [
+        "long term liabilities"
     ],
-    "prepayments to suppliers;short term receivables": [
-        3122
+    "owner s capital": [
+        "owner s equity"
     ],
-    "short term loan receivables;reinsurance assets": [
-        5355
+    "common stock with voting right": [
+        "owner s capital",
+        "preferred stock"
     ],
-    "other receivables;short term receivables": [
-        3125
+    "preferred stock": [
+        "owner s capital",
+        "capital from owners",
+        "capital",
+        "preferred stock"
     ],
-    "assets waiting for resolution;short term receivables": [
-        5356
+    "share premium": [
+        "owner s equity",
+        "investment capital from owners",
+        "capital"
     ],
-    "unallocated commissions expenses;reinsurance assets": [
-        5331
+    "convertible bond option": [
+        "owner s equity"
     ],
-    "other short term prepaid expenses;reinsurance assets": [
-        5332
+    "other capital of owners": [
+        "owner s equity",
+        "investment capital from owners"
     ],
-    "payables for government bond trading activities;other short term assets": [
-        4776
+    "treasury shares": [
+        "owner s equity",
+        "investment capital from owners",
+        "capital"
     ],
-    "reinsurance assets;short term assets": [
-        5325
+    "assets revaluation differences": [
+        "owner s equity",
+        "capital and reserves"
     ],
-    "reinsurance assets from unearned premium reserves;reinsurance assets": [
-        5326
+    "foreign exchange differences": [
+        "owner s equity",
+        "capital and reserves"
     ],
-    "reinsurance assets from claim reserves;reinsurance assets": [
-        5327
+    "investment and development fund": [
+        "owner s equity"
     ],
-    "long term margin deposits;other long term receivables": [
-        3183
+    "fund to support corporate restructuring": [
+        "owner s equity"
     ],
-    "other long term receivables;other long term receivables": [
-        5359
+    "other funds from owner s equity": [
+        "owner s equity"
     ],
-    "long term assets in progress;long term assets in progress": [
-        5360
+    "undistributed earnings after tax": [
+        "owner s equity"
     ],
-    "long term investments;long term assets": [
-        3110
+    "accumulated retained earning at the end of the previous period": [
+        "undistributed earnings after tax",
+        "accumulated retained earning at the end of the previous period"
     ],
-    "investments in subsidiaries;long term investments": [
-        3140,
-        4520
+    "undistributed earnings in this period": [
+        "undistributed earnings after tax",
+        "accumulated retained earning at the end of the previous period"
     ],
-    "investments in associates joint ventures;long term investments": [
-        3141,
-        4521
+    "reserves for investment in construction": [
+        "owner s equity"
     ],
-    "investments in other entities;long term investments": [
-        5361
+    "minority s interest": [
+        "owner s equity",
+        "total owner s equity and liabilities",
+        "capital and reserves",
+        "minority s interest"
     ],
-    "provision for diminution in value of long term investments;long term investments": [
-        4056,
-        4523
+    "financial reserves": [
+        "owner s equity"
     ],
-    "held to maturity investments;long term investments": [
-        5354
+    "other resources and funds": [
+        "owner s equity"
     ],
-    "other long term investments;long term investments": [
-        3142,
-        4522
+    "subsidized not for profit funds": [
+        "other resources and funds",
+        "budget resources and other funds"
     ],
-    "short term borrowings;short term liabilities": [
-        3177,
-        4558
+    "funds invested in fixed assets": [
+        "other resources and funds",
+        "budget resources and other funds"
     ],
-    "trade accounts payable;short term liabilities": [
-        3146,
-        4527
+    "total owner s equity and liabilities": [
+        "total owner s equity and liabilities"
     ],
-    "insurance contract payable;reinsurance assets": [
-        5333
+    "short term financial assets": [
+        "short term assets"
     ],
-    "other payables to suppliers;reinsurance assets": [
-        5334
+    "short term investments": [
+        "short term financial assets",
+        "short term investments",
+        "short term assets"
     ],
-    "advances from customers;short term liabilities": [
-        3147,
-        4528
+    "short term investments of trust investors": [
+        "short term investments"
     ],
-    "accrued expenses;short term liabilities": [
-        3150,
-        4531
+    "provision for diminution in value of short term investments": [
+        "short term financial assets",
+        "short term investments"
     ],
-    "inter company payables;short term liabilities": [
-        3151,
-        4532
+    "financial assets at fair value through profit or loss fvtpl": [
+        "short term financial assets"
     ],
-    "other payables;short term liabilities": [
-        3153,
-        4534
+    "held to maturity investments htm": [
+        "short term financial assets",
+        "long term investments"
     ],
-    "unearned commission revenues;reinsurance assets": [
-        5328
+    "loans": [
+        "short term financial assets"
     ],
-    "payables for government bond trading activities;short term liabilities": [
-        4775,
-        4576
+    "available for sale financial assets afs": [
+        "short term financial assets"
     ],
-    "reserves;liabilities": [
-        3117
+    "provisions for impairment loss of financial assets and mortgages": [
+        "short term financial assets"
     ],
-    "unearned premium reserve;reserves": [
-        3184
+    "receivables from disposal of financial assets": [
+        "short term receivables"
     ],
-    "claim reserve;reserves": [
-        3186
+    "receivables and accruals from dividends and interest income": [
+        "short term receivables"
     ],
-    "catastrophe reserve;reserves": [
-        3187
+    "due dividend and interest receivables": [
+        "receivables and accruals from dividends and interest income"
     ],
-    "mathematical reserve;reserves": [
-        3185
+    "in which doubtful receivables of dividends interest to date of receipt but not yet received": [
+        "due dividend and interest receivables"
     ],
-    "dividend reserve;reserves": [
-        3188
+    "undue dividend and interest receivables": [
+        "receivables and accruals from dividends and interest income"
     ],
-    "equalization reserve;reserves": [
-        3189
+    "prepayments to suppliers": [
+        "short term financial assets",
+        "short term receivables"
     ],
-    "long term borrowings;long term liabilities": [
-        3178,
-        4562
+    "service related receivable": [
+        "short term financial assets"
     ],
-    "unearned revenue;long term liabilities": [
-        4777,
-        4781
+    "receivables from securities trading activities": [
+        "short term financial assets"
     ],
-    "capital from owners;owner s equity": [
-        3161
+    "receivables of securities trading error": [
+        "short term financial assets"
     ],
-    "common stock with voting right;preferred stock": [
-        5364
+    "other receivables": [
+        "short term financial assets",
+        "short term receivables"
     ],
-    "preferred stock;preferred stock": [
-        5363
+    "provision for doubtful debts": [
+        "short term financial assets"
     ],
-    "compulsory reserves;owner s equity": [
-        3190
+    "trade accounts receivable": [
+        "short term financial assets",
+        "short term receivables"
     ],
-    "other reserves;owner s equity": [
-        3169
+    "advances": [
+        "other short term assets"
     ],
-    "accumulated retained earning at the end of the previous period;accumulated retained earning at the end of the previous period": [
-        5365
+    "office supplies tools": [
+        "other short term assets"
     ],
-    "undistributed earnings in this period;accumulated retained earning at the end of the previous period": [
-        5366
+    "pledged assets mortgages security deposits in short term": [
+        "other short term assets"
     ],
-    "minority s interest;minority s interest": [
-        5367
+    "transaction buy backs governmental bond": [
+        "other short term assets"
     ],
-    "budget resources and other funds;owner s equity": [
-        3115,
-        4495
+    "provision for other short term assets": [
+        "other short term assets"
     ],
-    "subsidized not for profit funds;budget resources and other funds": [
-        3173,
-        4554
+    "long term financial assets": [
+        "long term assets"
     ],
-    "funds invested in fixed assets;budget resources and other funds": [
-        3174,
-        4555
+    "long term investments": [
+        "long term financial assets",
+        "long term assets"
     ],
-    "minority interests;total owner s equity and liabilities": [
-        3101
+    "long term securities investments": [
+        "long term investments"
     ],
-    "short term financial assets;short term assets": [
-        5370
+    "held to maturity securities": [
+        "long term securities investments",
+        "investment securities"
     ],
-    "cash and cash equivalents;short term financial assets": [
-        4774
+    "evaluation tangible fixed assets accounting to fair value": [
+        "tangible fixed assets"
     ],
-    "short term investments;short term financial assets": [
-        4483
+    "evaluation financial leased fixed assetss accounting to fair value": [
+        "financial leased fixed assets"
     ],
-    "short term investments of trust investors;short term investments": [
-        4575
+    "evaluation intangible fixed assets accounting to fair value": [
+        "intangible fixed assets"
     ],
-    "provision for diminution in value of short term investments;short term financial assets": [
-        4500
+    "investment property": [
+        "long term assets"
     ],
-    "financial assets at fair value through profit or loss fvtpl;short term financial assets": [
-        5372
+    "evaluation investment property accounting to fair value": [
+        "investment property"
     ],
-    "held to maturity investments htm;short term financial assets": [
-        5398
+    "pledged assets mortgages security deposits in long term": [
+        "other long term assets"
     ],
-    "loans;short term financial assets": [
-        5373
+    "payment for settlement assistance fund": [
+        "other long term assets"
     ],
-    "available for sale financial assets afs;short term financial assets": [
-        5374
+    "provision for long term assets": [
+        "long term assets"
     ],
-    "provisions for impairment loss of financial assets and mortgages;short term financial assets": [
-        5375
+    "liabilities owner s equity": [
+        "liabilities owner s equity"
     ],
-    "short term receivables;short term financial assets": [
-        4484
+    "short term borrowings": [
+        "short term liabilities",
+        "short term borrowings"
     ],
-    "receivables from disposal of financial assets;short term receivables": [
-        5387
+    "2 short term financial lease liabilities": [
+        "short term borrowings"
     ],
-    "receivables and accruals from dividends and interest income;short term receivables": [
-        5388
+    "short term financial assets borrowings": [
+        "short term liabilities"
     ],
-    "due dividend and interest receivables;receivables and accruals from dividends and interest income": [
-        5389
+    "short term convertible bonds": [
+        "short term liabilities"
     ],
-    "in which doubtful receivables of dividends interest to date of receipt but not yet received;due dividend and interest receivables": [
-        5390
+    "short term bonds": [
+        "short term liabilities"
     ],
-    "undue dividend and interest receivables;receivables and accruals from dividends and interest income": [
-        5391
+    "borrowings settlement assistance fund": [
+        "short term liabilities"
     ],
-    "prepayments to suppliers;short term financial assets": [
-        4502
+    "payables to securities trading activities": [
+        "short term liabilities"
     ],
-    "service related receivable;short term financial assets": [
-        5376
+    "payables to trading error of financial assets": [
+        "short term liabilities"
     ],
-    "receivables from securities trading activities;short term financial assets": [
-        4504
+    "trade accounts payable": [
+        "short term liabilities"
     ],
-    "short term inter company receivables;short term financial assets": [
-        4503
+    "advances from customers": [
+        "short term liabilities",
+        "long term liabilities"
     ],
-    "receivables of securities trading error;short term financial assets": [
-        5377
+    "employee welfare payables": [
+        "short term liabilities"
     ],
-    "other receivables;short term financial assets": [
-        4505
+    "accrued expenses": [
+        "short term liabilities",
+        "long term liabilities"
     ],
-    "provision for doubtful debts;short term financial assets": [
-        5400
+    "inter company payables": [
+        "short term liabilities"
     ],
-    "provision for short term doubtful debts;short term financial assets": [
-        4564
+    "unearned revenue": [
+        "short term liabilities",
+        "long term liabilities"
     ],
-    "trade accounts receivable;short term financial assets": [
-        4501
+    "short term deposits collateral received": [
+        "short term liabilities"
     ],
-    "inventories;short term financial assets": [
-        4485,
-        4506
+    "other payables": [
+        "short term liabilities"
     ],
-    "provision for decline in value of inventories;short term financial assets": [
-        4565
+    "payables for dividends principal and interests on behalf of others": [
+        "short term liabilities"
     ],
-    "advances;other short term assets": [
-        5401
+    "payables to securities issuing organizations": [
+        "short term liabilities"
     ],
-    "office supplies tools;other short term assets": [
-        5402
+    "payables for government bond trading activities": [
+        "short term liabilities",
+        "other short term assets"
     ],
-    "pledged assets mortgages security deposits in short term;other short term assets": [
-        5379
+    "long term borrowings": [
+        "long term liabilities",
+        "long term borrowings"
     ],
-    "value added tax to be reclaimed;short term financial assets": [
-        4508
+    "2 long term financial lease liabilities": [
+        "long term borrowings"
     ],
-    "transaction buy backs governmental bond;other short term assets": [
-        5284
+    "long term financial lease borrowings": [
+        "long term liabilities"
     ],
-    "provision for other short term assets;other short term assets": [
-        5378
+    "long term convertible bonds": [
+        "long term liabilities"
     ],
-    "long term financial assets;long term assets": [
-        5371
+    "long term bonds": [
+        "long term liabilities"
     ],
-    "long term receivables;long term financial assets": [
-        4487
+    "long term deposits collateral received": [
+        "long term liabilities"
     ],
-    "long term investments;long term financial assets": [
-        4490
+    "funds received from trust investors": [
+        "long term liabilities"
     ],
-    "held to maturity investments htm;long term investments": [
-        5399
+    "provision for investor s damage claims": [
+        "long term liabilities"
     ],
-    "long term securities investments;long term investments": [
-        4556
+    "investment capital from owners": [
+        "owner s equity"
     ],
-    "available for sale securities;long term securities investments": [
-        4578
+    "capital from owners": [
+        "investment capital from owners",
+        "owner s equity"
     ],
-    "held to maturity securities;long term securities investments": [
-        4579
+    "common stock": [
+        "capital from owners"
     ],
-    "evaluation tangible fixed assets accounting to fair value;tangible fixed assets": [
-        5392
+    "3 conversion options on convertible bonds": [
+        "investment capital from owners"
     ],
-    "evaluation financial leased fixed assetss accounting to fair value;financial leased fixed assets": [
-        5393
+    "supplementary capital reserve": [
+        "owner s equity"
     ],
-    "evaluation intangible fixed assets accounting to fair value;intangible fixed assets": [
-        5394
+    "realised profits": [
+        "undistributed earnings after tax"
     ],
-    "investment property;long term assets": [
-        4489
+    "unrealised losses": [
+        "undistributed earnings after tax"
     ],
-    "cost;investment property": [
-        4518
+    "minority interest": [
+        "owner s equity",
+        "total liabilities and owner s equity"
     ],
-    "accumulated depreciation;investment property": [
-        4519
+    "budget resources and other funds": [
+        "owner s equity"
     ],
-    "evaluation investment property accounting to fair value;investment property": [
-        5395
+    "realised profits for investor": [
+        "realised profits for investor"
     ],
-    "construction in progress;long term assets": [
-        4517
+    "realised profits for investor in the year": [
+        "realised profits for investor"
     ],
-    "pledged assets mortgages security deposits in long term;other long term assets": [
-        5380
+    "cash gold and silver precious stones": [
+        "total assets"
     ],
-    "payment for settlement assistance fund;other long term assets": [
-        4557
+    "balances with the state bank of vietnam": [
+        "total assets"
     ],
-    "goodwill;other long term assets": [
-        4491
+    "placements at and loans to other credit institutions": [
+        "total assets"
     ],
-    "provision for long term assets;long term assets": [
-        5427
+    "placements at other credit institutions": [
+        "placements at and loans to other credit institutions"
     ],
-    "liabilities owner s equity;liabilities owner s equity": [
-        4474
+    "loans to other credit institutions": [
+        "placements at and loans to other credit institutions"
     ],
-    "short term borrowings;short term borrowings": [
-        5414
+    "provisions for losses and risks": [
+        "placements at and loans to other credit institutions"
     ],
-    "2 short term financial lease liabilities;short term borrowings": [
-        5396
+    "trading securities": [
+        "total assets",
+        "trading securities"
     ],
-    "short term financial assets borrowings;short term liabilities": [
-        5381
+    "provisions for diminution in value of trading securities": [
+        "trading securities"
     ],
-    "short term convertible bonds;short term liabilities": [
-        5382
+    "derivatives and other financial assets": [
+        "total assets"
     ],
-    "short term bonds;short term liabilities": [
-        5415
+    "loans advances and finance leases to customers": [
+        "total assets",
+        "loans advances and finance leases to customers"
     ],
-    "borrowings settlement assistance fund;short term liabilities": [
-        5383
+    "provisions for losses on loans advances and finance leases to customers": [
+        "loans advances and finance leases to customers"
     ],
-    "payables to securities trading activities;short term liabilities": [
-        4559
+    "debt purchased": [
+        "total assets",
+        "debt purchased"
     ],
-    "payables to trading error of financial assets;short term liabilities": [
-        5416
+    "provision for debt purchased": [
+        "debt purchased"
     ],
-    "employee welfare payables;short term liabilities": [
-        5417
+    "investment securities": [
+        "total assets"
     ],
-    "unearned revenue;short term liabilities": [
-        4819
+    "available for sales securities": [
+        "investment securities"
     ],
-    "short term deposits collateral received;short term liabilities": [
-        5384
+    "provisions for diminution in value of investment securities": [
+        "investment securities"
     ],
-    "payables for dividends principal and interests on behalf of others;short term liabilities": [
-        4560
+    "capital contribution and other long term investments": [
+        "total assets"
     ],
-    "payables to securities issuing organizations;short term liabilities": [
-        4561
+    "finance leased fixed assets": [
+        "fixed assets"
     ],
-    "long term borrowings;long term borrowings": [
-        5420
+    "other assets": [
+        "total assets",
+        "other assets"
     ],
-    "2 long term financial lease liabilities;long term borrowings": [
-        5397
+    "accounts receivables": [
+        "other assets"
     ],
-    "long term financial lease borrowings;long term liabilities": [
-        5386
+    "interest and fee receivables": [
+        "other assets"
     ],
-    "long term convertible bonds;long term liabilities": [
-        5418
+    "of which goodwill": [
+        "of which goodwill"
     ],
-    "long term bonds;long term liabilities": [
-        5419
+    "provisions for risks in other assets": [
+        "other assets"
     ],
-    "advances from customers;long term liabilities": [
-        5403
+    "liabilities and owner s equity": [
+        "liabilities and owner s equity"
     ],
-    "accrued expenses;long term liabilities": [
-        5404
+    "due to government and borrowings from the state bank of vietnam": [
+        "total liabilities"
     ],
-    "long term deposits collateral received;long term liabilities": [
-        5421
+    "placements and borrowings from other credit institutions": [
+        "total liabilities"
     ],
-    "funds received from trust investors;long term liabilities": [
-        4563
+    "placements from other credit institutions": [
+        "placements and borrowings from other credit institutions"
     ],
-    "provision for investor s damage claims;long term liabilities": [
-        4577
+    "borrowings from other credit institutions": [
+        "placements and borrowings from other credit institutions"
     ],
-    "investment capital from owners;owner s equity": [
-        5422
+    "deposits from customers": [
+        "total liabilities"
     ],
-    "capital from owners;investment capital from owners": [
-        4542
+    "derivatives and other financial liabilities": [
+        "total liabilities"
     ],
-    "common stock;capital from owners": [
-        5424
+    "funds received from government and institutions investments on behalf of investors syndicated loans of the bank s risks": [
+        "total liabilities"
     ],
-    "preferred stock;capital from owners": [
-        5423
+    "": [
+        "total liabilities"
     ],
-    "share premium;investment capital from owners": [
-        4543
+    "other liabilities": [
+        "total liabilities",
+        "other liabilities"
     ],
-    "3 conversion options on convertible bonds;investment capital from owners": [
-        5425
+    "interest and fee payables": [
+        "other liabilities"
     ],
-    "other capital of owners;investment capital from owners": [
-        4544
+    "provisions for contingent liabilities and off balance sheet commitments": [
+        "other liabilities"
     ],
-    "treasury shares;investment capital from owners": [
-        4545
+    "total liabilities": [
+        "total liabilities and owner s equity"
     ],
-    "supplementary capital reserve;owner s equity": [
-        5426
+    "capital and reserves": [
+        "total liabilities and owner s equity"
     ],
-    "realised profits;undistributed earnings after tax": [
-        5407
+    "capital": [
+        "capital and reserves"
     ],
-    "unrealised losses;undistributed earnings after tax": [
-        5408
+    "charter capital": [
+        "capital"
     ],
-    "minority interest;owner s equity": [
-        4482
+    "reserves for investments in construction": [
+        "capital"
     ],
-    "realised profits for investor;realised profits for investor": [
-        5405
+    "other capital": [
+        "capital"
     ],
-    "realised profits for investor in the year;realised profits for investor": [
-        5406
+    "reserves": [
+        "capital",
+        "liabilities"
+    ],
+    "undistributed earnings after tax accumulated loss": [
+        "capital and reserves"
+    ],
+    "total liabilities and owner s equity": [
+        "total liabilities and owner s equity"
+    ],
+    "insurance contract receivables": [
+        "trade accounts receivable"
+    ],
+    "other receivables of customers": [
+        "trade accounts receivable"
+    ],
+    "assets waiting for resolution": [
+        "short term receivables"
+    ],
+    "unallocated commissions expenses": [
+        "reinsurance assets"
+    ],
+    "other short term prepaid expenses": [
+        "reinsurance assets"
+    ],
+    "reinsurance assets": [
+        "short term assets"
+    ],
+    "reinsurance assets from unearned premium reserves": [
+        "reinsurance assets"
+    ],
+    "reinsurance assets from claim reserves": [
+        "reinsurance assets"
+    ],
+    "long term margin deposits": [
+        "other long term receivables"
+    ],
+    "insurance contract payable": [
+        "reinsurance assets"
+    ],
+    "other payables to suppliers": [
+        "reinsurance assets"
+    ],
+    "unearned commission revenues": [
+        "reinsurance assets"
+    ],
+    "unearned premium reserve": [
+        "reserves"
+    ],
+    "claim reserve": [
+        "reserves"
+    ],
+    "catastrophe reserve": [
+        "reserves"
+    ],
+    "mathematical reserve": [
+        "reserves"
+    ],
+    "dividend reserve": [
+        "reserves"
+    ],
+    "equalization reserve": [
+        "reserves"
+    ],
+    "compulsory reserves": [
+        "owner s equity"
+    ],
+    "other reserves": [
+        "owner s equity"
+    ],
+    "minority interests": [
+        "total owner s equity and liabilities"
     ]
 }
