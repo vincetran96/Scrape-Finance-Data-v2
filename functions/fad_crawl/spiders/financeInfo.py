@@ -132,21 +132,21 @@ class financeInfoHandler(fadRedisSpider):
 
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
-                # bizType_title, ind_name = self.r.get(ticker).split(";")
+                bizType_title, ind_name = self.r.get(ticker).split(";")
 
                 if resp_json[0] == []:
                     self.logger.info(
                         f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
                 else:
                     # Writing local data files
-                    # save_jsonfile(
-                    #     resp_json, filename=f'localData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                    save_jsonfile(
+                        resp_json, filename=f'localData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     # save_jsonfile(
                     #     resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     # ES push task
-                    handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
+                    # handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
 
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')

@@ -5,6 +5,7 @@
 import json
 import logging
 import os
+import random
 import sys
 import traceback
 
@@ -29,9 +30,9 @@ from fad_crawl.spiders.models.corporateaz import (industry_list, name_express,
                                                   tickers_redis_keys)
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
 
-
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
 TEST_NUM_PAGES = 2
+SAMPLE_SIZE = 5
 
 
 class corporateazExpressHandler(scrapy.Spider):
@@ -125,10 +126,13 @@ class corporateazExpressHandler(scrapy.Spider):
 
             try:
                 res = json.loads(response.text)
-                # tickers_list = [d["Code"]
-                #                 for d in res]
-                # Only get the first and second ticker, because it's express!
-                tickers_list = [res[0]["Code"], res[1]["Code"]]
+                # tickers_list = [d["Code"] for d in res]
+                # Only get random 3 tickers, because it's express!
+                if SAMPLE_SIZE <= len(res):
+                    rand = random.sample(res, SAMPLE_SIZE)
+                else:
+                    rand = res
+                tickers_list = [d['Code'] for d in rand]
 
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
@@ -145,29 +149,6 @@ class corporateazExpressHandler(scrapy.Spider):
                 # If current page < total pages, send next request
                 total_pages = res[0]['TotalRecord'] // int(
                     constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
-
-                # if page < total_pages:
-                #     next_page = str(page + 1)
-                #     az["meta"]["bizType_id"] = bizType_id
-                #     az["meta"]["bizType_title"] = bizType_title
-                #     az["meta"]["ind_id"] = ind_id
-                #     az["meta"]["ind_name"] = ind_name
-                #     az["meta"]["page"] = next_page
-                #     az["meta"]["TotalPages"] = str(total_pages)
-                #     az["formdata"]["businessTypeID"] = bizType_id
-                #     az["formdata"]["industryID"] = ind_id
-                #     az["formdata"]["orderBy"] = "TotalShare"
-                #     az["formdsata"]["orderDir"] = "DESC"
-                #     az["formdata"]["page"] = next_page
-
-                #     req_next = FormRequest(url=az["url"],
-                #                            formdata=az["formdata"],
-                #                            headers=az["headers"],
-                #                            cookies=az["cookies"],
-                #                            meta=az["meta"],
-                #                            callback=self.parse,
-                #                            errback=self.handle_error)
-                #     yield req_next
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
         else:

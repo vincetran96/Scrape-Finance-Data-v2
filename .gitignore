@@ -9,6 +9,7 @@ test*
 env/
 .mypy_cache/
 .vscode/
+.~lock*
 test.py
 localData/
 __pycache__/
