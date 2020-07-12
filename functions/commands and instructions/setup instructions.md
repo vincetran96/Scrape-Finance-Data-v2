@@ -28,10 +28,9 @@ docker pull python:3.7.7-slim-buster
 ### Run the following containers
 ```
 docker run -d -p 6379:6379 --rm --net fad --name fad-redis redis
-docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --rm --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
-docker run -d -p 5601:5601 --rm --net fad --link elasticsearch:elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 docker run -it -d -p 8118:8118 -p 9050:9050 --rm --net fad --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
-docker run -it --rm --net fad --name fad-functions --env PROXY='yes' --env REDIS_HOST='fad-redis' --env TORPROXY_HOST='torproxy' fad_fad-functions bash
+docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --rm --net fad --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+docker run -d -p 5601:5601 --rm --net fad --link elasticsearch:elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 ```
 Note that Tor circuit age to be reused is at max = 60 seconds (`TOR_MaxCircuitDirtiness`), attempt to change circuit every 10 seconds (`TOR_NewCircuitPeriod`).
 

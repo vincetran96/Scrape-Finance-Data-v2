@@ -1,0 +1,272 @@
+{
+    "Income Statement": {
+        "operating income;operating income;doanh thu hoạt động": [
+            5409
+        ],
+        "gains from financial assets at fair value through profit or loss fvtpl;revenue from securities business;lãi từ các tài sản tài chính ghi nhận thông qua lãi lỗ fvtpl": [
+            5434
+        ],
+        "realised gains on disposals of fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl;lãi bán các tài sản tài chính": [
+            5472
+        ],
+        "gains from revaluation of fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl;chênh lệch tăng đánh giá lại các tstc thông qua lãi lỗ": [
+            5473
+        ],
+        "dividends and interest income from fvtpl financial assets;gains from financial assets at fair value through profit or loss fvtpl;cổ tức tiền lãi phát sinh từ tài sản tài chính pvtpl": [
+            5474
+        ],
+        ";gains from financial assets at fair value through profit or loss fvtpl;": [
+            5712
+        ],
+        "gains from held to maturity investments;revenue from securities business;lãi từ các khoản đầu tư nắm giữ đến ngày đáo hạn htm": [
+            5435
+        ],
+        "interest income from loans and receivables;revenue from securities business;lãi từ các khoản cho vay và phải thu": [
+            5436
+        ],
+        "gains from available for sale financial assets afs;revenue from securities business;lãi từ các tài sản tài chính sẵn sàng để bán afs": [
+            5437
+        ],
+        "gains from hedging derivative tools;revenue from securities business;lãi từ các công cụ phái sinh phòng ngừa rủi ro": [
+            5438
+        ],
+        "revenue from brokerage services;revenue from securities business;doanh thu môi giới chứng khoán": [
+            4599
+        ],
+        "revenue from securities investment and capital contribution;revenue from securities business;doanh thu hoạt động đầu tư chứng khoán góp vốn": [
+            4600
+        ],
+        "revenue from share issue guarantee and agency activities;revenue from securities business;doanh thu bảo lãnh phát hành đại lý phát hành chứng khoán": [
+            4602
+        ],
+        "revenue from investment portfolio management services;revenue from securities business;doanh thu quản lý danh mục đầu tư cho người uỷ thác đầu tư": [
+            4601
+        ],
+        "revenue from investment advisory services;revenue from securities business;doanh thu hoạt động tư vấn": [
+            4603
+        ],
+        "revenue from entrusted auction services;revenue from securities business;doanh thu hoạt động ủy thác đấu giá": [
+            4608
+        ],
+        "revenue from securities custody services;revenue from securities business;doanh thu lưu ký chứng khoán": [
+            4604
+        ],
+        "revenue from property lease;revenue from securities business;doanh thu cho thuê sử dụng tài sản": [
+            4606
+        ],
+        "other revenue;revenue from securities business;thu nhập hoạt động khác": [
+            4605
+        ],
+        "deductions;net sales;các khoản giảm trừ doanh thu": [
+            4593
+        ],
+        "revenue from securities business;net profit from securities business;cộng doanh thu hoạt động 01 11": [
+            4589
+        ],
+        "net sales;gross profit;doanh thu thuần": [
+            4590
+        ],
+        "operating expenses;operating income;chi phí hoạt động": [
+            5410
+        ],
+        "loss from financial assets at fair value through profit or loss fvtpl;operating expenses;lỗ các tài sản tài chính ghi nhận thông qua lỗ fvtpl": [
+            5439
+        ],
+        "loss from disposals of financial assets at fvtpl;operating expenses;lỗ bán các tài sản tài chính": [
+            5475
+        ],
+        "loss from revaluation of financial assets at fvtpl;operating expenses;chênh lệch giảm đánh giá lại các tstc thông qua lãi lỗ": [
+            5476
+        ],
+        "transaction cost of acquisition of financial assets at fvtpl;operating expenses;chi phí giao dịch mua các tài sản tài chính fvtpl": [
+            5477
+        ],
+        ";operating expenses;": [
+            5713,
+            5714
+        ],
+        "loss from held to maturity investments;operating expenses;lỗ các khoản đầu tư năm giữ đến ngày đáo hạn htm": [
+            5440
+        ],
+        "interest expenses losses from loans and receivables;operating expenses;chi phí lãi vay lỗ từ các khoản cho vay và phải thu": [
+            5441
+        ],
+        "selling loss available for sale financial assets afs;operating expenses;4 lỗ bán các tài sản tài chính sẵn sàng để bán afs": [
+            5442
+        ],
+        "loss from hedging derivative tools;operating expenses;lỗ từ các tài sản tài chính phái sinh phòng ngừa rủi ro": [
+            5443
+        ],
+        "expenses for proprietary trading activities;operating expenses;chi phí hoạt động tự doanh": [
+            5444
+        ],
+        "expenses for brokerage services;operating expenses;chi phí môi giới chứng khoán": [
+            5445
+        ],
+        "expenses for underwriting and issurance agency services;operating expenses;chi phí hoạt động bảo lãnh đại lý phát hành chứng khoán": [
+            5446
+        ],
+        "expenses for financial advisory services;operating expenses;chi phí tư vấn": [
+            5447
+        ],
+        "expenses of auction and trust activities;operating expenses;chi phí hoạt động đấu giá ủy thác": [
+            5448
+        ],
+        "expenses for secutiries custodian services;operating expenses;chi phí lưu ký chứng khoán": [
+            5449
+        ],
+        "other expenses;operating expenses;chi phí khác": [
+            5450
+        ],
+        "in which expenses fixing trading error other error;operating expenses;trong đó chi phí sửa lỗi giao dịch chứng khoán lỗi khác": [
+            5451
+        ],
+        "direct operating expenses;operating expenses;chi phí trực tiếp hoạt động kinh doanh chứng khoán": [
+            4607
+        ],
+        "securities provision expenses income from reversal of provision;operating expenses;chi phí dự phòng chứng khoán": [
+            4609
+        ],
+        "operating expenses;net profit from securities business;cộng chi phí hoạt động 21 33": [
+            4591
+        ],
+        "gross profit;net profit from securities business;lợi nhuận gộp của hoạt động kinh doanh": [
+            4592
+        ],
+        "financial income;operating income;doanh thu hoạt động tài chính": [
+            5411
+        ],
+        "realized and unrealized gain from changes in foreign exchange rates;total financial income 41 44;chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện": [
+            5452
+        ],
+        "dividends interest income from demand deposits;total financial income 41 44;doanh thu dự thu cổ tức lãi tiền gửi không cố định phát sinh trong kỳ": [
+            5453
+        ],
+        "gains from disposal investments in subsidiaries associates joint ventures;total financial income 41 44;lãi bán thanh lý các khoản đầu tư vào công ty con liên kết liên doanh": [
+            5454
+        ],
+        "other income about investment;total financial income 41 44;doanh thu khác về đầu tư": [
+            5455
+        ],
+        "total financial income 41 44;net profit from securities business;cộng doanh thu hoạt động tài chính 41 44": [
+            5431
+        ],
+        "financial expenses;operating income;chí phí tài chính": [
+            5412
+        ],
+        "realized and unrealized loss from changes in foreign exchange rates;total financial expenses 51 54;chênh lệch lỗ tỷ giá hối đoái đã và chưa thưc hiện": [
+            5456
+        ],
+        "borrowing costs;total financial expenses 51 54;chi phí lãi vay": [
+            5433
+        ],
+        "loss from disposal investments in subsidiaries associates joint ventures;total financial expenses 51 54;lỗ bán thanh lý các khoản đầu tư vào công ty con liên kết liên doanh": [
+            5457
+        ],
+        "other investment expenses;total financial expenses 51 54;chi phí đầu tư khác": [
+            5458
+        ],
+        "total financial expenses 51 54;net profit from securities business;cộng chi phí tài chính 51 54": [
+            5432
+        ],
+        "selling expenses;net profit from securities business;chi phí bán hàng": [
+            5478
+        ],
+        "general and administrative expenses;net profit from securities business;chi phí quản lý công ty chứng khoán": [
+            4596
+        ],
+        "net profit from securities business;profit before tax;kết quả hoạt động 20 50 40 60 61 62": [
+            4581
+        ],
+        "other income and expenses;operating income;thu nhập khác và chi phí khác": [
+            5413
+        ],
+        "other incomes;other profit;thu nhập khác": [
+            4597
+        ],
+        "other expenses;other profit;chi phí khác": [
+            4598
+        ],
+        "other profit;profit before tax;cộng kết quả hoạt động khác 71 72": [
+            4582
+        ],
+        "share of associates and joint ventures result;profit before tax;lãi lỗ từ công ty liên doanh liên kết": [
+            4583
+        ],
+        "profit before tax;net profit after tax;tổng lợi nhuận kế toán trước thuế 70 80": [
+            4584
+        ],
+        "realised profit;operating income;lợi nhuận đã thực hiện": [
+            5459
+        ],
+        "unrealised profit;operating income;lợi nhuận chưa thực hiện": [
+            5460
+        ],
+        "corporate income tax;net profit after tax;chi phí thuế thu nhập doanh nghiệp": [
+            5479
+        ],
+        "current corporate income tax expenses;corporate income tax;chi phí thuế tndn hiện hành": [
+            4594
+        ],
+        "deferred income tax expenses;corporate income tax;chi phí thuế tndn hoãn lại": [
+            4595
+        ],
+        "net profit after tax;2 profit after tax for shareholders of the parents company;lợi nhuận kế toán sau thuế tndn 90 100": [
+            4585
+        ],
+        "2 profit after tax for shareholders of the parents company;2 profit after tax for shareholders of the parents company;lợi nhuận sau thuế phân bổ cho chủ sở hữu": [
+            4587
+        ],
+        "profit after tax taken from funds;operating income;lợi nhuận sau thuế trích các quỹ quỹ dự trữ điều lệ quỹ dự phòng tài chính và rủi ro nghề nghiệp theo quy định của điều lệ công ty là": [
+            5461
+        ],
+        "1 minority interest;2 profit after tax for shareholders of the parents company;lợi nhuận thuần phân bổ cho lợi ích cổ đông không kiểm soát": [
+            4586
+        ],
+        "other comprehensive income after tax;operating income;thu nhập lỗ toàn diện khác sau thuế tndn": [
+            5429
+        ],
+        "gains loss from revaluation of held to maturity investments;operating income;lãi lỗ từ đánh giá lại các khoản đầu tư giữ đến ngày đáo hạn": [
+            5462
+        ],
+        "gains loss from revaluation of availables for sale financial assets;operating income;lãi lỗ từ đánh giá lại các tài sản tài chính sẵn sàng để bán": [
+            5463
+        ],
+        "other total gains loss are dividend from investments in subsidiaries associates joint ventures;operating income;lãi lỗ toàn diện khác được chia từ hoạt động đầu tư vào công ty con đầu tư liên kết liên doanh": [
+            5464
+        ],
+        "gains loss from revaluation of derivative financial tools;operating income;lãi lỗ từ đánh giá lại các công cụ tài chính phái sinh": [
+            5465
+        ],
+        "gains loss from realized and unrealized loss from changes in foreign exchange rates;operating income;lãi lỗ chênh lệch tỷ giá của hoạt động tại nước ngoài": [
+            5466
+        ],
+        "gains loss from investments in subsidiaries associates joint ventures are not yet divided;operating income;công ty liên kết liên doanh chưa chia": [
+            5467
+        ],
+        "gains loss from revaluation of derivative tools;operating income;lãi lỗ đánh giá công cụ phái sinh": [
+            5468
+        ],
+        "gains loss from revaluation fixed assets by reasonable value model;operating income;lãi lỗ đánh giá lại tài sản cố định theo mô hình giá trị hợp lý": [
+            5469
+        ],
+        "total other comprehensive income;operating income;tổng thu nhập toàn diện": [
+            5430
+        ],
+        "other comprehensive income attribute to the parent company s owners;operating income;thu nhập toàn diện phân bổ cho chủ sở hữu": [
+            5470
+        ],
+        "other comprehensive income attribute to non controling interest;operating income;thu nhập toàn diện phân bổ cho cổ đông không nắm quyền kiểm soát": [
+            5471
+        ],
+        "net income appropriated to ordinary shareholders;operating income;thu nhập thuần trên cổ phiếu phổ thông": [
+            5428
+        ],
+        "earning per share vnd;earning per share vnd;lãi cơ bản trên cổ phiếu đồng 1 cổ phiếu vnð": [
+            4588
+        ],
+        "diluted earning per share;diluted earning per share;thu nhập pha loãng trên cổ phiếu đồng 1 cổ phiếu": [
+            5480
+        ]
+    }
+}

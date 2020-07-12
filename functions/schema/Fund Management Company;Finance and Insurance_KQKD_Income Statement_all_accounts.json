@@ -1,0 +1,58 @@
+{
+    "Income Statement": {
+        ";;1 doanh thu": [
+            5145
+        ],
+        ";;2 các khoản giảm trừ doanh thu": [
+            5140
+        ],
+        ";;3 doanh thu thuần về hoạt động kinh doanh 10 01 02": [
+            5143
+        ],
+        ";;4 chi phí hoạt động kinh doanh": [
+            5144
+        ],
+        ";;5 lợi nhuận gộp từ hoạt động kinh doanh 20 10 11": [
+            5139
+        ],
+        ";;6 doanh thu hoạt động tài chính": [
+            5146
+        ],
+        ";;7 chi phí tài chính": [
+            5147
+        ],
+        ";;trong đó chi phí lãi vay": [
+            5148
+        ],
+        ";;8 chi phí quản lý doanh nghiệp": [
+            5149
+        ],
+        ";;9 lợi nhuận thuần từ hoạt động kinh doanh 30 20 21 22 24 25": [
+            5134
+        ],
+        ";;10 thu nhập khác": [
+            5150
+        ],
+        ";;11 chi phí khác": [
+            5151
+        ],
+        ";;12 lợi nhuận khác 40 31 32": [
+            5135
+        ],
+        ";;13 tổng lợi nhuận kế toán trước thuế 50 30 40 41": [
+            5136
+        ],
+        ";;14 chi phí thuế tndn hiện hành": [
+            5141
+        ],
+        ";;15 chi phí thuế tndn hoãn lại": [
+            5142
+        ],
+        ";;16 lợi nhuận sau thuế thu nhập doanh nghiệp 60 50 51 52": [
+            5137
+        ],
+        ";;lãi cơ bản trên cổ phiếu báo cáo tài chính": [
+            5138
+        ]
+    }
+}

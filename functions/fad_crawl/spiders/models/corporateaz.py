@@ -37,6 +37,7 @@ tickers_redis_keys = [
                     ]
 
 closed_redis_key = f'{name_regular}:closed'
+bizType_ind_set_key = 'bizType_ind_set'
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {

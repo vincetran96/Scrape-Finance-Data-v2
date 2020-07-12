@@ -1,0 +1,235 @@
+{
+    "Balance Sheet": {
+        "assets;assets;tài sản": [
+            4302
+        ],
+        "cash gold and silver precious stones;total assets;tiền mặt vàng bạc đá quý": [
+            4310
+        ],
+        "balances with the state bank of vietnam;total assets;tiền gửi tại nhnn": [
+            4311
+        ],
+        "placements at and loans to other credit institutions;total assets;tiền vàng gửi tại các tctd khác và cho vay các tctd khác": [
+            4312
+        ],
+        "placements at other credit institutions;placements at and loans to other credit institutions;tiền vàng gửi tại các tctd khác": [
+            4344
+        ],
+        "loans to other credit institutions;placements at and loans to other credit institutions;cho vay các tctd khác": [
+            4326
+        ],
+        "provisions for losses and risks;placements at and loans to other credit institutions;dự phòng rủi ro cho vay các tctd khác": [
+            4345
+        ],
+        "trading securities;total assets;chứng khoán kinh doanh": [
+            4313
+        ],
+        "trading securities;trading securities;chứng khoán kinh doanh": [
+            4346
+        ],
+        "provisions for diminution in value of trading securities;trading securities;dự phòng giảm giá chứng khoán kinh doanh": [
+            4347
+        ],
+        "derivatives and other financial assets;total assets;các công cụ tài chính phái sinh và các tài sản tài chính khác": [
+            4314
+        ],
+        "loans advances and finance leases to customers;total assets;cho vay khách hàng": [
+            4315
+        ],
+        "loans advances and finance leases to customers;loans advances and finance leases to customers;cho vay và cho thuê tài chính khách hàng": [
+            4348
+        ],
+        "provisions for losses on loans advances and finance leases to customers;loans advances and finance leases to customers;dự phòng rủi ro cho vay và cho thuê tài chính khách hàng": [
+            4349
+        ],
+        "debt purchased;total assets;hoạt động mua nợ": [
+            5322
+        ],
+        "debt purchased;debt purchased;mua nợ": [
+            5323
+        ],
+        "provision for debt purchased;debt purchased;dự phòng rủi ro hoạt động mua nợ": [
+            5324
+        ],
+        "investment securities;total assets;chứng khoán đầu tư": [
+            4316
+        ],
+        "available for sales securities;investment securities;chứng khoán đầu tư sẵn sàng để ba n": [
+            4350
+        ],
+        "held to maturity securities;investment securities;chứng khoán đầu tư giữ đến ngày đáo hạn": [
+            4351
+        ],
+        "provisions for diminution in value of investment securities;investment securities;dự phòng giảm giá chứng khoán đầu tư": [
+            4352
+        ],
+        "capital contribution and other long term investments;total assets;góp vốn đầu tư dài hạn": [
+            4317
+        ],
+        "investments in subsidiaries;capital contribution and other long term investments;đầu tư vào công ty con": [
+            4333
+        ],
+        "investments in associates joint ventures;capital contribution and other long term investments;đầu tư vào công ty liên doanh liên kết": [
+            4354
+        ],
+        "other long term investments;capital contribution and other long term investments;đầu tư dài hạn khác": [
+            4334
+        ],
+        "provision for diminution in value of long term investments;capital contribution and other long term investments;dự phòng giảm giá đầu tư dài hạn": [
+            4355
+        ],
+        "fixed assets;total assets;tài sản cố định": [
+            4307
+        ],
+        "tangible fixed assets;fixed assets;tài sản cố định hữu hình": [
+            4328
+        ],
+        "cost;tangible fixed assets;nguyên giá tscđ": [
+            4367
+        ],
+        "accumulated depreciation;tangible fixed assets;hao mòn tscđ": [
+            4368
+        ],
+        "finance leased fixed assets;fixed assets;tài sản cố định thuê tài chính": [
+            4329
+        ],
+        "cost;finance leased fixed assets;nguyên giá tscđ": [
+            4369
+        ],
+        "accumulated depreciation;finance leased fixed assets;hao mòn tscđ": [
+            4370
+        ],
+        "intangible fixed assets;fixed assets;tài sản cố định vô hình": [
+            4330
+        ],
+        "cost;intangible fixed assets;nguyên giá tscđ": [
+            4371
+        ],
+        "accumulated depreciation;intangible fixed assets;hao mòn tscđ": [
+            4372
+        ],
+        "investment properties;total assets;bất động sản đầu tư": [
+            4308
+        ],
+        "cost;investment properties;nguyên giá bđsđt": [
+            4331
+        ],
+        "accumulated depreciation;investment properties;hao mòn bđsđt": [
+            4332
+        ],
+        "other assets;total assets;tài sản có khác": [
+            4327
+        ],
+        "accounts receivables;other assets;các khoản phải thu": [
+            4356
+        ],
+        "interest and fee receivables;other assets;các khoản lãi phí phải thu": [
+            4357
+        ],
+        "deferred income tax assets;other assets;tài sản thuế tndn hoãn lại": [
+            4335
+        ],
+        "other assets;other assets;tài sản có khác": [
+            4366
+        ],
+        "of which goodwill;of which goodwill;trong đó lợi thế thương mại": [
+            4309
+        ],
+        "provisions for risks in other assets;other assets;các khoản dự phòng rủi ro cho các tài sản có nội bảng khác": [
+            4358
+        ],
+        "total assets;total assets;tổng cộng tài sản": [
+            4375
+        ],
+        "liabilities and owner s equity;liabilities and owner s equity;nợ phải trả và vốn chủ sở hữu": [
+            4303
+        ],
+        "due to government and borrowings from the state bank of vietnam;total liabilities;các khoản nợ chính phủ và nhnn": [
+            4318
+        ],
+        "placements and borrowings from other credit institutions;total liabilities;tiền gửi và vay các tctd khác": [
+            4319
+        ],
+        "placements from other credit institutions;placements and borrowings from other credit institutions;tiền gửi của các tctd khác": [
+            4359
+        ],
+        "borrowings from other credit institutions;placements and borrowings from other credit institutions;vay các tctd khác": [
+            4360
+        ],
+        "deposits from customers;total liabilities;tiền gửi của khách hàng": [
+            4320
+        ],
+        "derivatives and other financial liabilities;total liabilities;các công cụ tài chính phái sinh và các khoản nợ tài chính khác": [
+            4321
+        ],
+        "funds received from government and institutions investments on behalf of investors syndicated loans of the bank s risks;total liabilities;vốn tài trợ ủy thác đầu tư cho vay ma tctd chịu rủi ro": [
+            4322
+        ],
+        ";total liabilities;phát hành giấy tờ có giá": [
+            4323
+        ],
+        "other liabilities;total liabilities;các khoản nợ khác": [
+            4324
+        ],
+        "interest and fee payables;other liabilities;các khoản lãi phí phải trả": [
+            4361
+        ],
+        "deferred income tax liabilities;other liabilities;thuế tndn hoãn lại phải trả": [
+            4336
+        ],
+        "other liabilities;other liabilities;các khoản phải trả và công nợ khác": [
+            4362
+        ],
+        "provisions for contingent liabilities and off balance sheet commitments;other liabilities;dự phòng rủi ro khác dự phòng cho công nợ tiềm ẩn và cam kết ngoại bảng": [
+            4363
+        ],
+        "total liabilities;total liabilities and owner s equity;tổng nợ phải trả": [
+            4304
+        ],
+        "capital and reserves;total liabilities and owner s equity;vốn và các quỹ": [
+            4325
+        ],
+        "capital;capital and reserves;vốn của tctd": [
+            4364
+        ],
+        "charter capital;capital;vốn điều lệ": [
+            4337
+        ],
+        "reserves for investments in construction;capital;vốn đầu tư xdcb": [
+            4373
+        ],
+        "share premium;capital;thặng dư vốn cổ phần": [
+            4338
+        ],
+        "treasury shares;capital;cổ phiếu quỹ": [
+            4340
+        ],
+        "preferred stock;capital;cổ phiếu ưu đãi": [
+            4374
+        ],
+        "other capital;capital;vốn khác": [
+            4339
+        ],
+        "reserves;capital;quỹ của tctd": [
+            4365
+        ],
+        "foreign exchange differences;capital and reserves;chênh lệch tỷ giá hối đoái": [
+            4342
+        ],
+        "assets revaluation differences;capital and reserves;chênh lệch đánh giá lại tài sản": [
+            4341
+        ],
+        "undistributed earnings after tax accumulated loss;capital and reserves;lợi nhuận chưa phân phối lỗ lũy kế": [
+            4343
+        ],
+        "minority s interest;capital and reserves;lợi ích cổ đông không kiểm soát": [
+            5699
+        ],
+        "minority interest;total liabilities and owner s equity;lợi ích của cổ đông thiểu số": [
+            4306
+        ],
+        "total liabilities and owner s equity;total liabilities and owner s equity;tổng nợ phải trả và vốn chủ sở hữu": [
+            4305
+        ]
+    }
+}

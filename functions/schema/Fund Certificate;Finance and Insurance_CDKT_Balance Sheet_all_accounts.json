@@ -1,0 +1,67 @@
+{
+    "Balance Sheet": {
+        "assets;assets;tài sản": [
+            3414
+        ],
+        "cash in bank;total assets;tiền gửi ngân hàng": [
+            3423
+        ],
+        "investments in securities;total assets;đầu tư chứng khoán": [
+            3418
+        ],
+        "other investments;total assets;đầu tư khác": [
+            3419
+        ],
+        "receivables from securities trading;total assets;phải thu hoạt động đầu tư": [
+            3420
+        ],
+        "other receivables;total assets;phải thu khác": [
+            3424
+        ],
+        "total assets;total assets;tổng tài sản": [
+            3415
+        ],
+        "owner s equity;owner s equity;nguồn vốn": [
+            3413
+        ],
+        "liabilities;total liabilities and owner s equity;nợ phải trả": [
+            3416
+        ],
+        "short term loans;liabilities;vay ngắn hạn": [
+            3425
+        ],
+        "payables for investment activities;liabilities;phải trả hoạt động đầu tư kinh doanh chứng khoán": [
+            3426
+        ],
+        "income payables for investors;liabilities;phải trả thu nhập cho nhà đầu tư": [
+            3427
+        ],
+        "remunerations payables to the board of representative;liabilities;phải trả phụ cấp ban đại diện quỹ": [
+            3428
+        ],
+        "payables to the fund manager and the custodian bank;liabilities;phải trả cho công ty quản lý quỹ nh giám sát": [
+            3429
+        ],
+        "other payables;liabilities;phải trả khác": [
+            3430
+        ],
+        "owner s equity;total liabilities and owner s equity;nguồn vốn chủ sở hữu": [
+            4074
+        ],
+        "capital contributed by investors;owner s equity;vốn góp của các nhà đầu tư": [
+            3431
+        ],
+        "capital contributed;capital contributed by investors;vốn góp": [
+            3436
+        ],
+        "capital surplus;capital contributed by investors;thặng dư vốn": [
+            3422
+        ],
+        "undistributed earnings;owner s equity;kết quả hoạt động chưa phân phối": [
+            3432
+        ],
+        "total liabilities and owner s equity;total liabilities and owner s equity;tổng cộng nguồn vốn": [
+            3417
+        ]
+    }
+}

@@ -140,7 +140,7 @@ class financeInfoHandler(fadRedisSpider):
                 else:
                     # Writing local data files
                     save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                        resp_json, filename=f'schemaData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     # save_jsonfile(
                     #     resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
@@ -148,12 +148,12 @@ class financeInfoHandler(fadRedisSpider):
                     # ES push task
                     # handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
 
+                    # Remove error items and crawl next page
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
-                    next_page = str(int(page) + 1)
-                    self.r.lpush(f'{self.name}:tickers',
-                                 f'{ticker};{next_page};{report_type}')
-            except:
-                self.logger.info("Response is an empty string")
+                    # next_page = str(int(page) + 1)
+                    # self.r.lpush(f'{self.name}:tickers', f'{ticker};{next_page};{report_type}')
+            except Exception as e:
+                self.logger.info(f'Exception: {e}')
                 self.r.sadd(self.error_set_key,
                             f'{ticker};{page};{report_type}')

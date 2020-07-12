@@ -1,0 +1,282 @@
+{
+    "CashFlow Indirect": {
+        ";;lưu chuyển tiền từ hoạt động kinh doanh": [
+            5177
+        ],
+        ";;1 lợi nhuận trước thuế": [
+            5182
+        ],
+        ";;2 điều chỉnh cho các khoản": [
+            5178
+        ],
+        ";;khấu hao tài sản cố định": [
+            5193
+        ],
+        ";;các khoản dự phòng": [
+            5194
+        ],
+        ";;lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện": [
+            5195
+        ],
+        ";;cổ tức lãi liên doanh đã trả": [
+            5205
+        ],
+        ";;lãi lỗ từ hoạt động đầu tư": [
+            5196
+        ],
+        ";;chi phí lãi vay": [
+            5192
+        ],
+        ";;3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
+            5183
+        ],
+        ";;tăng giảm các khoản phải thu": [
+            5197
+        ],
+        ";;tăng giảm hàng tồn kho": [
+            5198
+        ],
+        ";;tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập phải nộp": [
+            5199
+        ],
+        ";;tăng giảm chi phí trả trước": [
+            5200
+        ],
+        ";;tiền lãi vay đã trả": [
+            5201
+        ],
+        ";;thuế thu nhập doanh nghiệp đã nộp": [
+            5202
+        ],
+        ";;tăng giảm các khoản thế chấp ký quỹ ký cược": [
+            5206
+        ],
+        ";;tiền thu khác từ hoạt động kinh doanh": [
+            5203
+        ],
+        ";;tiền chi khác từ hoạt động kinh doanh": [
+            5204
+        ],
+        ";;lưu chuyển tiền thuần từ hoạt động kinh doanh": [
+            5184
+        ],
+        ";;lưu chuyển tiền từ hoạt động quản lý danh mục đầu tư cho người đầu tư": [
+            5181
+        ],
+        ";;tăng giảm nhận vốn ủy thác quản lý dmđt": [
+            5207
+        ],
+        ";;tăng giảm các khoản phải trả của người ủy thác đầu tư": [
+            5208
+        ],
+        ";;tăng giảm tiền nhận theo các hợp đồng bán và mua lại ck": [
+            5209
+        ],
+        ";;tăng giảm tiền nhận theo các hợp đồng môi giới ck": [
+            5210
+        ],
+        ";;tăng giảm cho vay theo các hợp đồng mua và bán lại ck": [
+            5211
+        ],
+        ";;tăng giảm các khoản phải thu của người ủy thác đầu tư": [
+            5212
+        ],
+        ";;tăng giảm tiền đặt cọc mua ck": [
+            5213
+        ],
+        ";;tăng giảm các khoản đầu tư": [
+            5214
+        ],
+        ";;lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư": [
+            5191
+        ],
+        ";;lưu chuyển tiền từ hoạt động đầu tư": [
+            5179
+        ],
+        ";;1 tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác": [
+            5215
+        ],
+        ";;2 tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác": [
+            5216
+        ],
+        ";;3 tiền chi cho vay mua các công cụ nợ của đơn vị khác": [
+            5217
+        ],
+        ";;4 tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác": [
+            5218
+        ],
+        ";;5 tiền chi đầu tư góp vốn vào đơn vị khác": [
+            5219
+        ],
+        ";;6 tiền thu hồi đầu tư góp vốn vào đơn vị khác": [
+            5220
+        ],
+        ";;7 tiền thu lãi cho vay cổ tức và lợi nhuận được chia": [
+            5221
+        ],
+        ";;8 mua lại khoản góp vốn của cổ đông thiểu số trong công ty con": [
+            5228
+        ],
+        ";;9 khác": [
+            5229
+        ],
+        ";;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            5185
+        ],
+        ";;lưu chuyển tiền từ hoạt động tài chính": [
+            5180
+        ],
+        ";;1 tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu": [
+            5222
+        ],
+        ";;2 tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu của doanh nghiệp đã phát hành": [
+            5223
+        ],
+        ";;3 tiền vay ngắn hạn dài hạn nhận được": [
+            5224
+        ],
+        ";;4 tiền chi trả nợ gốc vay": [
+            5225
+        ],
+        ";;5 tiền chi trả nợ thuê tài chính": [
+            5226
+        ],
+        ";;6 cổ tức lợi nhuận đã trả cho chủ sở hữu": [
+            5227
+        ],
+        ";;7 khác": [
+            5230
+        ],
+        ";;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            5186
+        ],
+        ";;lưu chuyển tiền thuần trong kỳ": [
+            5188
+        ],
+        ";;tiền và tương đương tiền đầu kỳ": [
+            5189
+        ],
+        ";;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+            5187
+        ],
+        ";;tiền và tương đương tiền cuối kỳ": [
+            5190
+        ]
+    },
+    "CashFlow Direct": {
+        ";;lưu chuyê n tiê n tư hoa t đô ng kinh doanh": [
+            5231
+        ],
+        ";;1 tiền thu từ hoạt động nghiệp vụ cung cấp dịch vụ và doanh thu khác": [
+            5265
+        ],
+        ";;2 tiền chi trả cho hoạt động nghiệp vụ và người cung cấp hàng hóa dịch vụ": [
+            5266
+        ],
+        ";;3 tiền chi trả cho người lao động": [
+            5252
+        ],
+        ";;4 tiền trả lãi vay": [
+            5253
+        ],
+        ";;5 tiền nộp thuế và các khoản phải nộp nhà nước": [
+            5261
+        ],
+        ";;6 nhận và trả tiền ký quỹ ký cược": [
+            5260
+        ],
+        ";;7 tiền chi mua vật liệu ccdc": [
+            5262
+        ],
+        ";;8 tiền thu khác từ hoạt động kinh doanh": [
+            5241
+        ],
+        ";;9 tiê n chi kha c cho hoa t đô ng kinh doanh": [
+            5254
+        ],
+        ";;lưu chuyê n tiê n thuâ n tư hoa t đô ng kinh doanh": [
+            5234
+        ],
+        ";;lưu chuyê n tiê n tư hoa t đô ng đâ u tư": [
+            5232
+        ],
+        ";;1 tiê n chi đê mua să m xây dư ng tscđ va ca c ta i sa n da i ha n kha c": [
+            5242
+        ],
+        ";;2 tiê n thu tư thanh ly nhươ ng ba n tscđ va ca c ta i sa n da i ha n kha c": [
+            5243
+        ],
+        ";;3 tiền chi mua các công cụ nợ của đơn vị khác": [
+            5267
+        ],
+        ";;4 thu từ thanh lý các khoản đầu tư công cụ nợ của đơn vị khác": [
+            5268
+        ],
+        ";;5 tiê n chi đâ u tư go p vô n va o đơn vi kha c": [
+            5244
+        ],
+        ";;6 tiê n thu hô i đâ u tư go p vô n va o đơn vi kha c": [
+            5245
+        ],
+        ";;7 tiền đầu tư chứng khoán": [
+            5263
+        ],
+        ";;8 tiền thu lãi trái phiếu lãi đầu tư khác": [
+            5264
+        ],
+        ";;9 tiền thu cổ tức và lợi nhuận được chia": [
+            5259
+        ],
+        ";;10 tiền thu khác từ hoạt động đầu tư": [
+            5255
+        ],
+        ";;11 tiền chi khác cho hoạt động đầu tư": [
+            5256
+        ],
+        ";;lưu chuyê n tiê n thuâ n tư hoa t đô ng đâ u tư": [
+            5235
+        ],
+        ";;lưu chuyê n tiê n tư hoa t đô ng ta i chi nh": [
+            5233
+        ],
+        ";;1 tiê n thu tư pha t ha nh cô phiê u nhâ n vô n go p cu a chu sơ hư u": [
+            5246
+        ],
+        ";;2 tiê n chi tra vô n go p cho ca c chu sơ hư u mua la i cô phiê u cu a doanh nghiê p đa pha t ha nh": [
+            5247
+        ],
+        ";;3 tiê n vay ngă n ha n da i ha n nhâ n đươ c": [
+            5248
+        ],
+        ";;4 tiê n chi tra nơ gô c vay": [
+            5249
+        ],
+        ";;5 tiê n chi tra nơ thuê ta i chi nh": [
+            5250
+        ],
+        ";;6 cô tư c lơ i nhuâ n đa tra cho chu sơ hư u": [
+            5251
+        ],
+        ";;7 thu khác từ hoạt động tài chính": [
+            5257
+        ],
+        ";;8 chi khác từ hoạt động tài chính": [
+            5258
+        ],
+        ";;lưu chuyê n tiê n thuâ n tư hoa t đô ng ta i chi nh": [
+            5236
+        ],
+        ";;lưu chuyê n tiê n thuâ n trong ky": [
+            5238
+        ],
+        ";;tiê n va tương đương tiê n đâ u ky": [
+            5239
+        ],
+        ";;a nh hươ ng cu a thay đô i ty gia hô i đoa i quy đô i ngoa i tê": [
+            5237
+        ],
+        ";;tiê n va tương đương tiê n cuô i ky": [
+            5240
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "Income Statement": {
+        "revenue;net revenue;doanh thu bán hàng và cung cấp dịch vụ": [
+            2206
+        ],
+        "deduction from revenue;net revenue;các khoản giảm trừ doanh thu": [
+            2218
+        ],
+        "net revenue;gross profit;doanh thu thuần về bán hàng và cung cấp dịch vụ": [
+            2216
+        ],
+        "cost of goods sold;gross profit;giá vốn hàng bán": [
+            2207
+        ],
+        "gross profit;operating profit;lợi nhuận gộp về bán hàng và cung cấp dịch vụ": [
+            2217
+        ],
+        "financial income;operating profit;doanh thu hoạt động tài chính": [
+            2221
+        ],
+        "financial expenses;operating profit;chi phí tài chính": [
+            2222
+        ],
+        "of which interest expenses;of which interest expenses;trong đó chi phí lãi vay": [
+            2223
+        ],
+        "share of associates and joint ventures result;operating profit;phần lãi lỗ trong công ty liên doanh liên kết": [
+            5321
+        ],
+        "selling expenses;operating profit;chi phí bán hàng": [
+            2227
+        ],
+        "general and administrative expenses;operating profit;chi phí quản lý doanh nghiệp": [
+            2224
+        ],
+        "operating profit;profit before tax;lợi nhuận thuần từ hoạt động kinh doanh": [
+            2208
+        ],
+        "other income;other profit;thu nhập khác": [
+            2225
+        ],
+        "other expenses;other profit;chi phí khác": [
+            2226
+        ],
+        "other profit;profit before tax;lợi nhuận khác": [
+            2209
+        ],
+        "share of associates and joint ventures result;profit before tax;phần lợi nhuận lỗ từ công ty liên kết liên doanh": [
+            2210
+        ],
+        "profit before tax;net profit after tax;tổng lợi nhuận kế toán trước thuế": [
+            2211
+        ],
+        "current corporate income tax expenses;net profit after tax;chi phí thuế tndn hiện hành": [
+            2219
+        ],
+        "deferred income tax expenses;net profit after tax;chi phí thuế tndn hoãn lại": [
+            2220
+        ],
+        "net profit after tax;profit after tax for shareholders of parent company;lợi nhuận sau thuế thu nhập doanh nghiệp": [
+            2212
+        ],
+        "minority s interest;profit after tax for shareholders of parent company;lợi ích của cổ đông thiểu số": [
+            2213
+        ],
+        "profit after tax for shareholders of parent company;profit after tax for shareholders of parent company;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
+            2214
+        ],
+        "earnings per share vnd;earnings per share vnd;lãi cơ bản trên cổ phiếu vnð": [
+            2215
+        ],
+        "diluted earnings per share;diluted earnings per share;lãi suy giảm trên cổ phiếu": [
+            5316
+        ]
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "CashFlow Indirect": {
+        "cash flows from operating activities;cash flows from operating activities;lưu chuyển tiền từ hoạt động kinh doanh": [
+            3640
+        ],
+        "profit before tax;operating profit before changes in working capital;lợi nhuận trước thuế": [
+            3644
+        ],
+        "adjustments for;operating profit before changes in working capital;điều chỉnh cho các khoản": [
+            3641
+        ],
+        "depreciation and amortization;operating profit before changes in working capital;khấu hao tài sản cố định": [
+            3654
+        ],
+        "reversal of provisions provisions;operating profit before changes in working capital;các khoản dự phòng": [
+            3655
+        ],
+        "unrealized foreign exchange gain loss;operating profit before changes in working capital;lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện": [
+            3656
+        ],
+        "loss profit from investment activities;operating profit before changes in working capital;lãi lỗ từ hoạt động đầu tư": [
+            3657
+        ],
+        "interest expense;operating profit before changes in working capital;chi phí lãi vay": [
+            3653
+        ],
+        "others;operating profit before changes in working capital;khác": [
+            3679
+        ],
+        "operating profit before changes in working capital;net cash flows from operating activities;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
+            3645
+        ],
+        "increase decrease in receivables;net cash flows from operating activities;tăng giảm các khoản phải thu": [
+            3658
+        ],
+        "increase decrease in inventories;net cash flows from operating activities;tăng giảm hàng tồn kho": [
+            3659
+        ],
+        "increase decrease in payables other than interest corporate income tax;net cash flows from operating activities;tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập phải nộp": [
+            3660
+        ],
+        "increase decrease in prepaid expenses;net cash flows from operating activities;tăng giảm chi phí trả trước": [
+            3661
+        ],
+        "increase decrease in held for trading securities;net cash flows from operating activities;tăng giảm chứng khoán kinh doanh": [
+            5369
+        ],
+        "interest paid;net cash flows from operating activities;tiền lãi vay đã trả": [
+            3662
+        ],
+        "income tax paid;net cash flows from operating activities;thuế thu nhập doanh nghiệp đã nộp": [
+            3663
+        ],
+        "other receipts from operating activities;net cash flows from operating activities;tiền thu khác từ hoạt động kinh doanh": [
+            3664
+        ],
+        "other payments for operating activities;net cash flows from operating activities;tiền chi khác từ hoạt động kinh doanh": [
+            3665
+        ],
+        "net cash flows from operating activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động kinh doanh": [
+            3646
+        ],
+        "cash flows from investing activities;cash flows from investing activities;lưu chuyển tiền từ hoạt động đầu tư": [
+            3642
+        ],
+        "payment for fixed assets constructions and other long term assets;net cash flows from investing activities;tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác": [
+            3666
+        ],
+        "receipts from disposal of fixed assets and other long term assets;net cash flows from investing activities;tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác": [
+            3667
+        ],
+        "loans purchases of other entities debt instruments;net cash flows from investing activities;tiền chi cho vay mua các công cụ nợ của đơn vị khác": [
+            3668
+        ],
+        "receipts from loan repayments sale of other entities debt instruments;net cash flows from investing activities;tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác": [
+            3669
+        ],
+        "payments for investment in other entities;net cash flows from investing activities;tiền chi đầu tư góp vốn vào đơn vị khác": [
+            3670
+        ],
+        "collections on investment in other entities;net cash flows from investing activities;tiền thu hồi đầu tư góp vốn vào đơn vị khác": [
+            3671
+        ],
+        "dividends interest and profit received;net cash flows from investing activities;tiền thu lãi cho vay cổ tức và lợi nhuận được chia": [
+            3672
+        ],
+        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư": [
+            3680
+        ],
+        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoat động đầu tư": [
+            3681
+        ],
+        "net cash flows from investing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3647
+        ],
+        "cash flows from financing activities;cash flows from financing activities;lưu chuyển tiền từ hoạt động tài chính": [
+            3643
+        ],
+        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu": [
+            3673
+        ],
+        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu của doanh nghiệp đã phát hành": [
+            3674
+        ],
+        "short term and long term borrowings;net cash flows from financing activities;tiền vay ngắn hạn dài hạn nhận được": [
+            3675
+        ],
+        "principal repayments;net cash flows from financing activities;tiền chi trả nợ gốc vay": [
+            3676
+        ],
+        "payments to settle finance leases;net cash flows from financing activities;tiền chi trả nợ thuê tài chính": [
+            3677
+        ],
+        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu": [
+            3678
+        ],
+        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt động tài chính": [
+            3682
+        ],
+        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính": [
+            3683
+        ],
+        "net cash flows from financing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3648
+        ],
+        "net cash flows during the period;cash and cash equivalents at end of the period;lưu chuyển tiền thuần trong kỳ": [
+            3650
+        ],
+        "cash and cash equivalents at beginning of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền đầu kỳ": [
+            3651
+        ],
+        "exchange difference due to re valuation of ending balances;cash and cash equivalents at end of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+            3649
+        ],
+        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền cuối kỳ": [
+            3652
+        ]
+    }
+}

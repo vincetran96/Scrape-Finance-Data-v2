@@ -1,0 +1,115 @@
+[
+    [
+        {
+            "ID": 4,
+            "Row": 4,
+            "CompanyID": 838,
+            "YearPeriod": 2009,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "ĐL",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "200901",
+            "PeriodEnd": "200912",
+            "TotalRow": 5,
+            "BusinessType": 4,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 3,
+            "Row": 3,
+            "CompanyID": 838,
+            "YearPeriod": 2010,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "ĐL",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201001",
+            "PeriodEnd": "201012",
+            "TotalRow": 5,
+            "BusinessType": 4,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 2,
+            "Row": 2,
+            "CompanyID": 838,
+            "YearPeriod": 2011,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "ĐL",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201101",
+            "PeriodEnd": "201112",
+            "TotalRow": 5,
+            "BusinessType": 4,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 1,
+            "Row": 1,
+            "CompanyID": 838,
+            "YearPeriod": 2012,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "ĐL",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201201",
+            "PeriodEnd": "201212",
+            "TotalRow": 5,
+            "BusinessType": 4,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        }
+    ],
+    {},
+    [
+        {
+            "AuditedStatusCode": "SX",
+            "Description": "Soát xét",
+            "DescriptionEn": "Reviewed"
+        },
+        {
+            "AuditedStatusCode": "CKT",
+            "Description": "Chưa kiểm toán",
+            "DescriptionEn": "Unaudited"
+        },
+        {
+            "AuditedStatusCode": "KT",
+            "Description": "Kiểm toán",
+            "DescriptionEn": "Audited"
+        }
+    ],
+    [
+        {
+            "UnitedCode": "HN",
+            "UnitedName": "Hợp nhất",
+            "UnitedNameEN": "Consolidated"
+        },
+        {
+            "UnitedCode": "ĐL",
+            "UnitedName": "Đơn lẻ",
+            "UnitedNameEN": "Stand-alone"
+        },
+        {
+            "UnitedCode": "CTM",
+            "UnitedName": "Công ty mẹ",
+            "UnitedNameEN": "Parent Company"
+        }
+    ]
+]

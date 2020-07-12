@@ -1,0 +1,287 @@
+{
+    "Balance Sheet": {
+        ";;tài sản": [
+            5038
+        ],
+        ";;a tài sản ngắn hạn 100 110 120 130 140 150": [
+            5043
+        ],
+        ";;i tiền và các khoản tương đương tiền": [
+            5045
+        ],
+        ";;1 tiền mặt tại quỹ": [
+            5056
+        ],
+        ";;2 tiền gửi ngân hàng": [
+            5107
+        ],
+        ";;3 tiền đang chuyển": [
+            5108
+        ],
+        ";;4 các khoản tương đương tiền": [
+            5057
+        ],
+        ";;5 tiền của nhà ủy thác đầu tư": [
+            5109
+        ],
+        ";;ii các khoản đầu tư tài chính ngắn hạn": [
+            5046
+        ],
+        ";;1 đầu tư ngắn hạn": [
+            5058
+        ],
+        ";;2 chứng khoán của nhà ủy thác đầu tư": [
+            5110
+        ],
+        ";;3 dự phòng giảm giá chứng khoán đầu tư ngắn hạn": [
+            5059
+        ],
+        ";;iii các khoản phải thu ngắn hạn": [
+            5047
+        ],
+        ";;1 phải thu khách hàng": [
+            5060
+        ],
+        ";;2 trả trước cho người bán": [
+            5061
+        ],
+        ";;3 phải thu của nội bộ ngắn hạn": [
+            5062
+        ],
+        ";;4 phải thu từ hoạt động quản lý quỹ": [
+            5124
+        ],
+        ";;5 phải thu khác": [
+            5063
+        ],
+        ";;6 dự phòng các khoản phải thu ngắn hạn khó đòi": [
+            5115
+        ],
+        ";;hàng tồn kho": [
+            5048
+        ],
+        ";;v tài sản ngắn hạn khác": [
+            5049
+        ],
+        ";;1 vật liệu công cụ dụng cụ": [
+            5111
+        ],
+        ";;2 chi phí trả trước ngắn hạn": [
+            5064
+        ],
+        ";;3 thuế gtgt còn được khấu trừ": [
+            5065
+        ],
+        ";;4 thuế và các khoản khác phải thu của nhà nước": [
+            5066
+        ],
+        ";;5 giao dịch mua lại trái phiếu chính phủ": [
+            5123
+        ],
+        ";;6 tài sản ngắn hạn khác": [
+            5067
+        ],
+        ";;b tài sản dài hạn 200 210 220 240 250 260 270": [
+            5044
+        ],
+        ";;i các khoản phải thu dài hạn": [
+            5050
+        ],
+        ";;1 phải thu dài hạn của khách hàng": [
+            5068
+        ],
+        ";;2 vốn kinh doanh ở các đơn vị trực thuộc": [
+            5069
+        ],
+        ";;3 phải thu dài hạn nội bộ": [
+            5070
+        ],
+        ";;4 phải thu dài hạn khác": [
+            5116
+        ],
+        ";;5 dự phòng phải thu dài hạn khó đòi": [
+            5117
+        ],
+        ";;ii tài sản cố định": [
+            5051
+        ],
+        ";;1 tài sản cố định hữu hình": [
+            5071
+        ],
+        ";;nguyên giá": [
+            5126,
+            5128,
+            5130
+        ],
+        ";;giá trị hao mòn lũy kế": [
+            5127,
+            5129,
+            5131
+        ],
+        ";;2 tài sản cố định thuê tài chính": [
+            5072
+        ],
+        ";;3 tài sản cố định vô hình": [
+            5073
+        ],
+        ";;4 chi phí xây dựng cơ bản dở dang": [
+            5074
+        ],
+        ";;iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác": [
+            5054
+        ],
+        ";;1 đầu tư vào công ty con": [
+            5075
+        ],
+        ";;2 đầu tư vào công ty liên doanh liên kết": [
+            5076
+        ],
+        ";;3 đầu tư chứng khoán": [
+            5112
+        ],
+        ";;4 đầu tư dài hạn khác": [
+            5077
+        ],
+        ";;5 dự phòng giảm giá chứng khoán đầu tư dài hạn": [
+            5078
+        ],
+        ";;iv tài sản dài hạn khác": [
+            5052
+        ],
+        ";;1 chi phí trả trước dài hạn": [
+            5079
+        ],
+        ";;2 các khoản ký quỹ ký cược": [
+            5113
+        ],
+        ";;3 tài sản thuế thu nhập hoãn lại": [
+            5080
+        ],
+        ";;4 tài sản dài hạn khác": [
+            5081
+        ],
+        ";;tổng cộng tài sản 270 100 200": [
+            5039
+        ],
+        ";;nguồn vốn": [
+            5037
+        ],
+        ";;a nợ phải trả 300 210 330": [
+            5040
+        ],
+        ";;i nợ ngắn hạn": [
+            5053
+        ],
+        ";;1 vay và nợ ngắn hạn": [
+            5114
+        ],
+        ";;2 phải trả người bán": [
+            5082
+        ],
+        ";;3 người mua trả tiền trước": [
+            5083
+        ],
+        ";;4 thuế và các khoản phải nộp nhà nước": [
+            5084
+        ],
+        ";;5 phải trả công nhân viên": [
+            5085
+        ],
+        ";;6 chi phí phải trả": [
+            5086
+        ],
+        ";;7 phải trả nội bộ": [
+            5087
+        ],
+        ";;8 các khoản phải trả phải nộp khác": [
+            5088
+        ],
+        ";;9 dự phòng phải trả ngắn hạn": [
+            5089
+        ],
+        ";;10 quỹ khen thưởng phúc lợi": [
+            5106
+        ],
+        ";;11 giao dịch mua bán lại trái phiếu chính phủ": [
+            5120
+        ],
+        ";;12 doanh thu chưa thực hiện": [
+            5132
+        ],
+        ";;ii nợ dài hạn": [
+            5055
+        ],
+        ";;1 nhận ký quỹ ký cược dài hạn": [
+            5122
+        ],
+        ";;2 phải trả dài hạn người bán": [
+            5090
+        ],
+        ";;2 phải trả dài hạn nội bộ": [
+            5091
+        ],
+        ";;3 phải trả dài hạn khác": [
+            5092
+        ],
+        ";;4 vay và nợ dài hạn": [
+            5121
+        ],
+        ";;5 thuế thu nhập hoãn lại phải trả": [
+            5093
+        ],
+        ";;6 dự phòng trợ cấp mất việc làm": [
+            5094
+        ],
+        ";;7 dự phòng phải trả dài hạn": [
+            5095
+        ],
+        ";;8 doanh thu chưa thực hiện": [
+            5118
+        ],
+        ";;9 quỹ phát triển khoa học và công nghệ": [
+            5119
+        ],
+        ";;10 quỹ dự phòng bồi thường thiệt hại cho nhà đầu tư": [
+            5133
+        ],
+        ";;b vốn chủ sở hữu 400 410 430": [
+            5041
+        ],
+        ";;1 vốn đầu tư của chủ sở hữu": [
+            5096
+        ],
+        ";;2 thặng dư vốn cổ phần": [
+            5097
+        ],
+        ";;3 vốn khác của chủ sở hữu": [
+            5098
+        ],
+        ";;4 cổ phiếu quỹ": [
+            5099
+        ],
+        ";;5 chênh lệch đánh giá lại tài sản": [
+            5100
+        ],
+        ";;6 chênh lệch tỷ giá hối đoái": [
+            5101
+        ],
+        ";;7 quỹ đầu tư phát triển": [
+            5102
+        ],
+        ";;8 quỹ dự phòng tài chính": [
+            5103
+        ],
+        ";;9 quỹ dự trữ": [
+            5125
+        ],
+        ";;10 quỹ khác thuộc vốn chủ sở hữu": [
+            5104
+        ],
+        ";;11 lợi nhuận sau thuế chưa phân phối": [
+            5105
+        ],
+        ";;tổng cộng nguồn vốn 440 300 400 500": [
+            5042
+        ]
+    }
+}

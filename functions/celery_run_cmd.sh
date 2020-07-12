@@ -2,6 +2,7 @@
 
 # clear old files and potentially running workers
 pkill -9 -f 'celery worker'
+redis-cli flushall
 rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*

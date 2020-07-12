@@ -20,7 +20,8 @@ from twisted.internet import reactor
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
 from fad_crawl.spiders.models.constants import REDIS_HOST
-from fad_crawl.spiders.models.corporateaz import (business_type,
+from fad_crawl.spiders.models.corporateaz import (bizType_ind_set_key,
+                                                  business_type,
                                                   closed_redis_key)
 from fad_crawl.spiders.models.corporateaz import data as az
 from fad_crawl.spiders.models.corporateaz import (industry_list, name_express,
@@ -29,6 +30,7 @@ from fad_crawl.spiders.models.corporateaz import (industry_list, name_express,
                                                   settings_regular,
                                                   tickers_redis_keys)
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
+from fad_crawl.helpers.fileDownloader import save_jsonfile
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
 TEST_NUM_PAGES = 2
@@ -126,35 +128,39 @@ class corporateazExpressHandler(scrapy.Spider):
 
             try:
                 res = json.loads(response.text)
-                # tickers_list = [d["Code"] for d in res]
-                # Only get random 3 tickers, because it's express!
+                ### Only get random `SAMPLE_SIZE` tickers, because it's express!
                 if SAMPLE_SIZE <= len(res):
                     rand = random.sample(res, SAMPLE_SIZE)
                 else:
                     rand = res
-                tickers_list = [d['Code'] for d in rand]
+
+                ### Change back to `rand` later...
+                tickers_list = [d['Code'] for d in res]
 
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
 
-                # Push tickers into financeInfo and other spiders; also
-                # set biz id and ind id for each ticker, which is a key in Redis
-                for t in tickers_list:
-                    self.r.lpush(tickers_redis_keys[0], f'{t};1')
-                    for k in tickers_redis_keys[1:]:
-                        self.r.lpush(k, t)
-                    self.r.set(t, f'{bizType_title};{ind_name}')
-
-                # Total pages need to be calculated or delivered from previous request's meta
-                # If current page < total pages, send next request
-                total_pages = res[0]['TotalRecord'] // int(
-                    constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
+                ### Push tickers into financeInfo and other spiders
+                ### Add the bizType and ind_name to available bizType_ind combinations set
+                ### Set biz id and ind id for each ticker, which is a key in Redis
+                if tickers_list != []:
+                    self.r.sadd(bizType_ind_set_key, f'{bizType_title};{ind_name}')
+                    for t in tickers_list:
+                        self.r.set(t, f'{bizType_title};{ind_name}')
+                        self.r.lpush(tickers_redis_keys[0], f'{t};1')
+                        for k in tickers_redis_keys[1:]:
+                            self.r.lpush(k, t)
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
         else:
             self.logger.info("Response is null")
 
     def closed(self, reason="CorporateAZ-Express Finished"):
+        ### Write bizType and ind set to a file for mapping work later
+        bizType_ind_list = sorted(list(self.r.smembers(bizType_ind_set_key)))
+        save_jsonfile(bizType_ind_list, filename='schema/bizType_ind_list.json')
+        
+        ### Closing procedures
         self.r.set(closed_redis_key, "1")
         self.close_status()
         self.logger.info(
