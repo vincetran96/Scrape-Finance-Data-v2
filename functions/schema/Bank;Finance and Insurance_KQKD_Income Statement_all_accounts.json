@@ -1,75 +1,75 @@
 {
     "Income Statement": {
-        "interest income and similar income;net interest income;thu nhập lãi và các khoản thu nhập tương tự": [
+        "interest income and similar income;net interest income;thu nhập lãi và các khoản thu nhập tương tự;thu nhập lãi thuần": [
             4399
         ],
-        "interest expense and similar expenses;net interest income;chi phí lãi và các chi phí tương tự": [
+        "interest expense and similar expenses;net interest income;chi phí lãi và các chi phí tương tự;thu nhập lãi thuần": [
             4396
         ],
-        "net interest income;operating profit before provision for credit losses;thu nhập lãi thuần": [
+        "net interest income;operating profit before provision for credit losses;thu nhập lãi thuần;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4385
         ],
-        "fee and commission income;net fee and commission income;thu nhập từ hoạt động dịch vụ": [
+        "fee and commission income;net fee and commission income;thu nhập từ hoạt động dịch vụ;lãi lỗ thuần từ hoạt động dịch vụ": [
             4397
         ],
-        "fee and commission expenses;net fee and commission income;chi phí hoạt động dịch vụ": [
+        "fee and commission expenses;net fee and commission income;chi phí hoạt động dịch vụ;lãi lỗ thuần từ hoạt động dịch vụ": [
             4398
         ],
-        "net fee and commission income;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động dịch vụ": [
+        "net fee and commission income;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động dịch vụ;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4386
         ],
-        "net gain loss from foreign currencies and gold trading;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động kinh doanh ngoại hối và vàng": [
+        "net gain loss from foreign currencies and gold trading;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động kinh doanh ngoại hối và vàng;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4387
         ],
-        "net gain loss from trading securities;operating profit before provision for credit losses;lãi lỗ thuần từ mua bán chứng khoán kinh doanh": [
+        "net gain loss from trading securities;operating profit before provision for credit losses;lãi lỗ thuần từ mua bán chứng khoán kinh doanh;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4388
         ],
-        "net gain loss from investment securities;operating profit before provision for credit losses;lãi lỗ thuần từ mua bán chứng khoán đầu tư": [
+        "net gain loss from investment securities;operating profit before provision for credit losses;lãi lỗ thuần từ mua bán chứng khoán đầu tư;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4389
         ],
-        "other income;net other income;thu nhập từ hoạt động khác": [
+        "other income;net other income;thu nhập từ hoạt động khác;lãi lỗ thuần từ hoạt động khác": [
             4394
         ],
-        "other expenses;net other income;chi phí hoạt động khác": [
+        "other expenses;net other income;chi phí hoạt động khác;lãi lỗ thuần từ hoạt động khác": [
             4395
         ],
-        "net other income;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động khác": [
+        "net other income;operating profit before provision for credit losses;lãi lỗ thuần từ hoạt động khác;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4390
         ],
-        "income from capital contribution and long term investments;operating profit before provision for credit losses;thu nhập từ góp vốn mua cổ phần": [
+        "income from capital contribution and long term investments;operating profit before provision for credit losses;thu nhập từ góp vốn mua cổ phần;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4393
         ],
-        "operating expenses;operating profit before provision for credit losses;chi phí hoạt động": [
+        "operating expenses;operating profit before provision for credit losses;chi phí hoạt động;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
             4391
         ],
-        "operating profit before provision for credit losses;profit before tax;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii": [
+        "operating profit before provision for credit losses;profit before tax;lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng i ii iii iv v vi vii viii;tổng lợi nhuận trước thuế ix x": [
             4376
         ],
-        "provision for credit losses;profit before tax;chi phí dự phòng rủi ro tín dụng": [
+        "provision for credit losses;profit before tax;chi phí dự phòng rủi ro tín dụng;tổng lợi nhuận trước thuế ix x": [
             4392
         ],
-        "profit before tax;net profit after tax;tổng lợi nhuận trước thuế ix x": [
+        "profit before tax;net profit after tax;tổng lợi nhuận trước thuế ix x;lợi nhuận sau thuế xi xii": [
             4377
         ],
-        "current corporate income tax expenses;corporate income tax;chi phí thuế tndn hiện hành": [
+        "current corporate income tax expenses;corporate income tax;chi phí thuế tndn hiện hành;chi phí thuế tndn": [
             4383
         ],
-        "deferred income tax expenses;corporate income tax;chi phí thuế tndn hoãn lại": [
+        "deferred income tax expenses;corporate income tax;chi phí thuế tndn hoãn lại;chi phí thuế tndn": [
             4384
         ],
-        "corporate income tax;net profit after tax;chi phí thuế tndn": [
+        "corporate income tax;net profit after tax;chi phí thuế tndn;lợi nhuận sau thuế xi xii": [
             4382
         ],
-        "net profit after tax;net profit atttributable to the equity holders of the bank;lợi nhuận sau thuế xi xii": [
+        "net profit after tax;net profit atttributable to the equity holders of the bank;lợi nhuận sau thuế xi xii;lợi nhuận sau thuế của cổ đông của ngân hàng mẹ xiii xiv": [
             4378
         ],
-        "minority interest;net profit atttributable to the equity holders of the bank;lợi ích của cổ đông thiểu số": [
+        "minority interest;net profit atttributable to the equity holders of the bank;lợi ích của cổ đông thiểu số;lợi nhuận sau thuế của cổ đông của ngân hàng mẹ xiii xiv": [
             4379
         ],
-        "net profit atttributable to the equity holders of the bank;net profit atttributable to the equity holders of the bank;lợi nhuận sau thuế của cổ đông của ngân hàng mẹ xiii xiv": [
+        "net profit atttributable to the equity holders of the bank;net profit atttributable to the equity holders of the bank;lợi nhuận sau thuế của cổ đông của ngân hàng mẹ xiii xiv;lợi nhuận sau thuế của cổ đông của ngân hàng mẹ xiii xiv": [
             4380
         ],
-        "earning per share vnd;earning per share vnd;lãi cơ bản trên cổ phiếu bctc vnð": [
+        "earning per share vnd;earning per share vnd;lãi cơ bản trên cổ phiếu bctc vnð;lãi cơ bản trên cổ phiếu bctc vnð": [
             4381
         ]
     }

@@ -1,401 +1,401 @@
 {
     "CashFlow Indirect": {
-        "cash flow from securities trading activities;cash flow from securities trading activities;lưu chuyển tiền từ hoạt động kinh doanh chứng khoán": [
+        "cash flow from securities trading activities;cash flow from securities trading activities;lưu chuyển tiền từ hoạt động kinh doanh chứng khoán;lưu chuyển tiền từ hoạt động kinh doanh chứng khoán": [
             4733
         ],
-        "profit before tax;operating profit before changes in working capital;lợi nhuận trước thuế": [
+        "profit before tax;operating profit before changes in working capital;lợi nhuận trước thuế;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4734
         ],
-        "adjustments for;operating profit before changes in working capital;điều chỉnh cho các khoản": [
+        "adjustments for;operating profit before changes in working capital;điều chỉnh cho các khoản;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5579
         ],
-        "depreciation and amortization;operating profit before changes in working capital;khấu hao tài sản cố định": [
+        "depreciation and amortization;operating profit before changes in working capital;khấu hao tài sản cố định;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4744
         ],
-        "reversal of provisions provisions;operating profit before changes in working capital;các khoản lập dự phòng": [
+        "reversal of provisions provisions;operating profit before changes in working capital;các khoản lập dự phòng;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4745
         ],
-        "unrealized foreign exchange gains losses;operating profit before changes in working capital;lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện": [
+        "unrealized foreign exchange gains losses;operating profit before changes in working capital;lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4746
         ],
-        "acrrued expenses prepayments expenses;add non cash expenses;chi phí phải trả chi phí trả trước": [
+        "acrrued expenses prepayments expenses;add non cash expenses;chi phí phải trả chi phí trả trước;tăng các chi phí phi tiền tệ": [
             5535
         ],
-        "loss profits from other investing activities;operating profit before changes in working capital;lãi lỗ từ hoạt động đầu tư đầu tư công ty con liên doanh liên kết": [
+        "loss profits from other investing activities;operating profit before changes in working capital;lãi lỗ từ hoạt động đầu tư đầu tư công ty con liên doanh liên kết;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4747
         ],
-        "interest expense;operating profit before changes in working capital;chi phí lãi vay": [
+        "interest expense;operating profit before changes in working capital;chi phí lãi vay;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             4743
         ],
-        "loss profits from disposal of fixed asset;operating profit before changes in working capital;lãi lỗ do thanh lý tscđ": [
+        "loss profits from disposal of fixed asset;operating profit before changes in working capital;lãi lỗ do thanh lý tscđ;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5289
         ],
-        "interest income and dividends;operating profit before changes in working capital;thu nhập lãi vay và cổ tức": [
+        "interest income and dividends;operating profit before changes in working capital;thu nhập lãi vay và cổ tức;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5290
         ],
-        "allocation of goodwill;operating profit before changes in working capital;phân bổ lợi thế thương mại": [
+        "allocation of goodwill;operating profit before changes in working capital;phân bổ lợi thế thương mại;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5291
         ],
-        "accrued interest income;add non cash expenses;dự thu tiền lãi": [
+        "accrued interest income;add non cash expenses;dự thu tiền lãi;tăng các chi phí phi tiền tệ": [
             5481
         ],
-        "adjustments for;operating profit before changes in working capital;điều chỉnh cho các khoản khác": [
+        "adjustments for;operating profit before changes in working capital;điều chỉnh cho các khoản khác;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5292
         ],
-        "add non cash expenses;operating profit before changes in working capital;tăng các chi phí phi tiền tệ": [
+        "add non cash expenses;operating profit before changes in working capital;tăng các chi phí phi tiền tệ;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5532
         ],
-        "loss from revaluation losses of fvtpl financial assets;add non cash expenses;lỗ đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh": [
+        "loss from revaluation losses of fvtpl financial assets;add non cash expenses;lỗ đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh;tăng các chi phí phi tiền tệ": [
             5482
         ],
-        "loss from revaluation of fvtpl financial debt;add non cash expenses;lỗ đánh giá giá trị các công nợ tài chính ghi nhận thông qua kết quả kinh doanh": [
+        "loss from revaluation of fvtpl financial debt;add non cash expenses;lỗ đánh giá giá trị các công nợ tài chính ghi nhận thông qua kết quả kinh doanh;tăng các chi phí phi tiền tệ": [
             5483
         ],
-        ";add non cash expenses;": [
+        ";add non cash expenses;;tăng các chi phí phi tiền tệ": [
             5715,
             5716,
             5717,
             5718
         ],
-        "losse from revaluetion;add non cash expenses;lỗ đánh giá giá trị các công cụ tài chính phái sinh": [
+        "losse from revaluetion;add non cash expenses;lỗ đánh giá giá trị các công cụ tài chính phái sinh;tăng các chi phí phi tiền tệ": [
             5484
         ],
-        "loss from provision available for sale financial assets;add non cash expenses;lỗ từ thanh lý các tài sản tài chính sẵn sàng để bán": [
+        "loss from provision available for sale financial assets;add non cash expenses;lỗ từ thanh lý các tài sản tài chính sẵn sàng để bán;tăng các chi phí phi tiền tệ": [
             5485
         ],
-        "value decline of available for sale financial assets;add non cash expenses;suy giảm giá trị của các tài sản tài chính sẵn sàng để bán": [
+        "value decline of available for sale financial assets;add non cash expenses;suy giảm giá trị của các tài sản tài chính sẵn sàng để bán;tăng các chi phí phi tiền tệ": [
             5486
         ],
-        "loss from revaluation of financial derivative tools for hedging purposes;add non cash expenses;lỗ đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa rủi ro": [
+        "loss from revaluation of financial derivative tools for hedging purposes;add non cash expenses;lỗ đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa rủi ro;tăng các chi phí phi tiền tệ": [
             5487
         ],
-        "losses from disposals of fixed assets;add non cash expenses;lỗ từ thanh lý tài sản cố định": [
+        "losses from disposals of fixed assets;add non cash expenses;lỗ từ thanh lý tài sản cố định;tăng các chi phí phi tiền tệ": [
             5488
         ],
-        "value decline of fixed assets;add non cash expenses;suy giảm giá trị của các tài sản cố định": [
+        "value decline of fixed assets;add non cash expenses;suy giảm giá trị của các tài sản cố định;tăng các chi phí phi tiền tệ": [
             5489
         ],
-        "loss from disposal investments in subsidiaries associates joint ventures;add non cash expenses;lỗ từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết": [
+        "loss from disposal investments in subsidiaries associates joint ventures;add non cash expenses;lỗ từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết;tăng các chi phí phi tiền tệ": [
             5490
         ],
-        "less non cash income;operating profit before changes in working capital;giảm các doanh thu phi tiền tệ": [
+        "less non cash income;operating profit before changes in working capital;giảm các doanh thu phi tiền tệ;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5533
         ],
-        "gains from revaluation gains of fvtpl financial assets;less non cash income;lãi đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh": [
+        "gains from revaluation gains of fvtpl financial assets;less non cash income;lãi đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh;giảm các doanh thu phi tiền tệ": [
             5491
         ],
-        "gains from revaluation gains of fvtpl financial debt;less non cash income;lãi đánh giá giá trị các công nợ tài chính thông qua kết quả kinh doanh": [
+        "gains from revaluation gains of fvtpl financial debt;less non cash income;lãi đánh giá giá trị các công nợ tài chính thông qua kết quả kinh doanh;giảm các doanh thu phi tiền tệ": [
             5492
         ],
-        "gains from disposals of avalable for sale financial assets;less non cash income;lãi từ thanh lý các tài sản tài chính sẵn sàng để bán": [
+        "gains from disposals of avalable for sale financial assets;less non cash income;lãi từ thanh lý các tài sản tài chính sẵn sàng để bán;giảm các doanh thu phi tiền tệ": [
             5493
         ],
-        "reversal of value decline of available for sale financial assets;less non cash income;hoàn nhập suy giảm giá trị của các tài sản tài chính sẵn sàng để bán": [
+        "reversal of value decline of available for sale financial assets;less non cash income;hoàn nhập suy giảm giá trị của các tài sản tài chính sẵn sàng để bán;giảm các doanh thu phi tiền tệ": [
             5494
         ],
-        "gains from revaluation of financial derivative tools for hedging purposes;less non cash income;lãi đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa": [
+        "gains from revaluation of financial derivative tools for hedging purposes;less non cash income;lãi đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa;giảm các doanh thu phi tiền tệ": [
             5495
         ],
-        "gains from disaposals loans and receivables;less non cash income;lãi từ thanh lý các khoản cho vay và phải thu": [
+        "gains from disaposals loans and receivables;less non cash income;lãi từ thanh lý các khoản cho vay và phải thu;giảm các doanh thu phi tiền tệ": [
             5496
         ],
-        "reversal of allowances;less non cash income;hoàn nhập chi phí dự phòng": [
+        "reversal of allowances;less non cash income;hoàn nhập chi phí dự phòng;giảm các doanh thu phi tiền tệ": [
             5497
         ],
-        "gains from disposal from fixed assets investment property;less non cash income;lãi từ thanh lý tài sản cố định bđsđt": [
+        "gains from disposal from fixed assets investment property;less non cash income;lãi từ thanh lý tài sản cố định bđsđt;giảm các doanh thu phi tiền tệ": [
             5498
         ],
-        "gains from disposal investments in subsidiaries associates joint ventures;less non cash income;lãi từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết": [
+        "gains from disposal investments in subsidiaries associates joint ventures;less non cash income;lãi từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết;giảm các doanh thu phi tiền tệ": [
             5499
         ],
-        ";less non cash income;": [
+        ";less non cash income;;giảm các doanh thu phi tiền tệ": [
             5719
         ],
-        "changes of assets and liabilities;operating profit before changes in working capital;thay đổi tài sản và nợ phải trả hoạt động": [
+        "changes of assets and liabilities;operating profit before changes in working capital;thay đổi tài sản và nợ phải trả hoạt động;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
             5534
         ],
-        "increase decrease in fvtpl financial assets;add non cash expenses;tăng giảm tài sản tài chính ghi nhận thông qua lãi lỗ": [
+        "increase decrease in fvtpl financial assets;add non cash expenses;tăng giảm tài sản tài chính ghi nhận thông qua lãi lỗ;tăng các chi phí phi tiền tệ": [
             5500
         ],
-        "increase decrease in held to maturity investments;add non cash expenses;tăng giảm các khoản đầu tư giữ đến ngày đáo hạn": [
+        "increase decrease in held to maturity investments;add non cash expenses;tăng giảm các khoản đầu tư giữ đến ngày đáo hạn;tăng các chi phí phi tiền tệ": [
             5501
         ],
-        "increase decrease in loan;;tăng giảm các khoản cho vay khách hàng": [
+        "increase decrease in loan;;tăng giảm các khoản cho vay khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5536
         ],
-        "increase decrease in afs financial assets;add non cash expenses;tăng giảm tài sản tài chính sẵn sàng để bán": [
+        "increase decrease in afs financial assets;add non cash expenses;tăng giảm tài sản tài chính sẵn sàng để bán;tăng các chi phí phi tiền tệ": [
             5502
         ],
-        "increase decrease in receivables;net cash flows from securities trading activities;tăng giảm các khoản phải thu": [
+        "increase decrease in receivables;net cash flows from securities trading activities;tăng giảm các khoản phải thu;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4748
         ],
-        "increase decrease in borrowings and finance lease liabilities;add non cash expenses;tăng giảm vay và nợ thuê tài sản tài chính": [
+        "increase decrease in borrowings and finance lease liabilities;add non cash expenses;tăng giảm vay và nợ thuê tài sản tài chính;tăng các chi phí phi tiền tệ": [
             5504
         ],
-        "increase decrease in finance assets borrowings;add non cash expenses;tăng giảm vay tài sản tài chính": [
+        "increase decrease in finance assets borrowings;add non cash expenses;tăng giảm vay tài sản tài chính;tăng các chi phí phi tiền tệ": [
             5505
         ],
-        "increase decrease in convertible bond debt structure;add non cash expenses;tăng giảm trái phiếu chuyển đổi cấu phần nợ": [
+        "increase decrease in convertible bond debt structure;add non cash expenses;tăng giảm trái phiếu chuyển đổi cấu phần nợ;tăng các chi phí phi tiền tệ": [
             5506
         ],
-        "increase decrease in issued bonds;add non cash expenses;tăng giảm trái phiếu phát hành": [
+        "increase decrease in issued bonds;add non cash expenses;tăng giảm trái phiếu phát hành;tăng các chi phí phi tiền tệ": [
             5507
         ],
-        "increase decrease borrowings to settlement assistance fund;add non cash expenses;tăng giảm vay quỹ hỗ trợ thanh toán": [
+        "increase decrease borrowings to settlement assistance fund;add non cash expenses;tăng giảm vay quỹ hỗ trợ thanh toán;tăng các chi phí phi tiền tệ": [
             5508
         ],
-        "operating profit before changes in working capital;net cash flows from securities trading activities;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
+        "operating profit before changes in working capital;net cash flows from securities trading activities;lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4741
         ],
-        "increase decrease in receiables sale of financial assets;add non cash expenses;tăng giảm phải thu bán các tài sản tài chính": [
+        "increase decrease in receiables sale of financial assets;add non cash expenses;tăng giảm phải thu bán các tài sản tài chính;tăng các chi phí phi tiền tệ": [
             5509
         ],
-        "increase decrease in receiables interest of financial assets;add non cash expenses;tăng giảm phải thu tiền lãi các tài sản tài chính": [
+        "increase decrease in receiables interest of financial assets;add non cash expenses;tăng giảm phải thu tiền lãi các tài sản tài chính;tăng các chi phí phi tiền tệ": [
             5510
         ],
-        "increase decrease in service related receivables;add non cash expenses;tăng giảm các khoản phải thu các dịch vụ ctck cung cấp": [
+        "increase decrease in service related receivables;add non cash expenses;tăng giảm các khoản phải thu các dịch vụ ctck cung cấp;tăng các chi phí phi tiền tệ": [
             5511
         ],
-        "increase decrease in trading error receivables;add non cash expenses;tăng giảm các khoản phải thu về lỗi giao dịch chứng khoán": [
+        "increase decrease in trading error receivables;add non cash expenses;tăng giảm các khoản phải thu về lỗi giao dịch chứng khoán;tăng các chi phí phi tiền tệ": [
             5512
         ],
-        "increases decreases in other receivables;add non cash expenses;tăng giảm các khoản phải thu khác": [
+        "increases decreases in other receivables;add non cash expenses;tăng giảm các khoản phải thu khác;tăng các chi phí phi tiền tệ": [
             5513
         ],
-        "increase decrease in other assets;add non cash expenses;tăng giảm các tài sản khác": [
+        "increase decrease in other assets;add non cash expenses;tăng giảm các tài sản khác;tăng các chi phí phi tiền tệ": [
             5503
         ],
-        "increase decrease in payables other than interest corporate income tax;net cash flows from securities trading activities;tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập doanh nghiệp phải nộp": [
+        "increase decrease in payables other than interest corporate income tax;net cash flows from securities trading activities;tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập doanh nghiệp phải nộp;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4750
         ],
-        "increase decrease in prepaid expenses;net cash flows from securities trading activities;tăng giảm chi phí trả trước": [
+        "increase decrease in prepaid expenses;net cash flows from securities trading activities;tăng giảm chi phí trả trước;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4751
         ],
-        "corporate income tax paid;net cash flows from securities trading activities;thuế thu nhập doanh nghiệp đã nộp": [
+        "corporate income tax paid;net cash flows from securities trading activities;thuế thu nhập doanh nghiệp đã nộp;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4752
         ],
-        "interest paid;net cash flows from securities trading activities;tiền lãi vay đã trả": [
+        "interest paid;net cash flows from securities trading activities;tiền lãi vay đã trả;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4772
         ],
-        "increases decreaese in trade payables;add non cash expenses;tăng giảm phải trả cho người bán": [
+        "increases decreaese in trade payables;add non cash expenses;tăng giảm phải trả cho người bán;tăng các chi phí phi tiền tệ": [
             5514
         ],
-        "increases decreaese in payable securities issuers;add non cash expenses;tăng giảm phải trả tổ chức phát hành chứng khoán": [
+        "increases decreaese in payable securities issuers;add non cash expenses;tăng giảm phải trả tổ chức phát hành chứng khoán;tăng các chi phí phi tiền tệ": [
             5515
         ],
-        "increases decreases in employee welfare payables;increases decreases in employee welfare payables;tăng giảm các khoản trích nộp phúc lợi nhân viên": [
+        "increases decreases in employee welfare payables;increases decreases in employee welfare payables;tăng giảm các khoản trích nộp phúc lợi nhân viên;tăng giảm các khoản trích nộp phúc lợi nhân viên": [
             5695
         ],
-        "increases decreases in tax and other payables to the state budget;add non cash expenses;tăng giảm thuế và các khoản phải nộp nhà nước": [
+        "increases decreases in tax and other payables to the state budget;add non cash expenses;tăng giảm thuế và các khoản phải nộp nhà nước;tăng các chi phí phi tiền tệ": [
             5516
         ],
-        "increases dcreases in payable to employees;increases decreases in employee welfare payables;tăng giảm phải trả người lao động": [
+        "increases dcreases in payable to employees;increases decreases in employee welfare payables;tăng giảm phải trả người lao động;tăng giảm các khoản trích nộp phúc lợi nhân viên": [
             5696
         ],
-        ";net cash flows from securities trading activities;": [
+        ";net cash flows from securities trading activities;;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5720
         ],
-        "increases dcreases in other payables;add non cash expenses;tăng giảm phải trả phải nộp khác": [
+        "increases dcreases in other payables;add non cash expenses;tăng giảm phải trả phải nộp khác;tăng các chi phí phi tiền tệ": [
             5517
         ],
-        "increases dcreases corporate income tax paid;add non cash expenses;tăng giảm thuế tndn ctck đã nộp": [
+        "increases dcreases corporate income tax paid;add non cash expenses;tăng giảm thuế tndn ctck đã nộp;tăng các chi phí phi tiền tệ": [
             5518
         ],
-        "increase decrease in inventories;net cash flows from securities trading activities;tăng giảm hàng tồn kho tăng giảm chứng khoán tự doanh": [
+        "increase decrease in inventories;net cash flows from securities trading activities;tăng giảm hàng tồn kho tăng giảm chứng khoán tự doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4749
         ],
-        "other receipts from operating activities;net cash flows from securities trading activities;tiền thu khác từ hoạt động kinh doanh": [
+        "other receipts from operating activities;net cash flows from securities trading activities;tiền thu khác từ hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4754
         ],
-        "other payments for operating activities;net cash flows from securities trading activities;tiền chi khác cho hoạt động kinh doanh": [
+        "other payments for operating activities;net cash flows from securities trading activities;tiền chi khác cho hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4755
         ],
-        "net cash flows from securities trading activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
+        "net cash flows from securities trading activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán;lưu chuyển tiền thuần trong kỳ": [
             4735
         ],
-        "cash flow from investing activities;cash flow from investing activities;lưu chuyển tiền từ hoạt động đầu tư": [
+        "cash flow from investing activities;cash flow from investing activities;lưu chuyển tiền từ hoạt động đầu tư;lưu chuyển tiền từ hoạt động đầu tư": [
             4731
         ],
-        "payment for fixed assets constructions and other long term assets;net cash flows from investing activities;tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác": [
+        "payment for fixed assets constructions and other long term assets;net cash flows from investing activities;tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4753
         ],
-        "proceeds from disposals of fixed assets and other long term assets;net cash flows from investing activities;tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác": [
+        "proceeds from disposals of fixed assets and other long term assets;net cash flows from investing activities;tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4767
         ],
-        "loans purchases of other entities debt instruments;net cash flows from investing activities;tiền chi cho vay mua các công cụ nợ của đơn vị khác": [
+        "loans purchases of other entities debt instruments;net cash flows from investing activities;tiền chi cho vay mua các công cụ nợ của đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4756
         ],
-        "receipts from loan repayments sale of other entities debt instruments;net cash flows from investing activities;tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác": [
+        "receipts from loan repayments sale of other entities debt instruments;net cash flows from investing activities;tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4757
         ],
-        "payments for investment in other entities;net cash flows from investing activities;tiền chi đầu tư vốn vào công ty con công ty liên doanh liên kết và đầu tư khác": [
+        "payments for investment in other entities;net cash flows from investing activities;tiền chi đầu tư vốn vào công ty con công ty liên doanh liên kết và đầu tư khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4758
         ],
-        "collections on investment in other entities;net cash flows from investing activities;tiền thu thanh lý các khoản đầu tư vào công ty con công ty liên doanh liên kết và đầu tư khác": [
+        "collections on investment in other entities;net cash flows from investing activities;tiền thu thanh lý các khoản đầu tư vào công ty con công ty liên doanh liên kết và đầu tư khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4759
         ],
-        "dividends interest and profit received;net cash flows from investing activities;tiền thu về cổ tức và lợi nhuận được chia": [
+        "dividends interest and profit received;net cash flows from investing activities;tiền thu về cổ tức và lợi nhuận được chia;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4760
         ],
-        "purchases of minority shares of subsidiaries;net cash flows from investing activities;mua lại khoản góp vốn của cổ đông thiểu số trong công ty con": [
+        "purchases of minority shares of subsidiaries;net cash flows from investing activities;mua lại khoản góp vốn của cổ đông thiểu số trong công ty con;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4769
         ],
-        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư": [
+        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             5285
         ],
-        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoạt động đầu tư": [
+        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             5286
         ],
-        "net cash flows from investing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+        "net cash flows from investing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động đầu tư;lưu chuyển tiền thuần trong kỳ": [
             4736
         ],
-        "cash flow from financing activities;cash flow from financing activities;lưu chuyển tiền từ hoạt động tài chính": [
+        "cash flow from financing activities;cash flow from financing activities;lưu chuyển tiền từ hoạt động tài chính;lưu chuyển tiền từ hoạt động tài chính": [
             4732
         ],
-        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu": [
+        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4761
         ],
-        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu quỹ": [
+        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu quỹ;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4762
         ],
-        "short term and long term borrowings;net cash flows from financing activities;tiền vay gốc": [
+        "short term and long term borrowings;net cash flows from financing activities;tiền vay gốc;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4763
         ],
-        "borrowings to settlement assistance fund;add non cash expenses;tiền vay quỹ hỗ trợ thanh toán": [
+        "borrowings to settlement assistance fund;add non cash expenses;tiền vay quỹ hỗ trợ thanh toán;tăng các chi phí phi tiền tệ": [
             5519
         ],
-        "other borrowings;add non cash expenses;tiền vay khác": [
+        "other borrowings;add non cash expenses;tiền vay khác;tăng các chi phí phi tiền tệ": [
             5520
         ],
-        "principal repayments;net cash flows from financing activities;tiền chi trả nợ gốc vay": [
+        "principal repayments;net cash flows from financing activities;tiền chi trả nợ gốc vay;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4764
         ],
-        "principal repayments to settlement assistance fund;add non cash expenses;tiền chi trả gốc vay quỹ hỗ trợ thanh toán": [
+        "principal repayments to settlement assistance fund;add non cash expenses;tiền chi trả gốc vay quỹ hỗ trợ thanh toán;tăng các chi phí phi tiền tệ": [
             5521
         ],
-        "principal repayments to financial assets;add non cash expenses;tiền chi trả nợ gốc vay tài sản tài chính": [
+        "principal repayments to financial assets;add non cash expenses;tiền chi trả nợ gốc vay tài sản tài chính;tăng các chi phí phi tiền tệ": [
             5522
         ],
-        "other principal repayments;add non cash expenses;tiền chi trả gốc nợ vay khác": [
+        "other principal repayments;add non cash expenses;tiền chi trả gốc nợ vay khác;tăng các chi phí phi tiền tệ": [
             5523
         ],
-        "payments to settle finance leases;net cash flows from financing activities;tiền chi trả nợ thuê tài chính": [
+        "payments to settle finance leases;net cash flows from financing activities;tiền chi trả nợ thuê tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4765
         ],
-        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu": [
+        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4766
         ],
-        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt động tài chính": [
+        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             5287
         ],
-        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính": [
+        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             5288
         ],
-        "net cash flows from financing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động tài chính": [
+        "net cash flows from financing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động tài chính;lưu chuyển tiền thuần trong kỳ": [
             4737
         ],
-        "net cash flows during the period;cash and cash equivalents at end of the period;lưu chuyển tiền thuần trong kỳ": [
+        "net cash flows during the period;cash and cash equivalents at end of the period;lưu chuyển tiền thuần trong kỳ;tiền và tương đương tiền cuối kỳ": [
             4738
         ],
-        "cash and cash equivalents at begingning of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền đầu kỳ": [
+        "cash and cash equivalents at begingning of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền đầu kỳ;tiền và tương đương tiền cuối kỳ": [
             4739
         ],
-        "cash at bank;add non cash expenses;tiền gửi ngân hàng đầu kỳ": [
+        "cash at bank;add non cash expenses;tiền gửi ngân hàng đầu kỳ;tăng các chi phí phi tiền tệ": [
             5524
         ],
-        "cash at bank for securities company activities;add non cash expenses;tiền gửi ngân hàng cho hoạt động ctck": [
+        "cash at bank for securities company activities;add non cash expenses;tiền gửi ngân hàng cho hoạt động ctck;tăng các chi phí phi tiền tệ": [
             5525,
             5529
         ],
-        "cash equivalents;add non cash expenses;các khoản tương đương tiền": [
+        "cash equivalents;add non cash expenses;các khoản tương đương tiền;tăng các chi phí phi tiền tệ": [
             5526,
             5530
         ],
-        "exchange difference due to re valuation of ending balances;add non cash expenses;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ đầu kỳ": [
+        "exchange difference due to re valuation of ending balances;add non cash expenses;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ đầu kỳ;tăng các chi phí phi tiền tệ": [
             5527
         ],
-        "exchange difference due to re valuation of ending balances;cash and cash equivalents at end of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+        "exchange difference due to re valuation of ending balances;cash and cash equivalents at end of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;tiền và tương đương tiền cuối kỳ": [
             4742
         ],
-        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền cuối kỳ": [
+        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền cuối kỳ;tiền và tương đương tiền cuối kỳ": [
             4740
         ],
-        "cash at bank;add non cash expenses;tiền gửi ngân hàng cuối kỳ": [
+        "cash at bank;add non cash expenses;tiền gửi ngân hàng cuối kỳ;tăng các chi phí phi tiền tệ": [
             5528
         ],
-        "exchange difference due to re valuation of ending balances;add non cash expenses;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ cuối kỳ": [
+        "exchange difference due to re valuation of ending balances;add non cash expenses;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ cuối kỳ;tăng các chi phí phi tiền tệ": [
             5531
         ],
-        ";;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
+        ";;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5537
         ],
-        ";;lưu chuyển tiền hoạt động môi giới ủy thác của khách hàng": [
+        ";;lưu chuyển tiền hoạt động môi giới ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5538
         ],
-        ";;tiền thu bán chứng khoán môi giới cho khách hàng": [
+        ";;tiền thu bán chứng khoán môi giới cho khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5539
         ],
-        ";;tiền chi mua chứng khoán môi giới cho khách hàng": [
+        ";;tiền chi mua chứng khoán môi giới cho khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5540
         ],
-        ";;tiền thu bán chứng khoán ủy thác của khách hàng": [
+        ";;tiền thu bán chứng khoán ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5541
         ],
-        ";;tiền chi bán chứng khoán ủy thác của khách hàng": [
+        ";;tiền chi bán chứng khoán ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5542
         ],
-        ";;thu tiền từ tài khoản vãng lai của khách hàng": [
+        ";;thu tiền từ tài khoản vãng lai của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5543
         ],
-        ";;chi tiền từ tài khoản vãng lai của khách hàng": [
+        ";;chi tiền từ tài khoản vãng lai của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5544
         ],
-        ";;thu vay quỹ hỗ trợ thanh toán": [
+        ";;thu vay quỹ hỗ trợ thanh toán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5545
         ],
-        ";;chi trả vay quỹ hỗ trợ thanh toán": [
+        ";;chi trả vay quỹ hỗ trợ thanh toán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5546
         ],
-        ";;nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng": [
+        ";;nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5547
         ],
-        ";;": [
+        ";;;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5723,
             5721,
             5722
         ],
-        ";;nhận tiền gửi của nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng": [
+        ";;nhận tiền gửi của nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5548
         ],
-        ";;chi trả phí lưu ký chứng khoán của khách hàng": [
+        ";;chi trả phí lưu ký chứng khoán của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5549
         ],
-        ";;thu lỗi giao dịch chứng khoán": [
+        ";;thu lỗi giao dịch chứng khoán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5550
         ],
-        ";;chi lỗi giao dịch chứng khoán": [
+        ";;chi lỗi giao dịch chứng khoán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5551
         ],
-        ";;tiền thu của tổ chức phát hành chứng khoán": [
+        ";;tiền thu của tổ chức phát hành chứng khoán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5552
         ],
-        ";;tiền chi trả tổ chức phát hành chứng khoán": [
+        ";;tiền chi trả tổ chức phát hành chứng khoán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5553
         ],
-        ";;tăng giảm tiền thuần trong kỳ": [
+        ";;tăng giảm tiền thuần trong kỳ;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5554
         ],
-        ";;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+        ";;tiền và các khoản tương đương tiền đầu kỳ của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5555
         ],
-        "cash at bank;;tiền gửi ngân hàng đầu kỳ": [
+        "cash at bank;;tiền gửi ngân hàng đầu kỳ;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5557
         ],
-        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý": [
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5558,
             5569
         ],
-        ";;trong đó có kỳ hạn": [
+        ";;trong đó có kỳ hạn;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5559,
             5561,
             5565,
@@ -403,326 +403,342 @@
             5572,
             5576
         ],
-        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý": [
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5560,
             5571
         ],
-        ";;tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng": [
+        ";;tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5562,
             5573
         ],
-        ";;tiền gửi bù trừ và thanh toán giao dịch chứng khoán": [
+        ";;tiền gửi bù trừ và thanh toán giao dịch chứng khoán;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5563,
             5574
         ],
-        ";;tiền gửi của tổ chức phát hành": [
+        ";;tiền gửi của tổ chức phát hành;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5564,
             5575
         ],
-        "cash equivalents;;các khoản tương đương tiền": [
+        "cash equivalents;;các khoản tương đương tiền;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5566,
             5577
         ],
-        "exchange difference due to re valuation of ending balances;;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+        "exchange difference due to re valuation of ending balances;;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5567,
             5578
         ],
-        ";;tiền và các khoản tương đương tiền cuối kỳ của khách hàng": [
+        ";;tiền và các khoản tương đương tiền cuối kỳ của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5556
         ],
-        "cash at bank;;tiền gửi ngân hàng cuối kỳ": [
+        "cash at bank;;tiền gửi ngân hàng cuối kỳ;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5568
         ]
     },
     "CashFlow Direct": {
-        "cash flow from securities trading activities;cash flow from securities trading activities;lưu chuyển tiền từ hoạt động kinh doanh": [
+        "cash flow from securities trading activities;cash flow from securities trading activities;lưu chuyển tiền từ hoạt động kinh doanh;lưu chuyển tiền từ hoạt động kinh doanh": [
             4695
         ],
-        "payment for purchases financial assets;net cash flows from securities business;tiền đã chi mua các tài sản tài chính": [
+        "payment for purchases financial assets;net cash flows from securities business;tiền đã chi mua các tài sản tài chính;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5613
         ],
-        "receipts from sale of financial assets;net cash flows from securities business;tiền đã thu từ bán các tài sản tài chính": [
+        "receipts from sale of financial assets;net cash flows from securities business;tiền đã thu từ bán các tài sản tài chính;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5614
         ],
-        "receipts from operating activities;net cash flows from securities business;tiền thu từ hoạt động kinh doanh": [
+        "receipts from operating activities;net cash flows from securities business;tiền thu từ hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4720
         ],
-        "cash paid to operating activities;net cash flows from securities business;tiền chi hoạt động kinh doanh": [
+        "cash paid to operating activities;net cash flows from securities business;tiền chi hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4724
         ],
-        "cash paid to settlement assistance fund;net cash flows from securities business;tiền chi nộp quỹ hỗ trợ thanh toán": [
+        "cash paid to settlement assistance fund;net cash flows from securities business;tiền chi nộp quỹ hỗ trợ thanh toán;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4728
         ],
-        "dividends received;net cash flows from securities business;cổ tức đã nhận": [
+        "dividends received;net cash flows from securities business;cổ tức đã nhận;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5615
         ],
-        "interest received;net cash flows from securities business;tiền lãi đã thu": [
+        "interest received;net cash flows from securities business;tiền lãi đã thu;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5619
         ],
-        "receipts from securities trading of customers;net cash flows from securities business;tiền thu giao dịch chứng khoán khách hàng": [
+        "receipts from securities trading of customers;net cash flows from securities business;tiền thu giao dịch chứng khoán khách hàng;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4721
         ],
-        "cash paid to securities trading of customers;net cash flows from securities business;tiền chi trả giao dịch chứng khoán khách hàng": [
+        "cash paid to securities trading of customers;net cash flows from securities business;tiền chi trả giao dịch chứng khoán khách hàng;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4723
         ],
-        "receipts from securities issuing services;net cash flows from securities business;tiền thu bán chứng khoán phát hành": [
+        "receipts from securities issuing services;net cash flows from securities business;tiền thu bán chứng khoán phát hành;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4729
         ],
-        "cash paid securities issuers;net cash flows from securities business;tiền chi trả tổ chức phát hành chứng khoán": [
+        "cash paid securities issuers;net cash flows from securities business;tiền chi trả tổ chức phát hành chứng khoán;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4730
         ],
-        "cash paid to suppliers for goods and services;net cash flows from securities business;tiền chi trả cho người cung cấp hàng hóa và dịch vụ": [
+        "cash paid to suppliers for goods and services;net cash flows from securities business;tiền chi trả cho người cung cấp hàng hóa và dịch vụ;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4722
         ],
-        "interest paid;net cash flows from securities business;tiền chi trả lãi vay cho hoạt động của ctck": [
+        "interest paid;net cash flows from securities business;tiền chi trả lãi vay cho hoạt động của ctck;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4717
         ],
-        "payment organization providing services for activities of securities company;net cash flows from securities business;tiền chi trả tổ chức cung cấp dịch vụ cho ctck": [
+        "payment organization providing services for activities of securities company;net cash flows from securities business;tiền chi trả tổ chức cung cấp dịch vụ cho ctck;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5616
         ],
-        "cash paid to employees;net cash flows from securities business;tiền chi trả cho người lao động": [
+        "cash paid to employees;net cash flows from securities business;tiền chi trả cho người lao động;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4716
         ],
-        "tax payments related to activities of securities company;net cash flows from securities business;tiền chi nộp thuế liên quan đến hoạt động ctck": [
+        "tax payments related to activities of securities company;net cash flows from securities business;tiền chi nộp thuế liên quan đến hoạt động ctck;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5617
         ],
-        "payment of expenses for the purchase and sale of financial assets;net cash flows from securities business;tiền chi thanh toán các chi phí cho hoạt động mua bán các tài sản tài chính chi phí giao dịch phí chuyển tiền": [
+        "payment of expenses for the purchase and sale of financial assets;net cash flows from securities business;tiền chi thanh toán các chi phí cho hoạt động mua bán các tài sản tài chính chi phí giao dịch phí chuyển tiền;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5618
         ],
-        "corporate income tax paid;net cash flows from securities business;tiền chi nộp thuế thu nhập doanh nghiệp": [
+        "corporate income tax paid;net cash flows from securities business;tiền chi nộp thuế thu nhập doanh nghiệp;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4718
         ],
-        "other receipts from operating activities;net cash flows from securities business;tiền thu khác từ hoạt động kinh doanh": [
+        "other receipts from operating activities;net cash flows from securities business;tiền thu khác từ hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4703
         ],
-        "other payments for operating activities;net cash flows from securities business;tiền chi khác cho hoạt động kinh doanh": [
+        "other payments for operating activities;net cash flows from securities business;tiền chi khác cho hoạt động kinh doanh;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             4719
         ],
-        ";net cash flows from securities business;": [
+        ";net cash flows from securities business;;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
             5726
         ],
-        "net cash flows from securities business;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán": [
+        "net cash flows from securities business;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán;tăng giảm tiền thuần trong kỳ": [
             4696
         ],
-        "cash flow from investing activities;cash flow from investing activities;lưu chuyển tiền từ hoạt động đầu tư": [
+        "cash flow from investing activities;cash flow from investing activities;lưu chuyển tiền từ hoạt động đầu tư;lưu chuyển tiền từ hoạt động đầu tư": [
             4693
         ],
-        "payment for fixed assets constructions and other long term assets;net cash flows from investing activities;tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác": [
+        "payment for fixed assets constructions and other long term assets;net cash flows from investing activities;tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4704
         ],
-        "receipts from disposal of fixed assets and other long term assets;net cash flows from investing activities;tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác": [
+        "receipts from disposal of fixed assets and other long term assets;net cash flows from investing activities;tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4705
         ],
-        "loans purchases of other entities debt instruments;net cash flows from investing activities;tiền chi cho vay mua các công cụ nợ của đơn vị khác": [
+        "loans purchases of other entities debt instruments;net cash flows from investing activities;tiền chi cho vay mua các công cụ nợ của đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4706
         ],
-        "receipts from loan repayments sale of other entities debt instruments;net cash flows from investing activities;tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác": [
+        "receipts from loan repayments sale of other entities debt instruments;net cash flows from investing activities;tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4707
         ],
-        "payments for investment in other entities;net cash flows from investing activities;tiền chi đầu tư góp vốn vào đơn vị khác": [
+        "payments for investment in other entities;net cash flows from investing activities;tiền chi đầu tư góp vốn vào đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4708
         ],
-        "collections on investment in other entities;net cash flows from investing activities;tiền thu hồi đầu tư góp vốn vào đơn vị khác": [
+        "collections on investment in other entities;net cash flows from investing activities;tiền thu hồi đầu tư góp vốn vào đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4709
         ],
-        "dividends interest and profit received;net cash flows from investing activities;tiền thu lãi cho vay cổ tức và lợi nhuận được chia": [
+        "dividends interest and profit received;net cash flows from investing activities;tiền thu lãi cho vay cổ tức và lợi nhuận được chia;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             4725
         ],
-        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư": [
+        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             5293
         ],
-        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoạt động đầu tư": [
+        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
             5294
         ],
-        "net cash flows from investing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+        "net cash flows from investing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động đầu tư;tăng giảm tiền thuần trong kỳ": [
             4697
         ],
-        "iii cash flows from financing activities;iii cash flows from financing activities;lưu chuyển tiền từ hoạt động tài chính": [
+        "iii cash flows from financing activities;iii cash flows from financing activities;lưu chuyển tiền từ hoạt động tài chính;lưu chuyển tiền từ hoạt động tài chính": [
             4694
         ],
-        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu": [
+        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4710
         ],
-        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua cổ phiếu quỹ": [
+        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua cổ phiếu quỹ;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4711
         ],
-        "short term and long term borrowings;net cash flows from financing activities;tiền vay gốc": [
+        "short term and long term borrowings;net cash flows from financing activities;tiền vay gốc;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4712
         ],
-        "borrowings to settlement assistance fund;short term and long term borrowings;tiền vay quỹ hỗ trợ thanh toán": [
+        "borrowings to settlement assistance fund;short term and long term borrowings;tiền vay quỹ hỗ trợ thanh toán;tiền vay gốc": [
             5697
         ],
-        "other borrowings;short term and long term borrowings;tiền vay khác": [
+        "other borrowings;short term and long term borrowings;tiền vay khác;tiền vay gốc": [
             5698
         ],
-        "principal repayments;net cash flows from financing activities;tiền chi trả nợ gốc vay": [
+        "principal repayments;net cash flows from financing activities;tiền chi trả nợ gốc vay;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4713
         ],
-        "principal repayments to settlement assistance fund;principal repayments;tiền chi trả gốc vay quỹ hỗ trợ thanh toán": [
+        "principal repayments to settlement assistance fund;principal repayments;tiền chi trả gốc vay quỹ hỗ trợ thanh toán;tiền chi trả nợ gốc vay": [
             5580
         ],
-        "principal repayments to financial assets;principal repayments;tiền chi trả nợ gốc vay tài sản tài chính": [
+        "principal repayments to financial assets;principal repayments;tiền chi trả nợ gốc vay tài sản tài chính;tiền chi trả nợ gốc vay": [
             5581
         ],
-        "other principal repayments;principal repayments;tiền chi trả gốc nợ vay khác": [
+        "other principal repayments;principal repayments;tiền chi trả gốc nợ vay khác;tiền chi trả nợ gốc vay": [
             5582
         ],
-        "payments to settle finance leases;net cash flows from financing activities;tiền chi trả nợ thuê tài chính": [
+        "payments to settle finance leases;net cash flows from financing activities;tiền chi trả nợ thuê tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4714
         ],
-        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu": [
+        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu;lưu chuyển tiền thuần từ hoạt động tài chính": [
             4715
         ],
-        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt động tài chính": [
+        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             5295
         ],
-        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính": [
+        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
             5296
         ],
-        "net cash flows from financing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động tài chính": [
+        "net cash flows from financing activities;net cash flows during the period;lưu chuyển tiền thuần từ hoạt động tài chính;tăng giảm tiền thuần trong kỳ": [
             4698
         ],
-        "net cash flows during the period;cash and cash equivalents at end of the period;tăng giảm tiền thuần trong kỳ": [
+        "net cash flows during the period;cash and cash equivalents at end of the period;tăng giảm tiền thuần trong kỳ;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             4700
         ],
-        "cash and cash equivalents at beginning of the period;cash and cash equivalents at end of the period;tiền và các khoản tương đương tiền tồn đầu kỳ": [
+        "cash and cash equivalents at beginning of the period;cash and cash equivalents at end of the period;tiền và các khoản tương đương tiền tồn đầu kỳ;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             4701
         ],
-        "cash at bank;cash and cash equivalents at beginning of the period;tiền gửi ngân hàng đầu kỳ": [
+        "cash at bank;cash and cash equivalents at beginning of the period;tiền gửi ngân hàng đầu kỳ;tiền và các khoản tương đương tiền tồn đầu kỳ": [
             5587
         ],
-        "cash at bank for securities company activities;cash and cash equivalents at beginning of the period;tiền gửi ngân hàng cho hoạt động ctck": [
+        "cash at bank for securities company activities;cash and cash equivalents at beginning of the period;tiền gửi ngân hàng cho hoạt động ctck;tiền và các khoản tương đương tiền tồn đầu kỳ": [
             5583
         ],
-        "cash equivalents;cash and cash equivalents at beginning of the period;các khoản tương đương tiền": [
+        "cash equivalents;cash and cash equivalents at beginning of the period;các khoản tương đương tiền;tiền và các khoản tương đương tiền tồn đầu kỳ": [
             5584
         ],
-        "exchange difference due to re valuation of beginning balances;cash and cash equivalents at beginning of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ đầu kỳ": [
+        "exchange difference due to re valuation of beginning balances;cash and cash equivalents at beginning of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ đầu kỳ;tiền và các khoản tương đương tiền tồn đầu kỳ": [
             5588
         ],
-        "exchange difference due to re valuation of ending balances;cash and cash equivalents at beginning of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+        "exchange difference due to re valuation of ending balances;cash and cash equivalents at beginning of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;tiền và các khoản tương đương tiền tồn đầu kỳ": [
             4699
         ],
-        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
+        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và các khoản tương đương tiền cuối kỳ 70 50 60;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             4702
         ],
-        "cash at bank;cash and cash equivalents at end of the period;tiền gửi ngân hàng cuối kỳ": [
+        "cash at bank;cash and cash equivalents at end of the period;tiền gửi ngân hàng cuối kỳ;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             5589
         ],
-        "cash at bank for securities company activities;cash and cash equivalents at end of the period;tiền gửi ngân hàng cho hoạt động ctck": [
+        "cash at bank for securities company activities;cash and cash equivalents at end of the period;tiền gửi ngân hàng cho hoạt động ctck;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             5585
         ],
-        "cash equivalents;cash and cash equivalents at end of the period;các khoản tương đương tiền": [
+        "cash equivalents;cash and cash equivalents at end of the period;các khoản tương đương tiền;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             5586
         ],
-        "exchange difference due to re valuation of ending balances;cash and cash equivalents at end of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ cuối kỳ": [
+        "exchange difference due to re valuation of ending balances;cash and cash equivalents at end of the period;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ cuối kỳ;tiền và các khoản tương đương tiền cuối kỳ 70 50 60": [
             5590
         ],
-        ";;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
+        ";;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5620
         ],
-        ";;lưu chuyển tiền hoạt động môi giới ủy thác của khách hàng": [
+        ";;lưu chuyển tiền hoạt động môi giới ủy thác của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5621
         ],
-        ";;tiền thu bán chứng khoán môi giới cho khách hàng": [
+        ";;tiền thu bán chứng khoán môi giới cho khách hàng;tăng giảm tiền thuần trong kỳ": [
             5622
         ],
-        ";;tiền chi mua chứng khoán môi giới cho khách hàng": [
+        ";;tiền chi mua chứng khoán môi giới cho khách hàng;tăng giảm tiền thuần trong kỳ": [
             5623
         ],
-        ";;tiền thu bán chứng khoán ủy thác của khách hàng": [
+        ";;tiền thu bán chứng khoán ủy thác của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5624
         ],
-        ";;tiền cho bán chứng khoán ủy thác của khách hàng": [
+        ";;tiền cho bán chứng khoán ủy thác của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5625
         ],
-        ";;thu tiền từ tài khoản vãng lai của khách hàng": [
+        ";;thu tiền từ tài khoản vãng lai của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5626
         ],
-        ";;chi tiền từ tài khoản vãng lai của khách hàng": [
+        ";;chi tiền từ tài khoản vãng lai của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5627
         ],
-        ";;thu vay quỹ hỗ trợ thanh toán": [
+        ";;thu vay quỹ hỗ trợ thanh toán;tăng giảm tiền thuần trong kỳ": [
             5628
         ],
-        ";;chi trả vay quỹ hỗ trợ thanh toán": [
+        ";;chi trả vay quỹ hỗ trợ thanh toán;tăng giảm tiền thuần trong kỳ": [
             5629
         ],
-        ";;nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng": [
+        ";;nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5630
         ],
-        ";;nhận tiền gửi của nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng": [
+        ";;nhận tiền gửi của nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5631
         ],
-        ";;chi trả phí lưu ký chứng khoán của khách hàng": [
+        ";;chi trả phí lưu ký chứng khoán của khách hàng;tăng giảm tiền thuần trong kỳ": [
             5632
         ],
-        ";;thu lỗi giao dịch chứng khoán": [
+        ";;thu lỗi giao dịch chứng khoán;tăng giảm tiền thuần trong kỳ": [
             5633
         ],
-        ";;chi lỗi giao dịch chứng khoán": [
+        ";;chi lỗi giao dịch chứng khoán;tăng giảm tiền thuần trong kỳ": [
             5634
         ],
-        ";;tiền thu của tổ chức phát hành chứng khoán": [
+        ";;tiền thu của tổ chức phát hành chứng khoán;tăng giảm tiền thuần trong kỳ": [
             5635
         ],
-        ";;tiền chi trả tổ chức phát hành chứng khoán": [
+        ";;tiền chi trả tổ chức phát hành chứng khoán;tăng giảm tiền thuần trong kỳ": [
             5636
         ],
-        ";;": [
+        ";;;tăng giảm tiền thuần trong kỳ": [
             5724,
             5725
         ],
-        ";;tăng giảm tiền thuần trong kỳ": [
+        ";;tăng giảm tiền thuần trong kỳ;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5637
         ],
-        ";;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+        ";;tiền và các khoản tương đương tiền đầu kỳ của khách hàng;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
             5638
         ],
-        "cash at bank;;tiền gửi ngân hàng đầu kỳ": [
+        "cash at bank;;tiền gửi ngân hàng đầu kỳ;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
             5596
         ],
-        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý": [
-            5597,
-            5605
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5597
         ],
-        ";;trong đó có kỳ hạn": [
+        ";;trong đó có kỳ hạn;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
             5598,
             5600,
-            5604,
+            5604
+        ],
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5599
+        ],
+        ";;tiền gửi bù trừ và thanh toán giao dịch chứng khoán;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5602
+        ],
+        ";;tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5601
+        ],
+        ";;tiền gửi của tổ chức phát hành;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5603
+        ],
+        "cash equivalents;;các khoản tương đương tiền;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5591
+        ],
+        "exchange difference due to re valuation of ending balances;;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;tiền và các khoản tương đương tiền đầu kỳ của khách hàng": [
+            5592
+        ],
+        ";;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30;phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng": [
+            5639
+        ],
+        "cash at bank;;tiền gửi ngân hàng cuối kỳ;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
+            5593
+        ],
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
+            5605
+        ],
+        ";;trong đó có kỳ hạn;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5606,
             5608,
             5612
         ],
-        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý": [
-            5599,
+        ";;tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5607
         ],
-        ";;tiền gửi bù trừ và thanh toán giao dịch chứng khoán": [
-            5602,
-            5610
-        ],
-        ";;tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng": [
-            5601,
+        ";;tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5609
         ],
-        ";;tiền gửi của tổ chức phát hành": [
-            5603,
+        ";;tiền gửi bù trừ và thanh toán giao dịch chứng khoán;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
+            5610
+        ],
+        ";;tiền gửi của tổ chức phát hành;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5611
         ],
-        "cash equivalents;;các khoản tương đương tiền": [
-            5591,
+        "cash equivalents;;các khoản tương đương tiền;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5594
         ],
-        "exchange difference due to re valuation of ending balances;;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
-            5592,
+        "exchange difference due to re valuation of ending balances;;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
             5595
-        ],
-        ";;tiền và các khoản tương đương tiền cuối kỳ của khách hàng 40 20 30": [
-            5639
-        ],
-        "cash at bank;;tiền gửi ngân hàng cuối kỳ": [
-            5593
         ]
     }
 }

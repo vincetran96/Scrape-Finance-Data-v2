@@ -1,255 +1,255 @@
 {
     "Income Statement": {
-        "3;net insurance premium 03 01 02;3": [
+        "3;net insurance premium 03 01 02;3;doanh thu phí bảo hiểm thuần 03 01 02": [
             5335
         ],
-        "gross written premium;3;thu phí bảo hiểm gốc": [
+        "gross written premium;3;thu phí bảo hiểm gốc;3": [
             3207
         ],
-        "reinsurance premium assumed;3;thu phí nhận tái bảo hiểm": [
+        "reinsurance premium assumed;3;thu phí nhận tái bảo hiểm;3": [
             3208
         ],
-        "increase decrese in gross unearned premium reserve;3;tăng giảm dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm": [
+        "increase decrese in gross unearned premium reserve;3;tăng giảm dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm;3": [
             5342
         ],
-        "reinsurance premium ceded;net insurance premium 03 01 02;phí nhượng tái bảo hiểm": [
+        "reinsurance premium ceded;net insurance premium 03 01 02;phí nhượng tái bảo hiểm;doanh thu phí bảo hiểm thuần 03 01 02": [
             5349
         ],
-        "reinsurance premium ceded;reinsurance premium ceded;phí nhượng tái bảo hiểm": [
+        "reinsurance premium ceded;reinsurance premium ceded;phí nhượng tái bảo hiểm;phí nhượng tái bảo hiểm": [
             3234
         ],
-        "increase decrease in ceded unearned premium reserve;reinsurance premium ceded;tăng giảm dự phòng phí nhượng tái bảo hiểm": [
+        "increase decrease in ceded unearned premium reserve;reinsurance premium ceded;tăng giảm dự phòng phí nhượng tái bảo hiểm;phí nhượng tái bảo hiểm": [
             5343
         ],
-        "deductions;net insurance premium 03 01 02;các khoản giảm trừ": [
+        "deductions;net insurance premium 03 01 02;các khoản giảm trừ;doanh thu phí bảo hiểm thuần 03 01 02": [
             3209
         ],
-        "premium deduction;deductions;giảm phí bảo hiểm": [
+        "premium deduction;deductions;giảm phí bảo hiểm;các khoản giảm trừ": [
             3235
         ],
-        "premium returns;deductions;hoàn phí bảo hiểm": [
+        "premium returns;deductions;hoàn phí bảo hiểm;các khoản giảm trừ": [
             3236
         ],
-        "others;deductions;các khoản giảm trừ khác": [
+        "others;deductions;các khoản giảm trừ khác;các khoản giảm trừ": [
             3237
         ],
-        "increase decrease in unearned premium reserve and technical reserve;net insurance premium 03 01 02;tăng giảm dự phòng phí dự phòng toán học": [
+        "increase decrease in unearned premium reserve and technical reserve;net insurance premium 03 01 02;tăng giảm dự phòng phí dự phòng toán học;doanh thu phí bảo hiểm thuần 03 01 02": [
             3210
         ],
-        "net insurance premium 03 01 02;total net revenue from insurance business;doanh thu phí bảo hiểm thuần 03 01 02": [
+        "net insurance premium 03 01 02;total net revenue from insurance business;doanh thu phí bảo hiểm thuần 03 01 02;doanh thu thuần hđkd bh 10 03 04": [
             5336
         ],
-        "2;total net revenue from insurance business;2": [
+        "2;total net revenue from insurance business;2;doanh thu thuần hđkd bh 10 03 04": [
             5337
         ],
-        "commissions on reinsurance ceded;2;thu hoa hồng nhượng tái bảo hiểm": [
+        "commissions on reinsurance ceded;2;thu hoa hồng nhượng tái bảo hiểm;2": [
             3211
         ],
-        "other income;2;thu khác hoạt động kinh doanh bảo hiểm": [
+        "other income;2;thu khác hoạt động kinh doanh bảo hiểm;2": [
             3212
         ],
-        "income on reinsurance assumed;other income;thu khác nhận tái bảo hiểm": [
+        "income on reinsurance assumed;other income;thu khác nhận tái bảo hiểm;thu khác hoạt động kinh doanh bảo hiểm": [
             3238
         ],
-        "income on reinsurance ceded;other income;thu khác nhượng tái bảo hiểm": [
+        "income on reinsurance ceded;other income;thu khác nhượng tái bảo hiểm;thu khác hoạt động kinh doanh bảo hiểm": [
             3239
         ],
-        "income from other activities;other income;thu khác giám định đại lý": [
+        "income from other activities;other income;thu khác giám định đại lý;thu khác hoạt động kinh doanh bảo hiểm": [
             3240
         ],
-        "total net revenue from insurance business;gross insurance operating profit;doanh thu thuần hđkd bh 10 03 04": [
+        "total net revenue from insurance business;gross insurance operating profit;doanh thu thuần hđkd bh 10 03 04;lợi nhuận gộp hoạt động kinh doanh bảo hiểm": [
             3204
         ],
-        "revenue;total net revenue from insurance business;doanh thuần bh và ccdv": [
+        "revenue;total net revenue from insurance business;doanh thuần bh và ccdv;doanh thu thuần hđkd bh 10 03 04": [
             4820
         ],
-        "claim expenses on retained risks;total claim insurance expenses;chi bồi thường": [
+        "claim expenses on retained risks;total claim insurance expenses;chi bồi thường;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
             3216
         ],
-        "total claim expenses;cost of providing other goods and services;tổng chi bồi thường": [
+        "total claim expenses;cost of providing other goods and services;tổng chi bồi thường;giá vốn cung cấp hàng hóa dịch vụ khác": [
             5344
         ],
-        "claim and maturity payment expenses;claim expenses on retained risks;chi bồi thường bảo hiểm gốc trả tiền bảo hiểm": [
+        "claim and maturity payment expenses;claim expenses on retained risks;chi bồi thường bảo hiểm gốc trả tiền bảo hiểm;chi bồi thường": [
             3213
         ],
-        "claim expenses for reinsurance assumed;claim expenses on retained risks;chi bồi thường nhận tái bảo hiểm trả tiền bảo hiểm": [
+        "claim expenses for reinsurance assumed;claim expenses on retained risks;chi bồi thường nhận tái bảo hiểm trả tiền bảo hiểm;chi bồi thường": [
             3214
         ],
-        "deductions;claim expenses on retained risks;các khoản giảm trừ": [
+        "deductions;claim expenses on retained risks;các khoản giảm trừ;chi bồi thường": [
             3215
         ],
-        "subrogation recoveries;deductions;thu đòi người thứ ba bồi hoàn": [
+        "subrogation recoveries;deductions;thu đòi người thứ ba bồi hoàn;các khoản giảm trừ": [
             3242
         ],
-        "salvages;deductions;thu hàng đã xử lý bồi thường 100": [
+        "salvages;deductions;thu hàng đã xử lý bồi thường 100;các khoản giảm trừ": [
             3243
         ],
-        "recoveries from reinsurance ceded;total claim insurance expenses;thu bồi thường nhượng tái bảo hiểm": [
+        "recoveries from reinsurance ceded;total claim insurance expenses;thu bồi thường nhượng tái bảo hiểm;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
             3241
         ],
-        "increase decrease in mathematical reserve;total claim insurance expenses;tăng giảm dự phòng toán học dành riêng bvh": [
+        "increase decrease in mathematical reserve;total claim insurance expenses;tăng giảm dự phòng toán học dành riêng bvh;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
             5348
         ],
-        "increase decrease in claim reserves for direct insurance and reinsurance assumed;total claim insurance expenses;tăng giảm dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm": [
+        "increase decrease in claim reserves for direct insurance and reinsurance assumed;total claim insurance expenses;tăng giảm dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
             5338
         ],
-        "increase decrease in claim reserves related to reinsurance ceded;total claim insurance expenses;tăng giảm dự phòng bồi thường nhượng tái bảo hiểm": [
+        "increase decrease in claim reserves related to reinsurance ceded;total claim insurance expenses;tăng giảm dự phòng bồi thường nhượng tái bảo hiểm;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
             5339
         ],
-        "increase in claim reserve;total direct insurance operating expenses;tăng giảm dự phòng bồi thường": [
+        "increase in claim reserve;total direct insurance operating expenses;tăng giảm dự phòng bồi thường;tổng chi phí hoạt động kinh doanh bảo hiểm": [
             3218
         ],
-        "total claim insurance expenses;total direct insurance operating expenses;tổng chi bồi thường bảo hiểm 15 11 12 13 14": [
+        "total claim insurance expenses;total direct insurance operating expenses;tổng chi bồi thường bảo hiểm 15 11 12 13 14;tổng chi phí hoạt động kinh doanh bảo hiểm": [
             5340
         ],
-        "provision for catastrophe reserve;total direct insurance operating expenses;tăng giảm dự phòng dao động lớn": [
+        "provision for catastrophe reserve;total direct insurance operating expenses;tăng giảm dự phòng dao động lớn;tổng chi phí hoạt động kinh doanh bảo hiểm": [
             3219
         ],
-        "claim expenses using catastrophe reserve;total direct insurance operating expenses;chi bồi thường từ dự phòng dao động lớn": [
+        "claim expenses using catastrophe reserve;total direct insurance operating expenses;chi bồi thường từ dự phòng dao động lớn;tổng chi phí hoạt động kinh doanh bảo hiểm": [
             3217
         ],
-        "other insurance operating expenses;total direct insurance operating expenses;chi khác hoạt động kinh doanh bảo hiểm": [
+        "other insurance operating expenses;total direct insurance operating expenses;chi khác hoạt động kinh doanh bảo hiểm;tổng chi phí hoạt động kinh doanh bảo hiểm": [
             3220
         ],
-        "commission;other insurance operating expenses;chi hoa hồng bảo hiểm": [
+        "commission;other insurance operating expenses;chi hoa hồng bảo hiểm;chi khác hoạt động kinh doanh bảo hiểm": [
             4065
         ],
-        "other insurance operating expenses;other insurance operating expenses;chi phí khác hoạt động kinh doanh bảo hiểm": [
+        "other insurance operating expenses;other insurance operating expenses;chi phí khác hoạt động kinh doanh bảo hiểm;chi khác hoạt động kinh doanh bảo hiểm": [
             5345
         ],
-        "other underwriting expenses;other insurance operating expenses;chi khác hoạt động kinh doanh bảo hiểm gốc": [
+        "other underwriting expenses;other insurance operating expenses;chi khác hoạt động kinh doanh bảo hiểm gốc;chi phí khác hoạt động kinh doanh bảo hiểm": [
             3244
         ],
-        "damage assessment expenses;other underwriting expenses;chi giám định tổn thất": [
+        "damage assessment expenses;other underwriting expenses;chi giám định tổn thất;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3252
         ],
-        "subrogation recovery expenses;other underwriting expenses;chi đòi người thứ 3": [
+        "subrogation recovery expenses;other underwriting expenses;chi đòi người thứ 3;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3253
         ],
-        "salvage expenses;other underwriting expenses;chi xử lý hàng bồi thường 100": [
+        "salvage expenses;other underwriting expenses;chi xử lý hàng bồi thường 100;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3254
         ],
-        "loss adjusting fee risk assessment;other underwriting expenses;chi đánh giá rủi ro của đối tượng bảo hiểm": [
+        "loss adjusting fee risk assessment;other underwriting expenses;chi đánh giá rủi ro của đối tượng bảo hiểm;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3255
         ],
-        "risk minimization expenses;other underwriting expenses;chi đề phòng hạn chế rủi ro tổn thất": [
+        "risk minimization expenses;other underwriting expenses;chi đề phòng hạn chế rủi ro tổn thất;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3256
         ],
-        "others;other underwriting expenses;chi khác": [
+        "others;other underwriting expenses;chi khác;chi khác hoạt động kinh doanh bảo hiểm gốc": [
             3257
         ],
-        "other reinsurance assumed expenses;other insurance operating expenses;chi khác hoạt động kinh doanh nhận tái bảo hiểm": [
+        "other reinsurance assumed expenses;other insurance operating expenses;chi khác hoạt động kinh doanh nhận tái bảo hiểm;chi phí khác hoạt động kinh doanh bảo hiểm": [
             3245
         ],
-        "commission;other reinsurance assumed expenses;chi hoa hồng nhận tái bảo hiểm": [
+        "commission;other reinsurance assumed expenses;chi hoa hồng nhận tái bảo hiểm;chi khác hoạt động kinh doanh nhận tái bảo hiểm": [
             3258
         ],
-        "loss adjusting fee risk assessment;other reinsurance assumed expenses;chi đánh giá rủi ro của đối tượng bảo hiểm": [
+        "loss adjusting fee risk assessment;other reinsurance assumed expenses;chi đánh giá rủi ro của đối tượng bảo hiểm;chi khác hoạt động kinh doanh nhận tái bảo hiểm": [
             3259
         ],
-        "others;other reinsurance assumed expenses;chi khác": [
+        "others;other reinsurance assumed expenses;chi khác;chi khác hoạt động kinh doanh nhận tái bảo hiểm": [
             3260
         ],
-        "other reinsurance ceded expenses;other insurance operating expenses;chi hoạt động nhượng tái bảo hiểm": [
+        "other reinsurance ceded expenses;other insurance operating expenses;chi hoạt động nhượng tái bảo hiểm;chi phí khác hoạt động kinh doanh bảo hiểm": [
             3246
         ],
-        "other direct operating expenses;other insurance operating expenses;chi phí trực tiếp kinh doanh hoạt động khác": [
+        "other direct operating expenses;other insurance operating expenses;chi phí trực tiếp kinh doanh hoạt động khác;chi phí khác hoạt động kinh doanh bảo hiểm": [
             3247
         ],
-        "total direct insurance operating expenses;gross insurance operating profit;tổng chi phí hoạt động kinh doanh bảo hiểm": [
+        "total direct insurance operating expenses;gross insurance operating profit;tổng chi phí hoạt động kinh doanh bảo hiểm;lợi nhuận gộp hoạt động kinh doanh bảo hiểm": [
             3221
         ],
-        "cost of providing other goods and services;cost of providing other goods and services;giá vốn cung cấp hàng hóa dịch vụ khác": [
+        "cost of providing other goods and services;cost of providing other goods and services;giá vốn cung cấp hàng hóa dịch vụ khác;giá vốn cung cấp hàng hóa dịch vụ khác": [
             5350
         ],
-        "gross insurance operating profit;operating profit;lợi nhuận gộp hoạt động kinh doanh bảo hiểm": [
+        "gross insurance operating profit;operating profit;lợi nhuận gộp hoạt động kinh doanh bảo hiểm;lợi nhuận thuần từ hoạt động kinh doanh": [
             3205
         ],
-        "gross profit of providing other goods and services;cost of providing other goods and services;lợi nhuận gộp cung cấp hàng hóa dịch vụ khác": [
+        "gross profit of providing other goods and services;cost of providing other goods and services;lợi nhuận gộp cung cấp hàng hóa dịch vụ khác;giá vốn cung cấp hàng hóa dịch vụ khác": [
             5351
         ],
-        "profit from insurance operating;total profit;lợi nhuận thuần hoạt động kinh doanh bảo hiểm": [
+        "profit from insurance operating;total profit;lợi nhuận thuần hoạt động kinh doanh bảo hiểm;tổng lợi nhuận kế toán trước thuế": [
             3197
         ],
-        "revenue from properties investment;profit from properties investment 22 20 21;doanh thu kinh doanh bất động sản đầu tư": [
+        "revenue from properties investment;profit from properties investment 22 20 21;doanh thu kinh doanh bất động sản đầu tư;lợi nhuận từ hoạt động đầu tư bất động sản 22 20 21": [
             5346
         ],
-        "cost of properties investment;profit from properties investment 22 20 21;giá vốn bất động sản đầu tư": [
+        "cost of properties investment;profit from properties investment 22 20 21;giá vốn bất động sản đầu tư;lợi nhuận từ hoạt động đầu tư bất động sản 22 20 21": [
             5347
         ],
-        "profit from properties investment 22 20 21;operating profit;lợi nhuận từ hoạt động đầu tư bất động sản 22 20 21": [
+        "profit from properties investment 22 20 21;operating profit;lợi nhuận từ hoạt động đầu tư bất động sản 22 20 21;lợi nhuận thuần từ hoạt động kinh doanh": [
             5341
         ],
-        "revenue from financial activities;profit form financial activities;doanh thu hoạt động tài chính": [
+        "revenue from financial activities;profit form financial activities;doanh thu hoạt động tài chính;lợi nhuận gộp hoạt động tài chính": [
             3230
         ],
-        "expenses on financial activities;profit form financial activities;chi hoạt động tài chính": [
+        "expenses on financial activities;profit form financial activities;chi hoạt động tài chính;lợi nhuận gộp hoạt động tài chính": [
             3222
         ],
-        "mathematical reserve for investment profit sharing;expenses on financial activities;dự phòng toán học trích lãi từ đầu tư": [
+        "mathematical reserve for investment profit sharing;expenses on financial activities;dự phòng toán học trích lãi từ đầu tư;chi hoạt động tài chính": [
             3248
         ],
-        "dividend reserve;expenses on financial activities;dự phòng chia lãi": [
+        "dividend reserve;expenses on financial activities;dự phòng chia lãi;chi hoạt động tài chính": [
             3250
         ],
-        "others;expenses on financial activities;chi khác hoạt động tài chính": [
+        "others;expenses on financial activities;chi khác hoạt động tài chính;chi hoạt động tài chính": [
             3249
         ],
-        "profit form financial activities;operating profit;lợi nhuận gộp hoạt động tài chính": [
+        "profit form financial activities;operating profit;lợi nhuận gộp hoạt động tài chính;lợi nhuận thuần từ hoạt động kinh doanh": [
             3223
         ],
-        "selling expenses;profit from insurance operating;chi phí bán hàng": [
+        "selling expenses;profit from insurance operating;chi phí bán hàng;lợi nhuận thuần hoạt động kinh doanh bảo hiểm": [
             3251
         ],
-        "administrative expenses;operating profit;chi phí quản lý doanh nghiệp": [
+        "administrative expenses;operating profit;chi phí quản lý doanh nghiệp;lợi nhuận thuần từ hoạt động kinh doanh": [
             3231
         ],
-        "operating profit;total profit;lợi nhuận thuần từ hoạt động kinh doanh": [
+        "operating profit;total profit;lợi nhuận thuần từ hoạt động kinh doanh;tổng lợi nhuận kế toán trước thuế": [
             5352
         ],
-        "other incomes;other profits;thu nhập khác": [
+        "other incomes;other profits;thu nhập khác;lợi nhuận khác": [
             3232
         ],
-        "other expenses;other profits;chi phí khác": [
+        "other expenses;other profits;chi phí khác;lợi nhuận khác": [
             3233
         ],
-        "other profits;total profit;lợi nhuận khác": [
+        "other profits;total profit;lợi nhuận khác;tổng lợi nhuận kế toán trước thuế": [
             3198
         ],
-        "share of profitin associates and joint ventures;total profit;phần lợi nhuận lỗ từ công ty liên kết liên doanh": [
+        "share of profitin associates and joint ventures;total profit;phần lợi nhuận lỗ từ công ty liên kết liên doanh;tổng lợi nhuận kế toán trước thuế": [
             3199
         ],
-        "total profit;profit after tax;tổng lợi nhuận kế toán trước thuế": [
+        "total profit;profit after tax;tổng lợi nhuận kế toán trước thuế;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             3224
         ],
-        "increasing or decreasing adjustments to define taxable profit;total profit before tax;các khoản điều chỉnh tăng hoặc giảm lợi nhuận để xác định lợi nhuận chịu thuế tndn": [
+        "increasing or decreasing adjustments to define taxable profit;total profit before tax;các khoản điều chỉnh tăng hoặc giảm lợi nhuận để xác định lợi nhuận chịu thuế tndn;tổng lợi nhuận trước thuế thu nhập doanh nghiệp": [
             3225
         ],
-        "total profit before tax;taxable profit;tổng lợi nhuận trước thuế thu nhập doanh nghiệp": [
+        "total profit before tax;taxable profit;tổng lợi nhuận trước thuế thu nhập doanh nghiệp;lợi nhuận chịu thuế thu nhập doanh nghiệp": [
             3226
         ],
-        "equalization reserve;profit after tax;dự phòng đảm bảo cân đối": [
+        "equalization reserve;profit after tax;dự phòng đảm bảo cân đối;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             3227
         ],
-        "taxable profit;taxable profit;lợi nhuận chịu thuế thu nhập doanh nghiệp": [
+        "taxable profit;taxable profit;lợi nhuận chịu thuế thu nhập doanh nghiệp;lợi nhuận chịu thuế thu nhập doanh nghiệp": [
             3206
         ],
-        "current corporate income tax expenses;profit after tax;chi phí thuế thu nhập hiện hành": [
+        "current corporate income tax expenses;profit after tax;chi phí thuế thu nhập hiện hành;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             3228
         ],
-        "deferred income tax expenses;profit after tax;chi phí thuế thu nhập hoãn lại": [
+        "deferred income tax expenses;profit after tax;chi phí thuế thu nhập hoãn lại;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             3229
         ],
-        "profit after tax;profit after tax for shareholders of the parent company;lợi nhuận sau thuế thu nhập doanh nghiệp": [
+        "profit after tax;profit after tax for shareholders of the parent company;lợi nhuận sau thuế thu nhập doanh nghiệp;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             3200
         ],
-        "minority interest;profit after tax for shareholders of the parent company;lợi ích của cổ đông thiểu số": [
+        "minority interest;profit after tax for shareholders of the parent company;lợi ích của cổ đông thiểu số;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             3201
         ],
-        "profit after tax for shareholders of the parent company;profit after tax for shareholders of the parent company;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
+        "profit after tax for shareholders of the parent company;profit after tax for shareholders of the parent company;lợi nhuận sau thuế của cổ đông của công ty mẹ;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             3202
         ],
-        "1 earning per share vnd;1 earning per share vnd;vnð": [
+        "1 earning per share vnd;1 earning per share vnd;vnð;vnð": [
             3203
         ]
     }

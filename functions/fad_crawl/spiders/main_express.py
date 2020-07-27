@@ -115,6 +115,8 @@ class corporateazExpressHandler(scrapy.Spider):
                 self.logger.info("Response cannot be parsed by JSON at parse_ind_list")
 
     def parse_az(self, response):
+        """In this 'express' version of corpAZ, we only crawl the first page
+        """
         if response:
             page = int(response.meta['page'])
             total_pages = response.meta['TotalPages']
@@ -128,21 +130,22 @@ class corporateazExpressHandler(scrapy.Spider):
 
             try:
                 res = json.loads(response.text)
-                ### Only get random `SAMPLE_SIZE` tickers, because it's express!
+                ### Only get random `SAMPLE_SIZE` tickers, because it's express
                 if SAMPLE_SIZE <= len(res):
                     rand = random.sample(res, SAMPLE_SIZE)
                 else:
                     rand = res
 
                 ### Change back to `rand` later...
+                ### Right now getting all tickers on the page
                 tickers_list = [d['Code'] for d in res]
 
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
 
-                ### Push tickers into financeInfo and other spiders
                 ### Add the bizType and ind_name to available bizType_ind combinations set
                 ### Set biz id and ind id for each ticker, which is a key in Redis
+                ### Push tickers into financeInfo and other spiders
                 if tickers_list != []:
                     self.r.sadd(bizType_ind_set_key, f'{bizType_title};{ind_name}')
                     for t in tickers_list:

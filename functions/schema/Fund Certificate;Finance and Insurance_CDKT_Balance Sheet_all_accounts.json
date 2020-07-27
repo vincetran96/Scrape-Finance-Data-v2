@@ -1,66 +1,66 @@
 {
     "Balance Sheet": {
-        "assets;assets;tài sản": [
+        "assets;assets;tài sản;tài sản": [
             3414
         ],
-        "cash in bank;total assets;tiền gửi ngân hàng": [
+        "cash in bank;total assets;tiền gửi ngân hàng;tổng tài sản": [
             3423
         ],
-        "investments in securities;total assets;đầu tư chứng khoán": [
+        "investments in securities;total assets;đầu tư chứng khoán;tổng tài sản": [
             3418
         ],
-        "other investments;total assets;đầu tư khác": [
+        "other investments;total assets;đầu tư khác;tổng tài sản": [
             3419
         ],
-        "receivables from securities trading;total assets;phải thu hoạt động đầu tư": [
+        "receivables from securities trading;total assets;phải thu hoạt động đầu tư;tổng tài sản": [
             3420
         ],
-        "other receivables;total assets;phải thu khác": [
+        "other receivables;total assets;phải thu khác;tổng tài sản": [
             3424
         ],
-        "total assets;total assets;tổng tài sản": [
+        "total assets;total assets;tổng tài sản;tổng tài sản": [
             3415
         ],
-        "owner s equity;owner s equity;nguồn vốn": [
+        "owner s equity;owner s equity;nguồn vốn;nguồn vốn": [
             3413
         ],
-        "liabilities;total liabilities and owner s equity;nợ phải trả": [
+        "liabilities;total liabilities and owner s equity;nợ phải trả;tổng cộng nguồn vốn": [
             3416
         ],
-        "short term loans;liabilities;vay ngắn hạn": [
+        "short term loans;liabilities;vay ngắn hạn;nợ phải trả": [
             3425
         ],
-        "payables for investment activities;liabilities;phải trả hoạt động đầu tư kinh doanh chứng khoán": [
+        "payables for investment activities;liabilities;phải trả hoạt động đầu tư kinh doanh chứng khoán;nợ phải trả": [
             3426
         ],
-        "income payables for investors;liabilities;phải trả thu nhập cho nhà đầu tư": [
+        "income payables for investors;liabilities;phải trả thu nhập cho nhà đầu tư;nợ phải trả": [
             3427
         ],
-        "remunerations payables to the board of representative;liabilities;phải trả phụ cấp ban đại diện quỹ": [
+        "remunerations payables to the board of representative;liabilities;phải trả phụ cấp ban đại diện quỹ;nợ phải trả": [
             3428
         ],
-        "payables to the fund manager and the custodian bank;liabilities;phải trả cho công ty quản lý quỹ nh giám sát": [
+        "payables to the fund manager and the custodian bank;liabilities;phải trả cho công ty quản lý quỹ nh giám sát;nợ phải trả": [
             3429
         ],
-        "other payables;liabilities;phải trả khác": [
+        "other payables;liabilities;phải trả khác;nợ phải trả": [
             3430
         ],
-        "owner s equity;total liabilities and owner s equity;nguồn vốn chủ sở hữu": [
+        "owner s equity;total liabilities and owner s equity;nguồn vốn chủ sở hữu;tổng cộng nguồn vốn": [
             4074
         ],
-        "capital contributed by investors;owner s equity;vốn góp của các nhà đầu tư": [
+        "capital contributed by investors;owner s equity;vốn góp của các nhà đầu tư;nguồn vốn chủ sở hữu": [
             3431
         ],
-        "capital contributed;capital contributed by investors;vốn góp": [
+        "capital contributed;capital contributed by investors;vốn góp;vốn góp của các nhà đầu tư": [
             3436
         ],
-        "capital surplus;capital contributed by investors;thặng dư vốn": [
+        "capital surplus;capital contributed by investors;thặng dư vốn;vốn góp của các nhà đầu tư": [
             3422
         ],
-        "undistributed earnings;owner s equity;kết quả hoạt động chưa phân phối": [
+        "undistributed earnings;owner s equity;kết quả hoạt động chưa phân phối;nguồn vốn chủ sở hữu": [
             3432
         ],
-        "total liabilities and owner s equity;total liabilities and owner s equity;tổng cộng nguồn vốn": [
+        "total liabilities and owner s equity;total liabilities and owner s equity;tổng cộng nguồn vốn;tổng cộng nguồn vốn": [
             3417
         ]
     }

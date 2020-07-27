@@ -1,75 +1,75 @@
 {
     "Income Statement": {
-        "revenue;net revenue;doanh thu bán hàng và cung cấp dịch vụ": [
+        "revenue;net revenue;doanh thu bán hàng và cung cấp dịch vụ;doanh thu thuần về bán hàng và cung cấp dịch vụ": [
             2206
         ],
-        "deduction from revenue;net revenue;các khoản giảm trừ doanh thu": [
+        "deduction from revenue;net revenue;các khoản giảm trừ doanh thu;doanh thu thuần về bán hàng và cung cấp dịch vụ": [
             2218
         ],
-        "net revenue;gross profit;doanh thu thuần về bán hàng và cung cấp dịch vụ": [
+        "net revenue;gross profit;doanh thu thuần về bán hàng và cung cấp dịch vụ;lợi nhuận gộp về bán hàng và cung cấp dịch vụ": [
             2216
         ],
-        "cost of goods sold;gross profit;giá vốn hàng bán": [
+        "cost of goods sold;gross profit;giá vốn hàng bán;lợi nhuận gộp về bán hàng và cung cấp dịch vụ": [
             2207
         ],
-        "gross profit;operating profit;lợi nhuận gộp về bán hàng và cung cấp dịch vụ": [
+        "gross profit;operating profit;lợi nhuận gộp về bán hàng và cung cấp dịch vụ;lợi nhuận thuần từ hoạt động kinh doanh": [
             2217
         ],
-        "financial income;operating profit;doanh thu hoạt động tài chính": [
+        "financial income;operating profit;doanh thu hoạt động tài chính;lợi nhuận thuần từ hoạt động kinh doanh": [
             2221
         ],
-        "financial expenses;operating profit;chi phí tài chính": [
+        "financial expenses;operating profit;chi phí tài chính;lợi nhuận thuần từ hoạt động kinh doanh": [
             2222
         ],
-        "of which interest expenses;of which interest expenses;trong đó chi phí lãi vay": [
+        "of which interest expenses;of which interest expenses;trong đó chi phí lãi vay;trong đó chi phí lãi vay": [
             2223
         ],
-        "share of associates and joint ventures result;operating profit;phần lãi lỗ trong công ty liên doanh liên kết": [
+        "share of associates and joint ventures result;operating profit;phần lãi lỗ trong công ty liên doanh liên kết;lợi nhuận thuần từ hoạt động kinh doanh": [
             5321
         ],
-        "selling expenses;operating profit;chi phí bán hàng": [
+        "selling expenses;operating profit;chi phí bán hàng;lợi nhuận thuần từ hoạt động kinh doanh": [
             2227
         ],
-        "general and administrative expenses;operating profit;chi phí quản lý doanh nghiệp": [
+        "general and administrative expenses;operating profit;chi phí quản lý doanh nghiệp;lợi nhuận thuần từ hoạt động kinh doanh": [
             2224
         ],
-        "operating profit;profit before tax;lợi nhuận thuần từ hoạt động kinh doanh": [
+        "operating profit;profit before tax;lợi nhuận thuần từ hoạt động kinh doanh;tổng lợi nhuận kế toán trước thuế": [
             2208
         ],
-        "other income;other profit;thu nhập khác": [
+        "other income;other profit;thu nhập khác;lợi nhuận khác": [
             2225
         ],
-        "other expenses;other profit;chi phí khác": [
+        "other expenses;other profit;chi phí khác;lợi nhuận khác": [
             2226
         ],
-        "other profit;profit before tax;lợi nhuận khác": [
+        "other profit;profit before tax;lợi nhuận khác;tổng lợi nhuận kế toán trước thuế": [
             2209
         ],
-        "share of associates and joint ventures result;profit before tax;phần lợi nhuận lỗ từ công ty liên kết liên doanh": [
+        "share of associates and joint ventures result;profit before tax;phần lợi nhuận lỗ từ công ty liên kết liên doanh;tổng lợi nhuận kế toán trước thuế": [
             2210
         ],
-        "profit before tax;net profit after tax;tổng lợi nhuận kế toán trước thuế": [
+        "profit before tax;net profit after tax;tổng lợi nhuận kế toán trước thuế;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             2211
         ],
-        "current corporate income tax expenses;net profit after tax;chi phí thuế tndn hiện hành": [
+        "current corporate income tax expenses;net profit after tax;chi phí thuế tndn hiện hành;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             2219
         ],
-        "deferred income tax expenses;net profit after tax;chi phí thuế tndn hoãn lại": [
+        "deferred income tax expenses;net profit after tax;chi phí thuế tndn hoãn lại;lợi nhuận sau thuế thu nhập doanh nghiệp": [
             2220
         ],
-        "net profit after tax;profit after tax for shareholders of parent company;lợi nhuận sau thuế thu nhập doanh nghiệp": [
+        "net profit after tax;profit after tax for shareholders of parent company;lợi nhuận sau thuế thu nhập doanh nghiệp;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             2212
         ],
-        "minority s interest;profit after tax for shareholders of parent company;lợi ích của cổ đông thiểu số": [
+        "minority s interest;profit after tax for shareholders of parent company;lợi ích của cổ đông thiểu số;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             2213
         ],
-        "profit after tax for shareholders of parent company;profit after tax for shareholders of parent company;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
+        "profit after tax for shareholders of parent company;profit after tax for shareholders of parent company;lợi nhuận sau thuế của cổ đông của công ty mẹ;lợi nhuận sau thuế của cổ đông của công ty mẹ": [
             2214
         ],
-        "earnings per share vnd;earnings per share vnd;lãi cơ bản trên cổ phiếu vnð": [
+        "earnings per share vnd;earnings per share vnd;lãi cơ bản trên cổ phiếu vnð;lãi cơ bản trên cổ phiếu vnð": [
             2215
         ],
-        "diluted earnings per share;diluted earnings per share;lãi suy giảm trên cổ phiếu": [
+        "diluted earnings per share;diluted earnings per share;lãi suy giảm trên cổ phiếu;lãi suy giảm trên cổ phiếu": [
             5316
         ]
     }
