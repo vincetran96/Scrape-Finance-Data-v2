@@ -26,6 +26,7 @@ from fad_crawl.spiders.models.financeinfo import *
 # Import ES Supporting mudules
 from es_task import *
 
+
 class financeInfoHandler(fadRedisSpider):
     name = name
     custom_settings = settings

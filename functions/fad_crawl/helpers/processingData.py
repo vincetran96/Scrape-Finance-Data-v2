@@ -39,6 +39,14 @@ def getDate(chr):
     return start, end
 
 
+def simplify_text(s):
+    s1 = s.split(".")[-1]
+    s1 = re.sub(r"\W+", " ", s1)
+    s1 = " ".join(s1.split())
+    s1 = s1.lower()
+    return s1
+
+
 def processFinanceInfo(output, _id=""):
     output_ = []
     for item in output.items():
