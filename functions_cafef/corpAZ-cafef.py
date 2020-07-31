@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pathlib
 import time
 
@@ -11,16 +13,16 @@ from selenium.webdriver.chrome.options import Options
 
 CAFEF_DOMAIN = "s.cafef.vn"
 BALANCE_SHEET_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/BSheet/2019/4/1/1/bao-cao-tai-chinh-cong-ty-co-phan-dau-tu-va-xay-dung-cap-thoat-nuoc.chn"
-BS_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/BSheet/{1}/4/1/1/bao-cao-tai-chinh{2}"
+BS_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/BSheet/{1}/{2}/1/1/bao-cao-tai-chinh{3}"
 
 INCOME_STATEMENT_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/IncSta/2019/4/1/1/ket-qua-hoat-dong-kinh-doanh-cong-ty-co-phan-dau-tu-va-xay-dung-cap-thoat-nuoc.chn"
-IS_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/IncSta/{1}/4/1/1/ket-qua-hoat-dong-kinh-doanh{2}"
+IS_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/IncSta/{1}/{2}/1/1/ket-qua-hoat-dong-kinh-doanh{3}"
 
 CF_INDIRECT_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/CashFlow/2019/4/1/1/luu-chuyen-tien-te-gian-tiep-cong-ty-co-phan-dau-tu-va-xay-dung-cap-thoat-nuoc.chn"
-CF_IND_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlow/{1}/4/1/1/luu-chuyen-tien-te-gian-tiep{2}"
+CF_IND_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlow/{1}/{2}/1/1/luu-chuyen-tien-te-gian-tiep{3}"
 
 CF_DIRECT_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/CashFlowDirect/2019/4/1/1/luu-chuyen-tien-te-truc-tiep-cong-ty-co-phan-dau-tu-va-xay-dung-cap-thoat-nuoc.chn"
-CF_D_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlowDirect/{1}/4/1/1/luu-chuyen-tien-te-truc-tiep{2}"
+CF_D_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlowDirect/{1}/{2}/1/1/luu-chuyen-tien-te-truc-tiep{3}"
 
 
 r = redis.Redis(host=REDIS_HOST, decode_responses=True)

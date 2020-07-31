@@ -22,7 +22,7 @@ from fad_crawl.spiders.models.corporateaz import \
     closed_redis_key as corpAZ_closed_key
 
 
-class fadRedisSpider(RedisSpider):
+class fadRedisCafeFSpider(RedisSpider):
     """Base RedisSpider for other spiders in this project
     """
 
