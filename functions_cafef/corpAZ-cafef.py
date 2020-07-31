@@ -1,13 +1,13 @@
 import pathlib
 import time
 
+import redis
+
+from fad_crawl_cafef.spiders.models.constants import REDIS_HOST
+from fad_crawl_cafef.spiders.models.corpaz_cafef import tickers_redis_keys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import redis
-from fad_crawl_cafef.spiders.models.constants import REDIS_HOST
 
-
-r = redis.Redis(host=REDIS_HOST, decode_responses=True)
 
 CAFEF_DOMAIN = "s.cafef.vn"
 BALANCE_SHEET_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/BSheet/2019/4/1/1/bao-cao-tai-chinh-cong-ty-co-phan-dau-tu-va-xay-dung-cap-thoat-nuoc.chn"
@@ -23,6 +23,9 @@ CF_DIRECT_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/CashFlowDirect/2019/4/
 CF_D_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlowDirect/{1}/4/1/1/luu-chuyen-tien-te-truc-tiep{2}"
 
 
+r = redis.Redis(host=REDIS_HOST, decode_responses=True)
+
+### Setup Chromium
 current_path = pathlib.Path(__file__).parent.absolute()
 chromedriver_location = f'{current_path}/execs/chromedriver'
 chrome_options = Options()
@@ -31,21 +34,25 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=chromedriver_location,chrome_options=chrome_options)
 driver.get("https://s.cafef.vn/du-lieu-doanh-nghiep.chn")
 
+### CafeF elements
 pages_id = "CafeF_ThiTruongNiemYet_Trang"
+market_content_id = "CafeF_ThiTruongNiemYet_Content"
+
 pages_id_elm = driver.find_element_by_id(pages_id)
 view_all_btn = pages_id_elm.find_elements_by_tag_name("a")[1]
 view_all_btn.click()
 time.sleep(5)
 
-market_content_id = "CafeF_ThiTruongNiemYet_Content"
+### Get all tickers on page
 market_content = driver.find_element_by_id(market_content_id)
 ticker_rows = market_content.find_elements_by_tag_name("tr")[1:]
 for ticker_row in ticker_rows:
     ticker_a = ticker_row.find_elements_by_tag_name("a")[0]
     ticker_url = ticker_a.get_attribute("href")
     ticker = ticker_a.text
-    print(ticker, ticker_url.split(ticker)[-1])
-
-r.lpush()
+    to_push = ticker + ";" + ticker_url.split(ticker)[-1]
+    ### Push tickers to Redis queue
+    for key in tickers_redis_keys:
+        r.lpush(key, to_push)
 
 driver.quit()
