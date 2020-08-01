@@ -51,6 +51,7 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
             ### For each year, construct an URL with the ticker and long name fetched from Redis
             for term in REPORT_TERMS.keys():
                 if term == "4":
+                    ### If term is quarterly, the step is 1 year
                     for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1):
                         req = self.make_request_from_data(ticker, year, term, long_name)
                         if req:
@@ -60,6 +61,8 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
                             self.logger.info(
                                 "Request not made from params: %r", params)
                 elif term == "0":
+                    ### If term is annually, the step is 4 years,
+                    ### because CafeF displays 4 years in one page
                     for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1, 4):
                         req = self.make_request_from_data(ticker, year, term, long_name)
                         if req:
@@ -80,10 +83,10 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
         ### Print off requests with errors, then delete all keys related to this Spider
         if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
             self.logger.info(self.r.smembers(self.error_set_key))
-            keys = self.r.keys(f'{self.name}*')
-            for k in keys:
+            for k in self.r.keys(f'{self.name}*'):
                 self.r.delete(k)
-            self.crawler.engine.close_spider(spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
+            self.crawler.engine.close_spider(spider=self, 
+                reason="CorpAZ is closed; Queue is empty; Processed everything")
             self.close_status()
 
     def make_request_from_data(self, ticker, year, term, long_name):
@@ -114,22 +117,26 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
             
             try:
                 ### Extract period stamps (e.g., Q1 2019, Q2 2019,...)
-                periods = response.xpath("//table[@id='tblGridData']/descendant::td[@class='h_t']/text()").extract()
+                periods = response.xpath(
+                    "//table[@id='tblGridData']/descendant::td[@class='h_t']/text()").extract()
                 periods_spl = [simplifyText(p) for p in periods]
                 result['periods'] = periods_spl
 
                 ### Extract finance data
-                data_trs = response.xpath("//table[@id='tableContent']/descendant::tr")
+                ### NOTE: In a GUI browser, there's an element <tbody> under the <table>,
+                ### but in terminals or Postman it never shows, hence the following XPath
+                data_trs = response.xpath("//table[@id='tableContent']/child::tr")
                 for tr in data_trs:
                     tr_id = tr.xpath("./@id").extract_first()
-                    tds_data = tr.xpath("./descendant::td/text()").extract()
-                    if tds_data != []:
-                        tr_data_spl = rmvEmpStr([tr_id] + [simplifyText(d) for d in tds_data])
-                        result['data'].append(tr_data_spl)
+                    tds_data = [td.xpath('string()').extract()[0] for td in tr.xpath("./child::td")[:-1]]
+                    # print(tds_data)
+                    tr_data_spl = [tr_id] + [simplifyText(d) for d in tds_data]
+                    # print(tr_data_spl)
+                    result['data'].append(tr_data_spl)
 
                 ### Write local data files
-                save_jsonfile(
-                    result, filename=f'schemaData/{self.name}/{ticker}_{report_type}_{report_term_name}_{year}.json')
+                save_jsonfile(result, 
+                    filename=f'schemaData/{self.name}/{ticker}_{report_type}_{report_term_name}_{year}.json')
 
                 ### Remove error items and crawl next page
                 self.r.srem(self.error_set_key, f'{ticker};{report_type};{report_term_name};{year}')
