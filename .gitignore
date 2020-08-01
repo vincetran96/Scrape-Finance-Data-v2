@@ -19,4 +19,5 @@ kibana*/
 .ipynb_checkpoints
 logs/
 run/
+schemaData/*
 */__pycache__/*

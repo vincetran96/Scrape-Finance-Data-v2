@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import fad_crawl_cafef.spiders.models.constants as constants
+import fad_crawl_cafef.spiders.models.utilities as utilities
 
 
 name = "BS_cafef"
@@ -15,9 +16,18 @@ bs = {"url": "https://s.cafef.vn/bao-cao-tai-chinh/{0}/BSheet/{1}/{2}/1/1/bao-ca
         },
         "meta": {
             "ticker": "",
-            "report_type": "",
-            "page": "",
+            "year": "",
             "report_term": "",
+            "report_type": "BS",
         }}
 
-settings = {}
+log_settings = utilities.log_settings(spiderName=name,
+                                      log_level="INFO",
+                                      log_formatter=None
+                                      )
+
+redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
+
+concurrency_settings = {'CONCURRENT_REQUESTS': 100}
+
+settings = {**log_settings, **redis_key_settings, **concurrency_settings}

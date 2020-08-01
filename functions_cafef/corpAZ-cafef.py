@@ -4,11 +4,12 @@ import pathlib
 import time
 
 import redis
-
-from fad_crawl_cafef.spiders.models.constants import REDIS_HOST
-from fad_crawl_cafef.spiders.models.corpaz_cafef import tickers_redis_keys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
+from fad_crawl_cafef.spiders.models.constants import REDIS_HOST
+from fad_crawl_cafef.spiders.models.corpaz_cafef import (closed_redis_key,
+                                                         tickers_redis_keys)
 
 
 CAFEF_DOMAIN = "s.cafef.vn"
@@ -25,7 +26,9 @@ CF_DIRECT_URL = "https://s.cafef.vn/bao-cao-tai-chinh/VSI/CashFlowDirect/2019/4/
 CF_D_URL = "https://s.cafef.vn/bao-cao-tai-chinh/{0}/CashFlowDirect/{1}/{2}/1/1/luu-chuyen-tien-te-truc-tiep{3}"
 
 
+### Setup Redis
 r = redis.Redis(host=REDIS_HOST, decode_responses=True)
+r.set(closed_redis_key, "0")
 
 ### Setup Chromium
 current_path = pathlib.Path(__file__).parent.absolute()
@@ -57,4 +60,6 @@ for ticker_row in ticker_rows:
     for key in tickers_redis_keys:
         r.lpush(key, to_push)
 
+### Close procedures
+r.set(closed_redis_key, "1")
 driver.quit()

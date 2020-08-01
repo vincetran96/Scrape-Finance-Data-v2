@@ -12,3 +12,5 @@ tickers_redis_keys = [
                       f'{cf_d_name}:tickers',
                       f'{cf_ind_name}:tickers'
                     ]
+
+closed_redis_key = f'corpaz_cafef:closed'

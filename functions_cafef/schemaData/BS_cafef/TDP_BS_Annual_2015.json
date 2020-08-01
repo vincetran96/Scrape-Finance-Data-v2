@@ -1,0 +1,422 @@
+{
+    "data": [
+        [
+            "100",
+            "i tài sản ngắn hạn"
+        ],
+        [
+            "110",
+            "tiền và các khoản tương đương tiền"
+        ],
+        [
+            "111",
+            "tiền"
+        ],
+        [
+            "112",
+            "các khoản tương đương tiền"
+        ],
+        [
+            "120",
+            "các khoản đầu tư tài chính ngắn hạn"
+        ],
+        [
+            "121",
+            "đầu tư ngắn hạn"
+        ],
+        [
+            "129",
+            "dự phòng giảm giá đầu tư ngắn hạn"
+        ],
+        [
+            "130",
+            "các khoản phải thu ngắn hạn"
+        ],
+        [
+            "131",
+            "phải thu khách hàng"
+        ],
+        [
+            "132",
+            "trả trước cho người bán"
+        ],
+        [
+            "133",
+            "phải thu nội bộ ngắn hạn"
+        ],
+        [
+            "134",
+            "phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+        ],
+        [
+            "135",
+            "các khoản phải thu khác"
+        ],
+        [
+            "139",
+            "dự phòng phải thu ngắn hạn khó đòi"
+        ],
+        [
+            "140",
+            "hàng tồn kho"
+        ],
+        [
+            "141",
+            "hàng tồn kho"
+        ],
+        [
+            "149",
+            "dự phòng giảm giá hàng tồn kho"
+        ],
+        [
+            "150",
+            "tài sản ngắn hạn khác"
+        ],
+        [
+            "151",
+            "chi phí trả trước ngắn hạn"
+        ],
+        [
+            "152",
+            "thuế gtgt được khấu trừ"
+        ],
+        [
+            "154",
+            "thuế và các khoản khác phải thu nhà nước"
+        ],
+        [
+            "158",
+            "tài sản ngắn hạn khác"
+        ],
+        [
+            "159",
+            "giao dịch mua bán lại trái phiếu chính phủ"
+        ],
+        [
+            "200",
+            "ii tài sản dài hạn"
+        ],
+        [
+            "210",
+            "các khoản phải thu dài hạn"
+        ],
+        [
+            "211",
+            "phải thu dài hạn của khách hàng"
+        ],
+        [
+            "212",
+            "vốn kinh doanh ở đơn vị trực thuộc"
+        ],
+        [
+            "213",
+            "phải thu dài hạn nội bộ"
+        ],
+        [
+            "218",
+            "phải thu dài hạn khác"
+        ],
+        [
+            "219",
+            "dự phòng phải thu khó đòi"
+        ],
+        [
+            "220",
+            "tài sản cố định"
+        ],
+        [
+            "221",
+            "tài sản cố định hữu hình"
+        ],
+        [
+            "2211",
+            "nguyên giá"
+        ],
+        [
+            "2212",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "222",
+            "tài sản cố định thuê tài chính"
+        ],
+        [
+            "2221",
+            "nguyên giá"
+        ],
+        [
+            "2222",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "223",
+            "tài sản cố định vô hình"
+        ],
+        [
+            "2231",
+            "nguyên giá"
+        ],
+        [
+            "2232",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "224",
+            "chi phí xây dựng cơ bản dở dang"
+        ],
+        [
+            "230",
+            "lợi thế thương mại"
+        ],
+        [
+            "240",
+            "bất động sản đầu tư"
+        ],
+        [
+            "241",
+            "nguyên giá"
+        ],
+        [
+            "242",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "250",
+            "các khoản đầu tư tài chính dài hạn"
+        ],
+        [
+            "251",
+            "đầu tư vào công ty con"
+        ],
+        [
+            "252",
+            "đầu tư vào công ty liên kết liên doanh"
+        ],
+        [
+            "258",
+            "đầu tư dài hạn khác"
+        ],
+        [
+            "259",
+            "dự phòng giảm giá đầu tư dài hạn"
+        ],
+        [
+            "260",
+            "tài sản dài hạn khác"
+        ],
+        [
+            "261",
+            "chi phí trả trước dài hạn"
+        ],
+        [
+            "2611",
+            "ký quỹ ký cược dài hạn"
+        ],
+        [
+            "262",
+            "tài sản thuế thu nhập hoãn lại"
+        ],
+        [
+            "268",
+            "tài sản dài hạn khác"
+        ],
+        [
+            "001",
+            "tổng cộng tài sản"
+        ],
+        [
+            "300",
+            "i nợ phải trả"
+        ],
+        [
+            "310",
+            "nợ ngắn hạn"
+        ],
+        [
+            "311",
+            "vay và nợ ngắn hạn"
+        ],
+        [
+            "312",
+            "phải trả người bán"
+        ],
+        [
+            "313",
+            "người mua trả tiền trước"
+        ],
+        [
+            "314",
+            "thuế và các khoản phải nộp nhà nước"
+        ],
+        [
+            "315",
+            "phải trả người lao động"
+        ],
+        [
+            "316",
+            "chi phí phải trả"
+        ],
+        [
+            "317",
+            "phải trả nội bộ"
+        ],
+        [
+            "318",
+            "phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+        ],
+        [
+            "319",
+            "các khoản phải trả phải nộp ngắn hạn khác"
+        ],
+        [
+            "320",
+            "dự phòng phải trả ngắn hạn"
+        ],
+        [
+            "323",
+            "quỹ khen thưởng phúc lợi"
+        ],
+        [
+            "327",
+            "giao dịch mua bán lại trái phiếu chính phủ"
+        ],
+        [
+            "328",
+            "doanh thu chưa thực hiện"
+        ],
+        [
+            "329",
+            "14 quỹ thưởng ban quản lý điều hành công ty"
+        ],
+        [
+            "330",
+            "nợ dài hạn"
+        ],
+        [
+            "331",
+            "phải trả dài hạn người bán"
+        ],
+        [
+            "332",
+            "phải trả dài hạn nội bộ"
+        ],
+        [
+            "333",
+            "phải trả dài hạn khác"
+        ],
+        [
+            "334",
+            "vay và nợ dài hạn"
+        ],
+        [
+            "335",
+            "thuế thu nhập hoãn lại phải trả"
+        ],
+        [
+            "336",
+            "dự phòng trợ cấp mất việc làm"
+        ],
+        [
+            "337",
+            "dự phòng phải trả dài hạn"
+        ],
+        [
+            "338",
+            "doanh thu chưa thực hiện"
+        ],
+        [
+            "339",
+            "quỹ phát triển khoa học công nghệ"
+        ],
+        [
+            "400",
+            "ii vốn chủ sở hữu"
+        ],
+        [
+            "410",
+            "vốn chủ sở hữu"
+        ],
+        [
+            "411",
+            "vốn đầu tư của chủ sở hữu"
+        ],
+        [
+            "412",
+            "thặng dư vốn cổ phần"
+        ],
+        [
+            "413",
+            "vốn khác của chủ sở hữu"
+        ],
+        [
+            "414",
+            "cổ phiếu quỹ"
+        ],
+        [
+            "415",
+            "chênh lệch đánh giá lại tài sản"
+        ],
+        [
+            "416",
+            "chênh lệch tỷ giá hối đoái"
+        ],
+        [
+            "417",
+            "quỹ đầu tư phát triển"
+        ],
+        [
+            "418",
+            "quỹ dự phòng tài chính"
+        ],
+        [
+            "419",
+            "quỹ khác thuộc vốn chủ sở hữu"
+        ],
+        [
+            "420",
+            "lợi nhuận sau thuế chưa phân phối"
+        ],
+        [
+            "421",
+            "nguồn vốn đầu tư xdcb"
+        ],
+        [
+            "422",
+            "quỹ hỗ trợ sắp xếp doanh nghiệp"
+        ],
+        [
+            "423",
+            "quỹ dự trữ vốn điều lệ"
+        ],
+        [
+            "430",
+            "nguồn kinh phí và các quỹ khác"
+        ],
+        [
+            "431",
+            "quỹ khen thưởng phúc lợi"
+        ],
+        [
+            "432",
+            "nguồn kinh phí"
+        ],
+        [
+            "433",
+            "nguồn kinh phí đã hình thành tscđ"
+        ],
+        [
+            "500",
+            "iii lợi ích của cổ đông thiểu số"
+        ],
+        [
+            "002",
+            "tổng cộng nguồn vốn"
+        ]
+    ],
+    "periods": [
+        "2012",
+        "2013",
+        "2014",
+        "2015"
+    ]
+}

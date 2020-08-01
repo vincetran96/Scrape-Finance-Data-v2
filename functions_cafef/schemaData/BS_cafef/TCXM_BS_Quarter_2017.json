@@ -1,0 +1,466 @@
+{
+    "data": [
+        [
+            "100",
+            "tài sản"
+        ],
+        [
+            "0011",
+            "tiền mặt và các khoản tương đương tại quỹ",
+            "45 329 411"
+        ],
+        [
+            "00111",
+            "tiền gửi tại nhnn",
+            "775 232 897"
+        ],
+        [
+            "001111",
+            "tiền gửi thanh toán tại các tctd khác"
+        ],
+        [
+            "00112",
+            "tiền vàng gửi tại các tctd khác và cho vay các tctd khác",
+            "215 006 484 995"
+        ],
+        [
+            "00113",
+            "tiền vàng gửi tại tctd khác",
+            "215 006 484 995"
+        ],
+        [
+            "00114",
+            "cho vay các tctd khác"
+        ],
+        [
+            "00115",
+            "dự phòng rủi ro cho vay các tctd khác"
+        ],
+        [
+            "0012",
+            "cho vay khách hàng",
+            "633 707 108 976"
+        ],
+        [
+            "00121",
+            "cho vay khách hàng",
+            "638 560 716 954"
+        ],
+        [
+            "001211",
+            "cơ cấu nợ theo nhóm"
+        ],
+        [
+            "0012111",
+            "nợ đủ tiêu chuẩn"
+        ],
+        [
+            "0012112",
+            "nợ cần chú ý"
+        ],
+        [
+            "0012113",
+            "nợ dưới tiêu chuẩn"
+        ],
+        [
+            "0012114",
+            "nợ nghi ngờ"
+        ],
+        [
+            "0012115",
+            "nợ có khả năng mất vốn"
+        ],
+        [
+            "001212",
+            "cơ cấu nợ theo kỳ hạn"
+        ],
+        [
+            "0012121",
+            "ngắn hạn"
+        ],
+        [
+            "0012122",
+            "trung hạn"
+        ],
+        [
+            "0012123",
+            "dài hạn"
+        ],
+        [
+            "00122",
+            "dự phòng rủi ro cho vay khách hàng",
+            "4 853 607 978"
+        ],
+        [
+            "0013",
+            "chứng khoán kinh doanh"
+        ],
+        [
+            "00131",
+            "chứng khoán kinh doanh"
+        ],
+        [
+            "00132",
+            "dự phòng giảm giá chứng khoán"
+        ],
+        [
+            "0014",
+            "chứng khoán đầu tư",
+            "650 765 318 685"
+        ],
+        [
+            "00141",
+            "chứng khoán đầu tư sẵn sàng để bán",
+            "151 555 097 755"
+        ],
+        [
+            "00142",
+            "chứng khoán đầu tư giữ đến ngày đáo hạn",
+            "510 201 720 930"
+        ],
+        [
+            "00143",
+            "3 dự phòng giảm giá chứng khoán",
+            "10 991 500 000"
+        ],
+        [
+            "0015",
+            "các công cụ tài chính phái sinh và các tài sản tài chính khác"
+        ],
+        [
+            "0016",
+            "góp vốn đầu tư dài hạn",
+            "6 579 727 653"
+        ],
+        [
+            "00161",
+            "đầu tư vào công ty liên kết"
+        ],
+        [
+            "00162",
+            "đầu tư dài hạn khác",
+            "21 109 062 700"
+        ],
+        [
+            "00163",
+            "dự phòng giảm giá đầu tư dài hạn",
+            "14 529 335 047"
+        ],
+        [
+            "00164",
+            "góp vốn liên doanh"
+        ],
+        [
+            "0017",
+            "tài sản cố định",
+            "8 957 695 645"
+        ],
+        [
+            "00171",
+            "tài sản cố định hữu hình",
+            "5 050 845 631"
+        ],
+        [
+            "001711",
+            "nguyên giá",
+            "11 203 778 232"
+        ],
+        [
+            "001712",
+            "giá trị hao mòn luỹ kế",
+            "6 152 932 601"
+        ],
+        [
+            "00172",
+            "tài sản cố định thuê tài chính"
+        ],
+        [
+            "001721",
+            "nguyên giá"
+        ],
+        [
+            "001722",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "00173",
+            "tài sản cố định vô hình",
+            "3 906 850 014"
+        ],
+        [
+            "001731",
+            "nguyên giá",
+            "5 278 603 312"
+        ],
+        [
+            "001732",
+            "giá trị hao mòn luỹ kế",
+            "1 371 753 298"
+        ],
+        [
+            "00174",
+            "xdcb dở dang và mua sắm tscđ"
+        ],
+        [
+            "0018",
+            "bất động sản đầu tư"
+        ],
+        [
+            "00181",
+            "nguyên giá"
+        ],
+        [
+            "00182",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "001901",
+            "các khoản phải thu",
+            "40 385 999 520"
+        ],
+        [
+            "001902",
+            "các khoản lãi phí phải thu",
+            "41 285 897 426"
+        ],
+        [
+            "001903",
+            "tài sản thuế tndn hoãn lại"
+        ],
+        [
+            "001904",
+            "tài sản có khác",
+            "180 261 020 673"
+        ],
+        [
+            "001905",
+            "trong đó lợi thế thương mại"
+        ],
+        [
+            "001906",
+            "các khoản dự phòng rủi ro cho các tài sản có nội bảng khác",
+            "2 768 912 996"
+        ],
+        [
+            "0019",
+            "tài sản có khác",
+            "259 164 004 623"
+        ],
+        [
+            "00191",
+            "hoạt động mua nợ"
+        ],
+        [
+            "00192",
+            "mua nợ"
+        ],
+        [
+            "00193",
+            "dự phòng rủi ro hoạt động mua nợ"
+        ],
+        [
+            "001",
+            "tổng tài sản",
+            "1 775 000 902 885"
+        ],
+        [
+            "200",
+            "nguồn vốn"
+        ],
+        [
+            "0021",
+            "các khoản nợ chính phủ và nhnn"
+        ],
+        [
+            "00211",
+            "tiền gửi của kbnn"
+        ],
+        [
+            "00212",
+            "vay nhnn"
+        ],
+        [
+            "0022",
+            "tiền gửi và vay các tctd khác",
+            "210 500 000 000"
+        ],
+        [
+            "00221",
+            "tiền gửi của các tctd khác",
+            "119 000 000 000"
+        ],
+        [
+            "00222",
+            "vay các tctd khác",
+            "91 500 000 000"
+        ],
+        [
+            "0023",
+            "tiền gửi của khách hàng",
+            "4 185 000 000"
+        ],
+        [
+            "0024",
+            "các công cụ tài chính phái sinh và nợ tài chính khác",
+            "2 725 780 000"
+        ],
+        [
+            "0025",
+            "vốn tài trợ ủy thác đầu tư cho vay tctd chịu rủi ro",
+            "773 717 129 110"
+        ],
+        [
+            "0026",
+            "phát hành giấy tờ có giá"
+        ],
+        [
+            "00261",
+            "thuế thu nhập doanh nghiệp"
+        ],
+        [
+            "002701",
+            "các khoản lãi phí phải trả",
+            "1 575 414 534"
+        ],
+        [
+            "002702",
+            "các khoản phải trả và công nợ khác",
+            "29 306 621 496"
+        ],
+        [
+            "002703",
+            "dự phòng rủi ro khác"
+        ],
+        [
+            "002704",
+            "thuế tndn phải trả"
+        ],
+        [
+            "002705",
+            "thuế tndn hoãn lại phải trả"
+        ],
+        [
+            "0027",
+            "các khoản nợ khác",
+            "30 882 036 030"
+        ],
+        [
+            "0020",
+            "tổng nợ phải trả",
+            "1 022 009 945 140"
+        ],
+        [
+            "0028",
+            "vốn và các quỹ",
+            "752 990 957 745"
+        ],
+        [
+            "00281",
+            "vốn của tctd",
+            "650 659 150 000"
+        ],
+        [
+            "002811",
+            "vốn điều lệ",
+            "604 921 000 000"
+        ],
+        [
+            "002812",
+            "vốn đầu tư xdcb"
+        ],
+        [
+            "002813",
+            "thặng dư vốn cổ phần",
+            "45 738 150 000"
+        ],
+        [
+            "002814",
+            "cổ phiếu quỹ"
+        ],
+        [
+            "002815",
+            "cổ phiếu ưu đãi"
+        ],
+        [
+            "002816",
+            "vốn khác"
+        ],
+        [
+            "00282",
+            "quỹ của tctd",
+            "47 838 163 735"
+        ],
+        [
+            "002823",
+            "các quỹ dự trữ"
+        ],
+        [
+            "00283",
+            "lợi nhuận chưa phân phối lỗ lũy kế",
+            "54 493 644 010"
+        ],
+        [
+            "00284",
+            "lợi nhuận năm nay"
+        ],
+        [
+            "00285",
+            "lợi nhuận năm trước"
+        ],
+        [
+            "00285",
+            "chênh lệch đánh giá lại tài sản"
+        ],
+        [
+            "00286",
+            "chênh lệch tỷ giá hối đoái"
+        ],
+        [
+            "0029",
+            "lợi ích của cổ đông thiểu số"
+        ],
+        [
+            "002",
+            "tổng cộng nguồn vốn",
+            "1 775 000 902 885"
+        ],
+        [
+            "300",
+            "các khoản mục ghi nhớ"
+        ],
+        [
+            "0031",
+            "thư tín dụng trả ngay"
+        ],
+        [
+            "0032",
+            "thư tín dụng trả chậm"
+        ],
+        [
+            "0033",
+            "bảo lãnh thanh toán"
+        ],
+        [
+            "0034",
+            "bảo lãnh vay vốn"
+        ],
+        [
+            "0035",
+            "bảo lãnh khác"
+        ],
+        [
+            "0036",
+            "cam kết cho vay chưa giải ngân"
+        ],
+        [
+            "0037",
+            "các cam kết khác"
+        ]
+    ],
+    "periods": [
+        "quý 1 2017",
+        "quý 2 2017",
+        "quý 3 2017",
+        "quý 4 2017"
+    ]
+}

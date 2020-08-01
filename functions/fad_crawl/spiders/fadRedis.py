@@ -35,6 +35,8 @@ class fadRedisSpider(RedisSpider):
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        
+        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()

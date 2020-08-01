@@ -5,7 +5,6 @@ import json
 import logging
 import os
 import sys
-import traceback
 
 import redis
 import scrapy
@@ -17,17 +16,16 @@ from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
-from fad_crawl.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_HOST
-from fad_crawl.spiders.models.corporateaz import \
+from fad_crawl_cafef.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_HOST
+from fad_crawl_cafef.spiders.models.corpaz_cafef import \
     closed_redis_key as corpAZ_closed_key
 
 
 class fadRedisCafeFSpider(RedisSpider):
     """Base RedisSpider for other spiders in this project
     """
-
     def __init__(self, *args, **kwargs):
-        super(fadRedisSpider, self).__init__(*args, **kwargs)
+        super(fadRedisCafeFSpider, self).__init__(*args, **kwargs)
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.report_types = []
         self.fi = {}
@@ -35,6 +33,8 @@ class fadRedisCafeFSpider(RedisSpider):
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        
+        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()
@@ -53,36 +53,32 @@ class fadRedisCafeFSpider(RedisSpider):
         if failure.request:
             request = failure.request
             ticker = request.meta['ticker']
-            report_type = request.meta['ReportType']
-            try:
-                page = request.meta['Page']
-            except:
-                page = "1"
-
+            year = request.meta['year']
+            report_term = request.meta['report_term']
+            report_type = request.meta['report_type']
+            
+            ### Log and save error information
             self.logger.info(
-                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key,
-                        f'{ticker};{page};{report_type}')
+                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, term {report_term}, year {year}')
+            self.r.sadd(self.error_set_key, f'{ticker};{report_type};{report_term};{year}')
             with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
-                    ticker, report_type, page, str(failure.type)))
+                openfile.write("ticker: {0}, report: {1}, term: {2}, year: {3} error type: {4} \n".format(
+                    ticker, report_type, report_term, year, str(failure.type)))
         
         elif failure.value.response:
             response = failure.value.response
             ticker = response.meta['ticker']
-            report_type = response.meta['ReportType']
-            try:
-                page = response.meta['Page']
-            except:
-                page = "1"
+            year = request.meta['year']
+            report_term = request.meta['report_term']
+            report_type = request.meta['report_type']
 
+            ### Log and save error information
             self.logger.info(
-                f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key,
-                        f'{ticker};{page};{report_type}')
+                f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, term {report_term}, year {year}')
+            self.r.sadd(self.error_set_key, f'{ticker};{report_type};{report_term};{year}')
             with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
-                    ticker, report_type, page, str(failure.type)))
+                openfile.write("ticker: {0}, report: {1}, term: {2}, year: {3} error type: {4} \n".format(
+                    ticker, report_type, report_term, year, str(failure.type)))
 
     def close_status(self):
         """Clear running status file after closing

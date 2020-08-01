@@ -1,0 +1,574 @@
+{
+    "data": [
+        [
+            "100",
+            "i tài sản ngắn hạn",
+            "454 806 604 706",
+            "453 691 948 150"
+        ],
+        [
+            "110",
+            "tiền và các khoản tương đương tiền",
+            "30 392 961 493",
+            "18 745 232 260"
+        ],
+        [
+            "111",
+            "tiền",
+            "30 392 961 493",
+            "18 745 232 260"
+        ],
+        [
+            "112",
+            "các khoản tương đương tiền"
+        ],
+        [
+            "120",
+            "các khoản đầu tư tài chính ngắn hạn",
+            "84 800 000 000"
+        ],
+        [
+            "1201",
+            "chứng khoán kinh doanh"
+        ],
+        [
+            "1202",
+            "dự phòng giảm giá chứng khoán kinh doanh"
+        ],
+        [
+            "1203",
+            "đầu tư nắm giữ đến ngày đáo hạn"
+        ],
+        [
+            "130",
+            "các khoản phải thu ngắn hạn",
+            "322 927 351 479",
+            "380 705 840 220"
+        ],
+        [
+            "131",
+            "phải thu khách hàng",
+            "12 337 359 310",
+            "113 918 479 407"
+        ],
+        [
+            "132",
+            "trả trước cho người bán",
+            "139 564 151 073",
+            "172 581 058 033"
+        ],
+        [
+            "133",
+            "phải thu nội bộ ngắn hạn"
+        ],
+        [
+            "134",
+            "phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+        ],
+        [
+            "135",
+            "5 phải thu về cho vay ngắn hạn",
+            "171 025 841 096",
+            "75 000 000 000"
+        ],
+        [
+            "136",
+            "các khoản phải thu khác",
+            "171 025 841 096",
+            "19 336 849 580"
+        ],
+        [
+            "139",
+            "dự phòng phải thu ngắn hạn khó đòi",
+            "130 546 800"
+        ],
+        [
+            "1391",
+            "8 tài sản thiếu chờ xử lý"
+        ],
+        [
+            "140",
+            "hàng tồn kho",
+            "8 163 034 687",
+            "44 995 860 608"
+        ],
+        [
+            "141",
+            "hàng tồn kho",
+            "8 163 034 687",
+            "44 995 860 608"
+        ],
+        [
+            "149",
+            "dự phòng giảm giá hàng tồn kho"
+        ],
+        [
+            "150",
+            "tài sản ngắn hạn khác",
+            "8 523 257 047",
+            "9 245 015 062"
+        ],
+        [
+            "151",
+            "chi phí trả trước ngắn hạn",
+            "81 000 000",
+            "43 485 465"
+        ],
+        [
+            "152",
+            "thuế gtgt được khấu trừ",
+            "2 014 052 730",
+            "9 201 529 597"
+        ],
+        [
+            "154",
+            "thuế và các khoản khác phải thu nhà nước",
+            "78 204 317"
+        ],
+        [
+            "155",
+            "4 giao dịch mua bán lại trái phiếu chính phủ"
+        ],
+        [
+            "158",
+            "tài sản ngắn hạn khác",
+            "6 350 000 000"
+        ],
+        [
+            "200",
+            "ii tài sản dài hạn",
+            "37 093 999",
+            "544 881 411 275"
+        ],
+        [
+            "210",
+            "các khoản phải thu dài hạn",
+            "30 000 000 000"
+        ],
+        [
+            "211",
+            "phải thu dài hạn của khách hàng"
+        ],
+        [
+            "212",
+            "2 trả trước cho người bán dài hạn"
+        ],
+        [
+            "213",
+            "vốn kinh doanh ở đơn vị trực thuộc"
+        ],
+        [
+            "213",
+            "phải thu nội bộ dài hạn"
+        ],
+        [
+            "2131",
+            "5 phải thu về cho vay dài hạn"
+        ],
+        [
+            "218",
+            "phải thu dài hạn khác",
+            "30 000 000 000"
+        ],
+        [
+            "219",
+            "dự phòng phải thu khó đòi"
+        ],
+        [
+            "220",
+            "tài sản cố định",
+            "35 414 832",
+            "20 567 229 559"
+        ],
+        [
+            "221",
+            "tài sản cố định hữu hình",
+            "20 567 229 559"
+        ],
+        [
+            "2211",
+            "nguyên giá",
+            "24 119 465 455"
+        ],
+        [
+            "2212",
+            "giá trị hao mòn luỹ kế",
+            "3 552 235 896"
+        ],
+        [
+            "222",
+            "tài sản cố định thuê tài chính"
+        ],
+        [
+            "2221",
+            "nguyên giá"
+        ],
+        [
+            "2222",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "223",
+            "tài sản cố định vô hình"
+        ],
+        [
+            "2231",
+            "nguyên giá"
+        ],
+        [
+            "2232",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "230",
+            "bất động sản đầu tư"
+        ],
+        [
+            "2301",
+            "nguyên giá"
+        ],
+        [
+            "2302",
+            "giá trị hao mòn luỹ kế"
+        ],
+        [
+            "240",
+            "tài sản dở dang dài hạn",
+            "346 841 585 105"
+        ],
+        [
+            "24021",
+            "chi phí sản xuất kinh doanh dở dang dài hạn"
+        ],
+        [
+            "24022",
+            "chi phí xây dựng cơ bản dở dang",
+            "35 414 832",
+            "346 841 585 105"
+        ],
+        [
+            "250",
+            "đầu tư tài chính dài hạn",
+            "147 000 000 000"
+        ],
+        [
+            "251",
+            "đầu tư vào công ty con"
+        ],
+        [
+            "252",
+            "đầu tư vào công ty liên kết liên doanh",
+            "147 000 000 000"
+        ],
+        [
+            "253",
+            "đầu tư góp vốn vào đơn vị khác"
+        ],
+        [
+            "258",
+            "dự phòng giảm giá đầu tư dài hạn"
+        ],
+        [
+            "259",
+            "đầu tư nắm giữ đến ngày đáo hạn"
+        ],
+        [
+            "260",
+            "tài sản dài hạn khác",
+            "1 679 167",
+            "472 596 611"
+        ],
+        [
+            "261",
+            "chi phí trả trước dài hạn",
+            "1 679 167",
+            "472 596 611"
+        ],
+        [
+            "2611",
+            "tài sản thuế thu nhập hoãn lại"
+        ],
+        [
+            "2611",
+            "thiết bị vật tư phụ tùng thay thế dài hạn"
+        ],
+        [
+            "267",
+            "tài sản dài hạn khác"
+        ],
+        [
+            "268",
+            "ký quỹ ký cược dài hạn"
+        ],
+        [
+            "269",
+            "lợi thế thương mại"
+        ],
+        [
+            "001",
+            "tổng cộng tài sản",
+            "454 843 698 705",
+            "998 573 359 425"
+        ],
+        [
+            "300",
+            "i nợ phải trả",
+            "150 872 961 764",
+            "217 599 050 750"
+        ],
+        [
+            "310",
+            "nợ ngắn hạn",
+            "124 939 011 580",
+            "155 271 814 121"
+        ],
+        [
+            "312",
+            "phải trả người bán ngắn hạn",
+            "85 596 754 439",
+            "86 784 672 102"
+        ],
+        [
+            "313",
+            "người mua trả tiền trước ngắn hạn",
+            "39 204 000 000",
+            "3 619 670 808"
+        ],
+        [
+            "314",
+            "thuế và các khoản phải nộp nhà nước",
+            "74 925 643",
+            "1 513 463 555"
+        ],
+        [
+            "315",
+            "phải trả người lao động",
+            "53 571 923"
+        ],
+        [
+            "316",
+            "chi phí phải trả ngắn hạn",
+            "63 331 498",
+            "13 166 667"
+        ],
+        [
+            "317",
+            "phải trả nội bộ ngắn hạn"
+        ],
+        [
+            "318",
+            "phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+        ],
+        [
+            "3181",
+            "doanh thu chưa thực hiện ngắn hạn"
+        ],
+        [
+            "3182",
+            "phải trả ngắn hạn khác"
+        ],
+        [
+            "3183",
+            "vay và nợ thuê tài chính ngắn hạn",
+            "63 287 269 066"
+        ],
+        [
+            "320",
+            "dự phòng phải trả ngắn hạn"
+        ],
+        [
+            "3201",
+            "12 quỹ khen thưởng phúc lợi"
+        ],
+        [
+            "322",
+            "quỹ bình ổn giá"
+        ],
+        [
+            "323",
+            "giao dịch mua bán lại trái phiếu chính phủ"
+        ],
+        [
+            "330",
+            "nợ dài hạn",
+            "25 933 950 184",
+            "62 327 236 629"
+        ],
+        [
+            "331",
+            "phải trả dài hạn người bán"
+        ],
+        [
+            "3311",
+            "2 người mua trả tiền trước dài hạn"
+        ],
+        [
+            "3312",
+            "3 chi phí phải trả dài hạn"
+        ],
+        [
+            "3313",
+            "4 phải trả nội bộ về vốn kinh doanh"
+        ],
+        [
+            "332",
+            "5 phải trả dài hạn nội bộ dài hạn"
+        ],
+        [
+            "3321",
+            "6 doanh thu chưa thực hiện dài hạn"
+        ],
+        [
+            "333",
+            "phải trả dài hạn khác"
+        ],
+        [
+            "334",
+            "8 vay và nợ thuê tài chính dài hạn",
+            "25 933 950 184",
+            "62 269 076 266"
+        ],
+        [
+            "3341",
+            "9 trái phiếu chuyển đổi"
+        ],
+        [
+            "335",
+            "11 thuế thu nhập hoãn lại phải trả",
+            "58 160 363"
+        ],
+        [
+            "337",
+            "dự phòng phải trả dài hạn"
+        ],
+        [
+            "3371",
+            "quỹ phát triển khoa học và công nghệ"
+        ],
+        [
+            "400",
+            "ii vốn chủ sở hữu",
+            "250 281 260 525",
+            "780 974 308 675"
+        ],
+        [
+            "410",
+            "vốn chủ sở hữu",
+            "250 281 260 525",
+            "780 974 308 675"
+        ],
+        [
+            "4101",
+            "vốn góp của chủ sở hữu",
+            "250 000 000 000",
+            "660 000 000 000"
+        ],
+        [
+            "4102",
+            "cổ phiếu phổ thông có quyền biểu quyết",
+            "660 000 000 000"
+        ],
+        [
+            "4103",
+            "cổ phiếu ưu đãi"
+        ],
+        [
+            "4103",
+            "10 cổ phiếu ưu đãi"
+        ],
+        [
+            "412",
+            "thặng dư vốn cổ phần"
+        ],
+        [
+            "4121",
+            "quyền chọn chuyển đổi trái phiếu"
+        ],
+        [
+            "413",
+            "vốn khác của chủ sở hữu"
+        ],
+        [
+            "414",
+            "cổ phiếu quỹ"
+        ],
+        [
+            "415",
+            "chênh lệch đánh giá lại tài sản"
+        ],
+        [
+            "416",
+            "chênh lệch tỷ giá hối đoái"
+        ],
+        [
+            "417",
+            "quỹ đầu tư phát triển"
+        ],
+        [
+            "4171",
+            "quỹ hỗ trợ sắp xếp doanh nghiệp"
+        ],
+        [
+            "419",
+            "quỹ khác thuộc vốn chủ sở hữu"
+        ],
+        [
+            "420",
+            "lợi nhuận sau thuế chưa phân phối",
+            "281 260 525",
+            "28 748 747 959"
+        ],
+        [
+            "4201",
+            "lnst chưa phân phối lũy kế đến cuối kỳ trước",
+            "281 260 525"
+        ],
+        [
+            "4202",
+            "lnst chưa phân phối kỳ này",
+            "28 467 487 434"
+        ],
+        [
+            "421",
+            "nguồn vốn đầu tư xdcb"
+        ],
+        [
+            "4211",
+            "lợi ích cổ đông không kiểm soát",
+            "92 225 560 716"
+        ],
+        [
+            "4212",
+            "phụ trội hợp nhất công ty con"
+        ],
+        [
+            "430",
+            "nguồn kinh phí và các quỹ khác"
+        ],
+        [
+            "432",
+            "nguồn kinh phí"
+        ],
+        [
+            "433",
+            "nguồn kinh phí đã hình thành tscđ"
+        ],
+        [
+            "500",
+            "iii lợi ích của cổ đông thiểu số",
+            "53 689 476 416"
+        ],
+        [
+            "002",
+            "tổng cộng nguồn vốn",
+            "454 843 698 705",
+            "998 573 359 425"
+        ]
+    ],
+    "periods": [
+        "2012",
+        "2013",
+        "2014",
+        "2015"
+    ]
+}
