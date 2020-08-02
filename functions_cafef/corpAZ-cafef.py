@@ -2,6 +2,7 @@
 
 import pathlib
 import time
+import random
 
 import redis
 from selenium import webdriver
@@ -59,8 +60,10 @@ for ticker_row in ticker_rows:
     tickers_to_push.append(to_push)
 
 ### Push tickers to Redis queue
+### NOTE: to test, select 100 random tickers
 for key in tickers_redis_keys:
-    r.lpush(key, *tickers_to_push[-100:])
+    r.lpush(key, *random.sample(tickers_to_push, 200))
+    # r.lpush(key, *tickers_to_push[-100:])
 
 ### Close procedures
 r.set(closed_redis_key, "1")

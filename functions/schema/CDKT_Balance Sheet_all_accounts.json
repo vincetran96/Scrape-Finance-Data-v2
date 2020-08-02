@@ -739,588 +739,6 @@
             "tổng cộng nguồn vốn"
         ],
         [
-            "",
-            "",
-            "tài sản",
-            "tài sản"
-        ],
-        [
-            "",
-            "",
-            "a tài sản ngắn hạn 100 110 120 130 140 150",
-            "tổng cộng tài sản 270 100 200"
-        ],
-        [
-            "",
-            "",
-            "i tiền và các khoản tương đương tiền",
-            "a tài sản ngắn hạn 100 110 120 130 140 150"
-        ],
-        [
-            "",
-            "",
-            "1 tiền mặt tại quỹ",
-            "i tiền và các khoản tương đương tiền"
-        ],
-        [
-            "",
-            "",
-            "2 tiền gửi ngân hàng",
-            "i tiền và các khoản tương đương tiền"
-        ],
-        [
-            "",
-            "",
-            "3 tiền đang chuyển",
-            "i tiền và các khoản tương đương tiền"
-        ],
-        [
-            "",
-            "",
-            "4 các khoản tương đương tiền",
-            "i tiền và các khoản tương đương tiền"
-        ],
-        [
-            "",
-            "",
-            "5 tiền của nhà ủy thác đầu tư",
-            "i tiền và các khoản tương đương tiền"
-        ],
-        [
-            "",
-            "",
-            "ii các khoản đầu tư tài chính ngắn hạn",
-            "a tài sản ngắn hạn 100 110 120 130 140 150"
-        ],
-        [
-            "",
-            "",
-            "1 đầu tư ngắn hạn",
-            "ii các khoản đầu tư tài chính ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "2 chứng khoán của nhà ủy thác đầu tư",
-            "ii các khoản đầu tư tài chính ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "3 dự phòng giảm giá chứng khoán đầu tư ngắn hạn",
-            "ii các khoản đầu tư tài chính ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "iii các khoản phải thu ngắn hạn",
-            "a tài sản ngắn hạn 100 110 120 130 140 150"
-        ],
-        [
-            "",
-            "",
-            "1 phải thu khách hàng",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "2 trả trước cho người bán",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "3 phải thu của nội bộ ngắn hạn",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "4 phải thu từ hoạt động quản lý quỹ",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "5 phải thu khác",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "6 dự phòng các khoản phải thu ngắn hạn khó đòi",
-            "iii các khoản phải thu ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "hàng tồn kho",
-            "a tài sản ngắn hạn 100 110 120 130 140 150"
-        ],
-        [
-            "",
-            "",
-            "v tài sản ngắn hạn khác",
-            "a tài sản ngắn hạn 100 110 120 130 140 150"
-        ],
-        [
-            "",
-            "",
-            "1 vật liệu công cụ dụng cụ",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "2 chi phí trả trước ngắn hạn",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "3 thuế gtgt còn được khấu trừ",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "4 thuế và các khoản khác phải thu của nhà nước",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "5 giao dịch mua lại trái phiếu chính phủ",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "6 tài sản ngắn hạn khác",
-            "v tài sản ngắn hạn khác"
-        ],
-        [
-            "",
-            "",
-            "b tài sản dài hạn 200 210 220 240 250 260 270",
-            "tổng cộng tài sản 270 100 200"
-        ],
-        [
-            "",
-            "",
-            "i các khoản phải thu dài hạn",
-            "b tài sản dài hạn 200 210 220 240 250 260 270"
-        ],
-        [
-            "",
-            "",
-            "1 phải thu dài hạn của khách hàng",
-            "i các khoản phải thu dài hạn"
-        ],
-        [
-            "",
-            "",
-            "2 vốn kinh doanh ở các đơn vị trực thuộc",
-            "i các khoản phải thu dài hạn"
-        ],
-        [
-            "",
-            "",
-            "3 phải thu dài hạn nội bộ",
-            "i các khoản phải thu dài hạn"
-        ],
-        [
-            "",
-            "",
-            "4 phải thu dài hạn khác",
-            "i các khoản phải thu dài hạn"
-        ],
-        [
-            "",
-            "",
-            "5 dự phòng phải thu dài hạn khó đòi",
-            "i các khoản phải thu dài hạn"
-        ],
-        [
-            "",
-            "",
-            "ii tài sản cố định",
-            "b tài sản dài hạn 200 210 220 240 250 260 270"
-        ],
-        [
-            "",
-            "",
-            "1 tài sản cố định hữu hình",
-            "ii tài sản cố định"
-        ],
-        [
-            "",
-            "",
-            "nguyên giá",
-            "1 tài sản cố định hữu hình"
-        ],
-        [
-            "",
-            "",
-            "giá trị hao mòn lũy kế",
-            "1 tài sản cố định hữu hình"
-        ],
-        [
-            "",
-            "",
-            "2 tài sản cố định thuê tài chính",
-            "ii tài sản cố định"
-        ],
-        [
-            "",
-            "",
-            "nguyên giá",
-            "2 tài sản cố định thuê tài chính"
-        ],
-        [
-            "",
-            "",
-            "giá trị hao mòn lũy kế",
-            "2 tài sản cố định thuê tài chính"
-        ],
-        [
-            "",
-            "",
-            "3 tài sản cố định vô hình",
-            "ii tài sản cố định"
-        ],
-        [
-            "",
-            "",
-            "nguyên giá",
-            "3 tài sản cố định vô hình"
-        ],
-        [
-            "",
-            "",
-            "giá trị hao mòn lũy kế",
-            "3 tài sản cố định vô hình"
-        ],
-        [
-            "",
-            "",
-            "4 chi phí xây dựng cơ bản dở dang",
-            "ii tài sản cố định"
-        ],
-        [
-            "",
-            "",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác",
-            "b tài sản dài hạn 200 210 220 240 250 260 270"
-        ],
-        [
-            "",
-            "",
-            "1 đầu tư vào công ty con",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "2 đầu tư vào công ty liên doanh liên kết",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "3 đầu tư chứng khoán",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "4 đầu tư dài hạn khác",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "5 dự phòng giảm giá chứng khoán đầu tư dài hạn",
-            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "iv tài sản dài hạn khác",
-            "b tài sản dài hạn 200 210 220 240 250 260 270"
-        ],
-        [
-            "",
-            "",
-            "1 chi phí trả trước dài hạn",
-            "iv tài sản dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "2 các khoản ký quỹ ký cược",
-            "iv tài sản dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "3 tài sản thuế thu nhập hoãn lại",
-            "iv tài sản dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "4 tài sản dài hạn khác",
-            "iv tài sản dài hạn khác"
-        ],
-        [
-            "",
-            "",
-            "tổng cộng tài sản 270 100 200",
-            "tổng cộng tài sản 270 100 200"
-        ],
-        [
-            "",
-            "",
-            "nguồn vốn",
-            "nguồn vốn"
-        ],
-        [
-            "",
-            "",
-            "a nợ phải trả 300 210 330",
-            "tổng cộng nguồn vốn 440 300 400 500"
-        ],
-        [
-            "",
-            "",
-            "i nợ ngắn hạn",
-            "a nợ phải trả 300 210 330"
-        ],
-        [
-            "",
-            "",
-            "1 vay và nợ ngắn hạn",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "2 phải trả người bán",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "3 người mua trả tiền trước",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "4 thuế và các khoản phải nộp nhà nước",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "5 phải trả công nhân viên",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "6 chi phí phải trả",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "7 phải trả nội bộ",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "8 các khoản phải trả phải nộp khác",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "9 dự phòng phải trả ngắn hạn",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "10 quỹ khen thưởng phúc lợi",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "11 giao dịch mua bán lại trái phiếu chính phủ",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "12 doanh thu chưa thực hiện",
-            "i nợ ngắn hạn"
-        ],
-        [
-            "",
-            "",
-            "ii nợ dài hạn",
-            "a nợ phải trả 300 210 330"
-        ],
-        [
-            "",
-            "",
-            "1 nhận ký quỹ ký cược dài hạn",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "2 phải trả dài hạn người bán",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "2 phải trả dài hạn nội bộ",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "3 phải trả dài hạn khác",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "4 vay và nợ dài hạn",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "5 thuế thu nhập hoãn lại phải trả",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "6 dự phòng trợ cấp mất việc làm",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "7 dự phòng phải trả dài hạn",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "8 doanh thu chưa thực hiện",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "9 quỹ phát triển khoa học và công nghệ",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "10 quỹ dự phòng bồi thường thiệt hại cho nhà đầu tư",
-            "ii nợ dài hạn"
-        ],
-        [
-            "",
-            "",
-            "b vốn chủ sở hữu 400 410 430",
-            "tổng cộng nguồn vốn 440 300 400 500"
-        ],
-        [
-            "",
-            "",
-            "1 vốn đầu tư của chủ sở hữu",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "2 thặng dư vốn cổ phần",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "3 vốn khác của chủ sở hữu",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "4 cổ phiếu quỹ",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "5 chênh lệch đánh giá lại tài sản",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "6 chênh lệch tỷ giá hối đoái",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "7 quỹ đầu tư phát triển",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "8 quỹ dự phòng tài chính",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "9 quỹ dự trữ",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "10 quỹ khác thuộc vốn chủ sở hữu",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "11 lợi nhuận sau thuế chưa phân phối",
-            "b vốn chủ sở hữu 400 410 430"
-        ],
-        [
-            "",
-            "",
-            "tổng cộng nguồn vốn 440 300 400 500",
-            "tổng cộng nguồn vốn 440 300 400 500"
-        ],
-        [
             "short term assets",
             "total assets",
             "tài sản ngắn hạn 100 110 130",
@@ -2065,120 +1483,6 @@
             "lợi nhuận đã phân phối cho nhà đầu tư"
         ],
         [
-            "cash in bank",
-            "total assets",
-            "tiền gửi ngân hàng",
-            "tổng tài sản"
-        ],
-        [
-            "investments in securities",
-            "total assets",
-            "đầu tư chứng khoán",
-            "tổng tài sản"
-        ],
-        [
-            "other investments",
-            "total assets",
-            "đầu tư khác",
-            "tổng tài sản"
-        ],
-        [
-            "receivables from securities trading",
-            "total assets",
-            "phải thu hoạt động đầu tư",
-            "tổng tài sản"
-        ],
-        [
-            "other receivables",
-            "total assets",
-            "phải thu khác",
-            "tổng tài sản"
-        ],
-        [
-            "total assets",
-            "total assets",
-            "tổng tài sản",
-            "tổng tài sản"
-        ],
-        [
-            "liabilities",
-            "total liabilities and owner s equity",
-            "nợ phải trả",
-            "tổng cộng nguồn vốn"
-        ],
-        [
-            "short term loans",
-            "liabilities",
-            "vay ngắn hạn",
-            "nợ phải trả"
-        ],
-        [
-            "payables for investment activities",
-            "liabilities",
-            "phải trả hoạt động đầu tư kinh doanh chứng khoán",
-            "nợ phải trả"
-        ],
-        [
-            "income payables for investors",
-            "liabilities",
-            "phải trả thu nhập cho nhà đầu tư",
-            "nợ phải trả"
-        ],
-        [
-            "remunerations payables to the board of representative",
-            "liabilities",
-            "phải trả phụ cấp ban đại diện quỹ",
-            "nợ phải trả"
-        ],
-        [
-            "payables to the fund manager and the custodian bank",
-            "liabilities",
-            "phải trả cho công ty quản lý quỹ nh giám sát",
-            "nợ phải trả"
-        ],
-        [
-            "other payables",
-            "liabilities",
-            "phải trả khác",
-            "nợ phải trả"
-        ],
-        [
-            "owner s equity",
-            "total liabilities and owner s equity",
-            "nguồn vốn chủ sở hữu",
-            "tổng cộng nguồn vốn"
-        ],
-        [
-            "capital contributed by investors",
-            "owner s equity",
-            "vốn góp của các nhà đầu tư",
-            "nguồn vốn chủ sở hữu"
-        ],
-        [
-            "capital contributed",
-            "capital contributed by investors",
-            "vốn góp",
-            "vốn góp của các nhà đầu tư"
-        ],
-        [
-            "capital surplus",
-            "capital contributed by investors",
-            "thặng dư vốn",
-            "vốn góp của các nhà đầu tư"
-        ],
-        [
-            "undistributed earnings",
-            "owner s equity",
-            "kết quả hoạt động chưa phân phối",
-            "nguồn vốn chủ sở hữu"
-        ],
-        [
-            "total liabilities and owner s equity",
-            "total liabilities and owner s equity",
-            "tổng cộng nguồn vốn",
-            "tổng cộng nguồn vốn"
-        ],
-        [
             "cash gold and silver precious stones",
             "total assets",
             "tiền mặt vàng bạc đá quý",
@@ -2617,6 +1921,588 @@
             "tổng nợ phải trả và vốn chủ sở hữu"
         ],
         [
+            "",
+            "",
+            "tài sản",
+            "tài sản"
+        ],
+        [
+            "",
+            "",
+            "a tài sản ngắn hạn 100 110 120 130 140 150",
+            "tổng cộng tài sản 270 100 200"
+        ],
+        [
+            "",
+            "",
+            "i tiền và các khoản tương đương tiền",
+            "a tài sản ngắn hạn 100 110 120 130 140 150"
+        ],
+        [
+            "",
+            "",
+            "1 tiền mặt tại quỹ",
+            "i tiền và các khoản tương đương tiền"
+        ],
+        [
+            "",
+            "",
+            "2 tiền gửi ngân hàng",
+            "i tiền và các khoản tương đương tiền"
+        ],
+        [
+            "",
+            "",
+            "3 tiền đang chuyển",
+            "i tiền và các khoản tương đương tiền"
+        ],
+        [
+            "",
+            "",
+            "4 các khoản tương đương tiền",
+            "i tiền và các khoản tương đương tiền"
+        ],
+        [
+            "",
+            "",
+            "5 tiền của nhà ủy thác đầu tư",
+            "i tiền và các khoản tương đương tiền"
+        ],
+        [
+            "",
+            "",
+            "ii các khoản đầu tư tài chính ngắn hạn",
+            "a tài sản ngắn hạn 100 110 120 130 140 150"
+        ],
+        [
+            "",
+            "",
+            "1 đầu tư ngắn hạn",
+            "ii các khoản đầu tư tài chính ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "2 chứng khoán của nhà ủy thác đầu tư",
+            "ii các khoản đầu tư tài chính ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "3 dự phòng giảm giá chứng khoán đầu tư ngắn hạn",
+            "ii các khoản đầu tư tài chính ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "iii các khoản phải thu ngắn hạn",
+            "a tài sản ngắn hạn 100 110 120 130 140 150"
+        ],
+        [
+            "",
+            "",
+            "1 phải thu khách hàng",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "2 trả trước cho người bán",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "3 phải thu của nội bộ ngắn hạn",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "4 phải thu từ hoạt động quản lý quỹ",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "5 phải thu khác",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "6 dự phòng các khoản phải thu ngắn hạn khó đòi",
+            "iii các khoản phải thu ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "hàng tồn kho",
+            "a tài sản ngắn hạn 100 110 120 130 140 150"
+        ],
+        [
+            "",
+            "",
+            "v tài sản ngắn hạn khác",
+            "a tài sản ngắn hạn 100 110 120 130 140 150"
+        ],
+        [
+            "",
+            "",
+            "1 vật liệu công cụ dụng cụ",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "2 chi phí trả trước ngắn hạn",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "3 thuế gtgt còn được khấu trừ",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "4 thuế và các khoản khác phải thu của nhà nước",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "5 giao dịch mua lại trái phiếu chính phủ",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "6 tài sản ngắn hạn khác",
+            "v tài sản ngắn hạn khác"
+        ],
+        [
+            "",
+            "",
+            "b tài sản dài hạn 200 210 220 240 250 260 270",
+            "tổng cộng tài sản 270 100 200"
+        ],
+        [
+            "",
+            "",
+            "i các khoản phải thu dài hạn",
+            "b tài sản dài hạn 200 210 220 240 250 260 270"
+        ],
+        [
+            "",
+            "",
+            "1 phải thu dài hạn của khách hàng",
+            "i các khoản phải thu dài hạn"
+        ],
+        [
+            "",
+            "",
+            "2 vốn kinh doanh ở các đơn vị trực thuộc",
+            "i các khoản phải thu dài hạn"
+        ],
+        [
+            "",
+            "",
+            "3 phải thu dài hạn nội bộ",
+            "i các khoản phải thu dài hạn"
+        ],
+        [
+            "",
+            "",
+            "4 phải thu dài hạn khác",
+            "i các khoản phải thu dài hạn"
+        ],
+        [
+            "",
+            "",
+            "5 dự phòng phải thu dài hạn khó đòi",
+            "i các khoản phải thu dài hạn"
+        ],
+        [
+            "",
+            "",
+            "ii tài sản cố định",
+            "b tài sản dài hạn 200 210 220 240 250 260 270"
+        ],
+        [
+            "",
+            "",
+            "1 tài sản cố định hữu hình",
+            "ii tài sản cố định"
+        ],
+        [
+            "",
+            "",
+            "nguyên giá",
+            "1 tài sản cố định hữu hình"
+        ],
+        [
+            "",
+            "",
+            "giá trị hao mòn lũy kế",
+            "1 tài sản cố định hữu hình"
+        ],
+        [
+            "",
+            "",
+            "2 tài sản cố định thuê tài chính",
+            "ii tài sản cố định"
+        ],
+        [
+            "",
+            "",
+            "nguyên giá",
+            "2 tài sản cố định thuê tài chính"
+        ],
+        [
+            "",
+            "",
+            "giá trị hao mòn lũy kế",
+            "2 tài sản cố định thuê tài chính"
+        ],
+        [
+            "",
+            "",
+            "3 tài sản cố định vô hình",
+            "ii tài sản cố định"
+        ],
+        [
+            "",
+            "",
+            "nguyên giá",
+            "3 tài sản cố định vô hình"
+        ],
+        [
+            "",
+            "",
+            "giá trị hao mòn lũy kế",
+            "3 tài sản cố định vô hình"
+        ],
+        [
+            "",
+            "",
+            "4 chi phí xây dựng cơ bản dở dang",
+            "ii tài sản cố định"
+        ],
+        [
+            "",
+            "",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác",
+            "b tài sản dài hạn 200 210 220 240 250 260 270"
+        ],
+        [
+            "",
+            "",
+            "1 đầu tư vào công ty con",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "2 đầu tư vào công ty liên doanh liên kết",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "3 đầu tư chứng khoán",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "4 đầu tư dài hạn khác",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "5 dự phòng giảm giá chứng khoán đầu tư dài hạn",
+            "iii các khoản đầu tư chứng khoán và đầu tư dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "iv tài sản dài hạn khác",
+            "b tài sản dài hạn 200 210 220 240 250 260 270"
+        ],
+        [
+            "",
+            "",
+            "1 chi phí trả trước dài hạn",
+            "iv tài sản dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "2 các khoản ký quỹ ký cược",
+            "iv tài sản dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "3 tài sản thuế thu nhập hoãn lại",
+            "iv tài sản dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "4 tài sản dài hạn khác",
+            "iv tài sản dài hạn khác"
+        ],
+        [
+            "",
+            "",
+            "tổng cộng tài sản 270 100 200",
+            "tổng cộng tài sản 270 100 200"
+        ],
+        [
+            "",
+            "",
+            "nguồn vốn",
+            "nguồn vốn"
+        ],
+        [
+            "",
+            "",
+            "a nợ phải trả 300 210 330",
+            "tổng cộng nguồn vốn 440 300 400 500"
+        ],
+        [
+            "",
+            "",
+            "i nợ ngắn hạn",
+            "a nợ phải trả 300 210 330"
+        ],
+        [
+            "",
+            "",
+            "1 vay và nợ ngắn hạn",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "2 phải trả người bán",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "3 người mua trả tiền trước",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "4 thuế và các khoản phải nộp nhà nước",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "5 phải trả công nhân viên",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "6 chi phí phải trả",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "7 phải trả nội bộ",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "8 các khoản phải trả phải nộp khác",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "9 dự phòng phải trả ngắn hạn",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "10 quỹ khen thưởng phúc lợi",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "11 giao dịch mua bán lại trái phiếu chính phủ",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "12 doanh thu chưa thực hiện",
+            "i nợ ngắn hạn"
+        ],
+        [
+            "",
+            "",
+            "ii nợ dài hạn",
+            "a nợ phải trả 300 210 330"
+        ],
+        [
+            "",
+            "",
+            "1 nhận ký quỹ ký cược dài hạn",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "2 phải trả dài hạn người bán",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "2 phải trả dài hạn nội bộ",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "3 phải trả dài hạn khác",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "4 vay và nợ dài hạn",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "5 thuế thu nhập hoãn lại phải trả",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "6 dự phòng trợ cấp mất việc làm",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "7 dự phòng phải trả dài hạn",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "8 doanh thu chưa thực hiện",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "9 quỹ phát triển khoa học và công nghệ",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "10 quỹ dự phòng bồi thường thiệt hại cho nhà đầu tư",
+            "ii nợ dài hạn"
+        ],
+        [
+            "",
+            "",
+            "b vốn chủ sở hữu 400 410 430",
+            "tổng cộng nguồn vốn 440 300 400 500"
+        ],
+        [
+            "",
+            "",
+            "1 vốn đầu tư của chủ sở hữu",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "2 thặng dư vốn cổ phần",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "3 vốn khác của chủ sở hữu",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "4 cổ phiếu quỹ",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "5 chênh lệch đánh giá lại tài sản",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "6 chênh lệch tỷ giá hối đoái",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "7 quỹ đầu tư phát triển",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "8 quỹ dự phòng tài chính",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "9 quỹ dự trữ",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "10 quỹ khác thuộc vốn chủ sở hữu",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "11 lợi nhuận sau thuế chưa phân phối",
+            "b vốn chủ sở hữu 400 410 430"
+        ],
+        [
+            "",
+            "",
+            "tổng cộng nguồn vốn 440 300 400 500",
+            "tổng cộng nguồn vốn 440 300 400 500"
+        ],
+        [
             "short term assets",
             "total assets",
             "tài sản ngắn hạn 100 110 120 130 140 150 190",
@@ -3017,6 +2903,120 @@
             "total owner s equity and liabilities",
             "lợi ích của cổ đông không kiểm soát",
             "tổng cộng nguồn vốn 440 300 400 500"
+        ],
+        [
+            "cash in bank",
+            "total assets",
+            "tiền gửi ngân hàng",
+            "tổng tài sản"
+        ],
+        [
+            "investments in securities",
+            "total assets",
+            "đầu tư chứng khoán",
+            "tổng tài sản"
+        ],
+        [
+            "other investments",
+            "total assets",
+            "đầu tư khác",
+            "tổng tài sản"
+        ],
+        [
+            "receivables from securities trading",
+            "total assets",
+            "phải thu hoạt động đầu tư",
+            "tổng tài sản"
+        ],
+        [
+            "other receivables",
+            "total assets",
+            "phải thu khác",
+            "tổng tài sản"
+        ],
+        [
+            "total assets",
+            "total assets",
+            "tổng tài sản",
+            "tổng tài sản"
+        ],
+        [
+            "liabilities",
+            "total liabilities and owner s equity",
+            "nợ phải trả",
+            "tổng cộng nguồn vốn"
+        ],
+        [
+            "short term loans",
+            "liabilities",
+            "vay ngắn hạn",
+            "nợ phải trả"
+        ],
+        [
+            "payables for investment activities",
+            "liabilities",
+            "phải trả hoạt động đầu tư kinh doanh chứng khoán",
+            "nợ phải trả"
+        ],
+        [
+            "income payables for investors",
+            "liabilities",
+            "phải trả thu nhập cho nhà đầu tư",
+            "nợ phải trả"
+        ],
+        [
+            "remunerations payables to the board of representative",
+            "liabilities",
+            "phải trả phụ cấp ban đại diện quỹ",
+            "nợ phải trả"
+        ],
+        [
+            "payables to the fund manager and the custodian bank",
+            "liabilities",
+            "phải trả cho công ty quản lý quỹ nh giám sát",
+            "nợ phải trả"
+        ],
+        [
+            "other payables",
+            "liabilities",
+            "phải trả khác",
+            "nợ phải trả"
+        ],
+        [
+            "owner s equity",
+            "total liabilities and owner s equity",
+            "nguồn vốn chủ sở hữu",
+            "tổng cộng nguồn vốn"
+        ],
+        [
+            "capital contributed by investors",
+            "owner s equity",
+            "vốn góp của các nhà đầu tư",
+            "nguồn vốn chủ sở hữu"
+        ],
+        [
+            "capital contributed",
+            "capital contributed by investors",
+            "vốn góp",
+            "vốn góp của các nhà đầu tư"
+        ],
+        [
+            "capital surplus",
+            "capital contributed by investors",
+            "thặng dư vốn",
+            "vốn góp của các nhà đầu tư"
+        ],
+        [
+            "undistributed earnings",
+            "owner s equity",
+            "kết quả hoạt động chưa phân phối",
+            "nguồn vốn chủ sở hữu"
+        ],
+        [
+            "total liabilities and owner s equity",
+            "total liabilities and owner s equity",
+            "tổng cộng nguồn vốn",
+            "tổng cộng nguồn vốn"
         ]
     ]
 }

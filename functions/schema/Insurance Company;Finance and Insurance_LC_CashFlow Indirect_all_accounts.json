@@ -1,4 +1,123 @@
 {
+    "CashFlow Direct": {
+        "cash flows from operating activities;cash flows from operating activities;lưu chuyển tiền từ hoạt động kinh doanh;lưu chuyển tiền từ hoạt động kinh doanh": [
+            3684
+        ],
+        "premiums and commissions received;net cash flows from operating activities;tiền thu phí và hoa hồng;lưu chuyển tiền thuần từ hđkd": [
+            3708
+        ],
+        "receipts from premium and commission payables;net cash flows from operating activities;tiê n thu từ các khoản nợ phí và hoa hồng;lưu chuyển tiền thuần từ hđkd": [
+            3709
+        ],
+        "receipts from expense reductions;net cash flows from operating activities;tiê n thu từ các khoản thu được giảm chi;lưu chuyển tiền thuần từ hđkd": [
+            3710
+        ],
+        "proceeds from other operating activities;net cash flows from operating activities;tiê n thu từ các hoạt động kinh doanh khác;lưu chuyển tiền thuần từ hđkd": [
+            3711
+        ],
+        "payments for insurance claims;net cash flows from operating activities;trả tiền bồi thường bảo hiểm;lưu chuyển tiền thuần từ hđkd": [
+            3712
+        ],
+        "payments for commissions and other insurance expenses;net cash flows from operating activities;trả tiền hoa hồng và các khoản nợ khác của kinh doanh bh;lưu chuyển tiền thuần từ hđkd": [
+            3713
+        ],
+        "payments to suppliers;net cash flows from operating activities;trả tiền cho người bán người cung cấp dịch vụ;lưu chuyển tiền thuần từ hđkd": [
+            3714
+        ],
+        "payments to employees;net cash flows from operating activities;trả tiền cho cán bộ công nhân viên;lưu chuyển tiền thuần từ hđkd": [
+            3715
+        ],
+        "taxes and other obligations paid to the state authorities;net cash flows from operating activities;trả tiền nộp thuế và các khoản nợ nhà nước;lưu chuyển tiền thuần từ hđkd": [
+            3716
+        ],
+        "payments for other liabilities;net cash flows from operating activities;trả tiền cho các khoản nợ khác;lưu chuyển tiền thuần từ hđkd": [
+            3717
+        ],
+        "advances to employees and suppliers;net cash flows from operating activities;tiền tạm ứng cho cbcnv và ứng trước cho người bán;lưu chuyển tiền thuần từ hđkd": [
+            3718
+        ],
+        "other receipts from operating activities;net cash flows from operating activities;tiền thu khác từ hoạt động kinh doanh;lưu chuyển tiền thuần từ hđkd": [
+            3694
+        ],
+        "other payments for operating activities;net cash flows from operating activities;tiền chi khác từ hoạt động kinh doanh;lưu chuyển tiền thuần từ hđkd": [
+            3695
+        ],
+        "net cash flows from operating activities;net cash flows from operating activities;lưu chuyển tiền thuần từ hđkd;lưu chuyển tiền thuần từ hđkd": [
+            3693
+        ],
+        "cash flows from investing activities;cash flows from investing activities;lưu chuyển tiền từ hoạt động đầu tư;lưu chuyển tiền từ hoạt động đầu tư": [
+            3685
+        ],
+        "proceeds from investments in other entities;net cash flows from investing activities;tiền thu từ các khoản đầu tư vào đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3719
+        ],
+        "proceeds from other investments;net cash flows from investing activities;tiền thu từ lãi các khoản đầu tư khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3720
+        ],
+        "proceeds from disposals of fixed assets;net cash flows from investing activities;tiền thu do bán tài sản cố định;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3721
+        ],
+        "investments in other entities;net cash flows from investing activities;tiền thu hồi đầu tư góp vốn vào đơn vị khác;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3697
+        ],
+        "purchase of fixed assets;net cash flows from investing activities;tiền mua tài sản cố định;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3696
+        ],
+        "other receipts from investing activities;net cash flows from investing activities;tiền thu khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3704
+        ],
+        "other payments for investing activities;net cash flows from investing activities;tiền chi khác từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3705
+        ],
+        "net cash flows from investing activities;net cash flows from investing activities;lưu chuyển tiền thuần từ hoạt động đầu tư;lưu chuyển tiền thuần từ hoạt động đầu tư": [
+            3687
+        ],
+        "cash flows from financing activities;cash flows from financing activities;lưu chuyển tiền từ hoạt động tài chính;lưu chuyển tiền từ hoạt động tài chính": [
+            3686
+        ],
+        "receipts from equity issue and owner s capital contribution;net cash flows from financing activities;tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu tiền thu do các chủ sở hữu góp vốn;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3698
+        ],
+        "payment for share repurchases;net cash flows from financing activities;tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu của doanh nghiệp đã phát hành;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3699
+        ],
+        "short term and long term borrowings;net cash flows from financing activities;tiền vay ngắn hạn dài hạn nhận được tiền thu do di vay;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3700
+        ],
+        "receipts from interest income on deposits;net cash flows from financing activities;tiền thu từ lãi tiền gửi;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3722
+        ],
+        "principal payments;net cash flows from financing activities;tiền chi trả nợ gốc vay;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3701
+        ],
+        "payments to settle finance lease;net cash flows from financing activities;tiền chi trả nợ thuê tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3702
+        ],
+        "dividends paid profits distributed to owners;net cash flows from financing activities;cổ tức lợi nhuận đã trả cho chủ sở hữu tiền lãi đã trả cho các nhà đầu tư vào doanh nghiệp;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3703
+        ],
+        "other receipts from financing activities;net cash flows from financing activities;tiền thu khác từ hoạt dộng tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3706
+        ],
+        "other payments for financing activities;net cash flows from financing activities;tiền chi khác từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3707
+        ],
+        "net cash flows from financing activities;net cash flows from financing activities;lưu chuyển tiền thuần từ hoạt động tài chính;lưu chuyển tiền thuần từ hoạt động tài chính": [
+            3688
+        ],
+        "net cash flows during the period;net cash flows during the period;lưu chuyển tiền thuần trong kỳ;lưu chuyển tiền thuần trong kỳ": [
+            3690
+        ],
+        "cash and cash equivalents at beginning of the period;cash and cash equivalents at beginning of the period;tiền và tương đương tiền đầu kỳ;tiền và tương đương tiền đầu kỳ": [
+            3691
+        ],
+        "exchange difference due to re valuation of ending balances;exchange difference due to re valuation of ending balances;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ;ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+            3689
+        ],
+        "cash and cash equivalents at end of the period;cash and cash equivalents at end of the period;tiền và tương đương tiền cuối kỳ;tiền và tương đương tiền cuối kỳ": [
+            3692
+        ]
+    },
     "CashFlow Indirect": {
         "cash flows from operating activities;cash flows from operating activities;lưu chuyển tiền từ hoạt động kinh doanh;lưu chuyển tiền từ hoạt động kinh doanh": [
             3640

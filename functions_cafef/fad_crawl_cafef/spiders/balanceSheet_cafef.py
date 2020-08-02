@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import re
 
 from scrapy import Request
 from scrapy_redis import defaults
@@ -130,7 +131,7 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
                     tr_id = tr.xpath("./@id").extract_first()
                     tds_data = [td.xpath('string()').extract()[0] for td in tr.xpath("./child::td")[:-1]]
                     # print(tds_data)
-                    tr_data_spl = [tr_id] + [simplifyText(d) for d in tds_data]
+                    tr_data_spl = [tr_id] + [re.sub('\s+',' ',d).strip() for d in tds_data]
                     # print(tr_data_spl)
                     result['data'].append(tr_data_spl)
 

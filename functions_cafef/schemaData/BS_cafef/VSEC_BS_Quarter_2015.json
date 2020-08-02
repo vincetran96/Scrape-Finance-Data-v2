@@ -2,31 +2,31 @@
     "data": [
         [
             "100",
-            "i tài sản ngắn hạn",
+            "I - TÀI SẢN NGẮN HẠN",
             "",
             "",
             "",
-            "170 938 473 347"
+            "170,938,473,347"
         ],
         [
             "110",
-            "tiền và các khoản tương đương tiền",
+            "1. Tiền và các khoản tương đương tiền",
             "",
             "",
             "",
-            "166 827 606 405"
+            "166,827,606,405"
         ],
         [
             "111",
-            "tiền",
+            "1.1. Tiền",
             "",
             "",
             "",
-            "166 827 606 405"
+            "166,827,606,405"
         ],
         [
             "1111",
-            "1 tiền mặt tại quỹ",
+            "1.1.1 Tiền mặt tại quỹ",
             "",
             "",
             "",
@@ -34,7 +34,7 @@
         ],
         [
             "1112",
-            "2 tiền gửi ngân hàng",
+            "1.1.2 Tiền gửi ngân hàng",
             "",
             "",
             "",
@@ -42,7 +42,7 @@
         ],
         [
             "11121",
-            "tiền gửi của công ty",
+            "- Tiền gửi của công ty",
             "",
             "",
             "",
@@ -50,7 +50,7 @@
         ],
         [
             "11122",
-            "tiền gửi của nhà đầu tư về giao dịch chứng khoán",
+            "-Tiền gửi của nhà đầu tư về giao dịch chứng khoán",
             "",
             "",
             "",
@@ -58,7 +58,7 @@
         ],
         [
             "11123",
-            "tiền gửi về bán chứng khoán phát hành",
+            "- Tiền gửi về bán chứng khoán phát hành",
             "",
             "",
             "",
@@ -66,7 +66,7 @@
         ],
         [
             "11124",
-            "tiền gửi thanh toán bù trừ giao dịch chứng khoán",
+            "- Tiền gửi thanh toán bù trừ giao dịch chứng khoán",
             "",
             "",
             "",
@@ -74,7 +74,7 @@
         ],
         [
             "112",
-            "các khoản tương đương tiền",
+            "1.2. Các khoản tương đương tiền",
             "",
             "",
             "",
@@ -82,7 +82,7 @@
         ],
         [
             "1121",
-            "trong đó tiền của người ủy thác đầu tư",
+            "- Trong đó: Tiền của người ủy thác đầu tư",
             "",
             "",
             "",
@@ -90,31 +90,31 @@
         ],
         [
             "120",
-            "các khoản đầu tư tài chính ngắn hạn",
+            "2. Các khoản đầu tư tài chính ngắn hạn",
             "",
             "",
             "",
-            "2 579 964 480"
+            "2,579,964,480"
         ],
         [
             "121",
-            "đầu tư ngắn hạn",
+            "2.1. Đầu tư ngắn hạn",
             "",
             "",
             "",
-            "6 867 961 000"
+            "6,867,961,000"
         ],
         [
             "122",
-            "đầu tư ngắn hạn của người ủy thác đầu tư",
+            "2.2. Đầu tư ngắn hạn của người ủy thác đầu tư",
             "",
             "",
             "",
-            "4 287 996 520"
+            "-4,287,996,520"
         ],
         [
             "129",
-            "dự phòng giảm giá đầu tư ngắn hạn",
+            "2.3. Dự phòng giảm giá đầu tư ngắn hạn",
             "",
             "",
             "",
@@ -122,15 +122,15 @@
         ],
         [
             "130",
-            "các khoản phải thu ngắn hạn",
+            "3. Các khoản phải thu ngắn hạn",
             "",
             "",
             "",
-            "430 608 021"
+            "430,608,021"
         ],
         [
             "131",
-            "phải thu khách hàng",
+            "3.1.Phải thu khách hàng",
             "",
             "",
             "",
@@ -138,15 +138,15 @@
         ],
         [
             "132",
-            "trả trước cho người bán",
+            "3.2.Trả trước cho người bán",
             "",
             "",
             "",
-            "278 294 250"
+            "278,294,250"
         ],
         [
             "133",
-            "phải thu nội bộ ngắn hạn",
+            "3.3. Phải thu nội bộ ngắn hạn",
             "",
             "",
             "",
@@ -154,15 +154,15 @@
         ],
         [
             "135",
-            "phải thu hoạt động giao dịch chứng khoán",
+            "3.4. Phải thu hoạt động giao dịch chứng khoán",
             "",
             "",
             "",
-            "196 867"
+            "196,867"
         ],
         [
             "137",
-            "thuế gtgt được khấu trừ",
+            "3.8. Thuế GTGT được khấu trừ",
             "",
             "",
             "",
@@ -170,15 +170,15 @@
         ],
         [
             "138",
-            "các khoản phải thu khác",
+            "3.5. Các khoản phải thu khác",
             "",
             "",
             "",
-            "152 116 904"
+            "152,116,904"
         ],
         [
             "139",
-            "dự phòng phải thu ngắn hạn khó đòi",
+            "3.6. Dự phòng phải thu ngắn hạn khó đòi",
             "",
             "",
             "",
@@ -186,7 +186,7 @@
         ],
         [
             "1391",
-            "dự phòng giảm giá chứng khoán ủy thác đầu tư ngắn hạn",
+            "3.7. Dự phòng giảm giá chứng khoán ủy thác đầu tư ngắn hạn",
             "",
             "",
             "",
@@ -194,7 +194,7 @@
         ],
         [
             "1392",
-            "ứng trước cho người bán",
+            "3.9. Ứng trước cho người bán",
             "",
             "",
             "",
@@ -202,7 +202,7 @@
         ],
         [
             "140",
-            "hàng tồn kho",
+            "4. Hàng tồn kho",
             "",
             "",
             "",
@@ -210,7 +210,7 @@
         ],
         [
             "141",
-            "hàng tồn kho",
+            "4.1. Hàng tồn kho",
             "",
             "",
             "",
@@ -218,7 +218,7 @@
         ],
         [
             "149",
-            "dự phòng giảm giá hàng tồn kho",
+            "4.2. Dự phòng giảm giá hàng tồn kho",
             "",
             "",
             "",
@@ -226,23 +226,23 @@
         ],
         [
             "150",
-            "tài sản ngắn hạn khác",
+            "5. Tài sản ngắn hạn khác",
             "",
             "",
             "",
-            "1 100 294 441"
+            "1,100,294,441"
         ],
         [
             "151",
-            "chi phí trả trước ngắn hạn",
+            "5.1. Chi phí trả trước ngắn hạn",
             "",
             "",
             "",
-            "1 076 274 358"
+            "1,076,274,358"
         ],
         [
             "152",
-            "thuế gtgt được khấu trừ",
+            "5.2. Thuế GTGT được khấu trừ",
             "",
             "",
             "",
@@ -250,7 +250,7 @@
         ],
         [
             "154",
-            "thuế và các khoản khác phải thu nhà nước",
+            "5.3. Thuế và các khoản khác phải thu Nhà nước",
             "",
             "",
             "",
@@ -258,7 +258,7 @@
         ],
         [
             "155",
-            "giao dịch mua bán lại trái phiếu chính phủ",
+            "5.4. Giao dịch mua bán lại trái phiếu chính phủ",
             "",
             "",
             "",
@@ -266,23 +266,23 @@
         ],
         [
             "158",
-            "tài sản ngắn hạn khác",
+            "5.5. Tài sản ngắn hạn khác",
             "",
             "",
             "",
-            "24 020 083"
+            "24,020,083"
         ],
         [
             "200",
-            "ii tài sản dài hạn",
+            "II - TÀI SẢN DÀI HẠN",
             "",
             "",
             "",
-            "1 394 939 226"
+            "1,394,939,226"
         ],
         [
             "210",
-            "các khoản phải thu dài hạn",
+            "1. Các khoản phải thu dài hạn",
             "",
             "",
             "",
@@ -290,7 +290,7 @@
         ],
         [
             "211",
-            "phải thu dài hạn của khách hàng",
+            "1.1. Phải thu dài hạn của khách hàng",
             "",
             "",
             "",
@@ -298,7 +298,7 @@
         ],
         [
             "212",
-            "vốn kinh doanh ở đơn vị trực thuộc",
+            "1.2. Vốn kinh doanh ở đơn vị trực thuộc",
             "",
             "",
             "",
@@ -306,7 +306,7 @@
         ],
         [
             "213",
-            "phải thu dài hạn nội bộ",
+            "1.3. Phải thu dài hạn nội bộ",
             "",
             "",
             "",
@@ -314,7 +314,7 @@
         ],
         [
             "218",
-            "phải thu dài hạn khác",
+            "1.4. Phải thu dài hạn khác",
             "",
             "",
             "",
@@ -322,7 +322,7 @@
         ],
         [
             "219",
-            "dự phòng phải thu khó đòi",
+            "1.5. Dự phòng phải thu khó đòi",
             "",
             "",
             "",
@@ -330,23 +330,23 @@
         ],
         [
             "220",
-            "tài sản cố định",
+            "2. Tài sản cố định",
             "",
             "",
             "",
-            "761 117 344"
+            "761,117,344"
         ],
         [
             "221",
-            "tài sản cố định hữu hình",
+            "2.1. Tài sản cố định hữu hình",
             "",
             "",
             "",
-            "576 088 192"
+            "576,088,192"
         ],
         [
             "2211",
-            "nguyên giá",
+            "- Nguyên giá",
             "",
             "",
             "",
@@ -354,7 +354,7 @@
         ],
         [
             "2212",
-            "giá trị hao mòn luỹ kế",
+            "- Giá trị hao mòn luỹ kế",
             "",
             "",
             "",
@@ -362,7 +362,7 @@
         ],
         [
             "222",
-            "tài sản cố định thuê tài chính",
+            "2.2. Tài sản cố định thuê tài chính",
             "",
             "",
             "",
@@ -370,7 +370,7 @@
         ],
         [
             "2221",
-            "nguyên giá",
+            "- Nguyên giá",
             "",
             "",
             "",
@@ -378,7 +378,7 @@
         ],
         [
             "2222",
-            "giá trị hao mòn luỹ kế",
+            "- Giá trị hao mòn luỹ kế",
             "",
             "",
             "",
@@ -386,31 +386,31 @@
         ],
         [
             "223",
-            "tài sản cố định vô hình",
+            "2.3. Tài sản cố định vô hình",
             "",
             "",
             "",
-            "185 029 152"
+            "185,029,152"
         ],
         [
             "2231",
-            "nguyên giá",
+            "- Nguyên giá",
             "",
             "",
             "",
-            "1 439 798 930"
+            "1,439,798,930"
         ],
         [
             "2232",
-            "giá trị hao mòn luỹ kế",
+            "- Giá trị hao mòn luỹ kế",
             "",
             "",
             "",
-            "1 254 769 778"
+            "-1,254,769,778"
         ],
         [
             "224",
-            "chi phí xây dựng cơ bản dở dang",
+            "2.4. Chi phí xây dựng cơ bản dở dang",
             "",
             "",
             "",
@@ -418,7 +418,7 @@
         ],
         [
             "230",
-            "lợi thế thương mại",
+            "3. Lợi thế thương mại",
             "",
             "",
             "",
@@ -426,7 +426,7 @@
         ],
         [
             "240",
-            "bất động sản đầu tư",
+            "4. Bất động sản đầu tư",
             "",
             "",
             "",
@@ -434,7 +434,7 @@
         ],
         [
             "241",
-            "nguyên giá",
+            "- Nguyên giá",
             "",
             "",
             "",
@@ -442,7 +442,7 @@
         ],
         [
             "242",
-            "giá trị hao mòn luỹ kế",
+            "- Giá trị hao mòn luỹ kế",
             "",
             "",
             "",
@@ -450,7 +450,7 @@
         ],
         [
             "250",
-            "các khoản đầu tư tài chính dài hạn",
+            "5. Các khoản đầu tư tài chính dài hạn",
             "",
             "",
             "",
@@ -458,7 +458,7 @@
         ],
         [
             "251",
-            "đầu tư vào công ty con",
+            "1. Đầu tư vào công ty con",
             "",
             "",
             "",
@@ -466,7 +466,7 @@
         ],
         [
             "252",
-            "đầu tư vào công ty liên kết liên doanh",
+            "2. Đầu tư vào công ty liên kết, liên doanh",
             "",
             "",
             "",
@@ -474,7 +474,7 @@
         ],
         [
             "253",
-            "đầu tư chứng khoán dài hạn",
+            "3. Đầu tư chứng khoán dài hạn",
             "",
             "",
             "",
@@ -482,7 +482,7 @@
         ],
         [
             "254",
-            "chứng khoán sẵn sàng để bán",
+            "- Chứng khoán sẵn sàng để bán",
             "",
             "",
             "",
@@ -490,7 +490,7 @@
         ],
         [
             "255",
-            "chứng khoán nắm giữ đến ngày đáo hạn",
+            "- Chứng khoán nắm giữ đến ngày đáo hạn",
             "",
             "",
             "",
@@ -498,7 +498,7 @@
         ],
         [
             "258",
-            "đầu tư dài hạn khác",
+            "4. Đầu tư dài hạn khác",
             "",
             "",
             "",
@@ -506,7 +506,7 @@
         ],
         [
             "259",
-            "dự phòng giảm giá đầu tư dài hạn",
+            "5. Dự phòng giảm giá đầu tư dài hạn",
             "",
             "",
             "",
@@ -514,23 +514,23 @@
         ],
         [
             "260",
-            "tài sản dài hạn khác",
+            "6. Tài sản dài hạn khác",
             "",
             "",
             "",
-            "633 821 882"
+            "633,821,882"
         ],
         [
             "261",
-            "chi phí trả trước dài hạn",
+            "1. Chi phí trả trước dài hạn",
             "",
             "",
             "",
-            "42 759 311"
+            "42,759,311"
         ],
         [
             "262",
-            "tài sản thuế thu nhập hoãn lại",
+            "2. Tài sản thuế thu nhập hoãn lại",
             "",
             "",
             "",
@@ -538,47 +538,47 @@
         ],
         [
             "263",
-            "tiền nộp quỹ hỗ trợ thanh toán",
+            "3. Tiền nộp quỹ hỗ trợ thanh toán",
             "",
             "",
             "",
-            "316 187 571"
+            "316,187,571"
         ],
         [
             "268",
-            "tài sản dài hạn khác",
+            "4. Tài sản dài hạn khác",
             "",
             "",
             "",
-            "274 875 000"
+            "274,875,000"
         ],
         [
             "001",
-            "tổng cộng tài sản",
+            "Tổng cộng tài sản",
             "",
             "",
             "",
-            "172 333 412 573"
+            "172,333,412,573"
         ],
         [
             "300",
-            "i nợ phải trả",
+            "I - NỢ PHẢI TRẢ",
             "",
             "",
             "",
-            "1 172 610 806"
+            "1,172,610,806"
         ],
         [
             "310",
-            "nợ ngắn hạn",
+            "1. Nợ ngắn hạn",
             "",
             "",
             "",
-            "1 125 414 972"
+            "1,125,414,972"
         ],
         [
             "311",
-            "vay và nợ ngắn hạn",
+            "1.1. Vay và nợ ngắn hạn",
             "",
             "",
             "",
@@ -586,15 +586,15 @@
         ],
         [
             "312",
-            "phải trả người bán",
+            "1.2. Phải trả người bán",
             "",
             "",
             "",
-            "67 384 400"
+            "67,384,400"
         ],
         [
             "313",
-            "người mua trả tiền trước",
+            "1.3. Người mua trả tiền trước",
             "",
             "",
             "",
@@ -602,15 +602,15 @@
         ],
         [
             "314",
-            "thuế và các khoản phải nộp nhà nước",
+            "1.4.Thuế và các khoản phải nộp Nhà nước",
             "",
             "",
             "",
-            "195 911 873"
+            "195,911,873"
         ],
         [
             "315",
-            "phải trả người lao động",
+            "1.5. Phải trả người lao động",
             "",
             "",
             "",
@@ -618,7 +618,7 @@
         ],
         [
             "316",
-            "chi phí phải trả",
+            "1.6. Chi phí phải trả",
             "",
             "",
             "",
@@ -626,7 +626,7 @@
         ],
         [
             "317",
-            "phải trả nội bộ",
+            "1.7. Phải trả nội bộ",
             "",
             "",
             "",
@@ -634,23 +634,23 @@
         ],
         [
             "324",
-            "phải trả hoạt động giao dịch chứng khoán",
+            "1.8. Phải trả hoạt động giao dịch chứng khoán",
             "",
             "",
             "",
-            "840 665 953"
+            "840,665,953"
         ],
         [
             "325",
-            "phải trả hộ cổ tức gốc và lãi trái phiếu",
+            "1.9. Phải trả hộ cổ tức, gốc và lãi trái phiếu",
             "",
             "",
             "",
-            "19 875"
+            "19,875"
         ],
         [
             "326",
-            "phải trả tổ chức phát hành chứng khoán",
+            "1.10. Phải trả tổ chức phát hành chứng khoán",
             "",
             "",
             "",
@@ -658,7 +658,7 @@
         ],
         [
             "323",
-            "quỹ khen thưởng phúc lợi",
+            "1.11. Quỹ khen thưởng phúc lợi",
             "",
             "",
             "",
@@ -666,15 +666,15 @@
         ],
         [
             "319",
-            "các khoản phải trả phải nộp ngắn hạn khác",
+            "1.12. Các khoản phải trả, phải nộp ngắn hạn khác",
             "",
             "",
             "",
-            "21 432 871"
+            "21,432,871"
         ],
         [
             "320",
-            "dự phòng phải trả ngắn hạn",
+            "1.13. Dự phòng phải trả ngắn hạn",
             "",
             "",
             "",
@@ -682,7 +682,7 @@
         ],
         [
             "327",
-            "doanh thu chưa thực hiện",
+            "1.11. Doanh thu chưa thực hiện",
             "",
             "",
             "",
@@ -690,15 +690,15 @@
         ],
         [
             "330",
-            "nợ dài hạn",
+            "2. Nợ dài hạn",
             "",
             "",
             "",
-            "47 195 834"
+            "47,195,834"
         ],
         [
             "331",
-            "phải trả dài hạn người bán",
+            "2.1. Phải trả dài hạn người bán",
             "",
             "",
             "",
@@ -706,7 +706,7 @@
         ],
         [
             "332",
-            "phải trả dài hạn nội bộ",
+            "2.2. Phải trả dài hạn nội bộ",
             "",
             "",
             "",
@@ -714,7 +714,7 @@
         ],
         [
             "333",
-            "phải trả dài hạn khác",
+            "2.3. Phải trả dài hạn khác",
             "",
             "",
             "",
@@ -722,7 +722,7 @@
         ],
         [
             "334",
-            "vay và nợ dài hạn",
+            "2.4. Vay và nợ dài hạn",
             "",
             "",
             "",
@@ -730,7 +730,7 @@
         ],
         [
             "340",
-            "vốn nhận ủy thác đầu tư dài hạn",
+            "2.5. Vốn nhận ủy thác đầu tư dài hạn",
             "",
             "",
             "",
@@ -738,7 +738,7 @@
         ],
         [
             "335",
-            "thuế thu nhập hoãn lại phải trả",
+            "2.6. Thuế thu nhập hoãn lại phải trả",
             "",
             "",
             "",
@@ -746,15 +746,15 @@
         ],
         [
             "336",
-            "dự phòng trợ cấp mất việc làm",
+            "2.7. Dự phòng trợ cấp mất việc làm",
             "",
             "",
             "",
-            "47 195 834"
+            "47,195,834"
         ],
         [
             "337",
-            "dự phòng phải trả dài hạn",
+            "2.8. Dự phòng phải trả dài hạn",
             "",
             "",
             "",
@@ -762,7 +762,7 @@
         ],
         [
             "338",
-            "dự phòng bồi thường thiệt hại cho nhà đầu tư",
+            "2.9. Dự phòng bồi thường thiệt hại cho nhà đầu tư",
             "",
             "",
             "",
@@ -770,7 +770,7 @@
         ],
         [
             "341",
-            "doanh thu chưa thực hiện",
+            "2.10. Doanh thu chưa thực hiện",
             "",
             "",
             "",
@@ -778,31 +778,31 @@
         ],
         [
             "400",
-            "ii vốn chủ sở hữu",
+            "II - VỐN CHỦ SỞ HỮU",
             "",
             "",
             "",
-            "171 160 801 767"
+            "171,160,801,767"
         ],
         [
             "410",
-            "vốn chủ sở hữu",
+            "1. Vốn chủ sở hữu",
             "",
             "",
             "",
-            "171 160 801 767"
+            "171,160,801,767"
         ],
         [
             "411",
-            "vốn đầu tư của chủ sở hữu",
+            "1.1. Vốn đầu tư của chủ sở hữu",
             "",
             "",
             "",
-            "135 000 000 000"
+            "135,000,000,000"
         ],
         [
             "412",
-            "thặng dư vốn cổ phần",
+            "1.2. Thặng dư vốn cổ phần",
             "",
             "",
             "",
@@ -810,7 +810,7 @@
         ],
         [
             "413",
-            "vốn khác của chủ sở hữu",
+            "1.3. Vốn khác của chủ sở hữu",
             "",
             "",
             "",
@@ -818,7 +818,7 @@
         ],
         [
             "414",
-            "cổ phiếu quỹ",
+            "1.4. Cổ phiếu quỹ (*)",
             "",
             "",
             "",
@@ -826,7 +826,7 @@
         ],
         [
             "415",
-            "chênh lệch đánh giá lại tài sản",
+            "1.5. Chênh lệch đánh giá lại tài sản",
             "",
             "",
             "",
@@ -834,7 +834,7 @@
         ],
         [
             "416",
-            "chênh lệch tỷ giá hối đoái",
+            "1.6. Chênh lệch tỷ giá hối đoái",
             "",
             "",
             "",
@@ -842,7 +842,7 @@
         ],
         [
             "417",
-            "quỹ đầu tư phát triển",
+            "1.7. Quỹ đầu tư phát triển",
             "",
             "",
             "",
@@ -850,31 +850,31 @@
         ],
         [
             "418",
-            "quỹ dự phòng tài chính",
+            "1.8. Quỹ dự phòng tài chính",
             "",
             "",
             "",
-            "1 808 058 089"
+            "1,808,058,089"
         ],
         [
             "419",
-            "quỹ khác thuộc vốn chủ sở hữu",
+            "1.9. Quỹ khác thuộc vốn chủ sở hữu",
             "",
             "",
             "",
-            "1 808 040 089"
+            "1,808,040,089"
         ],
         [
             "420",
-            "lợi nhuận sau thuế chưa phân phối",
+            "1.10. Lợi nhuận sau thuế chưa phân phối",
             "",
             "",
             "",
-            "32 544 703 589"
+            "32,544,703,589"
         ],
         [
             "421",
-            "nguồn vốn đầu tư xdcb",
+            "1.11. Nguồn vốn đầu tư XDCB",
             "",
             "",
             "",
@@ -882,7 +882,7 @@
         ],
         [
             "422",
-            "quỹ hỗ trợ sắp xếp doanh nghiệp",
+            "1.12. Quỹ hỗ trợ sắp xếp doanh nghiệp",
             "",
             "",
             "",
@@ -890,7 +890,7 @@
         ],
         [
             "423",
-            "quỹ dự trữ vốn điều lệ",
+            "1.13. Quỹ dự trữ vốn điều lệ",
             "",
             "",
             "",
@@ -898,7 +898,7 @@
         ],
         [
             "430",
-            "nguồn kinh phí và các quỹ khác",
+            "2. Nguồn kinh phí và các quỹ khác",
             "",
             "",
             "",
@@ -906,7 +906,7 @@
         ],
         [
             "431",
-            "quỹ khen thưởng phúc lợi",
+            "2.1. Quỹ khen thưởng phúc lợi",
             "",
             "",
             "",
@@ -914,7 +914,7 @@
         ],
         [
             "432",
-            "nguồn kinh phí",
+            "2.1. Nguồn kinh phí",
             "",
             "",
             "",
@@ -922,7 +922,7 @@
         ],
         [
             "433",
-            "nguồn kinh phí đã hình thành tscđ",
+            "2.2. Nguồn kinh phí đã hình thành TSCĐ",
             "",
             "",
             "",
@@ -930,7 +930,7 @@
         ],
         [
             "500",
-            "iii lợi ích của cổ đông thiểu số",
+            "III - LỢI ÍCH CỦA CỔ ĐÔNG THIỂU SỐ",
             "",
             "",
             "",
@@ -938,11 +938,11 @@
         ],
         [
             "002",
-            "tổng cộng nguồn vốn",
+            "Tổng cộng nguồn vốn",
             "",
             "",
             "",
-            "172 333 412 573"
+            "172,333,412,573"
         ]
     ],
     "periods": [
