@@ -23,6 +23,8 @@ from fad_crawl.spiders.models.viewprofile import name as viewprofile_name
 
 name_regular = "corporateAZ"
 name_express = "corporateAZExpress"
+fin_insur_tickers_key = "finance_and_insurance_tickers_total"
+all_tickers_key = "all_tickers_total"
 
 tickers_redis_keys = [
                       f'{financeInfo_name}:tickers',

@@ -19,18 +19,20 @@ from twisted.internet import reactor
 
 import fad_crawl.spiders.models.constants as constants
 import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.models.constants import REDIS_HOST
-from fad_crawl.spiders.models.corporateaz import (bizType_ind_set_key,
+from fad_crawl.spiders.models.corporateaz import (all_tickers_key,
+                                                  bizType_ind_set_key,
                                                   business_type,
                                                   closed_redis_key)
 from fad_crawl.spiders.models.corporateaz import data as az
-from fad_crawl.spiders.models.corporateaz import (industry_list, name_express,
+from fad_crawl.spiders.models.corporateaz import (fin_insur_tickers_key,
+                                                  industry_list, name_express,
                                                   name_regular,
                                                   settings_express,
                                                   settings_regular,
                                                   tickers_redis_keys)
 from fad_crawl.spiders.pdfDocs import pdfDocsHandler
-from fad_crawl.helpers.fileDownloader import save_jsonfile
 
 TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
 TEST_NUM_PAGES = 2
@@ -53,6 +55,8 @@ class corporateazExpressHandler(scrapy.Spider):
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()
+        self.fin_insur_tickers_key = fin_insur_tickers_key
+        self.all_tickers_key = all_tickers_key
 
     def start_requests(self):
         """Get business types first
@@ -158,31 +162,40 @@ class corporateazExpressHandler(scrapy.Spider):
 
                     # Total pages need to be calculated or delivered from previous request's meta
                     # If current page < total pages, send next request
-                    total_pages = res[0]['TotalRecord'] // int(
+                    total_records = res[0]['TotalRecord']
+                    total_pages =  total_records // int(
                         constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
-                    self.logger.info(f'Found {total_pages} pages for {bizType_title};{ind_name}')
+                    self.logger.info(f'Found {total_pages} page(s) for {bizType_title};{ind_name}')
+                    self.logger.info(f'That equals to {total_records} ticker(s) for {bizType_title};{ind_name}')
+                    
+                    ### Count the total number of records for `Finance and Insurance` industry
+                    if ind_name == "Finance and Insurance":
+                        self.r.incrby(self.fin_insur_tickers_key, amount=total_records)
 
-                    if page < total_pages:
-                        next_page = str(page + 1)
-                        az["meta"]["page"] = next_page
-                        az["meta"]["TotalPages"] = str(total_pages)
-                        az["meta"]["bizType_id"] = bizType_id
-                        az["meta"]["bizType_title"] = bizType_title
-                        az["meta"]["ind_id"] = ind_id
-                        az["meta"]["ind_name"] = ind_name
-                        az["formdata"]["page"] = next_page
-                        az["formdata"]["businessTypeID"] = bizType_id
-                        az["formdata"]["industryID"] = ind_id
-                        az["formdata"]["orderBy"] = "TotalShare"
-                        az["formdata"]["orderDir"] = "DESC"
-                        req_next = FormRequest(url=az["url"],
-                                      formdata=az["formdata"],
-                                      headers=az["headers"],
-                                      cookies=az["cookies"],
-                                      meta=az["meta"],
-                                      callback=self.parse_az,
-                                      errback=self.handle_error)
-                        yield req_next
+                    ### Count the total number of records
+                    self.r.incrby(self.all_tickers_key, amount=total_records)
+
+                    # if page < total_pages:
+                    #     next_page = str(page + 1)
+                    #     az["meta"]["page"] = next_page
+                    #     az["meta"]["TotalPages"] = str(total_pages)
+                    #     az["meta"]["bizType_id"] = bizType_id
+                    #     az["meta"]["bizType_title"] = bizType_title
+                    #     az["meta"]["ind_id"] = ind_id
+                    #     az["meta"]["ind_name"] = ind_name
+                    #     az["formdata"]["page"] = next_page
+                    #     az["formdata"]["businessTypeID"] = bizType_id
+                    #     az["formdata"]["industryID"] = ind_id
+                    #     az["formdata"]["orderBy"] = "TotalShare"
+                    #     az["formdata"]["orderDir"] = "DESC"
+                    #     req_next = FormRequest(url=az["url"],
+                    #                   formdata=az["formdata"],
+                    #                   headers=az["headers"],
+                    #                   cookies=az["cookies"],
+                    #                   meta=az["meta"],
+                    #                   callback=self.parse_az,
+                    #                   errback=self.handle_error)
+                    #     yield req_next
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
         else:
@@ -208,6 +221,11 @@ class corporateazExpressHandler(scrapy.Spider):
     def close_status(self):
         """Clear running status file after closing
         """
+        fin_insur_count = self.r.get(self.fin_insur_tickers_key)
+        all_count = self.r.get(self.all_tickers_key)
+        self.logger.info(f'There are {fin_insur_count} tickers in the Finance and Insurance industry')
+        self.logger.info(f'There are {all_count} in all')
+        
         if os.path.exists(self.statusfilepath):
             os.remove(self.statusfilepath)
             self.logger.info(f'Deleted status file at {self.statusfilepath}')
