@@ -49,6 +49,7 @@ class corporateazExpressHandler(scrapy.Spider):
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()
@@ -143,6 +144,7 @@ class corporateazExpressHandler(scrapy.Spider):
                 self.logger.info(
                     f'Found these tickers on page {page}: {str(tickers_list)}')
 
+                ### If the tickers list is not empty:
                 ### Add the bizType and ind_name to available bizType_ind combinations set
                 ### Set biz id and ind id for each ticker, which is a key in Redis
                 ### Push tickers into financeInfo and other spiders
@@ -153,6 +155,34 @@ class corporateazExpressHandler(scrapy.Spider):
                         self.r.lpush(tickers_redis_keys[0], f'{t};1')
                         for k in tickers_redis_keys[1:]:
                             self.r.lpush(k, t)
+
+                    # Total pages need to be calculated or delivered from previous request's meta
+                    # If current page < total pages, send next request
+                    total_pages = res[0]['TotalRecord'] // int(
+                        constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
+                    self.logger.info(f'Found {total_pages} pages for {bizType_title};{ind_name}')
+
+                    if page < total_pages:
+                        next_page = str(page + 1)
+                        az["meta"]["page"] = next_page
+                        az["meta"]["TotalPages"] = str(total_pages)
+                        az["meta"]["bizType_id"] = bizType_id
+                        az["meta"]["bizType_title"] = bizType_title
+                        az["meta"]["ind_id"] = ind_id
+                        az["meta"]["ind_name"] = ind_name
+                        az["formdata"]["page"] = next_page
+                        az["formdata"]["businessTypeID"] = bizType_id
+                        az["formdata"]["industryID"] = ind_id
+                        az["formdata"]["orderBy"] = "TotalShare"
+                        az["formdata"]["orderDir"] = "DESC"
+                        req_next = FormRequest(url=az["url"],
+                                      formdata=az["formdata"],
+                                      headers=az["headers"],
+                                      cookies=az["cookies"],
+                                      meta=az["meta"],
+                                      callback=self.parse_az,
+                                      errback=self.handle_error)
+                        yield req_next
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
         else:

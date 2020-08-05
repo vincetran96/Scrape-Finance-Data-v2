@@ -128,7 +128,7 @@ class counterPartsHandler(fadRedisSpider):
                     self.r.lpush(f'{self.name}:tickers', f'{ticker};{pageSize}')
                     self.logger.info(f'CRAWLING {pageSize} COUNTERPARTS OF {ticker}')
                 else:
-                    # # Saving local data files
+                    ### Saving local data files
                     # save_jsonfile(
                     #     resp_json, filename=f'localData/{self.name}/{ticker}_{self.name}.json')
                     

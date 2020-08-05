@@ -43,6 +43,7 @@ class corporateazHandler(scrapy.Spider):
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()
