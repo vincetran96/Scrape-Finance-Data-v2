@@ -1,0 +1,1384 @@
+{
+    "CashFlow Indirect": [
+        [
+            "cash flows from operating activities",
+            "cash flows from operating activities",
+            "lưu chuyển tiền từ hoạt động kinh doanh",
+            "lưu chuyển tiền từ hoạt động kinh doanh"
+        ],
+        [
+            "profit before tax",
+            "operating profit before changes in working capital",
+            "lợi nhuận trước thuế",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "adjustments for",
+            "operating profit before changes in working capital",
+            "điều chỉnh cho các khoản",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "depreciation of fixed assets and properties investment",
+            "operating profit before changes in working capital",
+            "khấu hao tscđ và bđsđt",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "reversal of provisions provisions",
+            "operating profit before changes in working capital",
+            "các khoản dự phòng",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "foreign exchange gain loss from revaluation of monetary items denominated in foreign currencies",
+            "operating profit before changes in working capital",
+            "lãi lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "loss profit from investment activities",
+            "operating profit before changes in working capital",
+            "lãi lỗ từ hoạt động đầu tư",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "interest expense",
+            "operating profit before changes in working capital",
+            "chi phí lãi vay",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "loss profits from disposal of fixed asset",
+            "operating profit before changes in working capital",
+            "lãi lỗ từ thanh lý tscđ",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "interest income and dividends",
+            "operating profit before changes in working capital",
+            "thu nhập lãi vay và cổ tức",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "allocation of goodwill",
+            "operating profit before changes in working capital",
+            "phân bổ lợi thế thương mại",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "adjustments for",
+            "operating profit before changes in working capital",
+            "điều chỉnh cho các khoản khác",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "operating profit before changes in working capital",
+            "net cash flows from operating activities",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "increase decrease in receivables",
+            "net cash flows from operating activities",
+            "tăng giảm các khoản phải thu",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "increase decrease in inventories",
+            "net cash flows from operating activities",
+            "tăng giảm hàng tồn kho",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "increase decrease in payables other than interest corporate income tax",
+            "net cash flows from operating activities",
+            "tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập phải nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "increase decrease in prepaid expenses",
+            "net cash flows from operating activities",
+            "tăng giảm chi phí trả trước",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "changes in available for sale securities",
+            "net cash flows from operating activities",
+            "tăng giảm chứng khoán kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "interest paid",
+            "net cash flows from operating activities",
+            "tiền lãi vay đã trả",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "corporate income tax paid",
+            "net cash flows from operating activities",
+            "thuế thu nhập doanh nghiệp đã nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "other receipts from operating activities",
+            "net cash flows from operating activities",
+            "tiền thu khác từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "other payments for operating activities",
+            "net cash flows from operating activities",
+            "tiền chi khác cho hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "net cash flows from operating activities",
+            "net cash flows during the period",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "cash flows from investing activities",
+            "cash flows from investing activities",
+            "lưu chuyển tiền từ hoạt động đầu tư",
+            "lưu chuyển tiền từ hoạt động đầu tư"
+        ],
+        [
+            "payment for fixed assets constructions and other long term assets",
+            "net cash flows from investing activities",
+            "tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "receipts from disposal of fixed assets and other long term assets",
+            "net cash flows from investing activities",
+            "tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "loans purchases of other entities debt instruments",
+            "net cash flows from investing activities",
+            "tiền chi cho vay mua các công cụ nợ của đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "receipts from loan repayments sale of other entities debt instruments",
+            "net cash flows from investing activities",
+            "tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "payments for investment in other entities",
+            "net cash flows from investing activities",
+            "tiền chi đầu tư góp vốn vào đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "collections on investment in other entities",
+            "net cash flows from investing activities",
+            "tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "dividends interest and profit received",
+            "net cash flows from investing activities",
+            "tiền thu lãi cho vay cổ tức và lợi nhuận được chia",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "increase decrease in term deposit",
+            "net cash flows from investing activities",
+            "tăng giảm tiền gửi ngân hàng có kỳ hạn",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "purchases of minority shares of subsidiaries",
+            "net cash flows from investing activities",
+            "mua lại khoản góp vốn của cổ đông thiểu số trong công ty con",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "other receipts from investing activities",
+            "net cash flows from investing activities",
+            "tiền thu khác từ hoạt động đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "other payments for investing activities",
+            "net cash flows from investing activities",
+            "tiền chi khác cho hoạt động đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "net cash flows from investing activities",
+            "net cash flows during the period",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "cash flows from financing activities",
+            "cash flows from financing activities",
+            "lưu chuyển tiền từ hoạt động tài chính",
+            "lưu chuyển tiền từ hoạt động tài chính"
+        ],
+        [
+            "receipts from equity issue and owner s capital contribution",
+            "net cash flows from financing activities",
+            "tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "payment for share repurchases",
+            "net cash flows from financing activities",
+            "tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu của doanh nghiệp đã phát hành",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "proceeds from borrowings",
+            "net cash flows from financing activities",
+            "tiền thu từ đi vay",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "principal repayments",
+            "net cash flows from financing activities",
+            "tiền trả nợ gốc vay",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "repayment of financial leases",
+            "net cash flows from financing activities",
+            "tiền trả nợ gốc thuê tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "dividends paid profits distributed to owners",
+            "net cash flows from financing activities",
+            "cổ tức lợi nhuận đã trả cho chủ sở hữu",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "other receipts from financing activities",
+            "net cash flows from financing activities",
+            "tiền thu khác từ hoạt động tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "other payments for financing activities",
+            "net cash flows from financing activities",
+            "tiền chi khác cho hoạt động tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "net cash flows from financing activities",
+            "net cash flows during the period",
+            "lưu chuyển tiền thuần từ hoạt động tài chính",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "net cash flows during the period",
+            "cash and cash equivalents at end of the period",
+            "lưu chuyển tiền thuần trong kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "cash and cash equivalents at beginning of the period",
+            "cash and cash equivalents at end of the period",
+            "tiền và tương đương tiền đầu kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "exchange difference due to re valuation of ending balances",
+            "cash and cash equivalents at end of the period",
+            "ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "cash and cash equivalents at end of the period",
+            "cash and cash equivalents at end of the period",
+            "tiền và tương đương tiền cuối kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "cash flow from securities trading activities",
+            "cash flow from securities trading activities",
+            "lưu chuyển tiền từ hoạt động kinh doanh chứng khoán",
+            "lưu chuyển tiền từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "depreciation and amortization",
+            "operating profit before changes in working capital",
+            "khấu hao tài sản cố định",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "reversal of provisions provisions",
+            "operating profit before changes in working capital",
+            "các khoản lập dự phòng",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "unrealized foreign exchange gains losses",
+            "operating profit before changes in working capital",
+            "lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "acrrued expenses prepayments expenses",
+            "add non cash expenses",
+            "chi phí phải trả chi phí trả trước",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "loss profits from other investing activities",
+            "operating profit before changes in working capital",
+            "lãi lỗ từ hoạt động đầu tư đầu tư công ty con liên doanh liên kết",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "loss profits from disposal of fixed asset",
+            "operating profit before changes in working capital",
+            "lãi lỗ do thanh lý tscđ",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "accrued interest income",
+            "add non cash expenses",
+            "dự thu tiền lãi",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "add non cash expenses",
+            "operating profit before changes in working capital",
+            "tăng các chi phí phi tiền tệ",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "loss from revaluation losses of fvtpl financial assets",
+            "add non cash expenses",
+            "lỗ đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "loss from revaluation of fvtpl financial debt",
+            "add non cash expenses",
+            "lỗ đánh giá giá trị các công nợ tài chính ghi nhận thông qua kết quả kinh doanh",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "",
+            "add non cash expenses",
+            "",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "losse from revaluetion",
+            "add non cash expenses",
+            "lỗ đánh giá giá trị các công cụ tài chính phái sinh",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "loss from provision available for sale financial assets",
+            "add non cash expenses",
+            "lỗ từ thanh lý các tài sản tài chính sẵn sàng để bán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "value decline of available for sale financial assets",
+            "add non cash expenses",
+            "suy giảm giá trị của các tài sản tài chính sẵn sàng để bán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "loss from revaluation of financial derivative tools for hedging purposes",
+            "add non cash expenses",
+            "lỗ đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa rủi ro",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "losses from disposals of fixed assets",
+            "add non cash expenses",
+            "lỗ từ thanh lý tài sản cố định",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "value decline of fixed assets",
+            "add non cash expenses",
+            "suy giảm giá trị của các tài sản cố định",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "loss from disposal investments in subsidiaries associates joint ventures",
+            "add non cash expenses",
+            "lỗ từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "less non cash income",
+            "operating profit before changes in working capital",
+            "giảm các doanh thu phi tiền tệ",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "gains from revaluation gains of fvtpl financial assets",
+            "less non cash income",
+            "lãi đánh giá giá trị các tài sản tài chính ghi nhận thông qua kết quả kinh doanh",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from revaluation gains of fvtpl financial debt",
+            "less non cash income",
+            "lãi đánh giá giá trị các công nợ tài chính thông qua kết quả kinh doanh",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from disposals of avalable for sale financial assets",
+            "less non cash income",
+            "lãi từ thanh lý các tài sản tài chính sẵn sàng để bán",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "reversal of value decline of available for sale financial assets",
+            "less non cash income",
+            "hoàn nhập suy giảm giá trị của các tài sản tài chính sẵn sàng để bán",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from revaluation of financial derivative tools for hedging purposes",
+            "less non cash income",
+            "lãi đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from disaposals loans and receivables",
+            "less non cash income",
+            "lãi từ thanh lý các khoản cho vay và phải thu",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "reversal of allowances",
+            "less non cash income",
+            "hoàn nhập chi phí dự phòng",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from disposal from fixed assets investment property",
+            "less non cash income",
+            "lãi từ thanh lý tài sản cố định bđsđt",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "gains from disposal investments in subsidiaries associates joint ventures",
+            "less non cash income",
+            "lãi từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh liên kết",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "",
+            "less non cash income",
+            "",
+            "giảm các doanh thu phi tiền tệ"
+        ],
+        [
+            "changes of assets and liabilities",
+            "operating profit before changes in working capital",
+            "thay đổi tài sản và nợ phải trả hoạt động",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "increase decrease in fvtpl financial assets",
+            "add non cash expenses",
+            "tăng giảm tài sản tài chính ghi nhận thông qua lãi lỗ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in held to maturity investments",
+            "add non cash expenses",
+            "tăng giảm các khoản đầu tư giữ đến ngày đáo hạn",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in loan",
+            "",
+            "tăng giảm các khoản cho vay khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "increase decrease in afs financial assets",
+            "add non cash expenses",
+            "tăng giảm tài sản tài chính sẵn sàng để bán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in receivables",
+            "net cash flows from securities trading activities",
+            "tăng giảm các khoản phải thu",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "increase decrease in borrowings and finance lease liabilities",
+            "add non cash expenses",
+            "tăng giảm vay và nợ thuê tài sản tài chính",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in finance assets borrowings",
+            "add non cash expenses",
+            "tăng giảm vay tài sản tài chính",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in convertible bond debt structure",
+            "add non cash expenses",
+            "tăng giảm trái phiếu chuyển đổi cấu phần nợ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in issued bonds",
+            "add non cash expenses",
+            "tăng giảm trái phiếu phát hành",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease borrowings to settlement assistance fund",
+            "add non cash expenses",
+            "tăng giảm vay quỹ hỗ trợ thanh toán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "operating profit before changes in working capital",
+            "net cash flows from securities trading activities",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "increase decrease in receiables sale of financial assets",
+            "add non cash expenses",
+            "tăng giảm phải thu bán các tài sản tài chính",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in receiables interest of financial assets",
+            "add non cash expenses",
+            "tăng giảm phải thu tiền lãi các tài sản tài chính",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in service related receivables",
+            "add non cash expenses",
+            "tăng giảm các khoản phải thu các dịch vụ ctck cung cấp",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in trading error receivables",
+            "add non cash expenses",
+            "tăng giảm các khoản phải thu về lỗi giao dịch chứng khoán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increases decreases in other receivables",
+            "add non cash expenses",
+            "tăng giảm các khoản phải thu khác",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in other assets",
+            "add non cash expenses",
+            "tăng giảm các tài sản khác",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in payables other than interest corporate income tax",
+            "net cash flows from securities trading activities",
+            "tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập doanh nghiệp phải nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "increase decrease in prepaid expenses",
+            "net cash flows from securities trading activities",
+            "tăng giảm chi phí trả trước",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "corporate income tax paid",
+            "net cash flows from securities trading activities",
+            "thuế thu nhập doanh nghiệp đã nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "interest paid",
+            "net cash flows from securities trading activities",
+            "tiền lãi vay đã trả",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "increases decreaese in trade payables",
+            "add non cash expenses",
+            "tăng giảm phải trả cho người bán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increases decreaese in payable securities issuers",
+            "add non cash expenses",
+            "tăng giảm phải trả tổ chức phát hành chứng khoán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increases decreases in employee welfare payables",
+            "increases decreases in employee welfare payables",
+            "tăng giảm các khoản trích nộp phúc lợi nhân viên",
+            "tăng giảm các khoản trích nộp phúc lợi nhân viên"
+        ],
+        [
+            "increases decreases in tax and other payables to the state budget",
+            "add non cash expenses",
+            "tăng giảm thuế và các khoản phải nộp nhà nước",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increases dcreases in payable to employees",
+            "increases decreases in employee welfare payables",
+            "tăng giảm phải trả người lao động",
+            "tăng giảm các khoản trích nộp phúc lợi nhân viên"
+        ],
+        [
+            "",
+            "net cash flows from securities trading activities",
+            "",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "increases dcreases in other payables",
+            "add non cash expenses",
+            "tăng giảm phải trả phải nộp khác",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increases dcreases corporate income tax paid",
+            "add non cash expenses",
+            "tăng giảm thuế tndn ctck đã nộp",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "increase decrease in inventories",
+            "net cash flows from securities trading activities",
+            "tăng giảm hàng tồn kho tăng giảm chứng khoán tự doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "other receipts from operating activities",
+            "net cash flows from securities trading activities",
+            "tiền thu khác từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "other payments for operating activities",
+            "net cash flows from securities trading activities",
+            "tiền chi khác cho hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán"
+        ],
+        [
+            "net cash flows from securities trading activities",
+            "net cash flows during the period",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh chứng khoán",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "cash flow from investing activities",
+            "cash flow from investing activities",
+            "lưu chuyển tiền từ hoạt động đầu tư",
+            "lưu chuyển tiền từ hoạt động đầu tư"
+        ],
+        [
+            "proceeds from disposals of fixed assets and other long term assets",
+            "net cash flows from investing activities",
+            "tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "payments for investment in other entities",
+            "net cash flows from investing activities",
+            "tiền chi đầu tư vốn vào công ty con công ty liên doanh liên kết và đầu tư khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "collections on investment in other entities",
+            "net cash flows from investing activities",
+            "tiền thu thanh lý các khoản đầu tư vào công ty con công ty liên doanh liên kết và đầu tư khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "dividends interest and profit received",
+            "net cash flows from investing activities",
+            "tiền thu về cổ tức và lợi nhuận được chia",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "other payments for investing activities",
+            "net cash flows from investing activities",
+            "tiền chi khác từ hoạt động đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "cash flow from financing activities",
+            "cash flow from financing activities",
+            "lưu chuyển tiền từ hoạt động tài chính",
+            "lưu chuyển tiền từ hoạt động tài chính"
+        ],
+        [
+            "payment for share repurchases",
+            "net cash flows from financing activities",
+            "tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu quỹ",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "short term and long term borrowings",
+            "net cash flows from financing activities",
+            "tiền vay gốc",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "borrowings to settlement assistance fund",
+            "add non cash expenses",
+            "tiền vay quỹ hỗ trợ thanh toán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "other borrowings",
+            "add non cash expenses",
+            "tiền vay khác",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "principal repayments",
+            "net cash flows from financing activities",
+            "tiền chi trả nợ gốc vay",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "principal repayments to settlement assistance fund",
+            "add non cash expenses",
+            "tiền chi trả gốc vay quỹ hỗ trợ thanh toán",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "principal repayments to financial assets",
+            "add non cash expenses",
+            "tiền chi trả nợ gốc vay tài sản tài chính",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "other principal repayments",
+            "add non cash expenses",
+            "tiền chi trả gốc nợ vay khác",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "payments to settle finance leases",
+            "net cash flows from financing activities",
+            "tiền chi trả nợ thuê tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "other payments for financing activities",
+            "net cash flows from financing activities",
+            "tiền chi khác từ hoạt động tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "cash and cash equivalents at begingning of the period",
+            "cash and cash equivalents at end of the period",
+            "tiền và tương đương tiền đầu kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "cash at bank",
+            "add non cash expenses",
+            "tiền gửi ngân hàng đầu kỳ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "cash at bank for securities company activities",
+            "add non cash expenses",
+            "tiền gửi ngân hàng cho hoạt động ctck",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "cash equivalents",
+            "add non cash expenses",
+            "các khoản tương đương tiền",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "exchange difference due to re valuation of ending balances",
+            "add non cash expenses",
+            "ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ đầu kỳ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "cash at bank",
+            "add non cash expenses",
+            "tiền gửi ngân hàng cuối kỳ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "exchange difference due to re valuation of ending balances",
+            "add non cash expenses",
+            "ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ cuối kỳ",
+            "tăng các chi phí phi tiền tệ"
+        ],
+        [
+            "",
+            "",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền hoạt động môi giới ủy thác của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền thu bán chứng khoán môi giới cho khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền chi mua chứng khoán môi giới cho khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền thu bán chứng khoán ủy thác của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền chi bán chứng khoán ủy thác của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "thu tiền từ tài khoản vãng lai của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "chi tiền từ tài khoản vãng lai của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "thu vay quỹ hỗ trợ thanh toán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "chi trả vay quỹ hỗ trợ thanh toán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "nhận tiền gửi của nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "chi trả phí lưu ký chứng khoán của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "thu lỗi giao dịch chứng khoán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "chi lỗi giao dịch chứng khoán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền thu của tổ chức phát hành chứng khoán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền chi trả tổ chức phát hành chứng khoán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm tiền thuần trong kỳ",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền và các khoản tương đương tiền đầu kỳ của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "cash at bank",
+            "",
+            "tiền gửi ngân hàng đầu kỳ",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ctck quản lý",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "trong đó có kỳ hạn",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền gửi của nhà đầu tư về giao dịch chứng khoán theo phương thức ngân hàng thương mại quản lý",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền gửi bù trừ và thanh toán giao dịch chứng khoán",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền gửi của tổ chức phát hành",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "cash equivalents",
+            "",
+            "các khoản tương đương tiền",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "exchange difference due to re valuation of ending balances",
+            "",
+            "ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "tiền và các khoản tương đương tiền cuối kỳ của khách hàng",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "cash at bank",
+            "",
+            "tiền gửi ngân hàng cuối kỳ",
+            "phần lưu chuyển tiền tệ hoạt động môi giới ủy thác của khách hàng"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền từ hoạt động kinh doanh",
+            "lưu chuyển tiền từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "1 lợi nhuận trước thuế",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "2 điều chỉnh cho các khoản",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "khấu hao tài sản cố định",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "các khoản dự phòng",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "cổ tức lãi liên doanh đã trả",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "lãi lỗ từ hoạt động đầu tư",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "chi phí lãi vay",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "",
+            "",
+            "3 lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản phải thu",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm hàng tồn kho",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản phải trả không kể lãi vay phải trả thuế thu nhập phải nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm chi phí trả trước",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tiền lãi vay đã trả",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "thuế thu nhập doanh nghiệp đã nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản thế chấp ký quỹ ký cược",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tiền thu khác từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "tiền chi khác từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền từ hoạt động quản lý danh mục đầu tư cho người đầu tư",
+            "lưu chuyển tiền từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm nhận vốn ủy thác quản lý dmđt",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản phải trả của người ủy thác đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm tiền nhận theo các hợp đồng bán và mua lại ck",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm tiền nhận theo các hợp đồng môi giới ck",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm cho vay theo các hợp đồng mua và bán lại ck",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản phải thu của người ủy thác đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm tiền đặt cọc mua ck",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "tăng giảm các khoản đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền thuần từ hoạt động quản lý danh mục đầu tư cho người đầu tư",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền từ hoạt động đầu tư",
+            "lưu chuyển tiền từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "1 tiền chi để mua sắm xây dựng tscđ và các tài sản dài hạn khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "2 tiền thu từ thanh lý nhượng bán tscđ và các tài sản dài hạn khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "3 tiền chi cho vay mua các công cụ nợ của đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "4 tiền thu hồi cho vay bán lại các công cụ nợ của đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "5 tiền chi đầu tư góp vốn vào đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "6 tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "7 tiền thu lãi cho vay cổ tức và lợi nhuận được chia",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "8 mua lại khoản góp vốn của cổ đông thiểu số trong công ty con",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "9 khác",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền từ hoạt động tài chính",
+            "lưu chuyển tiền từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "1 tiền thu từ phát hành cổ phiếu nhận vốn góp của chủ sở hữu",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "2 tiền chi trả vốn góp cho các chủ sở hữu mua lại cổ phiếu của doanh nghiệp đã phát hành",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "3 tiền vay ngắn hạn dài hạn nhận được",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "4 tiền chi trả nợ gốc vay",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "5 tiền chi trả nợ thuê tài chính",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "6 cổ tức lợi nhuận đã trả cho chủ sở hữu",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "7 khác",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền thuần từ hoạt động tài chính",
+            "lưu chuyển tiền thuần trong kỳ"
+        ],
+        [
+            "",
+            "",
+            "lưu chuyển tiền thuần trong kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "",
+            "",
+            "tiền và tương đương tiền đầu kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "",
+            "",
+            "ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "",
+            "",
+            "tiền và tương đương tiền cuối kỳ",
+            "tiền và tương đương tiền cuối kỳ"
+        ],
+        [
+            "unrealized foreign exchange gain loss",
+            "operating profit before changes in working capital",
+            "lãi lỗ chênh lệch tỷ giá hối đoái chưa thực hiện",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "others",
+            "operating profit before changes in working capital",
+            "khác",
+            "lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        ],
+        [
+            "increase decrease in held for trading securities",
+            "net cash flows from operating activities",
+            "tăng giảm chứng khoán kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "income tax paid",
+            "net cash flows from operating activities",
+            "thuế thu nhập doanh nghiệp đã nộp",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "other payments for operating activities",
+            "net cash flows from operating activities",
+            "tiền chi khác từ hoạt động kinh doanh",
+            "lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        ],
+        [
+            "other payments for investing activities",
+            "net cash flows from investing activities",
+            "tiền chi khác từ hoat động đầu tư",
+            "lưu chuyển tiền thuần từ hoạt động đầu tư"
+        ],
+        [
+            "short term and long term borrowings",
+            "net cash flows from financing activities",
+            "tiền vay ngắn hạn dài hạn nhận được",
+            "lưu chuyển tiền thuần từ hoạt động tài chính"
+        ]
+    ]
+}

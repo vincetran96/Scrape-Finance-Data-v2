@@ -1,0 +1,740 @@
+[
+    [
+        "assets",
+        "assets",
+        "tài sản",
+        "tài sản"
+    ],
+    [
+        "short term assets",
+        "total assets",
+        "tài sản ngắn hạn",
+        "tổng cộng tài sản"
+    ],
+    [
+        "cash and cash equivalents",
+        "short term assets",
+        "tiền và các khoản tương đương tiền",
+        "tài sản ngắn hạn"
+    ],
+    [
+        "cash",
+        "cash and cash equivalents",
+        "tiền",
+        "tiền và các khoản tương đương tiền"
+    ],
+    [
+        "cash equivalents",
+        "cash and cash equivalents",
+        "các khoản tương đương tiền",
+        "tiền và các khoản tương đương tiền"
+    ],
+    [
+        "short term financial investments",
+        "short term assets",
+        "đầu tư tài chính ngắn hạn",
+        "tài sản ngắn hạn"
+    ],
+    [
+        "available for sale securities",
+        "short term financial investments",
+        "chứng khoán kinh doanh",
+        "đầu tư tài chính ngắn hạn"
+    ],
+    [
+        "provision for diminution in value of available for sale securities",
+        "short term financial investments",
+        "dự phòng giảm giá chứng khoán kinh doanh",
+        "đầu tư tài chính ngắn hạn"
+    ],
+    [
+        "held to maturity investments",
+        "short term financial investments",
+        "đầu tư nắm giữ đến ngày đáo hạn",
+        "đầu tư tài chính ngắn hạn"
+    ],
+    [
+        "short term receivables",
+        "short term assets",
+        "các khoản phải thu ngắn hạn",
+        "tài sản ngắn hạn"
+    ],
+    [
+        "short term trade accounts receivable",
+        "short term receivables",
+        "phải thu ngắn hạn của khách hàng",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "short term prepayments to suppliers",
+        "short term receivables",
+        "trả trước cho người bán ngắn hạn",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "short term inter company receivables",
+        "short term receivables",
+        "phải thu nội bộ ngắn hạn",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "construction contract progress receipts due from customers",
+        "short term receivables",
+        "phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "short term loan receivables",
+        "short term receivables",
+        "phải thu về cho vay ngắn hạn",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "other short term receivables",
+        "short term receivables",
+        "phải thu ngắn hạn khác",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "provision for short term doubtful debts",
+        "short term receivables",
+        "dự phòng phải thu ngắn hạn khó đòi",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "assets awaiting resolution",
+        "short term receivables",
+        "tài sản thiếu chờ xử lý",
+        "các khoản phải thu ngắn hạn"
+    ],
+    [
+        "inventories",
+        "short term assets",
+        "hàng tồn kho",
+        "tài sản ngắn hạn"
+    ],
+    [
+        "inventories",
+        "inventories",
+        "hàng tồn kho",
+        "hàng tồn kho"
+    ],
+    [
+        "provision for decline in value of inventories",
+        "inventories",
+        "dự phòng giảm giá hàng tồn kho",
+        "hàng tồn kho"
+    ],
+    [
+        "other short term assets",
+        "short term assets",
+        "tài sản ngắn hạn khác",
+        "tài sản ngắn hạn"
+    ],
+    [
+        "short term prepayments",
+        "other short term assets",
+        "chi phí trả trước ngắn hạn",
+        "tài sản ngắn hạn khác"
+    ],
+    [
+        "value added tax to be reclaimed",
+        "other short term assets",
+        "thuế gtgt được khấu trừ",
+        "tài sản ngắn hạn khác"
+    ],
+    [
+        "taxes and other receivables from state authorities",
+        "other short term assets",
+        "thuế và các khoản khác phải thu của nhà nước",
+        "tài sản ngắn hạn khác"
+    ],
+    [
+        "government bonds",
+        "other short term assets",
+        "giao dịch mua bán lại trái phiếu chính phủ",
+        "tài sản ngắn hạn khác"
+    ],
+    [
+        "other short term assets",
+        "other short term assets",
+        "tài sản ngắn hạn khác",
+        "tài sản ngắn hạn khác"
+    ],
+    [
+        "long term assets",
+        "total assets",
+        "tài sản dài hạn",
+        "tổng cộng tài sản"
+    ],
+    [
+        "long term receivables",
+        "long term assets",
+        "các khoản phải thu dài hạn",
+        "tài sản dài hạn"
+    ],
+    [
+        "long term trade receivables",
+        "long term receivables",
+        "phải thu dài hạn của khách hàng",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "long term prepayments to suppliers",
+        "long term receivables",
+        "trả trước cho người bán dài hạn",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "capital at inter company",
+        "long term receivables",
+        "vốn kinh doanh ở các đơn vị trực thuộc",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "long term inter company receivables",
+        "long term receivables",
+        "phải thu nội bộ dài hạn",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "long term loan receivables",
+        "long term receivables",
+        "phải thu về cho vay dài hạn",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "other long term receivables",
+        "long term receivables",
+        "phải thu dài hạn khác",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "provision for long term doubtful debts",
+        "long term receivables",
+        "dự phòng phải thu dài hạn khó đòi",
+        "các khoản phải thu dài hạn"
+    ],
+    [
+        "fixed assets",
+        "long term assets",
+        "tài sản cố định",
+        "tài sản dài hạn"
+    ],
+    [
+        "tangible fixed assets",
+        "fixed assets",
+        "tài sản cố định hữu hình",
+        "tài sản cố định"
+    ],
+    [
+        "cost",
+        "tangible fixed assets",
+        "nguyên giá",
+        "tài sản cố định hữu hình"
+    ],
+    [
+        "accumulated depreciation",
+        "tangible fixed assets",
+        "giá trị hao mòn lũy kế",
+        "tài sản cố định hữu hình"
+    ],
+    [
+        "financial leased fixed assets",
+        "fixed assets",
+        "tài sản cố định thuê tài chính",
+        "tài sản cố định"
+    ],
+    [
+        "cost",
+        "financial leased fixed assets",
+        "nguyên giá",
+        "tài sản cố định thuê tài chính"
+    ],
+    [
+        "accumulated depreciation",
+        "financial leased fixed assets",
+        "giá trị hao mòn lũy kế",
+        "tài sản cố định thuê tài chính"
+    ],
+    [
+        "intangible fixed assets",
+        "fixed assets",
+        "tài sản cố định vô hình",
+        "tài sản cố định"
+    ],
+    [
+        "cost",
+        "intangible fixed assets",
+        "nguyên giá",
+        "tài sản cố định vô hình"
+    ],
+    [
+        "accumulated depreciation",
+        "intangible fixed assets",
+        "giá trị hao mòn lũy kế",
+        "tài sản cố định vô hình"
+    ],
+    [
+        "investment properties",
+        "long term assets",
+        "bất động sản đầu tư",
+        "tài sản dài hạn"
+    ],
+    [
+        "cost",
+        "investment properties",
+        "nguyên giá",
+        "bất động sản đầu tư"
+    ],
+    [
+        "accumulated depreciation",
+        "investment properties",
+        "giá trị hao mòn lũy kế",
+        "bất động sản đầu tư"
+    ],
+    [
+        "long term assets in progress",
+        "long term assets",
+        "tài sản dở dang dài hạn",
+        "tài sản dài hạn"
+    ],
+    [
+        "long term production in progress",
+        "long term assets in progress",
+        "chi phí sản xuất kinh doanh dở dang dài hạn",
+        "tài sản dở dang dài hạn"
+    ],
+    [
+        "construction in progress",
+        "long term assets in progress",
+        "chi phí xây dựng cơ bản dở dang",
+        "tài sản dở dang dài hạn"
+    ],
+    [
+        "long term financial investments",
+        "long term assets",
+        "đầu tư tài chính dài hạn",
+        "tài sản dài hạn"
+    ],
+    [
+        "investments in subsidiaries",
+        "long term financial investments",
+        "đầu tư vào công ty con",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "investments in associates joint ventures",
+        "long term financial investments",
+        "liên doanh",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "investments in other entities",
+        "long term financial investments",
+        "đầu tư góp vốn vào đơn vị khác",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "provision for diminution in value of long term investments",
+        "long term financial investments",
+        "dự phòng đầu tư tài chính dài hạn",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "held to maturity investments",
+        "long term financial investments",
+        "đầu tư nắm giữ đến ngày đáo hạn",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "other long term investments",
+        "long term financial investments",
+        "đầu tư dài hạn khác",
+        "đầu tư tài chính dài hạn"
+    ],
+    [
+        "other long term assets",
+        "long term assets",
+        "tài sản dài hạn khác",
+        "tài sản dài hạn"
+    ],
+    [
+        "long term prepayments",
+        "other long term assets",
+        "chi phí trả trước dài hạn",
+        "tài sản dài hạn khác"
+    ],
+    [
+        "deferred income tax assets",
+        "other long term assets",
+        "tài sản thuế thu nhập hoãn lại",
+        "tài sản dài hạn khác"
+    ],
+    [
+        "long term equipment supplies spare parts",
+        "other long term assets",
+        "thiết bị vật tư phụ tùng thay thế dài hạn",
+        "tài sản dài hạn khác"
+    ],
+    [
+        "other long term assets",
+        "other long term assets",
+        "tài sản dài hạn khác",
+        "tài sản dài hạn khác"
+    ],
+    [
+        "goodwill",
+        "long term assets",
+        "lợi thế thương mại",
+        "tài sản dài hạn"
+    ],
+    [
+        "total assets",
+        "total assets",
+        "tổng cộng tài sản",
+        "tổng cộng tài sản"
+    ],
+    [
+        "owner s equity",
+        "owner s equity",
+        "nguồn vốn",
+        "nguồn vốn"
+    ],
+    [
+        "liabilities",
+        "total owner s equity and liabilities",
+        "nợ phải trả",
+        "tổng cộng nguồn vốn"
+    ],
+    [
+        "short term liabilities",
+        "liabilities",
+        "nợ ngắn hạn",
+        "nợ phải trả"
+    ],
+    [
+        "short term trade accounts payable",
+        "short term liabilities",
+        "phải trả người bán ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "short term advances from customers",
+        "short term liabilities",
+        "người mua trả tiền trước ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "taxes and other payables to state authorities",
+        "short term liabilities",
+        "thuế và các khoản phải nộp nhà nước",
+        "nợ ngắn hạn"
+    ],
+    [
+        "payable to employees",
+        "short term liabilities",
+        "phải trả người lao động",
+        "nợ ngắn hạn"
+    ],
+    [
+        "short term acrrued expenses",
+        "short term liabilities",
+        "chi phí phải trả ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "short term inter company payables",
+        "short term liabilities",
+        "phải trả nội bộ ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "construction contract progress payments due to suppliers",
+        "short term liabilities",
+        "phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "nợ ngắn hạn"
+    ],
+    [
+        "short term unearned revenue",
+        "short term liabilities",
+        "doanh thu chưa thực hiện ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "other short term payables",
+        "short term liabilities",
+        "phải trả ngắn hạn khác",
+        "nợ ngắn hạn"
+    ],
+    [
+        "short term borrowings and financial leases",
+        "short term liabilities",
+        "vay và nợ thuê tài chính ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "provision for short term liabilities",
+        "short term liabilities",
+        "dự phòng phải trả ngắn hạn",
+        "nợ ngắn hạn"
+    ],
+    [
+        "bonus and welfare fund",
+        "short term liabilities",
+        "quỹ khen thưởng phúc lợi",
+        "nợ ngắn hạn"
+    ],
+    [
+        "price stabilization fund",
+        "short term liabilities",
+        "quỹ bình ổn giá",
+        "nợ ngắn hạn"
+    ],
+    [
+        "government bonds",
+        "short term liabilities",
+        "giao dịch mua bán lại trái phiếu chính phủ",
+        "nợ ngắn hạn"
+    ],
+    [
+        "long term liabilities",
+        "liabilities",
+        "nợ dài hạn",
+        "nợ phải trả"
+    ],
+    [
+        "long term trade payables",
+        "long term liabilities",
+        "phải trả người bán dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "long term advances from customers",
+        "long term liabilities",
+        "người mua trả tiền trước dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "long term acrrued expenses",
+        "long term liabilities",
+        "chi phí phải trả dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "inter company payables on business capital",
+        "long term liabilities",
+        "phải trả nội bộ về vốn kinh doanh",
+        "nợ dài hạn"
+    ],
+    [
+        "long term inter company payables",
+        "long term liabilities",
+        "phải trả nội bộ dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "long term unearned revenue",
+        "long term liabilities",
+        "doanh thu chưa thực hiện dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "other long term liabilities",
+        "long term liabilities",
+        "phải trả dài hạn khác",
+        "nợ dài hạn"
+    ],
+    [
+        "long term borrowings and financial leases",
+        "long term liabilities",
+        "vay và nợ thuê tài chính dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "convertible bonds",
+        "long term liabilities",
+        "trái phiếu chuyển đổi",
+        "nợ dài hạn"
+    ],
+    [
+        "preferred stock debts",
+        "long term liabilities",
+        "cổ phiếu ưu đãi nợ",
+        "nợ dài hạn"
+    ],
+    [
+        "deferred income tax liabilities",
+        "long term liabilities",
+        "thuế thu nhập hoãn lại phải trả",
+        "nợ dài hạn"
+    ],
+    [
+        "provision for long term liabilities",
+        "long term liabilities",
+        "dự phòng phải trả dài hạn",
+        "nợ dài hạn"
+    ],
+    [
+        "fund for technology development",
+        "long term liabilities",
+        "quỹ phát triển khoa học và công nghệ",
+        "nợ dài hạn"
+    ],
+    [
+        "provision for severance allowances",
+        "long term liabilities",
+        "dự phòng trợ cấp mất việc làm",
+        "nợ dài hạn"
+    ],
+    [
+        "owner s equity",
+        "total owner s equity and liabilities",
+        "vốn chủ sở hữu",
+        "tổng cộng nguồn vốn"
+    ],
+    [
+        "owner s equity",
+        "owner s equity",
+        "vốn chủ sở hữu",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "owner s capital",
+        "owner s equity",
+        "vốn góp của chủ sở hữu",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "common stock with voting right",
+        "owner s capital",
+        "cổ phiếu phổ thông có quyền biểu quyết",
+        "vốn góp của chủ sở hữu"
+    ],
+    [
+        "preferred stock",
+        "owner s capital",
+        "cổ phiếu ưu đãi",
+        "vốn góp của chủ sở hữu"
+    ],
+    [
+        "share premium",
+        "owner s equity",
+        "thặng dư vốn cổ phần",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "convertible bond option",
+        "owner s equity",
+        "quyền chọn chuyển đổi trái phiếu",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "other capital of owners",
+        "owner s equity",
+        "vốn khác của chủ sở hữu",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "treasury shares",
+        "owner s equity",
+        "cổ phiếu quỹ",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "assets revaluation differences",
+        "owner s equity",
+        "chênh lệch đánh giá lại tài sản",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "foreign exchange differences",
+        "owner s equity",
+        "chênh lệch tỷ giá hối đoái",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "investment and development fund",
+        "owner s equity",
+        "quỹ đầu tư phát triển",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "fund to support corporate restructuring",
+        "owner s equity",
+        "quỹ hỗ trợ sắp xếp doanh nghiệp",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "other funds from owner s equity",
+        "owner s equity",
+        "quỹ khác thuộc vốn chủ sở hữu",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "undistributed earnings after tax",
+        "owner s equity",
+        "lợi nhuận sau thuế chưa phân phối",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "accumulated retained earning at the end of the previous period",
+        "undistributed earnings after tax",
+        "lnst chưa phân phối lũy kế đến cuối kỳ trước",
+        "lợi nhuận sau thuế chưa phân phối"
+    ],
+    [
+        "undistributed earnings in this period",
+        "undistributed earnings after tax",
+        "lnst chưa phân phối kỳ này",
+        "lợi nhuận sau thuế chưa phân phối"
+    ],
+    [
+        "reserves for investment in construction",
+        "owner s equity",
+        "nguồn vốn đầu tư xdcb",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "minority s interest",
+        "owner s equity",
+        "lợi ích cổ đông không kiểm soát",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "financial reserves",
+        "owner s equity",
+        "quỹ dự phòng tài chính",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "other resources and funds",
+        "owner s equity",
+        "nguồn kinh phí và quỹ khác",
+        "vốn chủ sở hữu"
+    ],
+    [
+        "subsidized not for profit funds",
+        "other resources and funds",
+        "nguồn kinh phí",
+        "nguồn kinh phí và quỹ khác"
+    ],
+    [
+        "funds invested in fixed assets",
+        "other resources and funds",
+        "nguồn kinh phí đã hình thành tscđ",
+        "nguồn kinh phí và quỹ khác"
+    ],
+    [
+        "minority s interest",
+        "total owner s equity and liabilities",
+        "lợi ích cổ đông thiểu số",
+        "tổng cộng nguồn vốn"
+    ],
+    [
+        "total owner s equity and liabilities",
+        "total owner s equity and liabilities",
+        "tổng cộng nguồn vốn",
+        "tổng cộng nguồn vốn"
+    ]
+]

@@ -1,0 +1,32 @@
+[
+    [
+        "cash ratio",
+        "noparenten",
+        "tỷ số thanh toán bằng tiền mặt",
+        "noparentvi"
+    ],
+    [
+        "quick ratio",
+        "noparenten",
+        "tỷ số thanh toán nhanh",
+        "noparentvi"
+    ],
+    [
+        "quick ratio except inventories short term receivables reference",
+        "noparenten",
+        "tỷ số thanh toán nhanh đã loại trừ htk phải thu ngắn hạn tham khảo",
+        "noparentvi"
+    ],
+    [
+        "short term ratio",
+        "noparenten",
+        "tỷ số thanh toán hiện hành ngắn hạn",
+        "noparentvi"
+    ],
+    [
+        "interest coverage",
+        "noparenten",
+        "khả năng thanh toán lãi vay",
+        "noparentvi"
+    ]
+]

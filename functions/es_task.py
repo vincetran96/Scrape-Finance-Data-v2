@@ -1,16 +1,36 @@
-from celery_main import app
 import datetime
-# Elastic client module
+import json
+
 import elasticsearch
-from elasticsearch import Elasticsearch
-from elasticsearch import helpers
+from elasticsearch import Elasticsearch, helpers
+
+from celery_main import app
 from fad_crawl.helpers.esGenData import *
 from fad_crawl.helpers.processingData import *
 from fad_crawl.spiders.models.constants import ELASTICSEARCH_HOST
 
+
+### Initiate ES
 es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
 
 
+### ES indices for fin statements
+FIN_STATEMENTS_INDICES = {
+    'LC': 'cashflow',
+    'KQKD': 'incomestatement',
+    'CDKT': 'balancesheets'
+}
+
+### Load mapping tables
+with open("functions/schema/lookup_dict_all_nonfin.json", "r") as jsonfile:
+    LOOKUP_DICT=json.load(jsonfile)
+    jsonfile.close()
+with open("functions/schema/mapping_dict_all_nonfin.json", "r") as jsonfile:
+    MAPPING_DICT=json.load(jsonfile)
+    jsonfile.close()
+
+
+### Create ES task
 @app.task
 def handleES_task(index, id, resp_json = "", finInfoType = ""):
     print("=== UPDATING {} {}: {} DATABASE ===".format(index,finInfoType,id))
@@ -86,41 +106,29 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
                     index : return_
                 })
 
-    # Handle FinanceInfo:LC data
+    # Handle FinanceInfo:LC, FinanceInfo:KQKD, FinanceInfo:CDKT data
     # DONE
-    elif index == "financeinfo" and finInfoType == "LC":
+    elif index == "financeinfo" and finInfoType in FIN_STATEMENTS_INDICES.keys():
         # Getting data from json return
         output = {}
-        for i in resp_json[0]:
-            output[getKey(i)[0]] = {"ID": getKey(i)[1]}
-        for key in resp_json[1].keys():
+        for period in resp_json[0]:
+            period_name = getPeriodName(period)
+            period_key, period_id = getKey(period)
+            output[period_key] = {"ID" : period_id, "Period": period_name}
+        for report_fullname in resp_json[1].keys():
             for k in output.keys():
-                output[k][key] = {}
-            for i in resp_json[1][key]:
+                output[k][report_fullname] = {}
+            for acc_content in resp_json[1][report_fullname]:
+                try:
+                    acc_n = get_fad_acc(finInfoType, report_fullname, acc_content, LOOKUP_DICT, MAPPING_DICT)
+                except:
+                    acc_n = simplifyText(acc_content['Name']) + ";nonFAD"
                 for item in output.items():
-                    item[1][key][i["NameEn"]] = i["Value"+item[1]["ID"]]
+                    item[1][report_fullname][acc_n] = acc_content["Value"+item[1]["ID"]]
 
         # Processing data to ES friendly format
         output = processFinanceInfo(output,id)
-        index = "cashflow"
-
-    # Handle FinanceInfo:KQKD data
-    # DONE
-    elif index == "financeinfo" and finInfoType == "KQKD":
-        # Getting data from json return
-        output = {}
-        for i in resp_json[0]:
-            output[getKey(i)[0]] = {"ID" : getKey(i)[1]}
-        for key in resp_json[1].keys():
-            for k in output.keys():
-                output[k][key] = {}
-            for i in resp_json[1][key]:
-                for item in output.items():
-                    item[1][key][i["NameEn"]] = i["Value"+item[1]["ID"]]
-
-        # Processing data to ES friendly format
-        output = processFinanceInfo(output,id)
-        index = "incomestatement"
+        index = FIN_STATEMENTS_INDICES[finInfoType]
 
     # Handle FinanceInfo:CTKH data
     # DONE
@@ -221,22 +229,6 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
         output = output_
         index = "financialratios"
 
-    # Handle FinanceInfo:CDKT data
-    # DONE
-    elif index == "financeinfo" and finInfoType == "CDKT":
-        output = {}
-        for i in resp_json[0]:
-            output[getKey(i)[0]] = {"ID" : getKey(i)[1]}
-        for key in resp_json[1].keys():
-            for k in output.keys():
-                output[k][key] = {}
-            for i in resp_json[1][key]:
-                for item in output.items():
-                    item[1][key][i["NameEn"]] = i["Value"+item[1]["ID"]]
-        # Processing data to ES friendly format
-        output = processFinanceInfo(output)
-        index = "balancesheets"
-
     #! This part for controlling ES push method.
     if controlES:
         #Pushing data to ES Database: "counterpart"
@@ -253,4 +245,3 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
                     helpers.bulk(es, genDataUpd(index,id, docs))
                 except elasticsearch.helpers.errors.BulkIndexError:
                     helpers.bulk(es, genData(index,id, docs))           
-

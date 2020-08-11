@@ -1,0 +1,44 @@
+[
+    [
+        "short term liabilities to total liabilities",
+        "noparenten",
+        "tỷ số nợ ngắn hạn trên tổng nợ phải trả",
+        "noparentvi"
+    ],
+    [
+        "debt to assets",
+        "noparenten",
+        "tỷ số nợ vay trên tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "liabilities to assets",
+        "noparenten",
+        "tỷ số nợ trên tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "equity to assets",
+        "noparenten",
+        "tỷ số vốn chủ sở hữu trên tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "short term liabilities to equity",
+        "noparenten",
+        "tỷ số nợ ngắn hạn trên vốn chủ sở hữu",
+        "noparentvi"
+    ],
+    [
+        "debt to equity",
+        "noparenten",
+        "tỷ số nợ vay trên vốn chủ sở hữu",
+        "noparentvi"
+    ],
+    [
+        "liabilities to equity",
+        "noparenten",
+        "tỷ số nợ trên vốn chủ sở hữu",
+        "noparentvi"
+    ]
+]

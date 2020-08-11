@@ -1,0 +1,44 @@
+[
+    [
+        "gross profit margin",
+        "noparenten",
+        "tỷ suất lợi nhuận gộp biên",
+        "noparentvi"
+    ],
+    [
+        "ebit margin",
+        "noparenten",
+        "tỷ lệ lãi ebit",
+        "noparentvi"
+    ],
+    [
+        "ebitda net revenue",
+        "noparenten",
+        "tỷ lệ lãi ebitda",
+        "noparentvi"
+    ],
+    [
+        "net profit margin",
+        "noparenten",
+        "tỷ suất sinh lợi trên doanh thu thuần",
+        "noparentvi"
+    ],
+    [
+        "roe",
+        "noparenten",
+        "tỷ suất lợi nhuận trên vốn chủ sở hữu bình quân roea",
+        "noparentvi"
+    ],
+    [
+        "return on capital employed roce",
+        "noparenten",
+        "tỷ suất sinh lợi trên vốn dài hạn bình quân roce",
+        "noparentvi"
+    ],
+    [
+        "roa",
+        "noparenten",
+        "tỷ suất sinh lợi trên tổng tài sản bình quân roaa",
+        "noparentvi"
+    ]
+]

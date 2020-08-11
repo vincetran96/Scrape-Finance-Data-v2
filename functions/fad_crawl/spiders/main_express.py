@@ -160,8 +160,8 @@ class corporateazExpressHandler(scrapy.Spider):
                         for k in tickers_redis_keys[1:]:
                             self.r.lpush(k, t)
 
-                    # Total pages need to be calculated or delivered from previous request's meta
-                    # If current page < total pages, send next request
+                    ### Total pages need to be calculated or delivered from previous request's meta
+                    
                     total_records = res[0]['TotalRecord']
                     total_pages =  total_records // int(
                         constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
@@ -175,27 +175,28 @@ class corporateazExpressHandler(scrapy.Spider):
                     ### Count the total number of records
                     self.r.incrby(self.all_tickers_key, amount=total_records)
 
-                    # if page < total_pages:
-                    #     next_page = str(page + 1)
-                    #     az["meta"]["page"] = next_page
-                    #     az["meta"]["TotalPages"] = str(total_pages)
-                    #     az["meta"]["bizType_id"] = bizType_id
-                    #     az["meta"]["bizType_title"] = bizType_title
-                    #     az["meta"]["ind_id"] = ind_id
-                    #     az["meta"]["ind_name"] = ind_name
-                    #     az["formdata"]["page"] = next_page
-                    #     az["formdata"]["businessTypeID"] = bizType_id
-                    #     az["formdata"]["industryID"] = ind_id
-                    #     az["formdata"]["orderBy"] = "TotalShare"
-                    #     az["formdata"]["orderDir"] = "DESC"
-                    #     req_next = FormRequest(url=az["url"],
-                    #                   formdata=az["formdata"],
-                    #                   headers=az["headers"],
-                    #                   cookies=az["cookies"],
-                    #                   meta=az["meta"],
-                    #                   callback=self.parse_az,
-                    #                   errback=self.handle_error)
-                    #     yield req_next
+                    ### If current page < total pages, send next request
+                    if page < total_pages:
+                        next_page = str(page + 1)
+                        az["meta"]["page"] = next_page
+                        az["meta"]["TotalPages"] = str(total_pages)
+                        az["meta"]["bizType_id"] = bizType_id
+                        az["meta"]["bizType_title"] = bizType_title
+                        az["meta"]["ind_id"] = ind_id
+                        az["meta"]["ind_name"] = ind_name
+                        az["formdata"]["page"] = next_page
+                        az["formdata"]["businessTypeID"] = bizType_id
+                        az["formdata"]["industryID"] = ind_id
+                        az["formdata"]["orderBy"] = "TotalShare"
+                        az["formdata"]["orderDir"] = "DESC"
+                        req_next = FormRequest(url=az["url"],
+                                      formdata=az["formdata"],
+                                      headers=az["headers"],
+                                      cookies=az["cookies"],
+                                      meta=az["meta"],
+                                      callback=self.parse_az,
+                                      errback=self.handle_error)
+                        yield req_next
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
         else:

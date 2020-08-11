@@ -1,5 +1,6 @@
 import datetime
 import re
+import traceback
 
 
 def toNumber(date):
@@ -16,6 +17,13 @@ def getKey(data):
     if not str(data["PeriodEnd"]) == "None":
         temp += str(data["PeriodEnd"])
     return (temp, str(data["ID"]))
+
+
+def getPeriodName(data):
+    try:
+        return data['TermNameEN'] + "-" + str(data['YearPeriod'])
+    except:
+        return "N/A-N/A"
 
 
 def daysdict(year):
@@ -47,9 +55,32 @@ def simplifyText(s):
     return s1
 
 
+def get_fad_acc(report, report_fullname, d, lookup_dict, mapping_dict):
+    """Returns the final FAD account name based on the report type and 
+    a dict which is an account of a report in the financeInfo API
+    Params:
+        `report`: financeInfo report type: ['LC', 'KQKD', 'CDKT']
+        `report_fullname`: Cashflow Indirect, ...
+        `d`: account dictionary of JSON response from API
+        `lookup_dict`: from lookup_dict_all in `schema` folder
+        `mapping_dict`: from mapping_dict_all in `schema` folder
+        `
+    """
+    acc_n = simplifyText(d['NameEn'])
+    acc_vi_n = simplifyText(d['Name'])
+    parent_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['NameEn'])
+    parent_vi_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['Name'])
+    try:
+        return mapping_dict[report][report_fullname][f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}']
+    except:
+        print(traceback.format_exc())
+        return "N/A"
+
+
 def processFinanceInfo(output, _id=""):
     output_ = []
     for item in output.items():
+        print(item)
         start, end = getDate(item[0])
         # Getting the cashflow type
         for key in item[1].keys():
