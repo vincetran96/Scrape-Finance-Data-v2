@@ -65,7 +65,8 @@ class corporateazExpressHandler(scrapy.Spider):
                       headers=business_type["headers"],
                       cookies=business_type["cookies"],
                       callback=self.parse_biz_type,
-                      errback=self.handle_error)
+                      errback=self.handle_error,
+                      dont_filter=True)
         yield req
 
     def parse_biz_type(self, response):
@@ -114,7 +115,8 @@ class corporateazExpressHandler(scrapy.Spider):
                                       cookies=az["cookies"],
                                       meta=az["meta"],
                                       callback=self.parse_az,
-                                      errback=self.handle_error)
+                                      errback=self.handle_error,
+                                      dont_filter=True)
                     yield req
             except Exception as e:
                 self.logger.info("Response cannot be parsed by JSON at parse_ind_list")
@@ -178,6 +180,7 @@ class corporateazExpressHandler(scrapy.Spider):
                     ### If current page < total pages, send next request
                     if page < total_pages:
                         next_page = str(page + 1)
+                        self.logger.info(f'Crawling page {next_page} of total {total_pages} for {bizType_title};{ind_name}')
                         az["meta"]["page"] = next_page
                         az["meta"]["TotalPages"] = str(total_pages)
                         az["meta"]["bizType_id"] = bizType_id
@@ -195,7 +198,8 @@ class corporateazExpressHandler(scrapy.Spider):
                                       cookies=az["cookies"],
                                       meta=az["meta"],
                                       callback=self.parse_az,
-                                      errback=self.handle_error)
+                                      errback=self.handle_error,
+                                      dont_filter=True)
                         yield req_next
             except:
                 self.logger.info("Response cannot be parsed by JSON at parse_az")
