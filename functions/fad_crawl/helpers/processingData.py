@@ -64,17 +64,16 @@ def get_fad_acc(report, report_fullname, d, lookup_dict, mapping_dict):
         `d`: account dictionary of JSON response from API
         `lookup_dict`: from lookup_dict_all in `schema` folder
         `mapping_dict`: from mapping_dict_all in `schema` folder
-        `
     """
     acc_n = simplifyText(d['NameEn'])
     acc_vi_n = simplifyText(d['Name'])
-    parent_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['NameEn'])
-    parent_vi_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['Name'])
     try:
+        parent_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['NameEn'])
+        parent_vi_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['Name'])
         return mapping_dict[report][report_fullname][f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}']
     except:
         # print(traceback.format_exc())
-        return acc_vi_n + ";nonFAD"
+        return f'{acc_n};{acc_vi_n};nonFAD'
 
 
 def processFinanceInfo(output, _id=""):

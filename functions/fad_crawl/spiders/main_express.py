@@ -169,7 +169,8 @@ class corporateazExpressHandler(scrapy.Spider):
                     ### Count the total number of records for `Finance and Insurance` industry
                     ### August 11, 2020: Only push non-finance industries
                     if ind_name == "Finance and Insurance":
-                        self.r.incrby(self.fin_insur_tickers_key, amount=total_records)
+                        if page == 1:
+                            self.r.incrby(self.fin_insur_tickers_key, amount=total_records)
                     else:
                         for t in tickers_list:
                             self.r.lpush(tickers_redis_keys[0], f'{t};1')
@@ -177,7 +178,8 @@ class corporateazExpressHandler(scrapy.Spider):
                                 self.r.lpush(k, t)
 
                     ### Count the total number of records
-                    self.r.incrby(self.all_tickers_key, amount=total_records)
+                    if page == 1:
+                        self.r.incrby(self.all_tickers_key, amount=total_records)
 
                     ### If current page < total pages, send next request
                     if page < total_pages:
