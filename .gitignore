@@ -13,6 +13,7 @@ env/
 .~lock*
 test.py
 localData/
+schemaData/
 __pycache__/
 elasticsearch*/
 kibana*/
