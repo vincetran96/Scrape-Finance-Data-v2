@@ -153,8 +153,8 @@ class financeInfoHandler(fadRedisSpider):
                     ### Remove error items and crawl next page
                     self.r.srem(self.error_set_key,
                                 f'{ticker};{page};{report_type}')
-                    next_page = str(int(page) + 1)
-                    self.r.lpush(f'{self.name}:tickers', f'{ticker};{next_page};{report_type}')
+                    # next_page = str(int(page) + 1)
+                    # self.r.lpush(f'{self.name}:tickers', f'{ticker};{next_page};{report_type}')
             except Exception as e:
                 self.logger.info(f'Exception: {e}')
                 self.r.sadd(self.error_set_key,

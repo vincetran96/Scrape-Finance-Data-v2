@@ -14,7 +14,7 @@ import fad_crawl.spiders.models.utilities as utilities
 
 name = "financeInfo"
 
-report_types = ["BCTT", "CTKH", "CDKT", "KQKD", "LC", "CSTC"]
+report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 report_terms = {"1":"Annual", "2":"Quarter"}
 
 ticker_report_page_count_key = f'{name}:trp_count'

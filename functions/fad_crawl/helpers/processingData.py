@@ -73,51 +73,46 @@ def get_fad_acc(report, report_fullname, d, lookup_dict, mapping_dict):
     try:
         return mapping_dict[report][report_fullname][f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}']
     except:
-        print(traceback.format_exc())
-        return "N/A"
+        # print(traceback.format_exc())
+        return acc_vi_n + ";nonFAD"
 
 
 def processFinanceInfo(output, _id=""):
     output_ = []
-    for item in output.items():
-        print(item)
-        start, end = getDate(item[0])
-        # Getting the cashflow type
-        for key in item[1].keys():
-            if key != "ID":
-                reporttype = key
-                break
-
-        # Checking if all data is null then skip
+    for timestamp, output_content in output.items():
+        start, end = getDate(timestamp)
+        ### Checking if all data is null then skip
         _ = True
-        for i in item[1][reporttype].values():
-            if i != None:
-                _ = False
-                break
+        for content in output_content.values():
+            if isinstance(content, dict):
+                for acc_value in content.values():
+                    if acc_value != None:
+                        _ = False
+                        break
         if not _:
-            # Handle when the key is empty
-            item[1][reporttype] = {str(k).replace(
-                ".", "").lower(): v for k, v in item[1][reporttype].items()}
-            try:
-                if item[1][reporttype][""] == None:
-                    del item[1][reporttype][""]
-                else:
-                    print(
-                        "ERROR: There is a None Key with non-null value at {} when updating {}.".format(_id, reporttype))
-                    continue
-            except:
-                pass
+            ### Handle when the key is empty
+            for key, content in output_content.items():
+                if isinstance(content, dict):
+                    try:
+                        if content[""] == None:
+                            del content[""]
+                        else:
+                            print(
+                                "ERROR: There is an empty account with non-null value at {} when updating {} for period {}"
+                                .format(_id, key, output_content['Period']))
+                            continue
+                    except:
+                        pass
 
-            # Generate the ES output
-            output_.append({"timestamp":
-                            {
-                                "startdate": start,
-                                "enddate": end
-                            },
-                            "reporttype": reporttype,
-                            "data": item[1][reporttype],
-                            }
-                           )
+                    ### Generate the ES output
+                    output_.append({"timestamp":
+                                    {"startdate": start,
+                                        "enddate": end
+                                    },
+                                    "period": output_content['Period'],
+                                    "reporttype": key,
+                                    "data": content
+                                    })
         else:
             continue
     return output_

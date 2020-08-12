@@ -18,14 +18,15 @@ es = Elasticsearch([{'host': ELASTICSEARCH_HOST, 'port': 9200}])
 FIN_STATEMENTS_INDICES = {
     'LC': 'cashflow',
     'KQKD': 'incomestatement',
-    'CDKT': 'balancesheets'
+    'CDKT': 'balancesheets',
+    'CSTC': 'financialratios'
 }
 
 ### Load mapping tables
-with open("functions/schema/lookup_dict_all_nonfin.json", "r") as jsonfile:
+with open("schema/lookup_dict_all_nonfin.json", "r") as jsonfile:
     LOOKUP_DICT=json.load(jsonfile)
     jsonfile.close()
-with open("functions/schema/mapping_dict_all_nonfin.json", "r") as jsonfile:
+with open("schema/mapping_dict_all_nonfin.json", "r") as jsonfile:
     MAPPING_DICT=json.load(jsonfile)
     jsonfile.close()
 
@@ -119,12 +120,9 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
             for k in output.keys():
                 output[k][report_fullname] = {}
             for acc_content in resp_json[1][report_fullname]:
-                try:
-                    acc_n = get_fad_acc(finInfoType, report_fullname, acc_content, LOOKUP_DICT, MAPPING_DICT)
-                except:
-                    acc_n = simplifyText(acc_content['Name']) + ";nonFAD"
-                for item in output.items():
-                    item[1][report_fullname][acc_n] = acc_content["Value"+item[1]["ID"]]
+                acc_n = get_fad_acc(finInfoType, report_fullname, acc_content, LOOKUP_DICT, MAPPING_DICT)
+                for output_content in output.values():
+                    output_content[report_fullname][acc_n] = acc_content["Value"+output_content["ID"]]
 
         # Processing data to ES friendly format
         output = processFinanceInfo(output,id)
@@ -175,59 +173,6 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
                 continue
         output = output_
         index = "financialplan"
-
-    # Handle FinanceInfo:CSTC data
-    # DONE
-    elif index == "financeinfo" and finInfoType == "CSTC":
-        output = {}
-        for i in resp_json[0]:
-            output[getKey(i)[0]] = {"ID" : getKey(i)[1]}
-        for key in resp_json[1].keys():
-            for k in output.keys():
-                output[k][key] = {}
-            for i in resp_json[1][key]:
-                for item in output.items():
-                    item[1][key][i["NameEn"]] = i["Value"+item[1]["ID"]]
-        # Processing data to ES friendly format
-        output_ = []
-        for item in output.items():
-            start, end = getDate(item[0])
-            del item[1]["ID"]
-            # Checking if all data is null then skip
-            _ = True
-            for i in item[1].values():
-                for j in i.values():
-                    if j != None:
-                        _ = False
-                        break
-            if not _:
-                # Handle when the key is empty
-                for i in item[1].keys():
-                    item[1][i] = {str(k).replace(".", "").lower() : v for k, v in item[1][i].items()}
-                    try:
-                        if item[1][""] == None:
-                            del item[1][""]
-                        else:
-                            print("ERROR: There is a None Key with non-null value at {} when updating {}.".format(id,"financialratios"))
-                            _ = True
-                            break
-                    except:
-                        pass
-                if not _:
-                    # Generate the ES output
-                    output_.append({"timestamp": 
-                                        {
-                                            "startdate": start,
-                                            "enddate": end
-                                        },
-                                    "reporttype" : "financialratios",
-                                    "data": item[1],
-                                    }
-                                    )
-            else:
-                continue
-        output = output_
-        index = "financialratios"
 
     #! This part for controlling ES push method.
     if controlES:
