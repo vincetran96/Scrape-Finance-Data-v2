@@ -70,9 +70,16 @@ def get_fad_acc(report, report_fullname, d, lookup_dict, mapping_dict):
     try:
         parent_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['NameEn'])
         parent_vi_n = simplifyText(lookup_dict[report][report_fullname][str(d['ParentReportNormID'])]['Name'])
-        return mapping_dict[report][report_fullname][f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}']
+        try:
+            return mapping_dict[report][report_fullname][f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}']
+        except:
+            ### This error is most likely from assets headings (which I didn't make a FAD account)
+            print("ERROR: get_fad_acc - cannot get FAD account from mapping dict provided")
+            return f'{acc_n};{parent_n};{acc_vi_n};{parent_vi_n}'
     except:
-        # print(traceback.format_exc())
+        ### This error is from an account that was not included in the lookup dict
+        ### This error is more concerning because the generalization method I did might be wrong
+        print("ERROR: get_fad_acc - cannot get parent names from lookup dict provided")
         return f'{acc_n};{acc_vi_n};nonFAD'
 
 

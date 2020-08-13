@@ -180,13 +180,13 @@ def handleES_task(index, id, resp_json = "", finInfoType = ""):
         if index == "counterparts":
             for docs in output:
                 try:
-                    helpers.bulk(es, genDataUpdNoTimestamp(index,id, docs))
+                    helpers.bulk(es, genDataUpdNoTimestamp(index, id, docs))
                 except elasticsearch.helpers.errors.BulkIndexError:
-                    helpers.bulk(es, genData(index,id, docs))  
+                    helpers.bulk(es, genData(index, id, docs))  
         #Pushing data to ES Database
         else:
             for docs in output:
                 try:
-                    helpers.bulk(es, genDataUpd(index,id, docs))
+                    helpers.bulk(es, genDataUpd(index, id, docs))
                 except elasticsearch.helpers.errors.BulkIndexError:
-                    helpers.bulk(es, genData(index,id, docs))           
+                    helpers.bulk(es, genData(index, id, docs))           

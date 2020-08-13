@@ -132,9 +132,6 @@ class corporateazExpressHandler(scrapy.Spider):
             ind_id = response.meta['ind_id']
             ind_name = response.meta['ind_name']
 
-            self.logger.info(bizType_title)
-            self.logger.info(ind_name)
-
             try:
                 res = json.loads(response.text)
                 ### Only get random `SAMPLE_SIZE` tickers, because it's express
@@ -147,8 +144,7 @@ class corporateazExpressHandler(scrapy.Spider):
                 ### Right now getting all tickers on the page
                 tickers_list = [d['Code'] for d in res]
 
-                self.logger.info(
-                    f'Found these tickers on page {page}: {str(tickers_list)}')
+                self.logger.info(f'Found these tickers on page {page}: {str(tickers_list)}')
 
                 ### If the tickers list is not empty:
                 ### Add the bizType and ind_name to available bizType_ind combinations set

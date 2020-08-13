@@ -19,12 +19,10 @@ from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
 import fad_crawl.spiders.models.utilities as utilities
+from es_task import *
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.financeinfo import *
-
-# Import ES Supporting mudules
-from es_task import *
 
 
 class financeInfoHandler(fadRedisSpider):
@@ -56,8 +54,8 @@ class financeInfoHandler(fadRedisSpider):
             page = params[1]
             self.idling = False
 
-            # If report type is pushed in, this will be a subsequent request from self.parse()
-            # For each report type, begin with Page 1 of all report types. Initial requests of Spider.
+            ### If report type is pushed in, this will be a subsequent request from self.parse()
+            ### For each report type, begin with Page 1 of all report types. Initial requests of Spider.
             try:
                 report_type = params[2]
                 for report_term in report_terms.keys():
@@ -117,7 +115,8 @@ class financeInfoHandler(fadRedisSpider):
                            cookies=fi["cookies"],
                            meta=fi["meta"],
                            callback=self.parse,
-                           errback=self.handle_error
+                           errback=self.handle_error,
+                           dont_filter=True
                            )
 
     def parse(self, response):
@@ -130,6 +129,8 @@ class financeInfoHandler(fadRedisSpider):
             report_type = response.meta['ReportType']
             page = response.meta['page']
             report_term = response.meta['ReportTermType']
+
+            self.logger.info(f'On page {page} of {report_type} for {ticker}')
 
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
@@ -151,11 +152,9 @@ class financeInfoHandler(fadRedisSpider):
                     handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
 
                     ### Remove error items and crawl next page
-                    self.r.srem(self.error_set_key,
-                                f'{ticker};{page};{report_type}')
-                    # next_page = str(int(page) + 1)
-                    # self.r.lpush(f'{self.name}:tickers', f'{ticker};{next_page};{report_type}')
+                    self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')
+                    next_page = str(int(page) + 1)
+                    self.r.lpush(f'{self.name}:tickers', f'{ticker};{next_page};{report_type}')
             except Exception as e:
-                self.logger.info(f'Exception: {e}')
-                self.r.sadd(self.error_set_key,
-                            f'{ticker};{page};{report_type}')
+                self.logger.info(f'Exception at {page} of {report_type} for {ticker}: {e}')
+                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
