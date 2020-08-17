@@ -13,4 +13,7 @@ tickers_redis_keys = [
                       f'{cf_ind_name}:tickers'
                     ]
 
+industries_queue = "industries_cafef:industries"
+industries_finished = "industries_cafef:finished"
+
 closed_redis_key = f'corpaz_cafef:closed'
