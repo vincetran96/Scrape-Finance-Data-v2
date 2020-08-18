@@ -39,11 +39,11 @@ def run():
     time.sleep(5)
 
     ### Get all tickers on page
-    ### Testing only 10 tickers
+    ### NOTE: Testing only 2800 tickers
     market_content = driver.find_element_by_id(market_content_id)
     ticker_rows = market_content.find_elements_by_tag_name("tr")[1:]
     tickers_to_push = {}
-    for ticker_row in ticker_rows[:1500]:
+    for ticker_row in ticker_rows[:2800]:
         ticker_a = ticker_row.find_elements_by_tag_name("a")[0]
         ticker_url = ticker_a.get_attribute("href")
         ticker = ticker_a.text

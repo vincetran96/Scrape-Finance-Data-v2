@@ -48,6 +48,7 @@ def simplifyText(s):
     s1 = re.sub(r"\W+", " ", s1)
     s1 = " ".join(s1.split())
     s1 = s1.lower()
+    s1 = s1.strip()
     return s1
 
 

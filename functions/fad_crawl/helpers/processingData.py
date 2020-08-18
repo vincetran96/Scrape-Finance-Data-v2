@@ -52,6 +52,7 @@ def simplifyText(s):
     s1 = re.sub(r"\W+", " ", s1)
     s1 = " ".join(s1.split())
     s1 = s1.lower()
+    s1 = s1.strip()
     return s1
 
 
@@ -80,6 +81,7 @@ def get_fad_acc(report, report_fullname, d, lookup_dict, mapping_dict):
         ### This error is from an account that was not included in the lookup dict
         ### This error is more concerning because the generalization method I did might be wrong
         print("ERROR: get_fad_acc - cannot get parent names from lookup dict provided")
+        ### TODO: get parent names from the list `ds` of account dictionaries itself (add this new param for the function)
         return f'{acc_n};{acc_vi_n};nonFAD'
 
 

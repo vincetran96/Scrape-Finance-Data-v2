@@ -16,13 +16,6 @@ from fad_crawl_cafef.spiders.models.constants import (BACKWARDS_YEAR,
                                                       REPORT_TERMS)
 
 
-### copy the `make requests` method from financeInfo spider
-### modify the method to fetch the keys pushed into Redis queue (e.g., "A32;-cong-ty-co-phan-32.chn")
-### after fetching, construct an url to the balance sheet report
-
-### use appropriate Scrapy selectors to get data
-
-
 class industriesTickersCafeFHandler(fadRedisCafeFSpider):
     name = name
     custom_settings = settings
@@ -33,7 +26,7 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
         self.idling = False
 
     def next_requests(self):
-        """Replaces the default method. Closes spider when tickers are crawled and queue empty.
+        """Replaces the default method
         """
         use_set = self.settings.getbool(
             'REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
@@ -60,16 +53,15 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
         if found:
             self.logger.debug("Read %s params from '%s'", found, self.redis_key)
 
-        ### Close spider if: the pushing of industries is done and none in queue and spider is idling
-        ### Delete all keys related to this Spider
+        ### Close spider if: the pushing of industries is done AND none in queue AND spider is idling
         ### Set the IndustriesTickers_cafef key to "1", meaning it has finished finding tickers-industries
-        try:
-            industries_done = self.r.get(industries_finished)
-        except:
-            industries_done = "0"
+        
+        # try:
+        industries_done = self.r.get(industries_finished)
+        # except:
+        #     industries_done = "0"
+        
         if  industries_done == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
-            # for k in self.r.keys(f'{self.name}*'):
-            #     self.r.delete(k)
             self.r.set(industries_tickers_finished, "1")
             
             industries_tickers = self.r.lrange(industries_tickers_queue, 0, -1)
@@ -80,6 +72,7 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
 
     def make_request_from_data(self, ind_id, ind_name, total_records):
         """Replaces the default method
+        The url requires 2 main parameters: `ind_id` and `total_records`
         """
         url = indtickers['url'].format(ind_id, total_records)
         indtickers['meta']['industry_id'] = ind_id
@@ -95,6 +88,7 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
 
     def parse(self, response):
         """Gets the list of tickers of the corresponding industry and push them to queue
+        The response text is a JavaScript variable, so it needs some stripping first
         """
         if response:
             try:
@@ -114,7 +108,7 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
             
 
     def handle_error(self, failure):
-        """If there's an error with a request/response, add it to the error set
+        """Write any errors to log file
         """
         if failure.request:
             request = failure.request

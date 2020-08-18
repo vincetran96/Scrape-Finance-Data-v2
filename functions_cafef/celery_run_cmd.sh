@@ -10,7 +10,7 @@ rm -rf ./localData/*
 rm -rf ./schemaData/*
 
 # create workers
-celery -A celery_main_cafef worker -Q corpAZ_cafef -c 10 -n workercorpAZ_cafef@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
+celery -A celery_main_cafef worker -Q corpAZ_cafef -c 10 -n workercorpAZ_cafef@%h -l INFO --detach --pidfile="./run/celery/%n.pid" --logfile="./logs/corpAZ_cafef_log_verbose.log"
 celery -A celery_main_cafef worker -Q finance_cafef -c 10 -n workerfinance_cafef@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
 
 # constantly check if workers are online; if yes run tasks

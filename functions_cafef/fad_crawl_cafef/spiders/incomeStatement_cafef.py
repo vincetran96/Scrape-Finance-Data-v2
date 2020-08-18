@@ -10,7 +10,7 @@ from scrapy_redis.utils import bytes_to_str
 from fad_crawl_cafef.helpers.processingData import rmvEmpStr, simplifyText
 from fad_crawl_cafef.helpers.fileDownloader import save_jsonfile
 from fad_crawl_cafef.spiders.fadRedis_cafef import fadRedisCafeFSpider
-from fad_crawl_cafef.spiders.models.bs_cafef import *
+from fad_crawl_cafef.spiders.models.is_cafef import *
 from fad_crawl_cafef.spiders.models.constants import (BACKWARDS_YEAR,
                                                       CURRENT_YEAR,
                                                       REPORT_TERMS)
@@ -22,15 +22,12 @@ from fad_crawl_cafef.spiders.models.constants import (BACKWARDS_YEAR,
 ### use appropriate Scrapy selectors to get data
 
 
-class balanceSheetCafeFHandler(fadRedisCafeFSpider):
-    """The name is balance sheet but it crawls all financial statements
-    Too lazy to change name
-    """
+class incomeStatementCafeFHandler(fadRedisCafeFSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
-        super(balanceSheetCafeFHandler, self).__init__(*args, **kwargs)
+        super(incomeStatementCafeFHandler, self).__init__(*args, **kwargs)
         self.ticker_page_count_key = ticker_page_count_key
         self.r.set(self.ticker_page_count_key, "0")
         self.idling = False
@@ -51,29 +48,27 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
             long_name = params[1]
             self.idling = False
 
-            ### Loop through each of the report types
-            for report_type_dict in bs:
-                for term in REPORT_TERMS.keys():
-                    if term == "4":
-                        ### NOTE: If term is quarterly, the step is 1 year
-                        for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1):
-                            req = self.make_request_from_data(ticker, year, term, long_name, report_type_dict)
-                            if req:
-                                yield req
-                                self.r.incr(self.ticker_page_count_key)
-                            else:
-                                self.logger.info("Request not made from params: %r", params)
-                    elif term == "0":
-                        ### NOTE: If term is annually, the step is 4 years,
-                        ### because CafeF displays 4 years in one page
-                        for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1, 4):
-                            req = self.make_request_from_data(ticker, year, term, long_name, report_type_dict)
-                            if req:
-                                yield req
-                                self.r.incr(self.ticker_page_count_key)
-                            else:
-                                self.logger.info("Request not made from params: %r", params)
-                found += 1
+            for term in REPORT_TERMS.keys():
+                if term == "4":
+                    ### NOTE: If term is quarterly, the step is 1 year
+                    for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1):
+                        req = self.make_request_from_data(ticker, year, term, long_name)
+                        if req:
+                            yield req
+                            self.r.incr(self.ticker_page_count_key)
+                        else:
+                            self.logger.info("Request not made from params: %r", params)
+                elif term == "0":
+                    ### NOTE: If term is annually, the step is 4 years,
+                    ### because CafeF displays 4 years in one page
+                    for year in range(BACKWARDS_YEAR, CURRENT_YEAR+1, 4):
+                        req = self.make_request_from_data(ticker, year, term, long_name)
+                        if req:
+                            yield req
+                            self.r.incr(self.ticker_page_count_key)
+                        else:
+                            self.logger.info("Request not made from params: %r", params)
+            found += 1
 
         if found:
             self.logger.debug("Read %s params from '%s'", found, self.redis_key)
@@ -89,23 +84,22 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
                 reason="CorpAZ is closed; Queue is empty; Processed everything")
             self.close_status()
 
-    def make_request_from_data(self, ticker, year, term, long_name, report_type_dict):
+    def make_request_from_data(self, ticker, year, term, long_name):
         """Replaces the default method
         For each year, construct an URL with the ticker and long name fetched from Redis
         """
-        url = report_type_dict['url'].format(ticker, year, term, long_name)
+        is_url = is_['url'].format(ticker, year, term, long_name)
         term_name = REPORT_TERMS[term]
-        report_type_dict['meta']['ticker'] = ticker
-        report_type_dict['meta']['year'] = year
-        report_type_dict['meta']['report_term'] = term_name
+        is_['meta']['ticker'] = ticker
+        is_['meta']['year'] = year
+        is_['meta']['report_term'] = term_name
 
-        return Request(url=url,
-                        headers=report_type_dict["headers"],
-                        cookies=report_type_dict["cookies"],
-                        meta=report_type_dict["meta"],
+        return Request(url=is_url,
+                        headers=is_["headers"],
+                        cookies=is_["cookies"],
+                        meta=is_["meta"],
                         callback=self.parse,
-                        errback=self.handle_error,
-                        dont_filter=True)
+                        errback=self.handle_error)
 
     def parse(self, response):
         """Just crawl
