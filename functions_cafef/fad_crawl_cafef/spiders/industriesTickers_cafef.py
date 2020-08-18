@@ -68,8 +68,8 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
         except:
             industries_done = "0"
         if  industries_done == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
-            for k in self.r.keys(f'{self.name}*'):
-                self.r.delete(k)
+            # for k in self.r.keys(f'{self.name}*'):
+            #     self.r.delete(k)
             self.r.set(industries_tickers_finished, "1")
             
             industries_tickers = self.r.lrange(industries_tickers_queue, 0, -1)
@@ -97,18 +97,18 @@ class industriesTickersCafeFHandler(fadRedisCafeFSpider):
         """Gets the list of tickers of the corresponding industry and push them to queue
         """
         if response:
-            ind_name = response.meta['industry_name']
             try:
                 s = response.text
                 var_j = json.loads(re.findall(r"var CompanyInfo = (.*?);\s*$",s)[0][1:-1])
                 tickers = var_j['CompanyInfos']
+                to_push = []
                 for ticker in tickers:
                     ticker_symbol = ticker['Symbol']
-                    self.logger.info(f'Found this ticker: {ticker_symbol}')
-                    
-                    self.r.lpush(industries_tickers_queue, f'{ticker_symbol};{ind_name}')
-                    
-                    self.logger.info(f'Pushed {ticker_symbol};{ind_name}')
+                    to_push.append(ticker_symbol)
+                    self.logger.info(f'Found this ticker: {ticker_symbol}')                    
+                    self.logger.info(f'Pushed {ticker_symbol}')
+                self.r.lpush(industries_tickers_queue, *to_push)
+
             except Exception as e:
                 self.logger.info(f'Exception: {e}')
             

@@ -5,7 +5,7 @@ from fad_crawl_cafef.spiders.models.corpaz_cafef import industries_queue
 from fad_crawl_cafef.spiders.models.corpaz_cafef import industries_finished
 
 
-name = "IndustriesTickers_cafef"
+name = "industriesTickers_cafef"
 industries_tickers_finished = f'{name}:finished'
 industries_tickers_queue = f'{name}:tickers'
 

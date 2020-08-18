@@ -39,10 +39,11 @@ def run():
     time.sleep(5)
 
     ### Get all tickers on page
+    ### Testing only 10 tickers
     market_content = driver.find_element_by_id(market_content_id)
     ticker_rows = market_content.find_elements_by_tag_name("tr")[1:]
     tickers_to_push = {}
-    for ticker_row in ticker_rows:
+    for ticker_row in ticker_rows[:1500]:
         ticker_a = ticker_row.find_elements_by_tag_name("a")[0]
         ticker_url = ticker_a.get_attribute("href")
         ticker = ticker_a.text
@@ -76,14 +77,12 @@ def run():
             switch = False
         else:
             try:
-                ticker_industry = r.lpop(industries_tickers_queue).split(";")
-                print(ticker_industry)
-                ticker = ticker_industry[0]
-                industry_name = ticker_industry[1]
+                ticker = r.lpop(industries_tickers_queue)
+                print(ticker)
                 if ticker in tickers_to_push.keys():
                     ticker_long_name = tickers_to_push[ticker]
                     for key in tickers_redis_keys:
-                        to_push_params = f'{ticker};{ticker_long_name};{industry_name}'
+                        to_push_params = f'{ticker};{ticker_long_name}'
                         r.lpush(key, to_push_params)
                         print(f'Pushed {to_push_params}')
             except Exception as e:

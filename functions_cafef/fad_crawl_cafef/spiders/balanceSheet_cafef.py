@@ -47,7 +47,6 @@ class balanceSheetCafeFHandler(fadRedisCafeFSpider):
             params = bytes_to_str(data, self.redis_encoding).split(";")
             ticker = params[0]
             long_name = params[1]
-            industry_name = params[2]
             self.idling = False
 
             ### For each year, construct an URL with the ticker and long name fetched from Redis
