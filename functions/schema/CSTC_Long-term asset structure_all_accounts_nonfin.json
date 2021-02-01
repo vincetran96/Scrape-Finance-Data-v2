@@ -1,0 +1,38 @@
+[
+    [
+        "long term assets total assets",
+        "noparenten",
+        "tài sản dài hạn tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "fixed assets total assets",
+        "noparenten",
+        "tài sản cố định tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "tangible fixed assets fixed assets",
+        "noparenten",
+        "tài sản cố định hữu hình tài sản cố định",
+        "noparentvi"
+    ],
+    [
+        "finance lease fixed assets",
+        "noparenten",
+        "tài sản thuê tài chính tài sản cố định",
+        "noparentvi"
+    ],
+    [
+        "intangible fixed assets fixed assets",
+        "noparenten",
+        "tài sản vô hình tài sản cố định",
+        "noparentvi"
+    ],
+    [
+        "construction in progress fixed assets",
+        "noparenten",
+        "xdcbdd tài sản cố định",
+        "noparentvi"
+    ]
+]

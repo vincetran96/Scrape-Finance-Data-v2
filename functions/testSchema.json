@@ -1,0 +1,154 @@
+{
+   "data":
+   {
+   "101":{
+      "des": "assets",
+      "parent": -1,
+      "value": 10000
+   },
+   "102":{
+      "des": "cash",
+      "parent": 101,
+      "value": 10000
+   }
+   }
+}
+
+{
+    "update":{
+       "_index":"cashflow",
+       "_type":"_doc",
+       "_id":"APS",
+       "status":404,
+       "error":{
+          "type":"document_missing_exception",
+          "reason":"[_doc][APS]: document missing",
+          "index_uuid":"p4Tr6of9S0yYcHfd4Fo7Pg",
+          "shard":"0",
+          "index":"cashflow"
+       },
+       "data":{
+          "script":{
+             "lang":"painless",
+             "params":{
+                "tag":{
+                   "timestamp":{
+                      "startdate":1561903200000,
+                      "enddate":1569765600000
+                   },
+                   "reporttype":"CashFlow Indirect",
+                   "data":{
+                      "i cash flow from securities trading activities":"None",
+                      "1 profit before tax":-13103.0,
+                      "2 adjustments for":-4679.0,
+                      " - depreciation and amortization":514.0,
+                      " - (reversal of provisions)/provisions":1586.0,
+                      " - unrealized foreign exchange (gains)/losses":"None",
+                      "acrrued expenses, prepayments expenses":"None",
+                      " - loss/(profits) from other investing activities":"None",
+                      " - interest expense":"None",
+                      "- loss/(profits) from disposal of fixed asset":"None",
+                      "- interest income and dividends":"None",
+                      "- allocation of goodwill":"None",
+                      "accrued interest income":-6779.0,
+                      "- adjustments for":"None",
+                      "3 add non-cash expenses":4290.0,
+                      "loss from revaluation losses of fvtpl financial assets":4290.0,
+                      "loss from revaluation of fvtpl financial debt":"None",
+                      "":"None",
+                      "losse from revaluetion ":"None",
+                      "loss from provision available-for-sale financial assets":"None",
+                      "value decline of available-for-sale financial assets":"None",
+                      "loss from revaluation of financial derivative tools for hedging purposes":"None",
+                      "losses from disposals of fixed assets":"None",
+                      "value decline of fixed assets":"None",
+                      "loss from disposal  investments in subsidiaries, associates, joint-ventures":"None",
+                      "4 less non-cash income":-6963.0,
+                      "gains from revaluation gains of fvtpl financial assets ":-6963.0,
+                      "gains from revaluation gains of fvtpl financial debt":"None",
+                      "gains from disposals of avalable-for-sale financial assets":"None",
+                      "reversal of value decline of available-for-sale financial assets":"None",
+                      "gains from revaluation of financial derivative tools for hedging purposes":"None",
+                      "gains from disaposals loans and receivables":"None",
+                      "reversal of allowances":"None",
+                      "gains from disposal from fixed assets, investment property":"None",
+                      "gains from disposal investments in subsidiaries, associates, joint-ventures":"None",
+                      "5 changes of assets and liabilities":37852.0,
+                      "increase/decrease in fvtpl financial assets":62807.0,
+                      "increase/decrease in held to maturity investments":"None",
+                      "increase/decrease in loan":-10518.0,
+                      "increase/decrease in afs financial assets":"None",
+                      " - (increase)/decrease in receivables":"None",
+                      "increase/decrease in borrowings and finance lease liabilities":"None",
+                      "increase/decrease in finance assets borrowings":"None",
+                      "increase/decrease in convertible bond - debt structure":"None",
+                      "increase/decrease in issued bonds":"None",
+                      "increase/decrease borrowings to settlement assistance fund":"None",
+                      "3  operating profit before changes in working capital":17397.0,
+                      "increase/decrease in receiables sale of financial assets":"None",
+                      "increase/decrease in receiables interest of financial assets":-9737.0,
+                      "increase/decrease in service related receivables":-865.0,
+                      "increase/decrease in trading error receivables":"None",
+                      "increases/decreases in other receivables":467.0,
+                      "increase/decrease in other assets":-14437.0,
+                      " - increase/(decrease) in payables (other than interest, corporate income tax)":19.0,
+                      " - (increase)/decrease in prepaid expenses":-112.0,
+                      " - corporate income tax paid":-2873.0,
+                      " - interest paid":"None",
+                      "increases/decreaese in trade payables":-31.0,
+                      "increases/decreaese in payable securities issuers":"None",
+                      "increases/decreases in employee welfare payables":54.0,
+                      "increases/decreases in tax and other payables to the state budget":-7686.0,
+                      "increases/dcreases in payable to employees":-673.0,
+                      "increases/dcreases in other payables":1525.0,
+                      "increases/dcreases corporate income tax paid":"None",
+                      " - (increase)/decrease in inventories":"None",
+                      " - other receipts from operating activities":"None",
+                      " - other payments for operating activities":"None",
+                      " net cash flows from securities trading activities":-2514.0,
+                      "ii cash flow from investing activities":"None",
+                      "1 payment for fixed assets, constructions and other long-term assets":"None",
+                      "2 proceeds from disposals of fixed assets and other long-term assets":"None",
+                      "3 loans, purchases of other entities' debt instruments ":"None",
+                      "4 receipts from loan repayments, sale of other entities' debt instruments ":"None",
+                      "5 payments for investment in other entities":"None",
+                      "6 collections on investment in other entities":"None",
+                      "7 dividends, interest and profit received":"None",
+                      "8 purchases of minority shares of subsidiaries":"None",
+                      "9 other receipts from investing activities":"None",
+                      "10 other payments for investing activities":"None",
+                      " net cash flows from investing activities":"None",
+                      "iii cash flow from financing activities":"None",
+                      "1 receipts from equity issue and owner's capital contribution":"None",
+                      "2 payment for share repurchases ":"None",
+                      "3 short-term and long-term borrowings":"None",
+                      "31 borrowings to settlement assistance fund":"None",
+                      "32 other borrowings":"None",
+                      " 4 principal repayments  ":"None",
+                      "41 principal repayments to settlement assistance fund":"None",
+                      "42 principal repayments to financial assets":"None",
+                      "43 other principal repayments":"None",
+                      "5 payments to settle finance leases":"None",
+                      "6 dividends paid, profits distributed to owners":"None",
+                      "7 other receipts from financing activities":"None",
+                      "8 other payments for financing activities":"None",
+                      " net cash flows from financing activities":"None",
+                      "net cash flows during the period ":-2514.0,
+                      "cash and cash equivalents at begingning of the period":6327.0,
+                      "cash at bank":61015.0,
+                      "cash at bank for securities company activities":"None",
+                      "cash equivalents":"None",
+                      "exchange difference due to re-valuation of ending balances":"None",
+                      "cash and cash equivalents at end of the period":3814.0
+                   }
+                },
+                "timestamp":{
+                   "startdate":1561903200000,
+                   "enddate":1569765600000
+                }
+             },
+             "source":"\n                /* This part is the logic to check whether or not there were an existing timestamp\n                If there was, overwrite the old one. If not, add it to the `data` list */\n\n                boolean x = false;\n                try {\n                    for (int i = 0; i < ctx._source.data.length; ++i) {\n                        if (ctx._source.data[i][\"timestamp\"] == params.timestamp) {\n                            ctx._source.data[i] = params.tag;\n                            x = true;\n                        }\n                    }\n                }\n                catch (Exception e) {\n                    /* Doing nothing */\n                }\n                \n                if (x == false) {\n                    ctx._source.data.add(params.tag)\n                }\n            "
+          }
+       }
+    }
+ }

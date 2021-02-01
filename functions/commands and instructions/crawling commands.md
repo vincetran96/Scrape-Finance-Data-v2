@@ -1,13 +1,16 @@
+# About this file
+This contains crawling commands while this project is in development.
+
 # Requirements outside of pip
 redis
 tor
 privoxy
 
 # Create directories
-localData/associateds
-localData/boarddetails
+localData/associates
+localData/boardDetails
 localData/financeInfo
-localData/majorshareholders
+localData/majorShareholders
 localData/ownerStructure
 localData/PDFs
 logs
@@ -19,19 +22,26 @@ redis-server
 rabbitmq
 
 # Start a celery worker
-celery -A celery_main worker --loglevel=INFO
+celery -A celery_main worker -l INFO --detach
+celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
+celery -A celery_main worker -Q finance -c 10 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
+celery -A celery_main worker -Q es -c 10 -n workeres@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
 ## On Windows
 celery -A celery_main worker --loglevel=INFO -P solo
+celery -A celery_main worker -Q corpAZ -P solo -c 10 -n workercorpAZ@%h -l INFO
+celery -A celery_main worker -Q finance -P solo -c 10 -n workerfinance@%h -l INFO
 
 # Clear tasks for a celery worker
 celery purge -A celery_main -f
 
 # Send tasks to the worker
-At the root folder of the project
+At the `functions` folder of the project
 ```
 python3
 from celery_tasks import *
 crawl_task.delay()
 ```
-
+or
+```
 python -m celery_run_tasks
+```

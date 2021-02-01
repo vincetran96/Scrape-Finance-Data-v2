@@ -1,0 +1,146 @@
+[
+    [
+        "revenue",
+        "net revenue",
+        "doanh thu bán hàng và cung cấp dịch vụ",
+        "doanh thu thuần về bán hàng và cung cấp dịch vụ"
+    ],
+    [
+        "deduction from revenue",
+        "net revenue",
+        "các khoản giảm trừ doanh thu",
+        "doanh thu thuần về bán hàng và cung cấp dịch vụ"
+    ],
+    [
+        "net revenue",
+        "gross profit",
+        "doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+    ],
+    [
+        "cost of goods sold",
+        "gross profit",
+        "giá vốn hàng bán",
+        "lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+    ],
+    [
+        "gross profit",
+        "operating profit",
+        "lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "financial income",
+        "operating profit",
+        "doanh thu hoạt động tài chính",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "financial expenses",
+        "operating profit",
+        "chi phí tài chính",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "of which interest expenses",
+        "of which interest expenses",
+        "trong đó chi phí lãi vay",
+        "trong đó chi phí lãi vay"
+    ],
+    [
+        "share of associates and joint ventures result",
+        "operating profit",
+        "phần lãi lỗ trong công ty liên doanh liên kết",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "selling expenses",
+        "operating profit",
+        "chi phí bán hàng",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "general and administrative expenses",
+        "operating profit",
+        "chi phí quản lý doanh nghiệp",
+        "lợi nhuận thuần từ hoạt động kinh doanh"
+    ],
+    [
+        "operating profit",
+        "profit before tax",
+        "lợi nhuận thuần từ hoạt động kinh doanh",
+        "tổng lợi nhuận kế toán trước thuế"
+    ],
+    [
+        "other income",
+        "other profit",
+        "thu nhập khác",
+        "lợi nhuận khác"
+    ],
+    [
+        "other expenses",
+        "other profit",
+        "chi phí khác",
+        "lợi nhuận khác"
+    ],
+    [
+        "other profit",
+        "profit before tax",
+        "lợi nhuận khác",
+        "tổng lợi nhuận kế toán trước thuế"
+    ],
+    [
+        "share of associates and joint ventures result",
+        "profit before tax",
+        "phần lợi nhuận lỗ từ công ty liên kết liên doanh",
+        "tổng lợi nhuận kế toán trước thuế"
+    ],
+    [
+        "profit before tax",
+        "net profit after tax",
+        "tổng lợi nhuận kế toán trước thuế",
+        "lợi nhuận sau thuế thu nhập doanh nghiệp"
+    ],
+    [
+        "current corporate income tax expenses",
+        "net profit after tax",
+        "chi phí thuế tndn hiện hành",
+        "lợi nhuận sau thuế thu nhập doanh nghiệp"
+    ],
+    [
+        "deferred income tax expenses",
+        "net profit after tax",
+        "chi phí thuế tndn hoãn lại",
+        "lợi nhuận sau thuế thu nhập doanh nghiệp"
+    ],
+    [
+        "net profit after tax",
+        "profit after tax for shareholders of parent company",
+        "lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "lợi nhuận sau thuế của cổ đông của công ty mẹ"
+    ],
+    [
+        "minority s interest",
+        "profit after tax for shareholders of parent company",
+        "lợi ích của cổ đông thiểu số",
+        "lợi nhuận sau thuế của cổ đông của công ty mẹ"
+    ],
+    [
+        "profit after tax for shareholders of parent company",
+        "profit after tax for shareholders of parent company",
+        "lợi nhuận sau thuế của cổ đông của công ty mẹ",
+        "lợi nhuận sau thuế của cổ đông của công ty mẹ"
+    ],
+    [
+        "earnings per share vnd",
+        "earnings per share vnd",
+        "lãi cơ bản trên cổ phiếu vnð",
+        "lãi cơ bản trên cổ phiếu vnð"
+    ],
+    [
+        "diluted earnings per share",
+        "diluted earnings per share",
+        "lãi suy giảm trên cổ phiếu",
+        "lãi suy giảm trên cổ phiếu"
+    ]
+]

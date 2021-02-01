@@ -1,0 +1,56 @@
+[
+    [
+        "receivables turnover",
+        "noparenten",
+        "vòng quay phải thu khách hàng",
+        "noparentvi"
+    ],
+    [
+        "days of sales outstanding",
+        "noparenten",
+        "thời gian thu tiền khách hàng bình quân",
+        "noparentvi"
+    ],
+    [
+        "inventory turnover",
+        "noparenten",
+        "vòng quay hàng tồn kho",
+        "noparentvi"
+    ],
+    [
+        "days of inventory on hand",
+        "noparenten",
+        "thời gian tồn kho bình quân",
+        "noparentvi"
+    ],
+    [
+        "payables turnover",
+        "noparenten",
+        "vòng quay phải trả nhà cung cấp",
+        "noparentvi"
+    ],
+    [
+        "number of days of payables",
+        "noparenten",
+        "thời gian trả tiền khách hàng bình quân",
+        "noparentvi"
+    ],
+    [
+        "fixed asset turnover",
+        "noparenten",
+        "vòng quay tài sản cố định hiệu suất sử dụng tài sản cố định",
+        "noparentvi"
+    ],
+    [
+        "total asset turnover",
+        "noparenten",
+        "vòng quay tổng tài sản hiệu suất sử dụng toàn bộ tài sản",
+        "noparentvi"
+    ],
+    [
+        "equity turnover",
+        "noparenten",
+        "vòng quay vốn chủ sở hữu",
+        "noparentvi"
+    ]
+]

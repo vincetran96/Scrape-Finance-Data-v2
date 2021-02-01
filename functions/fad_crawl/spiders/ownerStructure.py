@@ -6,6 +6,7 @@ import logging
 import os
 import sys
 import traceback
+import time
 
 import scrapy
 import redis
@@ -16,76 +17,121 @@ from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
-import functions.fad_crawl.spiders.models.utilities as utilities
-from functions.fad_crawl.spiders.models.ownerstructure import data as ost
-from functions.fad_crawl.spiders.models.ownerstructure import (name,
-                                                  scraper_api_key, settings)
+import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.models.ownerstructure import data as ost
+from fad_crawl.spiders.models.ownerstructure import (name, settings)
+from fad_crawl.spiders.fadRedis import fadRedisSpider
+from fad_crawl.helpers.fileDownloader import save_jsonfile
 
+# Import ES Supporting mudules
+from es_task import *
 
-class ownerStructureHandler(RedisSpider):
+class ownerStructureHandler(fadRedisSpider):
     name = name
     custom_settings = settings
 
     def __init__(self, *args, **kwargs):
         super(ownerStructureHandler, self).__init__(*args, **kwargs)
-        self.r = redis.Redis()
-        self.crawled_count_key = f'{self.name}:crawledcount'
-        self.dequeued_count_key = f'{self.name}:dequeuedcount'
+        self.idling = False
 
     def next_requests(self):
+        """Replaces the default method. Closes spider when tickers are crawled and queue empty.
+        This method customized from fadRedis Spider because it has the Page param. in formdata.
         """
-        Replaces the default method. Closes spider when tickers are crawled and queue empty.
-        """
-        use_set = self.settings.getbool('REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
+        use_set = self.settings.getbool(
+            'REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
         fetch_one = self.server.spop if use_set else self.server.lpop
         found = 0
         while found < self.redis_batch_size:
-            data = fetch_one(self.redis_key)
-            if not data:
+            d = fetch_one(self.redis_key)
+            if not d:
                 break
-            req = self.make_request_from_data(data)
-            if req:
-                yield req
-                found += 1
-                dq = self.r.incr(self.dequeued_count_key)
-                self.logger.info(f'Dequeued {dq} ticker-reports so far')
-            else:
-                self.logger.info("Request not made from data: %r", data)
+            params = bytes_to_str(d, self.redis_encoding).split(";")
+            ticker = params[0]
+            self.idling = False
+
+            # If page param. is pushed in, crawl that page
+            # Otherwise begin with page 1
+            try:
+                page = params[1]
+                req = self.make_request_from_data(ticker, page)
+                if req:
+                    yield req
+                else:
+                    self.logger.info(
+                        "Request not made from params: %r", d)
+            except:
+                req = self.make_request_from_data(ticker, "1")
+                if req:
+                    yield req
+                else:
+                    self.logger.info(
+                        "Request not made from params: %r", d)
+            found += 1
 
         if found:
-            self.logger.debug("Read %s requests from '%s'", found, self.redis_key)
+            self.logger.debug("Read %s params from '%s'",
+                              found, self.redis_key)
 
-        # Close spider if none in queue and amount crawled == amount dequeued
-        if self.r.get(self.crawled_count_key) and self.r.get(self.dequeued_count_key):
-            if self.r.llen(self.redis_key) == 0 and self.r.get(self.crawled_count_key) >= self.r.get(self.dequeued_count_key):
-                self.r.delete(self.crawled_count_key)
-                self.r.delete(self.dequeued_count_key)
-                self.crawler.engine.close_spider(spider=self, reason="Queue is empty, the spider closes")
+        # Close spider if corpAZ is closed and none in queue and spider is idling
+        # Print off requests with errors, then delete all keys related to this Spider
+        if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
+            self.logger.info(self.r.smembers(self.error_set_key))
+            keys = self.r.keys(f'{self.name}*')
+            for k in keys:
+                self.r.delete(k)
+            self.crawler.engine.close_spider(
+                spider=self, reason="CorpAZ is closed; Queue is empty; Processed everything")
+            self.close_status()
 
-    def make_request_from_data(self, data):
+    def make_request_from_data(self, ticker, page):
         """
-        Replaces the default method, data is a ticker.
+        Replaces the default method
         """
-        ticker = bytes_to_str(data, self.redis_encoding)
 
         ost["formdata"]["code"] = ticker
+        ost["formdata"]["page"] = page
         ost["meta"]["ticker"] = ticker
+        ost["meta"]["page"] = page
 
         return FormRequest(url=ost["url"],
-                            formdata=ost["formdata"],
-                            headers=ost["headers"],
-                            cookies=ost["cookies"],
-                            meta=ost["meta"],
-                            callback=self.parse
-                            )
+                           formdata=ost["formdata"],
+                           headers=ost["headers"],
+                           cookies=ost["cookies"],
+                           meta=ost["meta"],
+                           callback=self.parse,
+                           errback=self.handle_error
+                           )
 
-# # TODO: find out a more elegant way to crawl all pages of balance \
-# # sheet, instead of passing PageSize = an arbitrarily large number
-    
     def parse(self, response):
-        resp_json = json.loads(response.text)
-        ticker = response.meta['ticker']
-        with open(f'localData/ownerStructure/{ticker}_ownerStruct.json', 'w') as writefile:
-            json.dump(resp_json, writefile, indent=4)
-            c = self.r.incr(self.crawled_count_key)
-            self.logger.info(f'Crawled {c} ticker-reports so far')
+        """If response is not an empty string, parse it
+        """
+        if response:
+            ticker = response.meta['ticker']
+            report_type = response.meta['ReportType']
+            page = response.meta['page']
+
+            # time.sleep(25)
+
+            try:
+                resp_json = json.loads(response.text, encoding='utf-8')
+                
+                # If the current page < total page, push the next page to Redis q
+                total_page = int(resp_json[0]['TotalPage'])
+                if int(page) < total_page:
+                    next_page = int(page) + 1
+                    self.r.lpush(f'{self.name}:tickers',
+                                 f'{ticker};{next_page}')
+
+                # Writing local json files.
+                save_jsonfile(
+                    resp_json, filename=f'localData/{self.name}/{ticker}_Page_{page}.json')
+                
+                # ES push task
+                handleES_task.delay(self.name.lower(), ticker, resp_json)
+
+                self.r.srem(self.error_set_key,
+                            f'{ticker};{page};{report_type}')
+            except:
+                self.logger.info("Response is an empty string")
+                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')

@@ -1,0 +1,38 @@
+[
+    [
+        "short term assets total assets",
+        "noparenten",
+        "tài sản ngắn hạn tổng tài sản",
+        "noparentvi"
+    ],
+    [
+        "cash short term assets",
+        "noparenten",
+        "tiền tài sản ngắn hạn",
+        "noparentvi"
+    ],
+    [
+        "short term investments short term assets",
+        "noparenten",
+        "đầu tư tài chính ngắn hạn tài sản ngắn hạn",
+        "noparentvi"
+    ],
+    [
+        "short term receivables short term assets",
+        "noparenten",
+        "phải thu ngắn hạn tài sản ngắn hạn",
+        "noparentvi"
+    ],
+    [
+        "inventory short term assets",
+        "noparenten",
+        "hàng tồn kho tài sản ngắn hạn",
+        "noparentvi"
+    ],
+    [
+        "other short term assets short term assets",
+        "noparenten",
+        "tài sản ngắn hạn khác tài sản ngắn hạn",
+        "noparentvi"
+    ]
+]

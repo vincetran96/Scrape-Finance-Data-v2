@@ -1,0 +1,56 @@
+[
+    [
+        "trailing eps",
+        "noparenten",
+        "thu nhập trên mỗi cổ phần của 4 quý gần nhất eps",
+        "noparentvi"
+    ],
+    [
+        "book value per share bvps",
+        "noparenten",
+        "giá trị sổ sách của cổ phiếu bvps",
+        "noparentvi"
+    ],
+    [
+        "p e",
+        "noparenten",
+        "chỉ số giá thị trường trên thu nhập p e",
+        "noparentvi"
+    ],
+    [
+        "p b",
+        "noparenten",
+        "chỉ số giá thị trường trên giá trị sổ sách p b",
+        "noparentvi"
+    ],
+    [
+        "p s",
+        "noparenten",
+        "chỉ số giá thị trường trên doanh thu thuần p s",
+        "noparentvi"
+    ],
+    [
+        "dividend yield",
+        "noparenten",
+        "tỷ suất cổ tức",
+        "noparentvi"
+    ],
+    [
+        "beta",
+        "noparenten",
+        "beta",
+        "noparentvi"
+    ],
+    [
+        "ev ebit",
+        "noparenten",
+        "giá trị doanh nghiệp trên lợi nhuận trước thuế và lãi vay ev ebit",
+        "noparentvi"
+    ],
+    [
+        "ev ebitda",
+        "noparenten",
+        "giá trị doanh nghiệp trên lợi nhuận trước thuế khấu hao và lãi vay ev ebitda",
+        "noparentvi"
+    ]
+]

@@ -1,0 +1,26 @@
+[
+    [
+        "cost of goods sold net revenue",
+        "noparenten",
+        "giá vốn hàng bán doanh thu thuần",
+        "noparentvi"
+    ],
+    [
+        "selling expenses net revenue",
+        "noparenten",
+        "chi phí bán hàng doanh thu thuần",
+        "noparentvi"
+    ],
+    [
+        "general and administrative expenses net revenue",
+        "noparenten",
+        "chi phí quản lý doanh nghiệp doanh thu thuần",
+        "noparentvi"
+    ],
+    [
+        "interest expenses net revenue",
+        "noparenten",
+        "chi phí lãi vay doanh thu thuần",
+        "noparentvi"
+    ]
+]

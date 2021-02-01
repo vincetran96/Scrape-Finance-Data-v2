@@ -7,7 +7,7 @@ import redis
 import scrapy
 from scrapy import Request
 
-from fad_crawl.spiders.models.constants import PROXIES_REDIS_KEY
+from fad_crawl.spiders.models.constants import PROXIES_REDIS_KEY, REDIS_HOST
 from fad_crawl.spiders.models.utilities import log_settings
 
 
@@ -23,7 +23,7 @@ class getProxyHanlder(scrapy.Spider):
     
     def __init__(self, tickers_list="", *args, **kwargs):
         super(getProxyHanlder, self).__init__(*args, **kwargs)
-        self.r = redis.Redis()
+        self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.raw_proxies_list = []
         self.redisKey = PROXIES_REDIS_KEY
 

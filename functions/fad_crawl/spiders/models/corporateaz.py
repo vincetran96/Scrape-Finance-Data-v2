@@ -8,25 +8,38 @@
 
 import redis
 
-import functions.fad_crawl.spiders.models.constants as constants
-import functions.fad_crawl.spiders.models.utilities as utilities
-from functions.fad_crawl.spiders.models.financeinfo import name as financeInfo_name
-from functions.fad_crawl.spiders.models.pdfdocs import name as pdfDocs_name
-from functions.fad_crawl.spiders.models.associateds import name as associateds_name
-from functions.fad_crawl.spiders.models.boarddetails import name as boarddetails_name
-from functions.fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
+import fad_crawl.spiders.models.constants as constants
+import fad_crawl.spiders.models.utilities as utilities
+from fad_crawl.spiders.models.financeinfo import name as financeInfo_name
+from fad_crawl.spiders.models.pdfdocs import name as pdfDocs_name
+from fad_crawl.spiders.models.associatesdetails import name as associates_name
+from fad_crawl.spiders.models.boarddetails import name as boarddetails_name
+from fad_crawl.spiders.models.majorshareholders import name as majorshareholders_name
+from fad_crawl.spiders.models.counterparts import name as counterparts_name
+from fad_crawl.spiders.models.ownerstructure import name as ownerstructure_name
+from fad_crawl.spiders.models.ctkhdetails import name as ctkh_name
+from fad_crawl.spiders.models.viewprofile import name as viewprofile_name
 
-r = redis.Redis(decode_responses=True)
 
-name = "corporateAZ"
+name_regular = "corporateAZ"
+name_express = "corporateAZExpress"
+fin_insur_tickers_key = "finance_and_insurance_tickers_total"
+all_tickers_key = "all_tickers_total"
 
-tickers_redis_keys = [f'{financeInfo_name}:tickers',
+tickers_redis_keys = [
+                      f'{financeInfo_name}:tickers',
                       f'{pdfDocs_name}:tickers',
-                      f'{associateds_name}:tickers',
+                      f'{associates_name}:tickers',
                       f'{boarddetails_name}:tickers',
-                      f'{majorshareholders_name}:tickers']
+                      f'{majorshareholders_name}:tickers',
+                      f'{counterparts_name}:tickers',
+                      f'{ownerstructure_name}:tickers',
+                      f'{ctkh_name}:tickers',
+                      f'{viewprofile_name}:tickers'
+                    ]
 
-scraper_api_key = constants.SCRAPER_API_KEY
+closed_redis_key = f'{name_regular}:closed'
+bizType_ind_set_key = 'bizType_ind_set'
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
@@ -44,23 +57,51 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             "User-Agent": constants.USER_AGENT,
             "Content-Type": constants.CONTENT_TYPE
         },
-        "cookies":  {
+        "cookies": {
             "language": constants.LANGUAGE,
             "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
-            'pageid': "",
-        },
-        # "proxies": {
-        #     "http": constants.PRIVOXY_LOCAL_PROXY,
-        #     "https": constants.PRIVOXY_LOCAL_PROXY,
-        # }
+            "page": constants.START_PAGE,
+            "TotalPages": "",
+            "bizType_id": "",
+            "bizType_title": "",
+            "ind_id": "",
+            "ind_name": "",
+        }
         }
 
-log_settings = utilities.log_settings(spiderName=name,
-                                      log_level="INFO")
+business_type = {
+        "url": "https://finance.vietstock.vn/data/businesstype",
+        "headers": {
+            "User-Agent": constants.USER_AGENT
+        },
+        "cookies": {
+            "language": constants.LANGUAGE
+        },
+        }
 
-middlewares_settings = {
+industry_list = {
+        "url": "https://finance.vietstock.vn/data/industrylist",
+        "headers": {
+            "User-Agent": constants.USER_AGENT
+        },
+        "cookies": {
+            "language": constants.LANGUAGE
+        },
+        "meta": {
+            "bizType_id": "",
+            "bizType_title": "",
+        }
+        }
+
+log_settings_regular = utilities.log_settings(spiderName=name_regular,
+                                      log_level = "INFO")
+
+log_settings_express = utilities.log_settings(spiderName=name_express,
+                                      log_level = "INFO")
+
+middlewares_settings={
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
@@ -68,9 +109,8 @@ middlewares_settings = {
 }
 
 proxy_settings = {
-    # 'ROTATING_PROXY_LIST': r.lrange(constants.PROXIES_REDIS_KEY, 0, -1)
-    # 'ROTATING_PROXY_LIST': [constants.PRIVOXY_LOCAL_PROXY],
-    # 'ROTATING_PROXY_LIST': [],
+    'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings}
+settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings}
+settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings}

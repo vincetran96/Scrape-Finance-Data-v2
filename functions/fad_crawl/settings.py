@@ -9,6 +9,9 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+from fad_crawl.spiders.models.constants import REDIS_HOST
+
+
 BOT_NAME = 'fad_crawl'
 
 SPIDER_MODULES = ['fad_crawl.spiders']
@@ -33,6 +36,10 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 ITEM_PIPELINES = {
     'scrapy_redis.pipelines.RedisPipeline': 300
 }
+
+# Specify the host and port to use when connecting to Redis (optional).
+REDIS_HOST = REDIS_HOST
+REDIS_PORT = 6379
 
 # Default start urls key for RedisSpider and RedisCrawlSpider.
 # REDIS_START_URLS_KEY = '%(name)s:start_urls'
