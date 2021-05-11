@@ -19,7 +19,7 @@ from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
 import fad_crawl.spiders.models.utilities as utilities
-from es_task import *
+# from es_task import *
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.financeinfo import *
@@ -145,11 +145,11 @@ class financeInfoHandler(fadRedisSpider):
                     #     resp_json, filename=f'schemaData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     ### Writing local data files in the regular way
-                    # save_jsonfile(
-                    #     resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                    save_jsonfile(
+                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     ### ES push task
-                    handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
+                    # handleES_task.delay(self.name.lower(), ticker, resp_json, report_type)
 
                     ### Remove error items and crawl next page
                     self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')

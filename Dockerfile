@@ -1,7 +1,7 @@
-from python:3.7.7-slim-buster
+FROM python:3.7.7-slim-buster
 
 LABEL maintainer="Nam Khanh Viet-Anh"
-RUN apt-get -yqq update && apt-get install curl nano procps
+RUN apt-get -yqq update && apt-get -yqq install curl nano procps "wait-for-it"
 
 # copy application code
 COPY requirements.txt /opt/fad-functions/requirements.txt

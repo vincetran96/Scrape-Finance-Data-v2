@@ -12,21 +12,21 @@ services:
     redis:
         image: redis
         container_name: fad-redis
-    elasticsearch:
-        image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
-        container_name: elasticsearch
-        environment: 
-            - discovery.type=single-node
-        ports:
-            - 9200:9200
-            - 9300:9300
-    kibana:
-        image: docker.elastic.co/kibana/kibana:7.7.1
-        container_name: kibana
-        ports:
-            - 5601:5601
-        depends_on:
-            - elasticsearch
+    # elasticsearch:
+    #     image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+    #     container_name: elasticsearch
+    #     environment: 
+    #         - discovery.type=single-node
+    #     ports:
+    #         - 9200:9200
+    #         - 9300:9300
+    # kibana:
+    #     image: docker.elastic.co/kibana/kibana:7.7.1
+    #     container_name: kibana
+    #     ports:
+    #         - 5601:5601
+    #     depends_on:
+    #         - elasticsearch
     fad-functions:
         # image: fad_fad-functions
         build: .
@@ -36,12 +36,12 @@ services:
             - PROXY=yes
             - TORPROXY_HOST=torproxy
             - REDIS_HOST=fad-redis
-            - ELASTICSEARCH_HOST=elasticsearch
+            # - ELASTICSEARCH_HOST=elasticsearch
         depends_on: 
             - torproxy
             - redis
-            - elasticsearch
-            - kibana
+            # - elasticsearch
+            # - kibana
         volumes:
             - ./logs:/opt/fad-functions/logs
             - ./localData:/opt/fad-functions/localData
