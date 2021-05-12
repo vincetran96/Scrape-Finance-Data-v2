@@ -19,7 +19,6 @@ from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
 import fad_crawl.spiders.models.utilities as utilities
-# from es_task import *
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.financeinfo import *

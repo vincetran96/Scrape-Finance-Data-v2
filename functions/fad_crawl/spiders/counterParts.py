@@ -25,8 +25,6 @@ from fad_crawl.spiders.models.counterparts import count_data
 from fad_crawl.spiders.models.counterparts import find_data as ctp
 from fad_crawl.spiders.models.counterparts import name, settings
 
-# Import ES Supporting mudules
-from es_task import *
 
 class counterPartsHandler(fadRedisSpider):
     name = name

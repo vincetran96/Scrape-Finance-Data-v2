@@ -22,9 +22,6 @@ from fad_crawl.spiders.models.boarddetails import (name, settings)
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 
-# Import ES Supporting mudules
-from es_task import *
-
 class boardDetailsHandler(fadRedisSpider):
     name = name
     custom_settings = settings

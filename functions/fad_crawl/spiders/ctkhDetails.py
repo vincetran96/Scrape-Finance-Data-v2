@@ -22,8 +22,6 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.ctkhdetails import data as ctk
 from fad_crawl.spiders.models.ctkhdetails import name, settings
 
-# Import ES Supporting mudules
-from es_task import *
 
 class ctkhDetailsHandler(fadRedisSpider):
     name = name

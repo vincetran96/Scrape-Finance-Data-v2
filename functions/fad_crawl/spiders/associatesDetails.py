@@ -23,8 +23,6 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.associatesdetails import data as ass
 from fad_crawl.spiders.models.associatesdetails import name, settings
 
-# Import ES Supporting mudules
-from es_task import *
 
 class associatesHandler(fadRedisSpider):
     name = name

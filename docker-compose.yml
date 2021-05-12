@@ -31,7 +31,7 @@ services:
         # image: fad_fad-functions
         build: .
         container_name: fad-functions
-        command: wait-for-it -s torproxy:8118 -s fad-redis:6379 -s elasticsearch:9200 -t 600  -- bash ./celery_run_cmd.sh
+        command: wait-for-it -s torproxy:8118 -s fad-redis:6379 -t 600  -- bash ./celery_run_cmd.sh
         environment: 
             - PROXY=yes
             - TORPROXY_HOST=torproxy

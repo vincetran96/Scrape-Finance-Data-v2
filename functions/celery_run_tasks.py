@@ -5,9 +5,6 @@ from celery import group
 
 from celery_tasks import *
 
-# Setting up the ES connection
-from elasticsearch import Elasticsearch
-
 if __name__ == '__main__':
     # g = group(multiplier.signature((2,3), immutable=True), subtractor.signature((4,5), immutable=True))
     # adder.apply_async((10,20),link=g)

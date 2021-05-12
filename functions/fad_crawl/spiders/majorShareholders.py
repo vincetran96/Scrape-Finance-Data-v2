@@ -22,8 +22,6 @@ from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.spiders.models.majorshareholders import data as msh
 from fad_crawl.spiders.models.majorshareholders import name, settings
 
-# Import ES Supporting mudules
-from es_task import *
 
 class majorShareHoldersHandler(fadRedisSpider):
     name = name

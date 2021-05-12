@@ -170,7 +170,7 @@ def pdfDocs_task(url="", filename=""):
     runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(pdfDocsHandler)
 
-@app.task
-def handleES_task(docs = ""):
-    print("=== UPDATING ES DATABASE ===")
-    global es
+# @app.task
+# def handleES_task(docs = ""):
+#     print("=== UPDATING ES DATABASE ===")
+#     global es

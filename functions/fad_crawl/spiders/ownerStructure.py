@@ -23,8 +23,6 @@ from fad_crawl.spiders.models.ownerstructure import (name, settings)
 from fad_crawl.spiders.fadRedis import fadRedisSpider
 from fad_crawl.helpers.fileDownloader import save_jsonfile
 
-# Import ES Supporting mudules
-from es_task import *
 
 class ownerStructureHandler(fadRedisSpider):
     name = name
