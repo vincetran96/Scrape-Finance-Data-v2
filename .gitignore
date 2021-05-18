@@ -4,6 +4,7 @@
 *.DS_Store
 *.rdb
 *.zip
+*.rdb
 ~$*.xlsx
 .env
 test*
@@ -11,14 +12,12 @@ env/
 .mypy_cache/
 .vscode/
 .~lock*
-test.py
+.ipynb_checkpoints
+test.*
 localData/
 schemaData/
 __pycache__/
 elasticsearch*/
 kibana*/
-.ipynb_checkpoints
 logs/
 run/
-schemaData/*
-*/__pycache__/*

@@ -11,37 +11,19 @@ services:
             - 9050:9050
     redis:
         image: redis
-        container_name: fad-redis
-    # elasticsearch:
-    #     image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
-    #     container_name: elasticsearch
-    #     environment: 
-    #         - discovery.type=single-node
-    #     ports:
-    #         - 9200:9200
-    #         - 9300:9300
-    # kibana:
-    #     image: docker.elastic.co/kibana/kibana:7.7.1
-    #     container_name: kibana
-    #     ports:
-    #         - 5601:5601
-    #     depends_on:
-    #         - elasticsearch
-    fad-functions:
-        # image: fad_fad-functions
+        container_name: scraper-redis
+    functions-vietstock:
         build: .
-        container_name: fad-functions
-        command: wait-for-it -s torproxy:8118 -s fad-redis:6379 -t 600  -- bash ./celery_run_cmd.sh
+        container_name: functions-vietstock
+        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash ./celery_run_cmd.sh
         environment: 
             - PROXY=yes
             - TORPROXY_HOST=torproxy
-            - REDIS_HOST=fad-redis
-            # - ELASTICSEARCH_HOST=elasticsearch
+            - REDIS_HOST=scraper-redis
+            - USER_COOKIE=B213D0C1C412BAF6B9A98B01E15B24B4A96EF0DD8B304081F90B2037575928AA32A9894F659F062390AB8F5DBF85DDCC2963FA6BCF4DF4C57D0E7578BF28313D1F0C5244256999EE20387D2E9D242CC90DE788C3E32E015B04C27DDE39136EBF99778E288C0D265B806304A3CC1C7185
         depends_on: 
             - torproxy
             - redis
-            # - elasticsearch
-            # - kibana
         volumes:
-            - ./logs:/opt/fad-functions/logs
-            - ./localData:/opt/fad-functions/localData
+            - ./logs:/opt/functions_vietstock/logs
+            - ./localData:/opt/functions_vietstock/localData
