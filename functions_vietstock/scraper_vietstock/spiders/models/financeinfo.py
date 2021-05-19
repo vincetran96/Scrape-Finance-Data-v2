@@ -1,9 +1,6 @@
-
 # This module contains settings for financeInfo Spider
-
 # Report types are summarized finances (BCTT), business targets (CTKH), balance sheets (CDKT),
 # income statements (KQKD), cash flow statements (LC), and financial indices (CSTC)
-
 # Report terms can be either "1" (for annual) or "2" (for quarter)
 
 import redis
@@ -20,7 +17,7 @@ report_terms = {"1":"Annual", "2":"Quarter"}
 ticker_report_page_count_key = f'{name}:trp_count'
 error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
 
-fi = {"url": "https://finance.vietstock.vn/data/financeinfo",
+data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
             "Code": "",
             "ReportType": "",

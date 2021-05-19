@@ -1,6 +1,4 @@
-
 # This module contains settings for corporateAZ Spider
-
 # catID: san giao dich (HOSE: 1, HNX: 2, etc.)
 # industryID: chon nganh (danh sach co the duoc lay tu request Industry List (category 1) tren Postman
 # businessTypeID: loai hinh doanh nghiep (danh sach lay tu request Business Type for Corporate A-Z) tren Postman
@@ -36,9 +34,9 @@ tickers_redis_keys = [
                       f'{ownerstructure_name}:tickers',
                       f'{ctkh_name}:tickers',
                       f'{viewprofile_name}:tickers'
-                    ]
+]
 
-closed_redis_key = f'{name_regular}:closed'
+closed_redis_key = f'{name_express}:closed'
 bizType_ind_set_key = 'bizType_ind_set'
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
@@ -69,7 +67,7 @@ data = {"url": "https://finance.vietstock.vn/data/corporateaz",
             "ind_id": "",
             "ind_name": "",
         }
-        }
+}
 
 business_type = {
         "url": "https://finance.vietstock.vn/data/businesstype",
@@ -79,7 +77,7 @@ business_type = {
         "cookies": {
             "language": constants.LANGUAGE
         },
-        }
+}
 
 industry_list = {
         "url": "https://finance.vietstock.vn/data/industrylist",
@@ -93,15 +91,17 @@ industry_list = {
             "bizType_id": "",
             "bizType_title": "",
         }
-        }
+}
 
 log_settings_regular = utilities.log_settings(spiderName=name_regular,
-                                      log_level = "INFO")
+                                      log_level = "INFO"
+)
 
 log_settings_express = utilities.log_settings(spiderName=name_express,
-                                      log_level = "INFO")
+                                      log_level = "INFO"
+)
 
-middlewares_settings={
+middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,

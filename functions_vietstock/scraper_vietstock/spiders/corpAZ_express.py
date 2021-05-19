@@ -1,48 +1,23 @@
-
 # This spider crawls the list of company names (tickers) on Vietstock,
-# feeds the list to the Redis server for other Spiders to crawl
+# feeds the list to the Redis queue for other Spiders to crawl
 
 import json
-import logging
 import os
-import random
-import sys
-import traceback
-
 import redis
 import scrapy
 from scrapy import FormRequest, Request
-from scrapy.crawler import CrawlerRunner
-from scrapy.utils.log import configure_logging
-from scrapy_redis.spiders import RedisSpider
-from twisted.internet import reactor
 
 import scraper_vietstock.spiders.models.constants as constants
-import scraper_vietstock.spiders.models.utilities as utilities
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
 from scraper_vietstock.spiders.models.constants import REDIS_HOST
-from scraper_vietstock.spiders.models.corporateaz import (all_tickers_key,
-                                                  bizType_ind_set_key,
-                                                  business_type,
-                                                  closed_redis_key)
-from scraper_vietstock.spiders.models.corporateaz import data as az
-from scraper_vietstock.spiders.models.corporateaz import (fin_insur_tickers_key,
-                                                  industry_list, name_express,
-                                                  name_regular,
-                                                  settings_express,
-                                                  settings_regular,
-                                                  tickers_redis_keys)
-from scraper_vietstock.spiders.pdfDocs import pdfDocsHandler
-
-TEST_TICKERS_LIST = ["AAA", "A32", "VIC"]
-TEST_NUM_PAGES = 2
-SAMPLE_SIZE = 5
+from scraper_vietstock.spiders.models.corporateaz import *
 
 
 class corporateazExpressHandler(scrapy.Spider):
-    """Express CorporateAZ for crawling tickers with specific business types
+    '''
+    Express CorporateAZ for crawling tickers with specific business types
     and industries
-    """
+    '''
     
     name = name_express
     custom_settings = settings_express
@@ -60,8 +35,9 @@ class corporateazExpressHandler(scrapy.Spider):
         self.all_tickers_key = all_tickers_key
 
     def start_requests(self):
-        """Get business types first
-        """
+        '''
+        A request for business types
+        '''
         req = Request(url=business_type["url"],
                       headers=business_type["headers"],
                       cookies=business_type["cookies"],
@@ -71,13 +47,14 @@ class corporateazExpressHandler(scrapy.Spider):
         yield req
 
     def parse_biz_type(self, response):
-        """Then get industry list
-        """
+        '''
+        After getting a business type, make a request for industries
+        '''
+
         if response:
             try:
-                res = json.loads(response.text)
-
-                for bt in res:
+                resp_json = json.loads(response.text)
+                for bt in resp_json:
                     industry_list["meta"]["bizType_id"] = str(bt["ID"])
                     industry_list["meta"]["bizType_title"] = bt["Title"]
                     req = Request(url=industry_list["url"],
@@ -88,43 +65,48 @@ class corporateazExpressHandler(scrapy.Spider):
                                   errback=self.handle_error,
                                   dont_filter=True)
                     yield req
-            except:
-                self.logger.info("Response cannot be parsed by JSON at parse_biz_type")
+            except Exception as exc:
+                self.logger.info(f'Response cannot be parsed by JSON at parse_biz_type: {exc}')
 
     def parse_ind_list(self, response):
-        """Push all biz types and industries into meta for corpAZ requests
-        """
+        '''
+        After having info on business types and industries, make
+        requests for corporateAZ to get tickers of each type-industry
+        '''
 
         if response:
             try:
-                res = json.loads(response.text)
+                resp_json = json.loads(response.text)
                 bizType_id = response.meta['bizType_id']
                 bizType_title = response.meta['bizType_title']
 
-                for ind in res:
-                    az["meta"]["bizType_id"] = bizType_id
-                    az["meta"]["bizType_title"] = bizType_title
-                    az["meta"]["ind_id"] = str(ind["ID"])
-                    az["meta"]["ind_name"] = ind["Name"]
-                    az["formdata"]["businessTypeID"] = bizType_id
-                    az["formdata"]["industryID"] = str(ind["ID"])
-                    az["formdata"]["orderBy"] = "TotalShare"
-                    az["formdata"]["orderDir"] = "DESC"
-                    req = FormRequest(url=az["url"],
-                                      formdata=az["formdata"],
-                                      headers=az["headers"],
-                                      cookies=az["cookies"],
-                                      meta=az["meta"],
+                for ind in resp_json:
+                    data["meta"]["bizType_id"] = bizType_id
+                    data["meta"]["bizType_title"] = bizType_title
+                    data["meta"]["ind_id"] = str(ind["ID"])
+                    data["meta"]["ind_name"] = ind["Name"]
+                    data["formdata"]["businessTypeID"] = bizType_id
+                    data["formdata"]["industryID"] = str(ind["ID"])
+                    data["formdata"]["orderBy"] = "TotalShare"
+                    data["formdata"]["orderDir"] = "DESC"
+                    req = FormRequest(url=data["url"],
+                                      formdata=data["formdata"],
+                                      headers=data["headers"],
+                                      cookies=data["cookies"],
+                                      meta=data["meta"],
                                       callback=self.parse_az,
                                       errback=self.handle_error,
                                       dont_filter=True)
                     yield req
-            except Exception as e:
-                self.logger.info("Response cannot be parsed by JSON at parse_ind_list")
+            except Exception as exc:
+                self.logger.info(f'Response cannot be parsed by JSON at parse_ind_list: {exc}')
 
     def parse_az(self, response):
-        """In this 'express' version of corpAZ, we only crawl the first page
-        """
+        '''
+        Process the list of tickers by sending them into Redis queue
+        for financeInfo Spider to consume
+        '''
+
         if response:
             page = int(response.meta['page'])
             total_pages = response.meta['TotalPages']
@@ -132,101 +114,102 @@ class corporateazExpressHandler(scrapy.Spider):
             bizType_title = response.meta['bizType_title']
             ind_id = response.meta['ind_id']
             ind_name = response.meta['ind_name']
-
             try:
-                res = json.loads(response.text)
-                ### Only get random `SAMPLE_SIZE` tickers, because it's express
-                if SAMPLE_SIZE <= len(res):
-                    rand = random.sample(res, SAMPLE_SIZE)
-                else:
-                    rand = res
+                resp_json = json.loads(response.text)
+                tickers_list = [d['Code'] for d in resp_json]
+                self.logger.info(f'Found these tickers on page {page}: {tickers_list}')
 
-                ### Change back to `rand` later...
-                ### Right now getting all tickers on the page
-                tickers_list = [d['Code'] for d in res]
-
-                self.logger.info(f'Found these tickers on page {page}: {str(tickers_list)}')
-
-                ### If the tickers list is not empty:
-                ### Add the bizType and ind_name to available bizType_ind combinations set
-                ### Set biz id and ind id for each ticker, which is a key in Redis
-                ### Push tickers into financeInfo and other spiders
+                # If the tickers list is not empty:
+                # - Add the bizType and ind_name to available bizType_ind combinations set
+                # - Set biz id and ind id for each ticker, which is a key in Redis
+                # - Push tickers into Redis queue for financeInfo and other spiders to consume
                 if tickers_list != []:
                     self.r.sadd(bizType_ind_set_key, f'{bizType_title};{ind_name}')
                     for t in tickers_list:
                         self.r.set(t, f'{bizType_title};{ind_name}')
 
-                    ### Total pages need to be calculated or delivered from previous request's meta
-                    total_records = res[0]['TotalRecord']
+                    # Total pages need to be calculated (for 1st page) or 
+                    # delivered from meta of previous page's request
+                    total_records = resp_json[0]['TotalRecord']
                     total_pages =  total_records // int(
-                        constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages)
-                    self.logger.info(f'Found {total_pages} page(s) for {bizType_title};{ind_name}')
-                    self.logger.info(f'That equals to {total_records} ticker(s) for {bizType_title};{ind_name}')
+                        constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages
+                    )
+                    self.logger.info(f'Found {total_records} ticker(s) for {bizType_title};{ind_name}')
+                    self.logger.info(f'That equals to {total_pages} page(s) for {bizType_title};{ind_name}')
+
+                    # Count the total number of records
+                    if page == 1:
+                        self.r.incrby(self.all_tickers_key, amount=total_records)
                     
-                    ### Count the total number of records for `Finance and Insurance` industry
-                    ### August 11, 2020: Only push non-finance industries
+                    # Count the total number of records for `Finance and Insurance` industry
+                    # As of 2021-05-18: Only push non-finance industries into queue
                     if ind_name == "Finance and Insurance":
                         if page == 1:
                             self.r.incrby(self.fin_insur_tickers_key, amount=total_records)
                     else:
                         for t in tickers_list:
+                            # Push to financeInfo queue needs to be different
                             self.r.lpush(tickers_redis_keys[0], f'{t};1')
                             for k in tickers_redis_keys[1:]:
                                 self.r.lpush(k, t)
 
-                    ### Count the total number of records
-                    if page == 1:
-                        self.r.incrby(self.all_tickers_key, amount=total_records)
-
-                    ### If current page < total pages, send next request
+                    # If current page < total pages, yield a request for the next page
                     if page < total_pages:
                         next_page = str(page + 1)
                         self.logger.info(f'Crawling page {next_page} of total {total_pages} for {bizType_title};{ind_name}')
-                        az["meta"]["page"] = next_page
-                        az["meta"]["TotalPages"] = str(total_pages)
-                        az["meta"]["bizType_id"] = bizType_id
-                        az["meta"]["bizType_title"] = bizType_title
-                        az["meta"]["ind_id"] = ind_id
-                        az["meta"]["ind_name"] = ind_name
-                        az["formdata"]["page"] = next_page
-                        az["formdata"]["businessTypeID"] = bizType_id
-                        az["formdata"]["industryID"] = ind_id
-                        az["formdata"]["orderBy"] = "TotalShare"
-                        az["formdata"]["orderDir"] = "DESC"
-                        req_next = FormRequest(url=az["url"],
-                                      formdata=az["formdata"],
-                                      headers=az["headers"],
-                                      cookies=az["cookies"],
-                                      meta=az["meta"],
+                        data["meta"]["page"] = next_page
+                        data["meta"]["TotalPages"] = str(total_pages)
+                        data["meta"]["bizType_id"] = bizType_id
+                        data["meta"]["bizType_title"] = bizType_title
+                        data["meta"]["ind_id"] = ind_id
+                        data["meta"]["ind_name"] = ind_name
+                        data["formdata"]["page"] = next_page
+                        data["formdata"]["businessTypeID"] = bizType_id
+                        data["formdata"]["industryID"] = ind_id
+                        data["formdata"]["orderBy"] = "TotalShare"
+                        data["formdata"]["orderDir"] = "DESC"
+                        req_next = FormRequest(url=data["url"],
+                                      formdata=data["formdata"],
+                                      headers=data["headers"],
+                                      cookies=data["cookies"],
+                                      meta=data["meta"],
                                       callback=self.parse_az,
                                       errback=self.handle_error,
                                       dont_filter=True)
                         yield req_next
-            except:
-                self.logger.info("Response cannot be parsed by JSON at parse_az")
+            except Exception as exc:
+                self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exec}')
         else:
             self.logger.info("Response is null")
 
     def closed(self, reason="CorporateAZ-Express Finished"):
-        ### Write bizType and ind set to a file for mapping work later
+        '''
+        This function will be called when this Spider closes
+        '''
+
+        # Write bizType and ind set to a file for mapping work later
         bizType_ind_list = sorted(list(self.r.smembers(bizType_ind_set_key)))
         save_jsonfile(bizType_ind_list, filename='schemaData/bizType_ind_list.json')
         
-        ### Closing procedures
+        # Closing procedures
         self.r.set(closed_redis_key, "1")
         self.close_status()
-        self.logger.info(
-            f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
-        self.logger.info(
-            f'Tickers have been pushed into {str(tickers_redis_keys)}')
+        self.logger.info(f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
+        self.logger.info(f'Tickers have been pushed into {str(tickers_redis_keys)}')
 
     def handle_error(self, failure):
+        '''
+        I don't know why this is here...
+        '''
+
         self.logger.info(str(failure.type))
         self.logger.info(str(failure.getErrorMessage()))
 
     def close_status(self):
-        """Clear running status file after closing
-        """
+        '''
+        Clear running status file as part of closing procedure
+        '''
+
         fin_insur_count = self.r.get(self.fin_insur_tickers_key)
         all_count = self.r.get(self.all_tickers_key)
         self.logger.info(f'There are {fin_insur_count} tickers in the Finance and Insurance industry')
