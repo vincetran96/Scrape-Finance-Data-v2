@@ -1,38 +1,33 @@
-# This spider crawls the list of company names (tickers) on Vietstock,
-# feeds the list to the Redis queue for other Spiders to crawl
+# This Spider gets corpAZ info on demand of the user
+# Syntax:
+# scrapy crawl corporateAZOnDemand
 
-import json
 import os
-import redis
+import json
 import scrapy
 from scrapy import FormRequest, Request
 
 import scraper_vietstock.spiders.models.constants as constants
-from scraper_vietstock.helpers.fileDownloader import save_jsonfile
-from scraper_vietstock.spiders.models.constants import REDIS_HOST
 from scraper_vietstock.spiders.models.corporateaz import *
+from scraper_vietstock.helpers.fileDownloader import save_jsonfile
 
 
-class corporateazExpressHandler(scrapy.Spider):
+class corporateazOnDemand(scrapy.Spider):
     '''
-    Express CorporateAZ for crawling tickers with specific business types
-    and industries
+    CorporateAZ Spider for getting corpAZ info on demand, without using Redis queue
+    Instead, at the end, it exports a dict of biztype;indu and tickers within each pair
     '''
-    
-    name = name_express
-    custom_settings = settings_express
 
-    def __init__(self, tickers_list="", *args, **kwargs):
-        super(corporateazExpressHandler, self).__init__(*args, **kwargs)
-        self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
-        self.r.set(closed_redis_key, "0")
+    name = name_ondemand
+
+    def __init__(self, *args, **kwargs):
+        super(corporateazOnDemand, self).__init__(*args, **kwargs)
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
         os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
             statusfile.write('running')
             statusfile.close()
-        self.fin_insur_tickers_key = fin_insur_tickers_key
-        self.all_tickers_key = all_tickers_key
+        self.bizType_indu_tickers = {}
 
     def start_requests(self):
         '''
@@ -124,9 +119,11 @@ class corporateazExpressHandler(scrapy.Spider):
                 # - Set biz id and ind id for each ticker, which is a key in Redis
                 # - Push tickers into Redis queue for financeInfo and other spiders to consume
                 if tickers_list != []:
-                    self.r.sadd(bizType_ind_set_key, f'{bizType_title};{ind_name}')
-                    for t in tickers_list:
-                        self.r.set(t, f'{bizType_title};{ind_name}')
+                    key =  f'{bizType_title};{ind_name}'
+                    if key not in self.bizType_indu_tickers:
+                        self.bizType_indu_tickers[key] = tickers_list
+                    else:
+                        self.bizType_indu_tickers[key] += tickers_list
 
                     # Total pages need to be calculated (for 1st page) or 
                     # delivered from meta of previous page's request
@@ -136,22 +133,6 @@ class corporateazExpressHandler(scrapy.Spider):
                     )
                     self.logger.info(f'Found {total_records} ticker(s) for {bizType_title};{ind_name}')
                     self.logger.info(f'That equals to {total_pages} page(s) for {bizType_title};{ind_name}')
-
-                    # Count the total number of records
-                    if page == 1:
-                        self.r.incrby(self.all_tickers_key, amount=total_records)
-                    
-                    # Count the total number of records for `Finance and Insurance` industry
-                    # As of 2021-05-18: Only push non-finance industries into queue
-                    if ind_name == "Finance and Insurance":
-                        if page == 1:
-                            self.r.incrby(self.fin_insur_tickers_key, amount=total_records)
-                    else:
-                        for t in tickers_list:
-                            # Push to financeInfo queue needs to be different
-                            self.r.lpush(tickers_redis_keys[0], f'{t};1')
-                            for k in tickers_redis_keys[1:]:
-                                self.r.lpush(k, t)
 
                     # If current page < total pages, yield a request for the next page
                     if page < total_pages:
@@ -183,20 +164,16 @@ class corporateazExpressHandler(scrapy.Spider):
         else:
             self.logger.info("Response is null")
 
-    def closed(self, reason="CorporateAZ-Express Finished"):
+    def closed(self, reason="CorporateAZOnDemand Finished"):
         '''
         This function will be called when this Spider closes
         '''
 
-        # Write bizType and ind set to a file for mapping work later
-        bizType_ind_list = sorted(list(self.r.smembers(bizType_ind_set_key)))
-        save_jsonfile(bizType_ind_list, filename='schemaData/bizType_ind_list.json')
+        # Write bizType_indu_tickers dict to a file
+        save_jsonfile(self.bizType_indu_tickers, filename='schemaData/bizType_ind_list.json')
         
         # Closing procedures
-        self.r.set(closed_redis_key, "1")
         self.close_status()
-        self.logger.info(f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
-        self.logger.info(f'Tickers have been pushed into {str(tickers_redis_keys)}')
 
     def handle_error(self, failure):
         '''
@@ -210,11 +187,6 @@ class corporateazExpressHandler(scrapy.Spider):
         '''
         Clear running status file as part of closing procedure
         '''
-
-        fin_insur_count = self.r.get(self.fin_insur_tickers_key)
-        all_count = self.r.get(self.all_tickers_key)
-        self.logger.info(f'There are {fin_insur_count} tickers in the Finance and Insurance industry')
-        self.logger.info(f'There are {all_count} in all')
         
         if os.path.exists(self.statusfilepath):
             os.remove(self.statusfilepath)

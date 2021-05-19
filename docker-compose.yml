@@ -27,3 +27,4 @@ services:
         volumes:
             - ./logs:/opt/functions_vietstock/logs
             - ./localData:/opt/functions_vietstock/localData
+            - ./schemaData:/opt/functions_vietstock/schemaData

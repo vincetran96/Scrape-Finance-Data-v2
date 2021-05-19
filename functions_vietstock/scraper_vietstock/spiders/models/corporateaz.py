@@ -4,7 +4,6 @@
 # businessTypeID: loai hinh doanh nghiep (danh sach lay tu request Business Type for Corporate A-Z) tren Postman
 # type: tabs (A-Z, Danh sach CK dang NY/GD, Niem yet moi/DKGD moi, etc.)
 
-import redis
 
 import scraper_vietstock.spiders.models.constants as constants
 import scraper_vietstock.spiders.models.utilities as utilities
@@ -21,6 +20,7 @@ from scraper_vietstock.spiders.models.viewprofile import name as viewprofile_nam
 
 name_regular = "corporateAZ"
 name_express = "corporateAZExpress"
+name_ondemand = "corporateAZOnDemand"
 fin_insur_tickers_key = "finance_and_insurance_tickers_total"
 all_tickers_key = "all_tickers_total"
 

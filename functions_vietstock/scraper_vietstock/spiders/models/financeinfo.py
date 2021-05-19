@@ -45,7 +45,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
                                       log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
-                                      )
+)
 
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {

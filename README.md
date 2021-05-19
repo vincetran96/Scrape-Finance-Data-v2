@@ -2,4 +2,4 @@
 
 As this repo is under heavy re-development, so documentation is minimal at the moment.
 
-To run, use `docker compose up --build --no-cache`.
+To run, use `docker-compose build --no-cache && docker-compose up`.
