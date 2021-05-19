@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains settings for corporateAZ Spider
 
 # catID: san giao dich (HOSE: 1, HNX: 2, etc.)

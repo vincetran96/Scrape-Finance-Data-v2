@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains ultilities for handling non-downloader errors and logging, used across all Spiders
 
 import json

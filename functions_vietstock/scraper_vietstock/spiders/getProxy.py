@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This spider crawls a list of usable proxies and feed into a Redis key for other spiders to use
 # This spider may need to run every 5 minutes during the crawling session (as per ProxyScrape)
 # This spider is extremely slow in getting OK proxies, so we are not using it (June 2020)

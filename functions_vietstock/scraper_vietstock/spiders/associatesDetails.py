@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This spider crawls a stock ticker's associated companies/subsidiaries
 
 import json

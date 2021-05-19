@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This spider crawls a ticker's PDF Documents
 
 import json

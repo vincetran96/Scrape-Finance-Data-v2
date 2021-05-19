@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains settings for pdfDocs Spider
 
 # Parameters for type are as follows

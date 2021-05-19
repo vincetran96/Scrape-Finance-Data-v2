@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains helper functions to control proxies used in crawlers
 
 import requests

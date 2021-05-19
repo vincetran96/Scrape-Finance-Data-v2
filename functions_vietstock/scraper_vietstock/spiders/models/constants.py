@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains constants used in Spiders
 
 import os

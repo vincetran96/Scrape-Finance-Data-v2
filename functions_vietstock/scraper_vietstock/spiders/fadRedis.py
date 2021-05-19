@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # FAD Redis spider - the project's RedisSpiders should be based on this
 
 import json

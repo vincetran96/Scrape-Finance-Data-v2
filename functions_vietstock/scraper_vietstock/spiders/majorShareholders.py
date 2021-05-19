@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # Used for getting the list of the members of the board of directors of a company
 
 import json

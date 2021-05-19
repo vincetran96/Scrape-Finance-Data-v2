@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This spider crawls a stock ticker's company structure on Vietstock
 
 import json

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # Used for getting the list of companies in the same industry
 
 import json

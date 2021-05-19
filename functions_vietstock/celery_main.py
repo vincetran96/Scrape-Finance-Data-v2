@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains the main Celery app
 
 from celery import Celery

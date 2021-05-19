@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains settings for financeInfo Spider
 
 # Report types are summarized finances (BCTT), business targets (CTKH), balance sheets (CDKT),

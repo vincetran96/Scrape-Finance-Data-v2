@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This spider crawls the list of company names (tickers) on Vietstock,
 # feeds the list to the Redis server for other Spiders to crawl
 

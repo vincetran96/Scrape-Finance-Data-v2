@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains the stats for ticker-level Spiders
 
 from scrapy.downloadermiddlewares.stats import DownloaderStats

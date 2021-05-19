@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # This module contains settings for Celery
 
 from scraper_vietstock.spiders.models.constants import REDIS_HOST

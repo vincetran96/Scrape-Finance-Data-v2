@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 # Scrapy settings for fad_crawl project
 #

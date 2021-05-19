@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 # Used to crawl the top 2 industry levels of a company
 
 import json
