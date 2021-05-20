@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 # Attempt to load env vars
 load_dotenv(os.path.join("", ".env"))
+
+# Proxy constants
 try:
     proxy = os.getenv('PROXY')
 except:
@@ -28,16 +30,14 @@ else:
     PRIVOXY_LOCAL_PROXY = []
     REQUESTS_LOCAL_PROXY = ""
 
+# Redis constants
+REDIS_PORT = 6379
 try:
     REDIS_HOST = os.getenv('REDIS_HOST')
 except:
     REDIS_HOST = "scraper-redis"
 
-try:
-    ELASTICSEARCH_HOST = os.getenv('ELASTICSEARCH_HOST')
-except:
-    ELASTICSEARCH_HOST = "localhost"
-
+# User cookie
 try:
     USER_COOKIE = os.getenv('USER_COOKIE')
 except:
@@ -65,3 +65,8 @@ DOWNLOADER_EXCEPTION_COUNT_SUFFIX = "dwnldrexception_count"
 
 CRAWLED_SET_SUFFIX = "crawled_set"
 ERROR_SET_SUFFIX = "error_set"
+
+# try:
+#     ELASTICSEARCH_HOST = os.getenv('ELASTICSEARCH_HOST')
+# except:
+#     ELASTICSEARCH_HOST = "localhost"

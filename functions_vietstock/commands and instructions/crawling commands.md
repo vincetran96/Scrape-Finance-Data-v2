@@ -22,6 +22,7 @@ redis-server
 rabbitmq
 
 # Start a celery worker
+## On Linux/Mac
 celery -A celery_main worker -l INFO --detach
 celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
 celery -A celery_main worker -Q finance -c 10 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
@@ -35,7 +36,7 @@ celery -A celery_main worker -Q finance -P solo -c 10 -n workerfinance@%h -l INF
 celery purge -A celery_main -f
 
 # Send tasks to the worker
-At the `functions` folder of the project
+At the `functions_vietstock` folder of the project
 ```
 python3
 from celery_tasks import *

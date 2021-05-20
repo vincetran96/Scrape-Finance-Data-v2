@@ -12,16 +12,17 @@ from scraper_vietstock.spiders.models.corporateaz import *
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
 
 
-class corporateazOnDemand(scrapy.Spider):
+class corporateazOnDemandHandler(scrapy.Spider):
     '''
     CorporateAZ Spider for getting corpAZ info on demand, without using Redis queue
     Instead, at the end, it exports a dict of biztype;indu and tickers within each pair
     '''
 
     name = name_ondemand
+    custom_settings = settings_ondemand
 
     def __init__(self, *args, **kwargs):
-        super(corporateazOnDemand, self).__init__(*args, **kwargs)
+        super(corporateazOnDemandHandler, self).__init__(*args, **kwargs)
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
         os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:

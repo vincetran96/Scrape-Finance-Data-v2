@@ -12,7 +12,7 @@
 from scraper_vietstock.spiders.models.constants import REDIS_HOST
 
 
-BOT_NAME = 'fad_crawl'
+BOT_NAME = 'scraper_vietstock'
 
 SPIDER_MODULES = ['scraper_vietstock.spiders']
 NEWSPIDER_MODULE = 'scraper_vietstock.spiders'
@@ -38,12 +38,11 @@ ITEM_PIPELINES = {
 }
 
 # Specify the host and port to use when connecting to Redis (optional).
-REDIS_HOST = REDIS_HOST
-REDIS_PORT = 6379
+# REDIS_HOST = REDIS_HOST
+# REDIS_PORT = 6379
 
 # Default start urls key for RedisSpider and RedisCrawlSpider.
 # REDIS_START_URLS_KEY = '%(name)s:start_urls'
-### REDIS SETTINGS ###
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)

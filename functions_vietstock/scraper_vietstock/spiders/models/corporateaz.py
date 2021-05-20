@@ -21,6 +21,7 @@ from scraper_vietstock.spiders.models.viewprofile import name as viewprofile_nam
 name_regular = "corporateAZ"
 name_express = "corporateAZExpress"
 name_ondemand = "corporateAZOnDemand"
+name_base = "corporateAZBase"
 fin_insur_tickers_key = "finance_and_insurance_tickers_total"
 all_tickers_key = "all_tickers_total"
 
@@ -101,6 +102,10 @@ log_settings_express = utilities.log_settings(spiderName=name_express,
                                       log_level = "INFO"
 )
 
+log_settings_ondemand = utilities.log_settings(spiderName=name_ondemand,
+                                      log_level = "INFO"
+)
+
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
@@ -112,5 +117,14 @@ proxy_settings = {
     'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
-settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings}
-settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings}
+redis_settings = {
+    'REDIS_HOST': constants.REDIS_HOST,
+    'REDIS_PORT': constants.REDIS_PORT
+}
+
+# Combine above settings for appropriate Spiders
+settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings, **redis_settings}
+
+settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings, **redis_settings}
+
+settings_ondemand = {**log_settings_ondemand, **middlewares_settings, **proxy_settings}

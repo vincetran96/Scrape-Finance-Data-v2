@@ -17,9 +17,9 @@ services:
         container_name: functions-vietstock
         command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash ./celery_run_cmd.sh
         environment: 
+            - REDIS_HOST=scraper-redis
             - PROXY=yes
             - TORPROXY_HOST=torproxy
-            - REDIS_HOST=scraper-redis
             - USER_COOKIE=B213D0C1C412BAF6B9A98B01E15B24B4A96EF0DD8B304081F90B2037575928AA32A9894F659F062390AB8F5DBF85DDCC2963FA6BCF4DF4C57D0E7578BF28313D1F0C5244256999EE20387D2E9D242CC90DE788C3E32E015B04C27DDE39136EBF99778E288C0D265B806304A3CC1C7185
         depends_on: 
             - torproxy

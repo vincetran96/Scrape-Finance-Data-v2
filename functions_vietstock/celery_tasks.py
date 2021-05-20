@@ -14,7 +14,7 @@ from celery_main import app
 import scraper_vietstock.helpers.fileDownloader as downloader
 from scraper_vietstock.spiders.financeInfo import financeInfoHandler
 from scraper_vietstock.spiders.corpAZ import corporateazHandler
-from scraper_vietstock.spiders.corpAZ_express import corporateazExpressHandler
+from scraper_vietstock.spiders.corpAZExpress import corporateazExpressHandler
 from scraper_vietstock.spiders.pdfDocs import pdfDocsHandler
 from scraper_vietstock.spiders.financeInfo import financeInfoHandler
 from scraper_vietstock.spiders.pdfDocs import pdfDocsHandler

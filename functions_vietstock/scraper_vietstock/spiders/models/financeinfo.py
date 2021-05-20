@@ -64,8 +64,12 @@ proxy_settings = {
     'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
-redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
+redis_settings = {
+    'REDIS_START_URLS_KEY': "%(name)s:tickers",
+    'REDIS_HOST': constants.REDIS_HOST,
+    'REDIS_PORT': constants.REDIS_PORT
+}
 
-concurrency_settings = {'CONCURRENT_REQUESTS': 64}
+concurrency_settings = {'CONCURRENT_REQUESTS': 32}
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings, **concurrency_settings}
+settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}
