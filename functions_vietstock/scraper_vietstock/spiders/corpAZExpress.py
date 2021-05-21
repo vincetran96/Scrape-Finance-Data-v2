@@ -25,13 +25,10 @@ class corporateazExpressHandler(corporateazBaseHandler):
 
     def __init__(self, *args, **kwargs):
         super(corporateazExpressHandler, self).__init__(*args, **kwargs)
+        
+        # Redis-specific attributes
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
-        self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
-        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
-        with open(self.statusfilepath, 'w') as statusfile:
-            statusfile.write('running')
-            statusfile.close()
         self.fin_insur_tickers_key = fin_insur_tickers_key
         self.all_tickers_key = all_tickers_key
 
@@ -48,7 +45,6 @@ class corporateazExpressHandler(corporateazBaseHandler):
         for t in tickers_list:
             self.r.set(t, f'{bizType_title};{ind_name}')
 
-        # Count the total number of records
         if page == 1:
             self.r.incrby(self.all_tickers_key, amount=total_records)
         

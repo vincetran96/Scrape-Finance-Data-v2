@@ -5,6 +5,7 @@ import os
 import scrapy
 from scrapy import FormRequest, Request
 
+import scraper_vietstock.spiders.models.constants as constants
 from scraper_vietstock.spiders.models.corporateaz import *
 
 
@@ -17,6 +18,11 @@ class corporateazBaseHandler(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(corporateazBaseHandler, self).__init__(*args, **kwargs)
+        self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
+        os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
+        with open(self.statusfilepath, 'w') as statusfile:
+            statusfile.write('running')
+            statusfile.close()
 
     def start_requests(self):
         '''
@@ -103,10 +109,6 @@ class corporateazBaseHandler(scrapy.Spider):
                 tickers_list = [d['Code'] for d in resp_json]
                 self.logger.info(f'Found these tickers on page {page} of {bizType_title};{ind_name}: {tickers_list}')
 
-                # If the tickers list is not empty:
-                # - Add the bizType and ind_name to available bizType_ind combinations set
-                # - Set biz id and ind id for each ticker, which is a key in Redis
-                # - Push tickers into Redis queue for financeInfo and other spiders to consume
                 if tickers_list != []:
                     # Total pages need to be calculated (for 1st page) or 
                     # delivered from meta of previous page's request
@@ -117,9 +119,13 @@ class corporateazBaseHandler(scrapy.Spider):
                     self.logger.info(f'Found {total_records} ticker(s) for {bizType_title};{ind_name}')
                     self.logger.info(f'That equals to {total_pages} page(s) for {bizType_title};{ind_name}')
 
-                    # Push info into Redis queue if the function is defined
+                    # For AZExpress: Push info into Redis queue if the function is defined
                     if getattr(self, "parse_redis_queue", None):
-                        getattr(self, "parse_redis_queue", None)(self, tickers_list, page, bizType_title, ind_name, total_records)
+                        getattr(self, "parse_redis_queue")(tickers_list, page, bizType_title, ind_name, total_records)
+
+                    # For AZOnDemand: Aggregate bizType, industry, and ticker data if the function is defined
+                    if getattr(self, "parse_bizType_indu_tickers", None):
+                        getattr(self, "parse_bizType_indu_tickers")(tickers_list, bizType_title, ind_name)
 
                     # If current page < total pages, yield a request for the next page
                     if page < total_pages:
@@ -146,19 +152,25 @@ class corporateazBaseHandler(scrapy.Spider):
                                       dont_filter=True
                         )
                         yield req_next
+                        
             except Exception as exc:
-                self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exec}')
+                self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exc}')
         else:
             self.logger.info("Response is null")
 
-    def closed(self, reason="CorporateAZ-Express Finished"):
+    def closed(self, reason="Spider Finished"):
         '''
         This function will be called when this Spider closes
         '''
         
-        # Some closing procedures on Redis queue if the function is defined
+        # For AZExpress: Some closing procedures on Redis queue if the function is defined
         if getattr(self, "closed_redis_queue", None):
-            getattr(self, "closed_redis_queue", None)()
+            getattr(self, "closed_redis_queue")()
+
+        # For AZOnDemand: Save result procedure
+        if getattr(self, "save_OnDemand_result", None):
+            getattr(self, "save_OnDemand_result")()
+        
         self.close_status()
 
     def close_status(self):

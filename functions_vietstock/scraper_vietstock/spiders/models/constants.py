@@ -1,4 +1,3 @@
-
 # This module contains constants used in Spiders
 
 import os
