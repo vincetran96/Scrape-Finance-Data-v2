@@ -20,13 +20,13 @@ from scrapy_redis.utils import bytes_to_str
 
 import scraper_vietstock.spiders.models.utilities as utilities
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
-from scraper_vietstock.spiders.fadRedis import fadRedisSpider
+from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 from scraper_vietstock.spiders.models.counterparts import count_data
 from scraper_vietstock.spiders.models.counterparts import find_data as ctp
 from scraper_vietstock.spiders.models.counterparts import name, settings
 
 
-class counterPartsHandler(fadRedisSpider):
+class counterPartsHandler(scraperVSRedisSpider):
     name = name
     custom_settings = settings
 

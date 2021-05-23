@@ -1,4 +1,4 @@
-# This spider crawls a stock ticker's finance reports on Vietstock
+# This Spider scrapes finance info on demand (i.e., for a specific ticker)
 
 import json
 from scrapy import FormRequest
@@ -10,17 +10,31 @@ from scraper_vietstock.spiders.models.financeinfo import *
 from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 
 
-class financeInfoHandler(scraperVSRedisSpider):
-    name = name
-    custom_settings = settings
+class financeInfoOnDemandHandler(scraperVSRedisSpider):
+    '''
+    On demand financeInfo spider
+    Command line syntax: scrapy crawl financeInfoOnDemand -a ticker=AAA -a report_type=CDKT -a report_term=2
+    '''
+
+    name = name_ondemand
+    custom_settings = settings_ondemand
 
     def __init__(self, *args, **kwargs):
-        super(financeInfoHandler, self).__init__(*args, **kwargs)
+        super(financeInfoOnDemandHandler, self).__init__(*args, **kwargs)
         self.idling = False
+        self.r.flushdb()
 
-        self.ticker_report_page_count_key = ticker_report_page_count_key
-        self.r.set(self.ticker_report_page_count_key, "0")
+    def start_requests(self):
+        '''
+        Replaces the default method.
+        '''
 
+        if getattr(self, "page", None):
+            self.r.lpush(self.redis_key, f'{self.ticker};{self.page};{self.report_type};{self.report_term}')
+        else:
+            self.r.lpush(self.redis_key, f'{self.ticker};1;{self.report_type};{self.report_term}')
+        return self.next_requests()
+    
     def next_requests(self):
         '''
         Replaces the default method. Closes spider when tickers are crawled and queue empty.
@@ -37,45 +51,24 @@ class financeInfoHandler(scraperVSRedisSpider):
             params = bytes_to_str(data, self.redis_encoding).split(";")
             ticker = params[0]
             page = params[1]
+            report_type = params[2]
+            report_term = params[3]
             self.idling = False
-
-            # If report type is pushed in (as params[2]), this must be a subsequent request from self.parse()
-            # Else, loop thru all report types and make requests
-            try:
-                report_type = params[2]
-                for report_term in report_terms.keys():
-                    req = self.make_request_from_data(ticker, report_type, page, report_term)
-                    if req:
-                        yield req
-                        self.r.incr(self.ticker_report_page_count_key)
-                    else:
-                        self.logger.info("Request not made from params: %r", params)
-            except:
-                for report_type in report_types:
-                    for report_term in report_terms.keys():
-                        req = self.make_request_from_data(ticker, report_type, page, report_term)
-                        if req:
-                            yield req
-                            self.r.incr(self.ticker_report_page_count_key)
-                        else:
-                            self.logger.info("Request not made from params: %r", params)
-            found += 1
-        if found:
-            self.logger.debug(f'Read {found} param(s) from {self.redis_key}')
+            req = self.make_request_from_data(ticker, report_type, page, report_term)
+            if req:
+                yield req
+                self.logger.info(f'Scraping page {page} of report {report_type} - term {report_term} - ticker {ticker}')
+            else:
+                self.logger.info("Request not made from params: %r", params)
         
-        self.logger.info(
-            f'Total requests supposed to process: {self.r.get(self.ticker_report_page_count_key)}'
-        )
-
-        # Close spider if corpAZ is closed and Spider Redis queue is empty and Spider is idling:
-        # - Print requests with errors, then delete all keys related to this Spider
-        if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(self.redis_key) == 0 and self.idling == True:
+        # Close Spider if queue is empty and Spider is idling
+        if self.r.llen(self.redis_key) == 0 and self.idling == True:
             self.logger.info(self.r.smembers(self.error_set_key))
             keys = self.r.keys(f'{self.name}*')
             for k in keys:
                 self.r.delete(k)
             self.crawler.engine.close_spider(
-                spider=self, reason="CorpAZ is closed; Queue is empty; Spider is idling"
+                spider=self, reason="Queue is empty; Spider is idling"
             )
             self.close_status()
 
@@ -102,12 +95,10 @@ class financeInfoHandler(scraperVSRedisSpider):
                            errback=self.handle_error,
                            dont_filter=True
         )
- 
+
     def parse(self, response):
         '''
-        If the first obj in response is empty, then we've finished the report type for this ticker
-        If there's actual data in response, save JSON and remove {ticker};{page};{report_type} value
-        from error list, then crawl the next page
+        Parse response
         '''
 
         if response:
@@ -115,29 +106,19 @@ class financeInfoHandler(scraperVSRedisSpider):
             report_type = response.meta['ReportType']
             page = response.meta['page']
             report_term = response.meta['ReportTermType']
-
             self.logger.info(f'On page {page} of {report_type} for {ticker}')
-
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
-                bizType_title, ind_name = self.r.get(ticker).split(";")
-
                 if resp_json[0] == []:
                     self.logger.info(f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
-                else:
-                    # Write local data files in an express way
-                    # save_jsonfile(
-                    #     resp_json, filename=f'schemaData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
-                    
-                    # Writing local data files in the regular way
+                else:                    
                     save_jsonfile(
                         resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json'
                     )
-
-                    # Remove error items (regardless exist or not) and crawl next page
-                    self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')
+                    # Remove any errors in the error set and crawl next page
+                    self.r.srem(self.error_set_key, f'{ticker};{page};{report_type};{report_term}')
                     next_page = str(int(page) + 1)
-                    self.r.lpush(self.redis_key, f'{ticker};{next_page};{report_type}')
+                    self.r.lpush(self.redis_key, f'{ticker};{next_page};{report_type};{report_term}')
             except Exception as e:
                 self.logger.info(f'Exception at {page} of {report_type} for {ticker}: {e}')
-                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
+                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type};{report_term}')

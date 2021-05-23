@@ -24,7 +24,6 @@ NEWSPIDER_MODULE = 'scraper_vietstock.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
-
 ### REDIS SETTINGS ###
 # Enables scheduling storing requests queue in redis.
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"

@@ -57,6 +57,7 @@ class corporateazExpressHandler(corporateazBaseHandler):
             for t in tickers_list:
                 # Push to financeInfo queue needs to be different
                 self.r.lpush(tickers_redis_keys[0], f'{t};1')
+                # Push to other queues
                 for k in tickers_redis_keys[1:]:
                     self.r.lpush(k, t)
 

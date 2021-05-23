@@ -15,16 +15,18 @@ services:
     functions-vietstock:
         build: .
         container_name: functions-vietstock
-        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash ./celery_run_cmd.sh
+        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- /bin/bash
+        stdin_open: true
+        tty: true
         environment: 
             - REDIS_HOST=scraper-redis
             - PROXY=yes
             - TORPROXY_HOST=torproxy
-            - USER_COOKIE=B213D0C1C412BAF6B9A98B01E15B24B4A96EF0DD8B304081F90B2037575928AA32A9894F659F062390AB8F5DBF85DDCC2963FA6BCF4DF4C57D0E7578BF28313D1F0C5244256999EE20387D2E9D242CC90DE788C3E32E015B04C27DDE39136EBF99778E288C0D265B806304A3CC1C7185
+            - USER_COOKIE=E5E9748A0E17EB6436DAA8F91168B3A0BD0BD247F065902F34F04EFA14404B698D1924BEFC249D2936EB3ADEEBAC694591F055B237E1C4BE83C6BAD6CFA14E28AF88EF037BDA4D641E9EFC2D941DEA9CB6553A683A670859292E64850FD0D8397A6010DBA27575578C7F37F7A955038DFB7B9E0D6632C38CA5A1124D4DFF6761
         depends_on: 
             - torproxy
             - redis
         volumes:
-            - ./logs:/opt/functions_vietstock/logs
-            - ./localData:/opt/functions_vietstock/localData
-            - ./schemaData:/opt/functions_vietstock/schemaData
+            - ./functions_vietstock/logs:/opt/functions_vietstock/logs
+            - ./functions_vietstock/localData:/opt/functions_vietstock/localData
+            - ./functions_vietstock/schemaData:/opt/functions_vietstock/schemaData

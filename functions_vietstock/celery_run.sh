@@ -2,7 +2,7 @@
 
 # clear old files and potentially running workers
 pkill -9 -f 'celery worker'
-redis-cli flushall
+redis-cli -h scraper-redis flushall
 rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*
@@ -36,3 +36,9 @@ while true; do
         break
     fi
 done
+
+# kill celery workers, flush redis db, delete run files
+pkill -9 -f 'celery worker'
+redis-cli -h scraper-redis flushall
+rm -v ./run/celery/*
+exit 0

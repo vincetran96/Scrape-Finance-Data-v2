@@ -119,13 +119,13 @@ class corporateazBaseHandler(scrapy.Spider):
                     self.logger.info(f'Found {total_records} ticker(s) for {bizType_title};{ind_name}')
                     self.logger.info(f'That equals to {total_pages} page(s) for {bizType_title};{ind_name}')
 
-                    # For AZExpress: Push info into Redis queue if the function is defined
+                    # For AZExpress: Push info into Redis queues if the function is defined
                     if getattr(self, "parse_redis_queue", None):
                         getattr(self, "parse_redis_queue")(tickers_list, page, bizType_title, ind_name, total_records)
 
                     # For AZOnDemand: Aggregate bizType, industry, and ticker data if the function is defined
-                    if getattr(self, "parse_bizType_indu_tickers", None):
-                        getattr(self, "parse_bizType_indu_tickers")(tickers_list, bizType_title, ind_name)
+                    if getattr(self, "parse_biztype_indu_tickers", None):
+                        getattr(self, "parse_biztype_indu_tickers")(tickers_list, bizType_title, ind_name)
 
                     # If current page < total pages, yield a request for the next page
                     if page < total_pages:
@@ -152,7 +152,7 @@ class corporateazBaseHandler(scrapy.Spider):
                                       dont_filter=True
                         )
                         yield req_next
-                        
+
             except Exception as exc:
                 self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exc}')
         else:

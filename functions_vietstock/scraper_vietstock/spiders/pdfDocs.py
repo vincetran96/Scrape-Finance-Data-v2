@@ -20,10 +20,10 @@ import scraper_vietstock.helpers.fileDownloader as pdf
 from scraper_vietstock.items import PDFDocItem
 from scraper_vietstock.spiders.models.pdfdocs import data as fi
 from scraper_vietstock.spiders.models.pdfdocs import name, settings, report_types
-from scraper_vietstock.spiders.fadRedis import fadRedisSpider
+from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 
 
-class pdfDocsHandler(fadRedisSpider):
+class pdfDocsHandler(scraperVSRedisSpider):
     name = name
     custom_settings = settings
 

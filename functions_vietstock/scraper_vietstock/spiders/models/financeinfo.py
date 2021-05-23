@@ -10,12 +10,12 @@ import scraper_vietstock.spiders.models.utilities as utilities
 
 
 name = "financeInfo"
+name_ondemand = "financeInfoOnDemand"
 
 report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 report_terms = {"1":"Annual", "2":"Quarter"}
 
 ticker_report_page_count_key = f'{name}:trp_count'
-error_set_key = f'{name}:{constants.ERROR_SET_SUFFIX}'
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
@@ -47,6 +47,11 @@ log_settings = utilities.log_settings(spiderName=name,
                                       log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
 )
 
+log_settings_ondemand = utilities.log_settings(spiderName=name_ondemand,
+                                      log_level="INFO",
+                                      log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
+)
+
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
@@ -73,3 +78,5 @@ redis_settings = {
 concurrency_settings = {'CONCURRENT_REQUESTS': 32}
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}
+
+settings_ondemand = {**log_settings_ondemand, **middlewares_settings, **proxy_settings, **concurrency_settings}

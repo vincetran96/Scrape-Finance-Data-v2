@@ -101,18 +101,6 @@ class TickerSpiderLogFormatter(logformatter.LogFormatter):
             }
         }
 
-
-def handle_exception(spidercls, response_list=[], request_list=[]):
-    merged = response_list + request_list
-    if merged != []:
-        for r in merged:
-            exc_type, exc_value, exc_traceback = sys.exc_info()
-            err_details = repr(traceback.format_exception (exc_type, exc_value, exc_traceback))
-            ticker = r.meta["ticker"]
-            url = r.url
-            error_msg = f'EXCEPTION ERROR: {err_details}; for {ticker} at {url}'
-            spidercls.logger.error(error_msg)
-
 def log_settings(spiderName, log_level, log_formatter=None):
     '''
     log_levels: str. Can be one of these: CRITICAL, ERROR, WARNING, INFO, DEBUG
@@ -130,3 +118,14 @@ def log_settings(spiderName, log_level, log_formatter=None):
             'LOG_FILE': f'logs/{spiderName}_log_verbose.log',
             'LOG_LEVEL': log_level
         }
+
+# def handle_exception(spidercls, response_list=[], request_list=[]):
+#     merged = response_list + request_list
+#     if merged != []:
+#         for r in merged:
+#             exc_type, exc_value, exc_traceback = sys.exc_info()
+#             err_details = repr(traceback.format_exception (exc_type, exc_value, exc_traceback))
+#             ticker = r.meta["ticker"]
+#             url = r.url
+#             error_msg = f'EXCEPTION ERROR: {err_details}; for {ticker} at {url}'
+#             spidercls.logger.error(error_msg)

@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 # Attempt to load env vars
 load_dotenv(os.path.join("", ".env"))
 
-# Proxy constants
+# Proxy and Tor constants
 try:
     proxy = os.getenv('PROXY')
 except:
@@ -28,6 +28,7 @@ if proxy:
 else:
     PRIVOXY_LOCAL_PROXY = []
     REQUESTS_LOCAL_PROXY = ""
+TOR_CONTROLLER_PASSWORD = "12345"
 
 # Redis constants
 REDIS_PORT = 6379
@@ -40,7 +41,7 @@ except:
 try:
     USER_COOKIE = os.getenv('USER_COOKIE')
 except:
-    USER_COOKIE = "B213D0C1C412BAF6B9A98B01E15B24B4A96EF0DD8B304081F90B2037575928AA32A9894F659F062390AB8F5DBF85DDCC2963FA6BCF4DF4C57D0E7578BF28313D1F0C5244256999EE20387D2E9D242CC90DE788C3E32E015B04C27DDE39136EBF99778E288C0D265B806304A3CC1C7185"
+    USER_COOKIE = ""
 
 # Other constants
 LANGUAGE = "en-US"
@@ -53,19 +54,9 @@ START_PAGE = "1"
 PAGE_SIZE = "50"
 BUSINESSTYPE_ID = "0"
 
-SCRAPER_API_KEY = "2b55becc5b216a32c586c89b9ef50adc"
-
 PROXIES_REDIS_KEY = "acceptedProxies"
-
-TOR_CONTROLLER_PASSWORD = "12345"
 
 SPIDER_EXCEPTION_COUNT_SUFFIX = "spdrexception_count"
 DOWNLOADER_EXCEPTION_COUNT_SUFFIX = "dwnldrexception_count"
-
 CRAWLED_SET_SUFFIX = "crawled_set"
 ERROR_SET_SUFFIX = "error_set"
-
-# try:
-#     ELASTICSEARCH_HOST = os.getenv('ELASTICSEARCH_HOST')
-# except:
-#     ELASTICSEARCH_HOST = "localhost"

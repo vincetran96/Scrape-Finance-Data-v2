@@ -18,12 +18,12 @@ from scrapy_redis.utils import bytes_to_str
 
 import scraper_vietstock.spiders.models.utilities as utilities
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
-from scraper_vietstock.spiders.fadRedis import fadRedisSpider
+from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 from scraper_vietstock.spiders.models.ctkhdetails import data as ctk
 from scraper_vietstock.spiders.models.ctkhdetails import name, settings
 
 
-class ctkhDetailsHandler(fadRedisSpider):
+class ctkhDetailsHandler(scraperVSRedisSpider):
     name = name
     custom_settings = settings
 
@@ -33,7 +33,7 @@ class ctkhDetailsHandler(fadRedisSpider):
 
     def next_requests(self):
         """Replaces the default method. Closes spider when tickers are crawled and queue empty.
-        This method customized from fadRedis Spider because it has the Page param. in formdata.
+        This method customized from scraperVSRedis Spider because it has the Page param. in formdata.
         """
         use_set = self.settings.getbool(
             'REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)

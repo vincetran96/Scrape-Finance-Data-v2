@@ -20,15 +20,16 @@ from scraper_vietstock.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_H
 from scraper_vietstock.spiders.models.corporateaz import closed_redis_key as corpAZ_closed_key
 
 
-class fadRedisSpider(RedisSpider):
-    """Base RedisSpider for other spiders in this project
-    """
+class scraperVSRedisSpider(RedisSpider):
+    '''
+    Base RedisSpider for other spiders in this project
+    '''
 
     def __init__(self, *args, **kwargs):
-        super(fadRedisSpider, self).__init__(*args, **kwargs)
+        super(scraperVSRedisSpider, self).__init__(*args, **kwargs)
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.report_types = []
-        self.fi = {}
+        # self.fi = {}
 
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
@@ -40,16 +41,20 @@ class fadRedisSpider(RedisSpider):
             statusfile.close()
 
     def spider_idle(self):
-        """Overwrites default method
-        """
+        '''
+        Overwrites default method
+        '''
+
         self.idling = True
         self.logger.info("=== IDLING... ===")
         self.schedule_next_requests()
         raise DontCloseSpider
 
     def handle_error(self, failure):
-        """If there's an error with a request/response, add it to the error set
-        """
+        '''
+        If there's an error with a request/response, add it to the error set
+        '''
+
         if failure.request:
             request = failure.request
             ticker = request.meta['ticker']
@@ -61,12 +66,7 @@ class fadRedisSpider(RedisSpider):
 
             self.logger.info(
                 f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key,
-                        f'{ticker};{page};{report_type}')
-            with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
-                    ticker, report_type, page, str(failure.type)))
-        
+
         elif failure.value.response:
             response = failure.value.response
             ticker = response.meta['ticker']
@@ -78,15 +78,27 @@ class fadRedisSpider(RedisSpider):
 
             self.logger.info(
                 f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
-            self.r.sadd(self.error_set_key,
-                        f'{ticker};{page};{report_type}')
-            with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-                openfile.write("ticker: {0}, report: {1}, page {2}, error type: {3} \n".format(
-                    ticker, report_type, page, str(failure.type)))
+        
+        # Write error to log file
+        with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+            openfile.write(f'ticker: {ticker}, report: {report_type}, page {page}, error type: {str(failure.type)} \n')
+        
+        # Add error to Redis set if the function is defined
+        if getattr(self, "handle_error_redis", None):
+            getattr(self, "handle_error_redis")(ticker, page, report_type)
+
+    def handle_error_redis(self, ticker, page, report_type):
+        '''
+        Add errors to Redis error set
+        '''
+
+        self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
 
     def close_status(self):
-        """Clear running status file after closing
-        """
+        '''
+        Clear running status file after closing
+        '''
+
         if os.path.exists(self.statusfilepath):
             os.remove(self.statusfilepath)
             self.logger.info(f'Deleted status file at {self.statusfilepath}')
