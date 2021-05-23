@@ -48,7 +48,7 @@ functions-vietstock:
         - REDIS_HOST=scraper-redis
         - PROXY=yes
         - TORPROXY_HOST=torproxy
-        - USER_COOKIE=<specify your Vietstock cookie here without quotes>
+        - USER_COOKIE=<your Vietstock cookie without quotes>
 ...
 ```
 ## Build image and start related services
@@ -56,12 +56,12 @@ At the project folder, run:
 ```
 docker-compose build --no-cache && docker-compose up
 ```
-Next, open the scraper container within the terminal:
+Next, open the scraper container in another terminal:
 ```
 docker exec -it functions-vietstock bash
 ```
 ## From now, there are two options:
-### If you want to scrape **all** tickers, financial report types, report terms:
+### 1. If you want to scrape **all** tickers, financial report types, report terms:
 Run `celery_run.sh` file:
 ```
 ./celery_run.sh
@@ -70,7 +70,7 @@ To stop the scraping, open another terminal into the scraper container and run:
 ```
 ./celery_stop.sh
 ```
-### If you only want to scrape **one ticker, one financial report type and one report term** at a time
+### 2. If you only want to scrape **one ticker, one financial report type and one report term** at a time
 - First, you may want to get the list of all listed tickers and their respective business types and industries. Run the following command:
     ```
     scrapy crawl corporateAZOnDemand
@@ -98,37 +98,80 @@ To stop the scraping, open another terminal into the scraper container and run:
             `2` | Quarterly
         - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
 
-# Run Manually without Docker Compose
-## Specify a local environment variables
+# Run on Host without Docker Compose because Why Not
+## Specify local environment variables
 At `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
 REDIS_HOST=localhost
 PROXY=yes
 TORPROXY_HOST=localhost
-USER_COOKIE=<specify your Vietstock cookie here without quotes>
+USER_COOKIE=<your Vietstock cookie without quotes>
 ```
 ## Run Redis and Torproxy
+You still need to run these inside containers:
 ```
 docker run -d -p 6379:6379 --rm --name scraper-redis redis
 
 docker run -it -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 ## Clear all previous running files (if any)
+Go to the `functions_vietstock` folder:
+```
+cd functions_vietstock
+```
+Run the following commands in the terminal:
 ```
 pkill -9 -f 'celery worker'
-redis-cli flushall
+docker exec scraper-redis redis-cli flushall
 rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*
 rm -rf ./localData/*
 rm -rf ./schemaData/*
 ```
-Then go to the `functions_vietstock` folder:
-```
-cd functions_vietstock
-```
 ## There are two options at this point, same as running with Docker Compose:
 - Scrape **all** tickers, financial report types, report terms
 - Scrape **one ticker, one financial report type and one report term** at a time
 
+# Scrape Results
+Results are stored in the `localData` folder.
+
+Logs are stored in the `logs` folder.
+
+More details coming.
+
 # Debugging and How This Thing Works
+## What is Torproxy and Why is it Required?
+### Quick introduction
+Torproxy is "Tor and Privoxy (web proxy configured to route through tor) docker container." See: https://github.com/dperson/torproxy. We need it in this container to avoid IP-banning for scraping too much, I suppose.
+### What else should I know about it?
+The only two configuration variables I used with Torproxy are `TOR_MaxCircuitDirtiness` and `TOR_NewCircuitPeriod`, which means the maximum Tor circuit age (in seconds) and time period between every attempt to change Tor circuit (in seconds), respectively. Note that `TOR_MaxCircuitDirtiness` is set at max = 60 seconds, and `TOR_NewCircuitPeriod` is set at 10 seconds.
+## What is Redis and Why is it Required?
+"Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker." See: https://redis.io/. In this project, Redis serves as a message broker and an in-memory queue for Scrapy.
+## Debugging
+### Redis
+#### If scraper run in Docker container:
+To open an interactive shell with Redis:
+```
+redis-cli -h scraper-redis
+```
+#### If scraper run on host:
+To open an interactive shell with Redis:
+```
+docker exec scraper-redis redis-cli
+```
+### Celery
+I don't know what to write here for now.
+
+# Limitations and Lessons Learned
+## Limitations
+- When talking about a crawler/scraper, one must consider speed, among other things. That said, I haven't run a benchmark for this scraper project.
+    - Last time I checked, there are about 3000 tickers on the market.
+    - Scraping **all** historical financials of **all** 3000 tickers will, I believe, be pretty slow, because we have to use Torproxy and there can be many pages for a ticker-report type-report term combination.
+    - Scrape results are written on disk, so that is also a bottleneck if you want to mass-scrape. Of course, this point is different if you only scrape one or two tickers.
+    - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity.
+- Possibility of being banned on Vietstock? Yes.
+    - Each request has a unique Vietstock user cookie on it, and thus you are identifiable when making each request.
+    - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server take at any given point. While this API is open publicly, it's not documented on Vietstock.
+## Lessons learned
+A lot.

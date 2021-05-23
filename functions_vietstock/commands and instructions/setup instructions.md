@@ -1,12 +1,8 @@
 # SSH to Ubuntu Server and do what you need below
-```
-ssh root@45.77.5.33 -L9200:localhost:9200 -L5601:localhost:5601
-```
 Preferably you can just skip to the Docker section to avoid playing around with the setup.
 
 
 # Docker
-
 ## Running with docker-compose
 Change dir to the root folder of this project
 ```
@@ -37,6 +33,7 @@ Note that Tor circuit age to be reused is at max = 60 seconds (`TOR_MaxCircuitDi
 ### If you want to investigate Redis...
 ```
 docker run -it --rm --net fad redis redis-cli -h fad-redis
+docker exec scraper-redis redis-cli flushall
 ```
 
 
