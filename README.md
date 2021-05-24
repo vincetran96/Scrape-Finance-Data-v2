@@ -75,14 +75,14 @@ To stop the scraping, open another terminal into the scraper container and run:
     ```
     scrapy crawl corporateAZOnDemand
     ```
-- Next, you will find a file named `bizType_ind_tickers_list.json`, which contains all listed ticker symbols under their respective business types and industries (in the dict keys of the form `business_type;industry`)
+- Next, you will find a file named `bizType_ind_tickers_list.json` in the scrape result folder (`./localData`), which contains all listed ticker symbols under their respective business types and industries (in the dict keys of the form `business_type;industry`)
 - After choosing your interested ticker(s), run the following command to scrape financial reports:
     ```
-    scrapy crawl financeInfoOnDemand -a ticker=<ticker symbol> -a report_type=<report type code> -a report_term=<report term code> -a page=<page number>
+    scrapy crawl financeInfoOnDemand -a ticker=ticker_1,ticker_2 -a report_type=report_type_1,report_type_2 -a report_term=report_term_1,report_term_2 -a page=page_number
     ```
     - Explanation of arguments:
-        - `ticker`: a ticker symbol of your choice
-        - `report_type` and `report_term`: see the following tables (which was already mentioned above)
+        - `ticker`: a ticker symbol or a list of ticker symbols of your choice. You can enter either `ticker_1` or `ticker_1,ticker_2`
+        - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term
             Report type code | Meaning
             --- | ---
             `CTKH` | Financial targets/**C**hỉ **T**iêu **K**ế **H**oạch
@@ -169,7 +169,7 @@ I don't know what to write here for now.
     - Last time I checked, there are about 3000 tickers on the market.
     - Scraping **all** historical financials of **all** 3000 tickers will, I believe, be pretty slow, because we have to use Torproxy and there can be many pages for a ticker-report type-report term combination.
     - Scrape results are written on disk, so that is also a bottleneck if you want to mass-scrape. Of course, this point is different if you only scrape one or two tickers.
-    - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity.
+    - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity (well not entirely if you use the same user cookie across machines).
 - Possibility of being banned on Vietstock? Yes.
     - Each request has a unique Vietstock user cookie on it, and thus you are identifiable when making each request.
     - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server take at any given point. While this API is open publicly, it's not documented on Vietstock.

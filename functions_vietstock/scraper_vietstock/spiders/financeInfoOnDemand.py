@@ -13,7 +13,7 @@ from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 class financeInfoOnDemandHandler(scraperVSRedisSpider):
     '''
     On demand financeInfo spider
-    Command line syntax: scrapy crawl financeInfoOnDemand -a ticker=AAA -a report_type=CDKT -a report_term=2
+    Command line syntax: scrapy crawl financeInfoOnDemand -a ticker=AAA,BBB -a report_type=CDKT,KQKD -a report_term=2
     '''
 
     name = name_ondemand
@@ -30,9 +30,15 @@ class financeInfoOnDemandHandler(scraperVSRedisSpider):
         '''
 
         if getattr(self, "page", None):
-            self.r.lpush(self.redis_key, f'{self.ticker};{self.page};{self.report_type};{self.report_term}')
+            page = self.page
         else:
-            self.r.lpush(self.redis_key, f'{self.ticker};1;{self.report_type};{self.report_term}')
+            page = "1"
+        for ticker in self.ticker.split(","):
+            for report_type in self.report_type.split(","):
+                for report_term in self.report_term.split(","):
+                    self.r.lpush(
+                        self.redis_key, f'{ticker};{page};{report_type};{report_term}'
+                    )
         return self.next_requests()
     
     def next_requests(self):
@@ -57,7 +63,7 @@ class financeInfoOnDemandHandler(scraperVSRedisSpider):
             req = self.make_request_from_data(ticker, report_type, page, report_term)
             if req:
                 yield req
-                self.logger.info(f'Scraping page {page} of report {report_type} - term {report_term} - ticker {ticker}')
+                self.logger.info(f'Begin scraping page {page} of report {report_type} - term {report_term} - ticker {ticker}')
             else:
                 self.logger.info("Request not made from params: %r", params)
         
