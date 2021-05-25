@@ -1,12 +1,15 @@
 # This Spider scrapes finance info on demand (i.e., for a specific ticker)
 
 import json
+import httpx
 from scrapy import FormRequest
 from scrapy_redis import defaults
 from scrapy_redis.utils import bytes_to_str
 
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
+import scraper_vietstock.spiders.models.constants as constants
 from scraper_vietstock.spiders.models.financeinfo import *
+from scraper_vietstock.spiders.models.corporateaz import data as corpazdata
 from scraper_vietstock.spiders.scraperVSRedis import scraperVSRedisSpider
 
 
@@ -27,18 +30,49 @@ class financeInfoOnDemandHandler(scraperVSRedisSpider):
     def start_requests(self):
         '''
         Replaces the default method.
+        If `business type and industry` params are provided
+        Else, if `ticker` param is provided
         '''
 
-        if getattr(self, "page", None):
-            page = self.page
-        else:
-            page = "1"
-        for ticker in self.ticker.split(","):
-            for report_type in self.report_type.split(","):
-                for report_term in self.report_term.split(","):
-                    self.r.lpush(
-                        self.redis_key, f'{ticker};{page};{report_type};{report_term}'
+        # if getattr(self, "page", None):
+        #     page = self.page
+        # else:
+        #     page = "1"
+        for report_type in self.report_type.split(","):
+            for report_term in self.report_term.split(","):
+                if getattr(self, "biz_ind_ids", None):
+                    bizType_id, ind_id = self.biz_ind_ids.split(";")
+                    corpazdata["meta"]["bizType_id"] = bizType_id
+                    corpazdata["meta"]["ind_id"] = ind_id
+                    corpazdata["meta"]["report_type"] = report_type
+                    corpazdata["meta"]["report_term"] = report_term
+                    corpazdata["formdata"]["businessTypeID"] = bizType_id
+                    corpazdata["formdata"]["industryID"] = ind_id
+                    corpazdata["formdata"]["orderBy"] = "TotalShare"
+                    corpazdata["formdata"]["orderDir"] = "DESC"
+                    req = FormRequest(
+                        url=corpazdata['url'],
+                        formdata=corpazdata['formdata'],
+                        headers=corpazdata['headers'],
+                        cookies=corpazdata['cookies'],
+                        callback=self.parse_bizType_ind,
+                        errback=self.handle_error,
+                        dont_filter=True
                     )
+                    yield req
+                else:
+                    for ticker in self.ticker.split(","):
+                        self.r.lpush(
+                            self.redis_key, f'{ticker};{self.page};{report_type};{report_term}'
+                        )
+        # else:
+        #     for ticker in self.ticker.split(","):
+        #         for report_type in self.report_type.split(","):
+        #             for report_term in self.report_term.split(","):
+        #                 self.r.lpush(
+        #                     self.redis_key, f'{ticker};{self.page};{report_type};{report_term}'
+        #                 )
+
         return self.next_requests()
     
     def next_requests(self):
@@ -102,6 +136,64 @@ class financeInfoOnDemandHandler(scraperVSRedisSpider):
                            dont_filter=True
         )
 
+    def parse_bizType_ind(self, response):
+        if response:
+            page = int(response.meta['page'])
+            total_pages = response.meta['TotalPages']
+            bizType_id = response.meta['bizType_id']
+            ind_id = response.meta['ind_id']
+            report_type = response.meta['report_type']
+            report_term = response.meta['report_term']
+            try:
+                resp_json = json.loads(response.text)
+                tickers_list = [d['Code'] for d in resp_json]
+
+                if tickers_list != []:
+                    # Total pages need to be calculated (for 1st page) or 
+                    # delivered from meta of previous page's request
+                    total_records = resp_json[0]['TotalRecord']
+                    total_pages =  total_records // int(
+                        constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages
+                    )
+                    self.logger.info(f'Found {total_records} ticker(s) for {bizType_id};{ind_id}')
+                    self.logger.info(f'That equals to {total_pages} page(s) for {bizType_id};{ind_id}')
+
+                    # Push info into Redis queue
+                    for ticker in tickers_list:
+                        self.r.lpush(
+                            self.redis_key, f'{ticker};{self.page};{report_type};{report_term}'
+                        )
+
+                    # If current page < total pages, yield a request for the next page
+                    if page < total_pages:
+                        next_page = str(page + 1)
+                        self.logger.info(f'Crawling page {next_page} of total {total_pages} for {bizType_title};{ind_name}')
+                        data["meta"]["page"] = next_page
+                        data["meta"]["TotalPages"] = str(total_pages)
+                        data["meta"]["bizType_id"] = bizType_id
+                        data["meta"]["bizType_title"] = bizType_title
+                        data["meta"]["ind_id"] = ind_id
+                        data["meta"]["ind_name"] = ind_name
+                        data["formdata"]["page"] = next_page
+                        data["formdata"]["businessTypeID"] = bizType_id
+                        data["formdata"]["industryID"] = ind_id
+                        data["formdata"]["orderBy"] = "TotalShare"
+                        data["formdata"]["orderDir"] = "DESC"
+                        req_next = FormRequest(url=data["url"],
+                                      formdata=data["formdata"],
+                                      headers=data["headers"],
+                                      cookies=data["cookies"],
+                                      meta=data["meta"],
+                                      callback=self.parse_az,
+                                      errback=self.handle_error,
+                                      dont_filter=True
+                        )
+                        yield req_next
+            except Exception as exc:
+                self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exc}')
+        else:
+            self.logger.info("Response is null")
+    
     def parse(self, response):
         '''
         Parse response

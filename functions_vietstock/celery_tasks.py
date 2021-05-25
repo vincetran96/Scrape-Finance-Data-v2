@@ -41,15 +41,6 @@ def corporateAZ_task():
     print("=== CORPORATEAZ SPIDER CRAWLING ===")
     setup()
     configure_logging()
-    
-    # settings=get_project_settings()
-    # settings.update(corporateaz_settings)
-    # configure_logging(settings=settings, install_root_handler=False)
-    # logging.root.setLevel(logging.NOTSET)
-    # handler = _get_handler(settings)
-    # # logging.root.removeHandler(handler)
-    # logging.root.addHandler(handler)
-
     runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(corporateazHandler)
     d = runner.join()
@@ -71,8 +62,6 @@ def finance_task():
     runner = CrawlerRunner(settings=get_project_settings())
     runner.crawl(financeInfoHandler)
     d = runner.join()
-    # d_main.addBoth(lambda _: reactor.stop())
-    # reactor.run()
 
 @app.task
 def associates_task():

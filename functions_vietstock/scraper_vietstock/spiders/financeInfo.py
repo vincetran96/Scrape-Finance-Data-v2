@@ -127,7 +127,7 @@ class financeInfoHandler(scraperVSRedisSpider):
                 else:
                     # Write local data files in an express way
                     # save_jsonfile(
-                    #     resp_json, filename=f'schemaData/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
+                    #     resp_json, filename=f'localData/schema/{self.name}/{bizType_title}_{ind_name}_{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json')
                     
                     # Writing local data files in the regular way
                     save_jsonfile(

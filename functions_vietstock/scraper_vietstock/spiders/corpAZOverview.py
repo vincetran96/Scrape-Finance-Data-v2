@@ -13,18 +13,18 @@ from scraper_vietstock.helpers.fileDownloader import save_jsonfile
 from scraper_vietstock.spiders.corpAZBase import corporateazBaseHandler
 
 
-class corporateazOnDemandHandler(corporateazBaseHandler):
+class corporateazOverviewHandler(corporateazBaseHandler):
     '''
-    CorporateAZ Spider for getting corpAZ info on demand, without using Redis queue
+    CorporateAZ Spider for getting corpAZ overview, without using Redis queue
     Instead, at the end, it exports a dict of biztype;indu and tickers within each pair
-    Command line syntax: scrapy crawl corporateAZOnDemand
+    Command line syntax: scrapy crawl corporateAZOverview
     '''
 
-    name = name_ondemand
-    custom_settings = settings_ondemand
+    name = name_overview
+    custom_settings = settings_overview
 
     def __init__(self, *args, **kwargs):
-        super(corporateazOnDemandHandler, self).__init__(*args, **kwargs)
+        super(corporateazOverviewHandler, self).__init__(*args, **kwargs)
         
         # On-demand scrape result
         self.bizType_indu_tickers = {}
@@ -36,5 +36,5 @@ class corporateazOnDemandHandler(corporateazBaseHandler):
         else:
             self.bizType_indu_tickers[key] += tickers_list
 
-    def save_OnDemand_result(self, filename="localData/bizType_ind_tickers_list.json"):
+    def save_OnDemand_result(self, filename="localData/overview/bizType_ind_tickers_list.json"):
         save_jsonfile(self.bizType_indu_tickers, filename=filename)

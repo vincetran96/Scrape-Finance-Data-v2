@@ -58,19 +58,17 @@ docker-compose build --no-cache && docker-compose up
 ```
 Next, open the scraper container in another terminal:
 ```
-docker exec -it functions-vietstock bash
+docker exec -it functions-vietstock ./userinput.sh
 ```
-## From now, there are two options:
+## From now, if you follow along the userinput script, there are two options:
 ### 1. If you want to scrape **all** tickers, financial report types, report terms:
-Run `celery_run.sh` file:
+Type `y` when prompted to mass scrape
+
+Note: To stop the scraping, open another terminal and run:
 ```
-./celery_run.sh
+docker exec -it functions-vietstock ./celery_stop.sh
 ```
-To stop the scraping, open another terminal into the scraper container and run:
-```
-./celery_stop.sh
-```
-### 2. If you only want to scrape **one ticker, one financial report type and one report term** at a time
+### 2. If you only want to scrape **one business type, one industry** or **one ticker, one financial report type and one report term** at a time ???
 - First, you may want to get the list of all listed tickers and their respective business types and industries. Run the following command:
     ```
     scrapy crawl corporateAZOnDemand
@@ -78,9 +76,10 @@ To stop the scraping, open another terminal into the scraper container and run:
 - Next, you will find a file named `bizType_ind_tickers_list.json` in the scrape result folder (`./localData`), which contains all listed ticker symbols under their respective business types and industries (in the dict keys of the form `business_type;industry`)
 - After choosing your interested ticker(s), run the following command to scrape financial reports:
     ```
-    scrapy crawl financeInfoOnDemand -a ticker=ticker_1,ticker_2 -a report_type=report_type_1,report_type_2 -a report_term=report_term_1,report_term_2 -a page=page_number
+    scrapy crawl financeInfoOnDemand -a biz_ind_ids=businesstype_id;industry_id -a ticker=ticker_1,ticker_2 -a report_type=report_type_1,report_type_2 -a report_term=report_term_1,report_term_2 -a page=page_number
     ```
     - Explanation of arguments:
+        - `biz_ind_ids`: business id and industry id
         - `ticker`: a ticker symbol or a list of ticker symbols of your choice. You can enter either `ticker_1` or `ticker_1,ticker_2`
         - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term
             Report type code | Meaning
@@ -97,6 +96,10 @@ To stop the scraping, open another terminal into the scraper container and run:
             `1` | Annually
             `2` | Quarterly
         - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
+- For example, if you want to scrape annual balance sheets and income statements of the **HSX VN30** stock bucket:
+```
+scrapy crawl financeInfoOnDemand -a ticker=BID,BVH,CTG,FPT,GAS,HDB,HPG,KDH,MBB,MSN,MWG,NVL,PDR,PLX,PNJ,POW,REE,SBT,SSI,STB,TCB,TCH,TPB,VCB,VHM,VIC,VJC,VNM,VPB,VRE -a report_type=CDKT,KQKD -a report_term=1
+```
 
 # Run on Host without Docker Compose because Why Not
 ## Specify local environment variables
@@ -127,7 +130,6 @@ rm -v ./run/celery/*
 rm -v ./run/scrapy/*
 rm -v ./logs/*
 rm -rf ./localData/*
-rm -rf ./schemaData/*
 ```
 ## There are two options at this point, same as running with Docker Compose:
 - Scrape **all** tickers, financial report types, report terms

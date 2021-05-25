@@ -68,7 +68,7 @@ class corporateazExpressHandler(corporateazBaseHandler):
         
         # Write bizType and ind set to a file for mapping work later
         bizType_ind_list = sorted(list(self.r.smembers(bizType_ind_set_key)))
-        save_jsonfile(bizType_ind_list, filename='schemaData/bizType_ind_list.json')
+        save_jsonfile(bizType_ind_list, filename='localData/schema/bizType_ind_list.json')
         self.r.set(closed_redis_key, "1")
         self.logger.info(f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
         self.logger.info(f'Tickers have been pushed into {str(tickers_redis_keys)}')

@@ -11,6 +11,7 @@ COPY functions_vietstock /opt/functions_vietstock
 WORKDIR /opt/functions_vietstock
 RUN chmod 755 /opt/functions_vietstock/celery_run.sh
 RUN chmod 755 /opt/functions_vietstock/celery_stop.sh
+RUN chmod 755 /opt/functions_vietstock/userinput.sh
 
 # Make dirs and clear .env file
 RUN mkdir -p /opt/functions_vietstock/run/celery && mkdir -p /opt/functions_vietstock/run/scrapy && mkdir -p /opt/functions_vietstock/logs

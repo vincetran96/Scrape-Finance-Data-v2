@@ -15,7 +15,7 @@ services:
     functions-vietstock:
         build: .
         container_name: functions-vietstock
-        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- /bin/bash
+        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash
         stdin_open: true
         tty: true
         environment: 
@@ -29,4 +29,3 @@ services:
         volumes:
             - ./functions_vietstock/logs:/opt/functions_vietstock/logs
             - ./functions_vietstock/localData:/opt/functions_vietstock/localData
-            - ./functions_vietstock/schemaData:/opt/functions_vietstock/schemaData

@@ -15,7 +15,6 @@ env/
 .ipynb_checkpoints
 test.*
 localData/
-schemaData/
 __pycache__/
 elasticsearch*/
 kibana*/
