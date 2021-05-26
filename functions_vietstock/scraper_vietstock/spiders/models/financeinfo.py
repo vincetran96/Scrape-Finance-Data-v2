@@ -3,8 +3,6 @@
 # income statements (KQKD), cash flow statements (LC), and financial indices (CSTC)
 # Report terms can be either "1" (for annual) or "2" (for quarter)
 
-import redis
-
 import scraper_vietstock.spiders.models.constants as constants
 import scraper_vietstock.spiders.models.utilities as utilities
 
@@ -79,5 +77,3 @@ redis_settings = {
 concurrency_settings = {'CONCURRENT_REQUESTS': 32}
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}
-
-settings_ondemand = {**log_settings_ondemand, **middlewares_settings, **proxy_settings, **concurrency_settings}

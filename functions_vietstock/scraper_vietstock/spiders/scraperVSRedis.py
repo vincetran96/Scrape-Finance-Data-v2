@@ -1,18 +1,10 @@
 
 # FAD Redis spider - the project's RedisSpiders should be based on this
 
-import json
-import logging
 import os
-import sys
-import traceback
 import redis
-import scrapy
-from scrapy import FormRequest
-from scrapy.crawler import CrawlerProcess
 from scrapy.exceptions import DontCloseSpider
 from scrapy.utils.log import configure_logging
-from scrapy_redis import defaults
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
 
