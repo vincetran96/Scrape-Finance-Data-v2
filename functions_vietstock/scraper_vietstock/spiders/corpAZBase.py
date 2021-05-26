@@ -18,6 +18,7 @@ class corporateazBaseHandler(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(corporateazBaseHandler, self).__init__(*args, **kwargs)
+        self.defaultnullmeta = "NOMETATOVIEW"
         self.statusfilepath = f'run/scrapy/{self.name}.scrapy'
         os.makedirs(os.path.dirname(self.statusfilepath), exist_ok=True)
         with open(self.statusfilepath, 'w') as statusfile:
@@ -28,13 +29,37 @@ class corporateazBaseHandler(scrapy.Spider):
         '''
         A request for business types
         '''
-        req = Request(url=business_type["url"],
-                      headers=business_type["headers"],
-                      cookies=business_type["cookies"],
-                      callback=self.parse_biz_type,
-                      errback=self.handle_error,
-                      dont_filter=True)
-        yield req
+
+        # If biz_ind_ids are passed in as Spider args
+        if getattr(self, "biz_ind_ids", None):
+            bizType_id, ind_id = getattr(self, "biz_ind_ids").split(";")
+            data["meta"]["bizType_id"] = bizType_id
+            data["meta"]["bizType_title"] = defaultnullmeta
+            data["meta"]["ind_id"] = ind_id
+            data["meta"]["ind_name"] = defaultnullmeta
+            data["formdata"]["businessTypeID"] = bizType_id
+            data["formdata"]["industryID"] = ind_id
+            data["formdata"]["orderBy"] = "TotalShare"
+            data["formdata"]["orderDir"] = "DESC"
+            req = FormRequest(url=data["url"],
+                                formdata=data["formdata"],
+                                headers=data["headers"],
+                                cookies=data["cookies"],
+                                meta=data["meta"],
+                                callback=self.parse_az,
+                                errback=self.handle_error,
+                                dont_filter=True
+            )
+            yield req
+        else:
+            req = Request(url=business_type["url"],
+                        headers=business_type["headers"],
+                        cookies=business_type["cookies"],
+                        callback=self.parse_biz_type,
+                        errback=self.handle_error,
+                        dont_filter=True
+            )
+            yield req
 
     def parse_biz_type(self, response):
         '''
@@ -107,7 +132,7 @@ class corporateazBaseHandler(scrapy.Spider):
             try:
                 resp_json = json.loads(response.text)
                 tickers_list = [d['Code'] for d in resp_json]
-                self.logger.info(f'Found these tickers on page {page} of {bizType_title};{ind_name}: {tickers_list}')
+                self.logger.info(f'Found these tickers on page {page} of business type id {bizType_id} - industry id {ind_id}: {tickers_list}')
 
                 if tickers_list != []:
                     # Total pages need to be calculated (for 1st page) or 
@@ -116,16 +141,17 @@ class corporateazBaseHandler(scrapy.Spider):
                     total_pages =  total_records // int(
                         constants.PAGE_SIZE) + 1 if total_pages == "" else int(total_pages
                     )
-                    self.logger.info(f'Found {total_records} ticker(s) for {bizType_title};{ind_name}')
-                    self.logger.info(f'That equals to {total_pages} page(s) for {bizType_title};{ind_name}')
+                    self.logger.info(f'Found {total_records} ticker(s) for business type id {bizType_id} - industry id {ind_id}')
+                    self.logger.info(f'That equals to {total_pages} page(s) for business type id {bizType_id} - industry id {ind_id}')
 
                     # For AZExpress: Push info into Redis queues if the function is defined
-                    if getattr(self, "parse_redis_queue", None):
-                        getattr(self, "parse_redis_queue")(tickers_list, page, bizType_title, ind_name, total_records)
+                    if getattr(self, "push_corpAZtickers_queue", None):
+                        getattr(self, "push_corpAZtickers_queue")(tickers_list, page, total_records)
 
-                    # For AZOnDemand: Aggregate bizType, industry, and ticker data if the function is defined
-                    if getattr(self, "parse_biztype_indu_tickers", None):
-                        getattr(self, "parse_biztype_indu_tickers")(tickers_list, bizType_title, ind_name)
+                    # For AZOverview: Aggregate bizType, industry, and ticker data if the function is defined
+                    if getattr(self, "overview_biztype_indu_tickers", None):
+                        if bizType_title != defaultnullmeta and ind_name != defaultnullmeta:
+                            getattr(self, "overview_biztype_indu_tickers")(tickers_list, bizType_id, bizType_title, ind_id, ind_name)
 
                     # If current page < total pages, yield a request for the next page
                     if page < total_pages:
@@ -158,7 +184,7 @@ class corporateazBaseHandler(scrapy.Spider):
         else:
             self.logger.info("Response is null")
 
-    def closed(self, reason="Spider Finished"):
+    def closed(self, reason="Spider finished"):
         '''
         This function will be called when this Spider closes
         '''
@@ -166,10 +192,6 @@ class corporateazBaseHandler(scrapy.Spider):
         # For AZExpress: Some closing procedures on Redis queue if the function is defined
         if getattr(self, "closed_redis_queue", None):
             getattr(self, "closed_redis_queue")()
-
-        # For AZOnDemand: Save result procedure
-        if getattr(self, "save_OnDemand_result", None):
-            getattr(self, "save_OnDemand_result")()
         
         self.close_status()
 

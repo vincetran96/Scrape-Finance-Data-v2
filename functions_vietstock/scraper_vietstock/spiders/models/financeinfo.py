@@ -15,7 +15,8 @@ name_ondemand = "financeInfoOnDemand"
 report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 report_terms = {"1":"Annual", "2":"Quarter"}
 
-ticker_report_page_count_key = f'{name}:trp_count'
+corpAZ_key = f'{name}:corpAZtickers'
+scrape_key = f'{name}:scrape'
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {
@@ -70,7 +71,7 @@ proxy_settings = {
 }
 
 redis_settings = {
-    'REDIS_START_URLS_KEY': "%(name)s:tickers",
+    # 'REDIS_START_URLS_KEY': "%(name)s:corpAZtickers",
     'REDIS_HOST': constants.REDIS_HOST,
     'REDIS_PORT': constants.REDIS_PORT
 }

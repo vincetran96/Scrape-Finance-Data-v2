@@ -1,7 +1,6 @@
 # This Spider scrapes finance info on demand (i.e., for a specific ticker)
 
 import json
-import httpx
 from scrapy import FormRequest
 from scrapy_redis import defaults
 from scrapy_redis.utils import bytes_to_str
@@ -25,7 +24,6 @@ class financeInfoOnDemandHandler(scraperVSRedisSpider):
     def __init__(self, *args, **kwargs):
         super(financeInfoOnDemandHandler, self).__init__(*args, **kwargs)
         self.idling = False
-        self.r.flushdb()
 
     def start_requests(self):
         '''

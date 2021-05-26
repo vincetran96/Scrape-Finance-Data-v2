@@ -9,7 +9,7 @@ from scrapy import FormRequest, Request
 
 import scraper_vietstock.spiders.models.constants as constants
 from scraper_vietstock.spiders.models.corporateaz import *
-from scraper_vietstock.helpers.fileDownloader import save_jsonfile
+from scraper_vietstock.helpers.fileDownloader import save_csvfile_row, save_csvfile_rows_add
 from scraper_vietstock.spiders.corpAZBase import corporateazBaseHandler
 
 
@@ -27,14 +27,11 @@ class corporateazOverviewHandler(corporateazBaseHandler):
         super(corporateazOverviewHandler, self).__init__(*args, **kwargs)
         
         # On-demand scrape result
-        self.bizType_indu_tickers = {}
+        save_csvfile_row(("ticker","biztype_id", "bizType_title", "ind_id", "ind_name"), overview_csv_name)
 
-    def parse_biztype_indu_tickers(self, tickers_list, bizType_title, ind_name):
-        key =  f'{bizType_title};{ind_name}'
-        if key not in self.bizType_indu_tickers:
-            self.bizType_indu_tickers[key] = tickers_list
-        else:
-            self.bizType_indu_tickers[key] += tickers_list
-
-    def save_OnDemand_result(self, filename="localData/overview/bizType_ind_tickers_list.json"):
-        save_jsonfile(self.bizType_indu_tickers, filename=filename)
+    def overview_biztype_indu_tickers(self, tickers_list, bizType_id, bizType_title, ind_id, ind_name):
+        rows = (
+            (ticker, bizType_id, bizType_title, ind_id, ind_name)
+            for ticker in tickers_list
+        )
+        save_csvfile_rows_add(rows, filename=overview_csv_name)

@@ -1,7 +1,7 @@
-
 # This module contains helper functions to download files
 
 import json
+import csv
 import os
 import requests
 
@@ -36,3 +36,18 @@ def save_textfile(obj, filename=""):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as writefile:
         writefile.write(obj)
+
+def save_csvfile_row(row, filename=""):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'w', encoding='utf-8') as writefile:
+        writer = csv.writer(writefile)
+        writer.writerow(row)
+
+def save_csvfile_rows_add(rows, filename=""):
+    '''
+    Adds rows to existing CSV file
+    '''
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'a+', encoding='utf-8') as writefile:
+        writer = csv.writer(writefile)
+        writer.writerows(rows)

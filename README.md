@@ -60,46 +60,39 @@ Next, open the scraper container in another terminal:
 ```
 docker exec -it functions-vietstock ./userinput.sh
 ```
-## From now, if you follow along the userinput script, there are two options:
-### 1. If you want to scrape **all** tickers, financial report types, report terms:
-Type `y` when prompted to mass scrape
-
-Note: To stop the scraping, open another terminal and run:
+## From now, you can follow along the userinput script
+Note: To stop the scraping, stop the userinput script terminal, then open another terminal and run:
 ```
 docker exec -it functions-vietstock ./celery_stop.sh
 ```
-### 2. If you only want to scrape **one business type, one industry** or **one ticker, one financial report type and one report term** at a time ???
-- First, you may want to get the list of all listed tickers and their respective business types and industries. Run the following command:
-    ```
-    scrapy crawl corporateAZOnDemand
-    ```
-- Next, you will find a file named `bizType_ind_tickers_list.json` in the scrape result folder (`./localData`), which contains all listed ticker symbols under their respective business types and industries (in the dict keys of the form `business_type;industry`)
-- After choosing your interested ticker(s), run the following command to scrape financial reports:
-    ```
-    scrapy crawl financeInfoOnDemand -a biz_ind_ids=businesstype_id;industry_id -a ticker=ticker_1,ticker_2 -a report_type=report_type_1,report_type_2 -a report_term=report_term_1,report_term_2 -a page=page_number
-    ```
-    - Explanation of arguments:
-        - `biz_ind_ids`: business id and industry id
-        - `ticker`: a ticker symbol or a list of ticker symbols of your choice. You can enter either `ticker_1` or `ticker_1,ticker_2`
-        - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term
-            Report type code | Meaning
-            --- | ---
-            `CTKH` | Financial targets/**C**hỉ **T**iêu **K**ế **H**oạch
-            `CDKT` | Balance sheet/**C**ân **Đ**ối **K**ế **T**oán
-            `KQKD` | Income statement/**K**ết **Q**uả **K**inh **D**oanh
-            `LC` | Cash flow statement/**L**ưu **C**huyển (Tiền Tệ)
-            `CSTC` | Financial ratios/**C**hỉ **S**ố **T**ài **C**hính
+to clean everything related to the scraping process (local scraped files are intact).
+
+**Some pointers about questions you will encounter in the userinput script**
+- *"Do you wish to mass scrape? [y/n]"*
+    - Choose this if you want to scrape EVERY TICKER, EVERY REPORT TYPE, EVERY REPORT TERM on Vietstock.
+- If you chose `n` for the above question, then *"Do you wish to scrape a list of all business types-industries and their respective tickers? This may help you choose your interested tickers to scrape. [y/n]"*
+    - You will find a file named `bizType_ind_tickers.csv` in the scrape result folder (`./localData/overview`), which contains all listed ticker symbols under their respective business types and industries (in the dict keys of the form `business_type;industry`)
+    - Then you will be asked *"Do you wish to scrape by a specific business type-industry or by tickers? [y for business type-industry/n for tickers] "*
+        - See below
+            - Explanation of arguments:
+                - `biz_ind_ids`: business id and industry id
+                - `ticker`: a ticker symbol or a list of ticker symbols of your choice. You can enter either `ticker_1` or `ticker_1,ticker_2`
+                - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term
+                    Report type code | Meaning
+                    --- | ---
+                    `CTKH` | Financial targets/**C**hỉ **T**iêu **K**ế **H**oạch
+                    `CDKT` | Balance sheet/**C**ân **Đ**ối **K**ế **T**oán
+                    `KQKD` | Income statement/**K**ết **Q**uả **K**inh **D**oanh
+                    `LC` | Cash flow statement/**L**ưu **C**huyển (Tiền Tệ)
+                    `CSTC` | Financial ratios/**C**hỉ **S**ố **T**ài **C**hính
 
 
-            Report term code | Meaning
-            --- | ---
-            `1` | Annually
-            `2` | Quarterly
-        - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
-- For example, if you want to scrape annual balance sheets and income statements of the **HSX VN30** stock bucket:
-```
-scrapy crawl financeInfoOnDemand -a ticker=BID,BVH,CTG,FPT,GAS,HDB,HPG,KDH,MBB,MSN,MWG,NVL,PDR,PLX,PNJ,POW,REE,SBT,SSI,STB,TCB,TCH,TPB,VCB,VHM,VIC,VJC,VNM,VPB,VRE -a report_type=CDKT,KQKD -a report_term=1
-```
+                    Report term code | Meaning
+                    --- | ---
+                    `1` | Annually
+                    `2` | Quarterly
+                - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
+
 
 # Run on Host without Docker Compose because Why Not
 ## Specify local environment variables
@@ -131,9 +124,7 @@ rm -v ./run/scrapy/*
 rm -v ./logs/*
 rm -rf ./localData/*
 ```
-## There are two options at this point, same as running with Docker Compose:
-- Scrape **all** tickers, financial report types, report terms
-- Scrape **one ticker, one financial report type and one report term** at a time
+## User the userinput script to scrape
 
 # Scrape Results
 Results are stored in the `localData` folder.
@@ -160,7 +151,7 @@ redis-cli -h scraper-redis
 #### If scraper run on host:
 To open an interactive shell with Redis:
 ```
-docker exec scraper-redis redis-cli
+docker exec -it scraper-redis redis-cli
 ```
 ### Celery
 I don't know what to write here for now.

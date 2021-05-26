@@ -19,26 +19,10 @@ from scraper_vietstock.spiders.models.viewprofile import name as viewprofile_nam
 
 
 name_regular = "corporateAZ"
-name_express = "corporateAZExpress"
-name_overview = "corporateAZOverview"
 name_base = "corporateAZBase"
-fin_insur_tickers_key = "finance_and_insurance_tickers_total"
-all_tickers_key = "all_tickers_total"
 
-tickers_redis_keys = [
-                      f'{financeInfo_name}:tickers',
-                      f'{pdfDocs_name}:tickers',
-                      f'{associates_name}:tickers',
-                      f'{boarddetails_name}:tickers',
-                      f'{majorshareholders_name}:tickers',
-                      f'{counterparts_name}:tickers',
-                      f'{ownerstructure_name}:tickers',
-                      f'{ctkh_name}:tickers',
-                      f'{viewprofile_name}:tickers'
-]
-
-closed_redis_key = f'{name_express}:closed'
-bizType_ind_set_key = 'bizType_ind_set'
+# Common corporateAZ variables
+defaultnullmeta = "NOMETATOVIEW"
 
 data = {"url": "https://finance.vietstock.vn/data/corporateaz",
         "formdata": {
@@ -98,14 +82,6 @@ log_settings_regular = utilities.log_settings(spiderName=name_regular,
                                       log_level = "INFO"
 )
 
-log_settings_express = utilities.log_settings(spiderName=name_express,
-                                      log_level = "INFO"
-)
-
-log_settings_overview = utilities.log_settings(spiderName=name_overview,
-                                      log_level = "INFO"
-)
-
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
@@ -122,9 +98,33 @@ redis_settings = {
     'REDIS_PORT': constants.REDIS_PORT
 }
 
-# Combine above settings for appropriate Spiders
+# CorporateAZRegular variables
 settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings, **redis_settings}
 
+# CorporateAZExpress variables
+name_express = "corporateAZExpress"
+tickers_redis_keys = [
+    f'{financeInfo_name}:corpAZtickers',
+    f'{pdfDocs_name}:corpAZtickers',
+    f'{associates_name}:corpAZtickers',
+    f'{boarddetails_name}:corpAZtickers',
+    f'{majorshareholders_name}:corpAZtickers',
+    f'{counterparts_name}:corpAZtickers',
+    f'{ownerstructure_name}:corpAZtickers',
+    f'{ctkh_name}:corpAZtickers',
+    f'{viewprofile_name}:corpAZtickers'
+]
+closed_redis_key = f'{name_express}:closed'
+all_tickers_key = "all_tickers_total"
+log_settings_express = utilities.log_settings(spiderName=name_express,
+                                      log_level = "INFO"
+)
 settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings, **redis_settings}
 
+# CorporateAZOverview variables
+name_overview = "corporateAZOverview"
+overview_csv_name = "localData/overview/bizType_ind_tickers.csv"
+log_settings_overview = utilities.log_settings(spiderName=name_overview,
+                                      log_level = "INFO"
+)
 settings_overview = {**log_settings_overview, **middlewares_settings, **proxy_settings}

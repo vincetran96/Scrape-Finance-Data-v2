@@ -9,7 +9,6 @@ COPY requirements.txt /opt/functions_vietstock/requirements.txt
 RUN pip3 install -r /opt/functions_vietstock/requirements.txt
 COPY functions_vietstock /opt/functions_vietstock
 WORKDIR /opt/functions_vietstock
-RUN chmod 755 /opt/functions_vietstock/celery_run.sh
 RUN chmod 755 /opt/functions_vietstock/celery_stop.sh
 RUN chmod 755 /opt/functions_vietstock/userinput.sh
 

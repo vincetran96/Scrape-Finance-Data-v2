@@ -25,7 +25,7 @@ from scraper_vietstock.spiders.ownerStructure import ownerStructureHandler
 from scraper_vietstock.spiders.counterParts import counterPartsHandler
 from scraper_vietstock.spiders.ctkhDetails import ctkhDetailsHandler
 from scraper_vietstock.spiders.viewProfile import viewProfileHandlder
-from scraper_vietstock.spiders.models.constants import REDIS_HOST
+from clean_queue import clean_redis_queue
 
 
 @app.task
@@ -33,8 +33,7 @@ def prerun_cleanup_task():
     ''' 
     Delete all residual Redis keys
     '''
-    r = redis.Redis(host=REDIS_HOST)
-    r.flushdb()
+    clean_redis_queue()
 
 @app.task
 def corporateAZ_task():
