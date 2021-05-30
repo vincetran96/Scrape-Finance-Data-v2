@@ -106,7 +106,7 @@ At `functions_vietstock` folder, create a file named `.env` with the following c
 REDIS_HOST=localhost
 PROXY=yes
 TORPROXY_HOST=localhost
-USER_COOKIE=<your Vietstock cookie without quotes>
+USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ```
 ## Run Redis and Torproxy
 You still need to run these inside containers:
@@ -143,13 +143,13 @@ FinanceInfo results are stored in the `./localData/financeInfo` folder, and each
 Logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
 
 # Debugging and How This Thing Works <a name="debugging"></a>
-## What is Torproxy and Why is it Required?
+## What is Torproxy?
 ### Quick introduction
-Torproxy is "Tor and Privoxy (web proxy configured to route through tor) docker container." See: https://github.com/dperson/torproxy. We need it in this container to avoid IP-banning for scraping too much, I suppose.
-### What else should I know about it?
+Torproxy is "Tor and Privoxy (web proxy configured to route through tor) docker container." See: https://github.com/dperson/torproxy. We need it in this container to avoid IP-banning for scraping too much.
+### Configuration used in this project
 The only two configuration variables I used with Torproxy are `TOR_MaxCircuitDirtiness` and `TOR_NewCircuitPeriod`, which means the maximum Tor circuit age (in seconds) and time period between every attempt to change Tor circuit (in seconds), respectively. Note that `TOR_MaxCircuitDirtiness` is set at max = 60 seconds, and `TOR_NewCircuitPeriod` is set at 10 seconds.
-## What is Redis and Why is it Required?
-"Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker." See: https://redis.io/. In this project, Redis serves as a message broker and an in-memory queue for Scrapy.
+## What is Redis?
+"Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker." See: https://redis.io/. In this project, Redis serves as a message broker and an in-memory queue for Scrapy. No non-standard Redis configurations were made for this project.
 ## Debugging
 ### Redis
 #### If scraper run in Docker container:
@@ -163,7 +163,7 @@ To open an interactive shell with Redis:
 docker exec -it scraper-redis redis-cli
 ```
 ### Celery
-I don't know what to write here for now.
+Look inside each log file.
 
 # Limitations and Lessons Learned <a name="limitations"></a>
 ## Limitations

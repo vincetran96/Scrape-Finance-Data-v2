@@ -1,4 +1,3 @@
-
 # This module runs task imported from celery_tasks
 
 from celery import group

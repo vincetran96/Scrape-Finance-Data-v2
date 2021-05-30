@@ -1,3 +1,5 @@
+# This module contains queue cleaning procedures for the main app
+
 import redis
 from scraper_vietstock.spiders.models.constants import REDIS_HOST
 
