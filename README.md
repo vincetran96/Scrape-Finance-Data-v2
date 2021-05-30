@@ -55,7 +55,7 @@ functions-vietstock:
         - REDIS_HOST=scraper-redis
         - PROXY=yes
         - TORPROXY_HOST=torproxy
-        - USER_COOKIE=<your Vietstock cookie without quotes>
+        - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ...
 ```
 ## Build image and start related services
@@ -75,8 +75,8 @@ docker exec -it functions-vietstock ./celery_stop.sh
 to clean everything related to the scraping process (local scraped files are intact).
 
 **Some quesitons require you to answer in a specific syntax, as follows:**
-- *"Do you wish to scrape by a specific business type-industry or by tickers? [y for business type-industry/n for tickers] "*
-    - If you enter `y`, the next prompt is: *"Enter business type ID and industry ID combination in the form of businesstype_id;industry_id: "*
+- `Do you wish to scrape by a specific business type-industry or by tickers? [y for business type-industry/n for tickers] `
+    - If you enter `y`, the next prompt is: `Enter business type ID and industry ID combination in the form of businesstype_id;industry_id: `
         - If you chose to scrape a list of all business types-industries and their respective tickers, you should have the file `bizType_ind_tickers.csv` in the scrape result folder (`./localData/overview`).
         - Then you answer this prompt by entering a business type ID and industry ID combination in the form of `businesstype_id;industry_id`.
     - If you enter `n`, the next prompts ask for ticker(s), report type(s), report term(s) and page.
