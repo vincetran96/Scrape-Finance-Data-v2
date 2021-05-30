@@ -68,7 +68,7 @@ while true; do
             if [[ "$corpazoverviewyn" == "y" || "$corpazoverviewyn" == "Y" ]]; then
                 echo "Running corpAZ Overview Spider..."
                 scrapy crawl corporateAZOverview
-                echo "List of business types, industries and their tickers were saved at localData/overview/bizType_ind_tickers.csv"
+                echo "List of business types, industries and their tickers was saved at localData/overview/bizType_ind_tickers.csv"
             elif [[ "$corpazoverviewyn" == "n" || "$corpazoverviewyn" == "N" ]]; then
                 echo "You declined to run corpAZ Overview Spider."
             else

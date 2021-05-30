@@ -146,7 +146,7 @@ class corporateazBaseHandler(scrapy.Spider):
 
                     # For AZExpress: Push info into Redis queues if the function is defined
                     if getattr(self, "push_corpAZtickers_queue", None):
-                        getattr(self, "push_corpAZtickers_queue")(tickers_list, page, total_records)
+                        getattr(self, "push_corpAZtickers_queue")(tickers_list, page, total_records, total_pages, bizType_id, ind_id)
 
                     # For AZOverview: Aggregate bizType, industry, and ticker data if the function is defined
                     if getattr(self, "overview_biztype_indu_tickers", None):
@@ -156,7 +156,7 @@ class corporateazBaseHandler(scrapy.Spider):
                     # If current page < total pages, yield a request for the next page
                     if page < total_pages:
                         next_page = str(page + 1)
-                        self.logger.info(f'Crawling page {next_page} of total {total_pages} for {bizType_title};{ind_name}')
+                        self.logger.info(f'Scraping page {next_page} of total {total_pages} for {bizType_title};{ind_name}')
                         data["meta"]["page"] = next_page
                         data["meta"]["TotalPages"] = str(total_pages)
                         data["meta"]["bizType_id"] = bizType_id

@@ -115,7 +115,7 @@ tickers_redis_keys = [
     f'{viewprofile_name}:corpAZtickers'
 ]
 closed_redis_key = f'{name_express}:closed'
-all_tickers_key = "all_tickers_total"
+tickers_totalcount_key = "tickers_totalcount"
 log_settings_express = utilities.log_settings(spiderName=name_express,
                                       log_level = "INFO"
 )

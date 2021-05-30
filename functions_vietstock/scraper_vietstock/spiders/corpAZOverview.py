@@ -2,12 +2,7 @@
 # Syntax:
 # scrapy crawl corporateAZOnDemand
 
-import os
-import json
-import scrapy
-from scrapy import FormRequest, Request
 
-import scraper_vietstock.spiders.models.constants as constants
 from scraper_vietstock.spiders.models.corporateaz import *
 from scraper_vietstock.helpers.fileDownloader import save_csvfile_row, save_csvfile_rows_add
 from scraper_vietstock.spiders.corpAZBase import corporateazBaseHandler
@@ -26,7 +21,7 @@ class corporateazOverviewHandler(corporateazBaseHandler):
     def __init__(self, *args, **kwargs):
         super(corporateazOverviewHandler, self).__init__(*args, **kwargs)
         
-        # On-demand scrape result
+        # Initialize on-demand scrape result
         save_csvfile_row(("ticker","biztype_id", "bizType_title", "ind_id", "ind_name"), overview_csv_name)
 
     def overview_biztype_indu_tickers(self, tickers_list, bizType_id, bizType_title, ind_id, ind_name):

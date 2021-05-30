@@ -26,7 +26,7 @@ data = {"url": "https://finance.vietstock.vn/data/associatesdetails",
             "ReportType": name,
             "page": "",
         }
-        }
+}
 
 log_settings = utilities.log_settings(spiderName=name,
                                       log_level="INFO",
@@ -50,6 +50,6 @@ proxy_settings = {
     'ROTATING_PROXY_LIST': constants.PRIVOXY_LOCAL_PROXY,
 }
 
-redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:tickers"}
+redis_key_settings = {"REDIS_START_URLS_KEY": "%(name)s:corpAZtickers"}
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_key_settings}

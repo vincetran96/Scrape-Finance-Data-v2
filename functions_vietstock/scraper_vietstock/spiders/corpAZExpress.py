@@ -1,11 +1,7 @@
 # This spider crawls the list of company names (tickers) on Vietstock,
 # feeds the list to the Redis queue for other Spiders to crawl
 
-import json
-import os
 import redis
-import scrapy
-from scrapy import FormRequest, Request
 
 import scraper_vietstock.spiders.models.constants as constants
 from scraper_vietstock.helpers.fileDownloader import save_jsonfile
@@ -29,17 +25,21 @@ class corporateazExpressHandler(corporateazBaseHandler):
         # Redis-specific attributes
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
-        self.all_tickers_key = all_tickers_key
 
-    def push_corpAZtickers_queue(self, tickers_list, page, total_records):
+    def push_corpAZtickers_queue(self, tickers_list, page, total_records, total_pages, bizType_id, ind_id):
         '''
         Add information to Redis queue for other Spiders to crawl and for other purposes
         '''
 
-        # If the tickers list is not empty, push tickers into Redis queue for
-        # financeInfo and other spiders to consume
+        # Push tickers into Redis queue for financeInfo and other spiders to consume
         if page == 1:
-            self.r.incrby(self.all_tickers_key, amount=total_records)
+            self.r.incrby(tickers_totalcount_key, amount=total_records)
+            self.logger.info(
+                f'Found {total_records} ticker(s) for business type id {bizType_id} - industry id {ind_id}'
+            )
+            self.logger.info(
+                f'That equals to {total_pages} page(s) for business type id {bizType_id} - industry id {ind_id}'
+            )
         for t in tickers_list:
             # Push to financeInfo queue needs to be different
             self.r.lpush(tickers_redis_keys[0], f'{t};1')
@@ -54,6 +54,8 @@ class corporateazExpressHandler(corporateazBaseHandler):
         
         # Write bizType and ind set to a file for mapping work later
         self.r.set(closed_redis_key, "1")
-        self.logger.info(f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}')
+        self.logger.info(
+            f'Closing... Setting closed signal value of 1 to {self.r.get(closed_redis_key)}'
+        )
         self.logger.info(f'Tickers have been pushed into {str(tickers_redis_keys)}')
-        self.logger.info(f'There are {self.r.get(self.all_tickers_key)} tickers in all')
+        self.logger.info(f'There are {self.r.get(tickers_totalcount_key)} tickers in all')
