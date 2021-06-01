@@ -134,11 +134,160 @@ Use the `./userinput.sh` script to scrape as in the previous section.
 
 # Scrape Results <a name="scraperesults"></a>
 ## CorporateAZ Overview
+### File location
 If you chose to scrape a list of all business types, industries and their tickers, the result is stored in the `./localData/overview` folder, under the file name `bizType_ind_tickers.csv`.
-
+### File preview (shortened)
+```
+ticker,biztype_id,bizType_title,ind_id,ind_name
+BID,3,Bank,1000,Finance and Insurance
+CTG,3,Bank,1000,Finance and Insurance
+VCB,3,Bank,1000,Finance and Insurance
+TCB,3,Bank,1000,Finance and Insurance
+...
+```
 ## FinanceInfo
+### File location
 FinanceInfo results are stored in the `./localData/financeInfo` folder, and each file is the form `ticker_reportType_reportTermName_page.json`, representing a ticker - report type - report term - page instance.
-
+### File preview (shortened)
+```
+[
+    [
+        {
+            "ID": 4,
+            "Row": 4,
+            "CompanyID": 2541,
+            "YearPeriod": 2017,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201701",
+            "PeriodEnd": "201712",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 3,
+            "Row": 3,
+            "CompanyID": 2541,
+            "YearPeriod": 2018,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201801",
+            "PeriodEnd": "201812",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 2,
+            "Row": 2,
+            "CompanyID": 2541,
+            "YearPeriod": 2019,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201901",
+            "PeriodEnd": "201912",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 1,
+            "Row": 1,
+            "CompanyID": 2541,
+            "YearPeriod": 2020,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "202001",
+            "PeriodEnd": "202112",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        }
+    ],
+    {
+        "Balance Sheet": [
+            {
+                "ID": 1,
+                "ReportNormID": 2995,
+                "Name": "TÀI SẢN ",
+                "NameEn": "ASSETS",
+                "NameMobile": "TÀI SẢN ",
+                "NameMobileEn": "ASSETS",
+                "CssStyle": "MaxB",
+                "Padding": "Padding1",
+                "ParentReportNormID": 2995,
+                "ReportComponentName": "Cân đối kế toán",
+                "ReportComponentNameEn": "Balance Sheet",
+                "Unit": null,
+                "UnitEn": null,
+                "OrderType": null,
+                "OrderingComponent": null,
+                "RowNumber": null,
+                "ReportComponentTypeID": null,
+                "ChildTotal": 0,
+                "Levels": 0,
+                "Value1": null,
+                "Value2": null,
+                "Value3": null,
+                "Value4": null,
+                "Vl": null,
+                "IsShowData": true
+            },
+            {
+                "ID": 2,
+                "ReportNormID": 3000,
+                "Name": "A. TÀI SẢN NGẮN HẠN",
+                "NameEn": "A. SHORT-TERM ASSETS",
+                "NameMobile": "A. TÀI SẢN NGẮN HẠN",
+                "NameMobileEn": "A. SHORT-TERM ASSETS",
+                "CssStyle": "LargeB",
+                "Padding": "Padding1",
+                "ParentReportNormID": 2996,
+                "ReportComponentName": "Cân đối kế toán",
+                "ReportComponentNameEn": "Balance Sheet",
+                "Unit": null,
+                "UnitEn": null,
+                "OrderType": null,
+                "OrderingComponent": null,
+                "RowNumber": null,
+                "ReportComponentTypeID": null,
+                "ChildTotal": 25,
+                "Levels": 1,
+                "Value1": 4496051.0,
+                "Value2": 4971364.0,
+                "Value3": 3989369.0,
+                "Value4": 2142717.0,
+                "Vl": null,
+                "IsShowData": true
+            },
+...
+```
+**Please note that you have to determine whether the order of the financial values match the order of the periods**
 ## Logs
 Logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
 
@@ -153,7 +302,11 @@ The only two configuration variables I used with Torproxy are `TOR_MaxCircuitDir
 ## Debugging
 ### Redis
 #### If scraper run in Docker container:
-To open an interactive shell with Redis:
+To open an interactive shell with Redis, you have to enter the container first:
+```
+docker exec -it functions-vietstock bash
+```
+Then:
 ```
 redis-cli -h scraper-redis
 ```
@@ -164,7 +317,8 @@ docker exec -it scraper-redis redis-cli
 ```
 ### Celery
 Look inside each log file.
-
+## How This Scraper Works
+This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and Redis to crawl and scrape tickers' information from a top-down approach (going from business types, then industries, then tickers in each business type-industry combination) by passing necessary information into Redis queues for different Spiders to consume. The scraper also makes use of Torproxy to avoid IP-banning.
 # Limitations and Lessons Learned <a name="limitations"></a>
 ## Limitations
 - When talking about a crawler/scraper, one must consider speed, among other things. That said, I haven't run a benchmark for this scraper project.
@@ -177,6 +331,7 @@ Look inside each log file.
     - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server handle at any given point. While this API is publicly open, it's not documented on Vietstock.
 - Scrape results data format.
     - As mentioend, scrape results are currently stored on disk as JSONs, and a unified format for financial statements has not been produced. Thus, to fully integrate this scraping process with an analysis project, you must do a lot of data standardization.
+- There is no user-friendly interface to monitor Redis queue.
 ## Lessons learned
 - Utilizing Redis creates a nice and smooth workflow for mass scraping data, provided that the paths to data can be logically determined (e.g., in the form of pagination).
 - Using proxies cannot offer the best anonymity while scraping, because you have to use a user cookie to have access to data anyway.
