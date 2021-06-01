@@ -21,4 +21,5 @@ kibana*/
 logs/
 run/
 schemaData/*
+backup/
 */__pycache__/*
