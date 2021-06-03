@@ -1,5 +1,5 @@
 # Scrape Financial Data of Vietnamese Listed Companies - Version 2
-
+A standalone package to scrape financial data from listed Vietnamese companies via Vietstock. If you are looking for raw financial data from listed Vietnamese companies, this may help you.
 # Table of Contents
 - [Prerequisites](#prerequisites)
 - [Run within Docker Compose](#rundockercompose)
@@ -11,7 +11,9 @@
 
 # Prerequisites <a name="prerequisites"></a>
 ## A computer that can run Docker
-Obviously.
+Because the core components of this project runs on Docker.
+## Clone this project
+Because you will have to build the image from source. I have not released this project's image on Docker Hub yet.
 ## A Vietstock user cookie string
 How to get it:
 - Sign on to finance.vietstock.vn
@@ -40,7 +42,8 @@ Report term code | Meaning
 --- | ---
 `1` | Annually
 `2` | Quarterly
-
+## Noting the project folder
+All core functions are located within the `functions_vietstock` folder and so are the scraped files; thus, from now on, references to the `functions_vietstock` folder will be simply put as `./`.
 
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
 ## Add your Vietstock user cookie to `docker-compose.yml`
@@ -67,7 +70,7 @@ Next, open the scraper container in another terminal:
 ```
 docker exec -it functions-vietstock ./userinput.sh
 ```
-## From now, you can follow along the userinput script
+## From now, you can follow along the userinput script <a name="userscript"></a>
 Note: To stop the scraping, stop the userinput script terminal, then open another terminal and run:
 ```
 docker exec -it functions-vietstock ./celery_stop.sh
@@ -99,7 +102,8 @@ to clean everything related to the scraping process (local scraped files are int
                 `2` | Quarterly
             - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
 
-# Run on Host without Docker Compose because Why Not <a name="runonhost"></a>
+# Run on Host without Docker Compose <a name="runonhost"></a>
+Maybe you do not want to spend time building the image, and just want to play around with the code.
 ## Specify local environment variables
 At `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
@@ -113,7 +117,7 @@ You still need to run these inside containers:
 ```
 docker run -d -p 6379:6379 --rm --name scraper-redis redis
 
-docker run -it -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
+docker run -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 ## Clear all previous running files (if any)
 Go to the `functions_vietstock` folder:
