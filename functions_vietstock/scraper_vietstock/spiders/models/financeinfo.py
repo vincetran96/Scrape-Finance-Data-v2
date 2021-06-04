@@ -74,6 +74,11 @@ redis_settings = {
     'REDIS_PORT': constants.REDIS_PORT
 }
 
-concurrency_settings = {'CONCURRENT_REQUESTS': 32}
+concurrency_settings = {
+    'AUTOTHROTTLE_ENABLED': True,
+    'AUTOTHROTTLE_START_DELAY': 5.0,
+    'AUTOTHROTTLE_TARGET_CONCURRENCY': 16,
+    'DOWNLOAD_DELAY': 0.5
+}
 
 settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}

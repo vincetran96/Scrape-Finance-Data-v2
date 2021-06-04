@@ -12,7 +12,7 @@ A standalone package to scrape financial data from listed Vietnamese companies v
 # Prerequisites <a name="prerequisites"></a>
 ## A computer that can run Docker
 Because the core components of this project runs on Docker.
-## Clone this project
+## Cloning this project
 Because you will have to build the image from source. I have not released this project's image on Docker Hub yet.
 ## A Vietstock user cookie string
 How to get it:
@@ -46,7 +46,8 @@ Report term code | Meaning
 All core functions are located within the `functions_vietstock` folder and so are the scraped files; thus, from now on, references to the `functions_vietstock` folder will be simply put as `./`.
 
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
-## Add your Vietstock user cookie to `docker-compose.yml`
+## Configuration
+### 1. Add your Vietstock user cookie to `docker-compose.yml`
 It should be in this area:
 ```
 ...
@@ -61,6 +62,8 @@ functions-vietstock:
         - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ...
 ```
+### 2. Specify whether you want to use proxy
+In the same config area as the user cookie above, removing the environment variable `PROXY` and `TORPROXY_HOST` to stop using proxy. Please note that I have not tested this scraper without proxy.
 ## Build image and start related services
 At the project folder, run:
 ```
@@ -332,10 +335,13 @@ This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and R
     - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity (not entirely if you use the same user cookie across machines). However, one should respect the API service provider (i.e., Vietstock) and avoid bombarding them with tons of requests in a short period of time.
 - Possibility of being banned on Vietstock? Yes.
     - Each request has a unique Vietstock user cookie on it, and thus you are identifiable when making each request.
-    - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server handle at any given point. While this API is publicly open, it's not documented on Vietstock.
-- Scrape results data format.
-    - As mentioend, scrape results are currently stored on disk as JSONs, and a unified format for financial statements has not been produced. Thus, to fully integrate this scraping process with an analysis project, you must do a lot of data standardization.
-- There is no user-friendly interface to monitor Redis queue.
+    - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server handle at any given point. While this API is publicly open, it's not documented on Vietstock. Because of this, I recently added a throttling feature to the financeInfo Spider to avoid bombarding Vietstock's server. See financeInfo's [configuration file](https://github.com/vietzerg/Scrape-Finance-Data-v2/blob/master/functions_vietstock/scraper_vietstock/spiders/models/financeinfo.py).
+- Constantly changing Tor circuit maybe harmful to the Tor network.
+    - Looking at [this link on Tor metrics](https://metrics.torproject.org/relayflags.html), we see that the number of exit nodes is below 2000. By changing the circuits as we scrape, we will eventually expose almost all of these available exit nodes to the Vietstock server, which in turn undermines the purpose of avoiding ban.
+    - In addition, in an unlikely circumstance, interested users who want to use Tor network to view a Vietstock page may not be able to do so, because the exit node may have been banned.
+- Scrape results are as-is and not processed.
+    - As mentioned, scrape results are currently stored on disk as JSONs, and a unified format for financial statements has not been produced. Thus, to fully integrate this scraping process with an analysis project, you must do a lot of data standardization.
+- There is no user-friendly interface to monitor Redis queue, and I haven't looked much into this.
 ## Lessons learned
 - Utilizing Redis creates a nice and smooth workflow for mass scraping data, provided that the paths to data can be logically determined (e.g., in the form of pagination).
 - Using proxies cannot offer the best anonymity while scraping, because you have to use a user cookie to have access to data anyway.

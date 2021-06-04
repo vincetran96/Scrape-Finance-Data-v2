@@ -124,7 +124,8 @@ settings_express = {**log_settings_express, **middlewares_settings, **proxy_sett
 # CorporateAZOverview variables
 name_overview = "corporateAZOverview"
 overview_csv_name = "localData/overview/bizType_ind_tickers.csv"
-log_settings_overview = utilities.log_settings(spiderName=name_overview,
-                                      log_level = "INFO"
+log_settings_overview = utilities.log_settings(
+    spiderName=name_overview,
+    log_level = "INFO"
 )
 settings_overview = {**log_settings_overview, **middlewares_settings, **proxy_settings}
