@@ -127,14 +127,9 @@ Go to the `functions_vietstock` folder:
 ```
 cd functions_vietstock
 ```
-Run the following commands in the terminal:
+Run the `celery_stop.sh` script:
 ```
-pkill -9 -f 'celery worker'
-docker exec scraper-redis redis-cli flushall
-rm -v ./run/celery/*
-rm -v ./run/scrapy/*
-rm -v ./logs/*
-rm -rf ./localData/*
+./celery_stop.sh
 ```
 ## User the userinput script to scrape
 Use the `./userinput.sh` script to scrape as in the previous section.
