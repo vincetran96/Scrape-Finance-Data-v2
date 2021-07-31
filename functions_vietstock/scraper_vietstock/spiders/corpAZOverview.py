@@ -1,6 +1,4 @@
 # This Spider gets corpAZ info on demand of the user
-# Syntax:
-# scrapy crawl corporateAZOnDemand
 
 
 from scraper_vietstock.spiders.models.corporateaz import *

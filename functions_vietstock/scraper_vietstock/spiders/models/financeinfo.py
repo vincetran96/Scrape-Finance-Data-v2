@@ -8,7 +8,6 @@ import scraper_vietstock.spiders.models.utilities as utilities
 
 
 name = "financeInfo"
-name_ondemand = "financeInfoOnDemand"
 
 report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
 report_terms = {"1":"Annual", "2":"Quarter"}
@@ -46,11 +45,6 @@ log_settings = utilities.log_settings(spiderName=name,
                                       log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
 )
 
-log_settings_ondemand = utilities.log_settings(spiderName=name_ondemand,
-                                      log_level="INFO",
-                                      log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
-)
-
 middlewares_settings = {
     'DOWNLOADER_MIDDLEWARES': {
         'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
@@ -76,7 +70,7 @@ redis_settings = {
 
 concurrency_settings = {
     'AUTOTHROTTLE_ENABLED': True,
-    'AUTOTHROTTLE_START_DELAY': 5.0,
+    'AUTOTHROTTLE_START_DELAY': 2.5,
     'AUTOTHROTTLE_TARGET_CONCURRENCY': 16,
     'DOWNLOAD_DELAY': 0.5
 }

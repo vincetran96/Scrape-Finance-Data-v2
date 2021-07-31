@@ -7,28 +7,9 @@ from dotenv import load_dotenv
 # Attempt to load env vars
 load_dotenv(os.path.join("", ".env"))
 
-# Proxy and Tor constants
-try:
-    proxy = os.getenv('PROXY')
-except:
-    proxy = None
-
-try:
-    torproxy_host = os.getenv('TORPROXY_HOST')
-except:
-    torproxy_host = None
-
-if proxy:
-    if torproxy_host:
-        PRIVOXY_LOCAL_PROXY = [f'{torproxy_host}:8118']
-        REQUESTS_LOCAL_PROXY = f'{torproxy_host}:8118'
-    else:
-        PRIVOXY_LOCAL_PROXY = ["torproxy:8118"]
-        REQUESTS_LOCAL_PROXY = "torproxy:8118"
-else:
-    PRIVOXY_LOCAL_PROXY = []
-    REQUESTS_LOCAL_PROXY = ""
-TOR_CONTROLLER_PASSWORD = "12345"
+# Proxies list
+# Implement your own list of proxies here
+PRIVOXY_LOCAL_PROXY = []
 
 # Redis constants
 REDIS_PORT = 6379

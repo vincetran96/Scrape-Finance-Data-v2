@@ -1,14 +1,5 @@
 version: "3"
 services: 
-    torproxy:
-        image: dperson/torproxy
-        container_name: torproxy
-        environment: 
-            - TOR_NewCircuitPeriod=10
-            - TOR_MaxCircuitDirtiness=60
-        ports: 
-            - 8118:8118
-            - 9050:9050
     redis:
         image: redis
         container_name: scraper-redis
@@ -20,11 +11,8 @@ services:
         tty: true
         environment: 
             - REDIS_HOST=scraper-redis
-            - PROXY=yes
-            - TORPROXY_HOST=torproxy
             - USER_COOKIE=
         depends_on: 
-            - torproxy
             - redis
         volumes:
             - ./functions_vietstock/logs:/opt/functions_vietstock/logs

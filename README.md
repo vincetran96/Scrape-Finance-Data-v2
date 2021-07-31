@@ -85,25 +85,26 @@ to clean everything related to the scraping process (local scraped files are int
     - If you enter `y`, the next prompt is: `Enter business type ID and industry ID combination in the form of businesstype_id;industry_id: `
         - If you chose to scrape a list of all business types-industries and their respective tickers, you should have the file `bizType_ind_tickers.csv` in the scrape result folder (`./localData/overview`).
         - Then you answer this prompt by entering a business type ID and industry ID combination in the form of `businesstype_id;industry_id`.
-    - If you enter `n`, the next prompts ask for ticker(s), report type(s), report term(s) and page.
+    - If you enter `n`, the next prompts ask for ticker(s)
         - Again, suppose you have the `bizType_ind_tickers.csv` file
         - Then you answer the prompts as follows:
             - `ticker`: a ticker symbol or a list of ticker symbols of your choice. You can enter either `ticker_1` or `ticker_1,ticker_2`
-            - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term.
-                Report type code | Meaning
-                --- | ---
-                `CTKH` | Financial targets/**C**hỉ **T**iêu **K**ế **H**oạch
-                `CDKT` | Balance sheet/**C**ân **Đ**ối **K**ế **T**oán
-                `KQKD` | Income statement/**K**ết **Q**uả **K**inh **D**oanh
-                `LC` | Cash flow statement/**L**ưu **C**huyển (Tiền Tệ)
-                `CSTC` | Financial ratios/**C**hỉ **S**ố **T**ài **C**hính
+    - Whether you chose scrape by business type-industry or tickers, you will receive a prompt for report type(s), report term(s) and page:
+        - `report_type` and `report_term`: use the report type codes and report term codes in the following tables (which was already mentioned above). You can enter either `report_type_1` or `report_type_1,report_type_2`. Same goes for report term.
+            Report type code | Meaning
+            --- | ---
+            `CTKH` | Financial targets/**C**hỉ **T**iêu **K**ế **H**oạch
+            `CDKT` | Balance sheet/**C**ân **Đ**ối **K**ế **T**oán
+            `KQKD` | Income statement/**K**ết **Q**uả **K**inh **D**oanh
+            `LC` | Cash flow statement/**L**ưu **C**huyển (Tiền Tệ)
+            `CSTC` | Financial ratios/**C**hỉ **S**ố **T**ài **C**hính
 
 
-                Report term code | Meaning
-                --- | ---
-                `1` | Annually
-                `2` | Quarterly
-            - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
+            Report term code | Meaning
+            --- | ---
+            `1` | Annually
+            `2` | Quarterly
+        - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
 
 # Run on Host without Docker Compose <a name="runonhost"></a>
 Maybe you do not want to spend time building the image, and just want to play around with the code.

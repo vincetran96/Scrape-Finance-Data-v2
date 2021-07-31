@@ -78,8 +78,8 @@ while true; do
                 read -p "Do you wish to scrape by a specific business type-industry or by tickers? [y for business type-industry/n for tickers] " bityn
                 if [[ "$bityn" == "y" || "$bityn" == "Y" ]]; then
                     read -p "Enter business type ID and industry ID combination in the form of businesstype_id;industry_id: " biz_ind_ids
-                    read -p "Enter report type id(s): " report_type
-                    read -p "Enter report term id(s): " report_term
+                    read -p "Enter report type id(s) in the form of report_type_1,report_type_2: " report_type
+                    read -p "Enter report term id(s) in the form of report_term_1,report_term_2: " report_term
                     echo "=== Start scraping $biz_ind_ids, report type(s) $report_type, report term(s) $report_term ... See log file(s) for more details."
                     python clean_queue.py
                     scrapy crawl corporateAZExpress -a biz_ind_ids=$biz_ind_ids & PIDCORPAZ=$!
@@ -90,8 +90,8 @@ while true; do
                     exit 0
                 elif [[ "$bityn" == "n" || "$bityn" == "N" ]]; then
                     read -p "Enter a ticker, or a tickers list in the form of ticker1,ticker2,...: " ticker
-                    read -p "Enter report type id(s): " report_type
-                    read -p "Enter report term id(s): " report_term
+                    read -p "Enter report type id(s) in the form of report_type_1,report_type_2: " report_type
+                    read -p "Enter report term id(s) in the form of report_term_1,report_term_2: " report_term
                     read -p "Enter starting page number (if empty, default to 1): " page
                     if [[ "$page" == "" ]]; then
                         echo "Page number defaulted to 1"
