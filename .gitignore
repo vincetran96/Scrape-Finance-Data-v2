@@ -11,6 +11,7 @@ test*
 env/
 .mypy_cache/
 .vscode/
+.idea/
 .~lock*
 .ipynb_checkpoints
 test.*
@@ -20,4 +21,5 @@ elasticsearch*/
 kibana*/
 logs/
 run/
+schemaData/*
 backup/

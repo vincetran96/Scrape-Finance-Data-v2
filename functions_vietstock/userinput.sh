@@ -28,8 +28,8 @@ while true; do
                 read -p "Do you wish to start mass scraping now? Process will automatically exit when finished. [y] " startmassy
                 if [[ "$startmassy" == "y" || "$startmassy" == "Y" ]]; then
                     echo "Creating Celery workers..."
-                    celery -A celery_main worker -Q corpAZ -c 10 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
-                    celery -A celery_main worker -Q finance -c 10 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
+                    celery -A celery_main worker -Q corpAZ -c 4 -n workercorpAZ@%h -l INFO --detach --pidfile="./run/celery/%n.pid"
+                    celery -A celery_main worker -Q finance -c 4 -n workerfinance@%h -l INFO --detach  --pidfile="./run/celery/%n.pid"
 
                     while true; do
                         status=$(celery -A celery_main status | grep '2 nodes')

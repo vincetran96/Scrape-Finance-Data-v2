@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.7.7-slim-buster
+FROM python:3.8.11-slim-buster
 
 # Install essential packages to the base image
 RUN apt-get -y update && apt-get -y install curl nano procps redis-tools "wait-for-it"
