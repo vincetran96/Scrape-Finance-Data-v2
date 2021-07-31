@@ -1,5 +1,5 @@
 # Scrape Financial Data of Vietnamese Listed Companies - Version 2
-
+A standalone package to scrape financial data from listed Vietnamese companies via Vietstock. If you are looking for raw financial data from listed Vietnamese companies, this may help you.
 # Table of Contents
 - [Prerequisites](#prerequisites)
 - [Run within Docker Compose](#rundockercompose)
@@ -11,7 +11,9 @@
 
 # Prerequisites <a name="prerequisites"></a>
 ## A computer that can run Docker
-Obviously.
+Because the core components of this project runs on Docker.
+## Cloning this project
+Because you will have to build the image from source. I have not released this project's image on Docker Hub yet.
 ## A Vietstock user cookie string
 How to get it:
 - Sign on to finance.vietstock.vn
@@ -40,10 +42,12 @@ Report term code | Meaning
 --- | ---
 `1` | Annually
 `2` | Quarterly
-
+## Noting the project folder
+All core functions are located within the `functions_vietstock` folder and so are the scraped files; thus, from now on, references to the `functions_vietstock` folder will be simply put as `./`.
 
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
-## Add your Vietstock user cookie to `docker-compose.yml`
+## Configuration
+### 1. Add your Vietstock user cookie to `docker-compose.yml`
 It should be in this area:
 ```
 ...
@@ -58,6 +62,8 @@ functions-vietstock:
         - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ...
 ```
+### 2. Specify whether you want to use proxy
+In the same config area as the user cookie above, removing the environment variable `PROXY` and `TORPROXY_HOST` to stop using proxy. Please note that I have not tested this scraper without proxy.
 ## Build image and start related services
 At the project folder, run:
 ```
@@ -67,7 +73,7 @@ Next, open the scraper container in another terminal:
 ```
 docker exec -it functions-vietstock ./userinput.sh
 ```
-## From now, you can follow along the userinput script
+## From now, you can follow along the userinput script <a name="userscript"></a>
 Note: To stop the scraping, stop the userinput script terminal, then open another terminal and run:
 ```
 docker exec -it functions-vietstock ./celery_stop.sh
@@ -99,7 +105,8 @@ to clean everything related to the scraping process (local scraped files are int
                 `2` | Quarterly
             - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
 
-# Run on Host without Docker Compose because Why Not <a name="runonhost"></a>
+# Run on Host without Docker Compose <a name="runonhost"></a>
+Maybe you do not want to spend time building the image, and just want to play around with the code.
 ## Specify local environment variables
 At `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
@@ -113,32 +120,176 @@ You still need to run these inside containers:
 ```
 docker run -d -p 6379:6379 --rm --name scraper-redis redis
 
-docker run -it -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
+docker run -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 ## Clear all previous running files (if any)
 Go to the `functions_vietstock` folder:
 ```
 cd functions_vietstock
 ```
-Run the following commands in the terminal:
+Run the `celery_stop.sh` script:
 ```
-pkill -9 -f 'celery worker'
-docker exec scraper-redis redis-cli flushall
-rm -v ./run/celery/*
-rm -v ./run/scrapy/*
-rm -v ./logs/*
-rm -rf ./localData/*
+./celery_stop.sh
 ```
 ## User the userinput script to scrape
 Use the `./userinput.sh` script to scrape as in the previous section.
 
 # Scrape Results <a name="scraperesults"></a>
 ## CorporateAZ Overview
+### File location
 If you chose to scrape a list of all business types, industries and their tickers, the result is stored in the `./localData/overview` folder, under the file name `bizType_ind_tickers.csv`.
-
+### File preview (shortened)
+```
+ticker,biztype_id,bizType_title,ind_id,ind_name
+BID,3,Bank,1000,Finance and Insurance
+CTG,3,Bank,1000,Finance and Insurance
+VCB,3,Bank,1000,Finance and Insurance
+TCB,3,Bank,1000,Finance and Insurance
+...
+```
 ## FinanceInfo
+### File location
 FinanceInfo results are stored in the `./localData/financeInfo` folder, and each file is the form `ticker_reportType_reportTermName_page.json`, representing a ticker - report type - report term - page instance.
-
+### File preview (shortened)
+```
+[
+    [
+        {
+            "ID": 4,
+            "Row": 4,
+            "CompanyID": 2541,
+            "YearPeriod": 2017,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201701",
+            "PeriodEnd": "201712",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 3,
+            "Row": 3,
+            "CompanyID": 2541,
+            "YearPeriod": 2018,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201801",
+            "PeriodEnd": "201812",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 2,
+            "Row": 2,
+            "CompanyID": 2541,
+            "YearPeriod": 2019,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "201901",
+            "PeriodEnd": "201912",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        },
+        {
+            "ID": 1,
+            "Row": 1,
+            "CompanyID": 2541,
+            "YearPeriod": 2020,
+            "TermCode": "N",
+            "TermName": "Năm",
+            "TermNameEN": "Year",
+            "ReportTermID": 1,
+            "DisplayOrdering": 1,
+            "United": "HN",
+            "AuditedStatus": "KT",
+            "PeriodBegin": "202001",
+            "PeriodEnd": "202112",
+            "TotalRow": 14,
+            "BusinessType": 1,
+            "ReportNote": null,
+            "ReportNoteEn": null
+        }
+    ],
+    {
+        "Balance Sheet": [
+            {
+                "ID": 1,
+                "ReportNormID": 2995,
+                "Name": "TÀI SẢN ",
+                "NameEn": "ASSETS",
+                "NameMobile": "TÀI SẢN ",
+                "NameMobileEn": "ASSETS",
+                "CssStyle": "MaxB",
+                "Padding": "Padding1",
+                "ParentReportNormID": 2995,
+                "ReportComponentName": "Cân đối kế toán",
+                "ReportComponentNameEn": "Balance Sheet",
+                "Unit": null,
+                "UnitEn": null,
+                "OrderType": null,
+                "OrderingComponent": null,
+                "RowNumber": null,
+                "ReportComponentTypeID": null,
+                "ChildTotal": 0,
+                "Levels": 0,
+                "Value1": null,
+                "Value2": null,
+                "Value3": null,
+                "Value4": null,
+                "Vl": null,
+                "IsShowData": true
+            },
+            {
+                "ID": 2,
+                "ReportNormID": 3000,
+                "Name": "A. TÀI SẢN NGẮN HẠN",
+                "NameEn": "A. SHORT-TERM ASSETS",
+                "NameMobile": "A. TÀI SẢN NGẮN HẠN",
+                "NameMobileEn": "A. SHORT-TERM ASSETS",
+                "CssStyle": "LargeB",
+                "Padding": "Padding1",
+                "ParentReportNormID": 2996,
+                "ReportComponentName": "Cân đối kế toán",
+                "ReportComponentNameEn": "Balance Sheet",
+                "Unit": null,
+                "UnitEn": null,
+                "OrderType": null,
+                "OrderingComponent": null,
+                "RowNumber": null,
+                "ReportComponentTypeID": null,
+                "ChildTotal": 25,
+                "Levels": 1,
+                "Value1": 4496051.0,
+                "Value2": 4971364.0,
+                "Value3": 3989369.0,
+                "Value4": 2142717.0,
+                "Vl": null,
+                "IsShowData": true
+            },
+...
+```
+**Please note that you have to determine whether the order of the financial values match the order of the periods**
 ## Logs
 Logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
 
@@ -153,7 +304,11 @@ The only two configuration variables I used with Torproxy are `TOR_MaxCircuitDir
 ## Debugging
 ### Redis
 #### If scraper run in Docker container:
-To open an interactive shell with Redis:
+To open an interactive shell with Redis, you have to enter the container first:
+```
+docker exec -it functions-vietstock bash
+```
+Then:
 ```
 redis-cli -h scraper-redis
 ```
@@ -164,7 +319,8 @@ docker exec -it scraper-redis redis-cli
 ```
 ### Celery
 Look inside each log file.
-
+## How This Scraper Works
+This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and Redis to crawl and scrape tickers' information from a top-down approach (going from business types, then industries, then tickers in each business type-industry combination) by passing necessary information into Redis queues for different Spiders to consume. The scraper also makes use of Torproxy to avoid IP-banning.
 # Limitations and Lessons Learned <a name="limitations"></a>
 ## Limitations
 - When talking about a crawler/scraper, one must consider speed, among other things. That said, I haven't run a benchmark for this scraper project.
@@ -174,9 +330,13 @@ Look inside each log file.
     - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity (not entirely if you use the same user cookie across machines). However, one should respect the API service provider (i.e., Vietstock) and avoid bombarding them with tons of requests in a short period of time.
 - Possibility of being banned on Vietstock? Yes.
     - Each request has a unique Vietstock user cookie on it, and thus you are identifiable when making each request.
-    - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server handle at any given point. While this API is publicly open, it's not documented on Vietstock.
-- Scrape results data format.
-    - As mentioend, scrape results are currently stored on disk as JSONs, and a unified format for financial statements has not been produced. Thus, to fully integrate this scraping process with an analysis project, you must do a lot of data standardization.
+    - As of now (May 2021), I still don't know how many concurrent requests can Vietstock server handle at any given point. While this API is publicly open, it's not documented on Vietstock. Because of this, I recently added a throttling feature to the financeInfo Spider to avoid bombarding Vietstock's server. See financeInfo's [configuration file](https://github.com/vietzerg/Scrape-Finance-Data-v2/blob/master/functions_vietstock/scraper_vietstock/spiders/models/financeinfo.py).
+- Constantly changing Tor circuit maybe harmful to the Tor network.
+    - Looking at [this link on Tor metrics](https://metrics.torproject.org/relayflags.html), we see that the number of exit nodes is below 2000. By changing the circuits as we scrape, we will eventually expose almost all of these available exit nodes to the Vietstock server, which in turn undermines the purpose of avoiding ban.
+    - In addition, in an unlikely circumstance, interested users who want to use Tor network to view a Vietstock page may not be able to do so, because the exit node may have been banned.
+- Scrape results are as-is and not processed.
+    - As mentioned, scrape results are currently stored on disk as JSONs, and a unified format for financial statements has not been produced. Thus, to fully integrate this scraping process with an analysis project, you must do a lot of data standardization.
+- There is no user-friendly interface to monitor Redis queue, and I haven't looked much into this.
 ## Lessons learned
 - Utilizing Redis creates a nice and smooth workflow for mass scraping data, provided that the paths to data can be logically determined (e.g., in the form of pagination).
 - Using proxies cannot offer the best anonymity while scraping, because you have to use a user cookie to have access to data anyway.
