@@ -8,7 +8,10 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join("", ".env"))
 
 # Proxies list
-# Implement your own list of proxies here
+# Implement your own list of proxies here,
+#   possibly using privoxy
+# An example would be appending a proxy host and port
+#   to this list (e.g., host:1234)
 PRIVOXY_LOCAL_PROXY = []
 
 # Redis constants

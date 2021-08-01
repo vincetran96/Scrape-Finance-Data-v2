@@ -6,7 +6,7 @@ services:
     functions-vietstock:
         build: .
         container_name: functions-vietstock
-        command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash
+        command: wait-for-it -s scraper-redis:6379 -t 600  -- bash
         stdin_open: true
         tty: true
         environment: 

@@ -4,7 +4,6 @@ astroid==2.4.1
 attrs==21.2.0
 Automat==20.2.0
 backcall==0.2.0
-beautifulsoup4==4.9.3
 billiard==3.6.4.0
 bleach==3.1.5
 brotlipy==0.7.0

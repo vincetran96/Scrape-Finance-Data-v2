@@ -47,23 +47,22 @@ All core functions are located within the `functions_vietstock` folder and so ar
 
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
 ## Configuration
-### 1. Add your Vietstock user cookie to `docker-compose.yml`
 It should be in this area:
 ```
 ...
 functions-vietstock:
     build: .
-    container_name: functions-vietstock
-    command: wait-for-it -s torproxy:8118 -s scraper-redis:6379 -t 600  -- bash
-    environment: 
-        - REDIS_HOST=scraper-redis
-        - PROXY=yes
-        - TORPROXY_HOST=torproxy
-        - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
+        container_name: functions-vietstock
+        command: wait-for-it -s scraper-redis:6379 -t 600  -- bash
+        stdin_open: true
+        tty: true
+        environment: 
+            - REDIS_HOST=scraper-redis
+            - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ...
 ```
-### 2. Specify whether you want to use proxy
-In the same config area as the user cookie above, removing the environment variable `PROXY` and `TORPROXY_HOST` to stop using proxy. Please note that I have not tested this scraper without proxy.
+
+**July 2021 update: I have removed my own implementation of proxies for this project.** The reason will be stated in the [Lession Learned](#lessons-learned) section below. If you really want to use proxies, make your changes that can be reflected in this [constants configuration file](functions_vietstock/scraper_vietstock/spiders/models/constants.py) (more details are included there).
 ## Build image and start related services
 At the project folder, run:
 ```
@@ -112,16 +111,12 @@ Maybe you do not want to spend time building the image, and just want to play ar
 At `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
 REDIS_HOST=localhost
-PROXY=yes
-TORPROXY_HOST=localhost
 USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ```
-## Run Redis and Torproxy
-You still need to run these inside containers:
+## Run Redis
+You still need to run the Redis server inside a container:
 ```
 docker run -d -p 6379:6379 --rm --name scraper-redis redis
-
-docker run -d -p 8118:8118 -p 9050:9050 --rm --name torproxy --env TOR_NewCircuitPeriod=10 --env TOR_MaxCircuitDirtiness=60 dperson/torproxy
 ```
 ## Clear all previous running files (if any)
 Go to the `functions_vietstock` folder:
@@ -295,11 +290,6 @@ FinanceInfo results are stored in the `./localData/financeInfo` folder, and each
 Logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
 
 # Debugging and How This Thing Works <a name="debugging"></a>
-## What is Torproxy?
-### Quick introduction
-Torproxy is "Tor and Privoxy (web proxy configured to route through tor) docker container." See: https://github.com/dperson/torproxy. We need it in this container to avoid IP-banning for scraping too much.
-### Configuration used in this project
-The only two configuration variables I used with Torproxy are `TOR_MaxCircuitDirtiness` and `TOR_NewCircuitPeriod`, which means the maximum Tor circuit age (in seconds) and time period between every attempt to change Tor circuit (in seconds), respectively. Note that `TOR_MaxCircuitDirtiness` is set at max = 60 seconds, and `TOR_NewCircuitPeriod` is set at 10 seconds.
 ## What is Redis?
 "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker." See: https://redis.io/. In this project, Redis serves as a message broker and an in-memory queue for Scrapy. No non-standard Redis configurations were made for this project.
 ## Debugging
@@ -321,12 +311,12 @@ docker exec -it scraper-redis redis-cli
 ### Celery
 Look inside each log file.
 ## How This Scraper Works
-This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and Redis to crawl and scrape tickers' information from a top-down approach (going from business types, then industries, then tickers in each business type-industry combination) by passing necessary information into Redis queues for different Spiders to consume. The scraper also makes use of Torproxy to avoid IP-banning.
+This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and Redis to crawl and scrape tickers' information from a top-down approach (going from business types, then industries, then tickers in each business type-industry combination) by passing necessary information into Redis queues for different Spiders to consume.
 # Limitations and Lessons Learned <a name="limitations"></a>
 ## Limitations
 - When talking about a crawler/scraper, one must consider speed, among other things. That said, I haven't run a benchmark for this scraper project.
     - There are about 3000 tickers on the market, each with its own set of available report types, report terms and pages.
-    - Scraping **all** historical financials of **all** those 3000 tickers will, I believe, be pretty slow, because we have to use Torproxy and there can be many pages for a ticker-report type-report term combination.
+    - Scraping **all** historical financials of **all** those 3000 tickers will, I believe, be pretty slow, because there are many pages for a ticker-report type-report term combination and an auto-throttle policy has been added using Scrapy's AutoThrottle extension.
     - Scrape results are written on disk, so that is also a bottleneck if you want to mass-scrape. Of course, this point is different if you only scrape one or two tickers.
     - To mass-scrape, a distributed scraping architecture is desirable, not only for speed, but also for anonymity (not entirely if you use the same user cookie across machines). However, one should respect the API service provider (i.e., Vietstock) and avoid bombarding them with tons of requests in a short period of time.
 - Possibility of being banned on Vietstock? Yes.
@@ -342,6 +332,7 @@ This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and R
 - Utilizing Redis creates a nice and smooth workflow for mass scraping data, provided that the paths to data can be logically determined (e.g., in the form of pagination).
 - Using proxies cannot offer the best anonymity while scraping, because you have to use a user cookie to have access to data anyway.
 - Packing inter-dependent services with Docker Compose helps create a cleaner and more professional-looking code base.
+- Why have I removed my implementation of proxies? The reason is that I believe whoever uses this software is responsible for creating and maintaining their own mechanism to avoid IP-ban. Additionally, openly pre-providing an IP-ban mechanism may expose it to being overused or even abused; and I do not want to take that risk.
 
 # Disclaimer <a name="disclaimer"></a>
 - This project is completed for educational and non-commercial purposes only.
