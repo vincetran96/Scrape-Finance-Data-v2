@@ -24,14 +24,18 @@ class financeInfoHandler(scraperVSRedisSpider):
         '''
 
         # If run with corpAZ (mass scrape), push params to scrape_key
-        if getattr(self, "ticker", None) and getattr(self, "report_type", None) and getattr(self, "report_term", None):
+        if getattr(self, "ticker", None) \
+            and getattr(self, "report_type", None) \
+            and getattr(self, "report_term", None):
             self.run_with_corpAZ = False
             for ticker in self.ticker.split(","):
                 for report_type in self.report_type.split(","):
                     for report_term in self.report_term.split(","):
-                        self.r.lpush(
-                            scrape_key, f'{ticker};{self.page};{report_type};{report_term}'
-                        )
+                        params = f'{ticker};{self.page};{report_type};{report_term}'
+                        # self.r.lpush(
+                        #     scrape_key, f'{ticker};{self.page};{report_type};{report_term}'
+                        # )
+                        self.r.sadd(scrape_key, params)
         else:
             self.run_with_corpAZ = True
         
@@ -43,8 +47,11 @@ class financeInfoHandler(scraperVSRedisSpider):
         Customizing this method from scraperVSRedis Spider because it has the Page param. in formdata
         '''
 
-        use_set = self.settings.getbool('REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
-        fetch_one = self.server.spop if use_set else self.server.lpop
+        # use_set = self.settings.getbool('REDIS_START_URLS_AS_SET', defaults.START_URLS_AS_SET)
+        # fetch_one = self.server.spop if use_set else self.server.lpop
+        
+        # Using set for params
+        fetch_one = self.server.spop
 
         # If run with corpAZ, fetch data from Redis corpAZ_key
         if self.run_with_corpAZ:
@@ -90,10 +97,17 @@ class financeInfoHandler(scraperVSRedisSpider):
             
             # Close spider if corpAZ is closed and corpAZ Redis queue is empty and Spider is idling:
             # - Print requests with errors, then delete all keys related to this Spider
-            if self.r.get(self.corpAZ_closed_key) == "1" and self.r.llen(corpAZ_key) == 0 and self.idling == True:
+            # Changed corpAZ_key to set
+            if self.r.get(self.corpAZ_closed_key) == "1" \
+                and self.r.scard(corpAZ_key) == 0 \
+                and self.idling == True:
                 
-                self.logger.info(f'corpAZ closed key: {self.r.get(self.corpAZ_closed_key)}')
-                self.logger.info(f'corpAZ key {corpAZ_key} contains: {self.r.lrange(corpAZ_key, 0, -1)}')
+                self.logger.info(
+                    f'corpAZ closed key: {self.r.get(self.corpAZ_closed_key)}'
+                )
+                self.logger.info(
+                    f'corpAZ key {corpAZ_key} contains: {self.r.smembers(corpAZ_key)}'
+                )
                 
                 self.logger.info(self.r.smembers(self.error_set_key))
                 keys = self.r.keys(f'{self.name}*')
@@ -129,7 +143,7 @@ class financeInfoHandler(scraperVSRedisSpider):
             
             # Close spider if scrape_key Redis queue is empty and Spider is idling:
             # - Print requests with errors, then delete all keys related to this Spider
-            if self.r.llen(scrape_key) == 0 and self.idling == True:
+            if self.r.scard(scrape_key) == 0 and self.idling == True:
                 self.logger.info(self.r.smembers(self.error_set_key))
                 keys = self.r.keys(f'{self.name}*')
                 for k in keys:
@@ -199,11 +213,20 @@ class financeInfoHandler(scraperVSRedisSpider):
                     self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')
                     next_page = str(int(page) + 1)
 
-                    if self.run_with_corpAZ:
-                        self.r.lpush(corpAZ_key, f'{ticker};{next_page};{report_type};{report_term}')
+                    # Check if new params have already been enqueued
+                    enqueued_params = self.r.smembers(enqueued_key)
+                    new_params = f'{ticker};{next_page};{report_type};{report_term}'
+                    if new_params in enqueued_params:
+                        self.logger.warning(
+                            f"{new_params} params are already in enqueued params set")
                     else:
-                        self.r.lpush(scrape_key, f'{ticker};{next_page};{report_type};{report_term}')
+                        self.r.sadd(enqueued_key, new_params)
+                        if self.run_with_corpAZ:
+                            self.r.sadd(corpAZ_key, new_params)
+                        else:
+                            self.r.sadd(scrape_key, new_params)
                     
-            except Exception as e:
-                self.logger.info(f'Exception at {page} of {report_type} for {ticker}: {e}')
+            except Exception as exc:
+                self.logger.info(f'Exception at page {page} of {report_type} for {ticker}: {exc}')
                 self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
+                raise exc

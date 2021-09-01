@@ -181,6 +181,7 @@ class corporateazBaseHandler(scrapy.Spider):
 
             except Exception as exc:
                 self.logger.info(f'Response cannot be parsed by JSON at parse_az: {exc}')
+                raise exc
         else:
             self.logger.info("Response is null")
 
