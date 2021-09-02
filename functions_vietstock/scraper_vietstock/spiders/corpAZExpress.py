@@ -42,7 +42,16 @@ class corporateazExpressHandler(corporateazBaseHandler):
             )
         for t in tickers_list:
             # Push to financeInfo queue needs to be different
-            self.r.lpush(tickers_redis_keys[0], f'{t};1')
+            # self.r.lpush(tickers_redis_keys[0], f'{t};1')
+            finInfo_enqueued_params = self.r.smembers(financeInfo_enqueued_key)
+            new_params = f'{t};1'
+            if new_params in finInfo_enqueued_params:
+                self.logger.warning(
+                    f"{new_params} params are already in finInfo enqueued params set")
+            else:
+                self.r.sadd(financeInfo_enqueued_key, new_params)
+                self.r.sadd(tickers_redis_keys[0], new_params)
+
             # Push to other queues
             for k in tickers_redis_keys[1:]:
                 self.r.lpush(k, t)

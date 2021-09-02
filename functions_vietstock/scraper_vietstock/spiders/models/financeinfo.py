@@ -14,6 +14,7 @@ report_terms = {"1":"Annual", "2":"Quarter"}
 
 corpAZ_key = f'{name}:corpAZtickers'
 scrape_key = f'{name}:scrape'
+enqueued_key = f'{name}:enqueued'
 
 data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "formdata": {

@@ -103,6 +103,9 @@ settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_sett
 
 # CorporateAZExpress variables
 name_express = "corporateAZExpress"
+
+financeInfo_enqueued_key = f'{financeInfo_name}:enqueued'
+
 tickers_redis_keys = [
     f'{financeInfo_name}:corpAZtickers',
     f'{pdfDocs_name}:corpAZtickers',
