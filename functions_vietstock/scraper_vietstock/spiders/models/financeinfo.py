@@ -31,8 +31,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         },
         "cookies": {
             "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE,
-            "vst_usr_lg_token": constants.USER_COOKIE_TOKEN
+            "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
             "ticker": "",
