@@ -27,6 +27,12 @@ try:
 except:
     USER_COOKIE = ""
 
+# User cookie token
+try:
+    USER_COOKIE_TOKEN = os.getenv('USER_COOKIE_TOKEN')
+except:
+    USER_COOKIE_TOKEN = ""
+
 # Other constants
 LANGUAGE = "en-US"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0"

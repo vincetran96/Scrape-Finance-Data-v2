@@ -32,6 +32,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         "cookies": {
             "language": constants.LANGUAGE,
             "vts_usr_lg": constants.USER_COOKIE,
+            "vst_usr_lg_token": constants.USER_COOKIE_TOKEN
         },
         "meta": {
             "ticker": "",
@@ -56,7 +57,8 @@ middlewares_settings = {
     },
     'SPIDER_MIDDLEWARES': {
         # 'scraper_vietstock.middlewares.TickerCrawlSpiderMiddleware': 45
-    }
+    },
+    'HTTPERROR_ALLOWED_CODES': []
 }
 
 proxy_settings = {

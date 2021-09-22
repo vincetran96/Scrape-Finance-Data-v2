@@ -16,7 +16,7 @@ Because the core components of this project runs on Docker.
 Because you will have to build the image from source. I have not released this project's image on Docker Hub yet.
 ## A Vietstock user cookie string
 How to get it:
-- Sign on to finance.vietstock.vn
+- Sign on to [finance.vietstock.vn](https://finance.vietstock.vn/)
 - Hover over **"Corporate"**/**"Doanh nghiệp"**, and choose **"Corporate A-Z"**/**"Doanh nghiệp A-Z"**
 - Click on any ticker
 - Open your browser's Inspect console by right-clicking on any empty area of the page, and choose `Inspect`
@@ -107,8 +107,13 @@ to clean everything related to the scraping process (local scraped files are int
 
 # Run on Host without Docker Compose <a name="runonhost"></a>
 Maybe you do not want to spend time building the image, and just want to play around with the code.
+## Install Python requirements
+In your virtual environment of choice, install all requirements:
+```
+pip install -r requirements.txt
+```
 ## Specify local environment variables
-At `functions_vietstock` folder, create a file named `.env` with the following content:
+Nagivate to the `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
 REDIS_HOST=localhost
 USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
@@ -116,7 +121,7 @@ USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
 ## Run Redis
 You still need to run the Redis server inside a container:
 ```
-docker run -d -p 6379:6379 --rm --name scraper-redis redis
+docker run -d -p 6379:6379 --rm --name scraper-redis redis:6.2
 ```
 ## Clear all previous running files (if any)
 Go to the `functions_vietstock` folder:

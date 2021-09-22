@@ -190,6 +190,7 @@ class financeInfoHandler(scraperVSRedisSpider):
             report_type = response.meta['ReportType']
             report_term = response.meta['ReportTermType']
             page = response.meta['page']
+            url = response.url
 
             self.logger.info(f'On page {page} of {report_type} for {ticker}')
 
@@ -227,6 +228,10 @@ class financeInfoHandler(scraperVSRedisSpider):
                             self.r.sadd(scrape_key, new_params)
                     
             except Exception as exc:
-                self.logger.info(f'Exception at page {page} of {report_type} for {ticker}: {exc}')
-                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
-                raise exc
+                self.logger.warning(
+                    f'Exception at page {page} of {report_type} for {ticker} at {url}: {exc}')
+                self.r.sadd(
+                    self.error_set_key, f'{ticker};{page};{report_type}')
+                # raise exc # not raise error here
+        else:
+            self.logger.warning('No response')
