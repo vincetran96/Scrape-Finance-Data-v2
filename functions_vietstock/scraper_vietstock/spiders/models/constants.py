@@ -16,16 +16,14 @@ PRIVOXY_LOCAL_PROXY = []
 
 # Redis constants
 REDIS_PORT = 6379
-try:
-    REDIS_HOST = os.getenv('REDIS_HOST')
-except:
-    REDIS_HOST = "scraper-redis"
+REDIS_HOST = os.getenv('REDIS_HOST') or "scraper-redis"
 
 # User cookie
-try:
-    USER_COOKIE = os.getenv('USER_COOKIE')
-except:
-    USER_COOKIE = ""
+USER_COOKIE = os.getenv('USER_COOKIE') or ""
+
+# Request verification token
+REQ_VER_TOKEN_POST = os.getenv('REQ_VER_TOKEN_POST') or ""
+REQ_VER_TOKEN_COOKIE = os.getenv('REQ_VER_TOKEN_COOKIE') or ""
 
 # Other constants
 LANGUAGE = "en-US"

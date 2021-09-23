@@ -24,62 +24,67 @@ name_base = "corporateAZBase"
 # Common corporateAZ variables
 defaultnullmeta = "NOMETATOVIEW"
 
-data = {"url": "https://finance.vietstock.vn/data/corporateaz",
-        "formdata": {
-            "catID": constants.CAT_ID,
-            "industryID": constants.INDUSTRY_ID,
-            "page": constants.START_PAGE,
-            "pageSize": constants.PAGE_SIZE,
-            "type": "0",
-            "code": "",
-            "businessTypeID": constants.BUSINESSTYPE_ID,
-            "orderBy": "Code",
-            "orderDir": "ASC"
-        },
-        "headers": {
-            "User-Agent": constants.USER_AGENT,
-            "Content-Type": constants.CONTENT_TYPE
-        },
-        "cookies": {
-            "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE
-        },
-        "meta": {
-            "page": constants.START_PAGE,
-            "TotalPages": "",
-            "bizType_id": "",
-            "bizType_title": "",
-            "ind_id": "",
-            "ind_name": "",
-        }
+data = {
+    "url": "https://finance.vietstock.vn/data/corporateaz",
+    "formdata": {
+        "catID": constants.CAT_ID,
+        "industryID": constants.INDUSTRY_ID,
+        "page": constants.START_PAGE,
+        "pageSize": constants.PAGE_SIZE,
+        "type": "0",
+        "code": "",
+        "businessTypeID": constants.BUSINESSTYPE_ID,
+        "orderBy": "Code",
+        "orderDir": "ASC"
+    },
+    "headers": {
+        "User-Agent": constants.USER_AGENT,
+        "Content-Type": constants.CONTENT_TYPE
+    },
+    "cookies": {
+        "language": constants.LANGUAGE,
+        "__RequestVerificationToken": constants.REQ_VER_TOKEN_COOKIE,
+        "vts_usr_lg": constants.USER_COOKIE
+    },
+    "meta": {
+        "page": constants.START_PAGE,
+        "TotalPages": "",
+        "bizType_id": "",
+        "bizType_title": "",
+        "ind_id": "",
+        "ind_name": "",
+    }
 }
 
 business_type = {
-        "url": "https://finance.vietstock.vn/data/businesstype",
-        "headers": {
-            "User-Agent": constants.USER_AGENT
-        },
-        "cookies": {
-            "language": constants.LANGUAGE
-        },
+    "url": "https://finance.vietstock.vn/data/businesstype",
+    "headers": {
+        "User-Agent": constants.USER_AGENT
+    },
+    "cookies": {
+        "language": constants.LANGUAGE,
+        "__RequestVerificationToken": constants.REQ_VER_TOKEN_COOKIE
+    }
 }
 
 industry_list = {
-        "url": "https://finance.vietstock.vn/data/industrylist",
-        "headers": {
-            "User-Agent": constants.USER_AGENT
-        },
-        "cookies": {
-            "language": constants.LANGUAGE
-        },
-        "meta": {
-            "bizType_id": "",
-            "bizType_title": "",
-        }
+    "url": "https://finance.vietstock.vn/data/industrylist",
+    "headers": {
+        "User-Agent": constants.USER_AGENT
+    },
+    "cookies": {
+        "language": constants.LANGUAGE,
+        "__RequestVerificationToken": constants.REQ_VER_TOKEN_COOKIE
+    },
+    "meta": {
+        "bizType_id": "",
+        "bizType_title": "",
+    }
 }
 
-log_settings_regular = utilities.log_settings(spiderName=name_regular,
-                                      log_level = "INFO"
+log_settings_regular = utilities.log_settings(
+    spiderName=name_regular,
+    log_level = "INFO"
 )
 
 middlewares_settings = {
@@ -99,10 +104,20 @@ redis_settings = {
 }
 
 # CorporateAZRegular variables
-settings_regular = {**log_settings_regular, **middlewares_settings, **proxy_settings, **redis_settings}
+settings_regular = {
+    **log_settings_regular,
+    **middlewares_settings,
+    **proxy_settings,
+    **redis_settings
+}
 
 # CorporateAZExpress variables
 name_express = "corporateAZExpress"
+express_csv_name = "localData/express/bizType_ind_tickers.csv"
+bizType_set_key = "bizType_set"
+bizType_title_set_key = "bizType_title_set"
+ind_set_key = "ind_set"
+ind_name_set_key = "ind_name_set"
 
 financeInfo_enqueued_key = f'{financeInfo_name}:enqueued'
 
@@ -122,7 +137,12 @@ tickers_totalcount_key = "tickers_totalcount"
 log_settings_express = utilities.log_settings(spiderName=name_express,
                                       log_level = "INFO"
 )
-settings_express = {**log_settings_express, **middlewares_settings, **proxy_settings, **redis_settings}
+settings_express = {
+    **log_settings_express,
+    **middlewares_settings,
+    **proxy_settings,
+    **redis_settings
+}
 
 # CorporateAZOverview variables
 name_overview = "corporateAZOverview"
@@ -131,4 +151,8 @@ log_settings_overview = utilities.log_settings(
     spiderName=name_overview,
     log_level = "INFO"
 )
-settings_overview = {**log_settings_overview, **middlewares_settings, **proxy_settings}
+settings_overview = {
+    **log_settings_overview,
+    **middlewares_settings,
+    **proxy_settings
+}

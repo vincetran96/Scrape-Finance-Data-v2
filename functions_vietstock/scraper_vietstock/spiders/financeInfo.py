@@ -51,13 +51,13 @@ class financeInfoHandler(scraperVSRedisSpider):
         # fetch_one = self.server.spop if use_set else self.server.lpop
         
         # Using set for params
-        fetch_one = self.server.spop
+        # fetch_one = self.server.spop
 
         # If run with corpAZ, fetch data from Redis corpAZ_key
         if self.run_with_corpAZ:
             found = 0
             while found < self.redis_batch_size:
-                data = fetch_one(corpAZ_key)
+                data = self.server.spop(corpAZ_key)
                 if not data:
                     break
                 params = bytes_to_str(data, self.redis_encoding).split(";")
@@ -113,16 +113,16 @@ class financeInfoHandler(scraperVSRedisSpider):
                 keys = self.r.keys(f'{self.name}*')
                 for k in keys:
                     self.r.delete(k)
+                self.close_status()
                 self.crawler.engine.close_spider(
                     spider=self, reason="CorpAZ is closed; CorpAZ queue is empty; Spider is idling"
                 )
-                self.close_status()
         
         # If not run with corpAZ, fetch data from scrape_key
         else:
             found = 0
             while found < self.redis_batch_size:
-                data = fetch_one(scrape_key)
+                data = self.server.spop(scrape_key)
                 if not data:
                     break
                 params = bytes_to_str(data, self.redis_encoding).split(";")
@@ -230,8 +230,16 @@ class financeInfoHandler(scraperVSRedisSpider):
             except Exception as exc:
                 self.logger.warning(
                     f'Exception at page {page} of {report_type} for {ticker} at {url}: {exc}')
+                
+                # Add error to error set
                 self.r.sadd(
-                    self.error_set_key, f'{ticker};{page};{report_type}')
+                    self.error_set_key, f'{ticker};{report_type};{page}')
+                
+                # Write error to log file
+                with open(
+                    f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+                    openfile.write(
+                        f'ticker: {ticker}, report: {report_type}, page {page}, error type: {type(exc)} \n')
                 # raise exc # not raise error here
-        else:
-            self.logger.warning('No response')
+        # else:
+        #     self.logger.warning('No response')

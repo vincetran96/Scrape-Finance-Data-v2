@@ -7,7 +7,6 @@ from scrapy.exceptions import DontCloseSpider
 from scrapy.utils.log import configure_logging
 from scrapy_redis.spiders import RedisSpider
 from scrapy_redis.utils import bytes_to_str
-
 from scraper_vietstock.spiders.models.constants import ERROR_SET_SUFFIX, REDIS_HOST
 from scraper_vietstock.spiders.models.corporateaz import closed_redis_key as corpAZ_closed_key
 
@@ -21,7 +20,6 @@ class scraperVSRedisSpider(RedisSpider):
         super(scraperVSRedisSpider, self).__init__(*args, **kwargs)
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.report_types = []
-        # self.fi = {}
 
         self.error_set_key = f'{self.name}:{ERROR_SET_SUFFIX}'
         self.corpAZ_closed_key = corpAZ_closed_key
@@ -34,7 +32,7 @@ class scraperVSRedisSpider(RedisSpider):
 
     def spider_idle(self):
         '''
-        Overwrites default method
+        Overrides default method
         '''
 
         self.idling = True
@@ -72,8 +70,10 @@ class scraperVSRedisSpider(RedisSpider):
                 f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
         
         # Write error to log file
-        with open(f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
-            openfile.write(f'ticker: {ticker}, report: {report_type}, page {page}, error type: {str(failure.type)} \n')
+        with open(
+            f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+            openfile.write(
+                f'ticker: {ticker}, report: {report_type}, page {page}, error type: {str(failure.type)} \n')
         
         # Add error to Redis set if the function is defined
         if getattr(self, "handle_error_redis", None):
@@ -84,7 +84,7 @@ class scraperVSRedisSpider(RedisSpider):
         Add errors to Redis error set
         '''
 
-        self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
+        self.r.sadd(self.error_set_key, f'{ticker};{report_type};{page}')
 
     def close_status(self):
         '''

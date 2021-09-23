@@ -20,11 +20,20 @@ class corporateazOverviewHandler(corporateazBaseHandler):
         super(corporateazOverviewHandler, self).__init__(*args, **kwargs)
         
         # Initialize on-demand scrape result
-        save_csvfile_row(("ticker","biztype_id", "bizType_title", "ind_id", "ind_name"), overview_csv_name)
+        save_csvfile_row(
+            ("ticker", "biztype_id", "bizType_title", "ind_id", "ind_name"), overview_csv_name
+        )
 
-    def overview_biztype_indu_tickers(self, tickers_list, bizType_id, bizType_title, ind_id, ind_name):
+    def overview_biztype_indu_tickers(
+            self,
+            tickers_list,
+            bizType_id,
+            bizType_title,
+            ind_id,
+            ind_name
+        ):
         rows = (
             (ticker, bizType_id, bizType_title, ind_id, ind_name)
             for ticker in tickers_list
         )
-        save_csvfile_rows_add(rows, filename=overview_csv_name)
+        save_csvfile_rows_add(rows, overview_csv_name)

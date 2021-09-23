@@ -24,6 +24,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
             "Unit": "1000000",
             "Page": constants.START_PAGE,
             "PageSize": "4",
+            "__RequestVerificationToken": constants.REQ_VER_TOKEN_POST
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -31,6 +32,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         },
         "cookies": {
             "language": constants.LANGUAGE,
+            "__RequestVerificationToken": constants.REQ_VER_TOKEN_COOKIE,
             "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {

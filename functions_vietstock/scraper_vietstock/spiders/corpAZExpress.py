@@ -1,10 +1,13 @@
 # This spider crawls the list of company names (tickers) on Vietstock,
 # feeds the list to the Redis queue for other Spiders to crawl
 
+from os import tcgetpgrp, tcsetpgrp
 import redis
 
 import scraper_vietstock.spiders.models.constants as constants
-from scraper_vietstock.helpers.fileDownloader import save_jsonfile
+from scraper_vietstock.helpers.fileDownloader import (
+    save_csvfile_row, save_csvfile_rows_add, save_jsonfile
+)
 from scraper_vietstock.spiders.models.constants import REDIS_HOST
 from scraper_vietstock.spiders.models.corporateaz import *
 from scraper_vietstock.spiders.corpAZBase import corporateazBaseHandler
@@ -26,10 +29,34 @@ class corporateazExpressHandler(corporateazBaseHandler):
         self.r = redis.Redis(host=REDIS_HOST, decode_responses=True)
         self.r.set(closed_redis_key, "0")
 
-    def push_corpAZtickers_queue(self, tickers_list, page, total_records, total_pages, bizType_id, ind_id):
+        # First row of CSV file 
+        save_csvfile_row(
+            ("ticker", "biztype_id", "bizType_title", "ind_id", "ind_name"), express_csv_name
+        )
+
+    def push_corpAZtickers_queue(
+            self,
+            tickers_list,
+            page,
+            total_records,
+            total_pages,
+            bizType_id,
+            bizType_title,
+            ind_id,
+            ind_name
+        ):
         '''
         Add information to Redis queue for other Spiders to crawl and for other purposes
         '''
+
+        # Write out tickers to scrape
+        #   allowing user to compare this vs downloaded data
+        # For now just concerning financeInfo
+        rows = (
+            (ticker, bizType_id, bizType_title, ind_id, ind_name)
+            for ticker in tickers_list
+        )
+        save_csvfile_rows_add(rows, express_csv_name)
 
         # Push tickers into Redis queue for financeInfo and other spiders to consume
         if page == 1:
@@ -40,6 +67,7 @@ class corporateazExpressHandler(corporateazBaseHandler):
             self.logger.info(
                 f'That equals to {total_pages} page(s) for business type id {bizType_id} - industry id {ind_id}'
             )
+
         for t in tickers_list:
             # Push to financeInfo queue needs to be different
             # self.r.lpush(tickers_redis_keys[0], f'{t};1')
@@ -49,7 +77,6 @@ class corporateazExpressHandler(corporateazBaseHandler):
                 self.logger.warning(
                     f"{new_params} params are already in finInfo enqueued params set")
             else:
-                self.r.sadd(financeInfo_enqueued_key, new_params)
                 self.r.sadd(tickers_redis_keys[0], new_params)
 
             # Push to other queues
@@ -64,7 +91,7 @@ class corporateazExpressHandler(corporateazBaseHandler):
         # Write bizType and ind set to a file for mapping work later
         self.r.set(closed_redis_key, "1")
         self.logger.info(
-            f'Closing... Setting closed signal value of 1 to {self.r.get(closed_redis_key)}'
+            f'Closing... Setting closed signal value to {self.r.get(closed_redis_key)}'
         )
         self.logger.info(f'Tickers have been pushed into {str(tickers_redis_keys)}')
         self.logger.info(f'There are {self.r.get(tickers_totalcount_key)} tickers in all')
