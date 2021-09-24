@@ -2,6 +2,7 @@
 A standalone package to scrape financial data from listed Vietnamese companies via Vietstock. If you are looking for raw financial data from listed Vietnamese companies, this may help you.
 # Table of Contents
 - [Prerequisites](#prerequisites)
+- [Recent Changes](#recentchanges)
 - [Run within Docker Compose](#rundockercompose)
 - [Run on Host](#runonhost)
 - [Scrape Results](#scraperesults)
@@ -14,16 +15,18 @@ A standalone package to scrape financial data from listed Vietnamese companies v
 Because the core components of this project runs on Docker.
 ## Cloning this project
 Because you will have to build the image from source. I have not released this project's image on Docker Hub yet.
-## A Vietstock user cookie string
-How to get it:
+## Vietstock user cookie and verification tokens
+How to get them:
 - Sign on to [finance.vietstock.vn](https://finance.vietstock.vn/)
 - Hover over **"Corporate"**/**"Doanh nghiệp"**, and choose **"Corporate A-Z"**/**"Doanh nghiệp A-Z"**
 - Click on any ticker
-- Open your browser's Inspect console by right-clicking on any empty area of the page, and choose `Inspect`
-- Go to the `Network` tab, filter only `XHR` requests
-- On the page, click **"Financials"**/**"Tài chính"**
-- On the list of `XHR` requests, click on any requests, then go to the `Cookies` tab underneath
-- Take note of the the string in the `vts_usr_lg` cookie, which is your user cookie
+- Open your browser's Inspect console
+- Go to the `Network` tab, filter only `XHR` or `Fetch/XHR` requests
+- On the list of `XHR` requests, search for the one named `financeinfo`, then go to the `Cookies` tab underneath; if you cannot find `financeinfo`, you can try clicking on the company's **"Financials"**/**"Tài chính"** tab and look for it
+- Take note of the value of the `vts_usr_lg` cookie, which is the `USER_COOKIE` environment variable in the config
+- Take note of the value of the `__RequestVerificationToken` cookie, which is the `REQ_VER_TOKEN_COOKIE` environment variable in the config
+- Go back to the request's `Header` tab, look for the form data
+- Take note of the value of the `__RequestVerificationToken` parameter, which is the `REQ_VER_TOKEN_POST` environment variable in the config
 - Done
 ## Some pointers about Vietstock financial API parameters, which will be used when scraping
 ### Financial report types and their meanings:
@@ -45,6 +48,9 @@ Report term code | Meaning
 ## Noting the project folder
 All core functions are located within the `functions_vietstock` folder and so are the scraped files; thus, from now on, references to the `functions_vietstock` folder will be simply put as `./`.
 
+# Recent Changes
+- **September 2021**: Vietstock has implemented request verification tokens for API requests, making it more difficult to access them. You will have to manually obtain the tokens from your browser (see [this section](#Vietstock-user-cookie-and-verification-tokens)), which may take some time depending on how comfortable you are with the browser's inspection tool. Currently, there is no information on how long the tokens will be valid for and I have not found a way to automatically obtain them.
+- **July 2021**: I have removed my own implementation of proxies for this project. The reason will be stated in the [Lession Learned](#lessons-learned) section below. If you really want to use proxies, make your changes that can be reflected in this [constants configuration file](functions_vietstock/scraper_vietstock/spiders/models/constants.py) (more details are included there).
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
 ## Configuration
 It should be in this area:
@@ -52,17 +58,17 @@ It should be in this area:
 ...
 functions-vietstock:
     build: .
-        container_name: functions-vietstock
-        command: wait-for-it -s scraper-redis:6379 -t 600  -- bash
-        stdin_open: true
-        tty: true
-        environment: 
-            - REDIS_HOST=scraper-redis
-            - USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
+    container_name: functions-vietstock
+    command: wait-for-it -s scraper-redis:6379 -t 600  -- bash
+    stdin_open: true
+    tty: true
+    environment: 
+        - REDIS_HOST=scraper-redis
+        - REQ_VER_TOKEN_POST=
+        - REQ_VER_TOKEN_COOKIE=
+        - USER_COOKIE=
 ...
 ```
-
-**July 2021 update: I have removed my own implementation of proxies for this project.** The reason will be stated in the [Lession Learned](#lessons-learned) section below. If you really want to use proxies, make your changes that can be reflected in this [constants configuration file](functions_vietstock/scraper_vietstock/spiders/models/constants.py) (more details are included there).
 ## Build image and start related services
 At the project folder, run:
 ```
@@ -116,14 +122,16 @@ pip install -r requirements.txt
 Nagivate to the `functions_vietstock` folder, create a file named `.env` with the following content:
 ```
 REDIS_HOST=localhost
-USER_COOKIE=<YOUR_VIETSTOCK_USER_COOKIE>
+REQ_VER_TOKEN_POST=YOUR_REQ_VER_TOKEN_POST
+REQ_VER_TOKEN_COOKIE=YOUR_REQ_VER_TOKEN_COOKIE
+USER_COOKIE=YOUR_USER_COOKIE
 ```
 ## Run Redis
 You still need to run the Redis server inside a container:
 ```
 docker run -d -p 6379:6379 --rm --name scraper-redis redis:6.2
 ```
-## Clear all previous running files (if any)
+## Stop all previous running tasks (if any)
 Go to the `functions_vietstock` folder:
 ```
 cd functions_vietstock
@@ -134,7 +142,6 @@ Run the `celery_stop.sh` script:
 ```
 ## User the userinput script to scrape
 Use the `./userinput.sh` script to scrape as in the previous section.
-
 # Scrape Results <a name="scraperesults"></a>
 ## CorporateAZ Overview
 ### File location
@@ -338,8 +345,7 @@ This scraper utilizes [scrapy-redis](https://github.com/rmax/scrapy-redis) and R
 - Using proxies cannot offer the best anonymity while scraping, because you have to use a user cookie to have access to data anyway.
 - Packing inter-dependent services with Docker Compose helps create a cleaner and more professional-looking code base.
 - Why have I removed my implementation of proxies? The reason is that I believe whoever uses this software is responsible for creating and maintaining their own mechanism to avoid IP-ban. Additionally, openly pre-providing an IP-ban mechanism may expose it to being overused or even abused; and I do not want to take that risk.
-
 # Disclaimer <a name="disclaimer"></a>
 - This project is completed for educational and non-commercial purposes only.
-- The scrape results are as-is from Vietstock API and without any modification. Thus, you are responsible for your own use of the data scraped using this project.
+- The scrape results are as-is from Vietstock APIs, which are publicly available. You are responsible for your own use of the data scraped using this project.
 - Vietstock has all the rights to modify or remove access to the API used in this project in their own way, without any notice. I am not responsible for updating access to their API in a promptly manner and any consequences to your use of this project resulting from such mentioned change.

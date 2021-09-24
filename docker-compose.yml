@@ -11,9 +11,9 @@ services:
         tty: true
         environment: 
             - REDIS_HOST=scraper-redis
-            - USER_COOKIE=
             - REQ_VER_TOKEN_POST=
             - REQ_VER_TOKEN_COOKIE=
+            - USER_COOKIE=
         depends_on: 
             - redis
         volumes:

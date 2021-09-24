@@ -80,8 +80,9 @@ class corporateazExpressHandler(corporateazBaseHandler):
                 self.r.sadd(tickers_redis_keys[0], new_params)
 
             # Push to other queues
-            for k in tickers_redis_keys[1:]:
-                self.r.lpush(k, t)
+            # For now just concerned with financeInfo
+            # for k in tickers_redis_keys[1:]:
+            #     self.r.lpush(k, t)
 
     def closed_redis_queue(self):
         '''
