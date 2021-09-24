@@ -119,7 +119,7 @@ In your virtual environment of choice, install all requirements:
 pip install -r requirements.txt
 ```
 ## Specify local environment variables
-Nagivate to the `functions_vietstock` folder, create a file named `.env` with the following content:
+Nagivate to the `functions_vietstock` folder, create a file named `.env` with the following content (you can use the `.example_env` file as an example):
 ```
 REDIS_HOST=localhost
 REQ_VER_TOKEN_POST=YOUR_REQ_VER_TOKEN_POST
