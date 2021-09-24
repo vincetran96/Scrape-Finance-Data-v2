@@ -43,9 +43,10 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         }
 }
 
-log_settings = utilities.log_settings(spiderName=name,
-                                      log_level="INFO",
-                                      log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
+log_settings = utilities.log_settings(
+    spiderName=name,
+    log_level="INFO",
+    log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
 )
 
 middlewares_settings = {
@@ -79,4 +80,10 @@ concurrency_settings = {
     'DOWNLOAD_DELAY': 0.5
 }
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}
+settings = {
+    **log_settings,
+    **middlewares_settings,
+    **proxy_settings,
+    ** redis_settings,
+    **concurrency_settings
+}
