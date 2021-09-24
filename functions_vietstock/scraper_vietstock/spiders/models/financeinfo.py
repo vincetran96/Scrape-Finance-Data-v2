@@ -9,8 +9,8 @@ import scraper_vietstock.spiders.models.utilities as utilities
 
 name = "financeInfo"
 
-report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
-report_terms = {"1":"Annual", "2":"Quarter"}
+default_report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
+default_report_terms = {"1":"Annual", "2":"Quarter"}
 
 corpAZ_key = f'{name}:corpAZtickers'
 scrape_key = f'{name}:scrape'
