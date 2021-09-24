@@ -7,7 +7,7 @@
 *.rdb
 ~$*.xlsx
 .env
-test*
+# test*
 env/
 .mypy_cache/
 .vscode/

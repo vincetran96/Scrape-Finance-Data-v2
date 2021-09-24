@@ -18,6 +18,18 @@ class financeInfoHandler(scraperVSRedisSpider):
         super(financeInfoHandler, self).__init__(*args, **kwargs)
         self.idling = False
 
+    def check_enqueued_params(self, params_str: str):
+        '''
+        Returns `True` if `params_str` in enqueued params set
+        '''
+        
+        enqueued_params = self.r.smembers(enqueued_key)
+        if params_str in enqueued_params:
+            self.logger.warning(
+                f"{params_str} params are already in enqueued params set")
+            return True
+        return False
+    
     def start_requests(self):
         '''
         Replaces the default method
@@ -51,46 +63,61 @@ class financeInfoHandler(scraperVSRedisSpider):
         # fetch_one = self.server.spop if use_set else self.server.lpop
         
         # Using set for params
-        fetch_one = self.server.spop
+        # fetch_one = self.server.spop
 
-        # If run with corpAZ, fetch data from Redis corpAZ_key
+        self.idling = False # Set idling status
+
+        # If run with corpAZ (corpAZOverview or corpAZExpress),
+        #   fetch data from Redis corpAZ_key
         if self.run_with_corpAZ:
             found = 0
             while found < self.redis_batch_size:
-                data = fetch_one(corpAZ_key)
+            # while self.r.scard(corpAZ_key) > 0:
+                data = self.server.spop(corpAZ_key)
                 if not data:
                     break
-                params = bytes_to_str(data, self.redis_encoding).split(";")
+                params_str = bytes_to_str(data, self.redis_encoding) 
+                params = params_str.split(";") # params have at least 2 elements
                 ticker = params[0]
                 page = params[1]
-                self.idling = False
 
-                # If report type and report term are passed in as Spider args, use them
-                if getattr(self, "report_type", None) and getattr(self, "report_term", None):
-                    for report_type in self.report_type.split(","):
-                        for report_term in self.report_term.split(","):
-                            req = self.make_request_from_data(ticker, report_type, report_term, page)
-                            if req:
-                                yield req
-                else:
-                    # If report type and report term are pushed in Redis queue (as params[2] and params[3]), this must be a subsequent request from self.parse()
-                    # Else, loop thru all report types and make requests
-                    try:
-                        report_type = params[2]
-                        report_term = params[3]
-                        req = self.make_request_from_data(ticker, report_type, report_term, page)
+                # If report type and report term are pushed in Redis queue (as params[2] and params[3]), this must be a subsequent request from self.parse()
+                # Else:
+                #   - If run with report_type and report_term args...
+                #   - If not, loop thru all report types and make requests
+                if len(params) == 4:
+                    report_type = params[2]
+                    report_term = params[3]
+                    full_params_str = f'{ticker};{page};{report_type};{report_term}'
+                    if not self.check_enqueued_params(full_params_str):
+                        self.r.sadd(enqueued_key, full_params_str)
+                        req = self.make_request_from_data(
+                            ticker, report_type, report_term, page)
                         if req:
                             yield req
-                        else:
-                            self.logger.info("Request not made from params: %r", params)
-                    except:
-                        for report_type in report_types:
-                            for report_term in report_terms.keys():
-                                req = self.make_request_from_data(ticker, report_type, report_term, page)
-                                if req:
-                                    yield req
-                                else:
-                                    self.logger.info("Request not made from params: %r", params)
+                else:
+                    # Report type and report term are passed in as Spider args, use them
+                    if getattr(self, "report_type", None) \
+                        and getattr(self, "report_term", None):
+                        for report_type in self.report_type.split(","):
+                            for report_term in self.report_term.split(","):
+                                full_params_str = f'{ticker};{page};{report_type};{report_term}'
+                                if not self.check_enqueued_params(full_params_str):
+                                    self.r.sadd(enqueued_key, full_params_str)
+                                    req = self.make_request_from_data(
+                                        ticker, report_type, report_term, page)
+                                    if req:
+                                        yield req
+                    else:
+                        for report_type in default_report_types:
+                            for report_term in default_report_terms.keys():
+                                full_params_str = f'{ticker};{page};{report_type};{report_term}'
+                                if not self.check_enqueued_params(full_params_str):
+                                    self.r.sadd(enqueued_key, full_params_str)
+                                    req = self.make_request_from_data(
+                                        ticker, report_type, report_term, page)
+                                    if req:
+                                        yield req   
                 found += 1
             if found:
                 self.logger.debug(f'Read {found} param(s) from {corpAZ_key}')
@@ -101,7 +128,6 @@ class financeInfoHandler(scraperVSRedisSpider):
             if self.r.get(self.corpAZ_closed_key) == "1" \
                 and self.r.scard(corpAZ_key) == 0 \
                 and self.idling == True:
-                
                 self.logger.info(
                     f'corpAZ closed key: {self.r.get(self.corpAZ_closed_key)}'
                 )
@@ -113,16 +139,17 @@ class financeInfoHandler(scraperVSRedisSpider):
                 keys = self.r.keys(f'{self.name}*')
                 for k in keys:
                     self.r.delete(k)
-                self.crawler.engine.close_spider(
-                    spider=self, reason="CorpAZ is closed; CorpAZ queue is empty; Spider is idling"
-                )
                 self.close_status()
+                self.crawler.engine.close_spider(
+                    spider=self,
+                    reason="CorpAZ is closed; CorpAZ queue is empty; Spider is idling"
+                )
         
         # If not run with corpAZ, fetch data from scrape_key
         else:
             found = 0
             while found < self.redis_batch_size:
-                data = fetch_one(scrape_key)
+                data = self.server.spop(scrape_key)
                 if not data:
                     break
                 params = bytes_to_str(data, self.redis_encoding).split(";")
@@ -130,16 +157,17 @@ class financeInfoHandler(scraperVSRedisSpider):
                 report_type = params[2]
                 report_term = params[3]
                 page = params[1]
-                self.idling = False
+                # self.idling = False
 
-                req = self.make_request_from_data(ticker, report_type, report_term, page)
-                if req:
-                    yield req
-                else:
-                    self.logger.info("Request not made from params: %r", params)
+                if not self.check_enqueued_params(params):
+                    self.r.sadd(enqueued_key, params)
+                    req = self.make_request_from_data(
+                        ticker, report_type, report_term, page)
+                    if req:
+                        yield req
                 found += 1
             if found:
-                self.logger.debug(f'Read {found} param(s) from {corpAZ_key}')
+                self.logger.debug(f'Read {found} param(s) from {scrape_key}')
             
             # Close spider if scrape_key Redis queue is empty and Spider is idling:
             # - Print requests with errors, then delete all keys related to this Spider
@@ -148,10 +176,11 @@ class financeInfoHandler(scraperVSRedisSpider):
                 keys = self.r.keys(f'{self.name}*')
                 for k in keys:
                     self.r.delete(k)
-                self.crawler.engine.close_spider(
-                    spider=self, reason="Queue is empty; Spider is idling"
-                )
                 self.close_status()
+                self.crawler.engine.close_spider(
+                    spider=self,
+                    reason="Queue is empty; Spider is idling"
+                )
 
     def make_request_from_data(self, ticker, report_type, report_term, page):
         '''
@@ -190,15 +219,17 @@ class financeInfoHandler(scraperVSRedisSpider):
             report_type = response.meta['ReportType']
             report_term = response.meta['ReportTermType']
             page = response.meta['page']
+            url = response.url
 
-            self.logger.info(f'On page {page} of {report_type} for {ticker}')
+            self.logger.info(f'On page {page} of report type {report_type}, report term {report_term} for {ticker}')
 
             try:
                 resp_json = json.loads(response.text, encoding='utf-8')
                 # bizType_title, ind_name = self.r.get(ticker).split(";")
 
                 if resp_json[0] == []:
-                    self.logger.info(f'DONE ALL PAGES OF {report_type} FOR TICKER {ticker}')
+                    self.logger.info(
+                        f'DONE ALL PAGES OF REPORT TYPE {report_type}, REPORT TERM {report_term} FOR TICKER {ticker}')
                 else:
                     # Write local data files in an express way
                     # save_jsonfile(
@@ -206,27 +237,34 @@ class financeInfoHandler(scraperVSRedisSpider):
                     
                     # Writing local data files in the regular way
                     save_jsonfile(
-                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{report_terms[report_term]}_Page_{page}.json'
+                        resp_json, filename=f'localData/{self.name}/{ticker}_{report_type}_{default_report_terms[report_term]}_Page_{page}.json'
                     )
 
                     # Remove error items (regardless exist or not) and crawl next page
-                    self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')
+                    # self.r.srem(self.error_set_key, f'{ticker};{page};{report_type}')
                     next_page = str(int(page) + 1)
 
                     # Check if new params have already been enqueued
-                    enqueued_params = self.r.smembers(enqueued_key)
-                    new_params = f'{ticker};{next_page};{report_type};{report_term}'
-                    if new_params in enqueued_params:
-                        self.logger.warning(
-                            f"{new_params} params are already in enqueued params set")
+                    new_params_str = f'{ticker};{next_page};{report_type};{report_term}'
+                    # if not self.check_enqueued_params(new_params_str):
+                    #     self.r.sadd(enqueued_key, new_params_str)
+                    if self.run_with_corpAZ:
+                        self.r.sadd(corpAZ_key, new_params_str)
                     else:
-                        self.r.sadd(enqueued_key, new_params)
-                        if self.run_with_corpAZ:
-                            self.r.sadd(corpAZ_key, new_params)
-                        else:
-                            self.r.sadd(scrape_key, new_params)
-                    
+                        self.r.sadd(scrape_key, new_params_str)     
             except Exception as exc:
-                self.logger.info(f'Exception at page {page} of {report_type} for {ticker}: {exc}')
-                self.r.sadd(self.error_set_key, f'{ticker};{page};{report_type}')
-                raise exc
+                self.logger.warning(
+                    f'Exception at page {page} of {report_type} for {ticker} at {url}: {exc}')
+                
+                # Add error to error set
+                self.r.sadd(
+                    self.error_set_key, f'{ticker};{page};{report_type};{report_term}')
+                
+                # Write error to log file
+                with open(
+                    f'logs/{self.name}_{report_type}_spidererrors_short.log', 'a+') as openfile:
+                    openfile.write(
+                        f'ticker: {ticker}, report: {report_type}, page {page}, error type: {type(exc)} \n')
+                # raise exc # not raise error here
+        # else:
+        #     self.logger.warning('No response')

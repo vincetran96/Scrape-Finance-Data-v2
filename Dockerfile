@@ -14,4 +14,4 @@ RUN chmod 755 /opt/functions_vietstock/userinput.sh
 
 # Make dirs and clear .env file
 RUN mkdir -p /opt/functions_vietstock/run/celery && mkdir -p /opt/functions_vietstock/run/scrapy && mkdir -p /opt/functions_vietstock/logs
-RUN rm -f /opt/functions_vietstock/.env
+# RUN rm -f /opt/functions_vietstock/.env

@@ -9,8 +9,8 @@ import scraper_vietstock.spiders.models.utilities as utilities
 
 name = "financeInfo"
 
-report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
-report_terms = {"1":"Annual", "2":"Quarter"}
+default_report_types = ["CTKH", "CDKT", "KQKD", "LC", "CSTC"]
+default_report_terms = {"1":"Annual", "2":"Quarter"}
 
 corpAZ_key = f'{name}:corpAZtickers'
 scrape_key = f'{name}:scrape'
@@ -24,6 +24,7 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
             "Unit": "1000000",
             "Page": constants.START_PAGE,
             "PageSize": "4",
+            "__RequestVerificationToken": constants.REQ_VER_TOKEN_POST
         },
         "headers": {
             "User-Agent": constants.USER_AGENT,
@@ -31,7 +32,8 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         },
         "cookies": {
             "language": constants.LANGUAGE,
-            "vts_usr_lg": constants.USER_COOKIE,
+            "__RequestVerificationToken": constants.REQ_VER_TOKEN_COOKIE,
+            "vts_usr_lg": constants.USER_COOKIE
         },
         "meta": {
             "ticker": "",
@@ -41,9 +43,10 @@ data = {"url": "https://finance.vietstock.vn/data/financeinfo",
         }
 }
 
-log_settings = utilities.log_settings(spiderName=name,
-                                      log_level="INFO",
-                                      log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
+log_settings = utilities.log_settings(
+    spiderName=name,
+    log_level="INFO",
+    log_formatter="scraper_vietstock.spiders.models.utilities.TickerSpiderLogFormatter"
 )
 
 middlewares_settings = {
@@ -56,7 +59,8 @@ middlewares_settings = {
     },
     'SPIDER_MIDDLEWARES': {
         # 'scraper_vietstock.middlewares.TickerCrawlSpiderMiddleware': 45
-    }
+    },
+    'HTTPERROR_ALLOWED_CODES': []
 }
 
 proxy_settings = {
@@ -76,4 +80,10 @@ concurrency_settings = {
     'DOWNLOAD_DELAY': 0.5
 }
 
-settings = {**log_settings, **middlewares_settings, **proxy_settings, ** redis_settings, **concurrency_settings}
+settings = {
+    **log_settings,
+    **middlewares_settings,
+    **proxy_settings,
+    ** redis_settings,
+    **concurrency_settings
+}

@@ -13,7 +13,6 @@ from scrapy.utils.project import get_project_settings
 from celery_main import app
 import scraper_vietstock.helpers.fileDownloader as downloader
 from scraper_vietstock.spiders.financeInfo import financeInfoHandler
-from scraper_vietstock.spiders.corpAZ import corporateazHandler
 from scraper_vietstock.spiders.corpAZExpress import corporateazExpressHandler
 from scraper_vietstock.spiders.pdfDocs import pdfDocsHandler
 from scraper_vietstock.spiders.financeInfo import financeInfoHandler
@@ -34,15 +33,6 @@ def prerun_cleanup_task():
     Delete all residual Redis keys
     '''
     clean_redis_queue()
-
-@app.task
-def corporateAZ_task():
-    print("=== CORPORATEAZ SPIDER CRAWLING ===")
-    setup()
-    configure_logging()
-    runner = CrawlerRunner(settings=get_project_settings())
-    runner.crawl(corporateazHandler)
-    d = runner.join()
 
 @app.task
 def corporateAZExpress_task():

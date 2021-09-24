@@ -7,18 +7,23 @@ while true; do
         read -p "Do you wish to mass scrape? [y/n] " massyn
         if [[ "$massyn" == "y" || "$massyn" == "Y" ]]; then
             while true; do
-                read -p "Do you wish clear ALL scraped files and kill ALL running Celery workers? [y/n] " yn
+                read -p "Do you wish to DELETE ALL scraped files and kill ALL running Celery workers? [y/n] " yn
                 if [[ "$yn" == "y" || "$yn" == "Y" ]]; then
                     echo "Clearing scraped files and all running workers, please wait..."
                     output="$(pkill -9 -f 'celery worker')"
                     echo $output
-                    output1="$(redis-cli -h scraper-redis flushall)"
+                    output0="$(pkill -9 -f 'celery_main')"
+                    echo $output0
+                    output1="$(redis-cli -h scraper-redis flushall || docker exec scraper-redis redis-cli flushall)"
                     echo $output1
                     output2="$(rm -v ./run/celery/*) $(rm -v ./run/scrapy/*) $(rm -v ./logs/*) $(rm -rf ./localData/*)"
                     echo $output2
+                    mkdir -p ./run/celery
+                    mkdir -p ./run/scrapy
+                    mkdir -p ./logs
                     break
                 elif [[ "$yn" == "n" || "$yn" == "N" ]]; then
-                    echo "You chose not to clear scraped files and all running workers"
+                    echo "You chose not to delete scraped files and all running workers"
                     break
                 else    
                     echo "Please provide your answer."

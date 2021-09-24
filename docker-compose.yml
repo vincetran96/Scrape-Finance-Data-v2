@@ -1,7 +1,7 @@
 version: "3"
 services: 
     redis:
-        image: redis
+        image: redis:6.2
         container_name: scraper-redis
     functions-vietstock:
         build: .
@@ -11,6 +11,8 @@ services:
         tty: true
         environment: 
             - REDIS_HOST=scraper-redis
+            - REQ_VER_TOKEN_POST=
+            - REQ_VER_TOKEN_COOKIE=
             - USER_COOKIE=
         depends_on: 
             - redis
