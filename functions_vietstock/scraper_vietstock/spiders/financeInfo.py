@@ -65,8 +65,6 @@ class financeInfoHandler(scraperVSRedisSpider):
         # Using set for params
         # fetch_one = self.server.spop
 
-        self.idling = False # Set idling status
-
         # If run with corpAZ (corpAZOverview or corpAZExpress),
         #   fetch data from Redis corpAZ_key
         if self.run_with_corpAZ:
@@ -80,6 +78,8 @@ class financeInfoHandler(scraperVSRedisSpider):
                 params = params_str.split(";") # params have at least 2 elements
                 ticker = params[0]
                 page = params[1]
+
+                self.idling = False # Set idling status
 
                 # If report type and report term are pushed in Redis queue (as params[2] and params[3]), this must be a subsequent request from self.parse()
                 # Else:
@@ -157,7 +157,8 @@ class financeInfoHandler(scraperVSRedisSpider):
                 report_type = params[2]
                 report_term = params[3]
                 page = params[1]
-                # self.idling = False
+                
+                self.idling = False
 
                 if not self.check_enqueued_params(params):
                     self.r.sadd(enqueued_key, params)
