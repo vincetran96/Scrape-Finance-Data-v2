@@ -152,16 +152,17 @@ class financeInfoHandler(scraperVSRedisSpider):
                 data = self.server.spop(scrape_key)
                 if not data:
                     break
-                params = bytes_to_str(data, self.redis_encoding).split(";")
-                ticker = params[0]
-                report_type = params[2]
-                report_term = params[3]
-                page = params[1]
+                params_str = bytes_to_str(data, self.redis_encoding)
                 
                 self.idling = False
 
-                if not self.check_enqueued_params(params):
-                    self.r.sadd(enqueued_key, params)
+                if not self.check_enqueued_params(params_str):
+                    params = params_str.split(";")
+                    ticker = params[0]
+                    report_type = params[2]
+                    report_term = params[3]
+                    page = params[1]
+                    self.r.sadd(enqueued_key, params_str)
                     req = self.make_request_from_data(
                         ticker, report_type, report_term, page)
                     if req:

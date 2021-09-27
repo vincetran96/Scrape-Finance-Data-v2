@@ -55,7 +55,7 @@ middlewares_settings = {
         'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
         # 'scraper_vietstock.middlewares.TickerCrawlDownloaderMiddleware': 901,
         # 'scraper_vietstock.fad_stats.TickerCrawlerStats': 850,
-        'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
+        # 'scrapy.downloadermiddlewares.stats.DownloaderStats': None,
     },
     'SPIDER_MIDDLEWARES': {
         # 'scraper_vietstock.middlewares.TickerCrawlSpiderMiddleware': 45
