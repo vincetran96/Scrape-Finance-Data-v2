@@ -1,3 +1,5 @@
+# Test Spider to try out feature implementations/bug fixes
+
 import scrapy
 from scrapy.http.request import Request
 from scrapy.spidermiddlewares.httperror import HttpError
@@ -24,7 +26,8 @@ class testSpider(scrapy.Spider):
             req = Request(
                 url,
                 meta=meta,
-                callback=self.parse_httpbin
+                callback=self.parse_httpbin,
+                errback=self.handle_error
                 # errback=self.errback_httpbin
             )
             yield req
@@ -33,6 +36,24 @@ class testSpider(scrapy.Spider):
         self.logger.info('Got successful response from {}'.format(response.url))
         # do something useful here...
 
+    def handle_error(self, failure):
+        '''
+        If there's an error with a request/response, add it to the error set
+        '''
+
+        if failure.request:
+            request = failure.request
+            self.logger.warning(f'Error on request: {request}')
+
+        elif failure.value.response:
+            response = failure.value.response
+            self.logger.warning(f'Error on response: {response}')
+        
+        # Write error to log file
+        with open(
+            f'logs/{self.name}_spidererrors_short.log', 'a+') as openfile:
+            openfile.write(f'error type: {str(failure.type)} \n')
+    
     def errback_httpbin(self, failure):
         # log all failures
         self.logger.error(repr(failure))

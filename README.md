@@ -1,15 +1,17 @@
 # Scrape Financial Data of Vietnamese Listed Companies - Version 2
 A standalone package to scrape financial data from listed Vietnamese companies via Vietstock. If you are looking for raw financial data from listed Vietnamese companies, this may help you.
 # Table of Contents
-- [Prerequisites](#prerequisites)
 - [Recent Changes](#recentchanges)
+- [Prerequisites](#prerequisites)
 - [Run within Docker Compose](#rundockercompose)
 - [Run on Host](#runonhost)
 - [Scrape Results](#scraperesults)
 - [Debugging and How It Works](#debugging)
 - [Limitations and Lessons Learned](#limitations)
 - [Disclaimer](#disclaimer)
-
+# Recent Changes <a name="recentchanges"></a>
+- **September 2021**: Vietstock has implemented request verification tokens for API requests, making it more difficult to access them. You will have to manually obtain the tokens from your browser (see [this section](#Vietstock-user-cookie-and-verification-tokens)), which may take some time depending on how comfortable you are with the browser's inspection tool. Currently, there is no information on how long the tokens will be valid for and I have not found a way to automatically obtain them.
+- **July 2021**: I have removed my own implementation of proxies for this project. The reason will be stated in the [Lession Learned](#lessons-learned) section below. If you really want to use proxies, make your changes that can be reflected in this [constants configuration file](functions_vietstock/scraper_vietstock/spiders/models/constants.py) (more details are included there).
 # Prerequisites <a name="prerequisites"></a>
 ## A computer that can run Docker
 Because the core components of this project runs on Docker.
@@ -47,10 +49,6 @@ Report term code | Meaning
 `2` | Quarterly
 ## Noting the project folder
 All core functions are located within the `functions_vietstock` folder and so are the scraped files; thus, from now on, references to the `functions_vietstock` folder will be simply put as `./`.
-
-# Recent Changes <a name="recentchanges"></a>
-- **September 2021**: Vietstock has implemented request verification tokens for API requests, making it more difficult to access them. You will have to manually obtain the tokens from your browser (see [this section](#Vietstock-user-cookie-and-verification-tokens)), which may take some time depending on how comfortable you are with the browser's inspection tool. Currently, there is no information on how long the tokens will be valid for and I have not found a way to automatically obtain them.
-- **July 2021**: I have removed my own implementation of proxies for this project. The reason will be stated in the [Lession Learned](#lessons-learned) section below. If you really want to use proxies, make your changes that can be reflected in this [constants configuration file](functions_vietstock/scraper_vietstock/spiders/models/constants.py) (more details are included there).
 # Run within Docker Compose (recommended) <a name="rundockercompose"></a>
 ## Configuration
 It should be in this area:
@@ -110,7 +108,6 @@ to clean everything related to the scraping process (local scraped files are int
             `1` | Annually
             `2` | Quarterly
         - `page`: the page number for the scrape, this is optional. If omitted, the scraper will start from page 1
-
 # Run on Host without Docker Compose <a name="runonhost"></a>
 Maybe you do not want to spend time building the image, and just want to play around with the code.
 ## Install Python requirements
@@ -299,8 +296,10 @@ FinanceInfo results are stored in the `./localData/financeInfo` folder, and each
 ```
 **Please note that you have to determine whether the order of the financial values match the order of the periods**
 ## Logs
-Logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
-
+### Scrape logs
+Scrape logs are stored in the `./logs` folder, in the form of `scrapySpiderName_log_verbose.log`.
+### Error logs
+Error logs are stored in the `./logs` folder, in the form of `scrapySpiderName_reportType_spidererrors_short.log`. For now, error logs are used only for financeInfo Spider.
 # Debugging and How This Thing Works <a name="debugging"></a>
 ## What is Redis?
 "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker." See: https://redis.io/. In this project, Redis serves as a message broker and an in-memory queue for Scrapy. No non-standard Redis configurations were made for this project.

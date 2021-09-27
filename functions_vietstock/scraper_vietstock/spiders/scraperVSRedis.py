@@ -54,7 +54,7 @@ class scraperVSRedisSpider(RedisSpider):
             except:
                 page = "1"
 
-            self.logger.info(
+            self.logger.warning(
                 f'=== ERRBACK: on request for ticker {ticker}, report {report_type}, on page {page}')
 
         elif failure.value.response:
@@ -66,7 +66,7 @@ class scraperVSRedisSpider(RedisSpider):
             except:
                 page = "1"
 
-            self.logger.info(
+            self.logger.warning(
                 f'=== ERRBACK: on response for ticker {ticker}, report {report_type}, on page {page}')
         
         # Write error to log file
